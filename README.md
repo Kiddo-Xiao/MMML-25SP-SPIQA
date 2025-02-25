@@ -11,12 +11,15 @@ The dataset consists of **scientific questions**, where each sample includes:
 - **Answer (Classification Label)**: The correct answer from predefined answer classes.
 
 Each sample is structured as follows:
-
+```
 paper_id, Question, Answer, Image
+```
 
+Example:
 
-### Example:
+```
 1611.04684v1, "Which model performs best for response selection?", "KEHNN", "1611.04684v1-Table4-1.png"
+```
 The dataset is stored in **CSV format**, and images are organized in folders by their **paper_id**.
 
 ### **Data Preprocessing**
