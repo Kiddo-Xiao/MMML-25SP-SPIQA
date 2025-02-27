@@ -1,0 +1,14 @@
+# Model files
+*.pth
+best_model.pth
+
+# Data folder
+OverheatData/
+
+# Generated files
+__pycache__/
+*.pyc
+training_curves.png
+train_split.csv
+test_split.csv
+label_encoder.json
