@@ -43,7 +43,6 @@ class ImageAnswerDataset(Dataset):
         # 图像预处理
         if self.transform:
             image = self.transform(image)
-
         return image, label
 
 # 图像预处理
@@ -56,12 +55,10 @@ transform = transforms.Compose([
 csv_file = 'OverheatData/OverheatData/training_data.csv'  # 替换为你的 CSV 文件路径
 root_dir = 'OverheatData/OverheatData'  # 替换为你的根目录路径
 dataset = ImageAnswerDataset(csv_file=csv_file, root_dir=root_dir, transform=transform)
-
 # 划分训练集和验证集
 train_size = int(0.8 * len(dataset))
 val_size = len(dataset) - train_size
 train_dataset, val_dataset = torch.utils.data.random_split(dataset, [train_size, val_size])
-
 # 创建 DataLoader
 batch_size = 4
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)

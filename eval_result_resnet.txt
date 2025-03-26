@@ -1,0 +1,44 @@
+C:\Users\Administrator\AppData\Local\Programs\Python\Python310\python.exe F:\CMU\25spring\11777mmml\project\unimodal_3resnet_with_eval.py
+C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+  0%|          | 0/80 [00:00<?, ?it/s]<function resnet18 at 0x00000253EEDDB5B0>
+ 12%|█▎        | 10/80 [00:45<05:13,  4.48s/it]Epoch 10/80, Train Loss: 6.1602, Train Acc: 0.38%
+ 25%|██▌       | 20/80 [01:31<04:36,  4.60s/it]Epoch 20/80, Train Loss: 5.4886, Train Acc: 0.94%
+ 38%|███▊      | 30/80 [02:15<03:42,  4.45s/it]Epoch 30/80, Train Loss: 4.6227, Train Acc: 1.69%
+ 50%|█████     | 40/80 [03:00<03:02,  4.57s/it]Epoch 40/80, Train Loss: 3.4338, Train Acc: 17.48%
+ 62%|██████▎   | 50/80 [03:49<02:24,  4.80s/it]Epoch 50/80, Train Loss: 2.2100, Train Acc: 43.05%
+ 75%|███████▌  | 60/80 [04:34<01:30,  4.52s/it]Epoch 60/80, Train Loss: 1.2483, Train Acc: 65.60%
+ 88%|████████▊ | 70/80 [05:20<00:47,  4.75s/it]Epoch 70/80, Train Loss: 0.7345, Train Acc: 78.57%
+100%|██████████| 80/80 [06:05<00:00,  4.56s/it]
+Evaluating:   0%|          | 0/34 [00:00<?, ?it/s]Epoch 80/80, Train Loss: 0.2718, Train Acc: 93.98%
+C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Model: resnet18, Val Acc: 0.00%, ROUGE: 0.0162, Perplexity: 1591425957.2506
+  0%|          | 0/80 [00:00<?, ?it/s]<function resnet50 at 0x00000253EEDDB910>
+ 12%|█▎        | 10/80 [01:32<10:47,  9.26s/it]Epoch 10/80, Train Loss: 6.1061, Train Acc: 0.94%
+ 25%|██▌       | 20/80 [03:05<09:16,  9.28s/it]Epoch 20/80, Train Loss: 5.2423, Train Acc: 0.94%
+ 38%|███▊      | 30/80 [04:38<07:44,  9.30s/it]Epoch 30/80, Train Loss: 3.3681, Train Acc: 18.23%
+ 50%|█████     | 40/80 [06:10<06:11,  9.30s/it]Epoch 40/80, Train Loss: 1.3376, Train Acc: 68.80%
+ 62%|██████▎   | 50/80 [07:43<04:38,  9.30s/it]Epoch 50/80, Train Loss: 0.4783, Train Acc: 87.97%
+ 75%|███████▌  | 60/80 [09:16<03:05,  9.28s/it]Epoch 60/80, Train Loss: 0.2734, Train Acc: 93.42%
+ 88%|████████▊ | 70/80 [10:52<01:37,  9.78s/it]Epoch 70/80, Train Loss: 0.0613, Train Acc: 99.44%
+100%|██████████| 80/80 [12:28<00:00,  9.35s/it]
+Evaluating:   0%|          | 0/34 [00:00<?, ?it/s]Epoch 80/80, Train Loss: 0.0477, Train Acc: 98.50%
+C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet101_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet101_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Model: resnet50, Val Acc: 0.00%, ROUGE: 0.0169, Perplexity: 842224685820.3162
+<function resnet101 at 0x00000253EEDDBAC0>
+ 12%|█▎        | 10/80 [02:30<17:21, 14.88s/it]Epoch 10/80, Train Loss: 6.1432, Train Acc: 0.56%
+ 25%|██▌       | 20/80 [04:59<14:48, 14.81s/it]Epoch 20/80, Train Loss: 5.5685, Train Acc: 0.75%
+ 38%|███▊      | 30/80 [07:42<13:37, 16.35s/it]Epoch 30/80, Train Loss: 5.1025, Train Acc: 1.32%
+ 50%|█████     | 40/80 [10:25<10:55, 16.39s/it]Epoch 40/80, Train Loss: 3.1567, Train Acc: 26.88%
+ 62%|██████▎   | 50/80 [13:06<07:59, 15.98s/it]Epoch 50/80, Train Loss: 0.8790, Train Acc: 80.83%
+ 75%|███████▌  | 60/80 [15:41<05:06, 15.32s/it]Epoch 60/80, Train Loss: 0.1764, Train Acc: 97.56%
+ 88%|████████▊ | 70/80 [18:14<02:34, 15.46s/it]Epoch 70/80, Train Loss: 0.0830, Train Acc: 98.87%
+100%|██████████| 80/80 [20:51<00:00, 15.64s/it]
+Epoch 80/80, Train Loss: 0.0455, Train Acc: 99.25%
+Model: resnet101, Val Acc: 0.00%, ROUGE: 0.0180, Perplexity: 1366669248708.9185
+
+Process finished with exit code 0
