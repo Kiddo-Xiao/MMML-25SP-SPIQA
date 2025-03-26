@@ -1,0 +1,57 @@
+/Users/xuyuansmacbook/opt/anaconda3/envs/11777/bin/python /Users/xuyuansmacbook/Desktop/CMU/25spring/11777/SPIQA-unimodal_baseline/unimodal_3text_with_eval.py
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.3 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/Users/xuyuansmacbook/Desktop/CMU/25spring/11777/SPIQA-unimodal_baseline/unimodal_3text_with_eval.py", line 3, in <module>
+    import torch
+  File "/Users/xuyuansmacbook/opt/anaconda3/envs/11777/lib/python3.10/site-packages/torch/__init__.py", line 1477, in <module>
+    from .functional import *  # noqa: F403
+  File "/Users/xuyuansmacbook/opt/anaconda3/envs/11777/lib/python3.10/site-packages/torch/functional.py", line 9, in <module>
+    import torch.nn.functional as F
+  File "/Users/xuyuansmacbook/opt/anaconda3/envs/11777/lib/python3.10/site-packages/torch/nn/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "/Users/xuyuansmacbook/opt/anaconda3/envs/11777/lib/python3.10/site-packages/torch/nn/modules/__init__.py", line 35, in <module>
+    from .transformer import TransformerEncoder, TransformerDecoder, \
+  File "/Users/xuyuansmacbook/opt/anaconda3/envs/11777/lib/python3.10/site-packages/torch/nn/modules/transformer.py", line 20, in <module>
+    device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+/Users/xuyuansmacbook/opt/anaconda3/envs/11777/lib/python3.10/site-packages/torch/nn/modules/transformer.py:20: UserWarning: Failed to initialize NumPy: _ARRAY_API not found (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/torch/csrc/utils/tensor_numpy.cpp:84.)
+  device: torch.device = torch.device(torch._C._get_default_device()),  # torch.device('cpu'),
+ 12%|█▎        | 10/80 [00:04<00:36,  1.92it/s]Epoch 10/80, Train Loss: 5.9327, Train Acc: 0.75%
+ 25%|██▌       | 20/80 [00:09<00:26,  2.26it/s]Epoch 20/80, Train Loss: 4.8664, Train Acc: 10.90%
+ 38%|███▊      | 30/80 [00:14<00:23,  2.14it/s]Epoch 30/80, Train Loss: 2.7877, Train Acc: 51.88%
+ 50%|█████     | 40/80 [00:18<00:15,  2.54it/s]Epoch 40/80, Train Loss: 1.4462, Train Acc: 80.26%
+ 62%|██████▎   | 50/80 [00:22<00:11,  2.60it/s]Epoch 50/80, Train Loss: 0.7607, Train Acc: 93.23%
+ 75%|███████▌  | 60/80 [00:26<00:07,  2.58it/s]Epoch 60/80, Train Loss: 0.4127, Train Acc: 96.24%
+ 88%|████████▊ | 70/80 [00:30<00:04,  2.04it/s]Epoch 70/80, Train Loss: 0.2236, Train Acc: 98.50%
+100%|██████████| 80/80 [00:35<00:00,  2.25it/s]
+Epoch 80/80, Train Loss: 0.1266, Train Acc: 99.44%
+Model (Embed 100, Hidden 50): Val Acc: 0.00%, ROUGE: 0.0178, Perplexity: 836510688763405568.0000
+ 12%|█▎        | 10/80 [00:04<00:34,  2.04it/s]Epoch 10/80, Train Loss: 5.9140, Train Acc: 2.26%
+ 25%|██▌       | 20/80 [00:09<00:30,  1.96it/s]Epoch 20/80, Train Loss: 4.7375, Train Acc: 12.59%
+ 38%|███▊      | 30/80 [00:15<00:27,  1.82it/s]Epoch 30/80, Train Loss: 2.5169, Train Acc: 50.00%
+ 50%|█████     | 40/80 [00:20<00:20,  1.98it/s]Epoch 40/80, Train Loss: 1.1835, Train Acc: 81.02%
+ 62%|██████▎   | 50/80 [00:25<00:15,  1.97it/s]Epoch 50/80, Train Loss: 0.5066, Train Acc: 94.74%
+ 75%|███████▌  | 60/80 [00:30<00:09,  2.04it/s]Epoch 60/80, Train Loss: 0.2254, Train Acc: 97.93%
+ 88%|████████▊ | 70/80 [00:35<00:05,  1.90it/s]Epoch 70/80, Train Loss: 0.1096, Train Acc: 99.06%
+100%|██████████| 80/80 [00:40<00:00,  1.96it/s]
+Epoch 80/80, Train Loss: 0.0618, Train Acc: 99.25%
+Model (Embed 200, Hidden 100): Val Acc: 1.49%, ROUGE: 0.0252, Perplexity: 4065834701.8219
+ 12%|█▎        | 10/80 [00:05<00:40,  1.71it/s]Epoch 10/80, Train Loss: 5.9545, Train Acc: 1.50%
+ 25%|██▌       | 20/80 [00:11<00:33,  1.77it/s]Epoch 20/80, Train Loss: 5.3246, Train Acc: 7.71%
+ 38%|███▊      | 30/80 [00:17<00:29,  1.70it/s]Epoch 30/80, Train Loss: 3.7034, Train Acc: 27.26%
+ 50%|█████     | 40/80 [00:22<00:23,  1.74it/s]Epoch 40/80, Train Loss: 2.1112, Train Acc: 57.14%
+ 62%|██████▎   | 50/80 [00:28<00:17,  1.70it/s]Epoch 50/80, Train Loss: 1.0281, Train Acc: 83.65%
+ 75%|███████▌  | 60/80 [00:34<00:12,  1.66it/s]Epoch 60/80, Train Loss: 0.4750, Train Acc: 94.74%
+ 88%|████████▊ | 70/80 [00:40<00:05,  1.71it/s]Epoch 70/80, Train Loss: 0.2149, Train Acc: 99.25%
+100%|██████████| 80/80 [00:46<00:00,  1.71it/s]
+Epoch 80/80, Train Loss: 0.1016, Train Acc: 99.62%
+Model (Embed 300, Hidden 150): Val Acc: 0.75%, ROUGE: 0.0165, Perplexity: 34179498573.6070
+
+Process finished with exit code 0
