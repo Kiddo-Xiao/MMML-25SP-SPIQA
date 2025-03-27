@@ -1,0 +1,165 @@
+Paper ID: 1804.07931v2
+Question: What are the two auxiliary tasks that are used in the ESMM architecture for CVR modeling?
+True Answer: The two auxiliary tasks are CTR and CTCVR.
+Predicted Answer: All features have the same dimensionality in the first two dimensions.
+
+==================================================
+
+Paper ID: 1803.03467v4
+Question: Which dataset has the highest AUC for all ripple set sizes?
+True Answer: MovieLens-1M
+Predicted Answer: VIDXL has the highest Recall@20 and MRR@20.
+
+==================================================
+
+Paper ID: 1804.05938v2
+Question: Explain the difference between the features "TF-IDF" and "BM25".
+True Answer: Both TF-IDF and BM25 are features used to estimate the relevance of a document to a query. However, they differ in their underlying calculations.
+
+TF-IDF: This feature represents the average product of term frequency (TF) and inverse document frequency (IDF) for each query term within different document sections (URL, title, content, and whole document). TF measures how often a term appears in a specific document section, while IDF measures how important that term is across the entire document collection.
+
+BM25: This feature utilizes the BM25 ranking function, which is a probabilistic model that considers term frequency, document length, and average document length to estimate relevance. While it also considers term frequency like TF-IDF, it incorporates additional factors to improve the weighting scheme.
+Predicted Answer:  
+
+The pre-processed SMD Navigate data combines all the properties (such as distance, address) of a point of interest (POI) into a single subject with the object being "poi". The original data had separate entries for each property. 
+
+==================================================
+
+Paper ID: 1805.01216v3
+Question: Which model performs best when the percentage of unseen entities in the response is low?
+True Answer: BoSsNet
+Predicted Answer: LSH-E
+
+==================================================
+
+Paper ID: 1701.06171v4
+Question: How many iterations did the greedy EM-type learning process take to learn the part models for the watch image?
+True Answer: 22 iterations
+Predicted Answer: The main difference is that the Multilinear Conditioning architecture uses a multilinear map to condition the domain discriminator on the classifier prediction, while the Randomized Multilinear Conditioning architecture uses a randomized multilinear map.
+
+==================================================
+
+Paper ID: 1704.07121v2
+Question: On the VQAv2-2017 validation set, which model performs best when considering all three sources of information (images, questions, and answers) and how does its performance compare to the model that only uses answers?
+True Answer: The model that performs best on VQAv2-2017 val when considering all three sources of information is MLP-IQA. It achieves an accuracy of 61.1% on the \IU+\QU -decoys metric, significantly outperforming the model that only uses answers (MLP-A) which achieves only 27.7% on the same metric. This demonstrates the importance of incorporating all available information for accurate prediction.
+Predicted Answer: PWC-Net (ft) achieved the best performance on the KITTI 2015 test set with an F1-all score of 9.16%. This is significantly better than Devon (ft), which achieved an F1-all score of 14.31% on the same dataset. 
+
+==================================================
+
+Paper ID: 1809.03550v3
+Question: Why is the optimal threshold chosen to be at the right margin of the region around the mode of the histogram?
+True Answer: The region around the mode of the histogram mostly contains noise. Therefore, the optimal threshold is chosen to be at the right margin of this region to avoid including too much noise in the thresholded image.
+Predicted Answer: There is a negative correlation between the success rate of the non-overlapping attack and the number of words changed in the input sentence. In other words, the fewer words that are changed, the higher the success rate of the attack.
+
+==================================================
+
+Paper ID: 1707.00524v2
+Question: Which game has the highest code loss in phase 2?
+True Answer: Pacman
+Predicted Answer: MAP Policy
+
+==================================================
+
+Paper ID: 1809.02731v3
+Question: Which model performed best on average across all tasks?
+True Answer: The Linear model performed best on average with a score of 70.0.
+Predicted Answer: The Transfer + MTSA model performed best on the SNLI test set with an accuracy of 86.9%.
+
+==================================================
+
+Paper ID: 1706.00633v4
+Question: Which objective function resulted in a higher ratio of f2(x∗) > 0 for the MNIST dataset?
+True Answer: RCE
+Predicted Answer: ResNet-56 (RCE) performed better on the MNIST dataset with a classification error rate of 0.32% compared to ResNet-32 (CE) which had a classification error rate of 0.38%.
+
+==================================================
+
+Paper ID: 1809.00458v1
+Question: Which method is more efficient at utilizing space while maintaining high accuracy?
+True Answer: GB-KMV is more efficient at utilizing space while maintaining high accuracy.
+Predicted Answer: COPA is faster than Helwig.
+
+==================================================
+
+Paper ID: 1708.01425v4
+Question: Which step in the methodology resulted in the largest decrease in the size of the dataset?
+True Answer: Step 4, Reason disambiguation.
+Predicted Answer: The shared weights allow the two branches of the network to learn similar representations of the input images. This helps to improve the performance of the Euclidean Confusion loss, which measures the distance between the conditional probability distributions of the two branches.
+
+==================================================
+
+Paper ID: 1804.05995v2
+Question: What are the top 5 section recommendations for the Wikipedia article on Lausanne according to the category-section counts method?
+True Answer: The top 5 section recommendations for the Wikipedia article on Lausanne according to the category-section counts method are HISTORY, DEMOGRAPHICS, ECONOMY, EDUCATION, and POLITICS.
+Predicted Answer: The proposed method appears to be more accurate than the baseline method. The depth maps generated by the proposed method are more detailed and realistic than those generated by the baseline method.
+
+==================================================
+
+Paper ID: 1803.03467v4
+Question: What is the role of the ripple sets in the RippleNet framework?
+True Answer: The ripple sets are used to propagate a user's preferences from his or her click history to his or her relevant entities.
+Predicted Answer: The residual connection allows the output of a layer to be added to the output of another layer, which helps to improve the flow of information through the network.
+
+==================================================
+
+Paper ID: 1803.04572v2
+Question: What are some common medications used to treat Sickle Cell Anemia?
+True Answer: According to the table, some common medications used to treat Sickle Cell Anemia include:
+
+Beta-adrenergic agents
+Analgesics (narcotics and non-narcotics)
+NSAIDs (cyclooxygenase inhibitor - type)
+Potassium replacement
+Sodium/saline preparations
+General inhalation agents
+Laxatives and cathartics
+IV solutions (dextrose-saline)
+Antiemetic/antivertigo agents
+Sedative-hypnotics (non-barbiturate)
+Glucocorticoids (orally inhaled)
+Folic acid preparations
+Analgesic narcotic anesthetic adjunct agents
+Predicted Answer: Bing-News.
+
+==================================================
+
+Paper ID: 1809.00263v5
+Question: What is the value of the learning rate α for the BAIR dataset?
+True Answer: 0.0002
+Predicted Answer: The filter is used to extract features from the input image. It is a small matrix that is applied to each pixel in the image, and the result is a new pixel value.
+
+==================================================
+
+Paper ID: 1803.02750v3
+Question: What is the difference between the `inc_i(p)` and `inc_i'(p)` operations in the Grow-only Counter data type?
+True Answer: The `inc_i(p)` operation increments the value associated with the key `i` in the counter `p`, while the `inc_i'(p)` operation increments the value associated with the key `i` in the counter `p` only if the key `i` is not already present in the counter.
+Predicted Answer: The model is discouraged because it is trained using the Maximum Likelihood Estimation (MLE) objective, which prioritizes generating responses that are identical to the ground-truth (GT) response. Even though the RSP integrates relevant content from the candidates and seems appropriate in the context, it is penalized because it deviates from the exact wording of the GT.
+
+==================================================
+
+Paper ID: 1706.04269v2
+Question: What are the three main components of the Action Search model architecture?
+True Answer: The three main components of the Action Search model architecture are the visual encoder, the LSTM, and the spotting target.
+Predicted Answer: The BiLSTM takes as input the character-level representations of the words and outputs a word-level representation for each word.
+
+==================================================
+
+Paper ID: 1706.00633v4
+Question: How does the accuracy of the model change as the value of c increases?
+True Answer: The accuracy of the model decreases as the value of c increases.
+Predicted Answer: The performance of the model generally improves as the number of views increases. For example, when the model is trained and tested on two-view data, the F1-score is 29.67. However, when the model is trained and tested on three-view data, the F1-score increases to 30.2. This suggests that the model is able to learn more effectively from data with more views.
+
+==================================================
+
+Paper ID: 1812.00281v3
+Question: What are the different stages of HUMBI body and cloth reconstruction?
+True Answer: The different stages of HUMBI body and cloth reconstruction are: 
+1. Input image of the person (Ibody)
+2. Keypoint estimation (Kbody)
+3. Occupancy map generation (Obody)
+4. Body model fitting (Mbody)
+5. Cloth model fitting (Mcloth)
+Predicted Answer: The user study is designed to test which of two images is closer to a reference video.
+
+==================================================
+

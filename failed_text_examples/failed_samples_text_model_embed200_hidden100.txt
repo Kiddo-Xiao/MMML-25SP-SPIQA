@@ -1,0 +1,165 @@
+Paper ID: 1804.07931v2
+Question: What are the two auxiliary tasks that are used in the ESMM architecture for CVR modeling?
+True Answer: The two auxiliary tasks are CTR and CTCVR.
+Predicted Answer: Feedforward-MSE, LSTM-MSE, and Feedforward-MDN.
+
+==================================================
+
+Paper ID: 1803.03467v4
+Question: Which dataset has the highest AUC for all ripple set sizes?
+True Answer: MovieLens-1M
+Predicted Answer: GB-KMV
+
+==================================================
+
+Paper ID: 1804.05938v2
+Question: Explain the difference between the features "TF-IDF" and "BM25".
+True Answer: Both TF-IDF and BM25 are features used to estimate the relevance of a document to a query. However, they differ in their underlying calculations.
+
+TF-IDF: This feature represents the average product of term frequency (TF) and inverse document frequency (IDF) for each query term within different document sections (URL, title, content, and whole document). TF measures how often a term appears in a specific document section, while IDF measures how important that term is across the entire document collection.
+
+BM25: This feature utilizes the BM25 ranking function, which is a probabilistic model that considers term frequency, document length, and average document length to estimate relevance. While it also considers term frequency like TF-IDF, it incorporates additional factors to improve the weighting scheme.
+Predicted Answer: 5 hops
+
+==================================================
+
+Paper ID: 1805.01216v3
+Question: Which model performs best when the percentage of unseen entities in the response is low?
+True Answer: BoSsNet
+Predicted Answer: ChoiceNet
+
+==================================================
+
+Paper ID: 1701.06171v4
+Question: How many iterations did the greedy EM-type learning process take to learn the part models for the watch image?
+True Answer: 22 iterations
+Predicted Answer: The PP loss constrains the output sequence to be symmetric by reducing the L2 distance between corresponding frames in the forward and backward passes. This helps to reduce drifting artifacts and improve temporal coherence.
+
+==================================================
+
+Paper ID: 1704.07121v2
+Question: On the VQAv2-2017 validation set, which model performs best when considering all three sources of information (images, questions, and answers) and how does its performance compare to the model that only uses answers?
+True Answer: The model that performs best on VQAv2-2017 val when considering all three sources of information is MLP-IQA. It achieves an accuracy of 61.1% on the \IU+\QU -decoys metric, significantly outperforming the model that only uses answers (MLP-A) which achieves only 27.7% on the same metric. This demonstrates the importance of incorporating all available information for accurate prediction.
+Predicted Answer: PWC-Net (ft) achieved the best performance on the KITTI 2015 test set with an F1-all score of 9.16%. This is significantly better than Devon (ft), which achieved an F1-all score of 14.31% on the same dataset. 
+
+==================================================
+
+Paper ID: 1809.03550v3
+Question: Why is the optimal threshold chosen to be at the right margin of the region around the mode of the histogram?
+True Answer: The region around the mode of the histogram mostly contains noise. Therefore, the optimal threshold is chosen to be at the right margin of this region to avoid including too much noise in the thresholded image.
+Predicted Answer:  
+
+Increasing the value of β2 decreases the precision and increases the recall of the model.
+
+==================================================
+
+Paper ID: 1707.00524v2
+Question: Which game has the highest code loss in phase 2?
+True Answer: Pacman
+Predicted Answer: The topic with the highest internal coherence value is "turks armenian armenia turkish roads escape soviet muslim mountain soul".
+
+==================================================
+
+Paper ID: 1809.02731v3
+Question: Which model performed best on average across all tasks?
+True Answer: The Linear model performed best on average with a score of 70.0.
+Predicted Answer: Intra-warrant attention with context.
+
+==================================================
+
+Paper ID: 1706.00633v4
+Question: Which objective function resulted in a higher ratio of f2(x∗) > 0 for the MNIST dataset?
+True Answer: RCE
+Predicted Answer: Cars are the most common object in the dataset.
+
+==================================================
+
+Paper ID: 1809.00458v1
+Question: Which method is more efficient at utilizing space while maintaining high accuracy?
+True Answer: GB-KMV is more efficient at utilizing space while maintaining high accuracy.
+Predicted Answer: VAGER + Voting
+
+==================================================
+
+Paper ID: 1708.01425v4
+Question: Which step in the methodology resulted in the largest decrease in the size of the dataset?
+True Answer: Step 4, Reason disambiguation.
+Predicted Answer: The passage mentions that additional trajectories were generated for the "Pick and Place" task by reducing the frequency of the recorded demonstrations. This process was not applied to the "Push to Pose" task, therefore no "Demonstrations after shift" are listed for it.
+
+==================================================
+
+Paper ID: 1804.05995v2
+Question: What are the top 5 section recommendations for the Wikipedia article on Lausanne according to the category-section counts method?
+True Answer: The top 5 section recommendations for the Wikipedia article on Lausanne according to the category-section counts method are HISTORY, DEMOGRAPHICS, ECONOMY, EDUCATION, and POLITICS.
+Predicted Answer: The PP loss constrains the output sequence to be symmetric by reducing the L2 distance between corresponding frames in the forward and backward passes. This helps to reduce drifting artifacts and improve temporal coherence.
+
+==================================================
+
+Paper ID: 1803.03467v4
+Question: What is the role of the ripple sets in the RippleNet framework?
+True Answer: The ripple sets are used to propagate a user's preferences from his or her click history to his or her relevant entities.
+Predicted Answer: The Higher Level Policy sets constraints for the next sub-trajectory and provides information about the previous stage to the Lower Level Policy.
+
+==================================================
+
+Paper ID: 1803.04572v2
+Question: What are some common medications used to treat Sickle Cell Anemia?
+True Answer: According to the table, some common medications used to treat Sickle Cell Anemia include:
+
+Beta-adrenergic agents
+Analgesics (narcotics and non-narcotics)
+NSAIDs (cyclooxygenase inhibitor - type)
+Potassium replacement
+Sodium/saline preparations
+General inhalation agents
+Laxatives and cathartics
+IV solutions (dextrose-saline)
+Antiemetic/antivertigo agents
+Sedative-hypnotics (non-barbiturate)
+Glucocorticoids (orally inhaled)
+Folic acid preparations
+Analgesic narcotic anesthetic adjunct agents
+Predicted Answer: The LIVR framework decomposes semantic features into different places by utilizing bitmaps encoded with the semantic labels of places. This decomposition encourages the network to learn features of generic place-based motion patterns that are independent of scene layouts.
+
+==================================================
+
+Paper ID: 1809.00263v5
+Question: What is the value of the learning rate α for the BAIR dataset?
+True Answer: 0.0002
+Predicted Answer: The Leaky Unit helps to aggregate the context information from different sources and allows the model to learn the relationships between entities and their contexts.
+
+==================================================
+
+Paper ID: 1803.02750v3
+Question: What is the difference between the `inc_i(p)` and `inc_i'(p)` operations in the Grow-only Counter data type?
+True Answer: The `inc_i(p)` operation increments the value associated with the key `i` in the counter `p`, while the `inc_i'(p)` operation increments the value associated with the key `i` in the counter `p` only if the key `i` is not already present in the counter.
+Predicted Answer: CDAN-fg
+
+==================================================
+
+Paper ID: 1706.04269v2
+Question: What are the three main components of the Action Search model architecture?
+True Answer: The three main components of the Action Search model architecture are the visual encoder, the LSTM, and the spotting target.
+Predicted Answer: Cars are the most common object in the dataset.
+
+==================================================
+
+Paper ID: 1706.00633v4
+Question: How does the accuracy of the model change as the value of c increases?
+True Answer: The accuracy of the model decreases as the value of c increases.
+Predicted Answer: The performance of the model generally improves as the number of views increases. For example, when the model is trained and tested on two-view data, the F1-score is 29.67. However, when the model is trained and tested on three-view data, the F1-score increases to 30.2. This suggests that the model is able to learn more effectively from data with more views.
+
+==================================================
+
+Paper ID: 1812.00281v3
+Question: What are the different stages of HUMBI body and cloth reconstruction?
+True Answer: The different stages of HUMBI body and cloth reconstruction are: 
+1. Input image of the person (Ibody)
+2. Keypoint estimation (Kbody)
+3. Occupancy map generation (Obody)
+4. Body model fitting (Mbody)
+5. Cloth model fitting (Mcloth)
+Predicted Answer: 5 hops
+
+==================================================
+
