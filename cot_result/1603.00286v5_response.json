@@ -1,0 +1,66 @@
+{
+  "0": {
+    "question": "Which agent values the entire share $Z_j$?",
+    "ground_truth": "Agent $j$.",
+    "selected_figures": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "answer": "1603.00286v5-Figure5-1.png: Agent j values the entire share $Z_j$. <s>"
+  },
+  "1": {
+    "question": "What is the purpose of the blank space labeled Z'5?",
+    "ground_truth": "The blank space labeled Z'5 is used to complete the allocation of the original pieces.",
+    "selected_figures": [
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "answer": "The purpose of the blank space labeled Z'5 is to represent the worst-case scenario for the number of blanks in a maximal arrangement of pairwise-disjoint Spieces contained in a cake, as described by Akopyan and Segal-Halevi (2018). <s>"
+  },
+  "2": {
+    "question": "What can you say about the relationship between the complexity of a cake shape and the minimum number of blanks required for a complete partition into smaller pieces?",
+    "ground_truth": "The complexity of the cake shape generally leads to a higher minimum number of blanks required for a complete partition.",
+    "selected_figures": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "answer": ", The relationship between the complexity of a cake shape and the minimum number of blanks required for a complete partition into smaller pieces is that the more complex the cake shape, the higher the minimum number of blanks required for a complete partition into smaller pieces. <s>"
+  },
+  "3": {
+    "question": " \n\nWhy does the author state that there is a qualitative difference between 2-D and 1-D division?",
+    "ground_truth": " \n\nIn 2-D division, there may be unallocated cake even when there are geometric constraints on the pieces, as shown in Figure 1. This is not the case in 1-D division, where the entire cake can always be allocated.",
+    "selected_figures": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "answer": "The author states that there is a qualitative difference between 2-D and 1-D division because in 2-D division, the process of dividing the cake is more complex due to the presence of two dimensions, while in 1-D division, the process is simpler as there is only one dimension to consider. <s>"
+  },
+  "4": {
+    "question": "What is the minimum number of sides that a rectilinear polygon with four reflex vertices must have?",
+    "ground_truth": "Six.",
+    "selected_figures": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "answer": "<s>"
+  }
+}

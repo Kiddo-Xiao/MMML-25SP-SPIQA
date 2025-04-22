@@ -1,0 +1,31 @@
+{
+  "0": {
+    "question": "How does the observed error compare to the underlying true error as CPU time increases?",
+    "ground_truth": "The observed error is initially higher than the underlying true error, but it quickly decreases and converges to the true error as CPU time increases.",
+    "selected_figures": [
+      "1702.03584v3-Table1-1.png",
+      "1702.03584v3-Figure1-1.png",
+      "1702.03584v3-Figure2-1.png"
+    ],
+    "answer": "one of the error rates as a function of CPU time on UCR Non-Invasive Fetal ECG Thorax1 dataset. <s>"
+  },
+  "1": {
+    "question": "How does the performance of SPIRAL-DTW-kMeans compare to k-Shape and CLDS?",
+    "ground_truth": "SPIRAL-DTW-kMeans performs better than k-Shape and CLDS on most datasets.",
+    "selected_figures": [
+      "1702.03584v3-Table1-1.png",
+      "1702.03584v3-Figure1-1.png",
+      "1702.03584v3-Figure2-1.png"
+    ],
+    "answer": "| The performance of SPIRAL-DTW-kMeans is better than both k-Shape and CLDS on the UCR Non-Invasive Fetal ECG Thorax1 dataset. <s>"
+  },
+  "2": {
+    "question": "Which method performs the best in terms of NMI and what percentage of datasets does it outperform the other methods on?",
+    "ground_truth": "The SPIRAL-MSM-kMeans method performs the best in terms of NMI with a score of 0.365. It outperforms the other methods on 89.4% of the datasets.",
+    "selected_figures": [
+      "1702.03584v3-Table1-1.png",
+      "1702.03584v3-Figure1-1.png"
+    ],
+    "answer": "1702.03584v3-Table1-1.png: SPIRAL-MSM-kMeans <s>"
+  }
+}

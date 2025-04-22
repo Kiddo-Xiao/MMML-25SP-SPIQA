@@ -1,0 +1,61 @@
+{
+  "0": {
+    "question": "Which model performs the best for caption retrieval in terms of R@1 and MEDR? Briefly explain why the performance might be better than other models.",
+    "ground_truth": "Cap2Img performs the best for caption retrieval in terms of both R@1 (27.1) and MEDR (4.0). This suggests that the model is more successful at retrieving the most relevant caption for a given image compared to other models.",
+    "selected_figures": [
+      "1707.06320v2-Table1-1.png",
+      "1707.06320v2-Table2-1.png",
+      "1707.06320v2-Table4-1.png",
+      "1707.06320v2-Table5-1.png"
+    ],
+    "answer": "The model that performs the best for caption retrieval in terms of R@1 and MEDR is the SOTA (state-of-the-art) model, which is based on a pre-trained language model called BERT (Bidirectional Encoder Representations from Transformers). <s>"
+  },
+  "1": {
+    "question": "Which type of grounding appears to be most beneficial for the MRPC task, and how does its performance compare to the baseline model (ST-LN)?",
+    "ground_truth": "GroundSent-Cap appears to be most beneficial for the MRPC task, achieving an accuracy of 72.9/82.2 compared to the baseline model ST-LN's 69.6/81.2.",
+    "selected_figures": [
+      "1707.06320v2-Table1-1.png",
+      "1707.06320v2-Table2-1.png",
+      "1707.06320v2-Table4-1.png",
+      "1707.06320v2-Table5-1.png",
+      "1707.06320v2-Figure1-1.png"
+    ],
+    "answer": "its performance compares to the baseline model (ST-LN). <s>"
+  },
+  "2": {
+    "question": "Which model performs best on the SNLI dataset, and how much does grounding contribute to its performance compared to the baseline STb-1024 model?",
+    "ground_truth": "The GroundSent-Both model performs best on the SNLI dataset, achieving an accuracy of 72.0%. Grounding contributes to an improvement of 4.7% compared to the baseline STb-1024 model, which achieves 67.3%.",
+    "selected_figures": [
+      "1707.06320v2-Table1-1.png",
+      "1707.06320v2-Table2-1.png",
+      "1707.06320v2-Table4-1.png",
+      "1707.06320v2-Table5-1.png",
+      "1707.06320v2-Figure1-1.png"
+    ],
+    "answer": "1707.06320v2-Table1-1.png: The STb-1024 model performs best on the SNLI dataset. <s>"
+  },
+  "3": {
+    "question": "How do the word embeddings learned by the Cap2Img model compare to the original GloVe embeddings in terms of semantic similarity?",
+    "ground_truth": "The word embeddings learned by the Cap2Img model outperform the original GloVe embeddings in terms of semantic similarity.",
+    "selected_figures": [
+      "1707.06320v2-Table1-1.png",
+      "1707.06320v2-Table2-1.png",
+      "1707.06320v2-Table4-1.png",
+      "1707.06320v2-Table5-1.png",
+      "1707.06320v2-Figure1-1.png"
+    ],
+    "answer": "in general, the word embeddings learned by the Cap2Img model are more similar to the original GloVe embeddings in terms of semantic similarity. <s>"
+  },
+  "4": {
+    "question": "What is the role of the \"max\" function in the model architecture?",
+    "ground_truth": "The \"max\" function is used to select the most probable word at each time step in the decoding process.",
+    "selected_figures": [
+      "1707.06320v2-Table1-1.png",
+      "1707.06320v2-Table2-1.png",
+      "1707.06320v2-Table4-1.png",
+      "1707.06320v2-Table5-1.png",
+      "1707.06320v2-Figure1-1.png"
+    ],
+    "answer": "its role is to select the maximum value from a set of values. <s>"
+  }
+}

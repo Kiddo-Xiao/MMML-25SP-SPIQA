@@ -1,0 +1,76 @@
+{
+  "0": {
+    "question": "What are the different steps involved in reconstructing implicit warrants for argument reasoning comprehension?",
+    "ground_truth": "The different steps involved in reconstructing implicit warrants for argument reasoning comprehension are:\n1. Sampling comments\n2. Stance annotation\n3. Reason span annotations\n4. Reason gist summarization\n5. Reason disambiguation\n6. Alternative warrant\n7. Alternative warrant validation\n8. Warrant for original claim\n9. Warrant validation",
+    "selected_figures": [
+      "1708.01425v4-Figure2-1.png",
+      "1708.01425v4-Figure3-1.png",
+      "1708.01425v4-Table2-1.png",
+      "1708.01425v4-Figure4-1.png",
+      "1708.01425v4-Figure5-1.png"
+    ],
+    "answer": "1708.01425v4-Figure2-1.png: Overview of the methodology of reconstructing implicit warrants for argument reasoning comprehension. 1708.01425v4-Figure3-1.png: Figure 3: Cohen's \u03ba agreement for stance annotation on 98 comments. As a trade-off between reducing costs (i.e., discarding fewer instances) and increasing reliability, we chose 5 annotators and a threshold of 0.95 for this task, which"
+  },
+  "1": {
+    "question": "What is the relationship between the number of workers per \"expert\" and Cohen's kappa agreement for stance annotation?",
+    "ground_truth": "The Cohen's kappa agreement for stance annotation increases as the number of workers per \"expert\" increases.",
+    "selected_figures": [
+      "1708.01425v4-Figure2-1.png",
+      "1708.01425v4-Figure3-1.png",
+      "1708.01425v4-Table2-1.png",
+      "1708.01425v4-Figure4-1.png",
+      "1708.01425v4-Table1-1.png",
+      "1708.01425v4-Figure5-1.png"
+    ],
+    "answer": ". The relationship between the number of workers per \"expert\" and Cohen's kappa agreement for stance annotation is moderate to substantial, with 5 annotators and a threshold of 0.95 resulting in \u03ba = 0.58. <s>"
+  },
+  "2": {
+    "question": "Which approach performs best on the development set?",
+    "ground_truth": "Intra-warrant attention with context.",
+    "selected_figures": [
+      "1708.01425v4-Figure2-1.png",
+      "1708.01425v4-Figure3-1.png",
+      "1708.01425v4-Table2-1.png",
+      "1708.01425v4-Figure4-1.png",
+      "1708.01425v4-Figure5-1.png"
+    ],
+    "answer": "Human upper bounds on the argument reasoning comprehension task with respect to education and formal training in reasoning, logic, or argumentation. For each configuration, the mean values are displayed together with the number of participants (above the bar) and with their standard deviations (error bars). <s>"
+  },
+  "3": {
+    "question": "Does formal training in reasoning, logic, or argumentation seem to have a significant effect on argument reasoning comprehension accuracy for people with graduate degrees?",
+    "ground_truth": "No, it does not appear to have a significant effect.",
+    "selected_figures": [
+      "1708.01425v4-Figure2-1.png",
+      "1708.01425v4-Figure3-1.png",
+      "1708.01425v4-Table2-1.png",
+      "1708.01425v4-Figure4-1.png",
+      "1708.01425v4-Table1-1.png",
+      "1708.01425v4-Figure5-1.png"
+    ],
+    "answer": ". No, formal training in reasoning, logic, or argumentation does not seem to have a significant effect on argument reasoning comprehension accuracy for people with graduate degrees. <s>"
+  },
+  "4": {
+    "question": "Which step in the methodology resulted in the largest decrease in the size of the dataset?",
+    "ground_truth": "Step 4, Reason disambiguation.",
+    "selected_figures": [
+      "1708.01425v4-Figure2-1.png",
+      "1708.01425v4-Figure3-1.png",
+      "1708.01425v4-Table2-1.png",
+      "1708.01425v4-Figure4-1.png",
+      "1708.01425v4-Figure5-1.png"
+    ],
+    "answer": "increasing the number of annotators. <s>"
+  },
+  "5": {
+    "question": "How does the intra-warrant attention mechanism work?",
+    "ground_truth": "The intra-warrant attention mechanism uses a BiLSTM to encode the reason and claim, and then provides this encoded information as an attention vector to LSTM layers for each warrant. The attention vector allows the model to focus on specific parts of the reason and claim that are most relevant to each warrant.",
+    "selected_figures": [
+      "1708.01425v4-Figure2-1.png",
+      "1708.01425v4-Figure3-1.png",
+      "1708.01425v4-Table2-1.png",
+      "1708.01425v4-Figure4-1.png",
+      "1708.01425v4-Figure5-1.png"
+    ],
+    "answer": "ith the intra-warrant attention mechanism, the model is able to selectively focus on certain parts of the warrant while reasoning about the argument. This allows the model to better understand the relationship between the warrant and the argument, ultimately improving its ability to comprehend the argument. <s>"
+  }
+}

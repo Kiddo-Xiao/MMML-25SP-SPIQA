@@ -1,0 +1,164 @@
+{
+  "0": {
+    "question": "What is the effect of downsampling on the quality of reconstructed frames?",
+    "ground_truth": "Downsampling reduces the quality of reconstructed frames.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The effect of downsampling on the quality of reconstructed frames depends on the compression algorithm used and the level of downsampling applied. In general, downsampling can degrade the quality of reconstructed frames because it reduces the number of pixels in the reconstructed frames, which can lead to a loss of detail and a reduction in the overall image quality.  <s>"
+  },
+  "1": {
+    "question": "How does the proposed method compare to H.264 in terms of MS-SSIM score at low bitrates?",
+    "ground_truth": "The proposed method achieves significantly higher MS-SSIM scores than H.264 at bitrates below 10 Kbps.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The proposed method outperforms H.264 in terms of MS-SSIM score at low bitrates. <s>"
+  },
+  "2": {
+    "question": "What is the purpose of the second-stage decoder $D_2$?",
+    "ground_truth": "The second-stage decoder $D_2$ takes soft edges $x_G$ as input and produces reconstructed frames.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The purpose of the second-stage decoder $D\\_2$ is to improve the quality of the reconstructed frames in the second encoding stage $E\\_2$. <s>"
+  },
+  "3": {
+    "question": "What are the steps involved in the second encoding stage ($E_2$)?",
+    "ground_truth": "The second encoding stage involves three steps: down-sampling, soft edge detection, and spatio-temporal edge map compression.",
+    "selected_figures": [
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The second encoding stage ($E_2$) involves the following steps:\n\n1. Predicting the residual between the reconstructed frame and the original frame.\n2. Quantizing the residual to a fixed number of bits.\n3. Encoding the quantized residual using a lossless compression algorithm, such as Huffman coding or arithmetic coding. <s>"
+  },
+  "4": {
+    "question": "Which lossless compression scheme achieved the highest compression gain in the example shown in Figure 1?",
+    "ground_truth": "The proposed scheme achieved the highest compression gain.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The lossless compression scheme that achieved the highest compression gain in the example shown in Figure 1 is H.264. <s>"
+  },
+  "5": {
+    "question": "How does the proposed model compare to H.264 in terms of visual quality at low bitrates?",
+    "ground_truth": "The proposed model delivers significantly better visual quality at low bitrates than H.264.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The proposed model outperforms H.264 in terms of visual quality at low bitrates. <s>"
+  },
+  "6": {
+    "question": "How does the level of quantization affect the output of the soft edge detector?",
+    "ground_truth": "As the quantization level $k$ is decreased, the cardinality of colors co-located with edges decreases.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The level of quantization affects the output of the soft edge detector by changing the number of bits allocated to each pixel in the reconstructed video.  <s>"
+  },
+  "7": {
+    "question": "How does the quality of the reconstructed frames change as the resolution increases?",
+    "ground_truth": "The quality of the reconstructed frames increases monotonically as the resolution increases.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The quality of the reconstructed frames increases as the resolution increases. <s>"
+  },
+  "8": {
+    "question": "How does the quality of the reconstructed frames change as the quantization level of the soft edge detector increases?",
+    "ground_truth": "The quality of the reconstructed frames increases as the quantization level of the soft edge detector increases.",
+    "selected_figures": [
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The quality of the reconstructed frames decreases as the quantization level of the soft edge detector increases. <s>"
+  },
+  "9": {
+    "question": "Which quality factor improves the most as k is increased?",
+    "ground_truth": "MS-SSIM",
+    "selected_figures": [
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "answer": "The efficiency in bits per pixel (BPP) achieved by different lossless compression schemes on a bi-level image improves the most as k is increased. <s>"
+  }
+}

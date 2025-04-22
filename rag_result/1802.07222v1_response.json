@@ -1,0 +1,1 @@
+{"0": {"question": "During which hours of the day did the most network-related reboots occur?", "response": {"1802.07222v1-Figure14-1.png": ["12:05 <s>", "10:00 <s>"]}, "referred_figures_names": ["1802.07222v1-Figure14-1.png"], "answer": "The most network-related reboots occurred between 18:00 and 20:00."}}

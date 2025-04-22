@@ -1,0 +1,146 @@
+{
+  "0": {
+    "question": "How is convolution represented in the frequency domain?",
+    "ground_truth": "In the frequency domain, convolution is represented by element-wise multiplication.",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Table5-1.png",
+      "1811.08257v1-Table6-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "<s>"
+  },
+  "1": {
+    "question": "How does the number of classes affect the setup and online time for the Softmax?",
+    "ground_truth": "The setup and online time for the Softmax increases as the number of classes increases.",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Table5-1.png",
+      "1811.08257v1-Table6-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "answer The number of classes affects the setup and online time for the Softmax in that the more classes there are, the more complex the setup and online time become. <s>"
+  },
+  "2": {
+    "question": "Which framework has the lowest total communication cost for MNIST?",
+    "ground_truth": "FALCON",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Table5-1.png",
+      "1811.08257v1-Table6-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "<s>"
+  },
+  "3": {
+    "question": "What is the function of the DataPreprocessing function?",
+    "ground_truth": "The DataPreprocessing function performs Yao Sharing, which is a cryptographic technique for securely sharing data between multiple parties.",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "<s>"
+  },
+  "4": {
+    "question": "Which framework is faster for setting up and running the FC layer?",
+    "ground_truth": "FALCON is faster for both setting up and running the FC layer.",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Table5-1.png",
+      "1811.08257v1-Table6-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "<s>"
+  },
+  "5": {
+    "question": "What is the purpose of the `SubsetGate` function in the MaxPooling function?",
+    "ground_truth": "The `SubsetGate` function is used to split the input `x` into `k` pieces.",
+    "selected_figures": [
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "1811.08257v1-Figure4-1.png: To reduce the number of neurons in the output layer\n1811.08257v1-Table2-1.png: To reduce the number of neurons in the output layer\n1811.08257v1-Figure5-1.png: To reduce the number of neurons in the output layer\n1811.08257v1-Table2-1.png: To reduce the number of neurons in the"
+  },
+  "6": {
+    "question": "What is the purpose of the activation layer in a convolutional neural network?",
+    "ground_truth": "The activation layer applies a non-linear function to the output of the convolution layer. This allows the network to learn more complex features from the data.",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Table5-1.png",
+      "1811.08257v1-Table6-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "ay\n\nThe purpose of the activation layer in a convolutional neural network (CNN) is to introduce non-linearity into the network, allowing it to learn more complex relationships between the input data and the desired output. <s>"
+  },
+  "7": {
+    "question": "What is the role of the filter in the convolution operation?",
+    "ground_truth": "The filter is used to extract features from the input image. It is a small matrix that is applied to each pixel in the image, and the result is a new pixel value.",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Table5-1.png",
+      "1811.08257v1-Table6-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "The role of the filter in the convolution operation is to extract features from the input data. <s>"
+  },
+  "8": {
+    "question": "Which operation has the lowest online time?",
+    "ground_truth": "ReLU",
+    "selected_figures": [
+      "1811.08257v1-Figure3-1.png",
+      "1811.08257v1-Table4-1.png",
+      "1811.08257v1-Table5-1.png",
+      "1811.08257v1-Table6-1.png",
+      "1811.08257v1-Figure4-1.png",
+      "1811.08257v1-Figure1-1.png",
+      "1811.08257v1-Figure2-1.png",
+      "1811.08257v1-Table3-1.png",
+      "1811.08257v1-Table2-1.png",
+      "1811.08257v1-Figure5-1.png"
+    ],
+    "answer": "<s>"
+  }
+}

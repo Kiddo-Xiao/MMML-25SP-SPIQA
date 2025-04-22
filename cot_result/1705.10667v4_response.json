@@ -1,0 +1,75 @@
+{
+  "0": {
+    "question": "What is the main difference between the Multilinear Conditioning architecture and the Randomized Multilinear Conditioning architecture?",
+    "ground_truth": "The main difference is that the Multilinear Conditioning architecture uses a multilinear map to condition the domain discriminator on the classifier prediction, while the Randomized Multilinear Conditioning architecture uses a randomized multilinear map.",
+    "selected_figures": [
+      "1705.10667v4-Table5-1.png",
+      "1705.10667v4-Figure2-1.png",
+      "1705.10667v4-Figure3-1.png",
+      "1705.10667v4-Table4-1.png",
+      "1705.10667v4-Table3-1.png",
+      "1705.10667v4-Table2-1.png",
+      "1705.10667v4-Table1-1.png"
+    ],
+    "answer": "between the Multilinear Conditioning architecture and the Randomized Multilinear Conditioning architecture. The main difference between the Multilinear Conditioning architecture and the Randomized Multilinear Conditioning architecture is that the Randomized Multilinear Conditioning architecture introduces randomness to the Multilinear Conditioning architecture. <s>"
+  },
+  "1": {
+    "question": "Which of the four methods (ResNet, DANN, CDAN-f, CDAN-fg) is most effective at separating the two classes of data points?",
+    "ground_truth": "CDAN-fg",
+    "selected_figures": [
+      "1705.10667v4-Table5-1.png",
+      "1705.10667v4-Figure2-1.png",
+      "1705.10667v4-Figure3-1.png",
+      "1705.10667v4-Table4-1.png",
+      "1705.10667v4-Table3-1.png",
+      "1705.10667v4-Table2-1.png",
+      "1705.10667v4-Table1-1.png",
+      "1705.10667v4-Figure1-1.png"
+    ],
+    "answer": "CDAN-f is the most effective at separating the two classes of data points. <s>"
+  },
+  "2": {
+    "question": "Why might CDAN+E be considered a more versatile method for unsupervised domain adaptation compared to UNIT, CyCADA, and GTA?",
+    "ground_truth": "CDAN+E performs well across all five datasets listed in the table, including both digit and synthetic-to-real datasets, while UNIT, CyCADA, and GTA show strong results only on the digits and synthetic-to-real datasets.",
+    "selected_figures": [
+      "1705.10667v4-Table5-1.png",
+      "1705.10667v4-Figure2-1.png",
+      "1705.10667v4-Figure3-1.png",
+      "1705.10667v4-Table4-1.png",
+      "1705.10667v4-Table3-1.png",
+      "1705.10667v4-Table2-1.png",
+      "1705.10667v4-Table1-1.png",
+      "1705.10667v4-Figure1-1.png"
+    ],
+    "answer": "CDAN+E prioritizes D on easy-to-transfer examples. <s>"
+  },
+  "3": {
+    "question": "Which sampling strategy for random matrices in CDAN+E leads to the highest average accuracy across all domain adaptation tasks on Office-31? How does this compare to the performance of CDAN+E variants that use random sampling?",
+    "ground_truth": "The table shows that CDAN+E (w/o random sampling) achieves the highest average accuracy of 87.7% across all domain adaptation tasks. This is slightly higher than the performance of CDAN+E with uniform sampling (87.0%) and Gaussian sampling (86.4%).",
+    "selected_figures": [
+      "1705.10667v4-Table5-1.png",
+      "1705.10667v4-Figure2-1.png",
+      "1705.10667v4-Figure3-1.png",
+      "1705.10667v4-Table4-1.png",
+      "1705.10667v4-Table3-1.png",
+      "1705.10667v4-Table2-1.png",
+      "1705.10667v4-Table1-1.png",
+      "1705.10667v4-Figure1-1.png"
+    ],
+    "answer": "Entropy Conditioning in CDAN+E leads to the highest average accuracy across all domain adaptation tasks on Office-31, compared to the performance of CDAN+E variants that use random sampling. <s>"
+  },
+  "4": {
+    "question": "Which model performs the best in terms of test error?",
+    "ground_truth": "CDAN (M)",
+    "selected_figures": [
+      "1705.10667v4-Table5-1.png",
+      "1705.10667v4-Figure2-1.png",
+      "1705.10667v4-Figure3-1.png",
+      "1705.10667v4-Table4-1.png",
+      "1705.10667v4-Table3-1.png",
+      "1705.10667v4-Table2-1.png",
+      "1705.10667v4-Table1-1.png"
+    ],
+    "answer": "? CDAN-f and CDAN-fg perform the best in terms of test error on the Office-31 and VisDA-2017 datasets for unsupervised domain adaptation using ResNet-50 and ResNet-110, respectively. <s>"
+  }
+}

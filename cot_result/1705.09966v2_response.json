@@ -1,0 +1,170 @@
+{
+  "0": {
+    "question": "What is the role of the auxiliary discriminator $D_{X_{\\textit{aux}}}$ in the Conditional CycleGAN for identity-guided face generation?",
+    "ground_truth": " The auxiliary discriminator $D_{X_{\\textit{aux}}}$ helps to enforce the identity constraint in the generated image. It takes the generated image or the ground truth image as input and outputs a feature embedding. This embedding is then used to compute the identity loss, which encourages the generated image to have the same identity as the input image.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure15-1.png",
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "answer": "The role of the auxiliary discriminator $D_{X_{\\textit{aux}}}$ in the Conditional CycleGAN for identity-guided face generation is to improve the quality of the generated high-resolution images by providing additional information to the generator network. <s>"
+  },
+  "1": {
+    "question": "How does the proposed method compare to the method in~\\cite{kim2017learning}?",
+    "ground_truth": "The proposed method produces more realistic and natural-looking images than the method in~\\cite{kim2017learning}.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure5-1.png",
+      "1705.09966v2-Figure2-1.png"
+    ],
+    "answer": "The proposed method, Identity-guided face generation with Conditional CycleGAN, outperforms the method in~\\cite{kim2017learning} in terms of generating high-resolution face images while preserving the identity of the person in the low-resolution input. This is achieved by incorporating an identity-guided loss function into the Conditional CycleGAN architecture, which ensures that the identity of the person in the low-resolution input is accurately transferred to the high-resolution output. <s>"
+  },
+  "2": {
+    "question": "Which of the methods among Conditional GAN, Unsupervised GAN and Consitional CycleGAN would you expect to produce images that are most visually similar to the real images in the CelebA dataset?",
+    "ground_truth": "The Conditional CycleGAN method is expected to produce images most visually similar to the real images.",
+    "selected_figures": [
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "answer": "A Conditional GAN would be expected to produce images that are most visually similar to the real images in the CelebA dataset. <s>"
+  },
+  "3": {
+    "question": "How does the proposed attribute-guided face generation method compare to conventional face super-resolution methods in terms of identity preservation?",
+    "ground_truth": "The proposed attribute-guided face generation method preserves the identity of the person in the high-resolution result, while conventional face super-resolution methods do not necessarily guarantee this.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "answer": "The proposed attribute-guided face generation method outperforms conventional face super-resolution methods in terms of identity preservation. <s>"
+  },
+  "4": {
+    "question": "What role does the low-resolution input play in the identity-guided face generation process?",
+    "ground_truth": "The low-resolution input provides an overall shape constraint for the generated high-resolution image. The head pose and facial expression of the generated high-res images adopt those in the low-res inputs.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure15-1.png",
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "answer": "The low-resolution input plays a crucial role in the identity-guided face generation process by providing a starting point for the generation of high-resolution images. <s>"
+  },
+  "5": {
+    "question": "What happens when there is a conflict between the low-res image and the feature vector?",
+    "ground_truth": "The generated high-res digit follows the given class label.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure15-1.png",
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "answer": "When there is a conflict between the low-res image and the feature vector, the identity-guided face generation method may not be able to generate a high-resolution image that accurately reflects the identity of the person in the low-res image. <s>"
+  },
+  "6": {
+    "question": "What is the difference between the input and output of the frontal face generation process?",
+    "ground_truth": "The input is a low-resolution frontal face image and a high-resolution side-face image. The output is a high-resolution frontal face image.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure5-1.png",
+      "1705.09966v2-Figure2-1.png"
+    ],
+    "answer": "The difference between the input and output of the frontal face generation process is that the input is low-resolution, while the output is high-resolution. <s>"
+  },
+  "7": {
+    "question": "How does the proposed method preserve facial details and expression during face swapping?",
+    "ground_truth": "The proposed method utilizes Light-CNN as both the source of the identity features and face verification loss. This allows the method to transfer the appearance of eyes, eyebrows, hairs, etc., while keeping other factors intact, e.g., head pose, shape of face, and facial expression.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure2-1.png"
+    ],
+    "answer": "The proposed method preserves facial details and expression during face swapping by using a conditional generative adversarial network (Conditional CycleGAN) to generate high-resolution face images from low-resolution input images. This is achieved by incorporating an additional attribute vector, which is associated with the input attribute image X, to train a generator GY\u2192X as well as the original GX\u2192Y to generate high-res face image X\u0302 given the low-res input Y and the attribute vector z. The discriminators DX and DY are not shown for simplicity. <s>"
+  },
+  "8": {
+    "question": "How does the proposed method compare to icGAN in terms of generating images with different hair colors?",
+    "ground_truth": "The proposed method is able to generate images with different hair colors more accurately than icGAN.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure4-1.png"
+    ],
+    "answer": "The proposed method outperforms icGAN in generating images with different hair colors. <s>"
+  },
+  "9": {
+    "question": "What is the role of the attribute vector $z$ in the Conditional CycleGAN network?",
+    "ground_truth": "The attribute vector $z$ provides additional information about the desired attributes of the generated high-resolution face image $\\hat{X}$. This information is used by the generator networks $G_{X \\to Y}$ and $G_{Y \\to X}$ to generate images that are more consistent with the desired attributes.",
+    "selected_figures": [
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure15-1.png",
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "answer": "The role of the attribute vector $z$ in the Conditional CycleGAN network is to guide the generation of high-resolution images from low-resolution inputs, while preserving the identity of the person in the generated images. <s>"
+  }
+}

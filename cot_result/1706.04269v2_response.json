@@ -1,0 +1,41 @@
+{
+  "0": {
+    "question": "What are the three main components of the Action Search model architecture?",
+    "ground_truth": "The three main components of the Action Search model architecture are the visual encoder, the LSTM, and the spotting target.",
+    "selected_figures": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure4-1.png"
+    ],
+    "answer": "<s>"
+  },
+  "1": {
+    "question": "Which method requires the fewest observations to spot an action in a video with 2.5% action coverage?",
+    "ground_truth": "Action Search",
+    "selected_figures": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure4-1.png"
+    ],
+    "answer": "The method that requires the fewest observations to spot an action in a video with 2.5% action coverage is Action Search. <s>"
+  },
+  "2": {
+    "question": "How does Action Search use temporal context to reason about where to search next?",
+    "ground_truth": "Action Search uses temporal context to reason about where to search next by looking at the frames before and after the current frame. This allows the model to learn the temporal patterns of actions and to predict where the action is most likely to occur in the next frame.",
+    "selected_figures": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure4-1.png"
+    ],
+    "answer": ", Action Search uses temporal context to reason about where to search next by analyzing the previous search results and predicting the most likely location for the next action to occur. <s>"
+  },
+  "3": {
+    "question": "How does the training size of the Action Search model affect its performance?",
+    "ground_truth": "As the training size increases, the mAP and S score of the Action Search model also improve.",
+    "selected_figures": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure4-1.png"
+    ],
+    "answer": "The training size of the Action Search model has a significant impact on its performance. The larger the training size, the better the model's performance is expected to be. <s>"
+  }
+}

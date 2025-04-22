@@ -1,0 +1,82 @@
+{
+  "0": {
+    "question": "What are the key differences between Seq2Sick and existing attack methods on RNN-based models?",
+    "ground_truth": "Seq2Sick differs from existing attack methods in two key aspects:\n\n1. Search Strategy: While previous methods primarily rely on greedy search, which becomes increasingly inefficient for longer sequences, Seq2Sick employs group lasso regularization and projected gradient descent with gradient regularization. This allows for simultaneous searching of all replacement positions, leading to improved efficiency.\n\n2. Targeted Attack Type: Existing methods focus on targeting specific classes or binary classifications, while Seq2Sick introduces a novel \"keyword\" target type, allowing attacks to be directed towards specific keywords within the generated sequence.",
+    "selected_figures": [
+      "1803.01128v3-Table4-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table3-1.png"
+    ],
+    "answer": "The key difference between Seq2Sick and existing attack methods on RNN-based models is that Seq2Sick is specifically designed to attack recurrent neural network (RNN) models, while existing attack methods are more general and can be applied to a variety of machine learning models, including convolutional neural networks (CNNs) as well as RNNs. <s>"
+  },
+  "1": {
+    "question": "What is the relationship between the success rate of the non-overlapping attack and the number of words changed in the input sentence?",
+    "ground_truth": "There is a negative correlation between the success rate of the non-overlapping attack and the number of words changed in the input sentence. In other words, the fewer words that are changed, the higher the success rate of the attack.",
+    "selected_figures": [
+      "1803.01128v3-Table4-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table3-1.png"
+    ],
+    "answer": "The relationship between the success rate of the non-overlapping attack and the number of words changed in the input sentence is that the higher the success rate, the lower the number of words changed in the input sentence. <s>"
+  },
+  "2": {
+    "question": "How does the difficulty of performing a successful targeted keywords attack change as the number of targeted keywords increases?",
+    "ground_truth": "The difficulty of performing a successful targeted keywords attack increases as the number of targeted keywords increases.",
+    "selected_figures": [
+      "1803.01128v3-Table4-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table3-1.png"
+    ],
+    "answer": "The difficulty of performing a successful targeted keywords attack increases as the number of targeted keywords increases. <s>"
+  },
+  "3": {
+    "question": "Which method resulted in the highest BLEU score?",
+    "ground_truth": "The 1-keyword method resulted in the highest BLEU score of 0.705.",
+    "selected_figures": [
+      "1803.01128v3-Table4-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table3-1.png"
+    ],
+    "answer": "The non-overlapping method resulted in the highest BLEU score. <s>"
+  },
+  "4": {
+    "question": "Do adversarial examples generated with the 2-keyword constraint maintain a similar syntactic structure to the original sentences?",
+    "ground_truth": "No, adversarial examples generated with the 2-keyword constraint deviate significantly from the original syntactic structure.",
+    "selected_figures": [
+      "1803.01128v3-Table4-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table3-1.png"
+    ],
+    "answer": "Yes, the adversarial examples generated with the 2-keyword constraint maintain a similar syntactic structure to the original sentences. <s>"
+  }
+}

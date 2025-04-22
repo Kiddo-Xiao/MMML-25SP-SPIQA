@@ -1,0 +1,1 @@
+{"0": {"question": "What is the effect of increasing K on the test PPL of the different models?", "response": {"1704.00774v3-Figure1-1.png": ["10 <s>", "The effect of increasing K on the test PPL of the different models decreases. <s>"]}, "referred_figures_names": ["1704.00774v3-Figure1-1.png"], "answer": "The test PPL of all the models decreases as K increases."}}

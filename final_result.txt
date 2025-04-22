@@ -1,0 +1,4 @@
+Baseline (original paper): L3Score: 7.50, ROUGE‑L: 18.9, 
+RAG only: L3Score: 20.58, ROUGE‑L: 21.75
+Image CoT only: L3Score: 25.87, ROUGE‑L: 35.20
+Final result with RAG & Image CoT: L3Score: , ROUGE‑L: 

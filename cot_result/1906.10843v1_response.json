@@ -1,0 +1,62 @@
+{
+  "0": {
+    "question": "Which estimator performs best in the presence of noisy confounders and how does it compare to the Covariate Control (CC) estimator?",
+    "ground_truth": "The Entropy Balancing (EB) estimator performs best across all measures (Bias, MAE, and MSE) when confounders are noisy. While the CC estimator also performs well, it exhibits slightly higher bias and MAE compared to EB.",
+    "selected_figures": [
+      "1906.10843v1-Figure3-1.png",
+      "1906.10843v1-Figure5-1.png",
+      "1906.10843v1-Table2-1.png",
+      "1906.10843v1-Table5-1.png",
+      "1906.10843v1-Figure8-1.png",
+      "1906.10843v1-Figure1-1.png",
+      "1906.10843v1-Table1-1.png",
+      "1906.10843v1-Table4-1.png",
+      "1906.10843v1-Figure7-1.png",
+      "1906.10843v1-Figure6-1.png",
+      "1906.10843v1-Table3-1.png",
+      "1906.10843v1-Figure4-1.png",
+      "1906.10843v1-Figure2-1.png"
+    ],
+    "answer": "The Adversarial Balancing (AB) estimator outperforms the Covariate Control (CC) estimator in the presence of noisy confounders. <s>"
+  },
+  "1": {
+    "question": "Which ATE estimator is most affected by the presence of noisy confounders?",
+    "ground_truth": "Outcome Regression (OR)",
+    "selected_figures": [
+      "1906.10843v1-Figure3-1.png",
+      "1906.10843v1-Figure5-1.png",
+      "1906.10843v1-Table2-1.png",
+      "1906.10843v1-Table5-1.png",
+      "1906.10843v1-Figure8-1.png",
+      "1906.10843v1-Figure1-1.png",
+      "1906.10843v1-Table1-1.png",
+      "1906.10843v1-Table4-1.png",
+      "1906.10843v1-Figure7-1.png",
+      "1906.10843v1-Figure6-1.png",
+      "1906.10843v1-Table3-1.png",
+      "1906.10843v1-Figure4-1.png",
+      "1906.10843v1-Figure2-1.png"
+    ],
+    "answer": "The Adversarial Balancing (AB) estimator is most affected by the presence of noisy confounders. <s>"
+  },
+  "2": {
+    "question": "Which estimator has the smallest bias and best MSE performance in the case of fully observed confounders?",
+    "ground_truth": "The Entropy Balancing (EB) and Covariate Control (CC) estimators.",
+    "selected_figures": [
+      "1906.10843v1-Figure3-1.png",
+      "1906.10843v1-Figure5-1.png",
+      "1906.10843v1-Table2-1.png",
+      "1906.10843v1-Table5-1.png",
+      "1906.10843v1-Figure8-1.png",
+      "1906.10843v1-Figure1-1.png",
+      "1906.10843v1-Table1-1.png",
+      "1906.10843v1-Table4-1.png",
+      "1906.10843v1-Figure7-1.png",
+      "1906.10843v1-Figure6-1.png",
+      "1906.10843v1-Table3-1.png",
+      "1906.10843v1-Figure4-1.png",
+      "1906.10843v1-Figure2-1.png"
+    ],
+    "answer": "The estimator with the smallest bias and best MSE performance in the case of fully observed confounders is Inverse Propensity Weighing (IPW). <s>"
+  }
+}

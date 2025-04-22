@@ -1,0 +1,67 @@
+{
+  "0": {
+    "question": "Which model performed the best on the SICK dataset according to the MSE metric?",
+    "ground_truth": "The supervised model performed the best on the SICK dataset according to the MSE metric.",
+    "selected_figures": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "answer": "dataset. The model that performed the best on the SICK dataset according to the Mean Squared Error (MSE) metric was the one trained from scratch with the ordering task. <s>"
+  },
+  "1": {
+    "question": "What is the effect of pre-training with the ordering task on the ROUGE-L score for extractive summarization?",
+    "ground_truth": "Pre-training with the ordering task increases the ROUGE-L score for extractive summarization.",
+    "selected_figures": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "answer": "model pre-trained with the ordering task outperforms models trained from scratch on the ROUGE-L score for extractive summarization. <s>"
+  },
+  "2": {
+    "question": "Which model performs the best for the order discrimination task on the Accidents dataset and how does it compare to the other data-driven approaches?",
+    "ground_truth": "The proposed model in this paper achieves the best performance for the order discrimination task on the Accidents dataset with an accuracy of 0.944. It outperforms the other data-driven approaches, namely Window (Recurrent) with 0.840, Window (Recursive) with 0.864, and Seq2seq with 0.930.",
+    "selected_figures": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "answer": "models trained from scratch perform better than models pre-trained with the ordering task on the order discrimination task on the Accidents dataset. <s>"
+  },
+  "3": {
+    "question": "What can you say about the relationship between the sentences in a document based on the t-SNE embeddings?",
+    "ground_truth": "Sentences that are closer together in the embedding space are more semantically similar than those that are farther apart.",
+    "selected_figures": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "answer": "ion of the relationship between the sentences in a document based on the t-SNE embeddings, which are color coded by the position of the sentence in the document it appears. <s>"
+  },
+  "4": {
+    "question": "How does the proposed model compare to the other models in terms of accuracy on the NIPS Abstracts dataset?",
+    "ground_truth": "The proposed model has the highest accuracy on the NIPS Abstracts dataset, with an accuracy of 51.55.",
+    "selected_figures": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "answer": "model outperforms the state-of-the-art models on the NIPS Abstracts dataset in terms of semantic similarity and paraphrase detection. <s>"
+  }
+}

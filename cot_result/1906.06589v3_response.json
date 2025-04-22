@@ -1,0 +1,77 @@
+{
+  "0": {
+    "question": "Which model performed the best on the test data?",
+    "ground_truth": "P-FC",
+    "selected_figures": [
+      "1906.06589v3-Table2-1.png",
+      "1906.06589v3-Table4-1.png",
+      "1906.06589v3-Table5-1.png",
+      "1906.06589v3-Table6-1.png",
+      "1906.06589v3-Table3-1.png",
+      "1906.06589v3-Table11-1.png",
+      "1906.06589v3-Table12-1.png",
+      "1906.06589v3-Figure5-1.png",
+      "1906.06589v3-Figure6-1.png",
+      "1906.06589v3-Figure7-1.png",
+      "1906.06589v3-Figure1-1.png",
+      "1906.06589v3-Figure4-1.png",
+      "1906.06589v3-Table7-1.png",
+      "1906.06589v3-Table8-1.png",
+      "1906.06589v3-Table9-1.png",
+      "1906.06589v3-Table10-1.png",
+      "1906.06589v3-Table1-1.png",
+      "1906.06589v3-Figure2-1.png"
+    ],
+    "answer": "1906.06589v3-Table7-1.png: The DMP-trained model on CIFAR10 achieved 77.98% accuracy on the training data and 76.79% accuracy on the test data, with a 50.8% membership inference accuracy. 1906.06589v3-Table8-1.png: For a fixed Xref, increasing the temperature of the softmax layer of \u03b8up reduces the risk of membership inference, strengthening the membership privacy. 1"
+  },
+  "1": {
+    "question": "How does the size of the reference set ($X_\\textsf{ref}$) used for DMP training differ between the Purchase/Texas datasets and the CIFAR datasets? Explain the rationale behind this difference.",
+    "ground_truth": "For Purchase and Texas datasets, $X_\\textsf{ref}$ is specifically selected and contains 10,000 data points. In contrast, for CIFAR datasets, the entire remaining data (25,000 points) after selecting $D_\\textsf{tr}$ is used as $X_\\textsf{ref}$. This difference is due to the smaller size of the CIFAR datasets. Using the entire remaining data as $X_\\textsf{ref}$ ensures sufficient data for effective DMP training in these cases.",
+    "selected_figures": [
+      "1906.06589v3-Table2-1.png",
+      "1906.06589v3-Table4-1.png",
+      "1906.06589v3-Table5-1.png",
+      "1906.06589v3-Table6-1.png",
+      "1906.06589v3-Table3-1.png",
+      "1906.06589v3-Figure3-1.png",
+      "1906.06589v3-Table11-1.png",
+      "1906.06589v3-Table12-1.png",
+      "1906.06589v3-Figure5-1.png",
+      "1906.06589v3-Figure7-1.png",
+      "1906.06589v3-Figure1-1.png",
+      "1906.06589v3-Figure4-1.png",
+      "1906.06589v3-Table7-1.png",
+      "1906.06589v3-Table8-1.png",
+      "1906.06589v3-Table9-1.png",
+      "1906.06589v3-Table10-1.png",
+      "1906.06589v3-Table1-1.png",
+      "1906.06589v3-Figure2-1.png"
+    ],
+    "answer": "The size of the reference set ($X_\\textsf{ref}$) used for Differentially Private Training (DMP) differs between the Purchase/Texas datasets and the CIFAR datasets. The rationale behind this difference is to balance the trade-off between membership privacy and model utility.\n\nIn the Purchase/Texas datasets, the reference set ($X_\\textsf{ref}$) used for DMP training is much larger than in the CIFAR datasets. This is due to the fact that the Purchase/Texas datasets contain more sensitive information than the CIFAR datasets."
+  },
+  "2": {
+    "question": "What is the relationship between the average X_ref entropy and the generalization gap?",
+    "ground_truth": "The generalization gap increases as the average X_ref entropy increases.",
+    "selected_figures": [
+      "1906.06589v3-Table2-1.png",
+      "1906.06589v3-Table4-1.png",
+      "1906.06589v3-Table5-1.png",
+      "1906.06589v3-Table6-1.png",
+      "1906.06589v3-Table3-1.png",
+      "1906.06589v3-Table11-1.png",
+      "1906.06589v3-Table12-1.png",
+      "1906.06589v3-Figure5-1.png",
+      "1906.06589v3-Figure6-1.png",
+      "1906.06589v3-Figure7-1.png",
+      "1906.06589v3-Figure1-1.png",
+      "1906.06589v3-Figure4-1.png",
+      "1906.06589v3-Table7-1.png",
+      "1906.06589v3-Table8-1.png",
+      "1906.06589v3-Table9-1.png",
+      "1906.06589v3-Table10-1.png",
+      "1906.06589v3-Table1-1.png",
+      "1906.06589v3-Figure2-1.png"
+    ],
+    "answer": "The relationship between the average X\\_ref entropy and the generalization gap is that the lower the entropy of predictions of the unprotected model on X\\_ref, the higher the membership privacy. <s>"
+  }
+}

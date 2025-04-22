@@ -1,0 +1,181 @@
+{
+  "0": {
+    "question": "How does the square hashing process work?",
+    "ground_truth": "Square hashing is a process that uses two hash functions to map a source/destination pair to a bucket in a two-dimensional array. The first hash function, h_i(s), maps the source address to a row in the array, and the second hash function, h_i(d), maps the destination address to a column in the array. The intersection of the row and column is the bucket where the fingerprint is stored.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png"
+    ],
+    "answer": "ict 1809.01246v1-Figure5-1.png: The square hashing process is a technique used to map a large number of items to a small number of buckets. It is used to distribute items across a fixed number of buckets in a way that minimizes the number of collisions, which occur when two or more items are mapped to the same bucket. ict 1809.01246v1-Figure6-1.png: In the basic version of the data structure, each item is hashed to a bucket"
+  },
+  "1": {
+    "question": "What is the relationship between the buffer percentage and the width of the room?",
+    "ground_truth": "The buffer percentage decreases as the width of the room increases.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "1809.01246v1-Figure13-1.png: Buffer Percentage is directly proportional to the width of the room. <s>"
+  },
+  "2": {
+    "question": "How are edges aggregated in the graph sketch $G_h$?",
+    "ground_truth": "Edges are aggregated by adding their weights together.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "1809.01246v1-Figure11-1.png: Average Precision of 1-hop Successor Queries\n1809.01246v1-Figure12-1.png: True Negative Recall of Reachability Queries\n1809.01246v1-Figure13-1.png: Buffer Percentage\n1809.01246v1-Figure1-1.png: Fig. 1. A sample"
+  },
+  "3": {
+    "question": "How does the Average Relative Error (ARE) of node queries change as the width increases for different configurations of GSS and TCM?",
+    "ground_truth": "The ARE of node queries generally decreases as the width increases for all configurations of GSS and TCM. However, there are some fluctuations in the ARE for some configurations.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "The Average Relative Error (ARE) of node queries increases as the width increases for different configurations of GSS and TCM. <s>"
+  },
+  "4": {
+    "question": "What is the relationship between the table and the graph sketch in the figure?",
+    "ground_truth": "The table provides the mapping between the nodes in the original graph and their corresponding hash values, which are used to create the graph sketch.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "1809.01246v1 <s>"
+  },
+  "5": {
+    "question": "Which graph shows the largest improvement in accuracy for the TCM(8*memory) method compared to the GSS(fsize=12) method?",
+    "ground_truth": "The graph for the Caida-networkflow dataset shows the largest improvement in accuracy for the TCM(8*memory) method compared to the GSS(fsize=12) method.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "1809.01246v1-Figure11-1.png: Average Precision of 1-hop Successor Queries 1809.01246v1-Figure12-1.png: Buffer Percentage 1809.01246v1-Figure13-1.png: True Negative Recall of Reachability Queries 1809.01246v1-Figure1-1.png: Fig. 1. A sample"
+  },
+  "6": {
+    "question": "Which data structure is the fastest for updating on the email-EuAll dataset?",
+    "ground_truth": "GSS (no sampling)",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "1809.01246v1 is the fastest data structure for updating on the email-EuAll dataset. <s>"
+  },
+  "7": {
+    "question": "How does the average precision of TCM(256*memory) compare to the other two algorithms in the email-EuAll dataset?",
+    "ground_truth": "The average precision of TCM(256*memory) is lower than the other two algorithms in the email-EuAll dataset.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "1809.01246v1-Figure11-1.png: The average precision of TCM(256*memory) is lower than the other two algorithms in the email-EuAll dataset. <s>"
+  },
+  "8": {
+    "question": "Which query type has the highest accuracy when M/|V| is small?",
+    "ground_truth": "Edge query.",
+    "selected_figures": [
+      "1809.01246v1-Figure5-1.png",
+      "1809.01246v1-Figure6-1.png",
+      "1809.01246v1-Figure12-1.png",
+      "1809.01246v1-Figure13-1.png",
+      "1809.01246v1-Figure1-1.png",
+      "1809.01246v1-Figure11-1.png",
+      "1809.01246v1-Figure10-1.png",
+      "1809.01246v1-Figure2-1.png",
+      "1809.01246v1-Figure8-1.png",
+      "1809.01246v1-TableI-1.png",
+      "1809.01246v1-Figure9-1.png",
+      "1809.01246v1-Figure4-1.png",
+      "1809.01246v1-Figure3-1.png"
+    ],
+    "answer": "1809.01246v1-Figure12-1.png: True Negative Recall of Reachability Queries <s>"
+  }
+}

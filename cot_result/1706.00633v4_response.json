@@ -1,0 +1,173 @@
+{
+  "0": {
+    "question": "Which method performed better on the MNIST dataset, ResNet-32 (CE) or ResNet-56 (RCE)?",
+    "ground_truth": "ResNet-56 (RCE) performed better on the MNIST dataset with a classification error rate of 0.32% compared to ResNet-32 (CE) which had a classification error rate of 0.38%.",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "ResNet-32 (CE) performed better on the MNIST dataset than ResNet-56 (RCE). <s>"
+  },
+  "1": {
+    "question": "Which combination of training procedure and thresholding metric consistently performs the best across both MNIST and CIFAR-10 datasets for all attack types?",
+    "ground_truth": "RCE training combined with the K-density metric consistently performs the best across both MNIST and CIFAR-10 datasets for all attack types.",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The combination of training procedure and thresholding metric that consistently performs the best across both MNIST and CIFAR-10 datasets for all attack types is not specified. <s>"
+  },
+  "2": {
+    "question": "Which attack method is the most effective at reducing the accuracy of the Resnet-32 model on the MNIST dataset?",
+    "ground_truth": "The most effective attack method at reducing the accuracy of the Resnet-32 model on the MNIST dataset is BIM/CE.",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The C&W-wb attack is the most effective at reducing the accuracy of the Resnet-32 model on the MNIST dataset. <s>"
+  },
+  "3": {
+    "question": "Which of the following algorithms performs the best when trained via the CE?",
+    "ground_truth": "C&W-hc",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The algorithm that performs the best when trained via the CE is Resnet-32. <s>"
+  },
+  "4": {
+    "question": "How does the accuracy of the model change as the value of c increases?",
+    "ground_truth": "The accuracy of the model decreases as the value of c increases.",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The accuracy of the model decreases as the value of c increases. <s>"
+  },
+  "5": {
+    "question": "Which objective function resulted in a higher ratio of f2(x\u2217) > 0 for the MNIST dataset?",
+    "ground_truth": "RCE",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The high-confidence version of C&W-wb resulted in a higher ratio of f2(x\u2217) > 0 for the MNIST dataset. <s>"
+  },
+  "6": {
+    "question": "Which type of adversarial example generation method results in images that are visually more similar to the original images?",
+    "ground_truth": "The CE method results in images that are visually more similar to the original images than the RCE method.",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The adversarial examples crafted by the high-confidence version of C&W-wb on MNIST and CIFAR-10 are visually more similar to the original images. <s>"
+  },
+  "7": {
+    "question": "How does the proposed metric of non-ME help detect adversarial examples?",
+    "ground_truth": " The non-ME metric measures the entropy of the normalized non-maximal elements in the final hidden vector of the classifier. Adversarial examples often have low non-ME values, indicating that they are close to the decision boundary and have high confidence in the incorrect class.",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The proposed metric of non-ME helps detect adversarial examples by measuring the ratio of f2(x\u2217) > 0, where f2(x\u2217) is the K-density of the adversarial examples crafted by the high-confidence version of C&W-wb on MNIST and CIFAR-10. <s>"
+  },
+  "8": {
+    "question": "Based on the table, which attack method is the most efficient in terms of time taken to craft an adversarial example, and how much faster is it compared to the slowest method for the same objective function?",
+    "ground_truth": "The FGSM attack is the most efficient, requiring approximately 1.9 milliseconds to craft an adversarial example with the CE objective function. This is roughly **55,000 times faster** than the slowest method, C&W-wb, which takes about 700 seconds for the same objective function.",
+    "selected_figures": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png"
+    ],
+    "answer": "The high-confidence version of C&W-wb is the most efficient attack method in terms of time taken to craft an adversarial example on both MNIST and CIFAR-10 datasets, with an average time cost of 0.00633 seconds. <s>"
+  }
+}

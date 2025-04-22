@@ -1,0 +1,62 @@
+{
+  "0": {
+    "question": "What are the two auxiliary tasks that are used in the ESMM architecture for CVR modeling?",
+    "ground_truth": "The two auxiliary tasks are CTR and CTCVR.",
+    "selected_figures": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "answer": "The two auxiliary tasks that are used in the ESMM architecture for CVR modeling are Click-Through-Rate (CTR) and Click-Through-Conversion-Rate (CTCVR). <s>"
+  },
+  "1": {
+    "question": "What is the relationship between clicks and impressions?",
+    "ground_truth": "Clicks are a subset of impressions.",
+    "selected_figures": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "answer": "The relationship between clicks and impressions is that clicks are a measure of user engagement with an advertisement, while impressions are a measure of the number of times an advertisement is displayed to a user. In other words, impressions are the number of times an advertisement is shown to a user, while clicks are the number of times a user interacts with an advertisement by clicking on it. The ratio of clicks to impressions is commonly referred to as the click-through rate (CTR). <s>"
+  },
+  "2": {
+    "question": "How much more prevalent are click events compared to conversion events in the Product Dataset?",
+    "ground_truth": "Click events are roughly 184 times more prevalent than conversion events in the Product Dataset.",
+    "selected_figures": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "answer": "1804.07931v2-Table1-1.png: The ratio of click events to conversion events in the Product Dataset is approximately 1804.07931v2-Table1-1.png: 1804.07931v2-Table2-1.png: 1804.07931v2-Figure3-1.png: 1804.07931v2-Figure2-1.png: 1804."
+  },
+  "3": {
+    "question": "Which model performs best overall on both the CVR and CTCVR tasks?",
+    "ground_truth": "The ESMM model performs the best overall on both the CVR and CTCVR tasks.",
+    "selected_figures": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "answer": "The model that performs best overall on both the CVR and CTCVR tasks is the Ensemble Stochastic Multi-Task (ESMM) model. <s>"
+  },
+  "4": {
+    "question": "How does the performance of ESMM compare to other models on the CVR task and CTCVR task with different training set sizes?",
+    "ground_truth": "ESMM-NS and ESMM outperform all other models consistently across different training set sizes on both the CVR and CTCVR tasks.",
+    "selected_figures": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "answer": "1804.07931v2-Table1-1.png, 1804.07931v2-Table2-1.png, 1804.07931v2-Figure3-1.png, 1804.07931v2-Figure2-1.png, 1804.07931v2-Figure1-1.png <s>"
+  }
+}

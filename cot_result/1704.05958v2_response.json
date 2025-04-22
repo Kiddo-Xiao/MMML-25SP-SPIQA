@@ -1,0 +1,50 @@
+{
+  "0": {
+    "question": "Can you estimate the percentage of entity pairs in the NYT training set that have a corresponding relational fact in the Knowledge Base (KB)?",
+    "ground_truth": "Approximately 6.66%.",
+    "selected_figures": [
+      "1704.05958v2-Table1-1.png",
+      "1704.05958v2-Figure1-1.png",
+      "1704.05958v2-Figure4-1.png",
+      "1704.05958v2-Figure6-1.png",
+      "1704.05958v2-Figure2-1.png",
+      "1704.05958v2-Figure7-1.png",
+      "1704.05958v2-Table2-1.png",
+      "1704.05958v2-Table3-1.png",
+      "1704.05958v2-Figure3-1.png"
+    ],
+    "answer": "It is not possible to estimate the percentage of entity pairs in the NYT training set that have a corresponding relational fact in the Knowledge Base (KB) with the given information. <s>"
+  },
+  "1": {
+    "question": "Why is conventional distant supervision problematic?",
+    "ground_truth": "Conventional distant supervision can lead to wrong labeling of textual relations with KB relations.",
+    "selected_figures": [
+      "1704.05958v2-Table1-1.png",
+      "1704.05958v2-Figure1-1.png",
+      "1704.05958v2-Figure4-1.png",
+      "1704.05958v2-Figure5-1.png",
+      "1704.05958v2-Figure6-1.png",
+      "1704.05958v2-Figure2-1.png",
+      "1704.05958v2-Figure7-1.png",
+      "1704.05958v2-Table2-1.png",
+      "1704.05958v2-Table3-1.png",
+      "1704.05958v2-Figure3-1.png"
+    ],
+    "answer": "Conventional distant supervision is problematic because it relies solely on co-occurrence statistics, which may not be sufficient to capture the complex relationships between entities in a knowledge base. \n\nIn summary, conventional distant supervision is limited in its ability to capture the nuances and subtleties of the relationships between entities in a knowledge base, as it relies solely on co-occurrence statistics. To address this limitation, researchers have developed more sophisticated models, such as GloRE and LoRE, which incorporate adversarial training and other techniques to better capture the complementary information"
+  },
+  "2": {
+    "question": "What is the role of the GRU cell in the embedding model?",
+    "ground_truth": "The GRU cell is used to map a textual relation embedding to a probability distribution over KB relations.",
+    "selected_figures": [
+      "1704.05958v2-Table1-1.png",
+      "1704.05958v2-Figure4-1.png",
+      "1704.05958v2-Figure6-1.png",
+      "1704.05958v2-Figure2-1.png",
+      "1704.05958v2-Figure7-1.png",
+      "1704.05958v2-Table2-1.png",
+      "1704.05958v2-Table3-1.png",
+      "1704.05958v2-Figure3-1.png"
+    ],
+    "answer": "for mapping textual relation embeddings to probability distributions over KB relations. <s>"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "0": {
+    "question": "Which method, C-Tarone or Binarization, achieves higher precision when the number of features is small and the number of data points is large?",
+    "ground_truth": "C-Tarone.",
+    "selected_figures": [
+      "1702.08694v3-Figure2-1.png",
+      "1702.08694v3-Table1-1.png",
+      "1702.08694v3-Figure5-1.png",
+      "1702.08694v3-Figure3-1.png",
+      "1702.08694v3-Figure4-1.png",
+      "1702.08694v3-Table2-1.png"
+    ],
+    "answer": "C-Tarone achieves higher precision when the number of features is small and the number of data points is large. <s>"
+  },
+  "1": {
+    "question": "How does the C-Tarone method compare to the binarization method in terms of precision, recall, F-measure, and running time?",
+    "ground_truth": "The C-Tarone method has higher precision and F-measure than the binarization method in all datasets. The C-Tarone method has better or competitive recall than the binarization method. The running time of the C-Tarone method is competitive with the binarization method.",
+    "selected_figures": [
+      "1702.08694v3-Figure2-1.png",
+      "1702.08694v3-Table1-1.png",
+      "1702.08694v3-Figure5-1.png",
+      "1702.08694v3-Figure3-1.png",
+      "1702.08694v3-Figure4-1.png",
+      "1702.08694v3-Table2-1.png"
+    ],
+    "answer": "The C-Tarone method outperforms the binarization method in terms of precision, recall, F-measure, and running time. <s>"
+  },
+  "2": {
+    "question": "For a fixed value of $b$, how does the maximum achievable KL divergence and the corresponding minimum achievable p-value change with increasing values of $a$?",
+    "ground_truth": "The maximum achievable KL divergence initially increases with increasing values of $a$ until it reaches a peak. Then, it decreases with increasing values of $a$. The minimum achievable p-value initially decreases with increasing values of $a$ until it reaches a minimum. Then, it increases with increasing values of $a$.",
+    "selected_figures": [
+      "1702.08694v3-Figure2-1.png",
+      "1702.08694v3-Table1-1.png",
+      "1702.08694v3-Figure5-1.png",
+      "1702.08694v3-Figure3-1.png",
+      "1702.08694v3-Figure4-1.png",
+      "1702.08694v3-Table2-1.png"
+    ],
+    "answer": "The maximum achievable KL divergence and the corresponding minimum achievable p-value change with increasing values of $a$ as follows:\n\nFor a fixed value of $b$, the maximum achievable KL divergence increases as the value of $a$ increases, while the minimum achievable p-value decreases as the value of $a$ increases. <s>"
+  },
+  "3": {
+    "question": "Which dataset would likely require the most computational resources for C-Tarone to analyze?",
+    "ground_truth": "The \"wdbc\" dataset would likely require the most computational resources for C-Tarone to analyze.",
+    "selected_figures": [
+      "1702.08694v3-Figure2-1.png",
+      "1702.08694v3-Table1-1.png",
+      "1702.08694v3-Figure5-1.png",
+      "1702.08694v3-Figure3-1.png",
+      "1702.08694v3-Figure4-1.png",
+      "1702.08694v3-Table2-1.png"
+    ],
+    "answer": "The dataset that would likely require the most computational resources for C-Tarone to analyze is the real data. <s>"
+  }
+}

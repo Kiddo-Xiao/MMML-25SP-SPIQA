@@ -1,0 +1,98 @@
+{
+  "0": {
+    "question": "Which relevance label category of documents received the most significant rank promotion according to the NegPair reduction metric?",
+    "ground_truth": "The perfect results received the largest promotions in rank.",
+    "selected_figures": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Table1-1.png"
+    ],
+    "answer": "1804.05936v2-Table5-1: The statistics of the test fold used for pairwise ranking analysis in Microsoft 30k. 1804.05936v2-Figure2-1: The NegPair reduction (NP(d,LambdaMART )- NP(d,DLCM)) on documents with different relevance labels. 1804.05936v2-Figure1-1: The overall structure of the Deep Listwise Context Model (DLCM). <s>"
+  },
+  "1": {
+    "question": "What is the role of the GRU in the Deep Listwise Context Model (DLCM)?",
+    "ground_truth": "The GRU is used to process the ranked list of documents provided by a global ranking function.",
+    "selected_figures": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Table1-1.png"
+    ],
+    "answer": "The gated recurrent unit (GRU) is a type of recurrent neural network (RNN) architecture used in the Deep Listwise Context Model (DLCM) to improve the performance of learning-to-rank tasks. <s>"
+  },
+  "2": {
+    "question": "How does the NegPair reduction vary with the number of perfect results in a query?",
+    "ground_truth": "The NegPair reduction generally increases as the number of perfect results in a query increases.",
+    "selected_figures": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Table1-1.png"
+    ],
+    "answer": "The NegPair reduction (NP(d,LambdaMART )- NP(d,DLCM)) on documents with different relevance labels decreases as the number of perfect results in a query increases. <s>"
+  },
+  "3": {
+    "question": "Which dataset would be most suitable for training a learning-to-rank model with limited computational resources, and why?",
+    "ground_truth": "Microsoft 10k would be the most suitable dataset for training with limited computational resources.",
+    "selected_figures": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Table1-1.png"
+    ],
+    "answer": "The Microsoft 30k dataset would be the most suitable for training a learning-to-rank model with limited computational resources, as it has a relatively small number of queries (30,000), documents (100,000), and relevance labels.  <s>"
+  },
+  "4": {
+    "question": "Which of the following methods has the best performance?",
+    "ground_truth": "LambdaMART",
+    "selected_figures": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Table1-1.png"
+    ],
+    "answer": "The Deep Listwise Context Model (DLCM) has the best performance. <s>"
+  },
+  "5": {
+    "question": "Which combination of initial list, model, and loss function achieved the best overall performance on the Yahoo! set 1, as measured by nDCG@10 and ERR@10?",
+    "ground_truth": "LambdaMART initial list, DLCM model, and AttRank loss function achieved the best overall performance on the Yahoo! set 1, with an nDCG@10 of 0.743 and an ERR@10 of 0.453.",
+    "selected_figures": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Table1-1.png"
+    ],
+    "answer": "The combination of initial list, model, and loss function that achieved the best overall performance on the Yahoo! set 1, as measured by nDCG@10 and ERR@10, is the Deep Listwise Context Model (DLCM). <s>"
+  }
+}

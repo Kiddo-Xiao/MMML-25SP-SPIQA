@@ -1,0 +1,12 @@
+{
+  "0": {
+    "question": "What is the sample complexity lower bound for recovering a tree-structured sparse signal using standard compressed sensing?",
+    "ground_truth": "\u03a9(s)",
+    "selected_figures": [
+      "1811.06635v1-Figure1-1.png",
+      "1811.06635v1-Figure2-1.png",
+      "1811.06635v1-Figure3-1.png"
+    ],
+    "answer": "\u03a9(d log d) <s>"
+  }
+}

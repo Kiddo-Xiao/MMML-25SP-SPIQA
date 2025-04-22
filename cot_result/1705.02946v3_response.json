@@ -1,0 +1,53 @@
+{
+  "0": {
+    "question": "What is the initial value of V2 in the interval [0.35, 0.67]?",
+    "ground_truth": "0.35",
+    "selected_figures": [
+      "1705.02946v3-Figure5-1.png",
+      "1705.02946v3-Figure6-1.png",
+      "1705.02946v3-Figure4-1.png",
+      "1705.02946v3-Table2-1.png",
+      "1705.02946v3-Figure2-1.png",
+      "1705.02946v3-Table1-1.png",
+      "1705.02946v3-Figure3-1.png",
+      "1705.02946v3-Figure8-1.png",
+      "1705.02946v3-Figure1-1.png",
+      "1705.02946v3-Figure7-1.png"
+    ],
+    "answer": "The initial value of V2 in the interval [0.35, 0.67] is 0.5. <s>"
+  },
+  "1": {
+    "question": "What is the distance from equitability for the allocation that can be obtained by cutting at $x$ with the player order $(1,2)$?",
+    "ground_truth": "The distance from equitability is $b-a$.",
+    "selected_figures": [
+      "1705.02946v3-Figure5-1.png",
+      "1705.02946v3-Figure6-1.png",
+      "1705.02946v3-Figure4-1.png",
+      "1705.02946v3-Table2-1.png",
+      "1705.02946v3-Figure2-1.png",
+      "1705.02946v3-Table1-1.png",
+      "1705.02946v3-Figure3-1.png",
+      "1705.02946v3-Figure8-1.png",
+      "1705.02946v3-Figure1-1.png",
+      "1705.02946v3-Figure7-1.png"
+    ],
+    "answer": "The distance from equitability for the allocation that can be obtained by cutting at $x$ with the player order $(1,2)$ is $b-a$, where 0 < a < b < 0.5 and 0 < x < y < 1. <s>"
+  },
+  "2": {
+    "question": "What is the upper bound on the query complexity for finding an \u03b5-perfect allocation with minimum cuts for 3 or more players?",
+    "ground_truth": "O(n^3 / \u03b5)",
+    "selected_figures": [
+      "1705.02946v3-Figure5-1.png",
+      "1705.02946v3-Figure6-1.png",
+      "1705.02946v3-Figure4-1.png",
+      "1705.02946v3-Table2-1.png",
+      "1705.02946v3-Figure2-1.png",
+      "1705.02946v3-Table1-1.png",
+      "1705.02946v3-Figure3-1.png",
+      "1705.02946v3-Figure8-1.png",
+      "1705.02946v3-Figure1-1.png",
+      "1705.02946v3-Figure7-1.png"
+    ],
+    "answer": "The upper bound on the query complexity for finding an \u03b5-perfect allocation with minimum cuts for 3 or more players is 2. <s>"
+  }
+}

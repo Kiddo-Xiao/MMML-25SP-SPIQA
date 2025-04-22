@@ -1,0 +1,169 @@
+{
+  "0": {
+    "question": "Which method achieved the most accurate results for simultaneous line and circle fitting?",
+    "ground_truth": "Multi-X achieved the most accurate results for simultaneous line and circle fitting.",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "The method that achieved the most accurate results for simultaneous line and circle fitting was Multi-X. <s>"
+  },
+  "1": {
+    "question": "Which method has the lowest average misclassification error for the cubechips image pair?",
+    "ground_truth": "Multi-X",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "The Multi-X method has the lowest average misclassification error for the cubechips image pair. <s>"
+  },
+  "2": {
+    "question": "What is the difference between AdelaideRMF and Multi-H?",
+    "ground_truth": "AdelaideRMF tends to assign points to more planes than Multi-H.",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "The main difference between AdelaideRMF and Multi-H is that AdelaideRMF is a two-dimensional method, while Multi-H is a three-dimensional method. <s>"
+  },
+  "3": {
+    "question": "What is the relationship between the color of the points and the motion of the object?",
+    "ground_truth": "The color of the points indicates the motion that the Multi-X algorithm assigned to each point.",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "The relationship between the color of the points and the motion of the object is not specified. <s>"
+  },
+  "4": {
+    "question": "Which of the five methods tested had the lowest average misclassification error?",
+    "ground_truth": "Multi-X",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "1706.00827v2-Table7-1.png: Traffic2 - 2 motions, 31 videos, had the lowest average misclassification error. <s>"
+  },
+  "5": {
+    "question": "In which scenario did Multi-X perform worse than another method in terms of misclassification error for simultaneous plane and cylinder fitting?",
+    "ground_truth": "Multi-X performed worse than PEARL in test case (6), with a misclassification error of 21.72% compared to PEARL's 17.35%. ",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "Misclassification errors for multi-motion detection on 51 videos of Hopkins dataset, Traffic2 - 2 motions, 31 videos, Traffic3 - 3 motions, 7 videos, Others2 - 2 motions, 11 videos, Others3 - 3 motions, 2 videos, All - 51 videos. <s>"
+  },
+  "6": {
+    "question": "How does the Mean-Shift algorithm perform in the presence of outliers?",
+    "ground_truth": "The Mean-Shift algorithm is robust to outliers.",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "The Mean-Shift algorithm performs well in the presence of outliers. <s>"
+  },
+  "7": {
+    "question": "Which method has the lowest average misclassification error?",
+    "ground_truth": "Multi-X",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "The method with the lowest average misclassification error is Multi-X. <s>"
+  },
+  "8": {
+    "question": "Which algorithm is generally faster for fitting planes and cylinders: Multi-X or T-Linkage?",
+    "ground_truth": "Multi-X is generally faster for fitting planes and cylinders compared to T-Linkage.",
+    "selected_figures": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "answer": "T-Linkage is generally faster for fitting planes and cylinders. <s>"
+  }
+}

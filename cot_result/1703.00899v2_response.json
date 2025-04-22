@@ -1,0 +1,10 @@
+{
+  "0": {
+    "question": "What is the relationship between the true market state qt and the noisy version q\u0302t at time t?",
+    "ground_truth": "The noisy version q\u0302t at time t is equal to the true market state qt plus a sum of Laplace noise vectors obtained by following the arrows all the way back to 0.",
+    "selected_figures": [
+      "1703.00899v2-Figure1-1.png"
+    ],
+    "answer": "its a sum of noises obtained by following the arrows all the way back to 0 <s>"
+  }
+}

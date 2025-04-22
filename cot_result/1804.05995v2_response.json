@@ -1,0 +1,35 @@
+{
+  "0": {
+    "question": "What are the top 5 section recommendations for the Wikipedia article on Lausanne according to the category-section counts method?",
+    "ground_truth": "The top 5 section recommendations for the Wikipedia article on Lausanne according to the category-section counts method are HISTORY, DEMOGRAPHICS, ECONOMY, EDUCATION, and POLITICS.",
+    "selected_figures": [
+      "1804.05995v2-Figure3-1.png",
+      "1804.05995v2-Table1-1.png",
+      "1804.05995v2-Figure5-1.png",
+      "1804.05995v2-Figure4-1.png"
+    ],
+    "answer": "1804.05995v2-Table1-1.png: 1804.05995v2-Figure5-1.png: 1804.05995v2-Figure4-1.png: 1804.05995v2-Figure3-1.png: 1804.05995v2-Figure2-1.png: 1804.05995v2-Figure1-1"
+  },
+  "1": {
+    "question": "What is the trend in precision and recall as the number of recommended sections k increases?",
+    "ground_truth": "Precision generally decreases and recall generally increases as k increases.",
+    "selected_figures": [
+      "1804.05995v2-Figure3-1.png",
+      "1804.05995v2-Table1-1.png",
+      "1804.05995v2-Figure5-1.png",
+      "1804.05995v2-Figure4-1.png"
+    ],
+    "answer": "1804.05995v2-Figure4-1.png: Percentage of categories (y-axis) that can generate at least x recommendations using the section-count\u2013based <s>"
+  },
+  "2": {
+    "question": "What is the percentage of categories that can generate at least 10 recommendations using the section-count-based method?",
+    "ground_truth": "Around 68%.",
+    "selected_figures": [
+      "1804.05995v2-Figure3-1.png",
+      "1804.05995v2-Table1-1.png",
+      "1804.05995v2-Figure5-1.png",
+      "1804.05995v2-Figure4-1.png"
+    ],
+    "answer": "recommendations using the section-count-based method? <s>"
+  }
+}

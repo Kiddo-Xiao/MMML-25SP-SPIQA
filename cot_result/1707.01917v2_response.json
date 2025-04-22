@@ -1,0 +1,79 @@
+{
+  "0": {
+    "question": "What does the induced schema Win <A4, B3, C2> represent?",
+    "ground_truth": "The induced schema Win <A4, B3, C2> represents the fact that player A4 won tournament C2, defeating player B3.",
+    "selected_figures": [
+      "1707.01917v2-Figure2-1.png",
+      "1707.01917v2-Table3-1.png",
+      "1707.01917v2-Table2-1.png",
+      "1707.01917v2-Figure1-1.png",
+      "1707.01917v2-Table1-1.png",
+      "1707.01917v2-Table4-1.png"
+    ],
+    "answer": ", The induced schema Win <A4, B3, C2> represents a 4-ary schema. <s>"
+  },
+  "1": {
+    "question": "Which dataset has the highest value for the hyperparameter  \u03bba?",
+    "ground_truth": "The NYT Sports dataset has the highest value for \u03bba (0.9).",
+    "selected_figures": [
+      "1707.01917v2-Figure2-1.png",
+      "1707.01917v2-Table3-1.png",
+      "1707.01917v2-Table2-1.png",
+      "1707.01917v2-Figure1-1.png",
+      "1707.01917v2-Table1-1.png",
+      "1707.01917v2-Table4-1.png"
+    ],
+    "answer": "1707.01917v2-Table4-1.png: The dataset with the highest value for the hyperparameter \u03bba is not specified in the paper. <s>"
+  },
+  "2": {
+    "question": "What is the shape of the tensor $x^1$ for the Shootings dataset?",
+    "ground_truth": "The shape of the tensor $x^1$ for the Shootings dataset is 3365 x 1295 x 50.",
+    "selected_figures": [
+      "1707.01917v2-Figure2-1.png",
+      "1707.01917v2-Table3-1.png",
+      "1707.01917v2-Figure1-1.png",
+      "1707.01917v2-Table1-1.png",
+      "1707.01917v2-Table4-1.png"
+    ],
+    "answer": "1707.01917v2-Figure2-1.png: The shape of the tensor $x^1$ for the Shootings dataset is a 3-ary schema. <s>"
+  },
+  "3": {
+    "question": "What is the definition of a non-negative tensor?",
+    "ground_truth": "A non-negative tensor is a tensor whose elements are all non-negative real numbers.",
+    "selected_figures": [
+      "1707.01917v2-Figure2-1.png",
+      "1707.01917v2-Table3-1.png",
+      "1707.01917v2-Table2-1.png",
+      "1707.01917v2-Figure1-1.png",
+      "1707.01917v2-Table1-1.png",
+      "1707.01917v2-Table4-1.png"
+    ],
+    "answer": ", A non-negative tensor is a tensor whose values are all non-negative. <s>"
+  },
+  "4": {
+    "question": "What is the role of OpenIE in Step 1 of TFBA?",
+    "ground_truth": "OpenIE is used to extract tuples from the unlabeled text corpus. These tuples are then used to create the 3-mode tensors X1, X2, and X3.",
+    "selected_figures": [
+      "1707.01917v2-Figure2-1.png",
+      "1707.01917v2-Table3-1.png",
+      "1707.01917v2-Table2-1.png",
+      "1707.01917v2-Figure1-1.png",
+      "1707.01917v2-Table1-1.png",
+      "1707.01917v2-Table4-1.png"
+    ],
+    "answer": ".\n\nThe role of OpenIE in Step 1 of TFBA is to perform joint Tucker decomposition of multiple 3-mode tensors, X 1, X 2, and X 3, derived out of the higher-order tensor X. This joint factorization results in binary schemata, each of which is stored as a cell in one of the core tensors G1, G2, and G3. <s>"
+  },
+  "5": {
+    "question": "Which method achieves the highest accuracy on the Shootings dataset?",
+    "ground_truth": "TFBA",
+    "selected_figures": [
+      "1707.01917v2-Figure2-1.png",
+      "1707.01917v2-Table3-1.png",
+      "1707.01917v2-Table2-1.png",
+      "1707.01917v2-Figure1-1.png",
+      "1707.01917v2-Table1-1.png",
+      "1707.01917v2-Table4-1.png"
+    ],
+    "answer": ", The method that achieves the highest accuracy on the Shootings dataset is Tensor Factorization Based Averaging (TFBA). <s>"
+  }
+}

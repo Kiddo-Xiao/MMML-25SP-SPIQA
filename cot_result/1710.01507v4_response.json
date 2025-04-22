@@ -1,0 +1,11 @@
+{
+  "0": {
+    "question": "What is the role of the LSTM network in the model architecture?",
+    "ground_truth": "The LSTM network is used to process the post text and generate a post text embedding.",
+    "selected_figures": [
+      "1710.01507v4-Figure1-1.png",
+      "1710.01507v4-Table1-1.png"
+    ],
+    "answer": "1710.01507v4-Figure1-1 <s>"
+  }
+}

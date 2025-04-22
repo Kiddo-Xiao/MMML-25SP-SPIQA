@@ -1,0 +1,107 @@
+{
+  "0": {
+    "question": "Which method has the highest overall accuracy for answering questions about images on the 100 questions sampled from VQA v2 dataset?",
+    "ground_truth": "UnCoRd-VG-E",
+    "selected_figures": [
+      "1811.08481v2-Table4-1.png",
+      "1811.08481v2-Table5-1.png",
+      "1811.08481v2-Figure9-1.png",
+      "1811.08481v2-Table3-1.png",
+      "1811.08481v2-Table1-1.png"
+    ],
+    "answer": "1811.08481v2-Table3-1.png: Accuracy of question-to-graph mapping for all data types has the highest overall accuracy for answering questions about images on the 100 questions sampled from VQA v2 dataset. <s>"
+  },
+  "1": {
+    "question": "Explain how the answering procedure works.",
+    "ground_truth": "The answering procedure follows the question graph, searching for a valid assignment in the image. At each step, the handled node is set and objects (extracted using Mask R-CNN) are examined according to the node\u2019s requirements (utilizing corresponding visual estimators). If successful, a new node is set (according to a DFS traversal) and the function is called again to handle the unassigned subgraph.",
+    "selected_figures": [
+      "1811.08481v2-Table4-1.png",
+      "1811.08481v2-Table5-1.png",
+      "1811.08481v2-Table7-1.png",
+      "1811.08481v2-Figure8-1.png",
+      "1811.08481v2-Table8-1.png",
+      "1811.08481v2-Figure9-1.png",
+      "1811.08481v2-Figure3-1.png",
+      "1811.08481v2-Table3-1.png",
+      "1811.08481v2-Table1-1.png",
+      "1811.08481v2-Table2-1.png"
+    ],
+    "answer": "UnCoRd is a question-answering system that uses a graph-based approach to represent questions and their corresponding answers. The accuracy of the graph representation is tested on various datasets, including the VQA v2 domain, CLEVR, and COCO images. UnCoRd's successes and failures in answering questions outside the VQA v2 domain are demonstrated through examples. <s>"
+  },
+  "2": {
+    "question": "Which method has the highest overall accuracy?",
+    "ground_truth": "UnCoRd-VG-E",
+    "selected_figures": [
+      "1811.08481v2-Figure5-1.png",
+      "1811.08481v2-Table4-1.png",
+      "1811.08481v2-Table5-1.png",
+      "1811.08481v2-Table7-1.png",
+      "1811.08481v2-Figure8-1.png",
+      "1811.08481v2-Table8-1.png",
+      "1811.08481v2-Figure9-1.png",
+      "1811.08481v2-Figure3-1.png",
+      "1811.08481v2-Table3-1.png",
+      "1811.08481v2-Table1-1.png",
+      "1811.08481v2-Table2-1.png"
+    ],
+    "answer": "The method with the highest overall accuracy is the Extended-Enhanced model. <s>"
+  },
+  "3": {
+    "question": "What is the effect of training on more diverse data on the accuracy of graph representation for VQA?",
+    "ground_truth": "Training on more diverse data improves the accuracy of graph representation for VQA.",
+    "selected_figures": [
+      "1811.08481v2-Figure1-1.png",
+      "1811.08481v2-Figure5-1.png",
+      "1811.08481v2-Table4-1.png",
+      "1811.08481v2-Table5-1.png",
+      "1811.08481v2-Table7-1.png",
+      "1811.08481v2-Figure8-1.png",
+      "1811.08481v2-Table8-1.png",
+      "1811.08481v2-Figure9-1.png",
+      "1811.08481v2-Figure10-1.png",
+      "1811.08481v2-Figure3-1.png",
+      "1811.08481v2-Figure4-1.png",
+      "1811.08481v2-Table3-1.png",
+      "1811.08481v2-Table1-1.png",
+      "1811.08481v2-Table2-1.png"
+    ],
+    "answer": "The effect of training on more diverse data increases the accuracy of graph representation for VQA. <s>"
+  },
+  "4": {
+    "question": "Which estimator achieves the highest accuracy on the CLEVR validation set?",
+    "ground_truth": "Size estimator.",
+    "selected_figures": [
+      "1811.08481v2-Figure5-1.png",
+      "1811.08481v2-Table4-1.png",
+      "1811.08481v2-Table5-1.png",
+      "1811.08481v2-Table7-1.png",
+      "1811.08481v2-Figure8-1.png",
+      "1811.08481v2-Table8-1.png",
+      "1811.08481v2-Figure9-1.png",
+      "1811.08481v2-Figure3-1.png",
+      "1811.08481v2-Table3-1.png",
+      "1811.08481v2-Table1-1.png",
+      "1811.08481v2-Table2-1.png"
+    ],
+    "answer": "The Extended-Enhanced model achieves the highest accuracy on the CLEVR validation set. <s>"
+  },
+  "5": {
+    "question": "Which method achieves the highest overall accuracy on the validation set?",
+    "ground_truth": "UnCoRd-None-B.",
+    "selected_figures": [
+      "1811.08481v2-Figure5-1.png",
+      "1811.08481v2-Table4-1.png",
+      "1811.08481v2-Table5-1.png",
+      "1811.08481v2-Table7-1.png",
+      "1811.08481v2-Figure8-1.png",
+      "1811.08481v2-Table8-1.png",
+      "1811.08481v2-Figure9-1.png",
+      "1811.08481v2-Figure10-1.png",
+      "1811.08481v2-Figure3-1.png",
+      "1811.08481v2-Table3-1.png",
+      "1811.08481v2-Table1-1.png",
+      "1811.08481v2-Table2-1.png"
+    ],
+    "answer": "The Extended-Enhanced model achieves the highest overall accuracy on the CLEVR validation set. <s>"
+  }
+}

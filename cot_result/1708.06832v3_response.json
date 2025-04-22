@@ -1,0 +1,38 @@
+{
+  "0": {
+    "question": "Which method achieves the lowest error rate on ILSVRC at 1/4 of the total cost?",
+    "ground_truth": "MSDNNet38",
+    "selected_figures": [
+      "1708.06832v3-Figure3-1.png",
+      "1708.06832v3-Figure1-1.png",
+      "1708.06832v3-Figure4-1.png",
+      "1708.06832v3-Figure5-1.png",
+      "1708.06832v3-Figure2-1.png"
+    ],
+    "answer": "The method that achieves the lowest error rate on ILSVRC at 1/4 of the total cost is AdaLoss. <s>"
+  },
+  "1": {
+    "question": "What is the effect of increasing the budget in FLOPS on the test Top-1 error rate for the three different training strategies?",
+    "ground_truth": "The test Top-1 error rate decreases as the budget in FLOPS increases for all three training strategies.",
+    "selected_figures": [
+      "1708.06832v3-Figure3-1.png",
+      "1708.06832v3-Figure1-1.png",
+      "1708.06832v3-Figure4-1.png",
+      "1708.06832v3-Figure5-1.png",
+      "1708.06832v3-Figure2-1.png"
+    ],
+    "answer": "The effect of increasing the budget in FLOPS (floating-point operations per second) on the test Top-1 error rate for the three different training strategies (AdaLoss, CONST, and DenseANN169) is not shown in the provided image. <s>"
+  },
+  "2": {
+    "question": "Which model performs the best on CIFAR100 and ILSVRC datasets?",
+    "ground_truth": "EANN with AdaLoss performs the best on both CIFAR100 and ILSVRC datasets.",
+    "selected_figures": [
+      "1708.06832v3-Figure3-1.png",
+      "1708.06832v3-Figure1-1.png",
+      "1708.06832v3-Figure4-1.png",
+      "1708.06832v3-Figure5-1.png",
+      "1708.06832v3-Figure2-1.png"
+    ],
+    "answer": "The model that performs the best on the CIFAR100 and ILSVRC datasets is the one that uses the proposed adaptive loss weights, as it outperforms linear ensembles of deep neural networks (DNNs) on the ILSVRC dataset. <s>"
+  }
+}

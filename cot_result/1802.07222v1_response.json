@@ -1,0 +1,27 @@
+{
+  "0": {
+    "question": "During which hours of the day did the most network-related reboots occur?",
+    "ground_truth": "The most network-related reboots occurred between 18:00 and 20:00.",
+    "selected_figures": [
+      "1802.07222v1-Figure4-1.png",
+      "1802.07222v1-Figure5-1.png",
+      "1802.07222v1-Figure6-1.png",
+      "1802.07222v1-Figure3-1.png",
+      "1802.07222v1-Table1-1.png",
+      "1802.07222v1-Figure1-1.png",
+      "1802.07222v1-Figure2-1.png",
+      "1802.07222v1-Figure16-1.png",
+      "1802.07222v1-Figure8-1.png",
+      "1802.07222v1-Figure12-1.png",
+      "1802.07222v1-Figure7-1.png",
+      "1802.07222v1-Figure11-1.png",
+      "1802.07222v1-Figure9-1.png",
+      "1802.07222v1-Figure10-1.png",
+      "1802.07222v1-Table2-1.png",
+      "1802.07222v1-Figure13-1.png",
+      "1802.07222v1-Figure15-1.png",
+      "1802.07222v1-Figure14-1.png"
+    ],
+    "answer": "The most network-related reboots occurred during the hours of 10:00 AM to 2:00 PM. <s>"
+  }
+}

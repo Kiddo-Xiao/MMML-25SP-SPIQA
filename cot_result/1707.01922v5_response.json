@@ -1,0 +1,89 @@
+{
+  "0": {
+    "question": "What is the difference between testing domain adaptation and testing sensor fusion?",
+    "ground_truth": "In testing domain adaptation, the source and target CNNs are trained on different domains, and the joint classifier is used to predict the class of the target data. In testing sensor fusion, the source and target CNNs are trained on the same domain, and the joint classifier is used to predict the class of the target data using both the source and target data.",
+    "selected_figures": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Table3-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table2-1.png",
+      "1707.01922v5-Table8-1.png"
+    ],
+    "answer": "Testing domain adaptation refers to the process of adapting a model trained on one domain to perform well on a different domain, where the distribution of the data in the target domain may be significantly different from that of the source domain. In contrast, sensor fusion refers to the process of combining data from multiple sensors, such as cameras and depth sensors, to create a more comprehensive representation of the scene. <s>"
+  },
+  "1": {
+    "question": "Which method performs better in terms of classification accuracy?",
+    "ground_truth": "ZDDA3",
+    "selected_figures": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Table3-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table2-1.png",
+      "1707.01922v5-Table8-1.png"
+    ],
+    "answer": "ZDDA3 outperforms the naive fusion under most conditions in terms of classification accuracy. <s>"
+  },
+  "2": {
+    "question": "What is the role of the task-irrelevant data in ZDDA?",
+    "ground_truth": "The task-irrelevant data is used to simulate the RGB representation using the gray scale image. This allows ZDDA to learn a joint network that can be used to classify digits in both the gray scale and RGB domains.",
+    "selected_figures": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table2-1.png",
+      "1707.01922v5-Table8-1.png"
+    ],
+    "answer": "The task-irrelevant data in ZDDA plays a crucial role in improving the robustness and generalizability of the proposed domain adaptation method. The task-irrelevant data serves as a source of information that can be used to adapt the pre-trained domain-specific model to new, unseen data from the target domain. By incorporating this task-irrelevant data into the domain adaptation process, ZDDA is able to better capture the underlying patterns and relationships between the source and target domains, leading to improved performance on the target domain. <s>"
+  },
+  "3": {
+    "question": "What is the key difference between ZDDA and UDA/MVL in terms of the available training data?",
+    "ground_truth": "The key difference lies in the availability of target-domain training data. While UDA and MVL methods require T-R training data from the target domain, ZDDA does not. ZDDA only requires T-R training data from a single source domain.",
+    "selected_figures": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Table3-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table2-1.png",
+      "1707.01922v5-Table8-1.png"
+    ],
+    "answer": "The key difference between ZDDA and unsupervised domain adaptation (UDA), multi-view learning (MVL), and domain generalization (DG) in terms of the available training data is that ZDDA is specifically designed to address the problem of domain shift, while UDA, MVL, and DG are more general methods that can be applied to a broader range of domain shift scenarios. <s>"
+  },
+  "4": {
+    "question": "If you are performing domain adaptation with ZDDA using AlexNet as the base network architecture and $D_F$ as the target domain, which layers of the network would be considered part of the source CNN and which would be part of the source classifier?",
+    "ground_truth": "In this scenario, the source CNN would consist of the AlexNet architecture up to and including the \"fc7\" layer. The remaining layers of AlexNet would then be used as the source classifier.",
+    "selected_figures": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table2-1.png",
+      "1707.01922v5-Table8-1.png"
+    ],
+    "answer": "The layers of the network considered part of the source CNN would be the convolutional layers, while the layers considered part of the source classifier would be the fully connected layers. <s>"
+  },
+  "5": {
+    "question": "Which of the following statements about the training procedure of ZDDA is true?\n\n(a) ZDDA simulates the target-domain representation using the source-domain data. (b) ZDDA builds a joint network with the supervision from the target domain. (c) ZDDA trains a sensor fusion network in step 1. (d) ZDDA trains a sensor fusion network in step 2.",
+    "ground_truth": "(a) ZDDA simulates the target-domain representation using the source-domain data.",
+    "selected_figures": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table2-1.png"
+    ],
+    "answer": "one of the following statements about the training procedure of ZDDA is true: (a) ZDDA simulates the target-domain representation using the source-domain data. <s>"
+  }
+}

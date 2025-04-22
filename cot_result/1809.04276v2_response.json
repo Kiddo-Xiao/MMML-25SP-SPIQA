@@ -1,0 +1,58 @@
+{
+  "0": {
+    "question": "Why is the model discouraged even though the generated response (RSP) incorporates relevant content from the N-best response candidates (C#1 and C#2)?",
+    "ground_truth": "The model is discouraged because it is trained using the Maximum Likelihood Estimation (MLE) objective, which prioritizes generating responses that are identical to the ground-truth (GT) response. Even though the RSP integrates relevant content from the candidates and seems appropriate in the context, it is penalized because it deviates from the exact wording of the GT.",
+    "selected_figures": [
+      "1809.04276v2-Table1-1.png",
+      "1809.04276v2-Table2-1.png",
+      "1809.04276v2-Table4-1.png",
+      "1809.04276v2-Table3-1.png",
+      "1809.04276v2-Figure1-1.png",
+      "1809.04276v2-Table5-1.png",
+      "1809.04276v2-Figure2-1.png"
+    ],
+    "answer": "The model is discouraged because the incorporation of relevant content from the N-best response candidates (C#1 and C#2) does not necessarily mean that the generated response (RSP) is of higher quality or more human-like. The use of the N-best response candidates as a reward for the discriminator may lead to an over-reliance on these candidates, rather than the model's own internal abilities to generate responses. This can result in a decrease in the model's ability to generate novel and creative responses, as well as a decrease in the model's"
+  },
+  "1": {
+    "question": "How does the performance of the discriminator in the proposed approach compare to the conventional discriminator in AL? What evidence suggests this difference in performance?",
+    "ground_truth": "The discriminator in the author's approach achieves higher accuracy (95.72%) compared to the conventional discriminator in AL (94.01%).",
+    "selected_figures": [
+      "1809.04276v2-Table1-1.png",
+      "1809.04276v2-Table2-1.png",
+      "1809.04276v2-Table4-1.png",
+      "1809.04276v2-Table3-1.png",
+      "1809.04276v2-Figure1-1.png",
+      "1809.04276v2-Table5-1.png",
+      "1809.04276v2-Figure2-1.png"
+    ],
+    "answer": "The performance of the enhanced discriminator in the proposed approach is significantly better than the conventional discriminator in AL, as demonstrated by the automatic and human evaluation results in the paper. The difference in performance can be attributed to the incorporation of the N-best response candidates returned by a retrieval-based method, which enhances the discriminator's ability to distinguish between human-generated and machine-generated responses. <s>"
+  },
+  "2": {
+    "question": "Can you explain the discrepancy between the number of messages and responses in each dataset?",
+    "ground_truth": "Number of responses is significantly higher than number of messages in each dataset (training, validation, and test). This is because each message can have multiple responses associated with it. The passage mentions that users on Sina Weibo can post messages and also comment on other users' messages. These comments are considered as responses in the context of the table. Therefore, one message can have several responses, leading to a higher total number of responses compared to messages.",
+    "selected_figures": [
+      "1809.04276v2-Table1-1.png",
+      "1809.04276v2-Table2-1.png",
+      "1809.04276v2-Table4-1.png",
+      "1809.04276v2-Table3-1.png",
+      "1809.04276v2-Figure1-1.png",
+      "1809.04276v2-Table5-1.png",
+      "1809.04276v2-Figure2-1.png"
+    ],
+    "answer": "Yes, there is a discrepancy between the number of messages and responses in each dataset. <s>"
+  },
+  "3": {
+    "question": "How does the discriminator in the proposed REAT approach use the N-best response candidates?",
+    "ground_truth": "The discriminator takes as input a response and the N-best response candidates, and outputs the probability that the response is human-generated.",
+    "selected_figures": [
+      "1809.04276v2-Table1-1.png",
+      "1809.04276v2-Table2-1.png",
+      "1809.04276v2-Table4-1.png",
+      "1809.04276v2-Table3-1.png",
+      "1809.04276v2-Figure1-1.png",
+      "1809.04276v2-Table5-1.png",
+      "1809.04276v2-Figure2-1.png"
+    ],
+    "answer": "The discriminator in the proposed REAT approach uses the N-best response candidates returned by a retrieval-based method to enhance its performance. The discriminator takes as input a response and outputs the probability that the response is human-generated. The output is then regarded as a reward to guide the generator. <s>"
+  }
+}

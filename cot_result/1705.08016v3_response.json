@@ -1,0 +1,80 @@
+{
+  "0": {
+    "question": "How does the test accuracy of the different models vary with the hyperparameter \u03bb?",
+    "ground_truth": "The test accuracy of all models decreases as \u03bb increases.",
+    "selected_figures": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "answer": "Variation of test accuracy on CUB-200-2011 with logarithmic variation in hyperparameter \u03bb. <s>"
+  },
+  "1": {
+    "question": "Which method achieves the highest Top-1 accuracy on the CUB-200-2011 dataset?",
+    "ground_truth": "PC-DenseNet-161",
+    "selected_figures": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "answer": "The method that achieves the highest Top-1 accuracy on the CUB-200-2011 dataset is Pairwise Confusion (PC). <s>"
+  },
+  "2": {
+    "question": "How does Pairwise Confusion (PC) affect the localization ability of a CNN?",
+    "ground_truth": "PC improves the localization ability of a CNN.",
+    "selected_figures": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "answer": "Pairwise Confusion (PC) improves the localization ability of a convolutional neural network (CNN) in fine-grained visual classification tasks. <s>"
+  },
+  "3": {
+    "question": "Which dataset has the highest number of samples per class?",
+    "ground_truth": "SVHN",
+    "selected_figures": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "answer": "The CUB-200-2011 dataset has the highest number of samples per class. <s>"
+  },
+  "4": {
+    "question": "Which dataset benefited more from the Pairwise Confusion (PC) optimization method: ImageNet-Dogs or ImageNet-Random?",
+    "ground_truth": "ImageNet-Dogs benefited more from the PC optimization method compared to ImageNet-Random.",
+    "selected_figures": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "answer": "1705.08016v3-Table3-1.png: ImageNet-Dogs benefited more from the Pairwise Confusion (PC) optimization method than ImageNet-Random. <s>"
+  },
+  "5": {
+    "question": "What is the role of the shared weights in the Siamese-like architecture shown in the first figure?",
+    "ground_truth": "The shared weights allow the two branches of the network to learn similar representations of the input images. This helps to improve the performance of the Euclidean Confusion loss, which measures the distance between the conditional probability distributions of the two branches.",
+    "selected_figures": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "answer": "The role of the shared weights in the Siamese-like architecture shown in the first figure is to allow the two branches of the network to share information and collaborate during the training process. <s>"
+  }
+}

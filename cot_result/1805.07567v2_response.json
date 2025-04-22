@@ -1,0 +1,121 @@
+{
+  "0": {
+    "question": "Which method has the fastest convergence and highest converged performance?",
+    "ground_truth": "F-DSS",
+    "selected_figures": [
+      "1805.07567v2-Table3-1.png",
+      "1805.07567v2-Figure3-1.png",
+      "1805.07567v2-Figure4-1.png",
+      "1805.07567v2-Figure5-1.png",
+      "1805.07567v2-Table4-1.png",
+      "1805.07567v2-Figure6-1.png",
+      "1805.07567v2-Figure7-1.png",
+      "1805.07567v2-Figure1-1.png",
+      "1805.07567v2-Table1-1.png",
+      "1805.07567v2-Table2-1.png"
+    ],
+    "answer": "Our proposed method, FLoss, presents faster convergence and higher converged performance than the balanced cross-entropy loss. <s>"
+  },
+  "1": {
+    "question": "Which dataset would you expect to be the most challenging for a model trained on MSRA-B to perform well on, and why?",
+    "ground_truth": "The DUT-OMRON dataset is likely the most challenging for a model trained on MSRA-B.",
+    "selected_figures": [
+      "1805.07567v2-Table3-1.png",
+      "1805.07567v2-Figure4-1.png",
+      "1805.07567v2-Figure5-1.png",
+      "1805.07567v2-Figure6-1.png",
+      "1805.07567v2-Figure7-1.png",
+      "1805.07567v2-Table1-1.png",
+      "1805.07567v2-Table2-1.png"
+    ],
+    "answer": "The MSRA-B dataset would be the most challenging for a model trained on MSRA-B to perform well on, as it has the lowest contrast between foreground and background. <s>"
+  },
+  "2": {
+    "question": "Which model performs best in terms of Mean F-measure on the DUT-OMRON dataset when trained on the MB dataset? How does the FLoss variant of this model compare to its base version?",
+    "ground_truth": "The DSS+FLoss model performs best in terms of Mean F-measure on the DUT-OMRON dataset when trained on the MB dataset, achieving a score of 0.755.\n\nThe FLoss variant of the DSS model shows a clear improvement over the base DSS model, with a Mean F-measure increase from 0.738 to 0.755.",
+    "selected_figures": [
+      "1805.07567v2-Table3-1.png",
+      "1805.07567v2-Figure3-1.png",
+      "1805.07567v2-Figure4-1.png",
+      "1805.07567v2-Figure5-1.png",
+      "1805.07567v2-Table4-1.png",
+      "1805.07567v2-Figure6-1.png",
+      "1805.07567v2-Figure7-1.png",
+      "1805.07567v2-Table1-1.png",
+      "1805.07567v2-Table2-1.png",
+      "1805.07567v2-Figure2-1.png"
+    ],
+    "answer": "The FLoss variant of the model outperforms its base version in terms of Mean F-measure on the DUT-OMRON dataset when trained on the MB dataset. <s>"
+  },
+  "3": {
+    "question": "Which algorithm achieves a better balance between precision and recall?",
+    "ground_truth": "F-DSS.",
+    "selected_figures": [
+      "1805.07567v2-Table3-1.png",
+      "1805.07567v2-Figure3-1.png",
+      "1805.07567v2-Figure4-1.png",
+      "1805.07567v2-Figure5-1.png",
+      "1805.07567v2-Table4-1.png",
+      "1805.07567v2-Figure6-1.png",
+      "1805.07567v2-Figure7-1.png",
+      "1805.07567v2-Figure1-1.png",
+      "1805.07567v2-Table1-1.png",
+      "1805.07567v2-Table2-1.png",
+      "1805.07567v2-Figure2-1.png"
+    ],
+    "answer": "The algorithm that achieves a better balance between precision and recall is FLoss. <s>"
+  },
+  "4": {
+    "question": "Why does the proposed FLoss method perform better than the balanced cross-entropy loss, even though both methods aim to address the data imbalance problem in salient object detection?",
+    "ground_truth": "The FLoss method performs better than the balanced cross-entropy loss because it can automatically adjust to data imbalance using the F-measure criterion, while the balanced cross-entropy loss relies on pre-defined weights for positive and negative samples.",
+    "selected_figures": [
+      "1805.07567v2-Table3-1.png",
+      "1805.07567v2-Figure3-1.png",
+      "1805.07567v2-Figure4-1.png",
+      "1805.07567v2-Figure5-1.png",
+      "1805.07567v2-Table4-1.png",
+      "1805.07567v2-Figure6-1.png",
+      "1805.07567v2-Figure7-1.png",
+      "1805.07567v2-Table1-1.png",
+      "1805.07567v2-Table2-1.png",
+      "1805.07567v2-Figure2-1.png"
+    ],
+    "answer": "The proposed FLoss method performs better than the balanced cross-entropy loss because it offers more flexibility to adjust the balance between precision and recall, which is crucial in salient object detection. The F-measure criterion allows the FLoss method to automatically adjust data unbalance, whereas the balanced cross-entropy loss does not have this capability. <s>"
+  },
+  "5": {
+    "question": " \n\nWhat is the effect of increasing the value of \u03b22 on the precision and recall of the model? ",
+    "ground_truth": " \n\nIncreasing the value of \u03b22 decreases the precision and increases the recall of the model.",
+    "selected_figures": [
+      "1805.07567v2-Table3-1.png",
+      "1805.07567v2-Figure3-1.png",
+      "1805.07567v2-Figure4-1.png",
+      "1805.07567v2-Figure5-1.png",
+      "1805.07567v2-Table4-1.png",
+      "1805.07567v2-Figure6-1.png",
+      "1805.07567v2-Figure7-1.png",
+      "1805.07567v2-Figure1-1.png",
+      "1805.07567v2-Table1-1.png",
+      "1805.07567v2-Table2-1.png",
+      "1805.07567v2-Figure2-1.png"
+    ],
+    "answer": "The effect of increasing the value of \u03b22 on the precision and recall of the model depends on the specific loss function used. In general, increasing the value of \u03b22 can improve the precision of the model at the cost of reducing the recall. <s>"
+  },
+  "6": {
+    "question": "Which method produces higher contrast saliency maps, FLoss or Log-FLoss?",
+    "ground_truth": "FLoss",
+    "selected_figures": [
+      "1805.07567v2-Table3-1.png",
+      "1805.07567v2-Figure3-1.png",
+      "1805.07567v2-Figure4-1.png",
+      "1805.07567v2-Figure5-1.png",
+      "1805.07567v2-Table4-1.png",
+      "1805.07567v2-Figure6-1.png",
+      "1805.07567v2-Figure7-1.png",
+      "1805.07567v2-Figure1-1.png",
+      "1805.07567v2-Table1-1.png",
+      "1805.07567v2-Table2-1.png",
+      "1805.07567v2-Figure2-1.png"
+    ],
+    "answer": "FLoss produces higher contrast saliency maps than Log-FLoss. <s>"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "0": {
+    "question": "Which method performed best according to the P@1 metric for the QA-Expert task, and how much better did it perform compared to the average P@1 score of the D2V method? ",
+    "ground_truth": "The WeakFG method achieved the highest P@1 score for the QA-Expert task with a score of 52.8. This is 23.2% higher than the average P@1 score of the D2V method, which was 29.6. ",
+    "selected_figures": [
+      "1611.04363v2-Table1-1.png",
+      "1611.04363v2-Figure2-1.png",
+      "1611.04363v2-Figure1-1.png"
+    ],
+    "answer": "0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "1": {
+    "question": "What is the relationship between the decline probability of an expert and whether or not they have a \"friend\" who has already declined?",
+    "ground_truth": "The decline probability of an expert is higher if they have a \"friend\" who has already declined.",
+    "selected_figures": [
+      "1611.04363v2-Table1-1.png",
+      "1611.04363v2-Figure2-1.png"
+    ],
+    "answer": "100% <s>"
+  }
+}

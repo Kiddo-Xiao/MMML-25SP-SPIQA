@@ -1,0 +1,178 @@
+{
+  "0": {
+    "question": "Which policy resulted in the highest average cost?",
+    "ground_truth": "MAP Policy",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "The policy that resulted in the highest average cost was ALOQ. <s>"
+  },
+  "1": {
+    "question": "Which of the algorithms performs the best on the robotic arm joint breakage task?",
+    "ground_truth": "ALOQ.",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Figure1-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure9-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "It is difficult to determine which algorithm performs the best on the robotic arm joint breakage task, as the performance of each algorithm varies depending on the specific test function used and the number of runs performed. \n\nIn general, the algorithms that perform well on the F-SRE test functions, such as F-SRE1 and F-SRE2, tend to perform well on other test functions as well. However, it is important to note that the performance of each algorithm can vary depending on the specific test function used and the number of runs performed.\n\nTherefore, it is recommended to"
+  },
+  "2": {
+    "question": "Which algorithm performs the best in the Joint Breakage experiment?",
+    "ground_truth": "ALOQ",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Figure1-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure9-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "The algorithm that performs the best in the Joint Breakage experiment is the Adaptive Least Squares Optimizer (ALOQ). <s>"
+  },
+  "3": {
+    "question": "Which algorithm performed better on the arm breakage task?",
+    "ground_truth": "Both TRPO and Reinforce performed similarly on the arm breakage task.",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Figure1-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure9-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "The algorithm that performed better on the arm breakage task was TRPO. <s>"
+  },
+  "4": {
+    "question": "Between WSN and ALOQ, which method is the most efficient in terms of runtime for both F-SRE1 and F-SRE2?",
+    "ground_truth": "ALOQ is significantly more efficient than WSN.",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Figure1-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure9-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "ALOQ is more efficient than WSN in terms of runtime for both F-SRE1 and F-SRE2. <s>"
+  },
+  "5": {
+    "question": "Which method performs the best on the F-SRE1 test function?",
+    "ground_truth": "ALOQ",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Figure1-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure9-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "The TRPO algorithm performs the best on the F-SRE1 and F-SRE2 test functions, as well as the modified Branin and Hartmann 6 test function used by Williams, Santner, and Notz. <s>"
+  },
+  "6": {
+    "question": "How does the predicted return change as a function of \u03b8 for a fixed value of \u03c0 = 1.5?",
+    "ground_truth": "The predicted return decreases as \u03b8 increases, with a minimum at around \u03b8 = 0.5.",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Figure1-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure9-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "The predicted return changes as a function of \u03b8 for a fixed value of \u03c0 = 1.5. <s>"
+  },
+  "7": {
+    "question": "What is the difference between the \"True max\" and the \"ALOQ\" curves?",
+    "ground_truth": "The \"True max\" curve is the true maximum of the function, while the \"ALOQ\" curve is an approximation of the maximum. The \"ALOQ\" curve is lower than the \"True max\" curve, indicating that it underestimates the maximum value of the function.",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Figure1-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure9-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "The difference between the \"True max\" and the \"ALOQ\" curves is that the \"True max\" curve represents the maximum value of a function, while the \"ALOQ\" curve represents the expected value of a function. \n\nThe \"True max\" curve shows the maximum value of a function for a given set of parameters, while the \"ALOQ\" curve shows the expected value of a function for a given set of parameters. The \"True max\" curve can be used to estimate the maximum value of a function, while the \"ALOQ\" curve can be used to estimate the expected"
+  },
+  "8": {
+    "question": "Which method performs the best on the Branin function?",
+    "ground_truth": "One Step ALOQ",
+    "selected_figures": [
+      "1605.07496v3-Table1-1.png",
+      "1605.07496v3-Figure2-1.png",
+      "1605.07496v3-Figure3-1.png",
+      "1605.07496v3-Table2-1.png",
+      "1605.07496v3-Figure4-1.png",
+      "1605.07496v3-Figure6-1.png",
+      "1605.07496v3-Figure11-1.png",
+      "1605.07496v3-Figure10-1.png",
+      "1605.07496v3-Table3-1.png",
+      "1605.07496v3-Figure8-1.png",
+      "1605.07496v3-Figure7-1.png"
+    ],
+    "answer": "It is difficult to determine which method performs the best on the Branin function, as the performance of each algorithm varies depending on the specific test function used and the number of runs performed. \n\nAdditionally, it is important to note that the performance of each algorithm is not only dependent on the test function, but also on the specific implementation details, such as the learning rate, batch size, and other hyperparameters. \n\nTherefore, it is recommended to consult the provided tables and figures for a more comprehensive understanding of the performance of each algorithm across multiple test functions and runs. <s>"
+  }
+}

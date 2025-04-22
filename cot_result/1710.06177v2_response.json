@@ -1,0 +1,86 @@
+{
+  "0": {
+    "question": "How does the performance of VAGER+Voting compare to other VAGER variants in the 1-shot and 20-shot settings?",
+    "ground_truth": "VAGER+Voting consistently outperforms all other VAGER variants in both 1-shot and 20-shot settings, achieving the highest AUC and F1 scores.",
+    "selected_figures": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png"
+    ],
+    "answer": "-VAGER+Voting outperforms other VAGER variants in the 1-shot and 20-shot settings. <s>"
+  },
+  "1": {
+    "question": "Can you explain why the performance of VAGER is worse than LR for the \"Bubble\" class in the 1-shot binary classification setting, while it performs better for the other nine classes?",
+    "ground_truth": "VAGER leverages transfer learning, while LR does not. This means VAGER attempts to apply knowledge from other classes to improve its performance on new classes. For nine out of the ten novel classes, this strategy seems to be successful, as VAGER consistently outperforms LR. However, for the \"Bubble\" class, the transfer learning approach seems to have a negative impact, causing VAGER to perform worse than LR.",
+    "selected_figures": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png"
+    ],
+    "answer": "unfortunately, I cannot explain why the performance of VAGER is worse than LR for the \"Bubble\" class in the 1-shot binary classification setting, while it performs better for the other nine classes. <s>"
+  },
+  "2": {
+    "question": "What is the relationship between the Similarity Ratio and AUC Increasing?",
+    "ground_truth": "There is a positive linear relationship between the Similarity Ratio and AUC Increasing.",
+    "selected_figures": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png"
+    ],
+    "answer": "ayou can find the relationship between the Similarity Ratio and AUC Increasing by looking at Table 2 and Figure 3 in the book. <s>"
+  },
+  "3": {
+    "question": "Which method performs best in the 10 classes 1-shot multi-class classification problem?",
+    "ground_truth": "VAGER + Voting",
+    "selected_figures": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png"
+    ],
+    "answer": "The method that performs best in the 10 classes 1-shot multi-class classification problem is Linear Regression (LR). <s>"
+  },
+  "4": {
+    "question": "What is the relationship between the novel class and the top-3 most similar base classes?",
+    "ground_truth": "The top-3 most similar base classes are the three classes that are most similar to the novel class, based on the embedding layer in a 5-shot setting.",
+    "selected_figures": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png"
+    ],
+    "answer": "one of the top-3 most similar base classes to the novel class on the embedding layer in the 5-shot setting. <s>"
+  },
+  "5": {
+    "question": "Which method performs the best when the number of shots is 50?",
+    "ground_truth": "VAGER+Voting",
+    "selected_figures": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png"
+    ],
+    "answer": "1710.06177v2-Table2-1.png: Linear regression of AUC improvement on Similarity Ratio for all novel classes 1710.06177v2-Figure3-1.png: Linear regression of AUC improvement on Similarity Ratio for all novel classes 1710.06177v2-Figure2-1.png: The change of performance as the number of shots increases in binary classification 1710.06177v2-Figure4-1"
+  }
+}

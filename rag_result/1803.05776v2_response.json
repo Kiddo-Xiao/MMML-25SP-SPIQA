@@ -1,0 +1,1 @@
+{"0": {"question": "Which model performs the best at SNR=0dB?", "response": {"1803.05776v2-Figure1-1.png": ["1 <s>", "(c) at SNR=0dB <s>"]}, "referred_figures_names": ["1803.05776v2-Figure1-1.png"], "answer": "GPG-K"}}

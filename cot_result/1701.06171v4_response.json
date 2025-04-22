@@ -1,0 +1,44 @@
+{
+  "0": {
+    "question": "How many iterations did the greedy EM-type learning process take to learn the part models for the watch image?",
+    "ground_truth": "22 iterations",
+    "selected_figures": [
+      "1701.06171v4-Table1-1.png",
+      "1701.06171v4-Table2-1.png",
+      "1701.06171v4-Figure2-1.png",
+      "1701.06171v4-Figure3-1.png"
+    ],
+    "answer": "It is not specified how many iterations the greedy EM-type learning process took to learn the part models for the watch image. <s>"
+  },
+  "1": {
+    "question": "What is the relationship between the variables in the Compositional Active Basis Model?",
+    "ground_truth": "The variables in the Compositional Active Basis Model are hierarchically dependent. The variables at each layer are dependent on the variables at the layer above it.",
+    "selected_figures": [
+      "1701.06171v4-Table1-1.png",
+      "1701.06171v4-Table2-1.png",
+      "1701.06171v4-Figure2-1.png"
+    ],
+    "answer": "The relationship between the variables in the Compositional Active Basis Model (CABM) is hierarchical. <s>"
+  },
+  "2": {
+    "question": "What is the difference between the hierarchical part dictionary learned with the bottom-up process and the holistic object model learned with the top-down process?",
+    "ground_truth": "The hierarchical part dictionary learned with the bottom-up process is a set of parts that can be combined to create objects. The holistic object model learned with the top-down process is a single model that represents the entire object.",
+    "selected_figures": [
+      "1701.06171v4-Table1-1.png",
+      "1701.06171v4-Table2-1.png",
+      "1701.06171v4-Figure2-1.png",
+      "1701.06171v4-Figure3-1.png"
+    ],
+    "answer": "The difference between the hierarchical part dictionary learned with the bottom-up process and the holistic object model learned with the top-down process is that the bottom-up process groups basis filters into higher-order parts, while the top-down process composes the learned hierarchical part dictionary into a holistic object model. <s>"
+  },
+  "3": {
+    "question": "What is the difference between the top-down and bottom-up compositional learning schemes?",
+    "ground_truth": "The top-down compositional learning scheme starts with a holistic object model and decomposes it into smaller parts, while the bottom-up compositional learning scheme starts with basic parts and composes them into a holistic object model.",
+    "selected_figures": [
+      "1701.06171v4-Table1-1.png",
+      "1701.06171v4-Table2-1.png",
+      "1701.06171v4-Figure2-1.png"
+    ],
+    "answer": "The main difference between top-down and bottom-up compositional learning schemes is the order in which the components are learned. Top-down compositional learning starts with the highest-level components and works its way down to the lower-level components, while bottom-up compositional learning starts with the lower-level components and works its way up to the higher-level components. <s>"
+  }
+}

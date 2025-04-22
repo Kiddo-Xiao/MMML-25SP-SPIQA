@@ -1,0 +1,10 @@
+{
+  "0": {
+    "question": "Which steganography method achieves the best performance in terms of distortion for both cover and secret images when embedding 2 bits per channel?",
+    "ground_truth": "The proposed method achieves the best performance for both cover and secret images when embedding 2 bits per channel.",
+    "selected_figures": [
+      "1805.08465v3-Table1-1.png"
+    ],
+    "answer": "image steganography 1805.08465v3-Table1-1.png <s>"
+  }
+}

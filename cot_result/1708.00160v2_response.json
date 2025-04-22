@@ -1,0 +1,77 @@
+{
+  "0": {
+    "question": "What is the probability of finding the pattern {head=F, ant=NAM} in the data?",
+    "ground_truth": "1",
+    "selected_figures": [
+      "1708.00160v2-Figure5-1.png",
+      "1708.00160v2-Table3-1.png",
+      "1708.00160v2-Figure4-1.png",
+      "1708.00160v2-Figure1-1.png",
+      "1708.00160v2-Figure2-1.png",
+      "1708.00160v2-Figure3-1.png",
+      "1708.00160v2-Table5-1.png",
+      "1708.00160v2-Table1-1.png",
+      "1708.00160v2-Table2-1.png",
+      "1708.00160v2-Table7-1.png",
+      "1708.00160v2-Table6-1.png"
+    ],
+    "answer": "The probability of finding the pattern {head=F, ant=NAM} in the data is zero. <s>"
+  },
+  "1": {
+    "question": "What is the support value of the node \"ana=NAM\"?",
+    "ground_truth": "2",
+    "selected_figures": [
+      "1708.00160v2-Figure5-1.png",
+      "1708.00160v2-Table3-1.png",
+      "1708.00160v2-Figure4-1.png",
+      "1708.00160v2-Figure1-1.png",
+      "1708.00160v2-Figure2-1.png",
+      "1708.00160v2-Figure3-1.png",
+      "1708.00160v2-Table4-1.png",
+      "1708.00160v2-Table5-1.png",
+      "1708.00160v2-Table1-1.png",
+      "1708.00160v2-Table2-1.png",
+      "1708.00160v2-Table7-1.png",
+      "1708.00160v2-Table6-1.png"
+    ],
+    "answer": "The support value of the node \"ana=NAM\" is 0. <s>"
+  },
+  "2": {
+    "question": "Which coreference model performs best on the CoNLL test set according to the F$_1$ score? Is this performance statistically significant compared to all other models in the table?",
+    "ground_truth": "The \"ensemble\" model of e2ef achieves the highest F$_1$ score of 68.83 on the CoNLL test set. Yes, this performance is statistically significant compared to all other models listed in the table, as indicated by the caption and footnote referencing the approximate randomization test.",
+    "selected_figures": [
+      "1708.00160v2-Figure5-1.png",
+      "1708.00160v2-Table3-1.png",
+      "1708.00160v2-Figure4-1.png",
+      "1708.00160v2-Figure1-1.png",
+      "1708.00160v2-Figure2-1.png",
+      "1708.00160v2-Figure3-1.png",
+      "1708.00160v2-Table4-1.png",
+      "1708.00160v2-Table5-1.png",
+      "1708.00160v2-Table1-1.png",
+      "1708.00160v2-Table2-1.png",
+      "1708.00160v2-Table7-1.png",
+      "1708.00160v2-Table6-1.png"
+    ],
+    "answer": "The model that performs best on the CoNLL test set according to the F$_1$ score is the Ensemble model, which outperforms all other models by a statistically significant margin (p < 0.05) based on the approximate randomization test (Noreen, 1989). <s>"
+  },
+  "3": {
+    "question": "Which deep-coref model performed best on the WikiCoref dataset, according to the table?",
+    "ground_truth": "The CoNLL model performed best on the WikiCoref dataset, with an F1 score of 53.40 when using the +linguistic evaluation metric.",
+    "selected_figures": [
+      "1708.00160v2-Figure5-1.png",
+      "1708.00160v2-Table3-1.png",
+      "1708.00160v2-Figure4-1.png",
+      "1708.00160v2-Figure1-1.png",
+      "1708.00160v2-Figure2-1.png",
+      "1708.00160v2-Figure3-1.png",
+      "1708.00160v2-Table4-1.png",
+      "1708.00160v2-Table5-1.png",
+      "1708.00160v2-Table1-1.png",
+      "1708.00160v2-Table2-1.png",
+      "1708.00160v2-Table7-1.png",
+      "1708.00160v2-Table6-1.png"
+    ],
+    "answer": "The deep-coref model that performed best on the WikiCoref dataset, according to the table, is the one with the highest F1 score in the out-of-domain evaluation. <s>"
+  }
+}

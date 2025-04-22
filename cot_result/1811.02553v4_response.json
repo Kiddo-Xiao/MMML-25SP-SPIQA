@@ -1,0 +1,97 @@
+{
+  "0": {
+    "question": "How does the number of state-action pairs affect the reward landscape for the surrogate and true reward functions?",
+    "ground_truth": "As the number of state-action pairs increases, the reward landscape for both the surrogate and true reward functions becomes smoother and more accurate.",
+    "selected_figures": [
+      "1811.02553v4-Figure18-1.png",
+      "1811.02553v4-Figure19-1.png",
+      "1811.02553v4-Figure8-1.png",
+      "1811.02553v4-Figure14-1.png",
+      "1811.02553v4-Figure15-1.png",
+      "1811.02553v4-Table1-1.png",
+      "1811.02553v4-Figure11-1.png",
+      "1811.02553v4-Figure16-1.png",
+      "1811.02553v4-Figure7-1.png",
+      "1811.02553v4-Figure20-1.png",
+      "1811.02553v4-Figure17-1.png",
+      "1811.02553v4-Figure13-1.png"
+    ],
+    "answer": "The number of state-action pairs affects the reward landscape for the surrogate and true reward functions by determining the complexity of the task and the amount of training data available. <s>"
+  },
+  "1": {
+    "question": "How does the number of state-action pairs affect the optimization landscape for the PPO algorithm?",
+    "ground_truth": "As the number of state-action pairs increases, the optimization landscape becomes more complex and has more local optima. This makes it more difficult for the PPO algorithm to find the global optimum.",
+    "selected_figures": [
+      "1811.02553v4-Figure18-1.png",
+      "1811.02553v4-Figure19-1.png",
+      "1811.02553v4-Figure8-1.png",
+      "1811.02553v4-Figure14-1.png",
+      "1811.02553v4-Figure15-1.png",
+      "1811.02553v4-Table1-1.png",
+      "1811.02553v4-Figure11-1.png",
+      "1811.02553v4-Figure16-1.png",
+      "1811.02553v4-Figure7-1.png",
+      "1811.02553v4-Figure20-1.png",
+      "1811.02553v4-Figure17-1.png",
+      "1811.02553v4-Figure13-1.png"
+    ],
+    "answer": "The number of state-action pairs affects the optimization landscape for the PPO algorithm by determining the complexity of the task and the amount of information available to the algorithm. The more state-action pairs there are, the more complex the task becomes, and the more information the algorithm has to work with. This can lead to a more favorable optimization landscape, as the algorithm has a better chance of finding a good policy. On the other hand, a smaller number of state-action pairs may result in a less favorable optimization landscape, as the algorithm has less information to work with, making it more difficult to find a good policy"
+  },
+  "2": {
+    "question": "How do TRPO and PPO compare in terms of convergence to the true gradient?",
+    "ground_truth": "TRPO generally converges faster to the true gradient than PPO.",
+    "selected_figures": [
+      "1811.02553v4-Figure18-1.png",
+      "1811.02553v4-Figure19-1.png",
+      "1811.02553v4-Figure8-1.png",
+      "1811.02553v4-Figure14-1.png",
+      "1811.02553v4-Figure15-1.png",
+      "1811.02553v4-Table1-1.png",
+      "1811.02553v4-Figure11-1.png",
+      "1811.02553v4-Figure16-1.png",
+      "1811.02553v4-Figure7-1.png",
+      "1811.02553v4-Figure20-1.png",
+      "1811.02553v4-Figure17-1.png",
+      "1811.02553v4-Figure13-1.png"
+    ],
+    "answer": "TRPO and PPO are both variants of the Proximal Policy Optimization (PPO) algorithm, which is a model-free reinforcement learning algorithm that uses a surrogate objective to approximate the true objective of maximizing the expected cumulative reward. In terms of convergence to the true gradient, both TRPO and PPO have been shown to converge to the true gradient as the number of iterations increases. However, TRPO has been shown to converge more quickly to the true gradient compared to PPO. <s>"
+  },
+  "3": {
+    "question": "How does the landscape concentration of the humanoid-v2 PPO policy change with respect to the number of state-action pairs?",
+    "ground_truth": "The landscape concentration increases with the number of state-action pairs.",
+    "selected_figures": [
+      "1811.02553v4-Figure18-1.png",
+      "1811.02553v4-Figure19-1.png",
+      "1811.02553v4-Figure8-1.png",
+      "1811.02553v4-Figure14-1.png",
+      "1811.02553v4-Figure15-1.png",
+      "1811.02553v4-Table1-1.png",
+      "1811.02553v4-Figure11-1.png",
+      "1811.02553v4-Figure16-1.png",
+      "1811.02553v4-Figure7-1.png",
+      "1811.02553v4-Figure20-1.png",
+      "1811.02553v4-Figure17-1.png",
+      "1811.02553v4-Figure13-1.png"
+    ],
+    "answer": "The landscape concentration of the humanoid-v2 PPO policy changes with respect to the number of state-action pairs. <s>"
+  },
+  "4": {
+    "question": "How does the quality of gradient estimation change as the number of state-action pairs used in estimation increases?",
+    "ground_truth": "The quality of gradient estimation increases as the number of state-action pairs used in estimation increases.",
+    "selected_figures": [
+      "1811.02553v4-Figure18-1.png",
+      "1811.02553v4-Figure19-1.png",
+      "1811.02553v4-Figure8-1.png",
+      "1811.02553v4-Figure14-1.png",
+      "1811.02553v4-Figure15-1.png",
+      "1811.02553v4-Table1-1.png",
+      "1811.02553v4-Figure11-1.png",
+      "1811.02553v4-Figure16-1.png",
+      "1811.02553v4-Figure7-1.png",
+      "1811.02553v4-Figure20-1.png",
+      "1811.02553v4-Figure17-1.png",
+      "1811.02553v4-Figure13-1.png"
+    ],
+    "answer": "The quality of gradient estimation improves as the number of state-action pairs used in estimation increases. <s>"
+  }
+}

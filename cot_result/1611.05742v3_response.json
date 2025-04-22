@@ -1,0 +1,32 @@
+{
+  "0": {
+    "question": "What is the function of the ReOrth Layer in the Projection Block of the Grassmann Network architecture?",
+    "ground_truth": "The ReOrth Layer re-orthogonalizes the output of the FRMap Layer.",
+    "selected_figures": [
+      "1611.05742v3-Figure1-1.png",
+      "1611.05742v3-Figure2-1.png",
+      "1611.05742v3-Table1-1.png"
+    ],
+    "answer": "<s>"
+  },
+  "1": {
+    "question": "Which pooling method is the most accurate for the AFEW database?",
+    "ground_truth": "W-ProjPooling",
+    "selected_figures": [
+      "1611.05742v3-Figure1-1.png",
+      "1611.05742v3-Figure2-1.png",
+      "1611.05742v3-Table1-1.png"
+    ],
+    "answer": "W-ProjPooling is the most accurate pooling method for the AFEW database. <s>"
+  },
+  "2": {
+    "question": "Which method performs best on the PaSC dataset for the handheld testing scenario (PaSC2), and how does its performance compare to other methods?",
+    "ground_truth": "The method that performs best on the PaSC dataset for the handheld testing scenario (PaSC2) is SPDNet, with an accuracy of 72.83%. This performance is slightly higher than GrNet-2Blocks (72.76%) and significantly higher than other methods like VGGDeepFace (68.24%) and DeepO2P (60.14%).",
+    "selected_figures": [
+      "1611.05742v3-Figure1-1.png",
+      "1611.05742v3-Figure2-1.png",
+      "1611.05742v3-Table1-1.png"
+    ],
+    "answer": "et al. proposed Grassmann Network (GrNet) architecture performs best on the PaSC dataset for the handheld testing scenario (PaSC2). <s>"
+  }
+}

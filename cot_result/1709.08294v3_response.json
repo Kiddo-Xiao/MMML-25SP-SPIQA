@@ -1,0 +1,121 @@
+{
+  "0": {
+    "question": "How does the performance of the two-way AdaQA model compare to the one-way AdaQA model and other CNN-based baseline models on the WikiQA dataset?",
+    "ground_truth": "The two-way AdaQA model significantly outperforms the one-way AdaQA model and all other CNN-based baseline models on the WikiQA dataset. This is evident from the higher MAP and MRR values achieved by the two-way model (0.7107 and 0.7304 respectively) compared to the one-way model (0.7005 and 0.7161) and the baseline models.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Table5-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "The two-way AdaQA model outperforms the one-way AdaQA model and other CNN-based baseline models on the WikiQA dataset. <s>"
+  },
+  "1": {
+    "question": "How does the ACNN framework learn context-sensitive filters?",
+    "ground_truth": "The ACNN framework learns context-sensitive filters through two modules: the filter generation module and the adaptive convolution module. The filter generation module produces a set of filters conditioned on the input sentence, while the adaptive convolution module applies the generated filters to an input sentence. The two modules are jointly differentiable, and the overall architecture can be trained in an end-to-end manner.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Table5-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "The Adaptive Contextual Convolutional Neural Network (ACNN) framework uses convolutional filters to learn context-sensitive representations of the input data. These filters are adaptive, meaning they can change based on the characteristics of the input data, such as the type of question being asked. <s>"
+  },
+  "2": {
+    "question": "Which model performed the best on the Quora Question Pairs dataset?",
+    "ground_truth": "AdaQA (two-way) + att.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Table5-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "The Adaptive Question Answering (AdaQA) model performed the best on the Quora Question Pairs dataset. <s>"
+  },
+  "3": {
+    "question": "Based on the figure, which type of question does ACNN perform the best on?",
+    "ground_truth": "ACNN performs best on \"Who\" questions.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Table5-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "It is not possible to determine the type of question that ACNN performs the best on based on the provided information. <s>"
+  },
+  "4": {
+    "question": "How does the Adaptive Question Answering (AdaQA) model generate context-aware filters?",
+    "ground_truth": "The AdaQA model generates context-aware filters through the filter generation module. This module takes the question and answer as input and outputs a set of filters that are specific to the question and answer pair.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "model generates context-aware filters using convolutional layers. <s>"
+  },
+  "5": {
+    "question": "Based on Table 1, which dataset has the largest vocabulary size and how does this compare to the average number of words per document in that dataset?",
+    "ground_truth": "The Yelp P. dataset has the largest vocabulary size with 25,709 unique words. This is significantly larger than the average number of words per document in the dataset, which is 138.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Table5-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "The Quora Question Pairs dataset has the largest vocabulary size. <s>"
+  },
+  "6": {
+    "question": "Can you explain why the authors claim that their S-ACNN model with a single filter is \"much more expressive\" than the basic S-CNN model, even though it doesn't achieve the best overall performance on either dataset?",
+    "ground_truth": "The authors claim that S-ACNN is more expressive than S-CNN because, despite having only one filter, it significantly outperforms S-CNN on both datasets. This suggests that the filter-generation module in ACNN allows for greater flexibility and adaptability, enabling the model to better capture the specific features of each sentence.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Table5-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "The authors claim that their S-ACNN model with a single filter is \"much more expressive\" than the basic S-CNN model, even though it doesn't achieve the best overall performance on either SelQA or WikiQA datasets. This is because the S-ACNN model with a single filter is able to capture a wider range of patterns in the input data, making it more versatile and adaptable to a broader range of question-answering tasks. <s>"
+  },
+  "7": {
+    "question": "Which model performs best on the SelQA dataset and how does it compare to the baseline CNN model reported in Jurczyk et al. (2016)?",
+    "ground_truth": "The AdaQA (two-way) + att. model achieves the best performance on the SelQA dataset with a MAP score of 0.9021 and an MRR score of 0.9103. Compared to the baseline CNN model from Jurczyk et al. (2016) which has a MAP score of 0.8320 and an MRR score of 0.8420, the AdaQA (two-way) + att. model demonstrates a significant improvement in both metrics.",
+    "selected_figures": [
+      "1709.08294v3-Table2-1.png",
+      "1709.08294v3-Table4-1.png",
+      "1709.08294v3-Table3-1.png",
+      "1709.08294v3-Figure1-1.png",
+      "1709.08294v3-Table5-1.png",
+      "1709.08294v3-Figure3-1.png",
+      "1709.08294v3-Figure2-1.png",
+      "1709.08294v3-Table1-1.png"
+    ],
+    "answer": "The Adaptive Question Answering (AdaQA) model performs best on the SelQA dataset and outperforms the baseline CNN model reported in Jurczyk et al. (2016) by a significant margin. <s>"
+  }
+}

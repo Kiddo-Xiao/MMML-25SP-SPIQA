@@ -1,0 +1,108 @@
+{
+  "0": {
+    "question": "Which system from Ortiz et al. achieved the highest BLEU and METEOR scores, and how does it compare to the CCA inference algorithm in terms of performance?",
+    "ground_truth": "The SMT system from Ortiz et al. achieved the highest BLEU score (43.7) and METEOR score (35.6) among their tested systems. While the SMT system outperforms the CCA inference algorithm in terms of BLEU score, the CCA algorithm achieves a slightly higher METEOR score (25.6 vs 25.5).",
+    "selected_figures": [
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png"
+    ],
+    "answer": "The machine translation system that achieved the highest BLEU and METEOR scores in Ortiz et al.'s paper is the one that uses the CCA inference algorithm. <s>"
+  },
+  "1": {
+    "question": "What is the difference between the outputs of the machine translation system (SMT) and the CCA inference?",
+    "ground_truth": "The SMT outputs are literal translations of the images, while the CCA outputs take into account the context of the images and generate more natural-sounding descriptions.",
+    "selected_figures": [
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png"
+    ],
+    "answer": "The main difference between the outputs of the machine translation system (SMT) and the CCA inference is that SMT is a rule-based system, while CCA is a neural network-based system. <s>"
+  },
+  "2": {
+    "question": "Which system, CCA or SMT, generally performs better when the caption is of low quality (average rank less than 3)?",
+    "ground_truth": "It is difficult to definitively say which system performs better for low-quality captions based solely on the provided data. However, we can observe some trends:\n\n1. When the SMT average rank is below 3, the CCA average rank is also lower (1.64 vs. 1.77).\n2. When the SMT average rank is 3 or higher, the CCA average rank is significantly higher (3.54 vs. 3.46).\n\nThis suggests that CCA might perform relatively better for low-quality captions, but more data and analysis are needed for a conclusive answer.",
+    "selected_figures": [
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png"
+    ],
+    "answer": "The SMT system generally performs better when the caption is of low quality (average rank less than 3), while the CCA system performs better when the caption is of high quality (average rank 3 or higher). <s>"
+  },
+  "3": {
+    "question": "What is the purpose of the singular value decomposition step in the CCA algorithm?",
+    "ground_truth": "The singular value decomposition step is used to find the projection matrices U and V.",
+    "selected_figures": [
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Figure5-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png"
+    ],
+    "answer": "The purpose of the singular value decomposition (SVD) step in the CCA (Canonical Correlation Analysis) algorithm is to decompose the covariance matrix of the two input spaces, X and Y, into three matrices: U, S, and V. <s>"
+  },
+  "4": {
+    "question": "What is the relationship between the input space and the output space in CCA inference?",
+    "ground_truth": "The input space and the output space are related by a cosine similarity measure.",
+    "selected_figures": [
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png"
+    ],
+    "answer": "The relationship between the input space and the output space in CCA inference is that the input space, X, is mapped to a unit vector in the output space, Y. <s>"
+  },
+  "5": {
+    "question": "What is the role of the temperature variable t in the CCA decoding algorithm?",
+    "ground_truth": "The temperature variable t controls the probability of accepting a new candidate solution y. As t decreases, the probability of accepting a worse solution decreases.",
+    "selected_figures": [
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png"
+    ],
+    "answer": "The role of the temperature variable t in the CCA (Canonical Correlation Analysis) decoding algorithm is to control the convergence of the algorithm. <s>"
+  },
+  "6": {
+    "question": "What is the relationship between BLEU score and human ranking for CCA and SMT systems?",
+    "ground_truth": "The correlation between BLEU scores and human ranking is not high for either CCA or SMT systems.",
+    "selected_figures": [
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png"
+    ],
+    "answer": "The relationship between BLEU score and human ranking for CCA and SMT systems is that the higher the BLEU score, the more likely it is that the CCA or SMT system will be rated highly by human evaluations. <s>"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "0": {
+    "question": "Which constraint has the most significant impact on the FIT values for the CMS data set when the target rank is 15?",
+    "ground_truth": "The smoothness constraint on $\\M{U_k}$ has the most significant impact on the FIT values for the CMS data set when the target rank is 15.",
+    "selected_figures": [
+      "1803.04572v2-Table6-1.png",
+      "1803.04572v2-Figure3-1.png",
+      "1803.04572v2-Table7-1.png",
+      "1803.04572v2-Figure1-1.png",
+      "1803.04572v2-Table1-1.png",
+      "1803.04572v2-Figure2-1.png",
+      "1803.04572v2-Table4-1.png",
+      "1803.04572v2-Table5-1.png",
+      "1803.04572v2-Table2-1.png",
+      "1803.04572v2-Figure6-1.png",
+      "1803.04572v2-Figure7-1.png",
+      "1803.04572v2-Figure4-1.png",
+      "1803.04572v2-Figure5-1.png",
+      "1803.04572v2-Table3-1.png"
+    ],
+    "answer": "The smooth constraint has the most significant impact on the FIT values for the CMS data set when the target rank is 15. <s>"
+  },
+  "1": {
+    "question": "What are some common medications used to treat Sickle Cell Anemia?",
+    "ground_truth": "According to the table, some common medications used to treat Sickle Cell Anemia include:\n\nBeta-adrenergic agents\nAnalgesics (narcotics and non-narcotics)\nNSAIDs (cyclooxygenase inhibitor - type)\nPotassium replacement\nSodium/saline preparations\nGeneral inhalation agents\nLaxatives and cathartics\nIV solutions (dextrose-saline)\nAntiemetic/antivertigo agents\nSedative-hypnotics (non-barbiturate)\nGlucocorticoids (orally inhaled)\nFolic acid preparations\nAnalgesic narcotic anesthetic adjunct agents",
+    "selected_figures": [
+      "1803.04572v2-Table6-1.png",
+      "1803.04572v2-Figure3-1.png",
+      "1803.04572v2-Table7-1.png",
+      "1803.04572v2-Figure1-1.png",
+      "1803.04572v2-Table1-1.png",
+      "1803.04572v2-Figure2-1.png",
+      "1803.04572v2-Table4-1.png",
+      "1803.04572v2-Table5-1.png",
+      "1803.04572v2-Figure8-1.png",
+      "1803.04572v2-Table2-1.png",
+      "1803.04572v2-Figure6-1.png",
+      "1803.04572v2-Figure7-1.png",
+      "1803.04572v2-Figure4-1.png",
+      "1803.04572v2-Figure5-1.png",
+      "1803.04572v2-Table3-1.png"
+    ],
+    "answer": "Hydroxyurea is a common medication used to treat sickle cell anemia. <s>"
+  },
+  "2": {
+    "question": "What are the three constraints imposed by COPA on PARAFAC2 model factors?",
+    "ground_truth": "Non-negativity, smoothness, and sparsity.",
+    "selected_figures": [
+      "1803.04572v2-Table6-1.png",
+      "1803.04572v2-Figure3-1.png",
+      "1803.04572v2-Table7-1.png",
+      "1803.04572v2-Figure1-1.png",
+      "1803.04572v2-Table1-1.png",
+      "1803.04572v2-Figure2-1.png",
+      "1803.04572v2-Table4-1.png",
+      "1803.04572v2-Table5-1.png",
+      "1803.04572v2-Figure8-1.png",
+      "1803.04572v2-Table2-1.png",
+      "1803.04572v2-Figure6-1.png",
+      "1803.04572v2-Figure7-1.png",
+      "1803.04572v2-Figure4-1.png",
+      "1803.04572v2-Figure5-1.png",
+      "1803.04572v2-Table3-1.png"
+    ],
+    "answer": "The three constraints imposed by COPA on PARAFAC2 model factors are non-negativity, sparsity, and smoothness. <s>"
+  },
+  "3": {
+    "question": "How do the temporal patterns of phenotype magnitude differ between sickle cell anemia and leukemia patients?",
+    "ground_truth": "The temporal patterns of phenotype magnitude differ between sickle cell anemia and leukemia patients in terms of both shape and magnitude. For sickle cell anemia patients, the patterns are generally smoother and more periodic, with lower overall magnitude. For leukemia patients, the patterns are more erratic and have higher overall magnitude.",
+    "selected_figures": [
+      "1803.04572v2-Table6-1.png",
+      "1803.04572v2-Figure3-1.png",
+      "1803.04572v2-Table7-1.png",
+      "1803.04572v2-Figure1-1.png",
+      "1803.04572v2-Table1-1.png",
+      "1803.04572v2-Figure2-1.png",
+      "1803.04572v2-Table4-1.png",
+      "1803.04572v2-Table5-1.png",
+      "1803.04572v2-Figure8-1.png",
+      "1803.04572v2-Table2-1.png",
+      "1803.04572v2-Figure6-1.png",
+      "1803.04572v2-Figure7-1.png",
+      "1803.04572v2-Figure4-1.png",
+      "1803.04572v2-Figure5-1.png",
+      "1803.04572v2-Table3-1.png"
+    ],
+    "answer": "| The temporal patterns of phenotype magnitude differ between sickle cell anemia and leukemia patients. <s>"
+  },
+  "4": {
+    "question": "Which algorithm converged faster in both cases of target rank?",
+    "ground_truth": "SPARTan converged faster in both cases of target rank.",
+    "selected_figures": [
+      "1803.04572v2-Table6-1.png",
+      "1803.04572v2-Figure3-1.png",
+      "1803.04572v2-Table7-1.png",
+      "1803.04572v2-Figure1-1.png",
+      "1803.04572v2-Table1-1.png",
+      "1803.04572v2-Figure2-1.png",
+      "1803.04572v2-Table4-1.png",
+      "1803.04572v2-Table5-1.png",
+      "1803.04572v2-Figure8-1.png",
+      "1803.04572v2-Table2-1.png",
+      "1803.04572v2-Figure6-1.png",
+      "1803.04572v2-Figure7-1.png",
+      "1803.04572v2-Figure4-1.png",
+      "1803.04572v2-Figure5-1.png",
+      "1803.04572v2-Table3-1.png"
+    ],
+    "answer": "The algorithm that converged faster in both cases of target rank was COPA. <s>"
+  },
+  "5": {
+    "question": "Which method is faster, COPA or Helwig?",
+    "ground_truth": "COPA is faster than Helwig.",
+    "selected_figures": [
+      "1803.04572v2-Table6-1.png",
+      "1803.04572v2-Figure3-1.png",
+      "1803.04572v2-Table7-1.png",
+      "1803.04572v2-Figure1-1.png",
+      "1803.04572v2-Table1-1.png",
+      "1803.04572v2-Figure2-1.png",
+      "1803.04572v2-Table4-1.png",
+      "1803.04572v2-Table5-1.png",
+      "1803.04572v2-Figure8-1.png",
+      "1803.04572v2-Table2-1.png",
+      "1803.04572v2-Figure6-1.png",
+      "1803.04572v2-Figure7-1.png",
+      "1803.04572v2-Figure4-1.png",
+      "1803.04572v2-Figure5-1.png",
+      "1803.04572v2-Table3-1.png"
+    ],
+    "answer": "COPA is faster than Helwig on both the CHOA and CMS datasets. <s>"
+  },
+  "6": {
+    "question": "Which dataset has the largest number of clinical visits per patient?",
+    "ground_truth": "CMS",
+    "selected_figures": [
+      "1803.04572v2-Table6-1.png",
+      "1803.04572v2-Figure3-1.png",
+      "1803.04572v2-Table7-1.png",
+      "1803.04572v2-Figure1-1.png",
+      "1803.04572v2-Table1-1.png",
+      "1803.04572v2-Figure2-1.png",
+      "1803.04572v2-Table4-1.png",
+      "1803.04572v2-Table5-1.png",
+      "1803.04572v2-Figure8-1.png",
+      "1803.04572v2-Table2-1.png",
+      "1803.04572v2-Figure6-1.png",
+      "1803.04572v2-Figure7-1.png",
+      "1803.04572v2-Figure4-1.png",
+      "1803.04572v2-Figure5-1.png",
+      "1803.04572v2-Table3-1.png"
+    ],
+    "answer": "The dataset with the largest number of clinical visits per patient is the CHOA dataset. <s>"
+  }
+}

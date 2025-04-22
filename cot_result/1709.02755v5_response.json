@@ -1,0 +1,107 @@
+{
+  "0": {
+    "question": "How does the validation accuracy of the SRU model compare to that of the cuDNN LSTM and CNN models?",
+    "ground_truth": "The SRU model achieves comparable or slightly higher validation accuracy than the cuDNN LSTM and CNN models on all six benchmarks.",
+    "selected_figures": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "answer": "The validation accuracy of the SRU model is higher than that of the cuDNN LSTM and CNN models. <s>"
+  },
+  "1": {
+    "question": "How does the processing time of SRU compare to that of cuDNN LSTM and word-level convolution with filter widths k=2 and k=3?",
+    "ground_truth": "The processing time of SRU is significantly faster than that of cuDNN LSTM and word-level convolution with filter widths k=2 and k=3.",
+    "selected_figures": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "answer": "The processing time of SRU is significantly faster than both cuDNN LSTM and word-level convolution with filter widths k=2 and k=3. <s>"
+  },
+  "2": {
+    "question": "According to Table 1 and the passage, how does the performance of the SRU model compare to the LSTM model in terms of both accuracy and training speed on the SQuAD dataset?",
+    "ground_truth": "The SRU model outperforms the LSTM model in both accuracy and training speed on the SQuAD dataset.",
+    "selected_figures": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "answer": "The SRU model outperforms the LSTM model in terms of accuracy on the SQuAD dataset, while the LSTM model is faster in terms of training time per epoch. <s>"
+  },
+  "3": {
+    "question": "Based on the table, how does the training process handle large vocabulary sizes?",
+    "ground_truth": "The training process uses several techniques to handle large vocabulary sizes. These include:\n\n1. **Token-based batching:** Instead of grouping sentences of similar lengths together, the training process batches together a fixed number of tokens (5120 tokens per batch). This approach ensures that the model sees a consistent amount of vocabulary regardless of sentence length variation.\n2. **Shared embedding:** This technique maps both source and target words to the same embedding space, effectively reducing the memory footprint needed to store word representations. \n3. **Positional encoding:** This method injects information about the position of words in a sentence into the model, helping it better understand long-range dependencies within the text. ",
+    "selected_figures": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "answer": "The training process handles large vocabulary sizes by using pre-trained word2vec embeddings as input, resulting in an initial ratio slightly higher than 1/3. The ratio increases to 1 in deep layers, improving the training progress, especially for deeper models with many stacked layers. <s>"
+  },
+  "4": {
+    "question": "How does the variance of the hidden state $h_t$ compare to the variance of the input $x_t$ in deep layers of the SRU model?",
+    "ground_truth": "According to the passage, the variance of the hidden state is approximately equal to the variance of the input in deep layers.",
+    "selected_figures": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "answer": "The variance of the hidden state $h\\_t$ in deep layers of the SRU model is higher than the variance of the input $x\\_t$. <s>"
+  },
+  "5": {
+    "question": "How does scaling correction affect the training of SRU models?",
+    "ground_truth": "Scaling correction improves the training progress of SRU models, especially for deeper models with many stacked layers.",
+    "selected_figures": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "answer": "Scaling correction improves the training progress of SRU models, especially for deeper models with many stacked layers. <s>"
+  },
+  "6": {
+    "question": "How does the performance of SRU with 8 layers compare to the best reported results on the SUBJ dataset, and how does its training time compare to the other models in the \"Our setup\" section?",
+    "ground_truth": "While SRU with 8 layers achieves high test accuracy within the \"Our setup\" section on the SUBJ dataset (93.7%), it falls slightly short of the best reported result of 95.5% achieved by Zhao et al. (2015). However, SRU's training time of 879 seconds for 100 epochs on the SST dataset is faster than the LSTM model (2409 seconds) but slower than the CNN model (417 seconds) and the QRNN models (345 and 371 seconds).",
+    "selected_figures": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "answer": "SRU with 8 layers outperforms the best reported results on the SUBJ dataset, and its training time is competitive with the other models in the \"Our setup\" section. <s>"
+  }
+}
