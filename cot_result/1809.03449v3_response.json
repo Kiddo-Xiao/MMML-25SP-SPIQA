@@ -1,0 +1,86 @@
+{
+  "0": {
+    "question": "How does the average number of inter-word semantic connections per word change as the value of \u03ba increases?",
+    "ground_truth": "The average number of inter-word semantic connections per word increases as the value of \u03ba increases.",
+    "selected_figures": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "answer": "The average number of inter-word semantic connections per word decreases as the value of \u03ba increases. <s>"
+  },
+  "1": {
+    "question": "Which model performed the best on the AddOneSent dataset?",
+    "ground_truth": "KAR",
+    "selected_figures": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "answer": "The Knowledge Aided Reader (KAR) model performed the best on the AddOneSent dataset. <s>"
+  },
+  "2": {
+    "question": "What is the role of the Knowledge Aided Similarity Matrix in the KAR model?",
+    "ground_truth": "The Knowledge Aided Similarity Matrix is used to compute the similarity between the question and passage context embeddings. This similarity score is then used to weight the passage context embeddings, giving more weight to those parts of the passage that are most relevant to the question.",
+    "selected_figures": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "answer": "The role of the Knowledge Aided Similarity Matrix (KASM) in the Knowledge Aided Reader (KAR) model is to improve the robustness of the model to noise and the hunger for data. <s>"
+  },
+  "3": {
+    "question": "How does the performance of KAR, SAN, and QANet (without data augmentation) change as the proportion of available training examples decreases?",
+    "ground_truth": "The performance of all three models decreases as the proportion of available training examples decreases.",
+    "selected_figures": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "answer": "The performance of KAR, SAN, and QANet (without data augmentation) decreases as the proportion of available training examples decreases. <s>"
+  },
+  "4": {
+    "question": "Which model performs the best when trained on 60% of the training data?",
+    "ground_truth": "KAR",
+    "selected_figures": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "answer": "1809.03449v3-Figure1-1.png: The Knowledge Aided Reader (KAR) model performs the best when trained on 60% of the training data. <s>"
+  },
+  "5": {
+    "question": "Which of the three models, KAR, SAN, or QANet (without data augmentation), performs the best on AddSent when trained on the full training set?",
+    "ground_truth": "KAR",
+    "selected_figures": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "answer": "QANet (without data augmentation) performs the best on AddSent when trained on the full training set. <s>"
+  }
+}

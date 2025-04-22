@@ -1,0 +1,82 @@
+{
+  "0": {
+    "question": "Which model performed the best on the MSRP task for the Ordered Sentences dataset?",
+    "ground_truth": "SkipThought",
+    "selected_figures": [
+      "1703.02507v3-Table1-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table5-1.png"
+    ],
+    "answer": "The model that performed the best on the MSRP task for the Ordered Sentences dataset was the Sent2Vec model trained on a single node using 30 threads. <s>"
+  },
+  "1": {
+    "question": "Which model performs best on the SICK 2014 dataset in terms of average Spearman and Pearson correlation?",
+    "ground_truth": "C-PHRASE",
+    "selected_figures": [
+      "1703.02507v3-Table1-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table5-1.png"
+    ],
+    "answer": "The model that performs best on the SICK 2014 dataset in terms of average Spearman and Pearson correlation is the Sent2Vec model trained on a single node using 30 threads, with an underline indicating the best performance for the dataset and Sent2Vec model performances being bold if they perform as well or better than all other non-Sent2Vec models, including those presented in Table 2. <s>"
+  },
+  "2": {
+    "question": "What is the relationship between the $L_2$-norm of a word vector and its frequency?",
+    "ground_truth": "The $L_2$-norm of a word vector is inversely proportional to its frequency.",
+    "selected_figures": [
+      "1703.02507v3-Table1-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table5-1.png"
+    ],
+    "answer": "The relationship between the $L_2$-norm of a word vector and its frequency is inverse. The $L_2$-norm, also known as the Euclidean distance, is a measure of the distance between two vectors in a high-dimensional space. The larger the $L_2$-norm of a word vector, the more common the word it represents is in the dataset. Conversely, the smaller the $L_2$-norm of a word vector, the less common the word it represents is in the dataset. <s>"
+  },
+  "3": {
+    "question": "Which dataset has the shortest average sentence length?",
+    "ground_truth": "Headlines.",
+    "selected_figures": [
+      "1703.02507v3-Table1-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table5-1.png"
+    ],
+    "answer": "1703.02507v3-Table8-1.png: Average sentence lengths for the datasets used in the comparison. <s>"
+  },
+  "4": {
+    "question": "Which model performed the best on the MSRP task for the Twitter dataset?",
+    "ground_truth": "The Sent2Vec uni. + bi. model performed the best on the MSRP task for the Twitter dataset.",
+    "selected_figures": [
+      "1703.02507v3-Table1-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table5-1.png"
+    ],
+    "answer": "The model that performed the best on the MSRP task for the Twitter dataset was the Sent2Vec model trained on a single node using 30 threads. <s>"
+  }
+}

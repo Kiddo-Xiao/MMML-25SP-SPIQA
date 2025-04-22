@@ -1,0 +1,36 @@
+{
+  "0": {
+    "question": "Which MCMC sampler appears to have the most consistent performance across the different variables?",
+    "ground_truth": "PE-HMC (N=5)",
+    "selected_figures": [
+      "1708.05239v3-Figure2-1.png",
+      "1708.05239v3-Figure1-1.png",
+      "1708.05239v3-Figure7-1.png",
+      "1708.05239v3-Figure9-1.png",
+      "1708.05239v3-Figure10-1.png",
+      "1708.05239v3-Figure6-1.png",
+      "1708.05239v3-Figure4-1.png",
+      "1708.05239v3-Figure3-1.png",
+      "1708.05239v3-Figure8-1.png",
+      "1708.05239v3-Figure5-1.png"
+    ],
+    "answer": "The pseudo-extended Hamiltonian Monte Carlo (HMC) sampler with fixed \u03b2 = [0.25, 0.5, 0.75] appears to have the most consistent performance across the different variables. <s>"
+  },
+  "1": {
+    "question": "How does the performance of the PE-N=5 sampler compare to the HMC sampler?",
+    "ground_truth": "The PE-N=5 sampler performs better than the HMC sampler.",
+    "selected_figures": [
+      "1708.05239v3-Figure2-1.png",
+      "1708.05239v3-Figure1-1.png",
+      "1708.05239v3-Figure7-1.png",
+      "1708.05239v3-Figure9-1.png",
+      "1708.05239v3-Figure10-1.png",
+      "1708.05239v3-Figure6-1.png",
+      "1708.05239v3-Figure4-1.png",
+      "1708.05239v3-Figure3-1.png",
+      "1708.05239v3-Figure8-1.png",
+      "1708.05239v3-Figure5-1.png"
+    ],
+    "answer": "The PE-N=5 sampler outperforms the HMC sampler. <s>"
+  }
+}

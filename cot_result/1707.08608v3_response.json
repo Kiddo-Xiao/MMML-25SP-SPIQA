@@ -1,0 +1,119 @@
+{
+  "0": {
+    "question": "Which genre in the SRL-NW network has the lowest failure rate and how does its inference time compare to other genres within the same network?",
+    "ground_truth": "The PT genre within the SRL-NW network has the lowest failure rate at 10.01%. Its inference time is also the lowest across all genres in the SRL-NW network for all three inference procedures (Viterbi, GBI, and A*).",
+    "selected_figures": [
+      "1707.08608v3-Table11-1.png",
+      "1707.08608v3-Table10-1.png",
+      "1707.08608v3-Table9-1.png",
+      "1707.08608v3-Table7-1.png",
+      "1707.08608v3-Table8-1.png",
+      "1707.08608v3-Table4-1.png",
+      "1707.08608v3-Table3-1.png",
+      "1707.08608v3-Table2-1.png"
+    ],
+    "answer": "The genre with the lowest failure rate in the SRL-NW network is the semantic role labeling (SRL) task, which has a failure rate of 0.08%.  <s>"
+  },
+  "1": {
+    "question": "Which genre shows the **largest absolute improvement** in F1 score on the failure set after applying GBI for **both** syntactic parsing and SRL?",
+    "ground_truth": "Pivot Corpus (PT) shows the largest absolute improvement in F1 score on the failure set after applying GBI for both syntactic parsing and SRL.",
+    "selected_figures": [
+      "1707.08608v3-Table11-1.png",
+      "1707.08608v3-Table10-1.png",
+      "1707.08608v3-Table5-1.png",
+      "1707.08608v3-Table9-1.png",
+      "1707.08608v3-Table7-1.png",
+      "1707.08608v3-Table8-1.png",
+      "1707.08608v3-Table4-1.png",
+      "1707.08608v3-Table3-1.png",
+      "1707.08608v3-Table1-1.png",
+      "1707.08608v3-Table2-1.png"
+    ],
+    "answer": "The genre that shows the largest absolute improvement in F1 score on the failure set after applying GBI for both syntactic parsing and SRL is SRL-X, where X denotes the percentage of dataset used for training. <s>"
+  },
+  "2": {
+    "question": "How did the accuracy of the model change as the iterations progressed?",
+    "ground_truth": "The accuracy of the model increased from 66.7% to 100% as the iterations progressed.",
+    "selected_figures": [
+      "1707.08608v3-Table11-1.png",
+      "1707.08608v3-Table10-1.png",
+      "1707.08608v3-Table5-1.png",
+      "1707.08608v3-Table9-1.png",
+      "1707.08608v3-Table7-1.png",
+      "1707.08608v3-Table8-1.png",
+      "1707.08608v3-Table6-1.png",
+      "1707.08608v3-Table4-1.png",
+      "1707.08608v3-Table3-1.png",
+      "1707.08608v3-Table1-1.png",
+      "1707.08608v3-Table2-1.png"
+    ],
+    "answer": "The accuracy of the model improved as the iterations progressed. <s>"
+  },
+  "3": {
+    "question": "What is the effect of enforcing syntactic constraints on the semantic role labeling output?",
+    "ground_truth": "Enforcing syntactic constraints can correct the number of agreeing spans, and also change the semantic roles assigned to tokens.",
+    "selected_figures": [
+      "1707.08608v3-Table11-1.png",
+      "1707.08608v3-Table10-1.png",
+      "1707.08608v3-Table9-1.png",
+      "1707.08608v3-Table7-1.png",
+      "1707.08608v3-Table8-1.png",
+      "1707.08608v3-Table4-1.png",
+      "1707.08608v3-Table3-1.png",
+      "1707.08608v3-Table2-1.png"
+    ],
+    "answer": "The effect of enforcing syntactic constraints on the semantic role labeling output is to correct the number of agreeing spans and change the semantic role labels, improving the accuracy of the output. <s>"
+  },
+  "4": {
+    "question": "What is the relationship between the number of shifts and the accuracy of the output?",
+    "ground_truth": "The accuracy of the output increases as the number of shifts increases.",
+    "selected_figures": [
+      "1707.08608v3-Table11-1.png",
+      "1707.08608v3-Table10-1.png",
+      "1707.08608v3-Table5-1.png",
+      "1707.08608v3-Table9-1.png",
+      "1707.08608v3-Table7-1.png",
+      "1707.08608v3-Table8-1.png",
+      "1707.08608v3-Table6-1.png",
+      "1707.08608v3-Table4-1.png",
+      "1707.08608v3-Table3-1.png",
+      "1707.08608v3-Table1-1.png",
+      "1707.08608v3-Table2-1.png"
+    ],
+    "answer": "The relationship between the number of shifts and the accuracy of the output depends on several factors, such as the complexity of the task, the size of the dataset, and the quality of the training data. In general, increasing the number of shifts can improve the accuracy of the output, as it allows the model to explore a larger space of possible solutions. However, there is a trade-off between the number of shifts and the computational complexity of the model. If the number of shifts is too high, the model can become computationally expensive and time-consuming, which can limit its practicality for real-"
+  },
+  "5": {
+    "question": "Which inference method consistently leads to the highest F1 score on the failure set across all three networks (Net3, Net4, and Net5)?",
+    "ground_truth": "Beam search with a width of 9 consistently leads to the highest F1 score on the failure set across all three networks.",
+    "selected_figures": [
+      "1707.08608v3-Table11-1.png",
+      "1707.08608v3-Table10-1.png",
+      "1707.08608v3-Table5-1.png",
+      "1707.08608v3-Table9-1.png",
+      "1707.08608v3-Table7-1.png",
+      "1707.08608v3-Table8-1.png",
+      "1707.08608v3-Table4-1.png",
+      "1707.08608v3-Table3-1.png",
+      "1707.08608v3-Table1-1.png",
+      "1707.08608v3-Table2-1.png"
+    ],
+    "answer": "The inference method that consistently leads to the highest F1 score on the failure set across all three networks (Net3, Net4, and Net5) is Viterbi decoding. <s>"
+  },
+  "6": {
+    "question": "How does GBI compare to A* in terms of reducing disagreement rate on the SRL-100 network's failure set?",
+    "ground_truth": "GBI is more effective than A* in reducing the disagreement rate on the SRL-100 network's failure set. After applying GBI, the average disagreement rate drops to 24.92%, while A* only reduces it to 33.91%. This represents an 19.93% greater reduction in disagreement rate when using GBI compared to A*.",
+    "selected_figures": [
+      "1707.08608v3-Table11-1.png",
+      "1707.08608v3-Table10-1.png",
+      "1707.08608v3-Table5-1.png",
+      "1707.08608v3-Table9-1.png",
+      "1707.08608v3-Table7-1.png",
+      "1707.08608v3-Table8-1.png",
+      "1707.08608v3-Table4-1.png",
+      "1707.08608v3-Table3-1.png",
+      "1707.08608v3-Table1-1.png",
+      "1707.08608v3-Table2-1.png"
+    ],
+    "answer": "GBI outperforms A* in terms of reducing disagreement rate on the SRL-100 network's failure set. <s>"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "0": {
+    "question": "How does the alpha parameter affect recommendation accuracy for different sample sizes on the CLASS dataset?",
+    "ground_truth": "The alpha parameter generally increases recommendation accuracy as the sample size increases. However, the effect of alpha varies depending on the loss function used. For cross-entropy loss, alpha has a relatively small effect on accuracy. For TOP1-max loss, alpha has a larger effect on accuracy, especially for smaller sample sizes. For BPR-max loss, alpha has a very large effect on accuracy, with higher values of alpha leading to much higher accuracy.",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The alpha parameter has a significant impact on recommendation accuracy for different sample sizes on the CLASS dataset. <s>"
+  },
+  "1": {
+    "question": "Which combination of method and dataset achieved the highest Recall@20 score, and how much higher was it compared to the original GRU4Rec model?",
+    "ground_truth": "The highest Recall@20 score was achieved by the GRU4Rec with additional samples and BPR-max loss function on the RSC15 dataset. This score was 42.37% higher than the Recall@20 score of the original GRU4Rec model on the same dataset.",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The combination that achieved the highest Recall@20 score was BPR-max loss with unified embeddings on the CLASS dataset. The improvement over the original GRU4Rec model was approximately 10%. <s>"
+  },
+  "2": {
+    "question": "What is the performance of GRU4Rec relative to the baseline in terms of watch time?",
+    "ground_truth": "GRU4Rec has a slightly higher performance than the baseline in terms of watch time.",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The performance of GRU4Rec relative to the baseline in terms of watch time is not specified in the image. <s>"
+  },
+  "3": {
+    "question": "Which dataset contains the most interactions (events) in the training set and how much larger is it compared to the dataset with the least interactions in the training set?",
+    "ground_truth": "The VIDXL dataset contains the most interactions (events) in the training set with 69,312,698 events. This is roughly 7.7 times larger than the RSC15 dataset, which has the least interactions (9,011,321) in the training set. ",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The CLASS dataset contains the most interactions (events) in the training set, and it is significantly larger compared to the dataset with the least interactions in the training set. <s>"
+  },
+  "4": {
+    "question": "What is the purpose of negative sampling?",
+    "ground_truth": "Negative sampling is a technique used to reduce the number of negative examples that need to be considered during training.",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The purpose of negative sampling is to increase the diversity of the negative samples used during training, which in turn improves the recommendation performance of the model. This technique is commonly used in deep learning-based recommendation systems, such as the Gated Recurrent Unit (GRU) and its variants like the Echo State Network (ESN) and the Long Short-Term Memory (LSTM) network. <s>"
+  },
+  "5": {
+    "question": "How does the training time of the different losses change as the number of additional samples increases?",
+    "ground_truth": "The training time of all losses increases as the number of additional samples increases.",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The training time of the different losses changes differently as the number of additional samples increases. <s>"
+  },
+  "6": {
+    "question": "Which dataset has the highest Recall@20 and MRR@20?",
+    "ground_truth": "VIDXL has the highest Recall@20 and MRR@20.",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The CLASS dataset has the highest Recall@20 and MRR@20. <s>"
+  },
+  "7": {
+    "question": "How does the addition of negative samples affect the gradient of BPR and BPR-max with respect to the target score?",
+    "ground_truth": "The addition of negative samples increases the gradient of BPR and BPR-max with respect to the target score.",
+    "selected_figures": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "answer": "The addition of negative samples increases the gradient of BPR and BPR-max with respect to the target score. <s>"
+  }
+}

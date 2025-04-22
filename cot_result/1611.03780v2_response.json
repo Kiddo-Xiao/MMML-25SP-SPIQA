@@ -1,0 +1,122 @@
+{
+  "0": {
+    "question": "How does GeoCUTS perform compared to other clusterings for highly active users?",
+    "ground_truth": "GeoCUTS performs comparably to other clusterings for highly active users.",
+    "selected_figures": [
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "GeoCUTS performs comparably to other clusterings for highly active users, and somewhat better for highly mobile users. <s>"
+  },
+  "1": {
+    "question": "How is the Hilbert space-filling curve constructed?",
+    "ground_truth": "The Hilbert space-filling curve is constructed recursively. The curve starts with a simple square, and then at each subsequent iteration, the curve is subdivided into four smaller squares. The curve is then drawn through each of these squares in a specific order.",
+    "selected_figures": [
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "The Hilbert curve is a space-filling curve, which means that it can be used to fill a two-dimensional space with a finite number of points. It is named after mathematician David Hilbert, who first described it in 1902. <s>"
+  },
+  "2": {
+    "question": "How does the performance of GeoCUTS compare to the Grid method in identifying highly mobile clusters when the number of clusters is increased from approximately 25 to 50?",
+    "ground_truth": "GeoCUTS consistently outperforms the Grid method in identifying highly mobile clusters, regardless of the number of clusters. However, the performance of both methods decreases as the number of clusters increases.",
+    "selected_figures": [
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "GeoCUTS performs better than the Grid method when the number of clusters is increased from approximately 25 to 50. <s>"
+  },
+  "3": {
+    "question": "What is the relationship between the query graph and the interference graph?",
+    "ground_truth": " The interference graph is a folded version of the query graph. The nodes in the interference graph represent regions, and the edges represent the interference between regions. The edge weights in the interference graph are calculated from the edge weights in the query graph.",
+    "selected_figures": [
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "The relationship between the query graph and the interference graph is that the interference graph is derived from the query graph. <s>"
+  },
+  "4": {
+    "question": "Which metropolitan area is predicted by the GeoCUTS algorithm to include San Francisco, Berkeley, and Palo Alto, but not Sacramento?",
+    "ground_truth": "The Bay Area.",
+    "selected_figures": [
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "San Francisco is predicted by the GeoCUTS algorithm to include Berkeley and Palo Alto, but not Sacramento. <s>"
+  },
+  "5": {
+    "question": "Which metropolitan areas are correctly identified by the GeoCUTS algorithm in France?",
+    "ground_truth": "Paris, Bordeaux, and Lyon.",
+    "selected_figures": [
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "The GeoCUTS algorithm correctly identifies the metropolitan areas of Paris, Lyon, Marseille, and Toulouse in France. <s>"
+  },
+  "6": {
+    "question": "Which clustering algorithm produced the smallest cut size for highly active users in the US dataset, and how much smaller was it compared to the cut size produced by grid partitioning?",
+    "ground_truth": "Both GeoCUTS and Linear Embedding produced the smallest cut size for highly active users, with a cut size of 4%. This is 11% smaller than the cut size produced by grid partitioning, which had a cut size of 15%.",
+    "selected_figures": [
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "GeoCUTS produced the smallest cut size for highly active users in the US dataset, and it was significantly smaller than the cut size produced by grid partitioning. <s>"
+  },
+  "7": {
+    "question": "Which method performs best for highly active users in the US?",
+    "ground_truth": "Both GeoCUTS and DMA perform equally well for highly active users in the US.",
+    "selected_figures": [
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "answer": "GeoCUTS performs comparably to other clusterings for highly active users, and somewhat better for highly mobile users. <s>"
+  }
+}

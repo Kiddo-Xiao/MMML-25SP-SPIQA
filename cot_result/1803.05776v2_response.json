@@ -1,0 +1,10 @@
+{
+  "0": {
+    "question": "Which model performs the best at SNR=0dB?",
+    "ground_truth": "GPG-K",
+    "selected_figures": [
+      "1803.05776v2-Figure1-1.png"
+    ],
+    "answer": "1803.05776v2-Figure1-1 1803.05776v2-Figure1-2 1803.05776v2-Figure1-3 1803.05776v2-Figure1-4 1803.05776v2-Figure1-5 1803.05776v2-Figure1-6 1803.05776v2-"
+  }
+}

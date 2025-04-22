@@ -1,0 +1,11 @@
+{
+  "0": {
+    "question": "Which algorithm has the fastest runtime?",
+    "ground_truth": "The algorithm proposed in this paper has the fastest runtime.",
+    "selected_figures": [
+      "1805.02349v2-Figure1-1.png",
+      "1805.02349v2-Figure2-1.png"
+    ],
+    "answer": "1805.02349v2-Figure1-1.png: 1805.02349v2-Figure2-1.png: 1805.02349v2-Figure3-1.png: 1805.02349v2-Figure4-1.png: 1805.02349v2-Figure5-1.png: 1805.02349v2-Figure6-"
+  }
+}

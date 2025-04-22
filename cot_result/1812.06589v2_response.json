@@ -1,0 +1,132 @@
+{
+  "0": {
+    "question": "How do the different methods compare in terms of their ability to generate realistic faces?",
+    "ground_truth": "The baseline method generates faces that are blurry and unrealistic, while the other methods generate faces that are more realistic.",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "of 2021-12-06 18:12:08 | [object]  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |"
+  },
+  "1": {
+    "question": "What is the effect of adding DA to the baseline method?",
+    "ground_truth": "Adding DA to the baseline method improves the PSNR and SSIM values, while slightly decreasing the LMD value.",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "1812.06589v2-Ablation study of the key components AMIE and DA in our method as well as two strategies applied in AMIE: Asymmetric Training (Asy.) and JS represented estimator (JS). Ours = Baseline + AMIE + DA, and AMIE = MINE + Asy. + JS. <s>"
+  },
+  "2": {
+    "question": "Which method performed the best on the GRID dataset?",
+    "ground_truth": "AMIE (Ours)",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "1812.06589v2. <s>"
+  },
+  "3": {
+    "question": "What is the role of the frame discriminator in the proposed method?",
+    "ground_truth": "The frame discriminator is used to detect whether the generated frame and audio are matched or not.",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "The frame discriminator is a key component in the proposed audio-visual coherence learning (AVCL) method. <s>"
+  },
+  "4": {
+    "question": "How does the dynamic attention block improve the transition of generated video for arbitrary identities?",
+    "ground_truth": "The dynamic attention block decouples the lip-related and identity-related information, allowing the network to focus on the most important area for generating realistic talking faces.",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "The dynamic attention block in the proposed method improves the transition of generated video for arbitrary identities by dynamically adjusting the attention mechanism based on the similarity between the real and generated frames. <s>"
+  },
+  "5": {
+    "question": "Which method, AMIE or MINE, produces generated frames that are closer in distribution to the real frames?",
+    "ground_truth": "MINE",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "The proposed method, AMIE, produces generated frames that are closer in distribution to the real frames than the original MINE method. <s>"
+  },
+  "6": {
+    "question": " What are the limitations of the Zhou \\textit{et al.} and Chen \\textit{et al.} methods for generating talking-face videos, as compared to the method proposed in the paper?",
+    "ground_truth": " The Zhou \\textit{et al.} method suffers from a \"zoom-in-and-out\" effect, while the Chen \\textit{et al.} method produces lip shapes that differ from the real ones.",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "The Zhou \\textit{et al.} and Chen \\textit{et al.} methods have limitations in generating talking-face videos, as compared to the method proposed in the paper. <s>"
+  },
+  "7": {
+    "question": "Which method performed the best according to the LMD metric?",
+    "ground_truth": "AMIE (Ours)",
+    "selected_figures": [
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "answer": "1812.06589v2. <s>"
+  }
+}

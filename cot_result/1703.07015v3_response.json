@@ -1,0 +1,117 @@
+{
+  "0": {
+    "question": "Which dataset exhibits the strongest seasonality?",
+    "ground_truth": "The Traffic dataset.",
+    "selected_figures": [
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "answer": "The Solar-Energy dataset exhibits the strongest seasonality. <s>"
+  },
+  "1": {
+    "question": "What component of LSTNet is most important for its performance?",
+    "ground_truth": "The AR component.",
+    "selected_figures": [
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure6-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "answer": "The most important component of LSTNet for its performance is the Long Short-Term Memory (LSTM) component. <s>"
+  },
+  "2": {
+    "question": "Which of the two models, LSTw/oAR or LST-Skip, seems to perform better in predicting electricity consumption?",
+    "ground_truth": "LST-Skip seems to perform better in predicting electricity consumption.",
+    "selected_figures": [
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure6-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "answer": "LSTw/oAR outperforms LST-Skip in predicting electricity consumption. <s>"
+  },
+  "3": {
+    "question": "Which model, VAR or LSTNet, is better at capturing both daily and weekly repeating patterns in the data?",
+    "ground_truth": "LSTNet",
+    "selected_figures": [
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure6-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "answer": "LSTNet is better at capturing both daily and weekly repeating patterns in the data, while VAR inadequately predicts similar patterns for Fridays and Saturdays, and ones for Sundays and Mondays. <s>"
+  },
+  "4": {
+    "question": "Which dataset has the highest temporal resolution, meaning it provides data points at the most frequent intervals?",
+    "ground_truth": "The solar dataset has the highest temporal resolution.",
+    "selected_figures": [
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "answer": "The Solar-Energy dataset has the highest temporal resolution, meaning it provides data points at the most frequent intervals. <s>"
+  },
+  "5": {
+    "question": "What are the different types of layers in the LSTNet model and how are they connected?",
+    "ground_truth": "The LSTNet model has four main types of layers:\n\n1. Convolutional layer: This layer extracts local dependency patterns from the input data. \n2. Recurrent and recurrent-skip layer: These layers capture long-term dependencies in the data. \n3. Fully connected and element-wise sum output layer: This layer combines the outputs from the convolutional and recurrent layers to produce the final prediction.\n4. Autoregressive layer: This layer provides a linear bypass to the non-linear neural network part of the model. \n\nThe convolutional layer receives the input data and passes its output to the recurrent and recurrent-skip layers. These layers then pass their output to the fully connected and element-wise sum output layer. The autoregressive layer receives the input data directly and its output is also fed into the fully connected and element-wise sum output layer.",
+    "selected_figures": [
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "answer": "The LSTNet model has two types of layers: convolutional layers and recurrent layers. \n\nConvolutional layers are used to extract features from the input time series data, while recurrent layers are used to model the temporal dependencies in the data. The convolutional layers are stacked on top of the recurrent layers to form the LSTNet architecture. The convolutional layers are connected to the recurrent layers through convolutional-recurrent (Conv-RNN) layers, which combine the strengths of both convolutional and recurrent layers. The output of the convolutional layers is fed into the"
+  },
+  "6": {
+    "question": "How does the performance of LSTNet-attn vary with the horizon on the Solar-Energy dataset?",
+    "ground_truth": "The performance of LSTNet-attn generally improves as the horizon increases on the Solar-Energy dataset. This is evident from the fact that both the RMSE and correlation values improve with increasing horizon.",
+    "selected_figures": [
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "answer": "The performance of LSTNet-attn varies with the horizon on the Solar-Energy dataset. <s>"
+  }
+}

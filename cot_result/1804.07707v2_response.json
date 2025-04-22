@@ -1,0 +1,35 @@
+{
+  "0": {
+    "question": "How does the performance of the proposed model compare to other models when trained on the LDC2017T10 dataset, and what does this suggest about the effectiveness of incorporating syntax into the model?",
+    "ground_truth": "When trained on the LDC2017T10 dataset, the proposed model achieves the highest BLEU scores on both Dev and Test sets compared to other models listed in the table. This suggests that incorporating syntax into the model significantly improves its performance in generating text from AMR representations.",
+    "selected_figures": [
+      "1804.07707v2-Figure1-1.png",
+      "1804.07707v2-Table3-1.png",
+      "1804.07707v2-Table2-1.png",
+      "1804.07707v2-Table1-1.png"
+    ],
+    "answer": "? The proposed model, trained on the LDC2017T10 dataset, outperforms other models in terms of BLEU and parsing scores, suggesting that incorporating syntax into the model is effective in improving the model's performance. <s>"
+  },
+  "1": {
+    "question": "How does explicitly modeling meaning-preserving invariances impact the generation of paraphrases?",
+    "ground_truth": "Explicitly modeling meaning-preserving invariances leads to the generation of better paraphrases.",
+    "selected_figures": [
+      "1804.07707v2-Figure1-1.png",
+      "1804.07707v2-Table3-1.png",
+      "1804.07707v2-Table2-1.png",
+      "1804.07707v2-Table1-1.png"
+    ],
+    "answer": "modeling meaning-preserving invariances improves the generation of paraphrases. <s>"
+  },
+  "2": {
+    "question": "Which model performs the best at predicting the delexicalised constituency tree of an example, and how much better does it perform compared to the baseline model in terms of unlabelled F1 score?",
+    "ground_truth": "The Text-to-parse model performs the best at predicting the delexicalised constituency tree, achieving an unlabelled F1 score of 87.5. This is significantly higher than the baseline Unconditional model, which achieves an unlabelled F1 score of 38.5. The Text-to-parse model therefore performs approximately 49 points better than the baseline.",
+    "selected_figures": [
+      "1804.07707v2-Figure1-1.png",
+      "1804.07707v2-Table3-1.png",
+      "1804.07707v2-Table2-1.png",
+      "1804.07707v2-Table1-1.png"
+    ],
+    "answer": "1804.07707v2-Table1-1.png: The model that performs the best at predicting the delexicalised constituency tree of an example, and how much better it performs compared to the baseline model in terms of unlabelled F1 score, is not specified. <s>"
+  }
+}

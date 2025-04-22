@@ -1,0 +1,11 @@
+{
+  "0": {
+    "question": "Which method generally achieved a lower objective function value (OFV) for the different datasets, FISVDD or Incremental SVM? Does this imply that one method is definitively better than the other?",
+    "ground_truth": "For all datasets presented, Incremental SVM achieved a slightly lower OFV compared to FISVDD. However, this does not necessarily mean that Incremental SVM is definitively better.",
+    "selected_figures": [
+      "1709.00139v4-Table1-1.png",
+      "1709.00139v4-Figure1-1.png"
+    ],
+    "answer": "1709.00139v4-Table1-1.png: Incremental SVM\n1709.00139v4-Figure1-1.png: F-1 Measure for Different Data Sets 1709.00139v4-Table1-1.png: Incremental SVM\n1709.00139v4-Figure1-1.png: F-1 Measure for Different Data Sets <s>"
+  }
+}

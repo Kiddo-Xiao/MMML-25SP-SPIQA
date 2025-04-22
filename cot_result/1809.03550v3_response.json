@@ -1,0 +1,70 @@
+{
+  "0": {
+    "question": "Why is the optimal threshold chosen to be at the right margin of the region around the mode of the histogram?",
+    "ground_truth": "The region around the mode of the histogram mostly contains noise. Therefore, the optimal threshold is chosen to be at the right margin of this region to avoid including too much noise in the thresholded image.",
+    "selected_figures": [
+      "1809.03550v3-Table1-1.png",
+      "1809.03550v3-Table3-1.png",
+      "1809.03550v3-Table2-1.png",
+      "1809.03550v3-Figure3-1.png",
+      "1809.03550v3-Table5-1.png",
+      "1809.03550v3-Figure2-1.png",
+      "1809.03550v3-Table6-1.png",
+      "1809.03550v3-Table4-1.png",
+      "1809.03550v3-Figure4-1.png",
+      "1809.03550v3-Figure1-1.png"
+    ],
+    "answer": "The optimal threshold is chosen to be at the right margin of the region around the mode of the histogram in order to minimize the number of false alarms and maximize the number of correct detections. \n\nThis is because the mode of the histogram represents the most common value in the distribution of the residuals, which are the differences between the ground truth and the estimated background. By choosing the threshold to be at the right margin of the region around the mode, the algorithm is able to capture the majority of the true changes while minimizing the number of false detections. <s>"
+  },
+  "1": {
+    "question": "Which method achieves the best overall F1 score across all categories? Is this method consistently the best across all individual categories?",
+    "ground_truth": "According to the table, Algorithm 2 w/ Geman-McLure) achieves the best overall F1 score of 0.56514. However, this method is not consistently the best across all individual categories. For example, OMoGMF has a higher F1 score for the \"badWeather\" category.",
+    "selected_figures": [
+      "1809.03550v3-Table1-1.png",
+      "1809.03550v3-Table3-1.png",
+      "1809.03550v3-Table2-1.png",
+      "1809.03550v3-Figure3-1.png",
+      "1809.03550v3-Table5-1.png",
+      "1809.03550v3-Figure2-1.png",
+      "1809.03550v3-Table6-1.png",
+      "1809.03550v3-Table4-1.png",
+      "1809.03550v3-Figure4-1.png",
+      "1809.03550v3-Figure1-1.png"
+    ],
+    "answer": "No, the best overall F1 score across all categories is not consistently the best across all individual categories. <s>"
+  },
+  "2": {
+    "question": "Which algorithm achieves the fastest processing time per frame and how much faster is it compared to the slowest algorithm listed?",
+    "ground_truth": "Algorithm 12(SCDM with Geman-McLure) achieves the fastest processing time per frame at 0.103 seconds. This is approximately 100 times faster than the slowest algorithm, TTD_3WD, which takes 10.343 seconds per frame.",
+    "selected_figures": [
+      "1809.03550v3-Table1-1.png",
+      "1809.03550v3-Table3-1.png",
+      "1809.03550v3-Table2-1.png",
+      "1809.03550v3-Figure3-1.png",
+      "1809.03550v3-Table5-1.png",
+      "1809.03550v3-Figure2-1.png",
+      "1809.03550v3-Table6-1.png",
+      "1809.03550v3-Table4-1.png",
+      "1809.03550v3-Figure4-1.png",
+      "1809.03550v3-Figure1-1.png"
+    ],
+    "answer": "Algorithm 2 is the algorithm that achieves the fastest processing time per frame, with an average processing time of approximately 0.001 seconds per frame. \n\nIn comparison, the slowest algorithm listed is Algorithm 1, which has an average processing time of approximately 0.0355 seconds per frame. <s>"
+  },
+  "3": {
+    "question": "What is the relationship between the residuals prior to thresholding and the Boolean map?",
+    "ground_truth": "The Boolean map is obtained by thresholding the residuals prior to thresholding.",
+    "selected_figures": [
+      "1809.03550v3-Table1-1.png",
+      "1809.03550v3-Table3-1.png",
+      "1809.03550v3-Table2-1.png",
+      "1809.03550v3-Figure3-1.png",
+      "1809.03550v3-Table5-1.png",
+      "1809.03550v3-Figure2-1.png",
+      "1809.03550v3-Table6-1.png",
+      "1809.03550v3-Table4-1.png",
+      "1809.03550v3-Figure4-1.png",
+      "1809.03550v3-Figure1-1.png"
+    ],
+    "answer": "The relationship between the residuals prior to thresholding and the Boolean map is that the residuals represent the difference between the current frame and the estimated background, while the Boolean map represents the presence or absence of objects in the current frame. The residuals are thresholded to obtain the Boolean map. <s>"
+  }
+}

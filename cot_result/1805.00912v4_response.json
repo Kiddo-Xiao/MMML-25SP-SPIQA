@@ -1,0 +1,73 @@
+{
+  "0": {
+    "question": "Which model has the lowest memory consumption and time cost on synthetic data?",
+    "ground_truth": "MTSA",
+    "selected_figures": [
+      "1805.00912v4-Figure1-1.png",
+      "1805.00912v4-Table3-1.png",
+      "1805.00912v4-Table2-1.png",
+      "1805.00912v4-Table4-1.png",
+      "1805.00912v4-Table5-1.png",
+      "1805.00912v4-Figure2-1.png",
+      "1805.00912v4-Table6-1.png",
+      "1805.00912v4-Figure3-1.png"
+    ],
+    "answer": "The Talman et al. (2018) model has the lowest memory consumption and time cost on synthetic data. <s>"
+  },
+  "1": {
+    "question": "Which model has the highest test accuracy on the SNLI dataset, and how does its training time per epoch compare to the MTSA model?",
+    "ground_truth": "The model with the highest test accuracy is MTSA, with an accuracy of 86.3%. Its training time per epoch is 180s, which is faster than the training time of several other models with lower accuracy, such as Bi-LSTM (854s), Bi-GRU (850s), and DiSA (390s).",
+    "selected_figures": [
+      "1805.00912v4-Figure1-1.png",
+      "1805.00912v4-Table3-1.png",
+      "1805.00912v4-Table2-1.png",
+      "1805.00912v4-Table4-1.png",
+      "1805.00912v4-Table5-1.png",
+      "1805.00912v4-Figure2-1.png",
+      "1805.00912v4-Table6-1.png"
+    ],
+    "answer": "The Transformer model with multi-head self-attention (MHSA) has the highest test accuracy on the SNLI dataset, and its training time per epoch is similar to the MTSA model. <s>"
+  },
+  "2": {
+    "question": "Which model performed best on the SNLI test set?",
+    "ground_truth": "The Transfer + MTSA model performed best on the SNLI test set with an accuracy of 86.9%.",
+    "selected_figures": [
+      "1805.00912v4-Figure1-1.png",
+      "1805.00912v4-Table3-1.png",
+      "1805.00912v4-Table2-1.png",
+      "1805.00912v4-Table4-1.png",
+      "1805.00912v4-Table5-1.png",
+      "1805.00912v4-Figure2-1.png",
+      "1805.00912v4-Table6-1.png",
+      "1805.00912v4-Figure3-1.png"
+    ],
+    "answer": "The Transformer with multi-head self-attention performed best on the SNLI test set. <s>"
+  },
+  "3": {
+    "question": "Based on the table, how does MTSA compare to the Bi-LSTM and Multi-CNN baselines in terms of performance and training time?",
+    "ground_truth": "MTSA outperforms both Bi-LSTM and Multi-CNN baselines across all evaluation metrics (P, R, F1, and Comp.) on all three test sets (Development, WSJ Test, and Brown Test). While MTSA achieves the highest scores, its training time is comparable to Multi-head and Multi-CNN, and significantly faster than Bi-LSTM.",
+    "selected_figures": [
+      "1805.00912v4-Figure1-1.png",
+      "1805.00912v4-Table3-1.png",
+      "1805.00912v4-Table2-1.png",
+      "1805.00912v4-Table4-1.png",
+      "1805.00912v4-Table5-1.png",
+      "1805.00912v4-Figure2-1.png",
+      "1805.00912v4-Table6-1.png"
+    ],
+    "answer": "MTSA outperforms both the Bi-LSTM and Multi-CNN baselines on the SNLI and MultiNLI benchmark tasks, while also requiring less training time. <s>"
+  },
+  "4": {
+    "question": "What is the purpose of the positional mask in the TSA mechanism?",
+    "ground_truth": "The positional mask is used to provide information about the relative position of tokens in the input sequence. This information is used to compute the attention weights, which determine how much each token attends to each other token.",
+    "selected_figures": [
+      "1805.00912v4-Table3-1.png",
+      "1805.00912v4-Table2-1.png",
+      "1805.00912v4-Table4-1.png",
+      "1805.00912v4-Table5-1.png",
+      "1805.00912v4-Figure2-1.png",
+      "1805.00912v4-Table6-1.png"
+    ],
+    "answer": "The purpose of the positional mask in the Tensorized Self-Attention (TSA) mechanism is to control the flow of information between the self-attention layers. <s>"
+  }
+}

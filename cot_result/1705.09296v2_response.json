@@ -1,0 +1,108 @@
+{
+  "0": {
+    "question": "Which year is most associated with the terms \"sept\", \"hijackers\", and \"attacks\"?",
+    "ground_truth": "2001",
+    "selected_figures": [
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table3-1.png"
+    ],
+    "answer": "2001. <s>"
+  },
+  "1": {
+    "question": "Which node in the generative model represents the latent variable?",
+    "ground_truth": "The node labeled \u03b7 represents the latent variable.",
+    "selected_figures": [
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table3-1.png"
+    ],
+    "answer": "None of the nodes in the generative model represent a latent variable. <s>"
+  },
+  "2": {
+    "question": "Which model achieves the best NPMI scores (both internal and external) in the unsupervised setting, and what trade-off does this model exhibit compared to other models?",
+    "ground_truth": "The Scholar + w.v. model achieves the best NPMI scores (both internal and external) in the unsupervised setting. However, this model also has the highest number of people parameters, indicating a trade-off between topic coherence and model complexity.",
+    "selected_figures": [
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table3-1.png"
+    ],
+    "answer": "The model that achieves the best NPMI scores (both internal and external) in the unsupervised setting is the joint model of words and tone. <s>"
+  },
+  "3": {
+    "question": "Which topic has the highest internal coherence value?",
+    "ground_truth": "The topic with the highest internal coherence value is \"turks armenian armenia turkish roads escape soviet muslim mountain soul\".",
+    "selected_figures": [
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table3-1.png"
+    ],
+    "answer": ", The topic with the highest internal coherence value in the unsupervised SCHOLAR on the 20 newsgroups dataset is \"Sports\". <s>"
+  },
+  "4": {
+    "question": "Which model performed best on the IMDB dataset for classifying documents with categorical labels, and how much better did it perform compared to the SLDA model?",
+    "ground_truth": "Both the SCHOLAR (covariates) and Logistic Regression models achieved the highest accuracy of 0.87 on the IMDB dataset. This represents a 0.23 improvement over the SLDA model, which achieved an accuracy of 0.64.",
+    "selected_figures": [
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table3-1.png"
+    ],
+    "answer": "The model that performed best on the IMDB dataset for classifying documents with categorical labels was the Variational Autoencoder (VAE) model, which outperformed the SLDA model by a significant margin. <s>"
+  },
+  "5": {
+    "question": "Which topic is most likely to be associated with a pro-immigration stance?",
+    "ground_truth": "\"english language city spanish community\"",
+    "selected_figures": [
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Table4-1.png"
+    ],
+    "answer": "1705.09296v2-Figure2-1.png: The topic most likely to be associated with a pro-immigration stance is the one with the highest probability of a pro-immigration tone. <s>"
+  },
+  "6": {
+    "question": "How does the model capture different perspectives on immigration when considering tone as a covariate?",
+    "ground_truth": "The model captures different perspectives on immigration by highlighting contrasting words associated with the same topic, depending on whether the tone is anti-immigration or pro-immigration.",
+    "selected_figures": [
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table3-1.png"
+    ],
+    "answer": "The model captures different perspectives on immigration when considering tone as a covariate by learning embeddings of year-of-publication (treated as a covariate) from the combined model of news articles about immigration.  <s>"
+  }
+}

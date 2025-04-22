@@ -1,0 +1,167 @@
+{
+  "0": {
+    "question": "What does the parameter network do to the initial surface?",
+    "ground_truth": "The parameter network weights the initial surface, causing it to deform.",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure8-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The parameter network learns how to apply multiple long-range, non-linear deformation fields to the initial surface. <s>"
+  },
+  "1": {
+    "question": "How do the parameter network and the deformation network differ in terms of complexity and function?",
+    "ground_truth": "The parameter network is a simple structure with two fully connected layers, while the deformation network is more complex and contains two fully connected layers followed by two or more four-dimensional de-convolution layers. The parameter network learns how to apply multiple long-range, non-linear deformation fields, while the deformation network learns to generate dense deformation fields to refine the final surface.",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The parameter network and the deformation network differ in terms of complexity and function. The parameter network is relatively simple, consisting of two fully connected layers, while the deformation network is more complex, making use of several de-convolutional layers. The parameter network is responsible for learning how to apply multiple long-range, non-linear deformation fields, while the deformation network generates dense deformation fields to refine the final surface. <s>"
+  },
+  "2": {
+    "question": "Which gradient approximation method leads to a more stable and lower loss value during training?",
+    "ground_truth": "The corrected gradient method leads to a more stable and lower loss value during training.",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure3-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The gradient approximation method that leads to a more stable and lower loss value during training is the \"defo. align\" step, which contains alignment and rescaling of the deformations. <s>"
+  },
+  "3": {
+    "question": "How does the flow of water change as the central wall obstacle is shifted to the right?",
+    "ground_truth": "The flow of water increases as the central wall obstacle is shifted to the right.",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The flow of water changes as the central wall obstacle is shifted to the right because the obstacle affects the flow of the water around it. As the central wall obstacle is shifted to the right, the flow of the water increases in correspondence with the movement of the obstacle. <s>"
+  },
+  "4": {
+    "question": "Which of the two scenes, Drop or Staris, requires more computation time for rendering?",
+    "ground_truth": "Staris",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "Both scenes require roughly the same amount of computation time for rendering. <s>"
+  },
+  "5": {
+    "question": "What is the relationship between the resolution of the simulation and the training time?",
+    "ground_truth": " The higher the resolution of the simulation, the longer the training time. ",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure8-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The relationship between the resolution of the simulation and the training time depends on several factors, such as the complexity of the data, the architecture of the neural network, and the hardware used for training. In general, increasing the resolution of the simulation will require more memory and computational resources to store and process the data, which can lead to longer training times. However, the impact of resolution on training time can be mitigated by optimizing the architecture of the neural network, using efficient data structures, and leveraging parallel processing capabilities of modern hardware. Ultimately, the balance between resolution and training time will depend on the specific use case"
+  },
+  "6": {
+    "question": "What is the role of the parameter network in the weighting and refinement stage?",
+    "ground_truth": "The parameter network is used to infer a weighting function.",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The role of the parameter network in the weighting and refinement stage is to learn how to apply multiple long-range, non-linear deformation fields. <s>"
+  },
+  "7": {
+    "question": "Which of the methods is able to reconstruct the shape of the liquid properly?",
+    "ground_truth": "Only the full method with a deformation network is able to produce a perfect reconstruction.",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The method that is able to reconstruct the shape of the liquid properly is the one that employs a neural network to infer a weighting function and a dense deformation field. <s>"
+  },
+  "8": {
+    "question": "How do the initial conditions of the simulations vary?",
+    "ground_truth": "The initial conditions of the simulations vary in two dimensions: the position of the liquid drop along the x-axis (\u03b11) and the size of the drop (\u03b12).",
+    "selected_figures": [
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure12-1.png"
+    ],
+    "answer": "The initial conditions of the two-dimensional liquid simulations vary along the x-axis (\u03b11) and the size of the liquid drop (\u03b12). <s>"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "0": {
+    "question": "What are the three types of sentences that the annotators are asked to write?",
+    "ground_truth": "The three types of sentences are: \n1. A sentence that is definitely correct about the situation or event in the line.\n2. A sentence that might be correct about the situation or event in the line.\n3. A sentence that is definitely incorrect about the situation or event in the line.",
+    "selected_figures": [
+      "1704.05426v4-Table4-1.png",
+      "1704.05426v4-Table1-1.png",
+      "1704.05426v4-Figure1-1.png",
+      "1704.05426v4-Table2-1.png"
+    ],
+    "answer": "1704.05426v4-Table1-1.png: The main text of a prompt (truncated) that was presented to our annotators. This version is used for the written non-fiction genres. 1704.05426v4-Table4-1.png: Table 4: Test set accuracies (%) for all models; Match. represents test set performance on the MultiNLI genres that are also represented in the training set, Mis. represents test set performance on the remaining ones; Most freq. is"
+  },
+  "1": {
+    "question": "Which type of word has the greatest difference in frequency of occurrence between MultiNLI and SNLI?",
+    "ground_truth": "Negation (PTB)",
+    "selected_figures": [
+      "1704.05426v4-Table4-1.png",
+      "1704.05426v4-Table1-1.png",
+      "1704.05426v4-Figure1-1.png",
+      "1704.05426v4-Table5-1.png",
+      "1704.05426v4-Table2-1.png"
+    ],
+    "answer": "The type of word that has the greatest difference in frequency of occurrence between MultiNLI and SNLI is \"the\". <s>"
+  },
+  "2": {
+    "question": "Which model performs better on the MultiNLI dataset when considering the percentage of individual labels that match the author's label?",
+    "ground_truth": "SNLI performs better than MultiNLI when considering the percentage of individual labels that match the author's label. SNLI has a score of 85.8%, while MultiNLI has a score of 85.2%.",
+    "selected_figures": [
+      "1704.05426v4-Table4-1.png",
+      "1704.05426v4-Table1-1.png",
+      "1704.05426v4-Figure1-1.png",
+      "1704.05426v4-Table2-1.png"
+    ],
+    "answer": "for MultiNLI, SNLI outperforms MultiNLI in terms of the percentage of individual labels that match the author's label. <s>"
+  },
+  "3": {
+    "question": "Which genre in the MultiNLI corpus has the highest percentage of sentences where the Stanford Parser produced a parse rooted with an 'S' (sentence) node, and how does this compare to the overall average for the corpus?",
+    "ground_truth": "The genre with the highest percentage of 'S' parses is **9/11**, with **99%** of its sentences receiving this parse. This is higher than the overall average for the MultiNLI corpus, which sits at **91%**.",
+    "selected_figures": [
+      "1704.05426v4-Table4-1.png",
+      "1704.05426v4-Table1-1.png",
+      "1704.05426v4-Figure1-1.png",
+      "1704.05426v4-Table2-1.png"
+    ],
+    "answer": "inalli corpus has the highest percentage of sentences where the Stanford Parser produced a parse rooted with an 'S' (sentence) node, and how does this compare to the overall average for the corpus? <s>"
+  },
+  "4": {
+    "question": "How does the performance of the ESIM model differ when trained on MNLI alone versus trained on both MNLI and SNLI combined?",
+    "ground_truth": "When trained on MNLI alone, the ESIM model achieves an accuracy of 60.7% on SNLI, 72.3% on matched genres in MNLI, and 72.1% on mismatched genres in MNLI. However, when trained on both MNLI and SNLI combined, the ESIM model's performance improves across all tasks, reaching 79.7% accuracy on SNLI, 72.4% on matched MNLI genres, and 71.9% on mismatched MNLI genres.",
+    "selected_figures": [
+      "1704.05426v4-Table4-1.png",
+      "1704.05426v4-Table1-1.png",
+      "1704.05426v4-Figure1-1.png",
+      "1704.05426v4-Table5-1.png",
+      "1704.05426v4-Table2-1.png"
+    ],
+    "answer": "? The performance of the ESIM model differs when trained on MNLI alone versus trained on both MNLI and SNLI combined. <s>"
+  }
+}

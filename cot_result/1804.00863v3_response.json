@@ -1,0 +1,104 @@
+{
+  "0": {
+    "question": "How does the appearance of the sphere differ between the re-synthesis using DAMs and the reference image?",
+    "ground_truth": "The sphere in the re-synthesis using DAMs appears to have a more even and consistent surface texture than the reference image.",
+    "selected_figures": [
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Table1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure5-1.png"
+    ],
+    "answer": "The appearance of the sphere differs significantly between the re-synthesis using DAMs and the reference image. <s>"
+  },
+  "1": {
+    "question": "Which method performs best for the \"Representation\" task when the view is \"Novel\"?",
+    "ground_truth": "The \"OUR\" method performs best for the \"Representation\" task when the view is \"Novel\".",
+    "selected_figures": [
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Table1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure5-1.png"
+    ],
+    "answer": "The method that performs best for the \"Representation\" task when the view is \"Novel\" is the \"Our DAMs produced by our learning-to-learn network.\" <s>"
+  },
+  "2": {
+    "question": "How do the reconstructions compare to the original samples?",
+    "ground_truth": "The reconstructions are very similar to the original samples.",
+    "selected_figures": [
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Table1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure11-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure5-1.png"
+    ],
+    "answer": "The reconstructions produced by the learning-to-learn network are generally more accurate than those produced by the first task, which simply maps from normal and view directions to RGB values using a neural network. The segmentation-and-estimation task, which maps an image to multiple DAMs and multiple segmentation networks, produces the most accurate reconstructions. <s>"
+  },
+  "3": {
+    "question": "What is the difference between the representation module and the learning-to-learn module?",
+    "ground_truth": "The representation module takes an input image and outputs a feature representation. The learning-to-learn module takes a set of features and learns how to segment the image.",
+    "selected_figures": [
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Table1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure5-1.png"
+    ],
+    "answer": "The representation module and the learning-to-learn module are two different architectures used in the paper \"Deep Appearance Maps\" to address different appearance processing tasks. The representation module is a neural network that maps an image to a DAM representation, while the learning-to-learn module is a network that maps an image to multiple DAMs and multiple segmentation networks. <s>"
+  },
+  "4": {
+    "question": "What is the difference between the representation task and the learning-to-learn task?",
+    "ground_truth": "The representation task takes an appearance as input and outputs an RGB value, while the learning-to-learn task takes an image as input and outputs a DAM representation.",
+    "selected_figures": [
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Table1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure5-1.png"
+    ],
+    "answer": "The representation task involves mapping an image from normal and view directions to RGB values using a neural network (NN), while the learning-to-learn task involves mapping an image to a deep appearance map (DAM) representation. <s>"
+  },
+  "5": {
+    "question": "What is the relationship between gloss and representation error?",
+    "ground_truth": "The representation error decreases as the gloss decreases.",
+    "selected_figures": [
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Table1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure5-1.png"
+    ],
+    "answer": "The relationship between gloss and representation error refers to the fact that a good representation of an object's appearance, such as a deep appearance map (DAM), should be able to capture the glossiness of the object. The lower the representation error, the more accurate the representation of the object's appearance, including its glossiness. In other words, the lower the representation error, the better the representation of the object's appearance, including its glossiness. <s>"
+  }
+}

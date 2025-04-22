@@ -1,0 +1,11 @@
+{
+  "0": {
+    "question": "Which model performs best when trained on the NYT dataset and evaluated on the WT14 dataset, and how does its performance compare to the baselines?",
+    "ground_truth": "The Conv-KNRM model performs best when trained on the NYT dataset and evaluated on the WT14 dataset, achieving an nDCG@20 score of 0.3215. This performance is significantly better than all the baselines: BM25 (B), WT10 (W), and AOL (A).",
+    "selected_figures": [
+      "1707.00189v3-Table2-1.png",
+      "1707.00189v3-Table1-1.png"
+    ],
+    "answer": "1707.00189v3-Table2-1.png: 1707.00189v3-Table1-1.png: 1707.00189v3-Table2-1.png: 1707.00189v3-Table1-1.png: 1707.00189v3-Table2-1.png: 1707.00189v3-Table1-1.png: 1"
+  }
+}

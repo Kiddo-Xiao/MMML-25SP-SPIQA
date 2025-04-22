@@ -1,0 +1,62 @@
+{
+  "0": {
+    "question": "Which method achieved the highest accuracy on the 45-tag Penn WSJ dataset, and how does its performance compare to the other methods?",
+    "ground_truth": "The Variational $\\wh{J}^{\\mathrm{var}}$ method achieved the highest accuracy of 78.1% on the 45-tag Penn WSJ dataset. This is significantly higher than all other methods listed in the table, with the next best performing method (Berg-Kirkpatrick et al., 2010) achieving an accuracy of 74.9%.",
+    "selected_figures": [
+      "1804.07849v4-Table1-1.png",
+      "1804.07849v4-Table2-1.png",
+      "1804.07849v4-Table4-1.png",
+      "1804.07849v4-Table3-1.png",
+      "1804.07849v4-Figure1-1.png"
+    ],
+    "answer": "1804.07849v4 achieved the highest accuracy on the 45-tag Penn WSJ dataset, with an average accuracy over 10 random restarts of 0.7849. 1804.07849v4 also outperformed the other methods in many-to-one accuracy (M2O) and the V-measure (VM) on the 12-tag universal treebank dataset. <s>"
+  },
+  "1": {
+    "question": "According to the ablation experiments, which factor contributes the most to the best model's performance compared to the baseline model?",
+    "ground_truth": "Morphological modeling with LSTMs contributes the most to the best model's performance compared to the baseline model.",
+    "selected_figures": [
+      "1804.07849v4-Table1-1.png",
+      "1804.07849v4-Table2-1.png",
+      "1804.07849v4-Table4-1.png",
+      "1804.07849v4-Table3-1.png",
+      "1804.07849v4-Figure1-1.png"
+    ],
+    "answer": "increasing the number of layers in the convolutional neural network (CNN) contributes the most to the best model's performance compared to the baseline model. <s>"
+  },
+  "2": {
+    "question": "Which method achieved the highest average V-measure (VM) across all languages, and how much higher was its average compared to the Baum-Welch method?",
+    "ground_truth": "The Variational $\\wh{J}^{\\mathrm{var}}$ method achieved the highest average VM score (50.4). Its average score is 39.6 points higher than the Baum-Welch method, which achieved an average VM score of 10.8.",
+    "selected_figures": [
+      "1804.07849v4-Table1-1.png",
+      "1804.07849v4-Table2-1.png",
+      "1804.07849v4-Table4-1.png",
+      "1804.07849v4-Table3-1.png",
+      "1804.07849v4-Figure1-1.png"
+    ],
+    "answer": "1804.07849v4 achieved the highest average V-measure (VM) across all languages, and it was significantly higher compared to the Baum-Welch method. <s>"
+  },
+  "3": {
+    "question": "Which method achieved the highest accuracy on the Italian language data set?",
+    "ground_truth": "Variational J^var (7)",
+    "selected_figures": [
+      "1804.07849v4-Table1-1.png",
+      "1804.07849v4-Table2-1.png",
+      "1804.07849v4-Table4-1.png",
+      "1804.07849v4-Table3-1.png",
+      "1804.07849v4-Figure1-1.png"
+    ],
+    "answer": "in 1804.07849v4-Table1-1.png <s>"
+  },
+  "4": {
+    "question": "What is the role of the BiLSTM in the architecture?",
+    "ground_truth": "The BiLSTM takes as input the character-level representations of the words and outputs a word-level representation for each word.",
+    "selected_figures": [
+      "1804.07849v4-Table1-1.png",
+      "1804.07849v4-Table2-1.png",
+      "1804.07849v4-Table4-1.png",
+      "1804.07849v4-Table3-1.png",
+      "1804.07849v4-Figure1-1.png"
+    ],
+    "answer": "The Bidirectional Long Short-Term Memory (BiLSTM) is a type of recurrent neural network (RNN) architecture that is commonly used in natural language processing (NLP) tasks such as language modeling, sentiment analysis, and speech recognition. The BiLSTM architecture is designed to capture both left-to-right and right-to-left contextual information in the input sequence, which makes it particularly useful for processing sequential data such as text. <s>"
+  }
+}

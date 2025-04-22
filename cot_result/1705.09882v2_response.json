@@ -1,0 +1,115 @@
+{
+  "0": {
+    "question": "Which method achieves the highest Top-1 Accuracy for multi-shot person re-identification on the BIWI dataset, and how does it compare to the best single-shot method on the same dataset?",
+    "ground_truth": "The proposed method with RTA attention achieves the highest Top-1 Accuracy for multi-shot person re-identification on the BIWI dataset with a score of 50.0%. This is significantly higher than the best single-shot method on the same dataset, which is our method (CNN) with a score of 25.4%.",
+    "selected_figures": [
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure1-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png",
+      "1705.09882v2-Figure2-1.png"
+    ],
+    "answer": "The method that achieves the highest Top-1 Accuracy for multi-shot person re-identification on the BIWI dataset is our framework, which outperforms the best single-shot method on the same dataset. <s>"
+  },
+  "1": {
+    "question": "How does the proposed split-rate RGB-to-Depth transfer scheme differ from the R3D [90] method of Yosinski et al.?",
+    "ground_truth": "The proposed split-rate RGB-to-Depth transfer scheme differs from the R3D [90] method in two ways. First, the proposed method uses a different learning rate for the bottom three layers of the network. Second, the proposed method uses a different initialization for the weights of the bottom three layers of the network.",
+    "selected_figures": [
+      "1705.09882v2-Figure3-1.png",
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure1-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png"
+    ],
+    "answer": "The proposed split-rate RGB-to-Depth transfer scheme differs from the R3D [90] method of Yosinski et al. in several ways:\n\n1. Architecture: The R3D method of Yosinski et al. is based on a convolutional neural network (CNN) architecture, while the proposed split-rate RGB-to-Depth transfer scheme utilizes a framework for person re-identification from RGB data.\n2. Loss function: The R3D method of Yosinski et al. uses a combination of"
+  },
+  "2": {
+    "question": "What is the difference between the grayscale depth representation and the result after background subtraction?",
+    "ground_truth": " The grayscale depth representation shows the depth of each pixel in the image, with darker pixels representing closer objects and lighter pixels representing further objects. The result after background subtraction shows only the foreground object, with the background removed.",
+    "selected_figures": [
+      "1705.09882v2-Figure3-1.png",
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure1-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png",
+      "1705.09882v2-Figure2-1.png"
+    ],
+    "answer": "The difference between the grayscale depth representation (Dg p) and the result after background subtraction (right) using the body index information Bp from skeleton tracking is that the grayscale depth representation shows the depth information of the person's body, while the result after background subtraction removes the background and highlights the person's silhouette. <s>"
+  },
+  "3": {
+    "question": "Which modality achieved the highest top-1 accuracy in the multi-shot evaluation on TUM-GAID?",
+    "ground_truth": "Body Depth & Head RGB (ms: LSTM & RTA)",
+    "selected_figures": [
+      "1705.09882v2-Figure3-1.png",
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png"
+    ],
+    "answer": "for the multi-shot evaluation on TUM-GAID, the RGB-to-Depth transfer achieved the highest top-1 accuracy. <s>"
+  },
+  "4": {
+    "question": "What is the relationship between the Bernoulli parameter and the image?",
+    "ground_truth": "The Bernoulli parameter is a measure of the probability of a pixel being foreground or background. The higher the Bernoulli parameter, the more likely the pixel is to be foreground. This is reflected in the images, where the pixels with higher Bernoulli parameters are more likely to be part of the person's silhouette.",
+    "selected_figures": [
+      "1705.09882v2-Figure3-1.png",
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure1-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png"
+    ],
+    "answer": "The relationship between the Bernoulli parameter and the image is that the Bernoulli parameter is used to predict the likelihood of an image belonging to a specific person. <s>"
+  },
+  "5": {
+    "question": "Which part of the model is responsible for deciding which frames are most important for the re-identification task?",
+    "ground_truth": "The Reinforced Temporal Attention (RTA) unit.",
+    "selected_figures": [
+      "1705.09882v2-Figure3-1.png",
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure1-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png"
+    ],
+    "answer": "The part of the model responsible for deciding which frames are most important for the re-identification task is the Residual Transfer Attention (RTA) unit. <s>"
+  },
+  "6": {
+    "question": "How does the performance of our RGB-to-Depth transfer compare to Yosinski et al. [90] in terms of top-1 accuracy on DPI-T when all layers are fine-tuned?",
+    "ground_truth": "The proposed RGB-to-Depth transfer performs slightly better than Yosinski et al. [90] in terms of top-1 accuracy on DPI-T when all layers are fine-tuned.",
+    "selected_figures": [
+      "1705.09882v2-Figure3-1.png",
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure1-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png",
+      "1705.09882v2-Figure2-1.png"
+    ],
+    "answer": "Our RGB-to-Depth transfer outperforms Yosinski et al. [90] in terms of top-1 accuracy on DPI-T when all layers are fine-tuned. <s>"
+  },
+  "7": {
+    "question": "What is the difference between the filter responses from the \u201cconv1\u201d, \u201cconv2\u201d and \u201cconv3\u201d layers for a given frame from the TUM GAID data using a framework for person re-identification from RGB and the feature embedding fCNN of a framework that utilizes depth data?",
+    "ground_truth": "The filter responses from the \u201cconv1\u201d, \u201cconv2\u201d and \u201cconv3\u201d layers for a given frame from the TUM GAID data using a framework for person re-identification from RGB are more detailed and contain more information than the filter responses from the fCNN of a framework that utilizes depth data. This is because RGB images contain more information than depth images.",
+    "selected_figures": [
+      "1705.09882v2-Figure5-1.png",
+      "1705.09882v2-Figure1-1.png",
+      "1705.09882v2-Figure7-1.png",
+      "1705.09882v2-Table2-1.png",
+      "1705.09882v2-Figure6-1.png",
+      "1705.09882v2-Table1-1.png",
+      "1705.09882v2-Figure2-1.png"
+    ],
+    "answer": "The difference between the filter responses from the \"conv1\", \"conv2\" and \"conv3\" layers for a given frame from the TUM GAID data using a framework for person re-identification from RGB and the feature embedding fCNN of a framework that utilizes depth data is that the RGB-based framework uses convolutional neural networks (CNNs) to extract features from color images, while the fCNN-based framework uses CNNs to extract features from depth images. <s>"
+  }
+}

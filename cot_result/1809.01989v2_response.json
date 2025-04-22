@@ -1,0 +1,11 @@
+{
+  "0": {
+    "question": "Which method achieved the highest tracking accuracy in terms of minimizing the sum of absolute percentage errors? Does this necessarily mean it had the best overall performance?",
+    "ground_truth": "The Ridge method achieved the lowest sum of absolute percentage errors (136.84), indicating the highest tracking accuracy in terms of minimizing absolute deviations from the index. However, this doesn't necessarily translate to the best overall performance.",
+    "selected_figures": [
+      "1809.01989v2-Table1-1.png",
+      "1809.01989v2-Figure1-1.png"
+    ],
+    "answer": "1809.01989v2-Table1-1.png: 1809.01989v2-Figure1-1.png: 1809.01989v2-Table1-1.png: 1809.01989v2-Figure1-1.png: 1809.01989v2-Table1-1.png: 1809.01989v2-Figure1-1.png"
+  }
+}

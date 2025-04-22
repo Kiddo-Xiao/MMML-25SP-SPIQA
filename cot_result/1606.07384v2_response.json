@@ -1,0 +1,20 @@
+{
+  "0": {
+    "question": "How does the performance of the Filtering algorithm compare to the performance of MLE with noise?",
+    "ground_truth": "The Filtering algorithm performs better than MLE with noise in both the random tree and random graph settings.",
+    "selected_figures": [
+      "1606.07384v2-Figure1-1.png",
+      "1606.07384v2-Figure2-1.png"
+    ],
+    "answer": ". The performance of the Filtering algorithm is generally better than the performance of MLE with noise, especially when the underlying structure of the Bayes net is a random graph. <s>"
+  },
+  "1": {
+    "question": "Which method performs the best when there is a high fraction of corrupted samples?",
+    "ground_truth": "RANSAC",
+    "selected_figures": [
+      "1606.07384v2-Figure1-1.png",
+      "1606.07384v2-Figure2-1.png"
+    ],
+    "answer": "ely, the method that performs the best when there is a high fraction of corrupted samples is the RANSAC (Random Sample Consensus) algorithm. <s>"
+  }
+}

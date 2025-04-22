@@ -1,0 +1,84 @@
+{
+  "0": {
+    "question": "What is the relationship between projection sparsity and normalized reconstruction error?",
+    "ground_truth": "The normalized reconstruction error decreases as the projection sparsity increases, up to a certain point. After that, the error starts to increase again.",
+    "selected_figures": [
+      "1706.08146v3-Figure5-1.png",
+      "1706.08146v3-Figure6-1.png",
+      "1706.08146v3-Figure1-1.png",
+      "1706.08146v3-Figure4-1.png",
+      "1706.08146v3-Table1-1.png",
+      "1706.08146v3-Figure2-1.png",
+      "1706.08146v3-Figure3-1.png"
+    ],
+    "answer": "The relationship between projection sparsity and normalized reconstruction error in NMF (Non-Negative Matrix Factorization) can be summarized as follows:\n\n1. Projection sparsity: This refers to the proportion of non-zero entries in the projected matrix PW, which is used for sparse recovery in NMF. The higher the proportion of non-zero entries, the easier it is to recover accurate factors from the compressed data.\n2. Normalized reconstruction error: This measures the difference between the original matrix M and the reconstructed matrix W\u0302,"
+  },
+  "1": {
+    "question": "What is the relationship between compression factor and reconstruction error?",
+    "ground_truth": "The reconstruction error increases as the compression factor increases.",
+    "selected_figures": [
+      "1706.08146v3-Figure5-1.png",
+      "1706.08146v3-Figure6-1.png",
+      "1706.08146v3-Figure1-1.png",
+      "1706.08146v3-Figure4-1.png",
+      "1706.08146v3-Table1-1.png",
+      "1706.08146v3-Figure2-1.png",
+      "1706.08146v3-Figure3-1.png"
+    ],
+    "answer": "The relationship between compression factor and reconstruction error in sparse PCA and NMF on synthetic data with varying column sparsity k of W and projection dimension d is shown in the images provided. In general, increasing the compression factor from 10x to 5x to 2.5x results in a decrease in the reconstruction error for both sparse PCA and NMF, as shown in Figure 2-1 and Figure 3-1, respectively. \n\nHowever, there is a point of diminishing returns where further compression does not significantly improve the reconstruction error. This"
+  },
+  "2": {
+    "question": "What are the three steps involved in compressed matrix factorization?",
+    "ground_truth": "The three steps involved in compressed matrix factorization are: \n\n1. Compress the full data matrix M to obtain a compressed matrix M\u0303. \n2. Factorize M\u0303 to obtain matrices W\u0303 and H\u0303. \n3. Approximate the left factor of M via sparse recovery on each column of W\u0303.",
+    "selected_figures": [
+      "1706.08146v3-Figure5-1.png",
+      "1706.08146v3-Figure6-1.png",
+      "1706.08146v3-Figure1-1.png",
+      "1706.08146v3-Figure4-1.png",
+      "1706.08146v3-Table1-1.png",
+      "1706.08146v3-Figure2-1.png",
+      "1706.08146v3-Figure3-1.png"
+    ],
+    "answer": "The three steps involved in compressed matrix factorization are as follows:\n\n1. Factorization: The first step is to factorize the compressed data matrix into two low-rank matrices. This is typically done using the Singular Value Decomposition (SVD) algorithm.\n2. Sparse Recovery: The second step is to perform sparse recovery on the factors obtained from the factorization process. This involves recovering the original data matrix from the low-rank approximations of the factors.\n3. Reconstruction: The final step is to reconstruct the original data matrix from the recovered factors"
+  },
+  "3": {
+    "question": "Which dataset would likely benefit the most from using the Fac.-Recover approach instead of Recover-Fac. in terms of computational efficiency?",
+    "ground_truth": "The Leukemia dataset would likely benefit the most from using the Fac.-Recover approach.",
+    "selected_figures": [
+      "1706.08146v3-Figure5-1.png",
+      "1706.08146v3-Figure6-1.png",
+      "1706.08146v3-Figure1-1.png",
+      "1706.08146v3-Figure4-1.png",
+      "1706.08146v3-Table1-1.png"
+    ],
+    "answer": ". The dataset that would likely benefit the most from using the Fac.-Recover approach instead of Recover-Fac. in terms of computational efficiency would be the dataset with a smaller number of samples. <s>"
+  },
+  "4": {
+    "question": "What is the effect of increasing the projection dimension d on the approximation error for sparse PCA and NMF?",
+    "ground_truth": "Increasing the projection dimension d decreases the approximation error for both sparse PCA and NMF.",
+    "selected_figures": [
+      "1706.08146v3-Figure5-1.png",
+      "1706.08146v3-Figure6-1.png",
+      "1706.08146v3-Figure1-1.png",
+      "1706.08146v3-Figure4-1.png",
+      "1706.08146v3-Table1-1.png",
+      "1706.08146v3-Figure2-1.png",
+      "1706.08146v3-Figure3-1.png"
+    ],
+    "answer": "The approximation error for sparse PCA and NMF on synthetic data with varying column sparsity k of W and projection dimension d decreases as d increases. <s>"
+  },
+  "5": {
+    "question": "Which method achieves lower approximation error when the compression factor is greater than 3?",
+    "ground_truth": "Factorize-Recover",
+    "selected_figures": [
+      "1706.08146v3-Figure5-1.png",
+      "1706.08146v3-Figure6-1.png",
+      "1706.08146v3-Figure1-1.png",
+      "1706.08146v3-Figure4-1.png",
+      "1706.08146v3-Table1-1.png",
+      "1706.08146v3-Figure2-1.png",
+      "1706.08146v3-Figure3-1.png"
+    ],
+    "answer": "The method that achieves lower approximation error when the compression factor is greater than 3 is Factorize-Recover (FR). <s>"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "0": {
+    "question": "Which algorithm has the highest percentage of switched instances?",
+    "ground_truth": "US-HC-MQ",
+    "selected_figures": [
+      "1805.04609v3-Figure1-1.png",
+      "1805.04609v3-Figure3-1.png",
+      "1805.04609v3-Figure2-1.png"
+    ],
+    "answer": "1805.04609v3-Figure3-1.png <s>"
+  },
+  "1": {
+    "question": "How does the accuracy of the US-BS-MQ method compare to that of the S-MQ method when adding SST examples?",
+    "ground_truth": "The US-BS-MQ method achieves higher accuracy than the S-MQ method when adding SST examples.",
+    "selected_figures": [
+      "1805.04609v3-Figure1-1.png",
+      "1805.04609v3-Figure3-1.png",
+      "1805.04609v3-Figure2-1.png"
+    ],
+    "answer": "1805.04609v3-Figure3-1.png: The US-BS-MQ method is more accurate than the S-MQ method when adding SST examples. <s>"
+  }
+}

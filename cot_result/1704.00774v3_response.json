@@ -1,0 +1,11 @@
+{
+  "0": {
+    "question": "What is the effect of increasing K on the test PPL of the different models?",
+    "ground_truth": "The test PPL of all the models decreases as K increases.",
+    "selected_figures": [
+      "1704.00774v3-Figure1-1.png",
+      "1704.00774v3-Table1-1.png"
+    ],
+    "answer": "1704.00774v3-Figure1-1.png: The test PPL of the r-RNTNs with f mapping increases slightly as K increases from 100 to 10000, while the test PPL of the s-RNNs and m-RNNs decreases slightly as K increases from 100 to 10000. <s>"
+  }
+}

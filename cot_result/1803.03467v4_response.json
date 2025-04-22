@@ -1,0 +1,145 @@
+{
+  "0": {
+    "question": "Which dataset has the most 4-hop triples?",
+    "ground_truth": "Bing-News.",
+    "selected_figures": [
+      "1803.03467v4-Figure1-1.png",
+      "1803.03467v4-Table1-1.png",
+      "1803.03467v4-Table2-1.png",
+      "1803.03467v4-Figure4-1.png",
+      "1803.03467v4-Figure5-1.png",
+      "1803.03467v4-Figure6-1.png",
+      "1803.03467v4-Table3-1.png",
+      "1803.03467v4-Figure7-1.png",
+      "1803.03467v4-Figure2-1.png",
+      "1803.03467v4-Table4-1.png",
+      "1803.03467v4-Table5-1.png",
+      "1803.03467v4-Figure8-1.png",
+      "1803.03467v4-Figure9-1.png"
+    ],
+    "answer": "Book-Crossing has the most 4-hop triples. <s>"
+  },
+  "1": {
+    "question": "How does the number of common k-hop neighbors change as the hop distance increases for items with and without common raters?",
+    "ground_truth": "The number of common k-hop neighbors generally decreases as the hop distance increases for both items with and without common raters. However, the number of common k-hop neighbors is consistently higher for items with common raters than for items without common raters.",
+    "selected_figures": [
+      "1803.03467v4-Figure1-1.png",
+      "1803.03467v4-Table1-1.png",
+      "1803.03467v4-Table2-1.png",
+      "1803.03467v4-Figure4-1.png",
+      "1803.03467v4-Figure5-1.png",
+      "1803.03467v4-Figure6-1.png",
+      "1803.03467v4-Table3-1.png",
+      "1803.03467v4-Figure7-1.png",
+      "1803.03467v4-Figure2-1.png",
+      "1803.03467v4-Figure3-1.png",
+      "1803.03467v4-Table4-1.png",
+      "1803.03467v4-Table5-1.png",
+      "1803.03467v4-Figure8-1.png",
+      "1803.03467v4-Figure9-1.png"
+    ],
+    "answer": "The number of common k-hop neighbors decreases as the hop distance increases for items with common raters, while it increases for items without common raters. <s>"
+  },
+  "2": {
+    "question": "Which model performs the best in terms of AUC on the MovieLens-1M dataset?",
+    "ground_truth": "RippleNet*",
+    "selected_figures": [
+      "1803.03467v4-Figure1-1.png",
+      "1803.03467v4-Table1-1.png",
+      "1803.03467v4-Table2-1.png",
+      "1803.03467v4-Figure4-1.png",
+      "1803.03467v4-Figure5-1.png",
+      "1803.03467v4-Figure6-1.png",
+      "1803.03467v4-Table3-1.png",
+      "1803.03467v4-Figure7-1.png",
+      "1803.03467v4-Figure2-1.png",
+      "1803.03467v4-Table4-1.png",
+      "1803.03467v4-Table5-1.png",
+      "1803.03467v4-Figure8-1.png",
+      "1803.03467v4-Figure9-1.png"
+    ],
+    "answer": "The RippleNet model performs the best in terms of AUC on the MovieLens-1M dataset. <s>"
+  },
+  "3": {
+    "question": "What is the role of the ripple sets in the RippleNet framework?",
+    "ground_truth": "The ripple sets are used to propagate a user's preferences from his or her click history to his or her relevant entities.",
+    "selected_figures": [
+      "1803.03467v4-Figure1-1.png",
+      "1803.03467v4-Table1-1.png",
+      "1803.03467v4-Table2-1.png",
+      "1803.03467v4-Figure4-1.png",
+      "1803.03467v4-Figure5-1.png",
+      "1803.03467v4-Figure6-1.png",
+      "1803.03467v4-Table3-1.png",
+      "1803.03467v4-Figure7-1.png",
+      "1803.03467v4-Figure2-1.png",
+      "1803.03467v4-Table4-1.png",
+      "1803.03467v4-Table5-1.png",
+      "1803.03467v4-Figure8-1.png",
+      "1803.03467v4-Figure9-1.png"
+    ],
+    "answer": "The ripple sets play a crucial role in the RippleNet framework by determining the relevance between a user and an item. <s>"
+  },
+  "4": {
+    "question": "What is the relationship between the movies \"Forrest Gump\" and \"Cast Away\"?",
+    "ground_truth": "The movies \"Forrest Gump\" and \"Cast Away\" are connected by the actor Tom Hanks.",
+    "selected_figures": [
+      "1803.03467v4-Figure1-1.png",
+      "1803.03467v4-Table1-1.png",
+      "1803.03467v4-Table2-1.png",
+      "1803.03467v4-Figure4-1.png",
+      "1803.03467v4-Figure5-1.png",
+      "1803.03467v4-Figure6-1.png",
+      "1803.03467v4-Table3-1.png",
+      "1803.03467v4-Figure7-1.png",
+      "1803.03467v4-Figure2-1.png",
+      "1803.03467v4-Figure3-1.png",
+      "1803.03467v4-Table4-1.png",
+      "1803.03467v4-Table5-1.png",
+      "1803.03467v4-Figure8-1.png",
+      "1803.03467v4-Figure9-1.png"
+    ],
+    "answer": "The movies \"Forrest Gump\" and \"Cast Away\" are not directly related to each other. \"Forrest Gump\" is a 1994 American romantic comedy-drama film based on the 1986 novel of the same name by Winston Groom. \"Cast Away\" is a 2000 American romantic drama film directed by Robert Zemeckis and starring Tom Hanks and Helen Hunt. <s>"
+  },
+  "5": {
+    "question": "Which dataset has the highest AUC for all ripple set sizes?",
+    "ground_truth": "MovieLens-1M",
+    "selected_figures": [
+      "1803.03467v4-Figure1-1.png",
+      "1803.03467v4-Table1-1.png",
+      "1803.03467v4-Table2-1.png",
+      "1803.03467v4-Figure4-1.png",
+      "1803.03467v4-Figure5-1.png",
+      "1803.03467v4-Figure6-1.png",
+      "1803.03467v4-Table3-1.png",
+      "1803.03467v4-Figure7-1.png",
+      "1803.03467v4-Figure2-1.png",
+      "1803.03467v4-Table4-1.png",
+      "1803.03467v4-Table5-1.png",
+      "1803.03467v4-Figure8-1.png",
+      "1803.03467v4-Figure9-1.png"
+    ],
+    "answer": "Book-Crossing has the highest AUC for all ripple set sizes. <s>"
+  },
+  "6": {
+    "question": "How does the dimension of embedding affect the AUC of RippleNet on MovieLens-1M?",
+    "ground_truth": "The AUC of RippleNet first increases and then decreases with the increase of the dimension of embedding.",
+    "selected_figures": [
+      "1803.03467v4-Figure1-1.png",
+      "1803.03467v4-Table1-1.png",
+      "1803.03467v4-Table2-1.png",
+      "1803.03467v4-Figure4-1.png",
+      "1803.03467v4-Figure5-1.png",
+      "1803.03467v4-Figure6-1.png",
+      "1803.03467v4-Table3-1.png",
+      "1803.03467v4-Figure7-1.png",
+      "1803.03467v4-Figure2-1.png",
+      "1803.03467v4-Figure3-1.png",
+      "1803.03467v4-Table4-1.png",
+      "1803.03467v4-Table5-1.png",
+      "1803.03467v4-Figure8-1.png",
+      "1803.03467v4-Figure9-1.png"
+    ],
+    "answer": "The dimension of the embedding affects the AUC of RippleNet on MovieLens-1M. <s>"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "0": {
+    "question": "Which policy learning method achieved the lowest regret in Ex. 2?",
+    "ground_truth": "The DR-SVM method achieved the lowest regret in Ex. 2, with a regret of 0.18.",
+    "selected_figures": [
+      "1705.07384v2-Figure2-1.png",
+      "1705.07384v2-Table2-1.png"
+    ],
+    "answer": "1705.07384v2-Figure2-1 1705.07384v2-Table2-1 1705.07384v2-Figure2-2 1705.07384v2-Table2-2 1705.07384v2-Figure2-3 1705.07384v2-Table2-3 1705.07384v2-Figure2"
+  }
+}

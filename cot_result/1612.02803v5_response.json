@@ -1,0 +1,12 @@
+{
+  "0": {
+    "question": "What is the equation that describes the motion of a mass attached to a spring?",
+    "ground_truth": "The equation that describes the motion of a mass attached to a spring is:\n```\nm d^2 X / dt^2 + kX = 0\n```\nwhere:\n* m is the mass of the object\n* X is the displacement of the object from its equilibrium position\n* k is the spring constant\n* t is time",
+    "selected_figures": [
+      "1612.02803v5-Table1-1.png",
+      "1612.02803v5-Figure1-1.png",
+      "1612.02803v5-Figure2-1.png"
+    ],
+    "answer": "1612.02803v5-Table1-1.png 1612.02803v5-Figure1-1.png 1612.02803v5-Figure2-1.png 1612.02803v5-Table1-1.png 1612.02803v5-Figure1-1.png 1612.02803v5-Figure2-1.png <s>"
+  }
+}

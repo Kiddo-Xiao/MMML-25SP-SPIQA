@@ -1,0 +1,144 @@
+{
+  "0": {
+    "question": "Which network architecture has the highest accuracy on the CIFAR-10 dataset?",
+    "ground_truth": "DMRNet-Wide",
+    "selected_figures": [
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "ResNet-101 has the highest accuracy on the CIFAR-10 dataset. <s>"
+  },
+  "1": {
+    "question": "What is the difference between a deep residual network and a network built by stacking inception-like blocks?",
+    "ground_truth": "Deep residual networks have skip connections that allow the gradient to flow directly from one layer to another, while networks built by stacking inception-like blocks do not.",
+    "selected_figures": [
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Figure2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure4-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "The main difference between a deep residual network (ResNet) and a network built by stacking inception-like blocks (DFN-MR) lies in the architecture of their convolutional layers.\n\nA ResNet is a type of convolutional neural network (CNN) architecture that uses a combination of skip connections and residual layers to improve the training stability and accuracy of the model. Residual layers are used to \"rescue\" the model from the vanishing gradient problem, which occurs when the depth of the network increases and the gradients become too small to effectively update the model's weights"
+  },
+  "2": {
+    "question": "What is the difference between the residual block and the merge-and-run block?",
+    "ground_truth": "The residual block assembles two residual branches sequentially, while the merge-and-run block assembles the same two residual branches in parallel.",
+    "selected_figures": [
+      "1611.07718v2-Figure1-1.png",
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Figure2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure4-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "The main difference between the residual block and the merge-and-run block is the architecture of their convolutional layers. The residual block has two convolutional layers, while the merge-and-run block has four convolutional layers. <s>"
+  },
+  "3": {
+    "question": "How does the training loss of DMRNet compare to that of ResNet on the CIFAR-10 dataset with L = 30?",
+    "ground_truth": "The training loss of DMRNet is lower than that of ResNet on the CIFAR-10 dataset with L = 30.",
+    "selected_figures": [
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Figure2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure4-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "The training loss of DMRNet is better than that of ResNet on the CIFAR-10 dataset with L = 30. <s>"
+  },
+  "4": {
+    "question": "Which network has the shortest average path length when L = 9?",
+    "ground_truth": "DMRNet",
+    "selected_figures": [
+      "1611.07718v2-Figure1-1.png",
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Figure2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "The network with the shortest average path length when L = 9 is ResNet-101. <s>"
+  },
+  "5": {
+    "question": "Which model has the lowest Top-1 validation error on ImageNet?",
+    "ground_truth": "ResNet-101 from the reference paper reports top-1 validation error of 23.60 which is lower than ResNet-101 reevaluated (26.41) and DMRNet (23.66)",
+    "selected_figures": [
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "Our DFN-MR model has the lowest Top-1 validation error on ImageNet, with 43.3 million parameters compared to ResNet-101's 44.5 million parameters. <s>"
+  },
+  "6": {
+    "question": "Does sharing the first convolutional layer and the last fully connected layer improve the accuracy of the merge-and-run mapping?",
+    "ground_truth": "Yes.",
+    "selected_figures": [
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Figure2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure4-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "Yes, sharing the first convolutional layer and the last fully connected layer improves the accuracy of the merge-and-run mapping. <s>"
+  },
+  "7": {
+    "question": "How does the classification error of a residual network change as the average path length increases?",
+    "ground_truth": "The classification error of a residual network generally increases as the average path length increases.",
+    "selected_figures": [
+      "1611.07718v2-Figure1-1.png",
+      "1611.07718v2-Table2-1.png",
+      "1611.07718v2-Figure2-1.png",
+      "1611.07718v2-Table3-1.png",
+      "1611.07718v2-Figure7-1.png",
+      "1611.07718v2-Figure3-1.png",
+      "1611.07718v2-Table4-1.png",
+      "1611.07718v2-Table5-1.png",
+      "1611.07718v2-Figure8-1.png",
+      "1611.07718v2-Figure4-1.png",
+      "1611.07718v2-Figure5-1.png",
+      "1611.07718v2-Figure6-1.png"
+    ],
+    "answer": "The classification error of a residual network increases as the average path length increases. <s>"
+  }
+}

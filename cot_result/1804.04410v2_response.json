@@ -1,0 +1,32 @@
+{
+  "0": {
+    "question": "How are documents ranked and pruned in the telescoping architecture?",
+    "ground_truth": "Documents are first matched using a pre-defined match plan. Then, they are passed through additional rank-and-prune stages, which are implemented as a cascade of machine learning models.",
+    "selected_figures": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "answer": "etags are used to rank and prune documents in the telescoping architecture, which is employed in Bing's retrieval system. The documents are scanned using a pre-defined match plan, and matched documents are passed through additional rank-and-prune stages. <s>"
+  },
+  "1": {
+    "question": "How does the RL policy compare to the baseline in terms of index blocks accessed?",
+    "ground_truth": "The RL policy accesses fewer index blocks than the baseline.",
+    "selected_figures": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "answer": "eline in terms of index blocks accessed? The RL policy significantly reduces the number of index blocks accessed compared to the baseline. <s>"
+  },
+  "2": {
+    "question": "How does the performance of the learned policy compare to the production baseline for CAT2 queries in terms of relevance and efficiency?",
+    "ground_truth": "For CAT2 queries, the learned policy shows a slight improvement in relevance (NCG) for the weighted set and a significant reduction in index blocks accessed for both weighted and unweighted sets.",
+    "selected_figures": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "answer": "eline for CAT2 queries in terms of relevance and efficiency? <s>"
+  }
+}

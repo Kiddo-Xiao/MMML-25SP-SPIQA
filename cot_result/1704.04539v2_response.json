@@ -1,0 +1,49 @@
+{
+  "0": {
+    "question": "What is the relationship between the Silver Snatch and the Gold Snatch?",
+    "ground_truth": "The Silver Snatch and the Gold Snatch are positively correlated. As the Gold Snatch increases, the Silver Snatch also increases.",
+    "selected_figures": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure4-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "answer": "| The relationship between the Silver Snatch and the Gold Snatch is not specified in the question. <s>"
+  },
+  "1": {
+    "question": "Which system performs best on the IT domain in terms of full-cycle Smatch score, and how does its performance compare to the projection-based system in the same domain?",
+    "ground_truth": "The GT system achieves the highest full-cycle Smatch score in the IT domain with a score of 59. This is 14 points higher than the projection-based system in the same domain, which scored 45.",
+    "selected_figures": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure4-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "answer": "system Moses performs best on the IT domain in terms of full-cycle Smatch score, and it outperforms the projection-based system in the same domain. <s>"
+  },
+  "2": {
+    "question": "Which translation system performs the best and how does its performance compare to Google Translate (GT)? Is the comparison with GT completely fair? Explain your answer.",
+    "ground_truth": "According to Table 2, Moses achieves the highest BLEU scores among the listed translation systems (Moses, Nematus) across all language pairs. However, its performance still falls behind Google Translate (GT) in every case.\n\nThe comparison with GT might not be entirely fair because, as GT has the advantage of being trained on a significantly larger dataset. This suggests that GT's performance advantage might be partially due to its training data rather than solely its inherent capabilities.",
+    "selected_figures": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "answer": "1704.04539v2-Table2-1.png: Nematus outperforms Google Translate (GT) on the LDC2015E86 test set by a significant margin. <s>"
+  },
+  "3": {
+    "question": "What is the difference between the parsing trees for \"I like eating\" and \"I like grapes\"?",
+    "ground_truth": "The parsing tree for \"I like eating\" has only one argument, while the parsing tree for \"I like grapes\" has two arguments.",
+    "selected_figures": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure4-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "answer": "The difference between the parsing trees for \"I like eating\" and \"I like grapes\" is that \"I like eating\" has a subject-verb-object (SVO) structure, while \"I like grapes\" has a subject-verb-object-adverbial (SVOA) structure. <s>"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "0": {
+    "question": "What is the relationship between position and click-through rate (CTR)?",
+    "ground_truth": "The relationship between position and CTR is complex and non-linear. In general, CTR decreases as position increases, but there are also local peaks and valleys in the CTR curve. This suggests that there are other factors besides position that affect CTR.",
+    "selected_figures": [
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Figure1-1.png",
+      "1809.03149v2-Figure4-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Figure5-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure7-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Figure2-1.png"
+    ],
+    "answer": "The relationship between position and click-through rate (CTR) is that the higher the position, the higher the click-through rate. <s>"
+  },
+  "1": {
+    "question": "How does the advertising rate for the \"Fix\" curve compare to the \"Oracle\" curve at hour 14?",
+    "ground_truth": "The advertising rate for the \"Fix\" curve is lower than the \"Oracle\" curve at hour 14.",
+    "selected_figures": [
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Figure1-1.png",
+      "1809.03149v2-Figure4-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Figure5-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure7-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Figure2-1.png"
+    ],
+    "answer": "The advertising rate for the \"Fix\" curve is higher than the \"Oracle\" curve at hour 14. <s>"
+  },
+  "2": {
+    "question": "What is the role of the Higher Level Policy in the framework?",
+    "ground_truth": "The Higher Level Policy sets constraints for the next sub-trajectory and provides information about the previous stage to the Lower Level Policy.",
+    "selected_figures": [
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Figure1-1.png",
+      "1809.03149v2-Figure4-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Figure5-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure7-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Figure2-1.png"
+    ],
+    "answer": "The Higher Level Policy (HLP) in the framework is responsible for determining the optimal advertising rate for each hour of the day. <s>"
+  },
+  "3": {
+    "question": "How does the advertising system select the best items to show to the user?",
+    "ground_truth": "The advertising system selects the best items to show to the user by first generating a candidate set of items from the recommender system. This candidate set is then shuffled and sorted by their score, which is determined by the network. The network takes into account the features of the items and the scoring factors, which are likely based on the user's past behavior and preferences.",
+    "selected_figures": [
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Figure1-1.png",
+      "1809.03149v2-Figure4-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Figure5-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure7-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Figure2-1.png"
+    ],
+    "answer": "The advertising system selects the best items to show to the user based on a learning algorithm called Deep Deterministic Policy Gradients (DDPG). The DDPG algorithm is a type of reinforcement learning algorithm, which means it learns by interacting with its environment and receiving feedback in the form of rewards or penalties. In this case, the advertising system receives feedback in the form of click-through rates (CTRs), which are the percentage of users who click on an advertisement out of the total number of users who see it. The DDPG algorithm uses this"
+  },
+  "4": {
+    "question": "What is the effect of using CHER on the percentage of ads displayed for each user?",
+    "ground_truth": "The percentage of ads displayed for each user is higher when CHER is used.",
+    "selected_figures": [
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Figure1-1.png",
+      "1809.03149v2-Figure4-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Figure5-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure7-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Figure2-1.png"
+    ],
+    "answer": "The effect of using CHER on the percentage of ads displayed for each user is not specified in the image. <s>"
+  }
+}

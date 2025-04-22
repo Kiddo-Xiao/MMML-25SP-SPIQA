@@ -1,0 +1,15 @@
+{
+  "0": {
+    "question": "What is the role of the GDU and HFLU modules in the FAKEDETECTOR framework?",
+    "ground_truth": "The GDU (Gated Dilated Unit) modules are responsible for extracting features from the input data, while the HFLU (Hybrid Feature Learning Unit) modules are responsible for fusing the features extracted by the GDU modules.",
+    "selected_figures": [
+      "1805.08751v2-Figure3-1.png",
+      "1805.08751v2-Figure4-1.png",
+      "1805.08751v2-Figure5-1.png",
+      "1805.08751v2-TableI-1.png",
+      "1805.08751v2-Figure6-1.png",
+      "1805.08751v2-Figure2-1.png"
+    ],
+    "answer": "in the FAKEDETECTOR framework, the Gated Diffusive Unit (GDU) and the Hybrid Feature Learning Unit (HFLU) modules are used to model the relationships between articles, creators, and subjects. <s>"
+  }
+}

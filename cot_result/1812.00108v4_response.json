@@ -1,0 +1,38 @@
+{
+  "0": {
+    "question": "How does the Multi-DPP module increase diversity within the selected time-steps?",
+    "ground_truth": "The Multi-DPP module increases diversity within the selected time-steps by using a determinantal point process (DPP) to select a subset of diverse time-steps from the input sequence.",
+    "selected_figures": [
+      "1812.00108v4-Figure2-1.png",
+      "1812.00108v4-Table3-1.png",
+      "1812.00108v4-Table2-1.png",
+      "1812.00108v4-Table1-1.png",
+      "1812.00108v4-Figure1-1.png"
+    ],
+    "answer": "The Multi-DPP module increases diversity within the selected time-steps by dynamically accounting for inter- and intra-view dependencies, providing a comprehensive summary of all views. <s>"
+  },
+  "1": {
+    "question": "How does the performance of the model change as the number of views increases?",
+    "ground_truth": "The performance of the model generally improves as the number of views increases. For example, when the model is trained and tested on two-view data, the F1-score is 29.67. However, when the model is trained and tested on three-view data, the F1-score increases to 30.2. This suggests that the model is able to learn more effectively from data with more views.",
+    "selected_figures": [
+      "1812.00108v4-Figure2-1.png",
+      "1812.00108v4-Table3-1.png",
+      "1812.00108v4-Table2-1.png",
+      "1812.00108v4-Table1-1.png",
+      "1812.00108v4-Figure1-1.png"
+    ],
+    "answer": "The performance of the model improves as the number of views increases. <s>"
+  },
+  "2": {
+    "question": "Which method achieved the highest F1 score on the Lobby dataset?",
+    "ground_truth": "Ours-supervised achieved the highest F1 score on the Lobby dataset with a score of 93.4.",
+    "selected_figures": [
+      "1812.00108v4-Figure2-1.png",
+      "1812.00108v4-Table3-1.png",
+      "1812.00108v4-Table2-1.png",
+      "1812.00108v4-Table1-1.png",
+      "1812.00108v4-Figure1-1.png"
+    ],
+    "answer": "The method that achieved the highest F1 score on the Lobby dataset is Multi-Ego. <s>"
+  }
+}

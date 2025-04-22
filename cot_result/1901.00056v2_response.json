@@ -1,0 +1,114 @@
+{
+  "0": {
+    "question": "What is the range of values for the context number hyperparameter?",
+    "ground_truth": "The range of values for the context number hyperparameter is from 1 to 20.",
+    "selected_figures": [
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "answer": "for the context number hyperparameter in SYNONYMNET, the range of values is from 1 to 10. <s>"
+  },
+  "1": {
+    "question": "What is the effect of increasing the margin on the AUC and MAP values?",
+    "ground_truth": "The AUC and MAP values initially increase with increasing margin, but then decrease after a certain point.",
+    "selected_figures": [
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "answer": ", The effect of increasing the margin on the AUC and MAP values depends on the specific model and dataset being used. In some cases, increasing the margin may improve the model's performance, while in others, it may negatively impact the results. <s>"
+  },
+  "2": {
+    "question": "Which model and training objective combination performs best on the PubMed + UMLS dataset, and how does it compare to the DPE baseline?",
+    "ground_truth": "The SYNONYMNET(Pairwise) model with Leaky Unit performs best on the PubMed + UMLS dataset, achieving an AUC of 0.9838 and a MAP of 0.9872. This is a statistically significant improvement over the DPE baseline, which achieved an AUC of 0.9513 and a MAP of 0.9623.",
+    "selected_figures": [
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "answer": "of the SYNONYMNET model, which uses bilateral matching with leaky units to minimize the loss calculated using multiple pieces of contexts, performs best on the PubMed + UMLS dataset, and how does it compare to the DPE baseline? <s>"
+  },
+  "3": {
+    "question": "Which dataset has the most entities?",
+    "ground_truth": "MedBook + MKG",
+    "selected_figures": [
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "answer": "1901.00056v2-Table2-1.png: Table 2: Test performance in AUC and MAP on three datasets. 1901.00056v2-Figure1-1.png: Overview of the proposed model SYNONYMNET. The diamonds are entities. Each circle is associated with a piece of context in which an entity appears. SYNONYMNET learns to minimize the loss calculated using multiple pieces of contexts via bilateral matching with leaky units. <s>"
+  },
+  "4": {
+    "question": "What are the four steps involved in the synonym discovery process using {\\modelname}?",
+    "ground_truth": " The four steps involved in the synonym discovery process are: \n\n1. **Entity representation learning:** Learn entity representations from the corpus using WEMBED.\n2. **NN search:** Perform a nearest neighbor search to find candidate entities for the query entity.\n3. **Synonym score calculation:** Calculate the synonym score between the query entity and each candidate entity using SYNONYM NET.\n4. **Synonym entity discovery:** Select the candidate entities with the highest synonym scores as the discovered synonym entities.",
+    "selected_figures": [
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "answer": ", The four steps involved in the synonym discovery process using SYNONYMNET are: 1. Inference phase, 2. Bilateral matching with leaky units, 3. Synonym discovery during the inference phase with SYNONYMNET, 4. Candidate entities retrieved using nearest neighbors on Word2vec or the discovered synonym entities using SYNONYMNET for UNGA. <s>"
+  },
+  "5": {
+    "question": "What is the role of the Leaky Unit in the SYNONYMNET model?",
+    "ground_truth": "The Leaky Unit helps to aggregate the context information from different sources and allows the model to learn the relationships between entities and their contexts.",
+    "selected_figures": [
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "answer": "The role of the Leaky Unit in the SYNONYMNET model is to learn to minimize the loss calculated using multiple pieces of contexts via bilateral matching with leaky units. <s>"
+  },
+  "6": {
+    "question": "Which dataset and evaluation metric combination shows the largest performance gap between the best performing model and the baseline model DPE?",
+    "ground_truth": "The largest performance gap is observed in the PubMed + UMLS dataset using the F1@K metric with K=1.",
+    "selected_figures": [
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "answer": "1901.00056v2-Table2-1.png: The dataset and evaluation metric combination that shows the largest performance gap between the best performing model (SYNONYMNET) and the baseline model (DPE) is UNGA. <s>"
+  }
+}

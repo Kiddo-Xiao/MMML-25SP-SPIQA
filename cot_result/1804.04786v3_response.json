@@ -1,0 +1,40 @@
+{
+  "0": {
+    "question": "What is the purpose of the audio encoder in the proposed conditional recurrent adversarial video generation network structure?",
+    "ground_truth": "The audio encoder extracts audio features from the MFCC features of each audio segment.",
+    "selected_figures": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure1-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Figure6-1.png",
+      "1804.04786v3-Figure4-1.png",
+      "1804.04786v3-Figure5-1.png",
+      "1804.04786v3-Table1-1.png"
+    ],
+    "answer": "The purpose of the audio encoder in the proposed conditional recurrent adversarial video generation network structure is to convert the audio input into a numerical representation that can be fed into the recurrent neural network (RNN) for generating the video frames. <s>"
+  },
+  "1": {
+    "question": "Which loss function combination is most important for generating realistic mouth movements?",
+    "ground_truth": "The combination of Lrec, LI, and LV is most important for generating realistic mouth movements.",
+    "selected_figures": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Table1-1.png"
+    ],
+    "answer": "etting the right combination of loss functions is crucial for generating realistic mouth movements in the proposed conditional recurrent adversarial video generation network. <s>"
+  },
+  "2": {
+    "question": "What is the difference between the sequential and recurrent generation schemes?",
+    "ground_truth": "The sequential generation scheme generates each frame of the video independently, while the recurrent generation scheme uses the previous frame to generate the next frame. This can be seen in the optical flow images, which show the motion of pixels between frames. The recurrent scheme has a smoother flow of motion, while the sequential scheme has more abrupt changes.",
+    "selected_figures": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure1-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Figure6-1.png",
+      "1804.04786v3-Figure4-1.png",
+      "1804.04786v3-Figure5-1.png",
+      "1804.04786v3-Table1-1.png"
+    ],
+    "answer": "The main difference between the sequential and recurrent generation schemes is the level of correlation they consider across different frames. The sequential frame generation scheme only considers short-term frame correlation, while the recurrent frame generation scheme preserves long-term dependency by feeding the identity image into all future frame generation. <s>"
+  }
+}
