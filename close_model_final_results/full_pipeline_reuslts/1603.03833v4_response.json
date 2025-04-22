@@ -1,0 +1,191 @@
+{
+  "0": {
+    "question": "What is the role of the LSTM-MDN network in the training phase?",
+    "ground_truth": "The LSTM-MDN network is used to learn the relationship between the gripper pose and status, the pose of relevant objects, and the joint angles of the robot arm.",
+    "selected_figures_names": [
+      "1603.03833v4-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png",
+      "1603.03833v4-Figure4-1.png",
+      "1603.03833v4-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 visually represents the LSTM-MDN network's training process, showing how inputs are processed through LSTM layers and mixture density parameters. Text 4 explains the network architecture and the role of LSTM and MDN in the training phase, providing context for understanding the image.",
+    "answer": "In the training phase, the LSTM-MDN network is unrolled through time, using the gripper pose and status along with the pose of relevant objects as inputs. It calculates and backpropagates the error to update the weights, using mixture density parameters to form a mixture of Gaussians for evaluation.",
+    "text_chunks": [
+      "The presence of either LSTM or MSE in the network provided enough improvement in the controller to allow the finishing of the task in the majority of situations, while the presence of both lead to 100\\% success rate. On the other hand, the harder push to pose task requires both components to have a reasonable success rate of 95\\%. We conclude from these experiments that both adding LSTM layers, and using an MDN output provide significant benefits individually to the robot controller, and that these two techniques can be combined for more individual benefits.",
+      "The LSTM-MDN network is described in Figure~, while the architectures of the other approaches are shown in Figure~. Each network had been separately trained for the pick and place and the push to desired pose respectively, in effect creating 8 different controllers. The resulting controllers had been tested in the virtual environment by requiring the robot to perform randomly generated tasks 20 times. If it can not complete the task in a limited time (1 minute for the first task and 2 minutes for the second one), we count the try as a failure and reset the position of the box.",
+      "During the deployment of the trained network, the prediction represents the desired pose of the end actuator which the robot needs to achieve through its inverse kinematics calculations. The controllers for the ``pick and place'' and the ``push to desired pose'' tasks have the same network architecture but were trained on the specific tasks. Our architecture uses an LSTM recurrent neural network and relies on mixture density networks (MDNs) to predict the probability density of the output.",
+      "{\\em LSTM-MDN: Mixture density network containing 3 layers of LSTM with 50 memory states in each layer. The mixture contains 20 Gaussian kernels.",
+      "If yes, it commands the robot to go to the next waypoint, otherwise it waits in a loop until the end-effector reaches the desired pose or timeout occurs which means that the end-effector cannot reach that pose (either because the inverse kinematic failed or a collision occurred). Experimental study In the following we describe a series of experiments and observations justifying the three claims we made in the abstract of this paper. The benefits of LSTM and MDN Our network architecture uses LSTM layers and an MDN-based error signal.",
+      "These virtual demonstrations are used to teach a deep neural network based robot controller. Then, the controller is transferred to the physical robot. We found that the best performance was obtained using a network with LSTM layers and a mixture density network based error signal.",
+      "train a CNN+LSTM controller to perform a multi-step task of picking up a cube and dropping it to a table. The training is based on demonstrations acquired from a programmed optimal controller, with domain randomization in the form of variation of environmental characteristics, lighting and textures. Yet another possible approach is to learn an invariant feature space that can transfer information between the domains through a sort of analogy making~.",
+      "The resulting neural network will predict the next joint configuration of the robot. A similar neural network architecture is designed to address the grasping problem~. In~, LSTMs are used for a robot to learn to autonomously tie knots after a pre-processing step to reduce the noise from the training data. Our approach Collecting demonstrations in a virtual environment To allow users to demonstrate their ADLs, we designed in the Unity3D game engine a virtual environment modeling a table with an attached shelf that can hold various objects, and a simple two-finger gripper that can be opened and closed to grasp and carry an object."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 visually represents the LSTM-MDN network's training process, showing how inputs are processed through LSTM layers and mixture density parameters. Text 4 explains the network architecture and the role of LSTM and MDN in the training phase, providing context for understanding the image.\",\n    \"Answer\": \"In the training phase, the LSTM-MDN network is unrolled through time, using the gripper pose and status along with the pose of relevant objects as inputs. It calculates and backpropagates the error to update the weights, using mixture density parameters to form a mixture of Gaussians for evaluation.\"\n}"
+  },
+  "1": {
+    "question": "Why is the number of demonstrations after the shift not available for the \"Push to Pose\" task?",
+    "ground_truth": "The passage mentions that additional trajectories were generated for the \"Pick and Place\" task by reducing the frequency of the recorded demonstrations. This process was not applied to the \"Push to Pose\" task, therefore no \"Demonstrations after shift\" are listed for it.",
+    "selected_figures_names": [
+      "1603.03833v4-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png",
+      "1603.03833v4-Figure4-1.png",
+      "1603.03833v4-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image provides data on the number of demonstrations for each task, while the text explains the challenges in the 'Push to Pose' task, such as the need for specific coordinates and poses, which may not allow for a shift in demonstrations.",
+    "answer": "The 'Push to Pose' task requires specific coordinates and poses, making it difficult to shift demonstrations as done in the 'Pick and Place' task.",
+    "text_chunks": [
+      "As the pushing to desired pose task requires a specific coordinate and pose to succeed, this approach is not possible for the second task. The second observation was that by recording the demonstration at 33Hz but presenting the training trajectories at only 4Hz, we have extra trajectory points. These trajectory points can be used to generate multiple independent trajectories at a lower temporal resolution.",
+      "As we discussed when introducing the problems, the push-to-pose tasks is more dependent of the physics (such as the friction between the object and the table determines the way the object moves when pushed). This creates a bigger difference between the virtual and the physical environment compared to the pick and place task, where after a successful grasp the robot is essentially in control of the environment. Thus, the push to pose task shows a stronger decrease in success rate when moving to the physical world.",
+      "It is unclear how many times does the box needs to be pushed. Furthermore, the completion of the task depends on the physics: the weight of the box and the friction between the box and table impacts the way the box moves in response to pushes. The demonstrations were collected from a single user, in the course of multiple sessions.",
+      "The {\\em pushing to desired pose task involves moving and rotating a box of size 10 \\times 7 \\times 7cm to a desired area only by pushing it on the tabletop. In this task, the robot is not allowed to grasp the object. The box is initially positioned in a way that needs to be rotated by 90^{\\circ to fit inside the desired area which is 3cm wider than the box in each direction.",
+      "In each session, the user performed a series of demonstrations for each task. The quality of demonstrations varied: in some of them, the user could finish the task only after several tries. For instance, sometimes the grasp was unsuccessful, or the user dropped the object in an incorrect position and had to pick it up again.",
+      "The numerical success rates are shown in the following table: {\\footnotesize The results allow us to derive several conclusions. Clearly, the Feedforward-MSE combination does not work for this particular set of problems and training data, failing to complete either task even once. Another conclusion is that the pick-and-place task is clearly the easier from the two, even when tested in the virtual environment where physical modeling errors don't play a role.",
+      "Thus a full demonstration can be recorded as a list of pairs d = \\{ (q_1,e_1) \\ldots (q_T,e_T)\\. For our experiments we considered two manipulation tasks that are regularly found as components of ADLs: pick and place and pushing to a desired pose. The {\\em pick and place task involves picking up a small box located on top of the table, and placing it into a shelf above the table.",
+      "We also found that having imperfect demonstrations, where users occasionally make mistakes but correct them, allows the controller to correct the inevitable mistakes it makes when transferred to a physical environment. Our team is working to improve these results along several directions. Multi-task learning might reduce the necessary number of demonstrations as many features are likely shared between tasks."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image provides data on the number of demonstrations for each task, while the text explains the challenges in the 'Push to Pose' task, such as the need for specific coordinates and poses, which may not allow for a shift in demonstrations.\",\n    \"Answer\": \"The 'Push to Pose' task requires specific coordinates and poses, making it difficult to shift demonstrations as done in the 'Pick and Place' task.\"\n}"
+  },
+  "2": {
+    "question": "How does the frequency reduction process create multiple trajectories from a single demonstration?",
+    "ground_truth": " The frequency reduction process takes a high-frequency trajectory and samples it at a lower frequency, resulting in multiple trajectories with different starting and ending points. ",
+    "selected_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png",
+      "1603.03833v4-Figure4-1.png",
+      "1603.03833v4-Figure5-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 visually represents the process of creating multiple trajectories from a single demonstration recorded at a higher frequency, which directly relates to the question. Text 2 explains how recording at a higher frequency allows for extra trajectory points, which can be used to generate multiple independent trajectories at a lower temporal resolution.",
+    "answer": "The frequency reduction process creates multiple trajectories from a single demonstration by using the extra trajectory points recorded at a higher frequency (33Hz) to generate multiple independent trajectories at a lower frequency (4Hz). This allows for the creation of several trajectories from one demonstration, each with a lower temporal resolution.",
+    "text_chunks": [
+      "After finishing a demonstration, the user was immediately presented with a new instance of the problem, with randomly generated initial conditions. All the experiments had been recorded in the trajectory representation format presented above, at a recording frequency of 33Hz. However, we found that the neural network controller can be trained more efficiently if the trajectories are sampled at a lower rate, with a rate of 4Hz to giving the best results.",
+      "The process of the trajectory generation by frequency reduction is shown in Figure~. Table~ describes the size of the final dataset. The neural network based robot controller The robot controller takes as input the pose of the objects involved and the pose and open/close status of the gripper at time t and outputs a prediction of the pose and the open/closed status of the gripper at time t+1. During training, this prediction is used to generate the error signal.",
+      "As the pushing to desired pose task requires a specific coordinate and pose to succeed, this approach is not possible for the second task. The second observation was that by recording the demonstration at 33Hz but presenting the training trajectories at only 4Hz, we have extra trajectory points. These trajectory points can be used to generate multiple independent trajectories at a lower temporal resolution.",
+      "We also found that having imperfect demonstrations, where users occasionally make mistakes but correct them, allows the controller to correct the inevitable mistakes it makes when transferred to a physical environment. Our team is working to improve these results along several directions. Multi-task learning might reduce the necessary number of demonstrations as many features are likely shared between tasks.",
+      "One obvious way to mitigate this problem is by acquiring a large number of demonstrations covering as many situations as possible. Some researchers proposed cloud-based and crowdsourced data collection techniques~, and some others proposed to use simulation environments~. Another direction is to use smaller number of demonstrations, but change the learning model to generalize better.",
+      "To improve learning, we extended our training data by exploiting both the properties of the individual tasks and trajectory recording technique. First, we noticed that in the pick and place task the user can put the object to any location on the shelf. Thus we were able to generate new synthetic training data by shifting the existing demonstration trajectories parallel with the shelf.",
+      "In each session, the user performed a series of demonstrations for each task. The quality of demonstrations varied: in some of them, the user could finish the task only after several tries. For instance, sometimes the grasp was unsuccessful, or the user dropped the object in an incorrect position and had to pick it up again.",
+      "The error signal, in this case, is based on the negative logarithm likelihood of the next target waypoint given the probability density implied by the MDN. Let us now describe the intuitions that led to these choices. The solution to both manipulation tasks contain a series of individual movements which need to be executed in a specific sequence."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 visually represents the process of creating multiple trajectories from a single demonstration recorded at a higher frequency, which directly relates to the question. Text 2 explains how recording at a higher frequency allows for extra trajectory points, which can be used to generate multiple independent trajectories at a lower temporal resolution.\",\n    \"Answer\": \"The frequency reduction process creates multiple trajectories from a single demonstration by using the extra trajectory points recorded at a higher frequency (33Hz) to generate multiple independent trajectories at a lower frequency (4Hz). This allows for the creation of several trajectories from one demonstration, each with a lower temporal resolution.\"\n}"
+  },
+  "3": {
+    "question": "What is the role of the virtual environment in the proposed approach?",
+    "ground_truth": "The virtual environment is used to collect demonstrations of the task from the user. This allows for safe and efficient data collection.",
+    "selected_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png",
+      "1603.03833v4-Figure4-1.png",
+      "1603.03833v4-Figure5-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 and Text 0 both describe the use of a virtual environment for task demonstration and training a neural network. Image 3 visually represents the process of collecting demonstrations in a virtual environment and using them to train a neural network. Text 0 explains the approach of using a virtual environment to safely collect demonstrations for training a robot controller.",
+    "answer": "The virtual environment is used to safely collect demonstrations of tasks, which are then used to train a deep neural network-based robot controller. This allows for effective training without the risks associated with physical demonstrations.",
+    "text_chunks": [
+      "In this paper we propose an approach where the users demonstrate the tasks to be performed in a virtual environment. This allows the safe collection of sufficient demonstrations to train a deep neural network based robot controller. The trained controller is then transferred to the physical robot.",
+      "This approach had been taken by Grounded Simulation Learning~ and improved by Grounded Action Transformation~ on the task of teaching a Nao robot to walk faster. Another approach for improving the virtual to physical transfer is to increase the generality of the policy learned in simulation through domain randomization~. note that the sequence of states learned by the controller in simulation might be reasonable even if the exact controls in the physical world are different. Their approach computes what the next state would be, and relies on learned deep inverse dynamics model to decide on the actions to achieve the equivalent real world state.",
+      "One obvious way to mitigate this problem is by acquiring a large number of demonstrations covering as many situations as possible. Some researchers proposed cloud-based and crowdsourced data collection techniques~, and some others proposed to use simulation environments~. Another direction is to use smaller number of demonstrations, but change the learning model to generalize better.",
+      "Conclusions and future work In this paper we have developed a technique through which a robotic arm can be taught to perform certain manipulation tasks. We focused on two tasks that are frequently required of robots that assist disabled users in activities of daily living: pick and place and push to desired pose. As disabled users can not generate large numbers of demonstrations on physical robots, we designed an approach where the user demonstrates the task in a virtual environment.",
+      "The resulting neural network will predict the next joint configuration of the robot. A similar neural network architecture is designed to address the grasping problem~. In~, LSTMs are used for a robot to learn to autonomously tie knots after a pre-processing step to reduce the noise from the training data. Our approach Collecting demonstrations in a virtual environment To allow users to demonstrate their ADLs, we designed in the Unity3D game engine a virtual environment modeling a table with an attached shelf that can hold various objects, and a simple two-finger gripper that can be opened and closed to grasp and carry an object.",
+      "The general flow is illustrated in Figure~. In the remainder of this paper we discuss related work, describe the approach in detail, and through an experimental study validate the three contributions outlined in the abstract. Related work \\noindent{\\em Virtual training to physical execution. The desirability of transferring learning from a simulated robot to a physical one had been recognized by many researchers.",
+      "Another challenge is that while in the virtual world we had perfect knowledge of the pose of the effector and all the objects in the environment, we needed to acquire this information through sensing. As our controller architecture only performs robot arm control, in order to supplant the missing vision component, we relied on a Microsoft Kinect sensor and objects annotated with markers to track their pose. One of the problems with this approach is that the robot arm might occlude the view of the sensor.",
+      "In the work described in this paper, we took a different approach. We had to accept that the simulation is nowhere close to the physical environment, thus the robot {\\em will make mistakes. Instead of domain randomization, we rely on the natural imperfections of demonstrations done by (possibly disabled) humans, but also on the ability of humans to correct the errors they made."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 and Text 0 both describe the use of a virtual environment for task demonstration and training a neural network. Image 3 visually represents the process of collecting demonstrations in a virtual environment and using them to train a neural network. Text 0 explains the approach of using a virtual environment to safely collect demonstrations for training a robot controller.\",\n    \"Answer\": \"The virtual environment is used to safely collect demonstrations of tasks, which are then used to train a deep neural network-based robot controller. This allows for effective training without the risks associated with physical demonstrations.\"\n}"
+  },
+  "4": {
+    "question": "What is the difference between the pick and place task in simulation and the real world?",
+    "ground_truth": "In the simulation, the robot is able to pick up the object and place it in the desired location without any errors. However, in the real world, the robot makes some errors, such as dropping the object or placing it in the wrong location.",
+    "selected_figures_names": [
+      "1603.03833v4-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png",
+      "1603.03833v4-Figure4-1.png",
+      "1603.03833v4-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 provides a visual comparison of the pick and place task in both simulation and real-world environments. Text 2 discusses the differences in success rates between these environments, highlighting factors like noise and physical discrepancies.",
+    "answer": "The difference between the pick and place task in simulation and the real world lies in the success rate, which is lower in the real world. This is due to factors such as inevitable noise in object positioning and differences in physical attributes like friction and gripper size.",
+    "text_chunks": [
+      "As we discussed when introducing the problems, the push-to-pose tasks is more dependent of the physics (such as the friction between the object and the table determines the way the object moves when pushed). This creates a bigger difference between the virtual and the physical environment compared to the pick and place task, where after a successful grasp the robot is essentially in control of the environment. Thus, the push to pose task shows a stronger decrease in success rate when moving to the physical world.",
+      "This is not because the virtual and physical worlds are highly similar. The size of the gripper of the Baxter robot is different from the one in the virtual world. The friction coefficients are very different, and the physics simulation in the virtual world is also of limited accuracy.",
+      "The success rates in the virtual and physical worlds are compared as follows: {\\footnotesize The first conclusion we can draw from these values is that the approach successfully demonstrated the ability to transfer an unchanged controller trained in the virtual world to a physical robot. As expected, the success rate was lower in the physical world for both tasks. Some of the reasons behind the lower success rate is obvious: for instance, in the physical world there is an inevitable noise in the position of the objects and the end effector.",
+      "Some of the noise is a consequence of limited sensor accuracy (such as the calibration of the Kinect sensor) and effector performance. Another source of inaccuracy is due to the way in which we acquired the positional information through a Kinect sensor: if during the manipulation the robot arm occluded the view of the object to the Kinect sensor, we temporarily lost the ability to track the object. Another reason for the lower performance in the physical world is due to the differences in the size, shape, physical attributes such as friction, etc. of the gripper and objects between the simulation and real world.",
+      "Evaluating the transfer to the physical robot To verify the ability of the controller trained in the virtual world to perform in the physical one, we subjected both the virtual and the physical robots to the same tasks. The sequence of images in the Figure~ shows the controller acting autonomously for the pick and place and pushing to pose tasks in the virtual and physical environments respectively. We have found that indeed, in most cases, the physical robot was successful in executing both tasks.",
+      "The numerical success rates are shown in the following table: {\\footnotesize The results allow us to derive several conclusions. Clearly, the Feedforward-MSE combination does not work for this particular set of problems and training data, failing to complete either task even once. Another conclusion is that the pick-and-place task is clearly the easier from the two, even when tested in the virtual environment where physical modeling errors don't play a role.",
+      "Conclusions and future work In this paper we have developed a technique through which a robotic arm can be taught to perform certain manipulation tasks. We focused on two tasks that are frequently required of robots that assist disabled users in activities of daily living: pick and place and push to desired pose. As disabled users can not generate large numbers of demonstrations on physical robots, we designed an approach where the user demonstrates the task in a virtual environment.",
+      "This would be acceptable if the policy corrects the error, keeping the difference bounded. In practice, it was found that if a policy was learned from demonstrations, initially small differences between the simulation and the real world tend to grow larger and larger as the state diverges farther and farther from the settings in which the demonstrations took place -- an aggravated version of the problem that led to the development of algorithms such as DAgger~. A number of different approaches had been developed to deal with this problem. One approach is to try to bring the simulation closer to reality through learning."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 provides a visual comparison of the pick and place task in both simulation and real-world environments. Text 2 discusses the differences in success rates between these environments, highlighting factors like noise and physical discrepancies.\",\n    \"Answer\": \"The difference between the pick and place task in simulation and the real world lies in the success rate, which is lower in the real world. This is due to factors such as inevitable noise in object positioning and differences in physical attributes like friction and gripper size.\"\n}"
+  },
+  "5": {
+    "question": "What are the three different network architectures used in the comparison study?",
+    "ground_truth": "Feedforward-MSE, LSTM-MSE, and Feedforward-MDN.",
+    "selected_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1603.03833v4-Figure3-1.png",
+      "1603.03833v4-Table1-1.png",
+      "1603.03833v4-Figure2-1.png",
+      "1603.03833v4-Figure1-1.png",
+      "1603.03833v4-Figure4-1.png",
+      "1603.03833v4-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a visual representation of the LSTM-MDN network architecture, which is one of the architectures used in the study. Text 0 describes the different network architectures, including FeedForward-MSE and LSTM-MSE, which are part of the comparison.",
+    "answer": "The three different network architectures used in the comparison study are FeedForward-MSE, LSTM-MSE, and LSTM-MDN.",
+    "text_chunks": [
+      "In order to be able to perform a rough comparison, we implemented a feedforward network that closely matches that controller, but replaces the convolutional layers with a direct position input. With this, we have four choices for the controller structure: {\\em FeedForward-MSE: 3 layers of fully connected feedforward network with 100 neurons in each layer and mean squared error as the cost function. {\\em LSTM-MSE: 3 layers of LSTM with 50 memory states in each layer and mean squared error as the cost function.",
+      "During the deployment of the trained network, the prediction represents the desired pose of the end actuator which the robot needs to achieve through its inverse kinematics calculations. The controllers for the ``pick and place'' and the ``push to desired pose'' tasks have the same network architecture but were trained on the specific tasks. Our architecture uses an LSTM recurrent neural network and relies on mixture density networks (MDNs) to predict the probability density of the output.",
+      "The LSTM-MDN network is described in Figure~, while the architectures of the other approaches are shown in Figure~. Each network had been separately trained for the pick and place and the push to desired pose respectively, in effect creating 8 different controllers. The resulting controllers had been tested in the virtual environment by requiring the robot to perform randomly generated tasks 20 times. If it can not complete the task in a limited time (1 minute for the first task and 2 minutes for the second one), we count the try as a failure and reset the position of the box.",
+      "The requirement of a controller with a memory leads us to the choice of recurrent neural networks, in particular, one of the most widely used models, the LSTM~. We are using three LSTM layers with 50 nodes each as shown in Figure~. The second intuition applies to the choice of the output layer and error signal. Both tasks allow multiple solutions.",
+      "{\\em LSTM-MDN: Mixture density network containing 3 layers of LSTM with 50 memory states in each layer. The mixture contains 20 Gaussian kernels.",
+      "The resulting neural network will predict the next joint configuration of the robot. A similar neural network architecture is designed to address the grasping problem~. In~, LSTMs are used for a robot to learn to autonomously tie knots after a pre-processing step to reduce the noise from the training data. Our approach Collecting demonstrations in a virtual environment To allow users to demonstrate their ADLs, we designed in the Unity3D game engine a virtual environment modeling a table with an attached shelf that can hold various objects, and a simple two-finger gripper that can be opened and closed to grasp and carry an object.",
+      "{\\em FeedForward-MDN: Mixture density network containing 3 fully connected feedforward layers with 100 neurons in each layer. The mixture contains 20 Gaussian kernels.",
+      "The presence of either LSTM or MSE in the network provided enough improvement in the controller to allow the finishing of the task in the majority of situations, while the presence of both lead to 100\\% success rate. On the other hand, the harder push to pose task requires both components to have a reasonable success rate of 95\\%. We conclude from these experiments that both adding LSTM layers, and using an MDN output provide significant benefits individually to the robot controller, and that these two techniques can be combined for more individual benefits."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a visual representation of the LSTM-MDN network architecture, which is one of the architectures used in the study. Text 0 describes the different network architectures, including FeedForward-MSE and LSTM-MSE, which are part of the comparison.\",\n    \"Answer\": \"The three different network architectures used in the comparison study are FeedForward-MSE, LSTM-MSE, and LSTM-MDN.\"\n}"
+  }
+}

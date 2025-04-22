@@ -1,0 +1,189 @@
+{
+  "0": {
+    "question": "How does the average number of inter-word semantic connections per word change as the value of \u03ba increases?",
+    "ground_truth": "The average number of inter-word semantic connections per word increases as the value of \u03ba increases.",
+    "selected_figures_names": [
+      "1809.03449v3-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a table showing the average number of inter-word semantic connections per word for different values of \u03ba, which directly answers the question. Text 0 explains the role of \u03ba in controlling the amount of extracted semantic connections, providing context for the data in the image.",
+    "answer": "As the value of \u03ba increases, the average number of inter-word semantic connections per word also increases.",
+    "text_chunks": [
+      "Specifically, for each word w, we extract a set E_w, which includes the positions of the passage words that w is semantically connected to (if w itself is a passage word, we will exclude its own position from E_w). We can control the amount of the extracted results by setting the hyper-parameter \\kappa: if we set \\kappa to 0, inter-word semantic connections will only exist between synonyms; if we increase \\kappa, inter-word semantic connections will exist between more words. That is to say, by increasing \\kappa within a certain range, we can usually extract more inter-word semantic connections from a passage-question pair, and thus can provide the MRC model with more general knowledge.",
+      "By the way, each single semantic relation is equivalent to a 1-hop chain. Inter-word Semantic Connection The key problem in the data enrichment method is determining whether a word is semantically connected to another word.",
+      "Based on the above statements, we formulate a heuristic rule for determining inter-word semantic connections: a word w_1 is semantically connected to another word w_2 if and only if S^*_{w_1(\\kappa) \\cap S_{w_2 \\ne \\emptyset. General Knowledge Extraction Given a passage-question pair, the inter-word semantic connections that connect any word to any passage word are regarded as the general knowledge we need to extract. Considering the requirements of our MRC model, we only extract the positional information of such inter-word semantic connections.",
+      "When only a subset (20\\%--80\\%) of the training examples are available, KAR outperforms the state-of-the-art MRC models by a large margin, and is still reasonably robust to noise. Data Enrichment Method In this section, we elaborate a WordNet-based data enrichment method, which is aimed at extracting inter-word semantic connections from each passage-question pair in our MRC dataset. The extraction is performed in a controllable manner, and the extracted results are provided as general knowledge to our MRC model.",
+      "According to the WordNet interface provided by NLTK , there are totally sixteen types of semantic relations (e.g. hypernyms, hyponyms, holonyms, meronyms, attributes, etc.). Based on synset and semantic relation, we define a new concept: semantic relation chain. A semantic relation chain is a concatenated sequence of semantic relations, which links a synset to another synset.",
+      "The reasons for these achievements, we believe, are as follows: Conclusion In this paper, we innovatively integrate the neural networks of MRC models with the general knowledge of human beings. Specifically, inter-word semantic connections are first extracted from each given passage-question pair by a WordNet-based data enrichment method, and then provided as general knowledge to an end-to-end MRC model named as Knowledge Aided Reader (KAR), which explicitly uses the general knowledge to assist its attention mechanisms. Experimental results show that KAR is not only comparable in performance with the state-of-the-art MRC models, but also superior to them in terms of both the hunger for data and the robustness to noise.",
+      "Semantic Relation Chain WordNet is a lexical database of English, where words are organized into synsets according to their senses. A synset is a set of words expressing the same sense so that a word having multiple senses belongs to multiple synsets, with each synset corresponding to a sense. Synsets are further related to each other through semantic relations.",
+      "On the one hand, we propose a data enrichment method, which uses WordNet to extract inter-word semantic connections as general knowledge from each given passage-question pair. On the other hand, we propose an end-to-end MRC model named as Knowledge Aided Reader (KAR), which explicitly uses the above extracted general knowledge to assist its attention mechanisms. Based on the data enrichment method, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a table showing the average number of inter-word semantic connections per word for different values of \u03ba, which directly answers the question. Text 0 explains the role of \u03ba in controlling the amount of extracted semantic connections, providing context for the data in the image.\",\n    \"Answer\": \"As the value of \u03ba increases, the average number of inter-word semantic connections per word also increases.\"\n}"
+  },
+  "1": {
+    "question": "Which model performed the best on the AddOneSent dataset?",
+    "ground_truth": "KAR",
+    "selected_figures_names": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 and Text 1 both provide a detailed comparison of model performances on the AddOneSent dataset, which directly answers the question.",
+    "answer": "KAR performed the best on the AddOneSent dataset with an F1 score of 72.3.",
+    "text_chunks": [
+      "Besides, we also use two of its adversarial sets, namely AddSent and AddOneSent , to evaluate the robustness to noise of MRC models. The passages in the adversarial sets contain misleading sentences, which are aimed at distracting MRC models. Specifically, each passage in AddSent contains several sentences that are similar to the question but not contradictory to the answer, while each passage in AddOneSent contains a human-approved random sentence that may be unrelated to the passage.",
+      "As shown in Table~, by increasing \\kappa from 0 to 5 in the data enrichment method, the amount of general knowledge rises monotonically, but the performance of KAR first rises until \\kappa reaches 3 and then drops down. Then we conduct an ablation study by replacing the knowledge aided attention mechanisms with the mutual attention proposed by \\citet{seominjoon:2016 and the self attention proposed by \\citet{wangwenhui:2017 separately, and find that the F1 score of KAR drops by 4.2 on the development set, 7.8 on AddSent, and 9.1 on AddOneSent. Finally we find that after only one epoch of training, KAR already achieves an EM of 71.9 and an F1 score of 80.8 on the development set, which is even better than the final performance of several strong baselines, such as DCN (EM / F1: 65.4 / 75.6) and BiDAF (EM / F1: 67.7 / 77.3) .",
+      "By separately sampling 1, 2, 3, and 4 questions on each passage, we obtain four training subsets, which separately contain 20\\%, 40\\%, 60\\%, and 80\\% of the training examples. As shown in Figure~, with KAR, SAN (re-implemented), and QANet (re-implemented without data augmentation) trained on these training subsets, we evaluate their performance on the development set, and find that KAR performs much better than SAN and QANet. As shown in Figure~ and Figure~, with the above KAR, SAN, and QANet trained on the same training subsets, we also evaluate their performance on the adversarial sets, and still find that KAR performs much better than SAN and QANet.",
+      "For the dense layers and the BiLSTMs, we set the dimensionality unit d to 600. For model optimization, we apply the Adam optimizer with a learning rate of 0.0005 and a mini-batch size of 32. For model evaluation, we use Exact Match (EM) and F1 score as evaluation metrics.",
+      "Several recent breakthroughs in MRC benefit from feature-based transfer learning and fine-tuning-based transfer learning , which are based on certain word-level or sentence-level models pre-trained on large external corpora in certain supervised or unsupervised manners. Experiments Experimental Settings MRC Dataset. The MRC dataset used in this paper is SQuAD 1.1, which contains over 100,000 passage-question pairs and has been randomly partitioned into three parts: a training set (80\\%), a development set (10\\%), and a test set (10\\%).",
+      "To avoid overfitting, we apply dropout to the dense layers and the BiLSTMs with a dropout rate of 0.3. To boost the performance, we apply exponential moving average with a decay rate of 0.999. Model Comparison in both Performance and the Robustness to Noise We compare KAR with other MRC models in both performance and the robustness to noise.",
+      "When only a subset (20\\%--80\\%) of the training examples are available, KAR outperforms the state-of-the-art MRC models by a large margin, and is still reasonably robust to noise. Data Enrichment Method In this section, we elaborate a WordNet-based data enrichment method, which is aimed at extracting inter-word semantic connections from each passage-question pair in our MRC dataset. The extraction is performed in a controllable manner, and the extracted results are provided as general knowledge to our MRC model.",
+      "It is proved that properly augmenting training examples can improve the performance of MRC models. For example, \\citet{yangzhilin:2017 trained a generative model to generate questions based on unlabeled text, which substantially boosted their performance; \\citet{yuadamswei:2018 trained a back-and-forth translation model to paraphrase training examples, which brought them a significant performance gain. \\\\ Multi-step Reasoning."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 and Text 1 both provide a detailed comparison of model performances on the AddOneSent dataset, which directly answers the question.\",\n    \"Answer\": \"KAR performed the best on the AddOneSent dataset with an F1 score of 72.3.\"\n}"
+  },
+  "2": {
+    "question": "What is the role of the Knowledge Aided Similarity Matrix in the KAR model?",
+    "ground_truth": "The Knowledge Aided Similarity Matrix is used to compute the similarity between the question and passage context embeddings. This similarity score is then used to weight the passage context embeddings, giving more weight to those parts of the passage that are most relevant to the question.",
+    "selected_figures_names": [
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a visual representation of the KAR model, showing where the Knowledge Aided Similarity Matrix fits within the architecture. Text 5 explains the role of attention mechanisms in KAR, which are crucial for understanding the function of the Knowledge Aided Similarity Matrix.",
+    "answer": "The Knowledge Aided Similarity Matrix in the KAR model is used to enhance the passage and question context embeddings by incorporating general knowledge. This aids the attention mechanisms in fusing question and passage representations effectively.",
+    "text_chunks": [
+      "On the one hand, we propose a data enrichment method, which uses WordNet to extract inter-word semantic connections as general knowledge from each given passage-question pair. On the other hand, we propose an end-to-end MRC model named as Knowledge Aided Reader (KAR), which explicitly uses the above extracted general knowledge to assist its attention mechanisms. Based on the data enrichment method, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them.",
+      "The reasons for these achievements, we believe, are as follows: Conclusion In this paper, we innovatively integrate the neural networks of MRC models with the general knowledge of human beings. Specifically, inter-word semantic connections are first extracted from each given passage-question pair by a WordNet-based data enrichment method, and then provided as general knowledge to an end-to-end MRC model named as Knowledge Aided Reader (KAR), which explicitly uses the general knowledge to assist its attention mechanisms. Experimental results show that KAR is not only comparable in performance with the state-of-the-art MRC models, but also superior to them in terms of both the hunger for data and the robustness to noise.",
+      "Therefore we separately name the attention mechanisms of KAR as knowledge aided mutual attention and knowledge aided self attention. Task Definition Given a passage P = \\{p_1, \\ldots, p_n\\ and a relevant question Q = \\{q_1, \\ldots, q_m\\, the task is to predict an answer span [a_s, a_e], where 1 \\le a_s \\le a_e",
+      "\\le n, so that the resulting subsequence \\{p_{a_s, \\ldots, p_{a_e\\ from P is an answer to Q. Overall Architecture As shown in Figure~, KAR is an end-to-end MRC model consisting of five layers: \\\\ Lexicon Embedding Layer. This layer maps the words to the lexicon embeddings. The lexicon embedding of each word is composed of its word embedding and character embedding.",
+      "As shown in Table~, on the development set and the test set, the performance of KAR is on par with that of the state-of-the-art MRC models; on the adversarial sets, KAR outperforms the state-of-the-art MRC models by a large margin. That is to say, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them. \\\\ To verify the effectiveness of general knowledge, we first study the relationship between the amount of general knowledge and the performance of KAR.",
+      "The key components of most existing MRC models are their attention mechanisms , which are aimed at fusing the associated representations of each given passage-question pair. These attention mechanisms generally fall into two categories: the first one, which we name as mutual attention, is aimed at fusing the question representations into the passage representations so as to obtain the question-aware passage representations; the second one, which we name as self attention, is aimed at fusing the question-aware passage representations into themselves so as to obtain the final passage representations. Although KAR is equipped with both categories, its most remarkable feature is that it explicitly uses the general knowledge extracted by the data enrichment method to assist its attention mechanisms.",
+      "The above empirical findings imply that general knowledge indeed plays an effective role in KAR. \\\\ To demonstrate the advantage of our explicit way to utilize general knowledge over the existing implicit way, we compare the performance of KAR with that reported by \\citet{weissenborndirk:2017, which used an encoding-based method to utilize the general knowledge dynamically retrieved from Wikipedia and ConceptNet. Since their best model only achieved an EM of 69.5 and an F1 score of 79.7 on the development set, which is much lower than the performance of KAR, we have good reason to believe that our explicit way works better than the existing implicit way.",
+      "As shown in Table~, by increasing \\kappa from 0 to 5 in the data enrichment method, the amount of general knowledge rises monotonically, but the performance of KAR first rises until \\kappa reaches 3 and then drops down. Then we conduct an ablation study by replacing the knowledge aided attention mechanisms with the mutual attention proposed by \\citet{seominjoon:2016 and the self attention proposed by \\citet{wangwenhui:2017 separately, and find that the F1 score of KAR drops by 4.2 on the development set, 7.8 on AddSent, and 9.1 on AddOneSent. Finally we find that after only one epoch of training, KAR already achieves an EM of 71.9 and an F1 score of 80.8 on the development set, which is even better than the final performance of several strong baselines, such as DCN (EM / F1: 65.4 / 75.6) and BiDAF (EM / F1: 67.7 / 77.3) ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a visual representation of the KAR model, showing where the Knowledge Aided Similarity Matrix fits within the architecture. Text 5 explains the role of attention mechanisms in KAR, which are crucial for understanding the function of the Knowledge Aided Similarity Matrix.\",\n    \"Answer\": \"The Knowledge Aided Similarity Matrix in the KAR model is used to enhance the passage and question context embeddings by incorporating general knowledge. This aids the attention mechanisms in fusing question and passage representations effectively.\"\n}"
+  },
+  "3": {
+    "question": "How does the performance of KAR, SAN, and QANet (without data augmentation) change as the proportion of available training examples decreases?",
+    "ground_truth": "The performance of all three models decreases as the proportion of available training examples decreases.",
+    "selected_figures_names": [
+      "1809.03449v3-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually shows the performance of KAR, SAN, and QANet as the proportion of available training examples decreases, which directly addresses the question. Text 0 provides a description of the performance comparison among these models, supporting the visual data.",
+    "answer": "As the proportion of available training examples decreases, the performance of KAR, SAN, and QANet (without data augmentation) all decline. However, KAR consistently outperforms SAN and QANet across all proportions.",
+    "text_chunks": [
+      "By separately sampling 1, 2, 3, and 4 questions on each passage, we obtain four training subsets, which separately contain 20\\%, 40\\%, 60\\%, and 80\\% of the training examples. As shown in Figure~, with KAR, SAN (re-implemented), and QANet (re-implemented without data augmentation) trained on these training subsets, we evaluate their performance on the development set, and find that KAR performs much better than SAN and QANet. As shown in Figure~ and Figure~, with the above KAR, SAN, and QANet trained on the same training subsets, we also evaluate their performance on the adversarial sets, and still find that KAR performs much better than SAN and QANet.",
+      "As shown in Table~, by increasing \\kappa from 0 to 5 in the data enrichment method, the amount of general knowledge rises monotonically, but the performance of KAR first rises until \\kappa reaches 3 and then drops down. Then we conduct an ablation study by replacing the knowledge aided attention mechanisms with the mutual attention proposed by \\citet{seominjoon:2016 and the self attention proposed by \\citet{wangwenhui:2017 separately, and find that the F1 score of KAR drops by 4.2 on the development set, 7.8 on AddSent, and 9.1 on AddOneSent. Finally we find that after only one epoch of training, KAR already achieves an EM of 71.9 and an F1 score of 80.8 on the development set, which is even better than the final performance of several strong baselines, such as DCN (EM / F1: 65.4 / 75.6) and BiDAF (EM / F1: 67.7 / 77.3) .",
+      "That is to say, when only a subset of the training examples are available, KAR outperforms the state-of-the-art MRC models by a large margin, and is still reasonably robust to noise. Analysis According to the experimental results, KAR is not only comparable in performance with the state-of-the-art MRC models, but also superior to them in terms of both the hunger for data and the robustness to noise.",
+      "Model Comparison in the Hunger for Data We compare KAR with other MRC models in the hunger for data. Specifically, instead of using all the training examples, we produce several training subsets (i.e. subsets of the training examples) so as to study the relationship between the proportion of the available training examples and the performance. We produce each training subset by sampling a specific number of questions from all the questions relevant to each passage.",
+      "When only a subset (20\\%--80\\%) of the training examples are available, KAR outperforms the state-of-the-art MRC models by a large margin, and is still reasonably robust to noise. Data Enrichment Method In this section, we elaborate a WordNet-based data enrichment method, which is aimed at extracting inter-word semantic connections from each passage-question pair in our MRC dataset. The extraction is performed in a controllable manner, and the extracted results are provided as general knowledge to our MRC model.",
+      "As shown in Table~, on the development set and the test set, the performance of KAR is on par with that of the state-of-the-art MRC models; on the adversarial sets, KAR outperforms the state-of-the-art MRC models by a large margin. That is to say, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them. \\\\ To verify the effectiveness of general knowledge, we first study the relationship between the amount of general knowledge and the performance of KAR.",
+      "On the one hand, we propose a data enrichment method, which uses WordNet to extract inter-word semantic connections as general knowledge from each given passage-question pair. On the other hand, we propose an end-to-end MRC model named as Knowledge Aided Reader (KAR), which explicitly uses the above extracted general knowledge to assist its attention mechanisms. Based on the data enrichment method, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them.",
+      "The above empirical findings imply that general knowledge indeed plays an effective role in KAR. \\\\ To demonstrate the advantage of our explicit way to utilize general knowledge over the existing implicit way, we compare the performance of KAR with that reported by \\citet{weissenborndirk:2017, which used an encoding-based method to utilize the general knowledge dynamically retrieved from Wikipedia and ConceptNet. Since their best model only achieved an EM of 69.5 and an F1 score of 79.7 on the development set, which is much lower than the performance of KAR, we have good reason to believe that our explicit way works better than the existing implicit way."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually shows the performance of KAR, SAN, and QANet as the proportion of available training examples decreases, which directly addresses the question. Text 0 provides a description of the performance comparison among these models, supporting the visual data.\",\n    \"Answer\": \"As the proportion of available training examples decreases, the performance of KAR, SAN, and QANet (without data augmentation) all decline. However, KAR consistently outperforms SAN and QANet across all proportions.\"\n}"
+  },
+  "4": {
+    "question": "Which model performs the best when trained on 60% of the training data?",
+    "ground_truth": "KAR",
+    "selected_figures_names": [
+      "1809.03449v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the performance of KAR, SAN, and QANet on different proportions of training data, including 60%. Text 0 discusses the performance comparison of these models, indicating that KAR performs better than SAN and QANet.",
+    "answer": "KAR performs the best when trained on 60% of the training data.",
+    "text_chunks": [
+      "By separately sampling 1, 2, 3, and 4 questions on each passage, we obtain four training subsets, which separately contain 20\\%, 40\\%, 60\\%, and 80\\% of the training examples. As shown in Figure~, with KAR, SAN (re-implemented), and QANet (re-implemented without data augmentation) trained on these training subsets, we evaluate their performance on the development set, and find that KAR performs much better than SAN and QANet. As shown in Figure~ and Figure~, with the above KAR, SAN, and QANet trained on the same training subsets, we also evaluate their performance on the adversarial sets, and still find that KAR performs much better than SAN and QANet.",
+      "Several recent breakthroughs in MRC benefit from feature-based transfer learning and fine-tuning-based transfer learning , which are based on certain word-level or sentence-level models pre-trained on large external corpora in certain supervised or unsupervised manners. Experiments Experimental Settings MRC Dataset. The MRC dataset used in this paper is SQuAD 1.1, which contains over 100,000 passage-question pairs and has been randomly partitioned into three parts: a training set (80\\%), a development set (10\\%), and a test set (10\\%).",
+      "That is to say, when only a subset of the training examples are available, KAR outperforms the state-of-the-art MRC models by a large margin, and is still reasonably robust to noise. Analysis According to the experimental results, KAR is not only comparable in performance with the state-of-the-art MRC models, but also superior to them in terms of both the hunger for data and the robustness to noise.",
+      "It is proved that properly augmenting training examples can improve the performance of MRC models. For example, \\citet{yangzhilin:2017 trained a generative model to generate questions based on unlabeled text, which substantially boosted their performance; \\citet{yuadamswei:2018 trained a back-and-forth translation model to paraphrase training examples, which brought them a significant performance gain. \\\\ Multi-step Reasoning.",
+      "Model Comparison in the Hunger for Data We compare KAR with other MRC models in the hunger for data. Specifically, instead of using all the training examples, we produce several training subsets (i.e. subsets of the training examples) so as to study the relationship between the proportion of the available training examples and the performance. We produce each training subset by sampling a specific number of questions from all the questions relevant to each passage.",
+      "For the dense layers and the BiLSTMs, we set the dimensionality unit d to 600. For model optimization, we apply the Adam optimizer with a learning rate of 0.0005 and a mini-batch size of 32. For model evaluation, we use Exact Match (EM) and F1 score as evaluation metrics.",
+      "\\\\ OF COURSE NOT. There is a huge gap between MRC models and human beings, which is mainly reflected in the hunger for data and the robustness to noise. On the one hand, developing MRC models requires a large amount of training examples (i.e. the passage-question pairs labeled with answer spans), while human beings can achieve good performance on evaluation examples (i.e. the passage-question pairs to address) without training examples.",
+      "As shown in Table~, on the development set and the test set, the performance of KAR is on par with that of the state-of-the-art MRC models; on the adversarial sets, KAR outperforms the state-of-the-art MRC models by a large margin. That is to say, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them. \\\\ To verify the effectiveness of general knowledge, we first study the relationship between the amount of general knowledge and the performance of KAR."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the performance of KAR, SAN, and QANet on different proportions of training data, including 60%. Text 0 discusses the performance comparison of these models, indicating that KAR performs better than SAN and QANet.\",\n    \"Answer\": \"KAR performs the best when trained on 60% of the training data.\"\n}"
+  },
+  "5": {
+    "question": "Which of the three models, KAR, SAN, or QANet (without data augmentation), performs the best on AddSent when trained on the full training set?",
+    "ground_truth": "KAR",
+    "selected_figures_names": [
+      "1809.03449v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03449v3-Figure4-1.png",
+      "1809.03449v3-Figure2-1.png",
+      "1809.03449v3-Figure3-1.png",
+      "1809.03449v3-Table3-1.png",
+      "1809.03449v3-Table2-1.png",
+      "1809.03449v3-Table1-1.png",
+      "1809.03449v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the F1 scores of KAR, SAN, and QANet on AddSent across different proportions of training data, including the full training set. Text 0 discusses the performance of these models on the development and adversarial sets, indicating that KAR performs better.",
+    "answer": "KAR performs the best on AddSent when trained on the full training set.",
+    "text_chunks": [
+      "By separately sampling 1, 2, 3, and 4 questions on each passage, we obtain four training subsets, which separately contain 20\\%, 40\\%, 60\\%, and 80\\% of the training examples. As shown in Figure~, with KAR, SAN (re-implemented), and QANet (re-implemented without data augmentation) trained on these training subsets, we evaluate their performance on the development set, and find that KAR performs much better than SAN and QANet. As shown in Figure~ and Figure~, with the above KAR, SAN, and QANet trained on the same training subsets, we also evaluate their performance on the adversarial sets, and still find that KAR performs much better than SAN and QANet.",
+      "As shown in Table~, by increasing \\kappa from 0 to 5 in the data enrichment method, the amount of general knowledge rises monotonically, but the performance of KAR first rises until \\kappa reaches 3 and then drops down. Then we conduct an ablation study by replacing the knowledge aided attention mechanisms with the mutual attention proposed by \\citet{seominjoon:2016 and the self attention proposed by \\citet{wangwenhui:2017 separately, and find that the F1 score of KAR drops by 4.2 on the development set, 7.8 on AddSent, and 9.1 on AddOneSent. Finally we find that after only one epoch of training, KAR already achieves an EM of 71.9 and an F1 score of 80.8 on the development set, which is even better than the final performance of several strong baselines, such as DCN (EM / F1: 65.4 / 75.6) and BiDAF (EM / F1: 67.7 / 77.3) .",
+      "That is to say, when only a subset of the training examples are available, KAR outperforms the state-of-the-art MRC models by a large margin, and is still reasonably robust to noise. Analysis According to the experimental results, KAR is not only comparable in performance with the state-of-the-art MRC models, but also superior to them in terms of both the hunger for data and the robustness to noise.",
+      "When only a subset (20\\%--80\\%) of the training examples are available, KAR outperforms the state-of-the-art MRC models by a large margin, and is still reasonably robust to noise. Data Enrichment Method In this section, we elaborate a WordNet-based data enrichment method, which is aimed at extracting inter-word semantic connections from each passage-question pair in our MRC dataset. The extraction is performed in a controllable manner, and the extracted results are provided as general knowledge to our MRC model.",
+      "On the one hand, we propose a data enrichment method, which uses WordNet to extract inter-word semantic connections as general knowledge from each given passage-question pair. On the other hand, we propose an end-to-end MRC model named as Knowledge Aided Reader (KAR), which explicitly uses the above extracted general knowledge to assist its attention mechanisms. Based on the data enrichment method, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them.",
+      "The reasons for these achievements, we believe, are as follows: Conclusion In this paper, we innovatively integrate the neural networks of MRC models with the general knowledge of human beings. Specifically, inter-word semantic connections are first extracted from each given passage-question pair by a WordNet-based data enrichment method, and then provided as general knowledge to an end-to-end MRC model named as Knowledge Aided Reader (KAR), which explicitly uses the general knowledge to assist its attention mechanisms. Experimental results show that KAR is not only comparable in performance with the state-of-the-art MRC models, but also superior to them in terms of both the hunger for data and the robustness to noise.",
+      "Model Comparison in the Hunger for Data We compare KAR with other MRC models in the hunger for data. Specifically, instead of using all the training examples, we produce several training subsets (i.e. subsets of the training examples) so as to study the relationship between the proportion of the available training examples and the performance. We produce each training subset by sampling a specific number of questions from all the questions relevant to each passage.",
+      "As shown in Table~, on the development set and the test set, the performance of KAR is on par with that of the state-of-the-art MRC models; on the adversarial sets, KAR outperforms the state-of-the-art MRC models by a large margin. That is to say, KAR is comparable in performance with the state-of-the-art MRC models, and significantly more robust to noise than them. \\\\ To verify the effectiveness of general knowledge, we first study the relationship between the amount of general knowledge and the performance of KAR."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the F1 scores of KAR, SAN, and QANet on AddSent across different proportions of training data, including the full training set. Text 0 discusses the performance of these models on the development and adversarial sets, indicating that KAR performs better.\",\n    \"Answer\": \"KAR performs the best on AddSent when trained on the full training set.\"\n}"
+  }
+}

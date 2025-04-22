@@ -1,0 +1,29 @@
+{
+  "0": {
+    "question": "What is the equation that describes the motion of a mass attached to a spring?",
+    "ground_truth": "The equation that describes the motion of a mass attached to a spring is:\n```\nm d^2 X / dt^2 + kX = 0\n```\nwhere:\n* m is the mass of the object\n* X is the displacement of the object from its equilibrium position\n* k is the spring constant\n* t is time",
+    "selected_figures_names": [
+      "1612.02803v5-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1612.02803v5-Table1-1.png",
+      "1612.02803v5-Figure1-1.png",
+      "1612.02803v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 provides a visual representation of the harmonic oscillator and includes the differential equation describing the system. Text 2 explains the oscillation of the system and provides the equation for the position of the particle over time.",
+    "answer": "The equation that describes the motion of a mass attached to a spring is mX\u0308 + kX = 0, where X\u0308 is the acceleration of the particle, m is the mass, and k is the spring constant.",
+    "text_chunks": [
+      "The energy stored in the spring is where X denotes the displacement of the spring, and \\cK is the Hooke's constant of the spring. Here V(x) is called the potential energy in existing literature on physics. where % \\ddot{X: = d^2X/dt^2 is % the acceleration of the particle.",
+      "The spring always tends to stay at the equilibrium position. When it is stretched or compressed, there will be a force acting on the object that stretches or compresses it. The force is always pointing toward the equilibrium position.",
+      "If we compress the spring and release it at point x_0, the system will start oscillating, i.e., at time t, the position of the particle is X(t) = x_0\\cos(\\omega t), where \\omega=\\sqrt{\\cK/m is the oscillating frequency. Such a system has two physical properties: (1) The total energy is always a constant, where K(X):=\\frac{1{2m\\dot{X^2 is the kinetic energy of the system. This is also called energy conservation in physics; (2) The system never stops.",
+      "\\noindent guarantees that the force field is strong enough, since the left hand side of the above equation is exactly the potential energy of a spring based on Hooke's law. Moreover, the convexity condition V(x) \\le \\inner{\\nabla V(x){X guarantees that the force field has a large component pointing at the equilibrium point (acting as a restoration force). { As indicated in , P\\L~is a much weaker condition than the strong convexity.",
+      "We then give a more detailed interpretation of our proposed system from a perspective of physics: \\noindent{\\bf Consequence of Particle Mass --- As shown in Section , a massless particle system (mass m=0) describes the simple gradient descent algorithm. \\vspace{0.1in \\noindent{\\bf Damping and Convergence Rate --- For a quadratic potential V(x) = \\frac{\\mu{2\\nbr{x^2, the system has a exponential energy decay, where the exponent factor depends on mass m, damping coefficient c, and the property of the function (e.g. P{\\L-conefficient). As discussed in Section~, the decay rate is the fastest when the system is critically damped, i.e, c^2=4m\\mu.",
+      "This can be viewed as the momentum of a particle during its movement. Similar to VGD, NAG only needs to calculate a gradient of f in each iteration. Similar to VGD, we can choose \\eta\\leq\\frac{1{L for a L-smooth f to guarantee convergence.",
+      "A simple damping is a force proportional to the negative velocity of the particle (e.g. submerge the system in some viscous fluid) defined as where c is the viscous damping coefficient. Suppose the potential energy of the system is f(x), then the differential equation of the system is, For the quadratic potential, i.e., f(x) = \\frac{\\cK{2\\|x-x^*\\|^2, the energy exhibits exponential decay, i.e., for under damped or nearly critical damped system (e.g. c^2\\lesssim 4m \\cK). For an over damped system (i.e. c^2>4m\\cK), the energy decay is For extremely over damping cases, i.e., c^2\\gg 4m\\cK, we have \\frac{c{m-\\sqrt{\\frac{c^2{m^2-\\frac{4\\cK{m\\rightarrow \\frac{2\\cK{c.",
+      "Damped Harmonic Oscillator In classic mechanics, the harmonic oscillator is one of the first mechanic systems, which admit an exact solution. This system consists of a massive particle and restoring force. A typical example is a massive particle connecting to a massless spring."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 provides a visual representation of the harmonic oscillator and includes the differential equation describing the system. Text 2 explains the oscillation of the system and provides the equation for the position of the particle over time.\",\n    \"Answer\": \"The equation that describes the motion of a mass attached to a spring is mX\u0308 + kX = 0, where X\u0308 is the acceleration of the particle, m is the mass, and k is the spring constant.\"\n}"
+  }
+}

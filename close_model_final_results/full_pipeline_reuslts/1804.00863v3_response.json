@@ -1,0 +1,210 @@
+{
+  "0": {
+    "question": "How does the appearance of the sphere differ between the re-synthesis using DAMs and the reference image?",
+    "ground_truth": "The sphere in the re-synthesis using DAMs appears to have a more even and consistent surface texture than the reference image.",
+    "selected_figures_names": [
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure1-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure1-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Figure5-1.png",
+      "1804.00863v3-Figure10-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 shows a comparison between the re-synthesis using DAMs and the reference image, which directly addresses the question. Text 0 provides context about the comparison between DAMs and reflectance maps, which is relevant to understanding the differences in appearance.",
+    "answer": "The appearance of the sphere using DAMs closely matches the reference image, maintaining the complex material details under natural illumination, while the reflectance maps may not capture these details as accurately.",
+    "text_chunks": [
+      "This allows freely changing the viewer and surface geometry, which is not possible for classic reflectance maps that fix the relation between view and illumination (cf. \\refFig{Teaser). \\myfiguretop{Teaser{ Frames from a video with a moving viewer (columns) comparing a re-synthesis using our novel deep appearance maps (DAMs) (top) and reflectance maps (RMs) (bottom) to a photo reference of a decorative sphere with a complex material under natural illumination (middle). Second, while classic Reflectance Maps (RM) can be simply tabulated using a single 2D image, the full appearance is a 4D phenomenon that is more challenging to represent and process.",
+      "Fourth, the DAM representation can be used for joint material estimation-and-segmentation, a generalization of the previous objective. Here the input is an image with a known number of n materials, and output is n different DAMs, and a segmentation network that maps every pixel to a n weights. We train and quantitatively test all networks on a new dataset of photo-realistically rendered images as well as on a set of real photos. \\mysection{Related Work{RelatedWork \\paragraph{Inverse Rendering One of the main aims of inverse rendering is to recover material and illumination properties of a scene.",
+      "\\mysubsection{Other Applications{Applications DAMs can also be used for other tasks such as super-resolution, where we extract a DAM in low pixel resolution that can be transferred to a high resolution normal image and denoising of Monte Carlo path tracing, where we extract a DAM from noisy observations and re-generate the image from the DAM, removing the noise. Detailed evaluation, comparing to a state-of-the-art MC denoiser and super-resolution are found in the supplemental material. \\mysection{Real-world Evaluation{RealWorld We have collected a second dataset of photographs of spherical objects with complex appearance (glossy objects under natural light).",
+      "\\myfigure{LearningToLearnResults{Results of our DAM representation trained using stochastic gradient descent (1st column), our DAMs produced by our learning-to-learn network (2nd column) as well as a reference (3rd column) in a novel-view task. The middle part of \\refTbl{Main summarizes the outcome when executing the resulting \\phi on the test data set. We see that both approaches reproduce the appearance faithfully.",
+      "In addition, it can be learned effectively from images or video frames with a known viewer position and surface orientation. Applying this representation to new view positions and surface orientations can be done at speed competitive to classic rendering or RMs, \\ie within milliseconds for full images. Acquiring a DAM requires learning a deep model for every new appearance in practice.",
+      "\\mycfigure{FailureModes{ Failure modes for all three tasks: blurry highlights, split highlight segmentation and a overshooting DAM. \\myfigure{SegmentationResult{ Results of joint material segmentation and estimation for two samples (rows). In every part we show a re-synthesis, as well as two estimated materials and the resulting mask.",
+      "For the re-synthesis to new views we use the ground truth segmentation in the new view (our method only produces the segmentation in all old views). We here compare to a competitor, where the image is first segmented using k-means clustering on normals and RGB (same weight, as both have a similar range) and material is estimated for each segment in consecution. \\refTbl{Main, bottom part shows the quantitative results and \\refFig{SegmentationResult the qualitative outcome.",
+      "Our method does not involve a renderer, circumventing this problem. \\paragraph{Appearance synthesis Methods to synthesize appearance -- or simply ``rendering'' --, can be classified as simulation-based or image-based. Simulation-based methods require a complete explicit description of the environment that can be costly and difficult to acquire in practice ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 shows a comparison between the re-synthesis using DAMs and the reference image, which directly addresses the question. Text 0 provides context about the comparison between DAMs and reflectance maps, which is relevant to understanding the differences in appearance.\",\n    \"Answer\": \"The appearance of the sphere using DAMs closely matches the reference image, maintaining the complex material details under natural illumination, while the reflectance maps may not capture these details as accurately.\"\n}"
+  },
+  "1": {
+    "question": "Which method performs best for the \"Representation\" task when the view is \"Novel\"?",
+    "ground_truth": "The \"OUR\" method performs best for the \"Representation\" task when the view is \"Novel\".",
+    "selected_figures_names": [
+      "1804.00863v3-Figure1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.00863v3-Figure1-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure11-1.png",
+      "1804.00863v3-Table1-1.png",
+      "1804.00863v3-Figure9-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 5,
+    "rationale": "Image 1 shows the results of the DAM representation in a novel-view task, which is directly related to the question about performance in novel views. Text 5 discusses the results of the DAM representation in a novel-view task, indicating its effectiveness.",
+    "answer": "The DAM representation performs best for the 'Representation' task when the view is 'Novel'.",
+    "text_chunks": [
+      "\\refTbl{Main, top part, shows results as mean error across the data set. We see that for all data sets our method is a better representation in terms of having a lower DSSIM error. The difference in error is more pronounced for \\textsc{NovelView than for \\textsc{SameView.",
+      "We consider two tasks: re-synthesizing from the \\textsc{SameView (training views) as well as from a \\textsc{NovelView (test views). We will use 10 of the 32 views for every sample for training and predict 22 novel views. The 10 views form a random but consecutive range of angles ca.\\ 240 degree.",
+      "Recent methods address this problem by using CNN models to predict completely novel views. The method of Rematas~\\etal and establish a relation between surface and light transport properties and appearance given by photos, generating images ``without rendering''. A simple data-driven approach to IBR is to learn a per-pixel fully-connected neural network to reproduce per-pixel appearance depending on light.",
+      "We will now look into the three specific applications. \\mysubsection{Appearance representation{RepresentationAnalysis We study how well our approach can represent appearance per-se. Most distinctly, we propose to use a 4D appearance map while other works use 2D image representations of a reflectance map.",
+      "We have proposed and explored a novel take on appearance processing that neither works on pixel-level IBR-like representations nor by extracting classic explicit reflectance and illumination parameters. Instead, we work on a deep representation of appearance itself, defined on a generalization of reflectance maps that works in world space where observations cover all directions. We have shown to enables effective reproduction, estimation by learning-to-learn and joint material estimation-and-segmentation.",
+      "\\myfigure{LearningToLearnResults{Results of our DAM representation trained using stochastic gradient descent (1st column), our DAMs produced by our learning-to-learn network (2nd column) as well as a reference (3rd column) in a novel-view task. The middle part of \\refTbl{Main summarizes the outcome when executing the resulting \\phi on the test data set. We see that both approaches reproduce the appearance faithfully.",
+      "For the re-synthesis to new views we use the ground truth segmentation in the new view (our method only produces the segmentation in all old views). We here compare to a competitor, where the image is first segmented using k-means clustering on normals and RGB (same weight, as both have a similar range) and material is estimated for each segment in consecution. \\refTbl{Main, bottom part shows the quantitative results and \\refFig{SegmentationResult the qualitative outcome.",
+      "\\mysection [2]{ #1 \\newcommand{\\mysubsection[2]{#1 \\newcommand{\\mysubsubsection[2]{\\subsubsection{#1 \\iccvfinalcopy \\newcolumntype{s{>{\\hsize=.8\\hsizeX \\newcommand{\\heading[1]{\\multicolumn{1{c{#1 \\definecolor{darkgreen{rgb{0,.4,0 \\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref \\iccvfinalcopy % \\def\\iccvPaperID{4021 \\def\\httilde{\\mbox{\\tt\\raisebox{-.5ex{\\symbol{126 \\ificcvfinal\\pagestyle{empty\\fi \\mysection{Introduction{Introduction The visual appearance of an object depends on the combination of four main factors: viewer, geometry, material and illumination. When capturing and processing appearance, one wishes to change one or more of those factors and predict what the new appearance is. This can be achieved using methods ranging from implicit image-based representations to explicit Computer Graphics-like representations ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 5,\n    \"Rationale\": \"Image 1 shows the results of the DAM representation in a novel-view task, which is directly related to the question about performance in novel views. Text 5 discusses the results of the DAM representation in a novel-view task, indicating its effectiveness.\",\n    \"Answer\": \"The DAM representation performs best for the 'Representation' task when the view is 'Novel'.\"\n}"
+  },
+  "2": {
+    "question": "How do the reconstructions compare to the original samples?",
+    "ground_truth": "The reconstructions are very similar to the original samples.",
+    "selected_figures_names": [
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure9-1.png",
+      "1804.00863v3-Figure11-1.png",
+      "1804.00863v3-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure9-1.png",
+      "1804.00863v3-Figure11-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure1-1.png",
+      "1804.00863v3-Figure5-1.png",
+      "1804.00863v3-Figure7-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 both focus on the reconstruction of materials from multiple views and illuminations, which directly addresses the question about comparing reconstructions to original samples.",
+    "answer": "The reconstructions closely resemble the original samples, capturing the appearance of multiple materials under different illuminations and views.",
+    "text_chunks": [
+      "For the re-synthesis to new views we use the ground truth segmentation in the new view (our method only produces the segmentation in all old views). We here compare to a competitor, where the image is first segmented using k-means clustering on normals and RGB (same weight, as both have a similar range) and material is estimated for each segment in consecution. \\refTbl{Main, bottom part shows the quantitative results and \\refFig{SegmentationResult the qualitative outcome.",
+      "To quantify the difference, we represent the \\textsc{SingleMaterial variant of our dataset as a common reflectance map, as well as using our appearance map. To emulate a common reflectance map, which is defined in view space, we take the input image from the closest view from the training set as a source image. Every normal in the new view is converted to camera space of the new view and the same is done for the normal in the old view.",
+      "\\myfigure{RealData{ Real-world photo data and our reconstruction (from other views) of multiple materials (denoted \\textsf M) in multiple illumination (\\textsf L) from multiple views (\\textsf V). \\refTbl{RealWorld summarizes the outcome for the representation task previously explored for synthetic data only. An example result is seen in \\refFig{Teaser, more are shown in the supplemental materials.",
+      "Our method can estimate view-dependent appearance, unlike RM/RM++, from a small training set, but it can't fully reconstruct mirror-like reflections. \\myfigure{ShapeTransfer{Transfer of appearance from a real video sequence (left) to new 3D shapes (right). \\mysection{Discussion and Conclusion{Conclusion",
+      "A detailed plot of error distribution is seen in \\refFig{Plots, left. This is, as classic reflectance map captures appearance for a fixed viewer location, for changing geometry, but does not generalize when the viewer moves. Arguably, classic RMs look qualitatively plausible without a reference, but only have low quantitative similarity (SSIM) in novel views.",
+      "We consider two tasks: re-synthesizing from the \\textsc{SameView (training views) as well as from a \\textsc{NovelView (test views). We will use 10 of the 32 views for every sample for training and predict 22 novel views. The 10 views form a random but consecutive range of angles ca.\\ 240 degree.",
+      "This allows freely changing the viewer and surface geometry, which is not possible for classic reflectance maps that fix the relation between view and illumination (cf. \\refFig{Teaser). \\myfiguretop{Teaser{ Frames from a video with a moving viewer (columns) comparing a re-synthesis using our novel deep appearance maps (DAMs) (top) and reflectance maps (RMs) (bottom) to a photo reference of a decorative sphere with a complex material under natural illumination (middle). Second, while classic Reflectance Maps (RM) can be simply tabulated using a single 2D image, the full appearance is a 4D phenomenon that is more challenging to represent and process.",
+      "\\myfigure{LearningToLearnResults{Results of our DAM representation trained using stochastic gradient descent (1st column), our DAMs produced by our learning-to-learn network (2nd column) as well as a reference (3rd column) in a novel-view task. The middle part of \\refTbl{Main summarizes the outcome when executing the resulting \\phi on the test data set. We see that both approaches reproduce the appearance faithfully."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 both focus on the reconstruction of materials from multiple views and illuminations, which directly addresses the question about comparing reconstructions to original samples.\",\n    \"Answer\": \"The reconstructions closely resemble the original samples, capturing the appearance of multiple materials under different illuminations and views.\"\n}"
+  },
+  "3": {
+    "question": "What is the difference between the representation module and the learning-to-learn module?",
+    "ground_truth": "The representation module takes an input image and outputs a feature representation. The learning-to-learn module takes a set of features and learns how to segment the image.",
+    "selected_figures_names": [
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure11-1.png",
+      "1804.00863v3-Figure9-1.png"
+    ],
+    "all_figures_names": [
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure11-1.png",
+      "1804.00863v3-Figure9-1.png",
+      "1804.00863v3-Figure5-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 shows the architectures used, including the representation and learning-to-learn modules. Text 4 explains the execution time differences and applications of these modules, highlighting their distinct roles.",
+    "answer": "The representation module focuses on creating a deep appearance model, which takes more than a minute to learn but executes quickly on a full image. The learning-to-learn module, on the other hand, is designed to speed up the learning process, enabling rapid acquisition of appearance models at interactive rates.",
+    "text_chunks": [
+      "\\mysubsection{Learning-to-learn Deep Appearance Models{LearningToLearn Taking it a step further, we suggest to replace the learning procedure explained before by a network (learning-to-learn ). The main idea is to speed up the learning process, allowing acquisition of a deep appearance material on-the-fly at interactive rates (one millisecond) instead of an optimization requiring 71 seconds (for \\refTbl{Main on a Nvidia GTX 1080).",
+      "Dark hues are the competitor and light hues ours. Results \\mysubsection{Protocol{Protocol Here we evaluate our deep appearance representation (\\refSec{RepresentationAnalysis), as well as its application to learning-to-learn appearance (\\refSec{LearningToLearnAnalysis) and joint material estimation-and-segmentation (\\refSec{SegmentationAnalysis). Instrumentation for all tasks is performed in a similar fashion using our multi-view, multi-material data set (\\refSec{DataSet).",
+      "\\mysubsection{Learning-to-learn appearance models{LearningToLearnAnalysis Here, we also follow the protocol described in \\refSec{Protocol. After having established the superiority of deep appearance maps to classic reflectance maps in the previous section, we use it as a competitor (SGD) for learning-to-learn. At best, our learning-to-learn network produces a network which is as good as running a full SGD pass.",
+      "For learning-to-learn \\refFig{FailureModes, right, SGD might produce the right network, but the learned network overshoots. Similarly, highlights tend to be more blurry (not shown). For segmentation \\refFig{FailureModes, middle, the rim highlight in the back of the character is purely white and apparently does not look enough like other highlights on blue to be understood.",
+      "\\myfigure{Architectures{The four architectures used. Learning a deep appearance model takes more than a minute while it is executed on a full image within one millisecond. We will now see how this representation enables two novel applications: learning-to-learn material appearance (\\refSec{LearningToLearn) and material estimation-and-segmentation (\\refSec{Segmentation).",
+      "In our method we perform joint multi-material segmentation and estimation. \\paragraph{Learning-to-learn Learning-to-learn is motivated by the observation that a general optimizer, such as the one used to find the internal parameters for a network, will never be much better than a random strategy for all problems . At the same time, intelligent actors can learn very quickly, which obviously does not require a full optimization .",
+      "\\myfigure{LearningToLearnResults{Results of our DAM representation trained using stochastic gradient descent (1st column), our DAMs produced by our learning-to-learn network (2nd column) as well as a reference (3rd column) in a novel-view task. The middle part of \\refTbl{Main summarizes the outcome when executing the resulting \\phi on the test data set. We see that both approaches reproduce the appearance faithfully.",
+      "We have proposed and explored a novel take on appearance processing that neither works on pixel-level IBR-like representations nor by extracting classic explicit reflectance and illumination parameters. Instead, we work on a deep representation of appearance itself, defined on a generalization of reflectance maps that works in world space where observations cover all directions. We have shown to enables effective reproduction, estimation by learning-to-learn and joint material estimation-and-segmentation."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 shows the architectures used, including the representation and learning-to-learn modules. Text 4 explains the execution time differences and applications of these modules, highlighting their distinct roles.\",\n    \"Answer\": \"The representation module focuses on creating a deep appearance model, which takes more than a minute to learn but executes quickly on a full image. The learning-to-learn module, on the other hand, is designed to speed up the learning process, enabling rapid acquisition of appearance models at interactive rates.\"\n}"
+  },
+  "4": {
+    "question": "What is the difference between the representation task and the learning-to-learn task?",
+    "ground_truth": "The representation task takes an appearance as input and outputs an RGB value, while the learning-to-learn task takes an image as input and outputs a DAM representation.",
+    "selected_figures_names": [
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure7-1.png",
+      "1804.00863v3-Figure5-1.png",
+      "1804.00863v3-Figure1-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure6-1.png",
+      "1804.00863v3-Figure11-1.png",
+      "1804.00863v3-Figure3-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 visually explains the different tasks, including the representation and learning-to-learn tasks. Text 0 provides a concise description of these tasks, highlighting the mapping from normal and view directions to RGB values for the representation task and the mapping of an image to a DAM representation for the learning-to-learn task.",
+    "answer": "The representation task maps from normal and view directions to RGB values using a neural network, while the learning-to-learn task maps an image to a DAM representation.",
+    "text_chunks": [
+      "a) The first task simply reproduces a given appearance, \\ie it maps from normal and view directions to RGB values using a NN. b) In a learning-to-learn task a network maps an image to a DAM representation.",
+      "\\mysubsection{Learning-to-learn Deep Appearance Models{LearningToLearn Taking it a step further, we suggest to replace the learning procedure explained before by a network (learning-to-learn ). The main idea is to speed up the learning process, allowing acquisition of a deep appearance material on-the-fly at interactive rates (one millisecond) instead of an optimization requiring 71 seconds (for \\refTbl{Main on a Nvidia GTX 1080).",
+      "Dark hues are the competitor and light hues ours. Results \\mysubsection{Protocol{Protocol Here we evaluate our deep appearance representation (\\refSec{RepresentationAnalysis), as well as its application to learning-to-learn appearance (\\refSec{LearningToLearnAnalysis) and joint material estimation-and-segmentation (\\refSec{SegmentationAnalysis). Instrumentation for all tasks is performed in a similar fashion using our multi-view, multi-material data set (\\refSec{DataSet).",
+      "\\myfigure{LearningToLearnResults{Results of our DAM representation trained using stochastic gradient descent (1st column), our DAMs produced by our learning-to-learn network (2nd column) as well as a reference (3rd column) in a novel-view task. The middle part of \\refTbl{Main summarizes the outcome when executing the resulting \\phi on the test data set. We see that both approaches reproduce the appearance faithfully.",
+      "In our method we perform joint multi-material segmentation and estimation. \\paragraph{Learning-to-learn Learning-to-learn is motivated by the observation that a general optimizer, such as the one used to find the internal parameters for a network, will never be much better than a random strategy for all problems . At the same time, intelligent actors can learn very quickly, which obviously does not require a full optimization .",
+      "\\mysubsection{Learning-to-learn appearance models{LearningToLearnAnalysis Here, we also follow the protocol described in \\refSec{Protocol. After having established the superiority of deep appearance maps to classic reflectance maps in the previous section, we use it as a competitor (SGD) for learning-to-learn. At best, our learning-to-learn network produces a network which is as good as running a full SGD pass.",
+      "\\myfigure{Architectures{The four architectures used. Learning a deep appearance model takes more than a minute while it is executed on a full image within one millisecond. We will now see how this representation enables two novel applications: learning-to-learn material appearance (\\refSec{LearningToLearn) and material estimation-and-segmentation (\\refSec{Segmentation).",
+      "We have proposed and explored a novel take on appearance processing that neither works on pixel-level IBR-like representations nor by extracting classic explicit reflectance and illumination parameters. Instead, we work on a deep representation of appearance itself, defined on a generalization of reflectance maps that works in world space where observations cover all directions. We have shown to enables effective reproduction, estimation by learning-to-learn and joint material estimation-and-segmentation."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 visually explains the different tasks, including the representation and learning-to-learn tasks. Text 0 provides a concise description of these tasks, highlighting the mapping from normal and view directions to RGB values for the representation task and the mapping of an image to a DAM representation for the learning-to-learn task.\",\n    \"Answer\": \"The representation task maps from normal and view directions to RGB values using a neural network, while the learning-to-learn task maps an image to a DAM representation.\"\n}"
+  },
+  "5": {
+    "question": "What is the relationship between gloss and representation error?",
+    "ground_truth": "The representation error decreases as the gloss decreases.",
+    "selected_figures_names": [
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure5-1.png",
+      "1804.00863v3-Figure10-1.png"
+    ],
+    "all_figures_names": [
+      "1804.00863v3-Figure8-1.png",
+      "1804.00863v3-Figure12-1.png",
+      "1804.00863v3-Figure5-1.png",
+      "1804.00863v3-Figure10-1.png",
+      "1804.00863v3-Figure3-1.png",
+      "1804.00863v3-Figure4-1.png",
+      "1804.00863v3-Figure2-1.png",
+      "1804.00863v3-Figure9-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 directly shows the relationship between gloss and representation error using a graph. Text 0 discusses error in relation to specular properties, which is relevant to gloss.",
+    "answer": "The relationship between gloss and representation error is that as gloss decreases, the representation error also decreases.",
+    "text_chunks": [
+      "Consequently, it is assigned the metallic material, which is incorrect. When the material approaches an arbitrarily complex illumination seen in a mirror, no network can capture all 4D variation anymore. This relation is shown in the inset plot (\\refFig{GlossVsError) where the vertical axis denotes error, which is decreasing when specular is decreased as well, along the horizontal axis.",
+      "\\refTbl{Main, top part, shows results as mean error across the data set. We see that for all data sets our method is a better representation in terms of having a lower DSSIM error. The difference in error is more pronounced for \\textsc{NovelView than for \\textsc{SameView.",
+      "Dark hues are the competitor and light hues ours. Results \\mysubsection{Protocol{Protocol Here we evaluate our deep appearance representation (\\refSec{RepresentationAnalysis), as well as its application to learning-to-learn appearance (\\refSec{LearningToLearnAnalysis) and joint material estimation-and-segmentation (\\refSec{SegmentationAnalysis). Instrumentation for all tasks is performed in a similar fashion using our multi-view, multi-material data set (\\refSec{DataSet).",
+      "In each application we also consider one application-specific competitor to solve the task. We use perfect classic reflectance maps for appearance representation , an upper bound with what could be estimated . SGD is the common solution to learn appearance.",
+      "For learning-to-learn \\refFig{FailureModes, right, SGD might produce the right network, but the learned network overshoots. Similarly, highlights tend to be more blurry (not shown). For segmentation \\refFig{FailureModes, middle, the rim highlight in the back of the character is purely white and apparently does not look enough like other highlights on blue to be understood.",
+      "A detailed plot of error distribution is seen in \\refFig{Plots, left. This is, as classic reflectance map captures appearance for a fixed viewer location, for changing geometry, but does not generalize when the viewer moves. Arguably, classic RMs look qualitatively plausible without a reference, but only have low quantitative similarity (SSIM) in novel views.",
+      "We have proposed and explored a novel take on appearance processing that neither works on pixel-level IBR-like representations nor by extracting classic explicit reflectance and illumination parameters. Instead, we work on a deep representation of appearance itself, defined on a generalization of reflectance maps that works in world space where observations cover all directions. We have shown to enables effective reproduction, estimation by learning-to-learn and joint material estimation-and-segmentation.",
+      "While being marginally worse, it is two orders of magnitude faster. \\refFig{Plots show the error distribution across the data set. A visual comparison is found in \\refFig{LearningToLearnResults."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 directly shows the relationship between gloss and representation error using a graph. Text 0 discusses error in relation to specular properties, which is relevant to gloss.\",\n    \"Answer\": \"The relationship between gloss and representation error is that as gloss decreases, the representation error also decreases.\"\n}"
+  }
+}

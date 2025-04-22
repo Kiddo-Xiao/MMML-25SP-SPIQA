@@ -1,0 +1,30 @@
+{
+  "0": {
+    "question": "What is the sample complexity lower bound for recovering a tree-structured sparse signal using standard compressed sensing?",
+    "ground_truth": "\u03a9(s)",
+    "selected_figures_names": [
+      "1811.06635v1-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1811.06635v1-Table1-1.png",
+      "1811.06635v1-Figure1-1.png",
+      "1811.06635v1-Figure2-1.png",
+      "1811.06635v1-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a table with specific lower bounds for different sparsity structures, including tree-structured sparsity, which directly answers the question. Text 0 discusses sparsity structures and sample complexity, supporting the information in the image.",
+    "answer": "The sample complexity lower bound for recovering a tree-structured sparse signal using standard compressed sensing is \u03a9(s).",
+    "text_chunks": [
+      "For our proofs, we have assumed that the signal has a sparsity structure which can be modeled by weighted graph model. We have provided specific bounds on the sample complexity for many commonly seen sparsity structures including tree-structured sparsity, block sparsity and regular s-sparsity. In case of regular s-sparsity, the bound on the sample complexity for one-bit compressed sensing is tight as it matches the current upper bound~.",
+      "The sample complexity of sparse recovery for the standard compressed sensing has been analyzed in many prior works. In particular, if the design matrix \\bX satisfies the Restricted Isometry Property (RIP) then algorithms such as CoSamp~, Subspace Pursuit (SP)~ and Iterative Hard Thresholding (IHT) can recover \\bbeta^* quite efficiently and in a stable way with a sample complexity of O(s \\log\\frac{d{s). Many algorithms use random matrices such as Gaussian (or sub-Gaussian in general) and Bernoulli random matrices because it is known that these matrices satisfy RIP with high probability~.",
+      "Main results In this section, we state our results for the standard compressed sensing and one-bit compressed sensing. We consider both the noisy and noiseless cases. We establish an information theoretic lower bound on the sample complexity for signal recovery on a WGM.",
+      "Then we can efficiently find an estimate \\hat{\\bbeta as in Definition~, that is, for an absolute constant C > 0. \\end{theorem Notice that in the noiseless case, that is, when \\be = \\bzero, they recover the true signal \\bbeta^* exactly. We prove that information-theoretically, the bound on the sample complexity of standard compressed sensing in is tight up to a logarithmic factor of sparsity.",
+      "\\noindent Given the above and Theorems~, , , and , we prove our claim. Concluding Remarks In this paper, we provide information theoretic lower bounds on the necessary number of samples required to recover a signal in compressed sensing.",
+      "For standard compressed sensing, our bounds are tight up to a factor of \\frac{1{\\log s. The use of the model-based framework for one-bit compressed sensing remains an open area of research and our information theoretic lower bounds on sample complexity may act as a baseline comparison for the algorithms proposed in future. \\vspace{2mm",
+      "We state our results more formally in the following subsections. Results for Standard Compressed Sensing For standard compressed sensing, the recovery is not exact for the noisy case but it is sufficiently close to the true signal in \\ell_2-norm with respect to the noise. Our setup, in this case, uses a Gaussian design matrix.",
+      "Any algorithm which infers \\bbeta^* from this particular ensemble would require a minimum number of samples. The use of restricted ensembles is customary for information theoretic lower bounds~. It is important to mention that results for efficient recovery in compressed sensing depend on the design matrix satisfying certain properties."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a table with specific lower bounds for different sparsity structures, including tree-structured sparsity, which directly answers the question. Text 0 discusses sparsity structures and sample complexity, supporting the information in the image.\",\n    \"Answer\": \"The sample complexity lower bound for recovering a tree-structured sparse signal using standard compressed sensing is \u03a9(s).\"\n}"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "0": {
+    "question": "What is the difference between an overlapping case and an error case?",
+    "ground_truth": "An overlapping case is when multiple aspects share the same opinion snippet, while an error case is when the model incorrectly identifies an aspect or opinion.",
+    "selected_figures_names": [
+      "1812.10735v2-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1812.10735v2-Table4-1.png",
+      "1812.10735v2-Table1-1.png",
+      "1812.10735v2-Figure1-1.png",
+      "1812.10735v2-Figure2-1.png",
+      "1812.10735v2-Figure3-1.png",
+      "1812.10735v2-Figure5-1.png",
+      "1812.10735v2-Figure4-1.png",
+      "1812.10735v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides visual examples of overlapping and error cases, showing how aspects and opinions are highlighted. Text 1 discusses overlapping cases where multiple aspects share the same opinion snippet, which is relevant to understanding the difference.",
+    "answer": "An overlapping case involves multiple aspects sharing the same opinion snippet, while an error case occurs when the aspect fails to correctly associate with the relevant opinion, often due to inaccurate sentence representation or aspect embedding.",
+    "text_chunks": [
+      "A multi-aspect sentence can be categorized as overlapping or non-overlapping. A sentence is annotated as non-overlapping if any two of its aspects have no overlap. Our study found that around 85\\% of the multi-aspect sentences are non-overlapping in the two public datasets.",
+      "\\newline\\indent We plot the regularization loss curves in Figure , which shows that both R_s and R_o decrease during the training of AT-CAN-R_o. Case Studies{\\bf Overlapping Case We only add sparse regularization to overlapping sentences in which multiple aspects share the same opinion snippet.",
+      "Figure shows a simple example. The non-overlapping sentence contains two aspects. The aspect food is on the left side of the aspect service.",
+      "Detailed statistics are summarized in Table . Particularly, 85.23\\% and 83.73\\% of the multi-aspect sentences are non-overlapping in Rest14 and Rest15, respectively. % \\caption{ Results of the ALSC task in single-task settings in terms of accuracy (\\%) and Macro-F1 (\\%).",
+      "{\\bf Note that this layer is only available in the training stage, in which the ground-truth aspects are known for calculating the regularization loss, and then influence parameter updating in back propagation. While in the testing/inference stage, the true aspects are unknown and the regularization loss is not calculated so that this layer is omitted from the architecture. In this paper, we introduce two types of regularizations: the sparse regularization on each single aspect; the orthogonal regularization on multiple non-overlapping aspects.",
+      "As shown in Figure , for the first sentence in error case, the aspect food attends on the right word ``disappointing'', but fails to include the negation word ``never''. This may be caused by the inaccurate sentence representation or aspect embedding. We can not rebuild the connection between the aspect and the word by our regularizations.",
+      "To apply orthogonal regularization, we manually annotate the multi-aspect sentences with overlapping or non-overlapping. We randomly split the original training set into training, validation sets in the ratio 5:1, where the validation set is used to select the best model. We count the sentences of single-aspect and multi-aspect separately.",
+      "\\newcite{multi-aspect2-emnlp design an aspect alignment loss to enhance the difference of the attention weights towards the aspects which have the same context and different sentiment polarities. In this paper, we introduce orthogonal regularization to constrain the attention weights of multiple non-overlapping aspects, as well as sparse regularization on each single aspect. {\\bf Multi-task learning \\newcite{Caruana1997Multitask solves multiple learning tasks at the same time, achieving improved performance by exploiting commonalities and differences across tasks."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides visual examples of overlapping and error cases, showing how aspects and opinions are highlighted. Text 1 discusses overlapping cases where multiple aspects share the same opinion snippet, which is relevant to understanding the difference.\",\n    \"Answer\": \"An overlapping case involves multiple aspects sharing the same opinion snippet, while an error case occurs when the aspect fails to correctly associate with the relevant opinion, often due to inaccurate sentence representation or aspect embedding.\"\n}"
+  },
+  "1": {
+    "question": "Which dataset has a higher proportion of sentences containing multiple aspects: Rest14 or Rest15?",
+    "ground_truth": "Rest14 has a higher proportion of sentences containing multiple aspects compared to Rest15.",
+    "selected_figures_names": [
+      "1812.10735v2-Table1-1.png",
+      "1812.10735v2-Figure6-1.png",
+      "1812.10735v2-Figure5-1.png",
+      "1812.10735v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.10735v2-Table1-1.png",
+      "1812.10735v2-Figure6-1.png",
+      "1812.10735v2-Figure5-1.png",
+      "1812.10735v2-Figure2-1.png",
+      "1812.10735v2-Table2-1.png",
+      "1812.10735v2-Figure1-1.png",
+      "1812.10735v2-Figure3-1.png",
+      "1812.10735v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides the numbers of single- and multi-aspect sentences for both Rest14 and Rest15, which is directly relevant to determining the proportion of multi-aspect sentences. Text 1 gives the percentage of non-overlapping multi-aspect sentences, which helps in understanding the distribution of multi-aspect sentences.",
+    "answer": "Rest14 has a higher proportion of sentences containing multiple aspects compared to Rest15.",
+    "text_chunks": [
+      "Rest14 has 5 aspect categories while Rest15 has 13 ones. \\end{table* Implementation Details We set \\lambda=0.1 with the help of the validation set.",
+      "Detailed statistics are summarized in Table . Particularly, 85.23\\% and 83.73\\% of the multi-aspect sentences are non-overlapping in Rest14 and Rest15, respectively. % \\caption{ Results of the ALSC task in single-task settings in terms of accuracy (\\%) and Macro-F1 (\\%).",
+      "To avoid L_b overwhelming the overall loss, we divide it by the number of aspect categories. Experiments Datasets We conduct experiments on two public datasets from SemEval 2014 task 4 and SemEval 2015 task 12 (denoted by Rest14 and Rest15 respectively). These two datasets consist of restaurant customer reviews with annotations identifying the mentioned aspects and the sentiment polarity of each aspect.",
+      "Second, in almost all cases, applying attention regularizations to both tasks gains more performance improvement than only to the ALSC task, which shows that our attention regularization approach can be extended to different tasks which involving aspect level attention weights, and works well in multi-task settings. For example, for the Binary classification in the Rest15 dataset, M-AT-LASTM outperforms AT-LSTM by 3.57\\% of accuracy and 4.96\\% of the F1 score, and M-CAN-2R_o further outperforms M-AT-LSTM by 3.28\\% of accuracy and 4.0\\% of the F1 score. % Table shows the results of the ACD task in multi-task settings.",
+      "Firstly, we observe that by introducing attention regularizations (either R_s or R_o), most of our proposed methods outperform their counterparts. Particularly, AT-CAN-R_s and AT-CAN-R_o outperform AT-LSTM in all results; ATAE-CAN-R_s and ATAE-CAN-R_o also outperform ATAE-LSTM in 15 of 16 results. For example, in the Rest15 dataset, ATAE-CAN-R_o outperforms ATAE-LSTM by up to 5.39\\% of accuracy and 6.46\\% of the F1 score in the 3-way classification.",
+      "Conclusions We propose constrained attention networks for multi-aspect sentiment analysis, which handles multiple aspects of a sentence simultaneously. Specifically, we introduce orthogonal and sparse regularizations on attention weights. Furthermore, we introduce an auxiliary task ACD for promoting the ALSC task, and apply CAN on both tasks.",
+      "Secondly, regularization R_o achieves better performance improvement than R_s in all results. This is because R_o includes both orthogonal and sparse regularizations for non-overlapping multi-aspect sentences. Thirdly, our approaches, especially ATAE-CAN-R_o, outperform the state-of-the-art baseline model GCAE.",
+      "Specifically, we introduce orthogonal regularization for attention weights among multiple non-overlapping aspects. The orthogonal regularization tends to make the attention weights of multiple aspects concentrate on different parts of the sentence with less overlap. We also introduce the sparse regularization, which tends to make the attention weights of each aspect concentrate only on a few words."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides the numbers of single- and multi-aspect sentences for both Rest14 and Rest15, which is directly relevant to determining the proportion of multi-aspect sentences. Text 1 gives the percentage of non-overlapping multi-aspect sentences, which helps in understanding the distribution of multi-aspect sentences.\",\n    \"Answer\": \"Rest14 has a higher proportion of sentences containing multiple aspects compared to Rest15.\"\n}"
+  },
+  "2": {
+    "question": "Why do you think the performance of all models is generally lower on Rest15 compared to Rest14?",
+    "ground_truth": "The performance of all models is generally lower on Rest15 because it has a larger number of aspect categories (13) compared to Rest14 (5). This increased complexity makes it more challenging for the models to accurately identify and classify the aspects.",
+    "selected_figures_names": [
+      "1812.10735v2-Table2-1.png",
+      "1812.10735v2-Figure4-1.png",
+      "1812.10735v2-Figure1-1.png",
+      "1812.10735v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1812.10735v2-Table2-1.png",
+      "1812.10735v2-Figure4-1.png",
+      "1812.10735v2-Figure1-1.png",
+      "1812.10735v2-Table1-1.png",
+      "1812.10735v2-Figure3-1.png",
+      "1812.10735v2-Figure5-1.png",
+      "1812.10735v2-Table3-1.png",
+      "1812.10735v2-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides a comparison of model performances on Rest14 and Rest15, showing lower scores for Rest15. Text 3 explains that Rest15 consists of restaurant reviews with more aspect categories, which could contribute to the complexity and lower performance.",
+    "answer": "The performance is generally lower on Rest15 compared to Rest14 because Rest15 has more aspect categories, making the classification task more complex and challenging.",
+    "text_chunks": [
+      "Rest14 has 5 aspect categories while Rest15 has 13 ones. \\end{table* Implementation Details We set \\lambda=0.1 with the help of the validation set.",
+      "Firstly, we observe that by introducing attention regularizations (either R_s or R_o), most of our proposed methods outperform their counterparts. Particularly, AT-CAN-R_s and AT-CAN-R_o outperform AT-LSTM in all results; ATAE-CAN-R_s and ATAE-CAN-R_o also outperform ATAE-LSTM in 15 of 16 results. For example, in the Rest15 dataset, ATAE-CAN-R_o outperforms ATAE-LSTM by up to 5.39\\% of accuracy and 6.46\\% of the F1 score in the 3-way classification.",
+      "Second, in almost all cases, applying attention regularizations to both tasks gains more performance improvement than only to the ALSC task, which shows that our attention regularization approach can be extended to different tasks which involving aspect level attention weights, and works well in multi-task settings. For example, for the Binary classification in the Rest15 dataset, M-AT-LASTM outperforms AT-LSTM by 3.57\\% of accuracy and 4.96\\% of the F1 score, and M-CAN-2R_o further outperforms M-AT-LSTM by 3.28\\% of accuracy and 4.0\\% of the F1 score. % Table shows the results of the ACD task in multi-task settings.",
+      "To avoid L_b overwhelming the overall loss, we divide it by the number of aspect categories. Experiments Datasets We conduct experiments on two public datasets from SemEval 2014 task 4 and SemEval 2015 task 12 (denoted by Rest14 and Rest15 respectively). These two datasets consist of restaurant customer reviews with annotations identifying the mentioned aspects and the sentiment polarity of each aspect.",
+      "The models are trained for 100 epochs, during which the model with the best performance on the validation set is saved. We also apply early stopping in training, which means that the training will stop if the performance on validation set does not improve in 10 epochs. % Results Table and show our experimental results on the two public datasets for single-task and multi-task settings respectively.",
+      "Finally, the LSTM method outputs the worst results in all cases, because it can not distinguish different aspects. {\\bf Multi-task Settings Table shows experimental results of ALSC in multi-task settings. We first observe that the overall results in multi-task settings outperform the ones in single-task settings, which demonstrates the effectiveness of multi-task learning by introducing the auxiliary ACD task to help the ALSC task.",
+      "Detailed statistics are summarized in Table . Particularly, 85.23\\% and 83.73\\% of the multi-aspect sentences are non-overlapping in Rest14 and Rest15, respectively. % \\caption{ Results of the ALSC task in single-task settings in terms of accuracy (\\%) and Macro-F1 (\\%).",
+      "Secondly, regularization R_o achieves better performance improvement than R_s in all results. This is because R_o includes both orthogonal and sparse regularizations for non-overlapping multi-aspect sentences. Thirdly, our approaches, especially ATAE-CAN-R_o, outperform the state-of-the-art baseline model GCAE."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides a comparison of model performances on Rest14 and Rest15, showing lower scores for Rest15. Text 3 explains that Rest15 consists of restaurant reviews with more aspect categories, which could contribute to the complexity and lower performance.\",\n    \"Answer\": \"The performance is generally lower on Rest15 compared to Rest14 because Rest15 has more aspect categories, making the classification task more complex and challenging.\"\n}"
+  },
+  "3": {
+    "question": "Which model performed best on the Rest15 dataset for binary classification, and how does its performance compare to the best model for 3-way classification on the same dataset?",
+    "ground_truth": "For binary classification on the Rest15 dataset, M-CAN-2$R_o$ achieved the highest performance with an accuracy of 82.14% and Macro-F1 of 81.58%. In comparison, the best performing model for 3-way classification on Rest15 was M-CAN-2$R_s$, achieving an accuracy of 78.22% and Macro-F1 of 55.80%. This indicates that M-CAN-2$R_o$ performed better in both accuracy and Macro-F1 for binary classification compared to the best model for 3-way classification on the same dataset.",
+    "selected_figures_names": [
+      "1812.10735v2-Figure1-1.png",
+      "1812.10735v2-Figure5-1.png",
+      "1812.10735v2-Table2-1.png",
+      "1812.10735v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.10735v2-Figure1-1.png",
+      "1812.10735v2-Figure5-1.png",
+      "1812.10735v2-Table2-1.png",
+      "1812.10735v2-Figure2-1.png",
+      "1812.10735v2-Figure6-1.png",
+      "1812.10735v2-Table4-1.png",
+      "1812.10735v2-Table3-1.png",
+      "1812.10735v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides a clear comparison of model performances on the Rest15 dataset for both binary and 3-way classification. Text 0 discusses the performance improvements of models with attention regularizations, which is relevant to understanding why certain models perform better.",
+    "answer": "The best model for binary classification on the Rest15 dataset is ATAE-CAN-R_o with an accuracy of 81.75% and an F1 score of 80.91%. For 3-way classification, the best model is also ATAE-CAN-R_o with an accuracy of 78.58% and an F1 score of 54.72%.",
+    "text_chunks": [
+      "Firstly, we observe that by introducing attention regularizations (either R_s or R_o), most of our proposed methods outperform their counterparts. Particularly, AT-CAN-R_s and AT-CAN-R_o outperform AT-LSTM in all results; ATAE-CAN-R_s and ATAE-CAN-R_o also outperform ATAE-LSTM in 15 of 16 results. For example, in the Rest15 dataset, ATAE-CAN-R_o outperforms ATAE-LSTM by up to 5.39\\% of accuracy and 6.46\\% of the F1 score in the 3-way classification.",
+      "Second, in almost all cases, applying attention regularizations to both tasks gains more performance improvement than only to the ALSC task, which shows that our attention regularization approach can be extended to different tasks which involving aspect level attention weights, and works well in multi-task settings. For example, for the Binary classification in the Rest15 dataset, M-AT-LASTM outperforms AT-LSTM by 3.57\\% of accuracy and 4.96\\% of the F1 score, and M-CAN-2R_o further outperforms M-AT-LSTM by 3.28\\% of accuracy and 4.0\\% of the F1 score. % Table shows the results of the ACD task in multi-task settings.",
+      "In both tables, ``3-way'' stands for 3-class classification (positive, neutral, and negative), and ``Binary'' for binary classification (positive and negative). The best scores are marked in bold. {\\bf Single-task Settings Table shows our experimental results of ALSC in single-task settings.",
+      "Rest14 has 5 aspect categories while Rest15 has 13 ones. \\end{table* Implementation Details We set \\lambda=0.1 with the help of the validation set.",
+      "The models are trained for 100 epochs, during which the model with the best performance on the validation set is saved. We also apply early stopping in training, which means that the training will stop if the performance on validation set does not improve in 10 epochs. % Results Table and show our experimental results on the two public datasets for single-task and multi-task settings respectively.",
+      "Secondly, regularization R_o achieves better performance improvement than R_s in all results. This is because R_o includes both orthogonal and sparse regularizations for non-overlapping multi-aspect sentences. Thirdly, our approaches, especially ATAE-CAN-R_o, outperform the state-of-the-art baseline model GCAE.",
+      "Our proposed regularization terms can also improve the performance of ACD. Regularization R_o achieves the best performance in almost all metrics. % Attention Visualizations Figure depicts the attention weights from AT-LSTM, M-AT-LSTM and M-CAN-2R_o methods, which are used to predict the sentiment polarity in the ALSC task.",
+      "To avoid L_b overwhelming the overall loss, we divide it by the number of aspect categories. Experiments Datasets We conduct experiments on two public datasets from SemEval 2014 task 4 and SemEval 2015 task 12 (denoted by Rest14 and Rest15 respectively). These two datasets consist of restaurant customer reviews with annotations identifying the mentioned aspects and the sentiment polarity of each aspect."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides a clear comparison of model performances on the Rest15 dataset for both binary and 3-way classification. Text 0 discusses the performance improvements of models with attention regularizations, which is relevant to understanding why certain models perform better.\",\n    \"Answer\": \"The best model for binary classification on the Rest15 dataset is ATAE-CAN-R_o with an accuracy of 81.75% and an F1 score of 80.91%. For 3-way classification, the best model is also ATAE-CAN-R_o with an accuracy of 78.58% and an F1 score of 54.72%.\"\n}"
+  },
+  "4": {
+    "question": "What are the two main tasks that the CAN network is designed to perform?",
+    "ground_truth": "Aspect-level sentiment classification (ALSC) and aspect category detection (ACD).",
+    "selected_figures_names": [
+      "1812.10735v2-Table2-1.png",
+      "1812.10735v2-Figure3-1.png",
+      "1812.10735v2-Table3-1.png",
+      "1812.10735v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1812.10735v2-Table2-1.png",
+      "1812.10735v2-Figure3-1.png",
+      "1812.10735v2-Table3-1.png",
+      "1812.10735v2-Figure5-1.png",
+      "1812.10735v2-Figure1-1.png",
+      "1812.10735v2-Table4-1.png",
+      "1812.10735v2-Figure2-1.png",
+      "1812.10735v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 4,
+    "rationale": "Image 2 shows the results of the ALSC task in multi-task settings, which is relevant to understanding the tasks CAN is designed for. Text 4 explicitly mentions the two main tasks: ALSC and ACD.",
+    "answer": "The CAN network is designed to perform ALSC (Aspect Level Sentiment Classification) and ACD (Aspect Category Detection) tasks.",
+    "text_chunks": [
+      "We propose CAN for multi-aspect sentiment analysis, supporting both ALSC and ACD tasks by a multi-task learning framework. The network architecture is shown in Figure . We will introduce all components sequentially from left to right.",
+      "We call our networks with such regularizations constrained attention networks (CAN). There have been some works on introducing sparsity in attention weights in machine translation and orthogonal constraints in domain adaptation . In this paper, we add both sparse and orthogonal regularizations in a unified form inspired by the work .",
+      "By applying attention weight constraints to both ALSC and ACD tasks in an end-to-end network, we can further evaluate the effectiveness of CAN in multi-task settings. In summary, the main contributions of our work are as follows: Related Work {\\bf Aspect level sentiment analysis is a fine-grained sentiment analysis task. Earlier methods are usually based on explicit features .",
+      "Second, in almost all cases, applying attention regularizations to both tasks gains more performance improvement than only to the ALSC task, which shows that our attention regularization approach can be extended to different tasks which involving aspect level attention weights, and works well in multi-task settings. For example, for the Binary classification in the Rest15 dataset, M-AT-LASTM outperforms AT-LSTM by 3.57\\% of accuracy and 4.96\\% of the F1 score, and M-CAN-2R_o further outperforms M-AT-LSTM by 3.28\\% of accuracy and 4.0\\% of the F1 score. % Table shows the results of the ACD task in multi-task settings.",
+      "Conclusions We propose constrained attention networks for multi-aspect sentiment analysis, which handles multiple aspects of a sentence simultaneously. Specifically, we introduce orthogonal and sparse regularizations on attention weights. Furthermore, we introduce an auxiliary task ACD for promoting the ALSC task, and apply CAN on both tasks.",
+      "Our proposed regularization terms can also improve the performance of ACD. Regularization R_o achieves the best performance in almost all metrics. % Attention Visualizations Figure depicts the attention weights from AT-LSTM, M-AT-LSTM and M-CAN-2R_o methods, which are used to predict the sentiment polarity in the ALSC task.",
+      "\\newline\\indent As shown in subfigure (c), M-CAN+2R_o generates the best attention weights. The attention weights of the aspect food are almost orthogonal to the weights of service. The aspect food concentrates on the first part of the sentence while service on the second part.",
+      "Multi-task learning has been used successfully in many machine learning applications. \\newcite{Huang2018Multitask learn both main task and auxiliary task jointly with shared representations, achieving improved performance in question answering. \\newcite{Toshniwal2017Multitask use low-level auxiliary tasks for encoder-decoder based speech recognition, which suggests that the addition of auxiliary tasks can help in either optimization or generalization."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 4,\n    \"Rationale\": \"Image 2 shows the results of the ALSC task in multi-task settings, which is relevant to understanding the tasks CAN is designed for. Text 4 explicitly mentions the two main tasks: ALSC and ACD.\",\n    \"Answer\": \"The CAN network is designed to perform ALSC (Aspect Level Sentiment Classification) and ACD (Aspect Category Detection) tasks.\"\n}"
+  }
+}

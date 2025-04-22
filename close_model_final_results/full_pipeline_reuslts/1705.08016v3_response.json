@@ -1,0 +1,146 @@
+{
+  "0": {
+    "question": "How does the test accuracy of the different models vary with the hyperparameter \u03bb?",
+    "ground_truth": "The test accuracy of all models decreases as \u03bb increases.",
+    "selected_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "Image 0 directly shows the variation of test accuracy with the hyperparameter \u03bb for different models, which is exactly what the question is asking about.",
+    "answer": "The test accuracy of the models decreases sharply as the hyperparameter \u03bb increases beyond a certain point. Initially, the accuracy remains stable across different models like VGGNet-16, GoogLeNet, ResNet-50, and BilinearCNN, but it drops significantly when \u03bb is very large.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"Image 0 directly shows the variation of test accuracy with the hyperparameter \u03bb for different models, which is exactly what the question is asking about.\",\n    \"Answer\": \"The test accuracy of the models decreases sharply as the hyperparameter \u03bb increases beyond a certain point. Initially, the accuracy remains stable across different models like VGGNet-16, GoogLeNet, ResNet-50, and BilinearCNN, but it drops significantly when \u03bb is very large.\"\n}"
+  },
+  "1": {
+    "question": "Which method achieves the highest Top-1 accuracy on the CUB-200-2011 dataset?",
+    "ground_truth": "PC-DenseNet-161",
+    "selected_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 provides a detailed comparison of Top-1 accuracies for various methods on the CUB-200-2011 dataset. Text 0 explains the variation of test accuracy on the same dataset, which is relevant for understanding performance.",
+    "answer": "PC-DenseNet-161 achieves the highest Top-1 accuracy on the CUB-200-2011 dataset with 86.87%.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 provides a detailed comparison of Top-1 accuracies for various methods on the CUB-200-2011 dataset. Text 0 explains the variation of test accuracy on the same dataset, which is relevant for understanding performance.\",\n    \"Answer\": \"PC-DenseNet-161 achieves the highest Top-1 accuracy on the CUB-200-2011 dataset with 86.87%.\"\n}"
+  },
+  "2": {
+    "question": "How does Pairwise Confusion (PC) affect the localization ability of a CNN?",
+    "ground_truth": "PC improves the localization ability of a CNN.",
+    "selected_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 provide visual and descriptive evidence of how Pairwise Confusion (PC) improves localization in CNNs. The heatmaps show better focus on relevant areas with PC, and the text explains the improved performance.",
+    "answer": "Pairwise Confusion (PC) enhances the localization ability of a CNN by providing tighter and more accurate focus on relevant areas in images. This is demonstrated by improved Grad-CAM heatmaps, where PC helps the network avoid focusing on irrelevant artifacts, leading to better classification results.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 provide visual and descriptive evidence of how Pairwise Confusion (PC) improves localization in CNNs. The heatmaps show better focus on relevant areas with PC, and the text explains the improved performance.\",\n    \"Answer\": \"Pairwise Confusion (PC) enhances the localization ability of a CNN by providing tighter and more accurate focus on relevant areas in images. This is demonstrated by improved Grad-CAM heatmaps, where PC helps the network avoid focusing on irrelevant artifacts, leading to better classification results.\"\n}"
+  },
+  "3": {
+    "question": "Which dataset has the highest number of samples per class?",
+    "ground_truth": "SVHN",
+    "selected_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 3,
+    "rationale": "Image 3 and Text 3 provide a direct comparison of datasets, including the number of samples per class, which is essential to answer the question.",
+    "answer": "SVHN has the highest number of samples per class with 7325.7.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 3,\n    \"Rationale\": \"Image 3 and Text 3 provide a direct comparison of datasets, including the number of samples per class, which is essential to answer the question.\",\n    \"Answer\": \"SVHN has the highest number of samples per class with 7325.7.\"\n}"
+  },
+  "4": {
+    "question": "Which dataset benefited more from the Pairwise Confusion (PC) optimization method: ImageNet-Dogs or ImageNet-Random?",
+    "ground_truth": "ImageNet-Dogs benefited more from the PC optimization method compared to ImageNet-Random.",
+    "selected_figures_names": [
+      "1705.08016v3-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The table in Image 0 provides the baseline and PC-optimized accuracy for both ImageNet-Dogs and ImageNet-Random, allowing a direct comparison of the benefits from the Pairwise Confusion optimization.",
+    "answer": "ImageNet-Random benefited more from the Pairwise Confusion optimization method, with an increase from 71.85 to 72.09, compared to ImageNet-Dogs, which increased from 62.35 to 64.17.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The table in Image 0 provides the baseline and PC-optimized accuracy for both ImageNet-Dogs and ImageNet-Random, allowing a direct comparison of the benefits from the Pairwise Confusion optimization.\",\n    \"Answer\": \"ImageNet-Random benefited more from the Pairwise Confusion optimization method, with an increase from 71.85 to 72.09, compared to ImageNet-Dogs, which increased from 62.35 to 64.17.\"\n}"
+  },
+  "5": {
+    "question": "What is the role of the shared weights in the Siamese-like architecture shown in the first figure?",
+    "ground_truth": "The shared weights allow the two branches of the network to learn similar representations of the input images. This helps to improve the performance of the Euclidean Confusion loss, which measures the distance between the conditional probability distributions of the two branches.",
+    "selected_figures_names": [
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.08016v3-Figure2-1.png",
+      "1705.08016v3-Table2-1.png",
+      "1705.08016v3-Figure3-1.png",
+      "1705.08016v3-Table1-1.png",
+      "1705.08016v3-Table4-1.png",
+      "1705.08016v3-Table3-1.png",
+      "1705.08016v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "The image provides a visual representation of the Siamese-like architecture with shared weights, which is crucial for understanding the role of shared weights in the CNN training pipeline for Pairwise Confusion.",
+    "answer": "The shared weights in the Siamese-like architecture ensure that both branches of the network learn the same features from the input data, allowing for consistent feature extraction and comparison between the pairwise samples.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"The image provides a visual representation of the Siamese-like architecture with shared weights, which is crucial for understanding the role of shared weights in the CNN training pipeline for Pairwise Confusion.\",\n    \"Answer\": \"The shared weights in the Siamese-like architecture ensure that both branches of the network learn the same features from the input data, allowing for consistent feature extraction and comparison between the pairwise samples.\"\n}"
+  }
+}

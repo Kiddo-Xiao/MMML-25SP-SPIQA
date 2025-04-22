@@ -1,0 +1,238 @@
+{
+  "0": {
+    "question": "Which dataset exhibits the strongest seasonality?",
+    "ground_truth": "The Traffic dataset.",
+    "selected_figures_names": [
+      "1703.07015v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure6-1.png",
+      "1703.07015v3-Figure5-1.png",
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image shows autocorrelation graphs for different datasets, which directly illustrate the seasonality patterns. Text chunk 0 describes these patterns, noting strong seasonality in the traffic and electricity datasets.",
+    "answer": "The traffic and electricity datasets exhibit the strongest seasonality.",
+    "text_chunks": [
+      "We can see in the graphs (a), (b) and (c) of Figure , there are repetitive patterns with high autocorrelation in the \\traffic, \\solar and \\electricity datasets, but not in the \\exchange dataset. Furthermore, we can observe a short-term daily pattern (in every 24 hours) and long-term weekly pattern (in every 7 days) in the graph of the \\traffic and \\electricity dataset, which perfect reflect the expected regularity in highway traffic situations and electricity consumptions. On the other hand, in graph (d) of the \\exchange dataset, we hardly see any repetitive long-term patterns, expect some short-term local continuity.",
+      "\\caption{The predicted time series (red) by LSTw/oAR (a) and by LST-Skip (b) vs. the true data (blue) on \\electricity dataset with horizon = 24 \\end{figure* \\caption{The true time series (blue) and the predicted ones (red) by VAR (a) and by LSTNet (b) for one variable in the \\traffic occupation dataset. The X axis indicates the week days and the forecasting horizon = 24.",
+      "Finally, the LSTNet incorporates a traditional autoregressive linear model in parallel to the non-linear neural network part, which makes the non-linear deep learning model more robust for the time series with violate scale changing. In the experiment on the real world seasonal time series datasets, our model consistently outperforms the traditional linear models and GRU recurrent neural network. The rest of this paper is organized as follows.",
+      "VAR inadequately predicts similar patterns for Fridays and Saturdays, and ones for Sundays and Mondays, while LSTNet successfully captures both the daily and weekly repeating patterns. \\end{figure* Conclusion In this paper, we presented a novel deep learning framework (LSTNet) for the task of multivariate time series forecasting. By combining the strengths of convolutional and recurrent neural networks and an autoregressive component, the proposed approach significantly improved the state-of-the-art results in time series forecasting on multiple benchmark datasets.",
+      "Besides, LSTNet outperforms the strong neural baseline RNN-GRU by 9.2\\%, 11.7\\%, 22.2\\% in RSE metric on \\solar, \\traffic and \\electricity dataset respectively when the horizon is 24, demonstrating the effectiveness of the framework design for complex repetitive patterns. What's more, when the periodic pattern q is not clear from applications, users may consider LSTNet-attn as alternative over LSTNet-skip, given the former still yield considerable improvement over the baselines. But the proposed LSTNet is slightly worse than AR and LRidge on the \\exchange dataset.",
+      "The best result for each (data, metric) pair is highlighted in bold face in this table. The total count of the bold-faced results is 17 for LSTNet-Skip (one version of the proposed LSTNet), 7 for LSTNet-Attn (the other version of our LSTNet), and between 0 to 3 for the rest of the methods. Clearly, the two proposed models, LSTNet-skip and LSTNet-Attn, consistently enhance over state-of-the-art on the datasets with periodic pattern, especially in the settings of large horizons.",
+      "For instance, both the electricity consumption and traffic usage exhibit clear pattern on a daily basis. If we want to predict the electricity consumption at t o'clock for today, a classical trick in the seasonal forecasting model is to leverage the records at t o'clock in historical days, besides the most recent records. This type of dependencies can hardly be captured by off-the-shelf recurrent units due to the extremely long length of one period (24 hours) and the subsequent optimization issues.",
+      "As discussed in Section , the \\traffic data exhibit two kinds of repeating patterns, i.e. the daily ones and the weekly ones. We can see in Figure that the true patterns (in blue) of traffic occupancy are very different on Fridays and Saturdays, and another on Sunday and Monday. The Figure is the prediction result of the VAR model (part (a)) and LSTNet (part (b)) of a traffic flow monitor sensor, where their hyper-parameters are chosen according to the RMSE result on the validation set."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image shows autocorrelation graphs for different datasets, which directly illustrate the seasonality patterns. Text chunk 0 describes these patterns, noting strong seasonality in the traffic and electricity datasets.\",\n    \"Answer\": \"The traffic and electricity datasets exhibit the strongest seasonality.\"\n}"
+  },
+  "1": {
+    "question": "What component of LSTNet is most important for its performance?",
+    "ground_truth": "The AR component.",
+    "selected_figures_names": [
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure5-1.png",
+      "1703.07015v3-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure5-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure6-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 7,
+    "rationale": "Image 2 shows the results of LSTNet in ablation tests, which can help identify the importance of different components. Text 7 discusses the combination of convolutional and recurrent neural networks and an autoregressive component, highlighting their significance in LSTNet's performance.",
+    "answer": "The combination of convolutional and recurrent neural networks, along with an autoregressive component, is most important for LSTNet's performance.",
+    "text_chunks": [
+      "The LSTNet is a deep learning framework specifically designed for multivariate time series forecasting tasks with a mixture of long- and short-term patterns. In following sections, we introduce the building blocks for the LSTNet in detail. Convolutional Component",
+      "With in-depth analysis and empirical evidence, we show the efficiency of the architecture of LSTNet model, and that it indeed successfully captures both short-term and long-term repeating patterns in data, and combines both linear and non-linear models for robust prediction. For future research, there are several promising directions in extending the work. Firstly, the skip length p of the skip-recurrent layer is a crucial hyper-parameter.",
+      "For different baselines, we tune the hidden dimension of models such that they have similar numbers of model parameters to the completed LSTNet model, removing the performance gain induced by model complexity. The test results measured using RSE and CORR are shown in Figure . Several observations from these results are worth highlighting: The conclusion is that our architecture design is most robust across all experiment settings, especially with the large horizons.",
+      "Besides, LSTNet outperforms the strong neural baseline RNN-GRU by 9.2\\%, 11.7\\%, 22.2\\% in RSE metric on \\solar, \\traffic and \\electricity dataset respectively when the horizon is 24, demonstrating the effectiveness of the framework design for complex repetitive patterns. What's more, when the periodic pattern q is not clear from applications, users may consider LSTNet-attn as alternative over LSTNet-skip, given the former still yield considerable improvement over the baselines. But the proposed LSTNet is slightly worse than AR and LRidge on the \\exchange dataset.",
+      "To address this deficiency, similar in spirit to the highway network , we decompose the final prediction of LSTNet into a linear part, which primarily focuses on the local scaling issue, plus a non-linear part containing recurring patterns. In the LSTNet architecture, we adopt the classical Autoregressive (AR) model as the linear component. Denote the forecasting result of the AR component as h^L_{t \\in \\R^n, and the coefficients of the AR model as W^{ar \\in \\R^{q^{ar and b^{ar \\in \\R, where q^{ar is the size of input window over the input matrix.",
+      "The first layer of LSTNet is a convolutional network without pooling, which aims to extract short-term patterns in the time dimension as well as local dependencies between variables. The convolutional layer consists of multiple filters of width \\omega and height n (the height is set to be the same as the number of variables). The k-th filter sweeps through the input matrix X and produces where * denotes the convolution operation and the output h_k would be a vector, and the RELU function is RELU(x) = \\max(0,x).",
+      "Otherwise, LSTNet performed comparably with the better ones (AR and LRidge) among the representative baselines. % Compared the results of univariate AR with that of the multivariate baseline methods (LRidge, LSVR and RNN), we see that in some datasets, i.e. \\solar and \\traffic, the multivariate approaches is stronger, but weaker otherwise, which means that the richer input information would causes overfitting in the traditional multivariate approaches. In contrast, the LSTNet has robust performance in different situations, partly due to its autoregressive component, which we will discuss further in Section .",
+      "VAR inadequately predicts similar patterns for Fridays and Saturdays, and ones for Sundays and Mondays, while LSTNet successfully captures both the daily and weekly repeating patterns. \\end{figure* Conclusion In this paper, we presented a novel deep learning framework (LSTNet) for the task of multivariate time series forecasting. By combining the strengths of convolutional and recurrent neural networks and an autoregressive component, the proposed approach significantly improved the state-of-the-art results in time series forecasting on multiple benchmark datasets."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 7,\n    \"Rationale\": \"Image 2 shows the results of LSTNet in ablation tests, which can help identify the importance of different components. Text 7 discusses the combination of convolutional and recurrent neural networks and an autoregressive component, highlighting their significance in LSTNet's performance.\",\n    \"Answer\": \"The combination of convolutional and recurrent neural networks, along with an autoregressive component, is most important for LSTNet's performance.\"\n}"
+  },
+  "2": {
+    "question": "Which of the two models, LSTw/oAR or LST-Skip, seems to perform better in predicting electricity consumption?",
+    "ground_truth": "LST-Skip seems to perform better in predicting electricity consumption.",
+    "selected_figures_names": [
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure6-1.png",
+      "1703.07015v3-Figure5-1.png",
+      "1703.07015v3-Figure4-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 shows the comparison of true and predicted time series by LSTNet, which is relevant for understanding model performance. Text 0 discusses the performance of LST-Skip and LSTw/oAR in capturing changes in electricity consumption, directly addressing the question.",
+    "answer": "LST-Skip performs better in predicting electricity consumption as it successfully captures sudden changes, unlike LSTw/oAR.",
+    "text_chunks": [
+      "As for why the AR component would have such an important role, our interpretation is that AR is generally robust to the scale changing in data. To empirically validate this intuition we plot one dimension (one variable) of the time series signals in the electricity consumption dataset for the duration from 1 to 5000 hours in Figure , where the blue curve is the true data and the red curve is the system-forecasted signals. We can see that the true consumption suddenly increases around the 1000th hour, and that LSTNet-Skip successfully captures this sudden change but LSTw/oAR fails to react properly.",
+      "\\caption{The predicted time series (red) by LSTw/oAR (a) and by LST-Skip (b) vs. the true data (blue) on \\electricity dataset with horizon = 24 \\end{figure* \\caption{The true time series (blue) and the predicted ones (red) by VAR (a) and by LSTNet (b) for one variable in the \\traffic occupation dataset. The X axis indicates the week days and the forecasting horizon = 24.",
+      "With in-depth analysis and empirical evidence, we show the efficiency of the architecture of LSTNet model, and that it indeed successfully captures both short-term and long-term repeating patterns in data, and combines both linear and non-linear models for robust prediction. For future research, there are several promising directions in extending the work. Firstly, the skip length p of the skip-recurrent layer is a crucial hyper-parameter.",
+      "For LST-Skip and LST-Attn, we adopted the training strategy described in Section . The hidden dimension of the Recurrent and Convolutional layer is chosen from \\{50,100,200\\, and \\{20,50,100\\ for Recurrent-skip layer. The skip-length p of Recurrent-skip layer is set as 24 for the \\traffic and \\electricity dataset, and tuned range from 2^1 to 2^6 for the \\solar and \\exchange datasets.",
+      "The best result for each (data, metric) pair is highlighted in bold face in this table. The total count of the bold-faced results is 17 for LSTNet-Skip (one version of the proposed LSTNet), 7 for LSTNet-Attn (the other version of our LSTNet), and between 0 to 3 for the rest of the methods. Clearly, the two proposed models, LSTNet-skip and LSTNet-Attn, consistently enhance over state-of-the-art on the datasets with periodic pattern, especially in the settings of large horizons.",
+      "Besides, LSTNet outperforms the strong neural baseline RNN-GRU by 9.2\\%, 11.7\\%, 22.2\\% in RSE metric on \\solar, \\traffic and \\electricity dataset respectively when the horizon is 24, demonstrating the effectiveness of the framework design for complex repetitive patterns. What's more, when the periodic pattern q is not clear from applications, users may consider LSTNet-attn as alternative over LSTNet-skip, given the former still yield considerable improvement over the baselines. But the proposed LSTNet is slightly worse than AR and LRidge on the \\exchange dataset.",
+      "To address this deficiency, similar in spirit to the highway network , we decompose the final prediction of LSTNet into a linear part, which primarily focuses on the local scaling issue, plus a non-linear part containing recurring patterns. In the LSTNet architecture, we adopt the classical Autoregressive (AR) model as the linear component. Denote the forecasting result of the AR component as h^L_{t \\in \\R^n, and the coefficients of the AR model as W^{ar \\in \\R^{q^{ar and b^{ar \\in \\R, where q^{ar is the size of input window over the input matrix.",
+      "The value of p can be easily determined for datasets with clear periodic patterns (e.g. p=24 for the hourly electricity consumption and traffic usage datasets), and has to be tuned otherwise. In our experiments, we empirically found that a well-tuned p can considerably boost the model performance even for the latter case. Furthermore, the LSTNet could be easily extended to contain variants of the skip length p."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 shows the comparison of true and predicted time series by LSTNet, which is relevant for understanding model performance. Text 0 discusses the performance of LST-Skip and LSTw/oAR in capturing changes in electricity consumption, directly addressing the question.\",\n    \"Answer\": \"LST-Skip performs better in predicting electricity consumption as it successfully captures sudden changes, unlike LSTw/oAR.\"\n}"
+  },
+  "3": {
+    "question": "Which model, VAR or LSTNet, is better at capturing both daily and weekly repeating patterns in the data?",
+    "ground_truth": "LSTNet",
+    "selected_figures_names": [
+      "1703.07015v3-Figure7-1.png"
+    ],
+    "all_figures_names": [
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Figure6-1.png",
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure5-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure7-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually compares the predictions of VAR and LSTNet, showing LSTNet's superior ability to capture patterns. Text 0 explains that LSTNet successfully captures both daily and weekly patterns, unlike VAR.",
+    "answer": "LSTNet is better at capturing both daily and weekly repeating patterns in the data.",
+    "text_chunks": [
+      "VAR inadequately predicts similar patterns for Fridays and Saturdays, and ones for Sundays and Mondays, while LSTNet successfully captures both the daily and weekly repeating patterns. \\end{figure* Conclusion In this paper, we presented a novel deep learning framework (LSTNet) for the task of multivariate time series forecasting. By combining the strengths of convolutional and recurrent neural networks and an autoregressive component, the proposed approach significantly improved the state-of-the-art results in time series forecasting on multiple benchmark datasets.",
+      "As discussed in Section , the \\traffic data exhibit two kinds of repeating patterns, i.e. the daily ones and the weekly ones. We can see in Figure that the true patterns (in blue) of traffic occupancy are very different on Fridays and Saturdays, and another on Sunday and Monday. The Figure is the prediction result of the VAR model (part (a)) and LSTNet (part (b)) of a traffic flow monitor sensor, where their hyper-parameters are chosen according to the RMSE result on the validation set.",
+      "In summary, this ablation study clearly justifies the efficiency of our architecture design. All components have contributed to the excellent and robust performance of LSTNet. Mixture of long- and short-term patterns To illustrate the success of LSTNet in modeling the mixture of short-term and long-term recurring patterns in time series data, Figure compares the performance of LSTNet and VAR on an specific time series (one of the output variables) in the \\traffic dataset.",
+      "In the contrary, our proposed LSTNet model performs two patterns for weekdays and weekends respectfully. This example proves the ability of LSTNet model to memorize short-term and long-term recurring patterns simultaneously, which the traditional forecasting model is not equipped, and it is crucial in the prediction task of the real world time series signals. \\caption{Results of LSTNet in the ablation tests on the \\solar, \\traffic and \\electricity dataset \\end{figure*",
+      "With in-depth analysis and empirical evidence, we show the efficiency of the architecture of LSTNet model, and that it indeed successfully captures both short-term and long-term repeating patterns in data, and combines both linear and non-linear models for robust prediction. For future research, there are several promising directions in extending the work. Firstly, the skip length p of the skip-recurrent layer is a crucial hyper-parameter.",
+      "Besides, LSTNet outperforms the strong neural baseline RNN-GRU by 9.2\\%, 11.7\\%, 22.2\\% in RSE metric on \\solar, \\traffic and \\electricity dataset respectively when the horizon is 24, demonstrating the effectiveness of the framework design for complex repetitive patterns. What's more, when the periodic pattern q is not clear from applications, users may consider LSTNet-attn as alternative over LSTNet-skip, given the former still yield considerable improvement over the baselines. But the proposed LSTNet is slightly worse than AR and LRidge on the \\exchange dataset.",
+      "Otherwise, LSTNet performed comparably with the better ones (AR and LRidge) among the representative baselines. % Compared the results of univariate AR with that of the multivariate baseline methods (LRidge, LSVR and RNN), we see that in some datasets, i.e. \\solar and \\traffic, the multivariate approaches is stronger, but weaker otherwise, which means that the richer input information would causes overfitting in the traditional multivariate approaches. In contrast, the LSTNet has robust performance in different situations, partly due to its autoregressive component, which we will discuss further in Section .",
+      "In this paper, we propose a deep learning framework designed for the multivariate time series forecasting, namely Long- and Short-term Time-series Network (LSTNet), as illustrated in Figure . It leverages the strengths of both the convolutional layer to discover the local dependency patterns among multi-dimensional input variables and the recurrent layer to captures complex long-term dependencies. A novel recurrent structure, namely Recurrent-skip, is designed for capturing very long-term dependence patterns and making the optimization easier as it utilizes the periodic property of the input time series signals."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually compares the predictions of VAR and LSTNet, showing LSTNet's superior ability to capture patterns. Text 0 explains that LSTNet successfully captures both daily and weekly patterns, unlike VAR.\",\n    \"Answer\": \"LSTNet is better at capturing both daily and weekly repeating patterns in the data.\"\n}"
+  },
+  "4": {
+    "question": "Which dataset has the highest temporal resolution, meaning it provides data points at the most frequent intervals?",
+    "ground_truth": "The solar dataset has the highest temporal resolution.",
+    "selected_figures_names": [
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure5-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 provides a table with dataset statistics, including the sample rate, which directly indicates the temporal resolution. Text 3 discusses the dataset splits but does not provide specific information about temporal resolution.",
+    "answer": "The Solar-Energy dataset has the highest temporal resolution, providing data points every 10 minutes.",
+    "text_chunks": [
+      "\\caption{The predicted time series (red) by LSTw/oAR (a) and by LST-Skip (b) vs. the true data (blue) on \\electricity dataset with horizon = 24 \\end{figure* \\caption{The true time series (blue) and the predicted ones (red) by VAR (a) and by LSTNet (b) for one variable in the \\traffic occupation dataset. The X axis indicates the week days and the forecasting horizon = 24.",
+      "VAR inadequately predicts similar patterns for Fridays and Saturdays, and ones for Sundays and Mondays, while LSTNet successfully captures both the daily and weekly repeating patterns. \\end{figure* Conclusion In this paper, we presented a novel deep learning framework (LSTNet) for the task of multivariate time series forecasting. By combining the strengths of convolutional and recurrent neural networks and an autoregressive component, the proposed approach significantly improved the state-of-the-art results in time series forecasting on multiple benchmark datasets.",
+      "The best result for each (data, metric) pair is highlighted in bold face in this table. The total count of the bold-faced results is 17 for LSTNet-Skip (one version of the proposed LSTNet), 7 for LSTNet-Attn (the other version of our LSTNet), and between 0 to 3 for the rest of the methods. Clearly, the two proposed models, LSTNet-skip and LSTNet-Attn, consistently enhance over state-of-the-art on the datasets with periodic pattern, especially in the settings of large horizons.",
+      "Table summarizes the corpus statistics. All datasets have been split into training set (60\\%), validation set (20\\%) and test set (20\\%) in chronological order. To facilitate future research in multivariate time series forecasting, we publicize all raw datasets and the one after preprocessing in the website.",
+      "The value of p can be easily determined for datasets with clear periodic patterns (e.g. p=24 for the hourly electricity consumption and traffic usage datasets), and has to be tuned otherwise. In our experiments, we empirically found that a well-tuned p can considerably boost the model performance even for the latter case. Furthermore, the LSTNet could be easily extended to contain variants of the skip length p.",
+      "Two variants of RNN in particular, namely the Long Short Term Memory (LSTM) and the Gated Recurrent Unit (GRU) , have significantly improved the state-of-the-art performance in machine translation, speech recognition and other NLP tasks as they can effectively capture the meanings of words based on the long-term and short-term dependencies among them in input documents .% In the field of computer vision, as another example, convolution neural network (CNN) models have shown outstanding performance by successfully extracting local and shift-invariant features (called \"shapelets\" sometimes) at various granularity levels from input images. Deep neural networks have also received an increasing amount of attention in time series analysis.",
+      "In this paper, we propose a deep learning framework designed for the multivariate time series forecasting, namely Long- and Short-term Time-series Network (LSTNet), as illustrated in Figure . It leverages the strengths of both the convolutional layer to discover the local dependency patterns among multi-dimensional input variables and the recurrent layer to captures complex long-term dependencies. A novel recurrent structure, namely Recurrent-skip, is designed for capturing very long-term dependence patterns and making the optimization easier as it utilizes the periodic property of the input time series signals.",
+      "We can see in the graphs (a), (b) and (c) of Figure , there are repetitive patterns with high autocorrelation in the \\traffic, \\solar and \\electricity datasets, but not in the \\exchange dataset. Furthermore, we can observe a short-term daily pattern (in every 24 hours) and long-term weekly pattern (in every 7 days) in the graph of the \\traffic and \\electricity dataset, which perfect reflect the expected regularity in highway traffic situations and electricity consumptions. On the other hand, in graph (d) of the \\exchange dataset, we hardly see any repetitive long-term patterns, expect some short-term local continuity."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 provides a table with dataset statistics, including the sample rate, which directly indicates the temporal resolution. Text 3 discusses the dataset splits but does not provide specific information about temporal resolution.\",\n    \"Answer\": \"The Solar-Energy dataset has the highest temporal resolution, providing data points every 10 minutes.\"\n}"
+  },
+  "5": {
+    "question": "What are the different types of layers in the LSTNet model and how are they connected?",
+    "ground_truth": "The LSTNet model has four main types of layers:\n\n1. Convolutional layer: This layer extracts local dependency patterns from the input data. \n2. Recurrent and recurrent-skip layer: These layers capture long-term dependencies in the data. \n3. Fully connected and element-wise sum output layer: This layer combines the outputs from the convolutional and recurrent layers to produce the final prediction.\n4. Autoregressive layer: This layer provides a linear bypass to the non-linear neural network part of the model. \n\nThe convolutional layer receives the input data and passes its output to the recurrent and recurrent-skip layers. These layers then pass their output to the fully connected and element-wise sum output layer. The autoregressive layer receives the input data directly and its output is also fed into the fully connected and element-wise sum output layer.",
+    "selected_figures_names": [
+      "1703.07015v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1703.07015v3-Figure2-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure56-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 provides a visual overview of the LSTNet architecture, showing the different layers and their connections. Text 2 describes the components of LSTNet, including the convolutional and recurrent layers, and their roles in the model.",
+    "answer": "The LSTNet model consists of several types of layers: a convolutional layer to discover local dependency patterns, a recurrent layer to capture long-term dependencies, and a recurrent-skip layer for very long-term patterns. These layers are connected sequentially, with the convolutional layer feeding into the recurrent layers, and the output being combined for prediction.",
+    "text_chunks": [
+      "The first layer of LSTNet is a convolutional network without pooling, which aims to extract short-term patterns in the time dimension as well as local dependencies between variables. The convolutional layer consists of multiple filters of width \\omega and height n (the height is set to be the same as the number of variables). The k-th filter sweeps through the input matrix X and produces where * denotes the convolution operation and the output h_k would be a vector, and the RELU function is RELU(x) = \\max(0,x).",
+      "The LSTNet is a deep learning framework specifically designed for multivariate time series forecasting tasks with a mixture of long- and short-term patterns. In following sections, we introduce the building blocks for the LSTNet in detail. Convolutional Component",
+      "In this paper, we propose a deep learning framework designed for the multivariate time series forecasting, namely Long- and Short-term Time-series Network (LSTNet), as illustrated in Figure . It leverages the strengths of both the convolutional layer to discover the local dependency patterns among multi-dimensional input variables and the recurrent layer to captures complex long-term dependencies. A novel recurrent structure, namely Recurrent-skip, is designed for capturing very long-term dependence patterns and making the optimization easier as it utilizes the periodic property of the input time series signals.",
+      "With in-depth analysis and empirical evidence, we show the efficiency of the architecture of LSTNet model, and that it indeed successfully captures both short-term and long-term repeating patterns in data, and combines both linear and non-linear models for robust prediction. For future research, there are several promising directions in extending the work. Firstly, the skip length p of the skip-recurrent layer is a crucial hyper-parameter.",
+      "To address this deficiency, similar in spirit to the highway network , we decompose the final prediction of LSTNet into a linear part, which primarily focuses on the local scaling issue, plus a non-linear part containing recurring patterns. In the LSTNet architecture, we adopt the classical Autoregressive (AR) model as the linear component. Denote the forecasting result of the AR component as h^L_{t \\in \\R^n, and the coefficients of the AR model as W^{ar \\in \\R^{q^{ar and b^{ar \\in \\R, where q^{ar is the size of input window over the input matrix.",
+      "For different baselines, we tune the hidden dimension of models such that they have similar numbers of model parameters to the completed LSTNet model, removing the performance gain induced by model complexity. The test results measured using RSE and CORR are shown in Figure . Several observations from these results are worth highlighting: The conclusion is that our architecture design is most robust across all experiment settings, especially with the large horizons.",
+      "Section outlines the related background, including representative auto-regressive methods and Gaussian Process models. Section describe our proposed LSTNet. Section reports the evaluation results of our model in comparison with strong baselines on real-world datasets.",
+      "The best result for each (data, metric) pair is highlighted in bold face in this table. The total count of the bold-faced results is 17 for LSTNet-Skip (one version of the proposed LSTNet), 7 for LSTNet-Attn (the other version of our LSTNet), and between 0 to 3 for the rest of the methods. Clearly, the two proposed models, LSTNet-skip and LSTNet-Attn, consistently enhance over state-of-the-art on the datasets with periodic pattern, especially in the settings of large horizons."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 provides a visual overview of the LSTNet architecture, showing the different layers and their connections. Text 2 describes the components of LSTNet, including the convolutional and recurrent layers, and their roles in the model.\",\n    \"Answer\": \"The LSTNet model consists of several types of layers: a convolutional layer to discover local dependency patterns, a recurrent layer to capture long-term dependencies, and a recurrent-skip layer for very long-term patterns. These layers are connected sequentially, with the convolutional layer feeding into the recurrent layers, and the output being combined for prediction.\"\n}"
+  },
+  "6": {
+    "question": "How does the performance of LSTNet-attn vary with the horizon on the Solar-Energy dataset?",
+    "ground_truth": "The performance of LSTNet-attn generally improves as the horizon increases on the Solar-Energy dataset. This is evident from the fact that both the RMSE and correlation values improve with increasing horizon.",
+    "selected_figures_names": [
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure5-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1703.07015v3-Figure1-1.png",
+      "1703.07015v3-Figure5-1.png",
+      "1703.07015v3-Figure4-1.png",
+      "1703.07015v3-Figure3-1.png",
+      "1703.07015v3-Figure7-1.png",
+      "1703.07015v3-Table2-1.png",
+      "1703.07015v3-Table1-1.png",
+      "1703.07015v3-Figure2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 provides visual results of LSTNet in ablation tests, including the Solar-Energy dataset, showing how performance metrics like RSE and correlation vary with the horizon. Text 1 discusses the performance of LSTNet-attn across different datasets and horizons, highlighting its effectiveness.",
+    "answer": "The performance of LSTNet-attn on the Solar-Energy dataset shows improvement over baselines, with variations in RSE and correlation as the horizon increases. It consistently enhances performance, especially in settings with large horizons.",
+    "text_chunks": [
+      "Besides, LSTNet outperforms the strong neural baseline RNN-GRU by 9.2\\%, 11.7\\%, 22.2\\% in RSE metric on \\solar, \\traffic and \\electricity dataset respectively when the horizon is 24, demonstrating the effectiveness of the framework design for complex repetitive patterns. What's more, when the periodic pattern q is not clear from applications, users may consider LSTNet-attn as alternative over LSTNet-skip, given the former still yield considerable improvement over the baselines. But the proposed LSTNet is slightly worse than AR and LRidge on the \\exchange dataset.",
+      "The best result for each (data, metric) pair is highlighted in bold face in this table. The total count of the bold-faced results is 17 for LSTNet-Skip (one version of the proposed LSTNet), 7 for LSTNet-Attn (the other version of our LSTNet), and between 0 to 3 for the rest of the methods. Clearly, the two proposed models, LSTNet-skip and LSTNet-Attn, consistently enhance over state-of-the-art on the datasets with periodic pattern, especially in the settings of large horizons.",
+      "Otherwise, LSTNet performed comparably with the better ones (AR and LRidge) among the representative baselines. % Compared the results of univariate AR with that of the multivariate baseline methods (LRidge, LSVR and RNN), we see that in some datasets, i.e. \\solar and \\traffic, the multivariate approaches is stronger, but weaker otherwise, which means that the richer input information would causes overfitting in the traditional multivariate approaches. In contrast, the LSTNet has robust performance in different situations, partly due to its autoregressive component, which we will discuss further in Section .",
+      "Likewise, to predict the value of the next time stamp \\by_{T+h+1, we assume \\{ \\by_1, \\by_2, \\ldots, \\by_T, \\by_{T+1\\ are available. We hence formulate the input matrix at time stamp T as X_T = \\{ \\by_1, \\by_2, \\ldots, \\by_T\\ \\in \\R^{n \\times T. In the most of cases, the horizon of the forecasting task is chosen according to the demands of the environmental settings, e.g. for the traffic usage, the horizon of interest ranges from hours to a day; for the stock market data, even seconds/minutes-ahead forecast can be meaningful for generating returns. Figure presents an overview of the proposed LSTnet architecture.",
+      "\\caption{The predicted time series (red) by LSTw/oAR (a) and by LST-Skip (b) vs. the true data (blue) on \\electricity dataset with horizon = 24 \\end{figure* \\caption{The true time series (blue) and the predicted ones (red) by VAR (a) and by LSTNet (b) for one variable in the \\traffic occupation dataset. The X axis indicates the week days and the forecasting horizon = 24.",
+      "In the contrary, our proposed LSTNet model performs two patterns for weekdays and weekends respectfully. This example proves the ability of LSTNet model to memorize short-term and long-term recurring patterns simultaneously, which the traditional forecasting model is not equipped, and it is crucial in the prediction task of the real world time series signals. \\caption{Results of LSTNet in the ablation tests on the \\solar, \\traffic and \\electricity dataset \\end{figure*",
+      "But, the RNN-GRU model cannot follow the scale changing pattern in the test set (right side). Oppositely, the LSTNet model fits the test set much better. In other words, the normal RNN module, or says the neural-network component in LSTNet, may not be sufficiently sensitive to violated scale fluctuations in data (which is typical in \\electricity data possibly due to random events for public holidays or temperature turbulence, etc.), while the simple linear AR model can make a proper adjustment in the forecasting.",
+      "For different baselines, we tune the hidden dimension of models such that they have similar numbers of model parameters to the completed LSTNet model, removing the performance gain induced by model complexity. The test results measured using RSE and CORR are shown in Figure . Several observations from these results are worth highlighting: The conclusion is that our architecture design is most robust across all experiment settings, especially with the large horizons."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 provides visual results of LSTNet in ablation tests, including the Solar-Energy dataset, showing how performance metrics like RSE and correlation vary with the horizon. Text 1 discusses the performance of LSTNet-attn across different datasets and horizons, highlighting its effectiveness.\",\n    \"Answer\": \"The performance of LSTNet-attn on the Solar-Energy dataset shows improvement over baselines, with variations in RSE and correlation as the horizon increases. It consistently enhances performance, especially in settings with large horizons.\"\n}"
+  }
+}

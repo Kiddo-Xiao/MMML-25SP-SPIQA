@@ -1,0 +1,314 @@
+{
+  "0": {
+    "question": "How does the time needed for learning a graph with a subset of allowed edges $\\mathcal{E}^\\text{allowed}$ change as the number of edges per node increases?",
+    "ground_truth": "The time needed for learning a graph with a subset of allowed edges $\\mathcal{E}^\\text{allowed}$ increases linearly as the number of edges per node increases.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure7-1.png",
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Figure13-1.png",
+      "1710.05654v2-Figure8-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure7-1.png",
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Figure13-1.png",
+      "1710.05654v2-Figure8-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure15-1.png",
+      "1710.05654v2-Figure11-1.png",
+      "1710.05654v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 shows the relationship between requested and obtained degrees, which is relevant to understanding how the number of edges per node affects graph learning. Text 1 discusses the time needed to learn a graph with a subset of allowed edges and mentions the time required for different numbers of edges per node.",
+    "answer": "The time needed for learning a graph with a subset of allowed edges increases as the number of edges per node increases. This is because the cost is linear to the size of the set of allowed edges.",
+    "text_chunks": [
+      "The graph is then learned on this subset. The size of \\mathcal{E^\\text{allowed does not only affect the time needed to learn the graph, but also its quality. A too restrictive choice might prevent the final graph from learning useful edges.",
+      "The cost of learning a graph with a subset of allowed edges \\mathcal{E^\\text{allowed is linear to the size of the set as illustrated in Figure~. For this experiment, we use the MNIST data set. To learn a graph with approximately 10 edges per node, we needed 20 seconds to compute \\mathcal{E^\\text{allowed, and 20 seconds to learn the final graph of 60000 nodes (around 250 iterations). Note that the time necessary to search for the nearest neighbors is in the same order of magnitude than the learning process.",
+      "To learn a graph with approximately 10 edges per node, we needed 20 seconds to compute \\mathcal{E^\\text{allowed, and 20 seconds to learn the final graph of 60000 nodes (around 250 iterations). Note that the time necessary to search for the nearest neighbors is in the same order of magnitude than the learning process. \\tocheck{ \\newpage Todo \\end{document \\def\\year{2019\\relax \\documentclass{article % \\usepackage{arxiv_iclr,times \\iclrfinalcopy % \\usepackage{amsmath,amsfonts,bm \\newcommand{\\figleft{{\\em (Left) \\newcommand{\\figcenter{{\\em (Center) \\newcommand{\\figright{{\\em (Right) \\newcommand{\\figtop{{\\em (Top) \\newcommand{\\figbottom{{\\em (Bottom) \\newcommand{\\captiona{{\\em (a) \\newcommand{\\captionb{{\\em (b) \\newcommand{\\captionc{{\\em (c) \\newcommand{\\captiond{{\\em (d)",
+      "To learn a graph with on average k neighbors per node (k-NN), we first compute an rk-A-NN graph and use its edges as \\mathcal{E^\\text{allowed. The graph is then learned on this subset. The size of \\mathcal{E^\\text{allowed does not only affect the time needed to learn the graph, but also its quality.",
+      "Often, however, we need graphs with a roughly fixed number of edges per node, like in k-NN graphs. It is natural to then ask ourselves whether the cost of graph learning can be reduced, reflecting the final desired graph sparsity. In fact, the original problem~() for the log model () can be solved efficiently when a constrained set \\mathcal{E^\\text{allowed\\subseteq \\{(i,j): i<j\\ of allowed edges is known a priori.",
+      "On the other hand, in terms of connextivity, the soft model seems to be between the log and the \\ell_2 model. MNIST Computational time \\nati{with respect to k The cost of learning a graph with a subset of allowed edges \\mathcal{E^\\text{allowed is linear to the size of the set as illustrated in Figure~. For this experiment, we use the MNIST data set.",
+      "It is natural to then ask ourselves whether the cost of graph learning can be reduced, reflecting the final desired graph sparsity. In fact, the original problem~() for the log model () can be solved efficiently when a constrained set \\mathcal{E^\\text{allowed\\subseteq \\{(i,j): i<j\\ of allowed edges is known a priori. In that case, it suffices to solve the modified problem where we optimize in the constrained set of adjacency matrices W\\in{\\widetilde{\\cal W. After reducing the set of edges to \\mathcal{E^\\text{allowed, it suffices to solve the modified problem~()",
+      "However, the cost of the primal step, as well as the cost of applying the modified operator \\widetilde{S in order to exchange between the primal and dual spaces is \\order{\\mathcal{E^\\text{allowed instead of \\order{n^2 of the initial algorithm 1 by \\citet{kalofolias2016learn, reducing the overall complexity. In some cases, a pattern of allowed edges \\mathcal{E^\\text{allowed can be induced by constraints of the model, for example sensor networks only assume connections between geographically nearby sensors. In most applications, however, a constrained set is not known beforehand, and we need to approximate the edge support of the final learned graph in order to reduce the number of variables."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 shows the relationship between requested and obtained degrees, which is relevant to understanding how the number of edges per node affects graph learning. Text 1 discusses the time needed to learn a graph with a subset of allowed edges and mentions the time required for different numbers of edges per node.\",\n    \"Answer\": \"The time needed for learning a graph with a subset of allowed edges increases as the number of edges per node increases. This is because the cost is linear to the size of the set of allowed edges.\"\n}"
+  },
+  "1": {
+    "question": "Which method is the fastest for computing a graph with a small average node degree?",
+    "ground_truth": "The proposed method in this paper (k=5) is the fastest for computing a graph with a small average node degree.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure6-1.png",
+      "1710.05654v2-Figure1-1.png",
+      "1710.05654v2-Figure15-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure6-1.png",
+      "1710.05654v2-Figure1-1.png",
+      "1710.05654v2-Figure15-1.png",
+      "1710.05654v2-Figure11-1.png",
+      "1710.05654v2-Figure13-1.png",
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Figure5-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides a time comparison of different methods for computing graphs, specifically highlighting the performance with a small average node degree. Text 0 discusses the efficiency of approximate nearest neighbors (A-NN) algorithms, which are relevant to the question of speed.",
+    "answer": "The A-NN method is the fastest for computing a graph with a small average node degree.",
+    "text_chunks": [
+      "To this end, we propose using approximate nearest neighbors graphs to obtain a good approximation. \\nati{While computing a k-NN graph needs \\order{n^2d computations, approximate nearest neighbors (A-NN) algorithms \\citep{muja2009fast, dong2011efficient, muja2012fast, muja2014scalable, malkov2016efficient offer a good compromise between accuracy and speed. Specifically, A-NN methods scale gracefully with the number of nodes n, the fastest ones having an overall complexity of \\order{n\\log(n)d for d-dimensional data.",
+      "They give better manifolds, are better for semi-supervised learning, and select the right amount of edges without allowing disconnected nodes. Learning a graph of 1 million nodes only takes 16 minutes using our simple Matlab implementation on a desktop computer. \\subsection*{Thanks",
+      "Using our scheme, we can learn a 1-million-nodes graph with a desired sparsity level on a desktop computer in 16 minutes, with a simple Matlab implementation. Graph Learning from Smooth Signals A widely used assumption for data residing on graphs is that values change smoothly across adjacent nodes. The smoothness of a set of vectors x_1, \\dots, x_n\\in\\mathbb{R^d on a given weighted undirected graph is usually quantified by the Dirichlet energy~\\citep{belkin2001laplacian where W_{ij\\in\\mathbb{R_+ denotes the weight of the edge between nodes i and j, L = D-W is the graph Laplacian, and D_{ii = \\sum_jW_{ij is the diagonal weighted degree matrix.",
+      "Learning a graph of 1 million nodes only takes 16 minutes using our simple Matlab implementation on a desktop computer. \\subsection*{Thanks The authors would like to especially thank Pierre Vandergheynst for his helpful comments during the preparation of this work at LTS2.",
+      "In most applications, however, a constrained set is not known beforehand, and we need to approximate the edge support of the final learned graph in order to reduce the number of variables. To this end, we propose using approximate nearest neighbors graphs to obtain a good approximation. \\nati{While computing a k-NN graph needs \\order{n^2d computations, approximate nearest neighbors (A-NN) algorithms \\citep{muja2009fast, dong2011efficient, muja2012fast, muja2014scalable, malkov2016efficient offer a good compromise between accuracy and speed.",
+      "Specifically, A-NN methods scale gracefully with the number of nodes n, the fastest ones having an overall complexity of \\order{n\\log(n)d for d-dimensional data. When approximating the support of the final edges of a graph, we prefer to have false positives than false negatives. We thus start with an initial support with a larger cardinality than that of the desired final graph, and let the weight learning step automatically select which edges to set to zero.",
+      "To learn a graph with approximately 10 edges per node, we needed 20 seconds to compute \\mathcal{E^\\text{allowed, and 20 seconds to learn the final graph of 60000 nodes (around 250 iterations). Note that the time necessary to search for the nearest neighbors is in the same order of magnitude than the learning process. \\tocheck{ \\newpage Todo \\end{document \\def\\year{2019\\relax \\documentclass{article % \\usepackage{arxiv_iclr,times \\iclrfinalcopy % \\usepackage{amsmath,amsfonts,bm \\newcommand{\\figleft{{\\em (Left) \\newcommand{\\figcenter{{\\em (Center) \\newcommand{\\figright{{\\em (Right) \\newcommand{\\figtop{{\\em (Top) \\newcommand{\\figbottom{{\\em (Bottom) \\newcommand{\\captiona{{\\em (a) \\newcommand{\\captionb{{\\em (b) \\newcommand{\\captionc{{\\em (c) \\newcommand{\\captiond{{\\em (d)",
+      "Like in k-NN, the user can choose the number of neighbors k, without performing grid search over two parameters. Using our scheme, we can learn a 1-million-nodes graph with a desired sparsity level on a desktop computer in 16 minutes, with a simple Matlab implementation. Graph Learning from Smooth Signals A widely used assumption for data residing on graphs is that values change smoothly across adjacent nodes."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides a time comparison of different methods for computing graphs, specifically highlighting the performance with a small average node degree. Text 0 discusses the efficiency of approximate nearest neighbors (A-NN) algorithms, which are relevant to the question of speed.\",\n    \"Answer\": \"The A-NN method is the fastest for computing a graph with a small average node degree.\"\n}"
+  },
+  "2": {
+    "question": "Which digit has the highest average squared distance to other digits in the MNIST dataset?",
+    "ground_truth": "Digit \"1\"",
+    "selected_figures_names": [
+      "1710.05654v2-Figure11-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure13-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure10-1.png",
+      "1710.05654v2-Figure12-1.png",
+      "1710.05654v2-Figure8-1.png",
+      "1710.05654v2-Figure14-1.png",
+      "1710.05654v2-Figure11-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the average squared distance for each digit, and Text 0 explains that the distance between the digit '1' is significantly smaller than others. This helps identify which digit has the highest average squared distance.",
+    "answer": "Digit '5' has the highest average squared distance to other digits in the MNIST dataset.",
+    "text_chunks": [
+      "One could expect that the average distance between two digits of the same class (intra-class) is more or less independent of the class. Nevertheless, for the MNIST dataset, the distance between the 1 is significantly smaller than the one of the other digits. For this reason, the L2 model connects significantly more the digits 1 than the others.",
+      "Experiments Datasets MNIST irregular intra-class distances Figure~ illustrates one irregularity of the MNIST dataset. One could expect that the average distance between two digits of the same class (intra-class) is more or less independent of the class. Nevertheless, for the MNIST dataset, the distance between the 1 is significantly smaller than the one of the other digits.",
+      "MNIST has a relatively uniform sampling between numbers of different labels, except for the digits ``1'' that are more densely sampled. That is, the average intra-class distance between digits ``1'' is smaller than for other digits (supplementary material~). As we see, this affects the results of graph learning.",
+      "The curious reader can find details in Section of the supplementary material. Edge quality We first compare scalable models of graphs between 60,000 images of MNIST. MNIST has a relatively uniform sampling between numbers of different labels, except for the digits ``1'' that are more densely sampled.",
+      "For this reason, the L2 model connects significantly more the digits 1 than the others. Approximation accuracy \\vassilis{and robustness of parameter \\texorpdfstring{\\theta{theta We already saw in Figure~ (middle) that for the MNIST dataset () predicts very well the sparsity of the final graph for any choice of \\theta.",
+      "% \\nati{ MNIST connectivity for \\citep{daitch2009fitting methods In Figure~, we plot the connectivity across different digits of MNIST for the \"hard\" and \"soft\" model. As the degree is constant over the nodes, the hard model perform similarly to the A-NN (see Figure~). It seems that due to hard constraint, the \"hard\" model forces many edges with a small weights.",
+      "Looking at different words, we observe that the learned graph is able to associate meaningful edge weights to the different words according to the confidence of their similarity. % \\nati{ MNIST connectivity for \\citep{daitch2009fitting methods In Figure~, we plot the connectivity across different digits of MNIST for the \"hard\" and \"soft\" model. As the degree is constant over the nodes, the hard model perform similarly to the A-NN (see Figure~).",
+      "While the cost per iteration of the \"soft\" method is slower than for the \"hard\" method, the latter typically needs more iterations to reach convergence. The reason is that our accelerated algorithm uses FISTA that has a global rate of convergence proven to be significantly better than the forward-backward based primal-dual we used~\\citep{beck2009fast,komodakis2014playing. Experiments Datasets MNIST irregular intra-class distances Figure~ illustrates one irregularity of the MNIST dataset."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the average squared distance for each digit, and Text 0 explains that the distance between the digit '1' is significantly smaller than others. This helps identify which digit has the highest average squared distance.\",\n    \"Answer\": \"Digit '5' has the highest average squared distance to other digits in the MNIST dataset.\"\n}"
+  },
+  "3": {
+    "question": "How well do the approximate bounds of $\\theta$ predict sparsity in the \"spherical\" dataset?",
+    "ground_truth": "The approximate bounds of $\\theta$ are very effective at predicting sparsity in the \"spherical\" dataset.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure1-1.png",
+      "1710.05654v2-Figure5-1.png",
+      "1710.05654v2-Figure8-1.png",
+      "1710.05654v2-Figure15-1.png",
+      "1710.05654v2-Figure12-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the effectiveness of \u03b8 bounds in predicting the degree obtained versus requested for the 'spherical' dataset. Text 0 discusses the effectiveness of automatic parameter selection and mentions the 'spherical' dataset, making them both relevant.",
+    "answer": "The approximate bounds of \u03b8 are very effective at predicting sparsity in the 'spherical' dataset, as shown by the close match between the requested and obtained degrees in the plot.",
+    "text_chunks": [
+      "Effectiveness of automatic parameter selection As we saw in the middle and right plots of Figure~, the approximate bounds of \\theta (red line) given by eq.~() are very effective at predicting sparsity. The same experiment is repeated for more datasets is in the supplementary material~. In Figure we see this also in large scale, between 262K nodes from our \"spherical\" dataset.",
+      "In Figure we see this also in large scale, between 262K nodes from our \"spherical\" dataset. Please note, that in the rare cases that the actual sparsity is outside the predicted bounds, we already have a good starting point for finding a good \\theta. Note also that small fluctuations in the density are tolerated, for example in k-NN or A-NN graphs we always obtain results with slightly more than nk edges due to the fact that W is symmetric.",
+      "This is further illustrated on the USPS and ATT faces datasets in Figure~. Note, that in the rare cases that the actual sparsity is outside the predicted bounds, we already have a good starting point for finding a good \\theta. For example, in the COIL dataset, if we want a graph with 15 edges per node we will set \\theta=1.2, obtaining instead a graph with 12 edges per node. This kind of fluctuations are usually tolerated, while even in k-NN we always obtain graphs with more than nk edges due to the fact that W is symmetric.",
+      "Note that the result will depend on the A-NN algorithm used, while a comparison between different types of A-NN is beyond the scope of this paper. Effectiveness of automatic parameter selection As we saw in the middle and right plots of Figure~, the approximate bounds of \\theta (red line) given by eq.~() are very effective at predicting sparsity. The same experiment is repeated for more datasets is in the supplementary material~.",
+      "Approximation accuracy \\vassilis{and robustness of parameter \\texorpdfstring{\\theta{theta We already saw in Figure~ (middle) that for the MNIST dataset () predicts very well the sparsity of the final graph for any choice of \\theta. This is further illustrated on the USPS and ATT faces datasets in Figure~. Note, that in the rare cases that the actual sparsity is outside the predicted bounds, we already have a good starting point for finding a good \\theta.",
+      "Please note, that in the rare cases that the actual sparsity is outside the predicted bounds, we already have a good starting point for finding a good \\theta. Note also that small fluctuations in the density are tolerated, for example in k-NN or A-NN graphs we always obtain results with slightly more than nk edges due to the fact that W is symmetric. Finally, as we see in Figure , the bounds are very robust to outliers, as well as duplicates in the data.",
+      "For any given sparsity level k we know what are the intervals of the valid values of \\theta by looking at the pairwise distances. \\end{algorithm \\subsubsection{Parameter selection for the symmetric case In order to approximate the parameter \\theta that gives the desired sparsity of W, we use the above analysis for each row or column separately, omitting the symmetricity constraint. Then, using the arithmetic mean of the bounds of \\theta we obtain a good approximation of the behaviour of the full symmetric problem.",
+      "\\end{algorithm \\subsubsection{Parameter selection for the symmetric case In order to approximate the parameter \\theta that gives the desired sparsity of W, we use the above analysis for each row or column separately, omitting the symmetricity constraint. Then, using the arithmetic mean of the bounds of \\theta we obtain a good approximation of the behaviour of the full symmetric problem. In other words, to obtain a graph with approximately k edges per node, we propose to use the following intervals: where \\hat Z is obtained by sorting each column of Z in increasing order, and B_{k, j = \\sum_{i=1^k \\hat Z_{i, j."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the effectiveness of \u03b8 bounds in predicting the degree obtained versus requested for the 'spherical' dataset. Text 0 discusses the effectiveness of automatic parameter selection and mentions the 'spherical' dataset, making them both relevant.\",\n    \"Answer\": \"The approximate bounds of \u03b8 are very effective at predicting sparsity in the 'spherical' dataset, as shown by the close match between the requested and obtained degrees in the plot.\"\n}"
+  },
+  "4": {
+    "question": "Which model is the most effective at connecting digits with larger distances?",
+    "ground_truth": "The log model.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure7-1.png",
+      "1710.05654v2-Figure10-1.png",
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Figure12-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure7-1.png",
+      "1710.05654v2-Figure10-1.png",
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Figure12-1.png",
+      "1710.05654v2-Figure6-1.png",
+      "1710.05654v2-Figure8-1.png",
+      "1710.05654v2-Figure5-1.png",
+      "1710.05654v2-Figure9-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Text chunk 1 explains that the log model does not suffer from the problem of neglecting digits with larger distances, unlike the \u001ell_2 model. Image 0 shows the recovered manifolds by different models, which can help visualize the effectiveness of these models.",
+    "answer": "The log model is the most effective at connecting digits with larger distances.",
+    "text_chunks": [
+      "One could expect that the average distance between two digits of the same class (intra-class) is more or less independent of the class. Nevertheless, for the MNIST dataset, the distance between the 1 is significantly smaller than the one of the other digits. For this reason, the L2 model connects significantly more the digits 1 than the others.",
+      "The \\ell_2 model~() assigns most of its connectivity to the label ``1'' that has the smallest intra-label image distance and neglects digits with larger distance (``2'', ``8'') even for 30 edges per node. This effect becomes smaller when more dense graphs (30 edges per node, yellow bars) are sought. The log model does not suffer from this problem even for sparse graphs of degree 5 and gives consistent connectivities for all digits.",
+      "The log model does not suffer from this problem even for sparse graphs of degree 5 and gives consistent connectivities for all digits. \\nati{The scaled versions of models in \\citep{daitch2009fitting perform worse than our large scale log model, but often better than A-NN or \\ell-2, as plotted in Figure~ of the supplementary material. Figure~ (left) summarizes the number of wrong edges with respect to k. \\vassilis{Models \\ell_2 and log that minimize \\mathrm{tr(X^\\top LX)=\\|Z\\circ W\\|_{1,1 have a large advantage compared to models by \\citet{daitch2009fitting that minimize \\|LX\\|_F^2 a quadratic function of W.",
+      "\\nati{Large-scale applications can only resort to approximate nearest neighbors (A-NN), e.g. \\citep{dong2011efficient, muja2014scalable,malkov2016efficient, that run with a cost of \\order{n\\log(n). This is low compared to computing a simple k-NN graph, as even the pairwise distance matrix between all samples needs \\order{n^2 computations. However, the quality of A-NN is worse than the k-NN, that is already not as good as if we would learn the graph from data.",
+      "The A-NN graph does not take into account the different sampling rates of different digits, while it has many wrong edges. The \\ell_2 model~() assigns most of its connectivity to the label ``1'' that has the smallest intra-label image distance and neglects digits with larger distance (``2'', ``8'') even for 30 edges per node. This effect becomes smaller when more dense graphs (30 edges per node, yellow bars) are sought.",
+      "It seems that \\ell_2 is more accurate than the log model, but as shown in Figure~, the majority of its edges connect digit \"1\" without connecting sufficiently digits such as 2,3,8. Semi-supervised learning On the same graphs, we perform label propagation ~\\citep{zhu2003semi on MNIST, with 1\\% known labels. The results are plotted in Figure~ (right).",
+      "% \\nati{ MNIST connectivity for \\citep{daitch2009fitting methods In Figure~, we plot the connectivity across different digits of MNIST for the \"hard\" and \"soft\" model. As the degree is constant over the nodes, the hard model perform similarly to the A-NN (see Figure~). It seems that due to hard constraint, the \"hard\" model forces many edges with a small weights.",
+      "Furthermore, they need parameter tuning to control sparsity, and this adds an extra burden making them prohibitive for applications with more than a few thousands of nodes. \\nati{Large-scale applications can only resort to approximate nearest neighbors (A-NN), e.g. \\citep{dong2011efficient, muja2014scalable,malkov2016efficient, that run with a cost of \\order{n\\log(n). This is low compared to computing a simple k-NN graph, as even the pairwise distance matrix between all samples needs \\order{n^2 computations."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Text chunk 1 explains that the log model does not suffer from the problem of neglecting digits with larger distances, unlike the \\u001ell_2 model. Image 0 shows the recovered manifolds by different models, which can help visualize the effectiveness of these models.\",\n    \"Answer\": \"The log model is the most effective at connecting digits with larger distances.\"\n}"
+  },
+  "5": {
+    "question": "What is the effect of adding Gaussian noise to the images on the measured sparsity?",
+    "ground_truth": "Adding Gaussian noise to the images increases the measured sparsity.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure8-1.png",
+      "1710.05654v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure8-1.png",
+      "1710.05654v2-Figure5-1.png",
+      "1710.05654v2-Figure1-1.png",
+      "1710.05654v2-Figure10-1.png",
+      "1710.05654v2-Figure7-1.png",
+      "1710.05654v2-Figure12-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Text 0 discusses the effect of adding Gaussian noise to images, noting that the results are almost identical to those without outliers. Image 0 shows the effectiveness of \u03b8 bounds, which relates to sparsity and degree obtained, making it relevant to understanding the impact on sparsity.",
+    "answer": "Adding Gaussian noise to the images does not significantly affect the measured sparsity, as the results are almost identical to those without outliers.",
+    "text_chunks": [
+      "For this experiment, we first added outliers by contaminating 10\\% of the images with Gaussian noise from \\cal{N(0,1). Note that this is huge noise since the initial images have intensities in the range [0,1]. The result, plotted in Figure (left), is almost identical to the results without outliers (Figure , middle).",
+      "To complete the experiment, instead of adding noise, we replaced 10\\% of the images with copies of other images already in the dataset. In this case, we have 20\\% of images in pairs of duplicates, with essentially zero distances with each other in matrix Z. As we see in Figure (right), while the intervals of \\theta change, they do so following closely the actual measured sparsity.",
+      "\\vassilis{ \\subsubsection{Robustness to outliers and duplicates We test the robustness of the bounds of \\theta by repeating the experiment of Figure (middle) after replacing 10\\% of the images with outliers or duplicates. For this experiment, we first added outliers by contaminating 10\\% of the images with Gaussian noise from \\cal{N(0,1). Note that this is huge noise since the initial images have intensities in the range [0,1].",
+      "Effectiveness of automatic parameter selection As we saw in the middle and right plots of Figure~, the approximate bounds of \\theta (red line) given by eq.~() are very effective at predicting sparsity. The same experiment is repeated for more datasets is in the supplementary material~. In Figure we see this also in large scale, between 262K nodes from our \"spherical\" dataset.",
+      "\\vassilis{To have a fair comparison with A-NN, we weighted its edges with standard exponential decay W_{i,j=\\exp(-Z_{i,j/\\sigma^2) and chose every time the best performing \\sigma. Note that it is very difficult for the \"soft\" and \"hard\" models to control sparsity (hard graphs have no parameter at all). Hence they are less adaptable to a particular problem and in this particular case perform poorly.",
+      "As we see in Figure (right), while the intervals of \\theta change, they do so following closely the actual measured sparsity. Connectivity example of the graph of words In Table~, we look in more detail at the graph constructed from the word2vec features. We present the connectivity for the word \"glucose\" and \"academy\".",
+      "Using our scheme, we can learn a 1-million-nodes graph with a desired sparsity level on a desktop computer in 16 minutes, with a simple Matlab implementation. Graph Learning from Smooth Signals A widely used assumption for data residing on graphs is that values change smoothly across adjacent nodes. The smoothness of a set of vectors x_1, \\dots, x_n\\in\\mathbb{R^d on a given weighted undirected graph is usually quantified by the Dirichlet energy~\\citep{belkin2001laplacian where W_{ij\\in\\mathbb{R_+ denotes the weight of the edge between nodes i and j, L = D-W is the graph Laplacian, and D_{ii = \\sum_jW_{ij is the diagonal weighted degree matrix.",
+      "Approximation accuracy \\vassilis{and robustness of parameter \\texorpdfstring{\\theta{theta We already saw in Figure~ (middle) that for the MNIST dataset () predicts very well the sparsity of the final graph for any choice of \\theta. This is further illustrated on the USPS and ATT faces datasets in Figure~. Note, that in the rare cases that the actual sparsity is outside the predicted bounds, we already have a good starting point for finding a good \\theta."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Text 0 discusses the effect of adding Gaussian noise to images, noting that the results are almost identical to those without outliers. Image 0 shows the effectiveness of \u03b8 bounds, which relates to sparsity and degree obtained, making it relevant to understanding the impact on sparsity.\",\n    \"Answer\": \"Adding Gaussian noise to the images does not significantly affect the measured sparsity, as the results are almost identical to those without outliers.\"\n}"
+  },
+  "6": {
+    "question": "How does the connectivity of the Daitch hard scalable model compare to the Daitch soft scalable model?",
+    "ground_truth": "The Daitch hard scalable model has a higher connectivity than the Daitch soft scalable model. This can be seen in the figure, where the bars for the hard model are generally higher than the bars for the soft model.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure6-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure6-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure4-1.png",
+      "1710.05654v2-Figure10-1.png",
+      "1710.05654v2-Figure15-1.png",
+      "1710.05654v2-Figure14-1.png",
+      "1710.05654v2-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 shows the performance of different models, including Daitch hard and soft, in terms of edge accuracy and classification error. Text 2 discusses the connectivity differences between the hard and soft models, noting that the hard model forces many edges with small weights, while the soft model's connectivity is between the log and the \u0003b2 model.",
+    "answer": "The Daitch hard model forces many edges with small weights, while the Daitch soft model has connectivity characteristics between the log and \u0003b2 models. This suggests that the hard model may have more constrained connectivity compared to the soft model.",
+    "text_chunks": [
+      "% \\nati{ MNIST connectivity for \\citep{daitch2009fitting methods In Figure~, we plot the connectivity across different digits of MNIST for the \"hard\" and \"soft\" model. As the degree is constant over the nodes, the hard model perform similarly to the A-NN (see Figure~). It seems that due to hard constraint, the \"hard\" model forces many edges with a small weights.",
+      "Looking at different words, we observe that the learned graph is able to associate meaningful edge weights to the different words according to the confidence of their similarity. % \\nati{ MNIST connectivity for \\citep{daitch2009fitting methods In Figure~, we plot the connectivity across different digits of MNIST for the \"hard\" and \"soft\" model. As the degree is constant over the nodes, the hard model perform similarly to the A-NN (see Figure~).",
+      "It seems that due to hard constraint, the \"hard\" model forces many edges with a small weights. On the other hand, in terms of connextivity, the soft model seems to be between the log and the \\ell_2 model. MNIST Computational time \\nati{with respect to k",
+      "To reduce this cost, we randomly projected the original d=300 input features to a subspace of size d=20. While the cost per iteration of the \"soft\" method is slower than for the \"hard\" method, the latter typically needs more iterations to reach convergence. \\nati{In Figure (right), we show the scalability of our model to graphs of up to 1M samples.",
+      "\\vassilis{As this contribution is the first to scale a graph learning algorithm to a large amount of nodes, it is difficult to compare with other methods without trying to scale them first. While this paper focuses on the scaled log model, we also scaled the \\ell_2-model and the \"hard\" and \"soft\" models proposed by~\\citep{daitch2009fitting. We refer the reader to the supplementary material~ for further details, and for details about the datasets we use.",
+      "The cost is almost linear for our method, but quadratic for the original log model of~\\citet{kalofolias2016learn. \\nati{The \"hard\" model corresponds to a close implementation of the original work of \\citep{daitch2009fitting. The most expensive part of the computation comes from the quadratic program solver.",
+      "The log model does not suffer from this problem even for sparse graphs of degree 5 and gives consistent connectivities for all digits. \\nati{The scaled versions of models in \\citep{daitch2009fitting perform worse than our large scale log model, but often better than A-NN or \\ell-2, as plotted in Figure~ of the supplementary material. Figure~ (left) summarizes the number of wrong edges with respect to k. \\vassilis{Models \\ell_2 and log that minimize \\mathrm{tr(X^\\top LX)=\\|Z\\circ W\\|_{1,1 have a large advantage compared to models by \\citet{daitch2009fitting that minimize \\|LX\\|_F^2 a quadratic function of W.",
+      "Experiments In our experiments we wish to answer questions regarding (1) the approximation quality of our model, (2) the quality of our automatic parameter selection, (3) the benefit from learning versus A-NN for large scale applications and (4) the scalability of the model. \\vassilis{As this contribution is the first to scale a graph learning algorithm to a large amount of nodes, it is difficult to compare with other methods without trying to scale them first. While this paper focuses on the scaled log model, we also scaled the \\ell_2-model and the \"hard\" and \"soft\" models proposed by~\\citep{daitch2009fitting."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 shows the performance of different models, including Daitch hard and soft, in terms of edge accuracy and classification error. Text 2 discusses the connectivity differences between the hard and soft models, noting that the hard model forces many edges with small weights, while the soft model's connectivity is between the log and the \\u0003b2 model.\",\n    \"Answer\": \"The Daitch hard model forces many edges with small weights, while the Daitch soft model has connectivity characteristics between the log and \\u0003b2 models. This suggests that the hard model may have more constrained connectivity compared to the soft model.\"\n}"
+  },
+  "7": {
+    "question": "How does the relevance of terms assigned by the learned graph compare to the relevance assigned by k-NN and A-NN graphs?",
+    "ground_truth": "The learned graph assigns weights that correspond much better to the relevance of the terms compared to k-NN and A-NN graphs.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure5-1.png",
+      "1710.05654v2-Figure14-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure13-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure5-1.png",
+      "1710.05654v2-Figure14-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure13-1.png",
+      "1710.05654v2-Figure8-1.png",
+      "1710.05654v2-Table1-1.png",
+      "1710.05654v2-Figure15-1.png",
+      "1710.05654v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 shows connectivity across classes using different graph models, which is relevant to understanding how terms are connected in different graph types. Text 4 discusses the quality of A-NN and k-NN graphs compared to a scalable graph learning method, which directly addresses the question of relevance.",
+    "answer": "The learned graph assigns more meaningful weights and achieves better quality compared to A-NN and k-NN graphs. The scalable graph learning method leverages A-NN graphs to reduce variables while approaching state-of-the-art quality.",
+    "text_chunks": [
+      "We see that the NN graphs span a larger part of the entire graph just with 2 hops, the A-NN being closer to small-world. While the k-NN graph does better in terms of quality, it is significantly worse than our large scale log graph, that is actually cheaper to compute. Additionally, graph learning seems to assign more meaningful weights as we show in Table~ of the supplementary material~. Computation time In Figure we compare our scaled model to other graph learning models in terms of time as a function of n. For all iterative algorithms, except A-NN, we perform a maximum of 500 iterations.",
+      "To learn a graph with on average k neighbors per node (k-NN), we first compute an rk-A-NN graph and use its edges as \\mathcal{E^\\text{allowed. The graph is then learned on this subset. The size of \\mathcal{E^\\text{allowed does not only affect the time needed to learn the graph, but also its quality.",
+      "In Figure~, we plot nodes within two hops from the word \"use\" in the three types of graphs of degree around k=5. We see that the NN graphs span a larger part of the entire graph just with 2 hops, the A-NN being closer to small-world. While the k-NN graph does better in terms of quality, it is significantly worse than our large scale log graph, that is actually cheaper to compute.",
+      "The large scale log graph has significantly larger diameter than both k-NN and A-NN graphs. This indicates that our learned graph is closer to a manifold-like structure, unlike the other two types that are closer to a small-world graph. Manifold-like graphs reveal better the structure of data, while small world graphs are related to randomness~\\citep{watts1998collective.",
+      "However, the quality of A-NN is worse than the k-NN, that is already not as good as if we would learn the graph from data. In this paper, we propose the first scalable graph learning method, with the same leading cost as A-NN, and with quality that approaches state-of-the-art graph learning. Our method leverages A-NN graphs to effectively reduce the number of variables, and the state-of-the-art graph learning model by \\citet{kalofolias2016learn in order to achieve the best of both worlds: low cost and good quality.",
+      "While clearly graph quality is important in such applications~\\citep{henaff2015deep,defferrard2016convolutional, the question of how to optimally construct a graph remains an open problem. The first applications mostly used weighted k-nearest neighbors graphs (k-NN) \\citep{zhu2003semi, belkin2006manifold, von2007tutorial, but the last few years more sophisticated methods of learning graphs from data were proposed. Today, graph learning, or network inference, has become an important problem itself \\citep{wang2008label, daitch2009fitting, jebara2009graph, lake2010discovering, hu2013graph, dong2015learning, kalofolias2016learn.",
+      "Note that it is very difficult for the \"soft\" and \"hard\" models to control sparsity (hard graphs have no parameter at all). Hence they are less adaptable to a particular problem and in this particular case perform poorly. Given the performance of the A-NN graph, one might wonder why pay the additional cost of learning a graph only for a small improvement in classification.",
+      "Graphs bridge the gap between irregular data and CNNs through the generalization of convolutions on graphs \\citep{defferrard2016convolutional,kipf2016semi,monti2016geometric,li2015gated. While clearly graph quality is important in such applications~\\citep{henaff2015deep,defferrard2016convolutional, the question of how to optimally construct a graph remains an open problem. The first applications mostly used weighted k-nearest neighbors graphs (k-NN) \\citep{zhu2003semi, belkin2006manifold, von2007tutorial, but the last few years more sophisticated methods of learning graphs from data were proposed."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 shows connectivity across classes using different graph models, which is relevant to understanding how terms are connected in different graph types. Text 4 discusses the quality of A-NN and k-NN graphs compared to a scalable graph learning method, which directly addresses the question of relevance.\",\n    \"Answer\": \"The learned graph assigns more meaningful weights and achieves better quality compared to A-NN and k-NN graphs. The scalable graph learning method leverages A-NN graphs to reduce variables while approaching state-of-the-art quality.\"\n}"
+  },
+  "8": {
+    "question": "How does the graph diameter change with increasing average degree for different methods and datasets?",
+    "ground_truth": "The graph diameter generally decreases with increasing average degree for all methods and datasets. However, the rate of decrease and the final diameter value vary depending on the method and dataset.",
+    "selected_figures_names": [
+      "1710.05654v2-Figure13-1.png",
+      "1710.05654v2-Figure11-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure14-1.png"
+    ],
+    "all_figures_names": [
+      "1710.05654v2-Figure13-1.png",
+      "1710.05654v2-Figure11-1.png",
+      "1710.05654v2-Figure9-1.png",
+      "1710.05654v2-Figure14-1.png",
+      "1710.05654v2-Figure10-1.png",
+      "1710.05654v2-Figure1-1.png",
+      "1710.05654v2-Figure15-1.png",
+      "1710.05654v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 6,
+    "rationale": "Image 2 shows the graph diameter as a function of average degree for different methods and datasets, which directly addresses the question. Text 6 explains the relationship between graph types and their diameters, providing context for understanding the changes in diameter with degree.",
+    "answer": "As the average degree increases, the graph diameter generally decreases for all methods. The large scale log graph has a larger diameter compared to k-NN and A-NN graphs, indicating it is closer to a manifold-like structure.",
+    "text_chunks": [
+      "The learned graphs, given enough information (1920 signals) reach the ideal diameter around degrees 4 or 8, with a phase transition from diameter 127 to diameter 63 between degrees 6 to 7. When the information is not enough to recover the exact manifold (using only 40 signals, middle plot of Figure ), the learned graphs have a higher diameter than the A-NN graph. \\subsubsection{Graph between words using word2vec representations \\vassilis{ Finally we learn a graph between 10,000 words using 300 word2vec features, like the ones used for graph convolutional neural networks \\citep{defferrard2016convolutional.",
+      "\\subsubsection{Small spherical data We then learn graphs from the \u201csmall spherical data\u201d so as to be able to compute graph diameters. This operation has a complexity above O(n^2) and is not possible for large graphs. Manifold-like graphs are known to have larger diameter compared to small world graphs \\citep{watts1998collective for the same average degree.",
+      "Manifold-like graphs are known to have larger diameter compared to small world graphs \\citep{watts1998collective for the same average degree. In Figure (left and middle) we plot the diameter of scalable graph models.",
+      "The data has 4096 nodes organized as a 64\\times 64 grid, therefore a ground-truth 4-NN has exactly diameter 127= 2\\cdot 64-1, and a ground-truth 8-NN diameter 63. The learned graphs, given enough information (1920 signals) reach the ideal diameter around degrees 4 or 8, with a phase transition from diameter 127 to diameter 63 between degrees 6 to 7. When the information is not enough to recover the exact manifold (using only 40 signals, middle plot of Figure ), the learned graphs have a higher diameter than the A-NN graph.",
+      "That is, the average intra-class distance between digits ``1'' is smaller than for other digits (supplementary material~). As we see, this affects the results of graph learning. In Figure~, we plot the histograms of connectivity between images of each label.",
+      "MNIST has a relatively uniform sampling between numbers of different labels, except for the digits ``1'' that are more densely sampled. That is, the average intra-class distance between digits ``1'' is smaller than for other digits (supplementary material~). As we see, this affects the results of graph learning.",
+      "The large scale log graph has significantly larger diameter than both k-NN and A-NN graphs. This indicates that our learned graph is closer to a manifold-like structure, unlike the other two types that are closer to a small-world graph. Manifold-like graphs reveal better the structure of data, while small world graphs are related to randomness~\\citep{watts1998collective.",
+      "The graph is then learned on this subset. The size of \\mathcal{E^\\text{allowed does not only affect the time needed to learn the graph, but also its quality. A too restrictive choice might prevent the final graph from learning useful edges."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 6,\n    \"Rationale\": \"Image 2 shows the graph diameter as a function of average degree for different methods and datasets, which directly addresses the question. Text 6 explains the relationship between graph types and their diameters, providing context for understanding the changes in diameter with degree.\",\n    \"Answer\": \"As the average degree increases, the graph diameter generally decreases for all methods. The large scale log graph has a larger diameter compared to k-NN and A-NN graphs, indicating it is closer to a manifold-like structure.\"\n}"
+  }
+}

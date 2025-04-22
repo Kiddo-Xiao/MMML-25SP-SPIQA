@@ -1,0 +1,74 @@
+{
+  "0": {
+    "question": "What is the initial value of V2 in the interval [0.35, 0.67]?",
+    "ground_truth": "0.35",
+    "selected_figures_names": [
+      "1705.02946v3-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02946v3-Figure2-1.png",
+      "1705.02946v3-Table1-1.png",
+      "1705.02946v3-Table2-1.png",
+      "1705.02946v3-Figure7-1.png",
+      "1705.02946v3-Figure3-1.png",
+      "1705.02946v3-Figure6-1.png",
+      "1705.02946v3-Figure1-1.png",
+      "1705.02946v3-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "The image contains a table with values for V2 in different intervals, including [0.35, 0.67].",
+    "answer": "The initial value of V2 in the interval [0.35, 0.67] is 0.35.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"The image contains a table with values for V2 in different intervals, including [0.35, 0.67].\",\n    \"Answer\": \"The initial value of V2 in the interval [0.35, 0.67] is 0.35.\"\n}"
+  },
+  "1": {
+    "question": "What is the distance from equitability for the allocation that can be obtained by cutting at $x$ with the player order $(1,2)$?",
+    "ground_truth": "The distance from equitability is $b-a$.",
+    "selected_figures_names": [
+      "1705.02946v3-Figure7-1.png",
+      "1705.02946v3-Figure6-1.png",
+      "1705.02946v3-Figure2-1.png",
+      "1705.02946v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02946v3-Figure7-1.png",
+      "1705.02946v3-Figure6-1.png",
+      "1705.02946v3-Figure2-1.png",
+      "1705.02946v3-Table1-1.png",
+      "1705.02946v3-Figure8-1.png",
+      "1705.02946v3-Figure3-1.png",
+      "1705.02946v3-Figure1-1.png",
+      "1705.02946v3-Table2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 provide information about the construction for equitable lower bound and the distance from a connected equitable and proportional allocation, which directly relates to the question about the distance from equitability.",
+    "answer": "The distance from equitability for the allocation is $b - a$.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 provide information about the construction for equitable lower bound and the distance from a connected equitable and proportional allocation, which directly relates to the question about the distance from equitability.\",\n    \"Answer\": \"The distance from equitability for the allocation is $b - a$.\"\n}"
+  },
+  "2": {
+    "question": "What is the upper bound on the query complexity for finding an \u03b5-perfect allocation with minimum cuts for 3 or more players?",
+    "ground_truth": "O(n^3 / \u03b5)",
+    "selected_figures_names": [
+      "1705.02946v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02946v3-Figure5-1.png",
+      "1705.02946v3-Figure7-1.png",
+      "1705.02946v3-Table1-1.png",
+      "1705.02946v3-Table2-1.png",
+      "1705.02946v3-Figure2-1.png",
+      "1705.02946v3-Figure1-1.png",
+      "1705.02946v3-Figure3-1.png",
+      "1705.02946v3-Figure8-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The table in Image 0 directly provides the upper bound for \u03b5-perfect allocations with minimum cuts for n \u2265 3 players, which is the specific information requested in the question.",
+    "answer": "The upper bound on the query complexity for finding an \u03b5-perfect allocation with minimum cuts for 3 or more players is O(n^3/\u03b5).",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The table in Image 0 directly provides the upper bound for \u03b5-perfect allocations with minimum cuts for n \u2265 3 players, which is the specific information requested in the question.\",\n    \"Answer\": \"The upper bound on the query complexity for finding an \u03b5-perfect allocation with minimum cuts for 3 or more players is O(n^3/\u03b5).\"\n}"
+  }
+}

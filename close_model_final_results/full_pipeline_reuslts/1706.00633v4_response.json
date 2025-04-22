@@ -1,0 +1,299 @@
+{
+  "0": {
+    "question": "Which method performed better on the MNIST dataset, ResNet-32 (CE) or ResNet-56 (RCE)?",
+    "ground_truth": "ResNet-56 (RCE) performed better on the MNIST dataset with a classification error rate of 0.32% compared to ResNet-32 (CE) which had a classification error rate of 0.38%.",
+    "selected_figures_names": [
+      "1706.00633v4-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure1-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table5-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides classification error rates for ResNet models on MNIST, directly showing performance. Text 0 discusses accuracy scores of ResNet models, relevant to performance comparison.",
+    "answer": "ResNet-56 (RCE) performed better on the MNIST dataset.",
+    "text_chunks": [
+      "the perturbation \\epsilon. Fig.~a shows the results. We can see that Resnet-32 (RCE) has higher accuracy scores than Resnet-32 (CE) under all the four attacks on both datasets.",
+      "In the adversarial setting, the strong baseline we use is the K-density estimate method (CE training + K-density detector)~\\citep{feinman2017detecting, which has shown its superiority and versatility compared to other detection-based defense methods~\\citep{bhagoji2017dimensionality,gong2017adversarial,grosse2017statistical,li2016adversarial,metzen2017detecting in~\\citep{carlini2017adversarial. \\vspace{-.1cm Classification on normal examples \\vspace{-.1cm \\end{center \\vskip -0.2in \\end{wraptable We first evaluate in the normal setting, where we implement Resnet-32 and Resnet-56~\\citep{He2015 on both datasets. For each network, we use both the CE and RCE as the training objectives, trained by the same settings as~\\citet{He2016.",
+      "The number of training steps for both objectives is set to be 20,000 on MNIST and 90,000 on CIFAR-10. Hereafter for notation simplicity, we will indicate the training procedure used after the model name of a trained network, e.g., Resnet-32 (CE). Similarly, we indicate the training procedure and omit the name of the target network after an attacking method, e.g., FGSM (CE).",
+      "\\end{center \\vspace{-0.2in \\end{table* Performance under the oblivious attack \\vspace{-.2cm We test the performance of the trained Resnet-32 networks on MNIST and CIFAR-10 under the oblivious attack, where we investigate the attacking methods as in Sec.~. We first disable the thresholding test strategy and make classifiers return all predictions to study the networks ability of correctly classifying adversarial examples. We use the iteration-based attacking methods: FGSM, BIM, ILCM and JSMA, and calculate the classification accuracy of networks on crafted adversarial examples w.r.t.",
+      "We find that the adversarial examples crafted on Resnet-32 (CE) are indistinguishable from the normal ones by human eyes. In contrast, those crafted on Resnet-32 (RCE) have macroscopic noises, which are not strictly adversarial examples since they are visually distinguishable from normal ones. The inefficiency of the most aggressive attack C\\&W-wb under our defense verifies our illustration in Fig.~d.",
+      "x^* being detected by the K-density detectors, where \\eta is set to be the median of -\\log(KD(\\cdot)) on the training set. Table~ shows the average minimal distortions and the ratios of f_2(x^*)>0 on the adversarial examples crafted by C\\&W-wb, where a higher ratio indicates that the detector is more robust and harder to be fooled. We find that nearly all the adversarial examples generated on Resnet-32 (CE) have f_2(x^*)\\leq0, which means that the values of K-density on them are greater than half of the values on the training data.",
+      "We set the trained Resnet-56 networks as the target models. Adversaries intend to attack them but do not have access to their parameters. Thus we set the trained Resnet-32 networks to be the substitute models that adversaries actually attack on and then feed the crafted adversarial examples into the target models.",
+      "Furthermore, we have \\forall j, k\\neq y, \\[ \\] \\qed \\newpage Additional Experiments Training Settings We apply the same hyperparameters when training Resnet networks via the CE and RCE. The optimizer is SGD with momentum, and the mini-batch size is 128. The weight decay is 0.0002, the leakiness of Relu is 0.1."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides classification error rates for ResNet models on MNIST, directly showing performance. Text 0 discusses accuracy scores of ResNet models, relevant to performance comparison.\",\n    \"Answer\": \"ResNet-56 (RCE) performed better on the MNIST dataset.\"\n}"
+  },
+  "1": {
+    "question": "Which combination of training procedure and thresholding metric consistently performs the best across both MNIST and CIFAR-10 datasets for all attack types?",
+    "ground_truth": "RCE training combined with the K-density metric consistently performs the best across both MNIST and CIFAR-10 datasets for all attack types.",
+    "selected_figures_names": [
+      "1706.00633v4-Table5-1.png",
+      "1706.00633v4-Figure1-1.png",
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Table5-1.png",
+      "1706.00633v4-Figure1-1.png",
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure7-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 4,
+    "rationale": "Image 3 provides AUC-scores for different attacks and metrics, showing performance across MNIST and CIFAR-10. Text 4 discusses the robustness of the method across datasets and attacks, supporting the analysis of performance consistency.",
+    "answer": "The combination of RCE training procedure and K-density thresholding metric consistently performs the best across both MNIST and CIFAR-10 datasets for all attack types.",
+    "text_chunks": [
+      "The number of training steps for both objectives is set to be 20,000 on MNIST and 90,000 on CIFAR-10. Hereafter for notation simplicity, we will indicate the training procedure used after the model name of a trained network, e.g., Resnet-32 (CE). Similarly, we indicate the training procedure and omit the name of the target network after an attacking method, e.g., FGSM (CE).",
+      "Therefore, it can be easily applied to any deep networks and is as scalable as the CE training procedure. We apply our method to defend various attacking methods on the widely used MNIST \\citep{Lecun1998 and CIFAR-10 \\citep{Krizhevsky2012 datasets. We test the performance of our method under different threat models, i.e., oblivious adversaries, white-box adversaries and black-box adversaries.",
+      "MNIST is a collection of handwritten digits with a training set of 60,000 images and a test set of 10,000 images. CIFAR-10 consists of 60,000 color images in 10 classes with 6,000 images per class. There are 50,000 training images and 10,000 test images.",
+      "\\end{center \\vspace{-0.2in \\end{table* Performance under the oblivious attack \\vspace{-.2cm We test the performance of the trained Resnet-32 networks on MNIST and CIFAR-10 under the oblivious attack, where we investigate the attacking methods as in Sec.~. We first disable the thresholding test strategy and make classifiers return all predictions to study the networks ability of correctly classifying adversarial examples. We use the iteration-based attacking methods: FGSM, BIM, ILCM and JSMA, and calculate the classification accuracy of networks on crafted adversarial examples w.r.t.",
+      "Note that in our experiments the target models and the substitute models have very similar structures, and the C\\&W-wb attack becomes ineffective even under this quite `white' black-box attack. \\vspace{-.3cm Conclusions \\vspace{-.2cm We present a novel method to improve the robustness of deep learning models by reliably detecting and filtering out adversarial examples, which can be implemented using standard algorithms with little extra training cost. Our method performs well on both the MNIST and CIFAR-10 datasets under all threat models and various attacking methods, while maintaining accuracy on normal examples.",
+      "We now present the experimental results to demonstrate the effectiveness of our method on improving the robustness of DNN classifiers in the adversarial setting. \\vspace{-.1cm Setup \\vspace{-.1cm We use the two widely studied datasets---MNIST~\\citep{Lecun1998 and CIFAR-10~\\citep{Krizhevsky2012.",
+      "Since adversaries know the existence of the K-density detectors, we apply the C\\&W-wb attack. We find that the adversarial examples crafted by the C\\&W-wb attack have poor transferability, where less than 50\\% of them can make the target model misclassify on MNIST and less than 15\\% on CIFAR-10. Table~ shows the AUC-scores in four different cases of the black-box attack on CIFAR-10, and the AUC-scores in the same cases on MNIST are all higher than 95\\%.",
+      "Each training image pixel values are scaled to be in the interval [-0.5,0.5]. On CIFAR-10 the training steps are 90,000, with piecewise learning rate as \\[ \\text{steps:[40,000,60,000,80,000], \\] \\[ \\text{lr:[0.1,0.01,0.001,0.0001]\\text{."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 4,\n    \"Rationale\": \"Image 3 provides AUC-scores for different attacks and metrics, showing performance across MNIST and CIFAR-10. Text 4 discusses the robustness of the method across datasets and attacks, supporting the analysis of performance consistency.\",\n    \"Answer\": \"The combination of RCE training procedure and K-density thresholding metric consistently performs the best across both MNIST and CIFAR-10 datasets for all attack types.\"\n}"
+  },
+  "2": {
+    "question": "Which attack method is the most effective at reducing the accuracy of the Resnet-32 model on the MNIST dataset?",
+    "ground_truth": "The most effective attack method at reducing the accuracy of the Resnet-32 model on the MNIST dataset is BIM/CE.",
+    "selected_figures_names": [
+      "1706.00633v4-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides visual data on classification accuracy under various iteration-based attacks, specifically for the MNIST dataset. Text 0 discusses the performance of Resnet-32 networks under these attacks, making it relevant to the question.",
+    "answer": "The most effective attack method at reducing the accuracy of the Resnet-32 model on the MNIST dataset is the JSMA attack.",
+    "text_chunks": [
+      "\\end{center \\vspace{-0.2in \\end{table* Performance under the oblivious attack \\vspace{-.2cm We test the performance of the trained Resnet-32 networks on MNIST and CIFAR-10 under the oblivious attack, where we investigate the attacking methods as in Sec.~. We first disable the thresholding test strategy and make classifiers return all predictions to study the networks ability of correctly classifying adversarial examples. We use the iteration-based attacking methods: FGSM, BIM, ILCM and JSMA, and calculate the classification accuracy of networks on crafted adversarial examples w.r.t.",
+      "the perturbation \\epsilon. Fig.~a shows the results. We can see that Resnet-32 (RCE) has higher accuracy scores than Resnet-32 (CE) under all the four attacks on both datasets.",
+      "We set the trained Resnet-56 networks as the target models. Adversaries intend to attack them but do not have access to their parameters. Thus we set the trained Resnet-32 networks to be the substitute models that adversaries actually attack on and then feed the crafted adversarial examples into the target models.",
+      "Therefore, it can be easily applied to any deep networks and is as scalable as the CE training procedure. We apply our method to defend various attacking methods on the widely used MNIST \\citep{Lecun1998 and CIFAR-10 \\citep{Krizhevsky2012 datasets. We test the performance of our method under different threat models, i.e., oblivious adversaries, white-box adversaries and black-box adversaries.",
+      "In the adversarial setting, the strong baseline we use is the K-density estimate method (CE training + K-density detector)~\\citep{feinman2017detecting, which has shown its superiority and versatility compared to other detection-based defense methods~\\citep{bhagoji2017dimensionality,gong2017adversarial,grosse2017statistical,li2016adversarial,metzen2017detecting in~\\citep{carlini2017adversarial. \\vspace{-.1cm Classification on normal examples \\vspace{-.1cm \\end{center \\vskip -0.2in \\end{wraptable We first evaluate in the normal setting, where we implement Resnet-32 and Resnet-56~\\citep{He2015 on both datasets. For each network, we use both the CE and RCE as the training objectives, trained by the same settings as~\\citet{He2016.",
+      "We now present the experimental results to demonstrate the effectiveness of our method on improving the robustness of DNN classifiers in the adversarial setting. \\vspace{-.1cm Setup \\vspace{-.1cm We use the two widely studied datasets---MNIST~\\citep{Lecun1998 and CIFAR-10~\\citep{Krizhevsky2012.",
+      "Note that in our experiments the target models and the substitute models have very similar structures, and the C\\&W-wb attack becomes ineffective even under this quite `white' black-box attack. \\vspace{-.3cm Conclusions \\vspace{-.2cm We present a novel method to improve the robustness of deep learning models by reliably detecting and filtering out adversarial examples, which can be implemented using standard algorithms with little extra training cost. Our method performs well on both the MNIST and CIFAR-10 datasets under all threat models and various attacking methods, while maintaining accuracy on normal examples.",
+      "The number of training steps for both objectives is set to be 20,000 on MNIST and 90,000 on CIFAR-10. Hereafter for notation simplicity, we will indicate the training procedure used after the model name of a trained network, e.g., Resnet-32 (CE). Similarly, we indicate the training procedure and omit the name of the target network after an attacking method, e.g., FGSM (CE)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides visual data on classification accuracy under various iteration-based attacks, specifically for the MNIST dataset. Text 0 discusses the performance of Resnet-32 networks under these attacks, making it relevant to the question.\",\n    \"Answer\": \"The most effective attack method at reducing the accuracy of the Resnet-32 model on the MNIST dataset is the JSMA attack.\"\n}"
+  },
+  "3": {
+    "question": "Which of the following algorithms performs the best when trained via the CE?",
+    "ground_truth": "C&W-hc",
+    "selected_figures_names": [
+      "1706.00633v4-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Figure1-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table5-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the classification error rates for different algorithms when trained via CE and RCE, which directly relates to the question. Text 0 discusses the performance of networks trained by RCE compared to CE, providing context on the effectiveness of these training methods.",
+    "answer": "The algorithm with the lowest error rate in the CE panel of Image 0 performs the best when trained via the CE.",
+    "text_chunks": [
+      "Table~ shows the test error rates, where the thresholding test strategy is disabled and all the points receive their predicted labels. We can see that the performance of the networks trained by RCE is as good as and sometimes even better than those trained by the traditional CE procedure. Note that we apply the same training hyperparameters (e.g., learning rates and decay factors) for both the CE and RCE procedures, which suggests that RCE is easy to optimize and does not require much extra effort on tuning hyperparameters.",
+      "One common training objective is to minimize the cross-entropy (CE) loss, which is defined as: \\[\\mathcal{L_{CE(x, y)=-1_y^\\top \\log{F(x)=-\\log{F(x)_y\\text{,\\] for a single input-label pair (x,y). Here, 1_y is the one-hot encoding of y and the logarithm of a vector is defined as taking logarithm of each element. The CE training procedure intends to minimize the average CE loss (under proper regularization) on training data to obtain the optimal parameters.",
+      "By minimizing RCE, our training procedure encourages the classifiers to return a high confidence on the true class while a uniform distribution on false classes for each data point, and further makes the classifiers map the normal examples to the neighborhood of low-dimensional manifolds in the final-layer hidden space. Compared to CE, the RCE training procedure can learn more distinguishable representations on filtering adversarial examples when using the K-density detector or other dimension-based detectors~\\citep{ma2018characterizing. The minimization of RCE is simple to implement using stochastic gradient descent methods, with little extra training cost, as compared to CE.",
+      "Furthermore, we have \\forall j, k\\neq y, \\[ \\] \\qed \\newpage Additional Experiments Training Settings We apply the same hyperparameters when training Resnet networks via the CE and RCE. The optimizer is SGD with momentum, and the mini-batch size is 128. The weight decay is 0.0002, the leakiness of Relu is 0.1.",
+      "Table~ shows the AUC-scores calculated under different combinations of training procedures and thresholding metrics on both datasets. From Table~, we can see that our method (RCE training + K-density detector) performs the best in almost all cases, and non-ME itself is also a pretty reliable metric, although not as good as K-density. The classifiers trained by RCE also return more reliable confidence scores, which verifies the conclusion in Theorem~. Furthermore, we also show that our method can better distinguish between noisy examples and adversarial examples, as demonstrated in Appendix B.3.",
+      "This simple insight leads to our entire RCE training procedure which consists of two parts, as outlined below: Reverse training: Given the training set \\mathcal{D := \\{(x^i, y^i)\\_{i\\in [N], training the DNN F(X, \\theta) to be a reverse classifier by minimizing the average RCE loss: {\\theta^*_R=\\mathop{\\argmin_{\\theta\\frac{1{N\\sum_{i=1^{N\\mathcal{L_{CE^{R(x^i, y^i).",
+      "We find that the networks trained by both the CE and RCE are robust to noisy examples in the sense of having low error rates. Furthermore, in Fig.~ and Fig.~, we show the number of images w.r.t. the values of K-density under various attacks, also on normal and noisy examples.",
+      "In the adversarial setting, the strong baseline we use is the K-density estimate method (CE training + K-density detector)~\\citep{feinman2017detecting, which has shown its superiority and versatility compared to other detection-based defense methods~\\citep{bhagoji2017dimensionality,gong2017adversarial,grosse2017statistical,li2016adversarial,metzen2017detecting in~\\citep{carlini2017adversarial. \\vspace{-.1cm Classification on normal examples \\vspace{-.1cm \\end{center \\vskip -0.2in \\end{wraptable We first evaluate in the normal setting, where we implement Resnet-32 and Resnet-56~\\citep{He2015 on both datasets. For each network, we use both the CE and RCE as the training objectives, trained by the same settings as~\\citet{He2016."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the classification error rates for different algorithms when trained via CE and RCE, which directly relates to the question. Text 0 discusses the performance of networks trained by RCE compared to CE, providing context on the effectiveness of these training methods.\",\n    \"Answer\": \"The algorithm with the lowest error rate in the CE panel of Image 0 performs the best when trained via the CE.\"\n}"
+  },
+  "4": {
+    "question": "How does the accuracy of the model change as the value of c increases?",
+    "ground_truth": "The accuracy of the model decreases as the value of c increases.",
+    "selected_figures_names": [
+      "1706.00633v4-Figure7-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Table5-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows a graph of accuracy versus log10(c) for different methods, which directly visualizes how accuracy changes with c. Text 0 mentions classification accuracy under C&W attacks with different values of c, providing relevant context.",
+    "answer": "As the value of c increases, the accuracy of the model decreases. This is shown by the downward trend in the graph as log10(c) increases from -7 to 0.",
+    "text_chunks": [
+      "In Fig.~ we show the extended experiment result of classification accuracy under C\\&W attacks with different values of c.",
+      "\\] The training set is augmented by two ways as After augmentation each training image pixel values are also scaled to be in the interval [-0.5,0.5].",
+      "First, it is consistent and unbiased that when the training error \\alpha \\rightarrow 0, the output F_R(x, {\\theta^*_R) converges to the one-hot label vector 1_y . Second, the upper bounds of the difference between any two non-maximal elements in outputs decrease as \\mathcal{O(\\alpha^{2) w.r.t. \\alpha for RCE, much faster than the \\mathcal{O(\\alpha) for CE and label smoothing.",
+      "Table~ shows the AUC-scores calculated under different combinations of training procedures and thresholding metrics on both datasets. From Table~, we can see that our method (RCE training + K-density detector) performs the best in almost all cases, and non-ME itself is also a pretty reliable metric, although not as good as K-density. The classifiers trained by RCE also return more reliable confidence scores, which verifies the conclusion in Theorem~. Furthermore, we also show that our method can better distinguish between noisy examples and adversarial examples, as demonstrated in Appendix B.3.",
+      "Note that in our experiments the target models and the substitute models have very similar structures, and the C\\&W-wb attack becomes ineffective even under this quite `white' black-box attack. \\vspace{-.3cm Conclusions \\vspace{-.2cm We present a novel method to improve the robustness of deep learning models by reliably detecting and filtering out adversarial examples, which can be implemented using standard algorithms with little extra training cost. Our method performs well on both the MNIST and CIFAR-10 datasets under all threat models and various attacking methods, while maintaining accuracy on normal examples.",
+      "As for optimization-based methods like the C\\&W attack and its variants, we apply the same way as in~\\citep{carlini2017adversarial to report robustness. Specifically, we do a binary search for the parameter c, in order to find the minimal distortions that can successfully attack the classifier. The distortion is defined in~\\citep{Szegedy2013 as \\|x-x^*\\|_2/\\sqrt{d , where x^* is the generated adversarial example and each pixel feature is rescaled to be in the interval [0,255].",
+      "Thus we construct a high-confidence version of C\\&W-wb, where we set \\kappa be 5. However, none of the crafted adversarial examples can have f_2(x^*)\\leq0, as shown in Table~. This means that it is difficult for C\\&W-wb to simultaneously fool both the confidence and the K-density metrics. Extended experiments Usually there is a binary search mechanism of the parameter c in C\\&W attacks to obtain minimal adversarial perturbation.",
+      "We set the step size in the C\\&W attacks at 0.01, and set binary search rounds of c to be 9 with the maximal iteration steps at 10,000 in each round. Moreover, to make our investigation more convincing, we introduce the high-confidence version of the C\\&W attack (abbr. to C\\&W-hc) that sets the parameter \\kappa in the C\\&W attack to be 10 in our experiments."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows a graph of accuracy versus log10(c) for different methods, which directly visualizes how accuracy changes with c. Text 0 mentions classification accuracy under C&W attacks with different values of c, providing relevant context.\",\n    \"Answer\": \"As the value of c increases, the accuracy of the model decreases. This is shown by the downward trend in the graph as log10(c) increases from -7 to 0.\"\n}"
+  },
+  "5": {
+    "question": "Which objective function resulted in a higher ratio of f2(x\u2217) > 0 for the MNIST dataset?",
+    "ground_truth": "RCE",
+    "selected_figures_names": [
+      "1706.00633v4-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Table5-1.png",
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Table1-1.png",
+      "1706.00633v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides the specific ratios and distortions for the MNIST dataset, showing the comparison between CE and RCE. Text 3 explains the significance of the f2(x*) > 0 ratio in terms of robustness against adversarial examples.",
+    "answer": "The RCE objective function resulted in a higher ratio of f2(x\u2217) > 0 for the MNIST dataset.",
+    "text_chunks": [
+      "This makes the output predictions be biased. In order to have unbiased predictions that make the output vector F(x) tend to 1_y, and simultaneously encourage uniformity among probabilities on untrue classes, we define another objective function based on what we call reverse cross-entropy (RCE) as Minimizing RCE is equivalent to minimizing \\mathcal{L^\\infty_{CE. Note that by directly minimizing \\mathcal{L_{CE^{R, i.e., {\\theta^*_R=\\mathop{\\argmin_{\\theta\\mathcal{L_{CE^R, one will get a reverse classifier F(X, {\\theta^*_R), which means that given an input x, the reverse classifier F(X, {\\theta^*_R) will not only tend to assign the lowest probability to the true class but also tend to output a uniform distribution on other classes.",
+      "We now present the experimental results to demonstrate the effectiveness of our method on improving the robustness of DNN classifiers in the adversarial setting. \\vspace{-.1cm Setup \\vspace{-.1cm We use the two widely studied datasets---MNIST~\\citep{Lecun1998 and CIFAR-10~\\citep{Krizhevsky2012.",
+      "f(\\cdot) is an objective function as f(x)=\\max(\\max\\{Z_{pre(x)_i:i\\neq y \\-Z_{pre(x)_i, -\\kappa), where \\kappa controls the confidence. \\vspace{-.1cm Methodology \\vspace{-.1cm In this section, we present a new method to improve the robustness of classifiers in the adversarial setting.",
+      "x^* being detected by the K-density detectors, where \\eta is set to be the median of -\\log(KD(\\cdot)) on the training set. Table~ shows the average minimal distortions and the ratios of f_2(x^*)>0 on the adversarial examples crafted by C\\&W-wb, where a higher ratio indicates that the detector is more robust and harder to be fooled. We find that nearly all the adversarial examples generated on Resnet-32 (CE) have f_2(x^*)\\leq0, which means that the values of K-density on them are greater than half of the values on the training data.",
+      "Since adversaries know the existence of the K-density detectors, we apply the C\\&W-wb attack. We find that the adversarial examples crafted by the C\\&W-wb attack have poor transferability, where less than 50\\% of them can make the target model misclassify on MNIST and less than 15\\% on CIFAR-10. Table~ shows the AUC-scores in four different cases of the black-box attack on CIFAR-10, and the AUC-scores in the same cases on MNIST are all higher than 95\\%.",
+      "\\end{center \\vspace{-0.2in \\end{table* Performance under the oblivious attack \\vspace{-.2cm We test the performance of the trained Resnet-32 networks on MNIST and CIFAR-10 under the oblivious attack, where we investigate the attacking methods as in Sec.~. We first disable the thresholding test strategy and make classifiers return all predictions to study the networks ability of correctly classifying adversarial examples. We use the iteration-based attacking methods: FGSM, BIM, ILCM and JSMA, and calculate the classification accuracy of networks on crafted adversarial examples w.r.t.",
+      "MNIST is a collection of handwritten digits with a training set of 60,000 images and a test set of 10,000 images. CIFAR-10 consists of 60,000 color images in 10 classes with 6,000 images per class. There are 50,000 training images and 10,000 test images.",
+      "The number of training steps for both objectives is set to be 20,000 on MNIST and 90,000 on CIFAR-10. Hereafter for notation simplicity, we will indicate the training procedure used after the model name of a trained network, e.g., Resnet-32 (CE). Similarly, we indicate the training procedure and omit the name of the target network after an attacking method, e.g., FGSM (CE)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides the specific ratios and distortions for the MNIST dataset, showing the comparison between CE and RCE. Text 3 explains the significance of the f2(x*) > 0 ratio in terms of robustness against adversarial examples.\",\n    \"Answer\": \"The RCE objective function resulted in a higher ratio of f2(x\u2217) > 0 for the MNIST dataset.\"\n}"
+  },
+  "6": {
+    "question": "Which type of adversarial example generation method results in images that are visually more similar to the original images?",
+    "ground_truth": "The CE method results in images that are visually more similar to the original images than the RCE method.",
+    "selected_figures_names": [
+      "1706.00633v4-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 shows a comparison of normal images and adversarial examples generated using different methods (CE and RCE). Text 1 explains methods like FGSM and BIM that craft adversarial examples visually similar to the original images. Together, they provide insight into which methods maintain visual similarity.",
+    "answer": "The adversarial example generation methods like FGSM and BIM result in images that are visually more similar to the original images.",
+    "text_chunks": [
+      "This result is consistent with previous work~\\citep{carlini2017adversarial. However, note that applying C\\&W-wb on our method has a much higher ratio and results in a much larger minimal distortion. % Fig.~ shows some adversarial examples crafted by C\\&W-wb with the corresponding normal ones.",
+      "Most of them can craft adversarial examples that are visually indistinguishable from the corresponding normal ones, and yet are misclassified by the target model F. Here we introduce some well-known and commonly used attacking methods. Fast Gradient Sign Method (FGSM):~\\citet{Goodfellow2014 introduce an one-step attacking method, which crafts an adversarial example x^* as x^*=x+\\epsilon\\cdot\\sgn(\\nabla_{x\\mathcal{L(x, y)), with the perturbation \\epsilon and the training loss \\mathcal{L(x, y). Basic Iterative Method (BIM):~\\citet{Kurakin2016 propose an iterative version of FGSM, with the formula as x^*_i=\\clip_{x,\\epsilon(x^*_{i-1+\\frac{\\epsilon{r\\cdot\\sgn(\\nabla_{x^*_{i-1\\mathcal{L(x^*_{i-1, y))), where x^*_0=x, r is the number of iteration steps and \\clip_{x,\\epsilon(\\cdot) is a clipping function to keep x^*_i in its domain.",
+      "Therefore the white-box adversaries who intend to fool our detector have to generate adversarial examples with preciser calculations and larger noises. This is intuitively illustrated in Fig.~d, where the adversarial examples crafted on the networks trained by CE are easier to locate in the detector allowable regions than those crafted on the networks trained by RCE. This illustration is experimentally verified in Section~. \\vspace{-.15cm Experiments \\vspace{-.1cm",
+      "We choose the K-density estimate method as our strong baseline, which has shown its superiority and versatility compared to other detection-based defenses~\\citep{carlini2017adversarial. The results demonstrate that compared to the baseline, the proposed method improves the robustness against adversarial attacks under all the threat models, while maintaining state-of-the-art accuracy on normal examples. Specifically, we demonstrate that the white-box adversaries have to craft adversarial examples with macroscopic noises to successfully evade our defense, which means human observers can easily filter out the crafted adversarial examples.",
+      "There is also new work on verification and training provably robust networks~\\citep{dvijotham2018training,dvijotham2018dual,wong2018provable, but these methods can only provide pointwise guarantees, and they require large extra computation cost. Overall, as adversarial examples even exist for simple classification tasks~\\citep{gilmer2018adversarial and for human eyes~\\citep{elsayed2018adversarial, it is unlikely for such methods to solve the problem by preventing adversaries from generating adversarial examples. Due to the difficulty, detection-based defenses have attracted a lot of attention recently as alternative solutions.~\\citet{grosse2017statistical introduce an extra class in classifiers solely for adversarial examples, and similarly~\\citet{gong2017adversarial train an additional binary classifier to decide whether an instance is adversarial or not.~\\citet{metzen2017detecting detect adversarial examples via training a detection neural network, which takes input from intermediate layers of the classification network.~\\citet{bhagoji2017dimensionality reduce dimensionality of the input image fed to the classification network, and train a fully-connected neural network on the smaller input.~\\citet{li2016adversarial build a cascade classifier where each classifier is implemented as a linear SVM acting on the PCA of inner convolutional layers of the classification network.",
+      "Introduction Deep learning (DL) has obtained unprecedented progress in various tasks, including image classification, speech recognition, and natural language processing~\\citep{Goodfellow-et-al2016. However, a high-accuracy DL model can be vulnerable in the adversarial setting~\\citep{Goodfellow2014,Szegedy2013, where adversarial examples are maliciously generated to mislead the model to output wrong predictions. Several attacking methods have been developed to craft such adversarial examples~\\citep{Carlini2016,Dong2017,Goodfellow2014, Kurakin2016, Liu2016, Papernot2016, Papernot2015.",
+      "\\vspace{-.1cm Threat models \\vspace{-.1cm In the adversarial setting, an elaborate taxonomy of threat models is introduced in~\\citep{carlini2017adversarial: \\vspace{-2ex \\vspace{-.1cm Attacking methods \\vspace{-.1cm Although DNNs have obtained substantial progress, adversarial examples can be easily identified to fool the network, even when its accuracy is high \\citep{Nguyen2015. Several attacking methods on generating adversarial examples have been introduced in recent years.",
+      "The C\\&W-hc attack can generate adversarial examples with the confidence higher than 0.99, and previous work has shown that the adversarial examples crafted by C\\&W-hc are stronger and more difficult to defend than those crafted by C\\&W~\\citep{Carlini2016,carlini2017adversarial. The results are shown in Fig.~b. We can see that the C\\&W and C\\&W-hc attacks need much larger minimal distortions to successfully attack the networks trained by RCE than those trained by CE."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 shows a comparison of normal images and adversarial examples generated using different methods (CE and RCE). Text 1 explains methods like FGSM and BIM that craft adversarial examples visually similar to the original images. Together, they provide insight into which methods maintain visual similarity.\",\n    \"Answer\": \"The adversarial example generation methods like FGSM and BIM result in images that are visually more similar to the original images.\"\n}"
+  },
+  "7": {
+    "question": "How does the proposed metric of non-ME help detect adversarial examples?",
+    "ground_truth": " The non-ME metric measures the entropy of the normalized non-maximal elements in the final hidden vector of the classifier. Adversarial examples often have low non-ME values, indicating that they are close to the decision boundary and have high confidence in the incorrect class.",
+    "selected_figures_names": [
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Table3-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Table2-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Figure5-1.png",
+      "1706.00633v4-Figure7-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 provides AUC-scores for different metrics, showing the effectiveness of non-ME in detecting adversarial examples. Text 1 explains the design and purpose of the non-ME metric in detecting adversarial examples.",
+    "answer": "The proposed metric of non-ME helps detect adversarial examples by providing a reliable measure to distinguish between normal and adversarial inputs. It is designed to address the difficulty of classifying adversarial examples by focusing on the entropy of normalized non-maximal elements, which helps in real-world applications by allowing systems to disable autonomous operations and request human intervention when adversarial examples are detected.",
+    "text_chunks": [
+      "In contrast, when non-ME is used as the detection metric, z_{1 will be easily filtered out by the detector because \\nonME(z_{1)<t, and the nearest adversarial example becomes z_{2 in this case, which locates on the junction manifold of the neighborhood boundary and the decision boundary. It is easy to generally conclude that \\Vert z_{0-z_{2\\Vert>\\Vert z_{0-z_{1\\Vert, almost everywhere. This means that due to the existence of the detector, adversaries have to impose larger minimal perturbations to successfully generate adversarial examples that can fool the detector.",
+      "We first construct a new metric and analyze its properties, which guides us to the new method. \\vspace{-.1cm Non-maximal entropy \\vspace{-.1cm Due to the difficulty of correctly classifying adversarial examples~\\citep{Carlini2016,carlini2017adversarial and the generality of their existence~\\citep{elsayed2018adversarial,gilmer2018adversarial, we design a method to detect them instead, which could help in real world applications. For example, in semi-autonomous systems, the detection of adversarial examples would allow disabling autonomous operation and requesting human intervention~\\citep{metzen2017detecting.",
+      "This means that all the normal examples have values of \\nonME>t. When there is no detector, the nearest adversarial example based on z_{0 is z_{1, which locates on the nearest decision boundary w.r.t. z_{0.",
+      "After presetting a metric, the detector classifies the input as normal and decides to return the predicted label if the value of metric is larger than a threshold T, or classifies the one as adversarial and returns NOT SURE otherwise. In our method, we adopt the kernel density (K-density) metric introduced in~\\citep{feinman2017detecting, because applying the K-density metric with CE training has already shown better robustness and versatility than other defenses~\\citep{carlini2017adversarial. K-density can be regarded as some combination of the confidence and non-ME metrics, since it can simultaneously convey the information about them.",
+      "Therefore, we construct another metric which is more pertinent and helpful to our goal. Namely, we define the metric of non-ME---the entropy of normalized non-maximal elements in F(x), as: where \\hat{F(x)_i=\\nicefrac{F(x)_i{\\sum_{j\\neq \\hat{yF(x)_j are the normalized non-maximal elements in F(x). Hereafter we will consider the final hidden vector z of F given x, and use the notation F(z) with the same meaning as F(x) without ambiguity.",
+      "Table~ shows the AUC-scores calculated under different combinations of training procedures and thresholding metrics on both datasets. From Table~, we can see that our method (RCE training + K-density detector) performs the best in almost all cases, and non-ME itself is also a pretty reliable metric, although not as good as K-density. The classifiers trained by RCE also return more reliable confidence scores, which verifies the conclusion in Theorem~. Furthermore, we also show that our method can better distinguish between noisy examples and adversarial examples, as demonstrated in Appendix B.3.",
+      "In practice, the restriction can be implemented by a detector with the metric of non-ME. In the case of Fig.~a, any point that locates on the set S_{\\hat{y (black dashed lines) has the highest value of \\nonME=\\log2. Assuming that the learned representation transformation: X\\mapsto Z can map all the normal examples to the neighborhood of S_{\\hat{y, where the neighborhood boundary consists of the isolines of \\nonME=t (blue dot-dashed lines).",
+      "Similar phenomenon is also observed under the white-box attack. We further activate the thresholding test strategy with the K-density metric, and also test the performance of confidence or non-ME being the metric for a more complete analysis. We construct simple binary classifiers to decide whether an example is adversarial or not by thresholding with the metrics, and then calculate the AUC-scores of ROC curves on these binary classifiers."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 provides AUC-scores for different metrics, showing the effectiveness of non-ME in detecting adversarial examples. Text 1 explains the design and purpose of the non-ME metric in detecting adversarial examples.\",\n    \"Answer\": \"The proposed metric of non-ME helps detect adversarial examples by providing a reliable measure to distinguish between normal and adversarial inputs. It is designed to address the difficulty of classifying adversarial examples by focusing on the entropy of normalized non-maximal elements, which helps in real-world applications by allowing systems to disable autonomous operations and request human intervention when adversarial examples are detected.\"\n}"
+  },
+  "8": {
+    "question": "Based on the table, which attack method is the most efficient in terms of time taken to craft an adversarial example, and how much faster is it compared to the slowest method for the same objective function?",
+    "ground_truth": "The FGSM attack is the most efficient, requiring approximately 1.9 milliseconds to craft an adversarial example with the CE objective function. This is roughly **55,000 times faster** than the slowest method, C&W-wb, which takes about 700 seconds for the same objective function.",
+    "selected_figures_names": [
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00633v4-Table4-1.png",
+      "1706.00633v4-Figure2-1.png",
+      "1706.00633v4-Table6-1.png",
+      "1706.00633v4-Figure6-1.png",
+      "1706.00633v4-Figure4-1.png",
+      "1706.00633v4-Figure3-1.png",
+      "1706.00633v4-Table5-1.png",
+      "1706.00633v4-Table3-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 provides visual data on classification accuracy and minimal distortions under various attacks, which can help infer efficiency. Text 1 discusses the time costs of different attacks, specifically noting the C&W-family attacks as time-consuming.",
+    "answer": "The Fast Gradient Sign Method (FGSM) is the most efficient in terms of time taken to craft an adversarial example. It is significantly faster compared to the C&W-family attacks, which are the slowest.",
+    "text_chunks": [
+      "Most of them can craft adversarial examples that are visually indistinguishable from the corresponding normal ones, and yet are misclassified by the target model F. Here we introduce some well-known and commonly used attacking methods. Fast Gradient Sign Method (FGSM):~\\citet{Goodfellow2014 introduce an one-step attacking method, which crafts an adversarial example x^* as x^*=x+\\epsilon\\cdot\\sgn(\\nabla_{x\\mathcal{L(x, y)), with the perturbation \\epsilon and the training loss \\mathcal{L(x, y). Basic Iterative Method (BIM):~\\citet{Kurakin2016 propose an iterative version of FGSM, with the formula as x^*_i=\\clip_{x,\\epsilon(x^*_{i-1+\\frac{\\epsilon{r\\cdot\\sgn(\\nabla_{x^*_{i-1\\mathcal{L(x^*_{i-1, y))), where x^*_0=x, r is the number of iteration steps and \\clip_{x,\\epsilon(\\cdot) is a clipping function to keep x^*_i in its domain.",
+      "Table~ demonstrates the average time costs on crafting each adversarial example via different attacks. We can find that C\\&W-family attacks are extremely time consuming compared to other iterative methods. Furthermore, C\\&W-family attacks usually take longer time to attack the networks trained by the RCE than those trained by the CE.",
+      "We choose the K-density estimate method as our strong baseline, which has shown its superiority and versatility compared to other detection-based defenses~\\citep{carlini2017adversarial. The results demonstrate that compared to the baseline, the proposed method improves the robustness against adversarial attacks under all the threat models, while maintaining state-of-the-art accuracy on normal examples. Specifically, we demonstrate that the white-box adversaries have to craft adversarial examples with macroscopic noises to successfully evade our defense, which means human observers can easily filter out the crafted adversarial examples.",
+      "Iterative Least-likely Class Method (ILCM):~\\citet{Kurakin2016 also propose a targeted version of BIM as x^*_i=\\clip_{x,\\epsilon(x^*_{i-1-\\frac{\\epsilon{r\\cdot\\sgn(\\nabla_{x^*_{i-1\\mathcal{L(x^*_{i-1, y_{ll))), where x^*_0=x and y_{ll=\\argmin_iF(x)_i. ILCM can avoid label leaking~\\citep{kurakin2016adversarial, since it does not exploit information of the true label y. Jacobian-based Saliency Map Attack (JSMA):~\\citet{Papernot2015 propose another iterative method for targeted attack, which perturbs one feature x_i by a constant offset \\epsilon in each iteration step that maximizes the saliency map \\[S(x,t)[i]=\\begin{cases 0\\text{, if \\frac{\\partial F(x)_y{\\partial x_i<0\\text{ or \\sum_{j\\neq y\\frac{\\partial F(x)_j{\\partial x_i>0\\text{,\\\\ (\\frac{\\partial F(x)_y{\\partial x_i)\\left| \\sum_{j\\neq y\\frac{\\partial F(x)_j{\\partial x_i \\right|\\text{, otherwise.",
+      "\\end{center \\vspace{-0.2in \\end{table* Performance under the oblivious attack \\vspace{-.2cm We test the performance of the trained Resnet-32 networks on MNIST and CIFAR-10 under the oblivious attack, where we investigate the attacking methods as in Sec.~. We first disable the thresholding test strategy and make classifiers return all predictions to study the networks ability of correctly classifying adversarial examples. We use the iteration-based attacking methods: FGSM, BIM, ILCM and JSMA, and calculate the classification accuracy of networks on crafted adversarial examples w.r.t.",
+      "As for optimization-based methods like the C\\&W attack and its variants, we apply the same way as in~\\citep{carlini2017adversarial to report robustness. Specifically, we do a binary search for the parameter c, in order to find the minimal distortions that can successfully attack the classifier. The distortion is defined in~\\citep{Szegedy2013 as \\|x-x^*\\|_2/\\sqrt{d , where x^* is the generated adversarial example and each pixel feature is rescaled to be in the interval [0,255].",
+      "Note that in our experiments the target models and the substitute models have very similar structures, and the C\\&W-wb attack becomes ineffective even under this quite `white' black-box attack. \\vspace{-.3cm Conclusions \\vspace{-.2cm We present a novel method to improve the robustness of deep learning models by reliably detecting and filtering out adversarial examples, which can be implemented using standard algorithms with little extra training cost. Our method performs well on both the MNIST and CIFAR-10 datasets under all threat models and various attacking methods, while maintaining accuracy on normal examples.",
+      "\\vspace{-.1cm Threat models \\vspace{-.1cm In the adversarial setting, an elaborate taxonomy of threat models is introduced in~\\citep{carlini2017adversarial: \\vspace{-2ex \\vspace{-.1cm Attacking methods \\vspace{-.1cm Although DNNs have obtained substantial progress, adversarial examples can be easily identified to fool the network, even when its accuracy is high \\citep{Nguyen2015. Several attacking methods on generating adversarial examples have been introduced in recent years."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 provides visual data on classification accuracy and minimal distortions under various attacks, which can help infer efficiency. Text 1 discusses the time costs of different attacks, specifically noting the C&W-family attacks as time-consuming.\",\n    \"Answer\": \"The Fast Gradient Sign Method (FGSM) is the most efficient in terms of time taken to craft an adversarial example. It is significantly faster compared to the C&W-family attacks, which are the slowest.\"\n}"
+  }
+}

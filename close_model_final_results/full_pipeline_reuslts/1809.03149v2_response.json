@@ -1,0 +1,163 @@
+{
+  "0": {
+    "question": "What is the relationship between position and click-through rate (CTR)?",
+    "ground_truth": "The relationship between position and CTR is complex and non-linear. In general, CTR decreases as position increases, but there are also local peaks and valleys in the CTR curve. This suggests that there are other factors besides position that affect CTR.",
+    "selected_figures_names": [
+      "1809.03149v2-Figure9-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure5-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 directly shows the relationship between position and CTR, illustrating how CTR changes with position. Text 4 discusses the impact of ad positions on user behavior, specifically mentioning that ads in front are more likely to be clicked, which relates to CTR.",
+    "answer": "The click-through rate (CTR) decreases as the position number increases, meaning ads placed earlier (in front) are more likely to be clicked.",
+    "text_chunks": [
+      "Compared with stream advertising in news feeds we consider the mixed-display scenario where both recommended products and advertised products are displayed altogether to the customers and their display orders are determined by their relative rankings. Related Work \\subsubsection{Bidding Optimization in Real-Time Bidding Under the Real-Time Bidding (RTB) settings in E-commerce advertising, amounts of work have been proposed to estimate the impression values, e.g. click-through rate (CTR) and conversion rate (CVR) , which help to improve the bidding effectiveness via predicting more precise impression values. Besides, the user impression analysis, bidding optimization is one of another most concerned problems in RTB, whose goal is to dynamically set a more appropriate price for each auction aiming at maximizing some key performance indicators (KPIs) (e.g. CTR) .",
+      "For a fair comparison, we keep the platform-level constraint the same for all approaches. As a result, we find that our approach does present different numbers of ads to different users in different positions satisfying the preset constraint overall. Besides, we observe 9\\%, 3\\%, and 2\\% improvements in RPM (Revenue Per Mille), CTR (Click-through rate) and GMV (Gross Merchandise Value) respectively, which indicates that our adaptive exposure mechanism not only significantly increase the revenue of the platform (RPM) but also the revenues of advertisers (GMV).",
+      "This can be modeled as an ads position bidding problem and DRL techniques have been shown to be effective in learning bidding strategies for advertisers . However, fixing ad positions limit the flexibility of the advertising system. Intuitively, if a user is with high monetization value (e.g., likes to click ads), it is reasonable for the advertising platform to display more ads when this user visits.",
+      "Introduction With the advances of deep neural network , Deep Reinforcement Learning (DRL) approaches have made significant progress in a number of applications including Atari games and robot locomotion and manipulation . Recently, we also witness successful applications of DRL techniques to optimize the decision-making process in E-commerce from different aspects including online recommendation , impression allocation , advertising bidding strategies and product ranking . In traditional online advertising, the ad positions are fixed, and we only need to determine which ads to be shown in these positions for each user request .",
+      "We can replay the data to train and test the effect of our algorithm offline in two ways: 1) after ads adjusting scores, whether the quantity of ads in the 10 exposure items meets C_T and C_{S, and 2) the rewards of the exposed ads. Actually, the positions of ads have impact on user behaviors. E.g., the ads in front are more possible to be clicked, and so on.",
+      "At the beginning of each day, the number of ads has been displayed and number of requests have been reset to 0. At the end of each day, we count the daily number of ads displayed and make a judgement whether the trajectory-level constraint C_T has been satisfied. A state consists of 46 dimensions including the characteristics of the 15 candidate ads: eCPM, price, pCTR, and the number of exposed ads.",
+      "The exploration rate starts from 1 and linearly decays to 0.001 after 1000 steps. Also we set the discount factor \\gamma=1. Experimental Setup Based on the log data, for each request, % we collect 15 recommended products and their scores marked by the recommendation system as candidates for each request, and the information of 15 advertising products, such as: eCPM (effective cost per mille), price, predicted Click-Through-Rate (pCTR), and initial score.",
+      "We can replace c_{s with another constraint c_{s' and then reuse those samples (s_t, a_t, r_t, s_{t+1, c_{s') and \\delta(s_t, a_t, s_{t+1|c_{s') to train a policy satisfying constraint c_{s' (Algorithm , Line). \\subsubsection{Higher Level Control The higher level task is to determine trajectory-level constraints for each sub-trajectory to maximize the expected long-term advertising revenue while satisfying the original trajectory constraint C_T. At each decision point, the higher level policy (we term as constraint choice policy, CCP) selects a constraint for the next sub-trajectory, and the corresponding lower level policy takes over and determines the ads adjustment score for each request within that sub-trajectory."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 directly shows the relationship between position and CTR, illustrating how CTR changes with position. Text 4 discusses the impact of ad positions on user behavior, specifically mentioning that ads in front are more likely to be clicked, which relates to CTR.\",\n    \"Answer\": \"The click-through rate (CTR) decreases as the position number increases, meaning ads placed earlier (in front) are more likely to be clicked.\"\n}"
+  },
+  "1": {
+    "question": "How does the advertising rate for the \"Fix\" curve compare to the \"Oracle\" curve at hour 14?",
+    "ground_truth": "The advertising rate for the \"Fix\" curve is lower than the \"Oracle\" curve at hour 14.",
+    "selected_figures_names": [
+      "1809.03149v2-Figure8-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Figure7-1.png",
+      "1809.03149v2-Figure4-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a visual comparison of the 'Fix' and 'Oracle' advertising rates over the hours of the day, which is directly relevant to the question. Text 1 explains the Oracle policy and its behavior during different hours, which helps in understanding the context of the advertising rates.",
+    "answer": "At hour 14, the 'Fix' curve shows a lower advertising rate compared to the 'Oracle' curve.",
+    "text_chunks": [
+      "Accordingly, during hour 17 - hour 20 and hour 22 - hour 23, the advertising rate of the Oracle policy is less than 35\\%, which means that we should reduce the number of the unpromising ads and leave this opportunity to the more valuable ones. The detailed advertising performance of each hour is shown in Table. . We can clearly see that the revenue gap between the baseline policy and our approaches mainly appear on hour 8 - hour 12; Besides, our method can obtain more cost-effective advertising exposure within hour 8 - hour 12 and hour 15 - hour 16.",
+      "Keeping the total number of ads displayed in a day exactly the same, Oracle is calculated by resorting all the candidates of all requests together according to the scores and picks out the top 35\\% ads to display. Note that this Oracle policy shown in Fig. is the best strategy available for displaying ads in one day. We can clearly find out that during the time period of hour 8 - hour 12, the advertising rate of the Oracle policy is more than 35\\%, which means that we should display more ads within this period to enlarge revenue.",
+      "We analyze the finally exposed ads and all the corresponding candidate ads of each request within a day. First, we set the advertising rate of each request to a fixed value 0.35. Then we calculate out the proportion of the finally exposed ads within each hour to the total number of ads in that day, which is represented as the Fix policy in Fig. .",
+      "For a fair comparison, we keep the platform-level constraint the same for all approaches. As a result, we find that our approach does present different numbers of ads to different users in different positions satisfying the preset constraint overall. Besides, we observe 9\\%, 3\\%, and 2\\% improvements in RPM (Revenue Per Mille), CTR (Click-through rate) and GMV (Gross Merchandise Value) respectively, which indicates that our adaptive exposure mechanism not only significantly increase the revenue of the platform (RPM) but also the revenues of advertisers (GMV).",
+      "The state of CCP consists of hourly information, such as the timestamp, hourly eCPM, PV\\hspace{-1ptR from 00:00 to current time. The objectives of the higher level policy are: (1) achieving approximately the same number of exposure ads with target PV\\hspace{-1ptR; (2) improving revenue as much as possible. Detailed results are shown in Table.",
+      "and Fig. - , in which we see the CCP can increase the revenue of each day compared to the manual and DDPG+CHER policies under the same constraint C_T. Therefore, we demonstrate that our approach learns to expose different numbers of ads in different time periods, which means that more ads are exposed when the value of the ads in a request is higher and fewer ads are shown in other time slots. \\subsubsection*{Why higher level control can improve performance?",
+      "These challenges force us to design a more flexible algorithm. Formulation \\subsubsection{Problem Description From the advertising perspective, the above advertising exposure problem can be seen as a bidding problem: The product displayed in each user request is determined by the score (bid price) of the advertising item and the recommended item (Rank by bid price, the higher the price, the more possible to be displayed), and the advertising system adjusts the score of the original advertisement (the auction bid) to satisfy the constraint and increase revenue (auction results). We follow the settings of the bidding problem in Display Advertising and extend it to advertising with adaptive exposure problem.",
+      "This can be modeled as an ads position bidding problem and DRL techniques have been shown to be effective in learning bidding strategies for advertisers . However, fixing ad positions limit the flexibility of the advertising system. Intuitively, if a user is with high monetization value (e.g., likes to click ads), it is reasonable for the advertising platform to display more ads when this user visits."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a visual comparison of the 'Fix' and 'Oracle' advertising rates over the hours of the day, which is directly relevant to the question. Text 1 explains the Oracle policy and its behavior during different hours, which helps in understanding the context of the advertising rates.\",\n    \"Answer\": \"At hour 14, the 'Fix' curve shows a lower advertising rate compared to the 'Oracle' curve.\"\n}"
+  },
+  "2": {
+    "question": "What is the role of the Higher Level Policy in the framework?",
+    "ground_truth": "The Higher Level Policy sets constraints for the next sub-trajectory and provides information about the previous stage to the Lower Level Policy.",
+    "selected_figures_names": [
+      "1809.03149v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure5-1.png",
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure4-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Figure2-1.png",
+      "1809.03149v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 visually represents the framework structure, showing the interaction between higher and lower level policies. Text 4 explains the role of the higher level policy in selecting constraints for sub-trajectories to maximize revenue while satisfying trajectory constraints.",
+    "answer": "The role of the Higher Level Policy is to learn the optimal policy for selecting constraints for different sub-trajectories to maximize long-term revenue while ensuring that the overall trajectory constraint is satisfied.",
+    "text_chunks": [
+      "We can replace c_{s with another constraint c_{s' and then reuse those samples (s_t, a_t, r_t, s_{t+1, c_{s') and \\delta(s_t, a_t, s_{t+1|c_{s') to train a policy satisfying constraint c_{s' (Algorithm , Line). \\subsubsection{Higher Level Control The higher level task is to determine trajectory-level constraints for each sub-trajectory to maximize the expected long-term advertising revenue while satisfying the original trajectory constraint C_T. At each decision point, the higher level policy (we term as constraint choice policy, CCP) selects a constraint for the next sub-trajectory, and the corresponding lower level policy takes over and determines the ads adjustment score for each request within that sub-trajectory.",
+      "Thus it is expected that the quality of the learned policy would be improved when we increase the number of levels, which means the length of each sub-trajectory at the lower levels is reduced. Thus our framework is flexible enough to make a compromise between training efficiency and policy optimality. In this paper, we set our framework to be two levels.",
+      "The higher level policy breaks a trajectory into multiple sub-trajectories and tackles the problem of selecting constraints for each sub-trajectory to maximize total revenue under the trajectory-level constraint. Each sub-trajectory identifies an independent optimization problem with both sub-trajectory constraint and state-level constraint. Here we simplify the sub-trajectory optimization problem at the cost of sacrificing the policy optimality by treating the sub-trajectory constraint as another state-level constraint.",
+      "One additional benefit of our two-level framework is that we can easily reuse the lower level policy to train the higher level constraint selection policy in case the trajectory-level constraint is adjusted. We evaluate our approach using real-world datasets from Taobao platform both offline and online. Our approach can improve the advertising revenue and the advertisers' income while satisfying the constraints at both levels.",
+      "We split the entire trajectory into a number of sub-trajectories. The optimization task of the higher level is to learn the optimal policy \\pi_{C_T for selecting constraints for different sub-trajectories to maximize long-term revenue while ensuring that the constraint over the whole trajectory C_T is satisfied (Algorithm 1, Line ). Given a sub-trajectory constraint C_{ST from the higher level, the lower level is responsible for learning the optimal policy \\pi_b(s_t;C_{ST) over its sub-trajectory while ensuring that both the sub-trajectory constraint C_{ST and the per-state constraints C_S are satisfied (Algorithm 1, Line - ).",
+      "In this way, we can easily combine the sub-trajectory constraint with the original state-level constraint and use off-policy methods such as Deep Deterministic Policy Gradient (DDPG) with auxiliary task to train the lower level policy. We also propose Constrained Hindsight Experience Replay (CHER) to accelerate the lower level policy training. Note that our framework can be naturally extended to more levels by further decomposing each sub-trajectory into a number of sub-trajectories.",
+      "We first model it as a psCMDP problem with different level constraints, and propose a constrained two-level reinforcement learning framework to solve this problem. Our framework offers high adaptability and quick response to the dynamic changing e-commerce environments. We also propose a novel replay buffer mechanism, CHER, to accelerate the policy training of the lower level.",
+      "Since the performance of DDPG varies a lot % , we add a complementary CHER to DDPG and use this optimized approach (CHER+DDPG) to attain a more stable PVR_i. \\subsubsection*{Does higher level control improve performance? To distinguish different policies in the behaviour policy set, we use \\pi_0, \\pi_1, \\pi_2, \\pi_3, \\pi_4 to refer to the different lower level policies (DDPG+CHER) previous trained in Section 4.2 under different platform-level constraints {PV\\hspace{-1ptR = 0.3, 0.35, 0.4, 0.45, 0.5."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 visually represents the framework structure, showing the interaction between higher and lower level policies. Text 4 explains the role of the higher level policy in selecting constraints for sub-trajectories to maximize revenue while satisfying trajectory constraints.\",\n    \"Answer\": \"The role of the Higher Level Policy is to learn the optimal policy for selecting constraints for different sub-trajectories to maximize long-term revenue while ensuring that the overall trajectory constraint is satisfied.\"\n}"
+  },
+  "3": {
+    "question": "How does the advertising system select the best items to show to the user?",
+    "ground_truth": "The advertising system selects the best items to show to the user by first generating a candidate set of items from the recommender system. This candidate set is then shuffled and sorted by their score, which is determined by the network. The network takes into account the features of the items and the scoring factors, which are likely based on the user's past behavior and preferences.",
+    "selected_figures_names": [
+      "1809.03149v2-Figure2-1.png",
+      "1809.03149v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03149v2-Table1-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Table2-1.png",
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure2-1.png",
+      "1809.03149v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 and Text 3 both describe the process of selecting and sorting items based on scores, which is central to how the advertising system selects the best items to show to the user.",
+    "answer": "The advertising system selects the best items by first independently scoring items in the recommendation and advertising systems. These items are then sorted together by their scores, and the top items are exposed to the user.",
+    "text_chunks": [
+      "These challenges force us to design a more flexible algorithm. Formulation \\subsubsection{Problem Description From the advertising perspective, the above advertising exposure problem can be seen as a bidding problem: The product displayed in each user request is determined by the score (bid price) of the advertising item and the recommended item (Rank by bid price, the higher the price, the more possible to be displayed), and the advertising system adjusts the score of the original advertisement (the auction bid) to satisfy the constraint and increase revenue (auction results). We follow the settings of the bidding problem in Display Advertising and extend it to advertising with adaptive exposure problem.",
+      "To this end, recently Taobao (one of the largest Chinese E-commerce platform) has begun to adopt more flexible and mixed exposing mechanism for exposing advertising and recommended products (Fig. ). Specifically, for each request q_i, the recommendation and the advertising systems first select the top N^{r and N^{d items based on their scoring systems independently (Fig. , Step (2) and Step (3)). Then these commodities are sorted altogether according to scores in descending order(Fig.",
+      "However, it is obvious that this advertising mechanism is not optimal. Different consumers have different shopping habits and preferences to different products and ads. Therefore, we can expose more advertising products to those consumers who are more likely to click and purchase them (thus increasing the advertising revenue) and vice versa.",
+      "The adaptive exposure problem can be formalized as a sequential decision problem. In each step, the recommendation and the advertising systems first select some items based on their scoring systems independently. Then these commodities are sorted altogether by their scores and the top few items are exposed to the request (user).",
+      "However, the exposed ads for users are not necessarily their favorite or needed products. Therefore, we should limit the number of exposed ads for each user's request. For each request q_i, traditional E-commerce systems use fixed-positions to expose ads: N^{d_{i = K, \\forall 1 \\le i \\le M , where K is the number of fixed positions.",
+      ", Step (5)) and the top N_{i items are exposed to this request (Fig. , Step (6)). In the meantime, to ensure users' shopping experience, we need to impose the following constraints: where \\alpha \\le \\beta. This means that we can exploit this inequality requirement to expose different numbers of ads to different requests according to users' profiles, e.g. expose more ads to users who are more interested in the ads and can increase the average advertising revenue, and fewer ads for the others.",
+      "On one hand, for each request, the size of N_{i^{d can be automatically adjusted according to the quality of the candidate products and ads. On the other hand, the positions of N_{i items are determined by the quality of the products and ads, which can further optimize the user experience. In this way, we can increase the total advertising revenue while satisfying both the request-level and platform-level constraints.",
+      "Compared with stream advertising in news feeds we consider the mixed-display scenario where both recommended products and advertised products are displayed altogether to the customers and their display orders are determined by their relative rankings. Related Work \\subsubsection{Bidding Optimization in Real-Time Bidding Under the Real-Time Bidding (RTB) settings in E-commerce advertising, amounts of work have been proposed to estimate the impression values, e.g. click-through rate (CTR) and conversion rate (CVR) , which help to improve the bidding effectiveness via predicting more precise impression values. Besides, the user impression analysis, bidding optimization is one of another most concerned problems in RTB, whose goal is to dynamically set a more appropriate price for each auction aiming at maximizing some key performance indicators (KPIs) (e.g. CTR) ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 and Text 3 both describe the process of selecting and sorting items based on scores, which is central to how the advertising system selects the best items to show to the user.\",\n    \"Answer\": \"The advertising system selects the best items by first independently scoring items in the recommendation and advertising systems. These items are then sorted together by their scores, and the top items are exposed to the user.\"\n}"
+  },
+  "4": {
+    "question": "What is the effect of using CHER on the percentage of ads displayed for each user?",
+    "ground_truth": "The percentage of ads displayed for each user is higher when CHER is used.",
+    "selected_figures_names": [
+      "1809.03149v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1809.03149v2-Figure3-1.png",
+      "1809.03149v2-Figure7-1.png",
+      "1809.03149v2-Figure2-1.png",
+      "1809.03149v2-Figure6-1.png",
+      "1809.03149v2-Figure9-1.png",
+      "1809.03149v2-Table3-1.png",
+      "1809.03149v2-Figure8-1.png",
+      "1809.03149v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the learning curves comparing DDPG with and without CHER, which directly illustrates the effect on the percentage of ads displayed. Text 0 discusses the impact of CHER on learning speed and stability, providing context for the observed differences in the image.",
+    "answer": "Using CHER increases the percentage of ads displayed for each user compared to not using CHER, as shown by the higher and more stable curves in the learning graphs.",
+    "text_chunks": [
+      "Does CHER improve performance? To verify the effectiveness of using CHER, we compare the impact of using CHER on the learning speed and stability with a baseline DDPG under the same network structure and parameters.^4 Suppose C_S is the number of exposure ads for each request, and cannot exceed 5, so we set \\mathcal{C_{S to be consisting of 5 constraints. Each goal in PV\\hspace{-1ptR_i = 0.3, 0.35 , 0.4, 0.45, 0.5 represents the expected average number of ads exposed per request.",
+      "and Fig. - , in which we see the CCP can increase the revenue of each day compared to the manual and DDPG+CHER policies under the same constraint C_T. Therefore, we demonstrate that our approach learns to expose different numbers of ads in different time periods, which means that more ads are exposed when the value of the ads in a request is higher and fewer ads are shown in other time slots. \\subsubsection*{Why higher level control can improve performance?",
+      "However, the exposed ads for users are not necessarily their favorite or needed products. Therefore, we should limit the number of exposed ads for each user's request. For each request q_i, traditional E-commerce systems use fixed-positions to expose ads: N^{d_{i = K, \\forall 1 \\le i \\le M , where K is the number of fixed positions.",
+      "We analyze the finally exposed ads and all the corresponding candidate ads of each request within a day. First, we set the advertising rate of each request to a fixed value 0.35. Then we calculate out the proportion of the finally exposed ads within each hour to the total number of ads in that day, which is represented as the Fix policy in Fig. .",
+      "HER relieves the problem of sample inefficiency in DRL training by reusing transitions, which can be obtained by using different goals to modify reward. We extend this idea to propose the constrained hindsight experience replay (CHER). Different from HER, CHER does not directly revise the reward.",
+      "For a fair comparison, we keep the platform-level constraint the same for all approaches. As a result, we find that our approach does present different numbers of ads to different users in different positions satisfying the preset constraint overall. Besides, we observe 9\\%, 3\\%, and 2\\% improvements in RPM (Revenue Per Mille), CTR (Click-through rate) and GMV (Gross Merchandise Value) respectively, which indicates that our adaptive exposure mechanism not only significantly increase the revenue of the platform (RPM) but also the revenues of advertisers (GMV).",
+      "At the beginning of each day, the number of ads has been displayed and number of requests have been reset to 0. At the end of each day, we count the daily number of ads displayed and make a judgement whether the trajectory-level constraint C_T has been satisfied. A state consists of 46 dimensions including the characteristics of the 15 candidate ads: eCPM, price, pCTR, and the number of exposed ads.",
+      "Keeping the total number of ads displayed in a day exactly the same, Oracle is calculated by resorting all the candidates of all requests together according to the scores and picks out the top 35\\% ads to display. Note that this Oracle policy shown in Fig. is the best strategy available for displaying ads in one day. We can clearly find out that during the time period of hour 8 - hour 12, the advertising rate of the Oracle policy is more than 35\\%, which means that we should display more ads within this period to enlarge revenue."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the learning curves comparing DDPG with and without CHER, which directly illustrates the effect on the percentage of ads displayed. Text 0 discusses the impact of CHER on learning speed and stability, providing context for the observed differences in the image.\",\n    \"Answer\": \"Using CHER increases the percentage of ads displayed for each user compared to not using CHER, as shown by the higher and more stable curves in the learning graphs.\"\n}"
+  }
+}

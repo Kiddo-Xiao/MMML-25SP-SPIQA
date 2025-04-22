@@ -1,0 +1,156 @@
+{
+  "0": {
+    "question": "Which agent values the entire share $Z_j$?",
+    "ground_truth": "Agent $j$.",
+    "selected_figures_names": [
+      "1603.00286v5-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually represents the value-density of agent j within Z_j, which is relevant to understanding how agent j values the entire share. Text 0 explains that agent j values Z_j at a certain level, which directly answers the question.",
+    "answer": "Agent j values the entire share $Z_j$.",
+    "text_chunks": [
+      "In each group of type 1, a single agent j has a nonempty share Z_j in the initial allocation. Agent j values Z_j at \\lceil{n\\over d\\rceil, and the rest of the cake at 0. The value-density inside Z_j is piecewise-uniform: it has \\lceil{n\\over d\\rceil regions with a value of 1 and \\lceil{n\\over d\\rceil-1 ``gaps''---regions with a value of 0.",
+      "Each of the other \\lceil{n\\over d\\rceil-1 agents in the same group assigns a positive value only to a unique gap in Z_j; Figure illustrates the value-densities that are positive in one such Z_j. In each group of type 2, the valuations are defined similarly to the groups of type 1, except that j's total value is \\lfloor{n\\over d\\rfloor and there are \\lfloor{n\\over d\\rfloor-1 other agents. In any r-proportional division, each gap in Z_j must be at least partially allocated to an agent in group j.",
+      "By repeatedly applying the auction algorithm, it assigns the agents to the subcakes \\rev{ such that all agents assigned to a subcake value it sufficiently high, as formalized below. Once the agents are partitioned using Algorithm , for each j\\in[m], Z_j can be divided among the agents in W_j using any proportional cake-cutting algorithm. Since all these agents value Z_j at least |W_j|, each agent gets a piece valued at least 1, which is at least \\frac{1{m+n-1\\cdot V_i(C) as in condition \\eqref{eq:multicake.",
+      "Then, \\rev{by Lemma (b), V_j(Z'_j) < |W_j|+1 \\leq \\lceil{n\\over d\\rceil. Therefore, V_j(Z'_j) / \\lceil{n\\over d\\rceil < 1. As explained in the proof of 1/2 proportionality, the value of each agent is at least 1: \\end{description In both cases, agent j receives a value greater than V_j(Z'_j) / \\lceil{n\\over d\\rceil.",
+      "Hence, the interval allocated to agent j must contain at most a single positive region in Z_j---it cannot overlap any gap. Therefore the value of agent j is at most 1. For agents in groups of type 2, this value is at most V_j(Z_j)/\\lfloor{n\\over d\\rfloor; for agents in groups of type 1, it is at most V_j(Z_j)/\\lceil{n\\over d\\rceil, which is even smaller.",
+      "\\STATE Let i' be the first loser in the auction on Z_{j', who is still in N\\cup \\{j'\\. \\IF{V_{i'(Z_{j')\\geq |W_{j'|+1 \\STATE Add i' to W_{j'; \\STATE Remove i' from N. \\STATE If i' = j' and also i' \\in W_{j'' for some j''<j, then repeat steps -- with j'. \\ENDIF \\ENDIF \\ENDFOR \\end{algorithmic \\end{algorithm \\rev{ It remains to prove that, by the end of the algorithm, every agent i \\in[n] is assigned to some W_j.",
+      "\\FOR{j : = 1, \\ldots, m \\STATE Using Algorithm , auction the subcake Z_j among the agents in N. \\\\ Let W_j be the set of winners. \\STATE",
+      "\\FOR{j : = 1, \\ldots, m \\STATE If j \\leq n then let N_j := N \\cup \\{j\\; else let N_j := N. \\STATE Using Algorithm , auction the subcake Z_j among the agents in N_j."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually represents the value-density of agent j within Z_j, which is relevant to understanding how agent j values the entire share. Text 0 explains that agent j values Z_j at a certain level, which directly answers the question.\",\n    \"Answer\": \"Agent j values the entire share $Z_j$.\"\n}"
+  },
+  "1": {
+    "question": "What is the purpose of the blank space labeled Z'5?",
+    "ground_truth": "The blank space labeled Z'5 is used to complete the allocation of the original pieces.",
+    "selected_figures_names": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 5,
+    "rationale": "Image 2 visually represents the allocation-completion process with a blank space labeled Z'5, and Text 5 explains the concept of blanks in the context of partitioning. Together, they provide a clear understanding of the role of Z'5 in the partition.",
+    "answer": "The blank space labeled Z'5 is used to complete the partition of the space, ensuring that each original piece Z_i is entirely allocated while adhering to the rectangularity constraint. It represents an unallocated area that cannot be attached to any allocated piece.",
+    "text_chunks": [
+      "In the partial allocation there are n=4 rectangles; in the complete partition there are m=5 rectangles. This raises the question of what is the minimum number of blanks required for a complete partition? This geometric question has been studied in a different paper \\citep{akopyan2018counting.",
+      "\\subseteq C still must be expanded to a complete partition of C, since Algorithm uses Algorithm , which requires a complete partition. But the number of pieces in the complete partition might be larger than n, since there might be unattached ``blanks'' (holes). The goal, then, is to find a partition of C into S-pieces, Z_1'\\sqcup\\cdots \\sqcup Z_{n+b' = C, with b\\geq 0, such that every input S-piece is contained in a unique output S-piece: \\forall j\\in[n]: Z_j \\subseteq Z_j'.",
+      "In each group of type 1, a single agent j has a nonempty share Z_j in the initial allocation. Agent j values Z_j at \\lceil{n\\over d\\rceil, and the rest of the cake at 0. The value-density inside Z_j is piecewise-uniform: it has \\lceil{n\\over d\\rceil regions with a value of 1 and \\lceil{n\\over d\\rceil-1 ``gaps''---regions with a value of 0.",
+      "\\STATE Considering the intervals Z'_1,\\dots, Z'_n",
+      "b \\leq 2n-5 < 2n. So there is a complete S-partition Z'_1\\sqcup\\cdots\\sqcup Z'_{n+b = C. Considering the S-pieces Z'_1,\\ldots,Z'_{n+b as subcakes, use Algorithm with m = n+b to partition the agents into subsets W_1\\sqcup\\cdots\\sqcup W_{n+b.",
+      "There are 4 agents and each agent i has positive value-density only inside the rectangle Z_i. The most reasonable division (e.g. the only Pareto-efficient division) is to give each Z_i entirely to agent i. But, this allocation leaves a blank in the center of the cake, and this blank cannot be attached to any allocated piece due to the rectangularity constraint.",
+      "\\sqcup \\cdots \\sqcup X_n \\subseteq C into n intervals, satisfying the following: \\STATE Normalize the valuations such that V_i(C) = 2 n-1 for all i\\in[n]. \\STATE Given the original partial allocation Z_1 \\sqcup \\cdots \\sqcup Z_n \\subseteq C, expand it to a complete partition Z_1' \\sqcup \\cdots \\sqcup Z_n' = C, by attaching each ``blank'' (unallocated interval in C) arbitrarily to one of the two adjacent allocated intervals, to its left or to its right.",
+      "\\STATE Initialize W := \\emptyset. \\FOR{j := 1, \\ldots, |N| \\IF{V_{\\sigma[j](Z_0)\\geq j \\STATE Add agent \\sigma[j] to W. \\ELSE \\RETURN W. \\ENDIF \\ENDFOR"
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 5,\n    \"Rationale\": \"Image 2 visually represents the allocation-completion process with a blank space labeled Z'5, and Text 5 explains the concept of blanks in the context of partitioning. Together, they provide a clear understanding of the role of Z'5 in the partition.\",\n    \"Answer\": \"The blank space labeled Z'5 is used to complete the partition of the space, ensuring that each original piece Z_i is entirely allocated while adhering to the rectangularity constraint. It represents an unallocated area that cannot be attached to any allocated piece.\"\n}"
+  },
+  "2": {
+    "question": "What can you say about the relationship between the complexity of a cake shape and the minimum number of blanks required for a complete partition into smaller pieces?",
+    "ground_truth": "The complexity of the cake shape generally leads to a higher minimum number of blanks required for a complete partition.",
+    "selected_figures_names": [
+      "1603.00286v5-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a table showing the number of blanks required for different shapes of cakes and pieces, which directly relates to the complexity of the cake shape. Text 1 discusses the minimum number of blanks required for a complete partition, which complements the information in the image.",
+    "answer": "The complexity of the cake shape affects the minimum number of blanks required for a complete partition. Simpler shapes like polygons or simple polygons without holes can have a partition with zero blanks. More complex shapes, such as axes-parallel rectangles or convex figures, require more blanks, as shown in the table from Image 0.",
+    "text_chunks": [
+      "What is an efficient algorithm for finding a maximal expansion of a given allocation, which has the smallest number of blanks possible in the given instance? \\paragraph{General polygons. When the cake and the pieces are general polygons, or hole-free (simply-connected) polygons, but not necessarily convex, there exists a maximal expansion with no blanks at all (Table ).",
+      "In the partial allocation there are n=4 rectangles; in the complete partition there are m=5 rectangles. This raises the question of what is the minimum number of blanks required for a complete partition? This geometric question has been studied in a different paper \\citep{akopyan2018counting.",
+      "As an example, in one dimension, it can be assumed that the initial allocation is a partition of the entire cake; this is without loss of generality, since any ``blank'' (unallocated part) can be attached to a neighboring allocated interval without harming its shape or value. However, in two dimensions, the initial allocation might contain blanks that cannot be attached to any allocated piece due to the rectangularity or convexity constraints. For example, suppose the cake is the large rectangle in Figure .",
+      "In this section the cake is a polygon in \\mathbb{R^2. There is a set S of usable pieces (e.g. rectangles), the initial allocation Z_1,\\ldots,Z_n is an S-allocation, and the output should be an S-allocation too. The main obstacle in applying Algorithm to such a cake is step ---\\rev{extending the initial partial allocation to a complete partition of the entire cake.",
+      "\\related{2. The cake is the union of edges of a connected graph, and the pieces are contiguous sub-graphs \\citep{BeiSu21. \\related{3.",
+      "The cake is 2-dimensional; the geometric constraints are connectivity or convexity \\citep{Devulapalli2014Geometric. \\related{7. The cake is multi-dimensional and the pieces are simplices or polytopes \\citep{Berliant1992Fair,Ichiishi1999Equitable,DallAglio2009Disputed.",
+      "It is an open question whether democratic-ownership is compatible with r-proportionality for some constant r>1/2. Theorem , like most works in cake-cutting, assumes that the cake is 1-dimensional. In realistic division scenarios, the cake is often 2-dimensional and the pieces should have a pre-specified geometric shape, such as a rectangle or a convex polygon.",
+      "The cake is an interval and the pieces must be connected, and additionally, the division must be proportional \\citep{Bei2012Optimal; \\related{3. The cake and pieces are arbitrary, and the division must be envy-free \\citep{Cohler2011Optimal. \\related{4. The cake and pieces are arbitrary, and the division must be equitable \\citep{Brams2012Maxsum."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a table showing the number of blanks required for different shapes of cakes and pieces, which directly relates to the complexity of the cake shape. Text 1 discusses the minimum number of blanks required for a complete partition, which complements the information in the image.\",\n    \"Answer\": \"The complexity of the cake shape affects the minimum number of blanks required for a complete partition. Simpler shapes like polygons or simple polygons without holes can have a partition with zero blanks. More complex shapes, such as axes-parallel rectangles or convex figures, require more blanks, as shown in the table from Image 0.\"\n}"
+  },
+  "3": {
+    "question": " \n\nWhy does the author state that there is a qualitative difference between 2-D and 1-D division?",
+    "ground_truth": " \n\nIn 2-D division, there may be unallocated cake even when there are geometric constraints on the pieces, as shown in Figure 1. This is not the case in 1-D division, where the entire cake can always be allocated.",
+    "selected_figures_names": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Text chunk 0 discusses the qualitative differences between 2-D and 1-D division, which is directly relevant to the question. Image 0 visually represents a 2-D division scenario, illustrating the concept of mapping points in a geometric space, which aligns with the discussion of geometric differences.",
+    "answer": "The author states there is a qualitative difference between 2-D and 1-D division because 2-D division introduces interesting paradoxes that might be missed when assuming a one-dimensional perspective. This highlights the importance of considering geometric aspects in division problems.",
+    "text_chunks": [
+      "As shown by Figure , there is a qualitative (not only quantitative) difference between 2-D and 1-D division. 2-D division introduces interesting paradoxes, that might be missed by the habit of assuming a one-dimensional cake. It is important to distinguish geometric cake-cutting from the geometric knapsack problem \\citep{arkin1993geometric,adamaszek2015quasi.",
+      "It is an open question whether democratic-ownership is compatible with r-proportionality for some constant r>1/2. Theorem , like most works in cake-cutting, assumes that the cake is 1-dimensional. In realistic division scenarios, the cake is often 2-dimensional and the pieces should have a pre-specified geometric shape, such as a rectangle or a convex polygon.",
+      "However, there is a substantial gap between these lower bounds and the upper bounds proved above. Related Work Dynamic Fair Division The cake redivision problem differs from several division problems studied recently.",
+      "This may be desirable in the context of land division, since it respects the Uti possidetis juris \\citep{lalonde2002determining--- \\rev{an international law principle saying that newly-formed sovereign states should retain the internal borders that their preceding dependent area had before their independence. However, it also implies that the resulting division can only be 1/2-proportional and never fully proportional, as the fraction \\frac{1{n+m-1 in \\eqref{eq:multicake is tight. Theoretically, it may be possible to improve the proportionality guarantee by devising a different redivision procedure that crosses the existing division lines.",
+      "Rectangularity and convexity requirements are sensible when dividing land, exhibition space in museums, advertisement space in newspapers and even virtual space in web-pages. Moreover, in the frequency-range allocation problem, it is possible to allocate frequency ranges for a limited time-period; the frequency-time space is two-dimensional and it makes sense to require that the ``pieces'' are rectangles in this space \\citep{Iyer2009Procedure. 2-dimensional cake-cutting introduces new challenges over the traditional 1-dimensional setting.",
+      "\\rev{ Very recently, geometric fair division problems have been studied based on real two-dimensional land-value data \\citep{aleskerov2019allocation,shtechman2020fair. Many natural 2-dimensional settings have not been studied yet. For example, the setting studied in Section , where the cake is a rectilinear polygon and the pieces should be rectangles, has not been studied.",
+      "As an example, in one dimension, it can be assumed that the initial allocation is a partition of the entire cake; this is without loss of generality, since any ``blank'' (unallocated part) can be attached to a neighboring allocated interval without harming its shape or value. However, in two dimensions, the initial allocation might contain blanks that cannot be attached to any allocated piece due to the rectangularity or convexity constraints. For example, suppose the cake is the large rectangle in Figure .",
+      "Theorem implies that, in this case, it is possible to carry out a land-reform that guarantees (1-w)-proportionality. While Theorem is encouraging, it ignores an important aspect of practical division problems: geometry. The division it guarantees may be highly fractioned, giving each agent a large number of disconnected pieces."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Text chunk 0 discusses the qualitative differences between 2-D and 1-D division, which is directly relevant to the question. Image 0 visually represents a 2-D division scenario, illustrating the concept of mapping points in a geometric space, which aligns with the discussion of geometric differences.\",\n    \"Answer\": \"The author states there is a qualitative difference between 2-D and 1-D division because 2-D division introduces interesting paradoxes that might be missed when assuming a one-dimensional perspective. This highlights the importance of considering geometric aspects in division problems.\"\n}"
+  },
+  "4": {
+    "question": "What is the minimum number of sides that a rectilinear polygon with four reflex vertices must have?",
+    "ground_truth": "Six.",
+    "selected_figures_names": [
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1603.00286v5-Figure5-1.png",
+      "1603.00286v5-Figure3-1.png",
+      "1603.00286v5-Figure4-1.png",
+      "1603.00286v5-Table1-1.png",
+      "1603.00286v5-Figure1-1.png",
+      "1603.00286v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image shows a rectilinear polygon with reflex vertices, which is relevant to understanding the structure of such polygons. Text 0 discusses the complexity of rectilinear polygons in terms of reflex vertices, directly addressing the question.",
+    "answer": "A rectilinear polygon with four reflex vertices must have at least 8 sides.",
+    "text_chunks": [
+      "The next result generalizes Theorem to a rectilinear polygonal cake. The complexity of a rectilinear polygon is characterized by the number of its reflex vertices---vertices with a 270^\\circ angle. Denote this number by T. A rectangle---the simplest rectilinear polygon---has T=0.",
+      "In the partial allocation there are n=4 rectangles; in the complete partition there are m=5 rectangles. This raises the question of what is the minimum number of blanks required for a complete partition? This geometric question has been studied in a different paper \\citep{akopyan2018counting.",
+      "This counter-intuitive scenario cannot happen in a one-dimensional cake. Handling such cases requires new geometry-based tools. With such tools, the redivision problem can be solved in two common 2-dimensional settings (Section ): \\rev{ Most land-estates are not exact rectangles, but they can be approximated by a rectilinear polygon---a polygon in which all angles are 90^\\circ or 270^\\circ.",
+      "There are 4 agents and each agent i has positive value-density only inside the rectangle Z_i. The most reasonable division (e.g. the only Pareto-efficient division) is to give each Z_i entirely to agent i. But, this allocation leaves a blank in the center of the cake, and this blank cannot be attached to any allocated piece due to the rectangularity constraint.",
+      "Formally: \\rev{ Complete expansions are used to prove Theorems , and below. \\end{framed \\rev{ \\citet{akopyan2018counting prove that the remaining ``holes'' (unfilled parts of C) are all rectangular, and their number b satisfies b \\leq n-\\lceil 2\\sqrt{n-1 \\rceil < n.",
+      "Then, use the Even--Paz algorithm to partition each Z'_j among the agents in W_j. Requiring that all cuts made by this algorithm are parallel to the y-axis guarantees that the pieces are convex. The resulting allocation satisfies democratic ownership, and for each agent i\\in [n], V_i(X_i)\\geq \\frac{1{n + m -1V_i(C)\\geq \\frac{1{2n + b-1V_i(C)> V_i(C)/(4n), so the allocation is 1/4-proportional.",
+      "What is an efficient algorithm for finding a maximal expansion of a given allocation, which has the smallest number of blanks possible in the given instance? \\paragraph{General polygons. When the cake and the pieces are general polygons, or hole-free (simply-connected) polygons, but not necessarily convex, there exists a maximal expansion with no blanks at all (Table ).",
+      "\\related{5. The cake is 2-dimensional and the pieces must be squares or fat polygons \\citep{SegalHalevi2017Fair,segal2020envy. \\related{6."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image shows a rectilinear polygon with reflex vertices, which is relevant to understanding the structure of such polygons. Text 0 discusses the complexity of rectilinear polygons in terms of reflex vertices, directly addressing the question.\",\n    \"Answer\": \"A rectilinear polygon with four reflex vertices must have at least 8 sides.\"\n}"
+  }
+}

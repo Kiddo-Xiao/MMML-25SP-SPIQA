@@ -1,0 +1,408 @@
+{
+  "0": {
+    "question": "What is the relationship between the camera yaw angle and the silhouette distance?",
+    "ground_truth": "The silhouette distance generally increases as the camera yaw angle increases.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure16-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Table2-1.png",
+      "1812.00281v3-Figure8-1.png",
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Table8-1.png",
+      "1812.00281v3-Figure2-1.png",
+      "1812.00281v3-Figure16-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 shows a graph of silhouette distance versus camera yaw angle, which directly visualizes the relationship. Text 1 provides a detailed explanation of how silhouette error varies with camera angle, specifically mentioning the differences in error from side, frontal, and rear views.",
+    "answer": "The silhouette distance varies with the camera yaw angle. The error is higher from the side view compared to the frontal and rear views, as shown in the graph and explained in the text.",
+    "text_chunks": [
+      "The reconstruction accuracy metric is the closest point distance from the 3D garment surface reconstructed by shape-from-silhouette~. In both cases, the performance reaches to the optimal even without 107 cameras as shown in Figure~, ensuring that our garment reconstruction is accurate (density: 90 cameras \\approx 107 cameras; accuracy: 60 cameras \\approx 107 cameras). The additional evaluations on the garment silhouette accuracy can be found in the Appendix.",
+      "Garment Reconstruction Accuracy We provide additional evaluation of view-dependent garment silhouette accuracy measured by the Chamfer distance between the annotated and the reprojected garment boundary in 2D. We pick a half-sleeve shirts and half pants models as a representative garment of top and bottom and measure the accuracy from each camera view that has different angle with respect to the most frontal camera. On average in Figure~, the silhouette error seen from the side view (11 pixels) is higher than the frontal (7.5 pixels) and rear views (8 pixels). \\end{appendices",
+      "One dataset is used for training and others are used for testing. Each data sample is defined as \\{(\\mathbf{e_{c,\\mathbf{h_{c), \\mathbf{g_{c\\, where \\mathbf{e_{c\\in\\mathbb{R^{36\\times60, \\mathbf{h_{c\\in\\mathbb{R^{2,\\mathbf{g_{c\\in\\mathbb{R^{2 are normalized eye patch, yaw and pitch angle of head pose, and gaze direction with respect to a virtual camera c. The detection network is trained to minimize the mean squared error of gaze yaw and pitch angles.",
+      "Using the real data, the synthesized images from 144 virtual cameras are augmented. (3) RT-GENE~ contains 122,531 images of 15 subjects captured by eye-tracking glasses. \\noindentDistribution of Gaze Directions To characterize HUMBI Gaze, we visualize three measures in Figure~: (1) gaze pose: the gaze direction with respect to camera pose; (2) head pose: the head orientation with respect to the camera pose; and (3) eye pose: the gaze direction with respect to the head.",
+      "E^{p_{\\rm body penalizes the distance between the reconstructed 3D body keypoints \\mathcal{K_{\\rm body and the keypoints of the SMPL \\overline{\\mathcal{V_{\\rm body: E^{s_{\\rm body encourages the shape of the estimated body model \\mathcal{M_{\\rm body to be aligned with the outer surface of the occupancy map \\mathcal{O_{\\rm body. We use Chamfer distance to measure the alignment: % where d_{\\rm chamfer measures Chamfer distance between two sets of point clouds. E^r_{body penalizes the difference between the estimated shape \\boldsymbol{\\beta_{b and the subject-aware mean shape \\boldsymbol{\\beta^{\\rm prior_{b as follows:",
+      "(1) Complete: it captures the total body, including gaze, face, hand, foot, body, and garment to represent holistic body signals~, e.g., perceptual asynchrony between the face and hand movements. (2) Dense: 107 HD cameras create a dense light field that observe the minute body expressions with minimal self-occlusion. This dense light field allows us to model precise appearance as a function of view~. (3) Natural: the subjects are all voluntary participants (no actor/actress/student/researcher).",
+      "However, it is highly complementary to other datasets as it provides various appearance from 107 viewpoints as shown in Figure~. Garment We conduct camera-ablation study to evaluate how the number of cameras affect garment reconstruction quality. We incrementally reduce the number of cameras and measure the reconstruction accuracy and density. The reconstruction density is computed by the number of 3D points produced by multiview stereo~.",
+      "\\vspace{-3mm \\end{figure* HUMBI HUMBI is composed of 772 distinctive subjects captured by 107 synchronized HD cameras. 69 cameras are uniformly distributed across dodecagon frame with 2.5m diameter along the two levels of an arc (0.8 m and 1.6 m) where the baseline between adjacent cameras is approximately 10^\\circ (22 cm). Another 38 cameras are distributed across the frontal quadrant of the dodecagon frame (average baseline: 10 cm) to densify cameras used for capturing face/gaze."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 shows a graph of silhouette distance versus camera yaw angle, which directly visualizes the relationship. Text 1 provides a detailed explanation of how silhouette error varies with camera angle, specifically mentioning the differences in error from side, frontal, and rear views.\",\n    \"Answer\": \"The silhouette distance varies with the camera yaw angle. The error is higher from the side view compared to the frontal and rear views, as shown in the graph and explained in the text.\"\n}"
+  },
+  "1": {
+    "question": "How does HUMBI compare to other datasets in terms of the number of subjects?",
+    "ground_truth": "HUMBI has the highest number of subjects compared to the other datasets.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Table4-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Figure9-1.png",
+      "1812.00281v3-Figure11-1.png",
+      "1812.00281v3-Figure2-1.png",
+      "1812.00281v3-Table8-1.png",
+      "1812.00281v3-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually compares the number of subjects and views in HUMBI with other datasets, showing its scale. Text 0 provides a detailed description of HUMBI's composition and its comparison to other datasets.",
+    "answer": "HUMBI has a significantly higher number of subjects compared to other datasets, with 772 distinctive subjects, making it one of the largest in terms of subject diversity.",
+    "text_chunks": [
+      "As of Nov 2019, the dataset is composed of 772 distinctive subjects with natural clothing across diverse age, gender, ethnicity, and physical condition captured by 107 HD synchronized cameras (68 cameras facing at frontal body). Comparing to existing datasets for human body expressions such as CMU Panoptic Studio~, MPII~, and INRIA~, HUMBI presents the unprecedented scale visual data (Figure~) that are ideal for learning the detailed appearance and geometry of five elementary human body expressions: gaze, face, hand, body, and garment (Figure~). Our analysis shows that HUMBI is effective.",
+      "Discussion We present HUMBI dataset that is designed to facilitate high resolution pose- and view-specific appearance of human body expressions. Five elementary body expressions (gaze, face, hand, body, and garment) are captured by a dense camera array composed of 107 synchronized cameras. The dataset includes diverse activities of 772 distinctive subjects across gender, ethnicity, age, and physical condition.",
+      "We use a 3D mesh model to represent the expressions where the view-dependent appearance is coordinated by its canonical atlas. Our evaluation shows that HUMBI outperforms existing datasets as modeling nearly exhaustive views and can be complementary to such datasets. HUMBI is the first-of-its-kind dataset that attempts to span the general appearance of assorted people by pushing towards two extremes: views and subjects.",
+      "\\vspace{-6mm \\caption{(Top and bottom) HUMBI includes 772 distinctive subjects across gender, ethnicity, age, clothing style, and physical condition, which generates diverse appearance of human expressions. (Middle) For each subject, 107 HD cameras capture her/his expressions including gaze, face, hand, body, and garment.",
+      "\\vspace{-3mm \\end{figure* HUMBI HUMBI is composed of 772 distinctive subjects captured by 107 synchronized HD cameras. 69 cameras are uniformly distributed across dodecagon frame with 2.5m diameter along the two levels of an arc (0.8 m and 1.6 m) where the baseline between adjacent cameras is approximately 10^\\circ (22 cm). Another 38 cameras are distributed across the frontal quadrant of the dodecagon frame (average baseline: 10 cm) to densify cameras used for capturing face/gaze.",
+      "HUMBI exhibits strong performance on cross-data evaluation with minimal degradation (less than 1^\\circ drop). Also, UTMV + HUMBI and MPII + HUMBI outperform each alone by a margin of 4.1^\\circ and 13.9^\\circ when tested on the third dataset MPII and UTMV respectively, showing that HUMBI is complementary to UTMV and MPII. { \\renewcommand{\\tabcolsep{3pt % Face \\noindentBenchmark",
+      "We make use of vanilla convolutional neural networks (CNN) to learn view-invariant 3D pose from HUMBI, which quantitatively outperforms the counterpart models trained by existing datasets with limited views and subjects. More importantly, we show that HUMBI is complementary to such datasets, i.e., the trained models can be substantially improved by combining with these datasets. The main properties of HUMBI are summarized below.",
+      "Table~ summarize the results. From the results of 3DDFA+HUMBI, the prediction accuracy is improved from both datasets (2.8 pixels from 3DDFA and 4.9 pixels from HUMBI) by combining two datasets, which indicates the complementary nature of HUMBI. Due to the multiview images in HUMBI, the network can learn the view-invariant geometric representation, which allows precise reconstruction even with considerable occlusion as shown in Figure~. Hand \\noindentBenchmark Datasets We use three benchmark datasets: (1) Rendered Handpose Dataset (RHD)~ is a synthesized hand dataset containing 44K images built from 20 freely available 3D models performing 39 actions."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually compares the number of subjects and views in HUMBI with other datasets, showing its scale. Text 0 provides a detailed description of HUMBI's composition and its comparison to other datasets.\",\n    \"Answer\": \"HUMBI has a significantly higher number of subjects compared to other datasets, with 772 distinctive subjects, making it one of the largest in terms of subject diversity.\"\n}"
+  },
+  "2": {
+    "question": "Which dataset has the most concentrated distribution of gaze and head pose?",
+    "ground_truth": "MPII-Gaze",
+    "selected_figures_names": [
+      "1812.00281v3-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Figure16-1.png",
+      "1812.00281v3-Table8-1.png",
+      "1812.00281v3-Table4-1.png",
+      "1812.00281v3-Table1-1.png",
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Figure11-1.png",
+      "1812.00281v3-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 visually compares the distribution of gaze and head pose across different datasets, which directly addresses the question. Text 2 provides quantitative analysis of the gaze distribution, mentioning the bias and variance, which helps in understanding the concentration.",
+    "answer": "The MPII-Gaze dataset has the most concentrated distribution of gaze and head pose.",
+    "text_chunks": [
+      "Related Work We briefly review the existing datasets for modeling human body expressions: gaze, face, hand, body, and garment. These datasets are summarized in Table~. \\noindentGaze Columbia Gaze dataset~ and UT-Multiview dataset~ have been captured in a controlled environments where the head poses are fixed. In subsequent work, such constraints have been relaxed.",
+      "More evaluations can be found in Appendix. { \\renewcommand{\\tabcolsep{4pt % Gaze \\noindentBenchmark Datasets We use three benchmark datasets: (1) MPII-Gaze (MPII)~ contains 213,659 images from 15 subjects, which was captured under the scenarios of everyday laptop use. (2) UT-Multiview (UTMV)~ is composed of 50 subjects with 160 gaze directions captured by 8 monitor-mounted cameras.",
+      "HUMBI covers a wide and continuous range of head poses, due to numerous views and natural head movements by many subjects. The yaw and pitch of gaze and eye poses are distributed uniformly across all angles. The quantitative analysis of the bias and variance of the gaze distribution is summarized in Table~. HUMBI shows the smallest average bias (5.98^\\circ compared to 6.69^\\circ-14.04^\\circ from other datasets) and second-largest average variance (24.61^\\circ compared to 25.93^\\circ of UTMV).",
+      "Using the real data, the synthesized images from 144 virtual cameras are augmented. (3) RT-GENE~ contains 122,531 images of 15 subjects captured by eye-tracking glasses. \\noindentDistribution of Gaze Directions To characterize HUMBI Gaze, we visualize three measures in Figure~: (1) gaze pose: the gaze direction with respect to camera pose; (2) head pose: the head orientation with respect to the camera pose; and (3) eye pose: the gaze direction with respect to the head.",
+      "Eyediap dataset~ captured gaze while allowing head motion, providing natural gaze movements. MPII-Gaze dataset~ measured in-the-wild gaze from laptops, including 214K images across 15 subjects. This contains a variety of appearance and illumination.",
+      "Discussion We present HUMBI dataset that is designed to facilitate high resolution pose- and view-specific appearance of human body expressions. Five elementary body expressions (gaze, face, hand, body, and garment) are captured by a dense camera array composed of 107 synchronized cameras. The dataset includes diverse activities of 772 distinctive subjects across gender, ethnicity, age, and physical condition.",
+      "The dataset includes the five elementary body expressions: gaze, face, hand, body, and garment. We use COLMAP~ to calibrate cameras, and upgrade the reconstruction to the metric scale using physical camera baselines. Notable subject statistics includes: evenly distributed gender (50.7\\% female; 49.3\\% male); a wide range of age groups (11\\% of thirties, 29\\% of twenties, and 26\\% of teenagers); diverse skin colors (black, dark brown, light brown, and white); various styles of clothing (dress, short-/long-sleeve t-shirt, jacket, hat, and short-/long-pants).",
+      "One dataset is used for training and others are used for testing. Each data sample is defined as \\{(\\mathbf{e_{c,\\mathbf{h_{c), \\mathbf{g_{c\\, where \\mathbf{e_{c\\in\\mathbb{R^{36\\times60, \\mathbf{h_{c\\in\\mathbb{R^{2,\\mathbf{g_{c\\in\\mathbb{R^{2 are normalized eye patch, yaw and pitch angle of head pose, and gaze direction with respect to a virtual camera c. The detection network is trained to minimize the mean squared error of gaze yaw and pitch angles."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 visually compares the distribution of gaze and head pose across different datasets, which directly addresses the question. Text 2 provides quantitative analysis of the gaze distribution, mentioning the bias and variance, which helps in understanding the concentration.\",\n    \"Answer\": \"The MPII-Gaze dataset has the most concentrated distribution of gaze and head pose.\"\n}"
+  },
+  "3": {
+    "question": "What are the differences between the results of the monocular 3D body prediction network trained with different dataset combinations?",
+    "ground_truth": "The results of the monocular 3D body prediction network trained with different dataset combinations show that the Up3d+HUMBI dataset combination produces the most accurate results. This is evident in the images where the predicted 3D body poses are closer to the ground-truth poses than the other dataset combinations.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Figure5-1.png",
+      "1812.00281v3-Figure16-1.png",
+      "1812.00281v3-Figure8-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Figure5-1.png",
+      "1812.00281v3-Figure16-1.png",
+      "1812.00281v3-Figure8-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Figure2-1.png",
+      "1812.00281v3-Figure15-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 shows the reconstruction of body occupancy maps, which is relevant to 3D body prediction. Text 0 discusses the performance of monocular 3D body mesh prediction using different datasets, specifically mentioning HUMBI and UP-3D.",
+    "answer": "The monocular 3D body prediction network shows improved accuracy when trained with a combination of datasets. Specifically, using HUMBI in combination with other datasets like UP-3D enhances the generalization ability and prediction accuracy compared to using a single dataset alone.",
+    "text_chunks": [
+      "It show that HUMBI is more generalizable for predicting 3D body pose than Human3.6M and MPI-INF-3DHP (by a margin of 0.023 and 0.064 AUC). Moreover, HUMBI is complementary to each other dataset and the performance of model trained by another dataset alone is increased with HUMBI (by a margin of 0.057 and 0.078 AUC respectively). \\noindentMonocular 3D Body Mesh Prediction We compare the body mesh prediction accuracy using a recent CNN model trained on (1) HUMBI, (2) UP-3D, and (3) HUMBI+UP-3D. While we use~ for the testing CNN model, recent monocular body reconstruction methods~ can be alternative to test the generalization ability of HUMBI.",
+      "The results are summarized in Table~. Due to the domain gap between the real and synthetic data, the prediction accuracy of the network trained with synthetic data is largely degraded on the real data. However, by combining two datasets, the performance is highly improved (even better than intra-data evaluation), e.g., ObMan+HUMBI can outperform ObMan and HUMBI 0.3 and 1.7 pixels, respectively. Body \\noindentBenchmark Datasets We use four benchmark datasets: (1) Human3.6M~ contains numerous 3D human poses of 11 actors/actresses measured by motion capture system with corresponding images from 4 cameras.",
+      "Table~ summarize the results. From the results of 3DDFA+HUMBI, the prediction accuracy is improved from both datasets (2.8 pixels from 3DDFA and 4.9 pixels from HUMBI) by combining two datasets, which indicates the complementary nature of HUMBI. Due to the multiview images in HUMBI, the network can learn the view-invariant geometric representation, which allows precise reconstruction even with considerable occlusion as shown in Figure~. Hand \\noindentBenchmark Datasets We use three benchmark datasets: (1) Rendered Handpose Dataset (RHD)~ is a synthesized hand dataset containing 44K images built from 20 freely available 3D models performing 39 actions.",
+      "One dataset is used for training and others are used for testing. Each data sample is defined as \\{(\\mathbf{e_{c,\\mathbf{h_{c), \\mathbf{g_{c\\, where \\mathbf{e_{c\\in\\mathbb{R^{36\\times60, \\mathbf{h_{c\\in\\mathbb{R^{2,\\mathbf{g_{c\\in\\mathbb{R^{2 are normalized eye patch, yaw and pitch angle of head pose, and gaze direction with respect to a virtual camera c. The detection network is trained to minimize the mean squared error of gaze yaw and pitch angles.",
+      "Notice that UTMV is a synthesized dataset while HUMBI is real. \\noindentMonocular 3D Gaze Prediction To validate the generalizability of HUMBI Gaze, we use an existing gaze detection network~ to conduct a cross-data evaluation. We randomly choose \\sim25K images (equally distributed among subjects) as experiment set for each dataset.",
+      "We manually pre-define the correspondences between two models in the canonical coordinates. \\noindentMonocular 3D Face Mesh Prediction We evaluate HUMBI Face by predicting a 3D face mesh using a recent mesh reconstruction network~. The network encoder directly regresses the 3D face shape and head pose from a single view image.",
+      "We use Human3.6M, MPI-INF-3DHP for body pose evaluation and UP-3D for body mesh evaluation. \\noindentMonocular 3D Body Pose Prediction To validate HUMBI body, we conduct a cross-data evaluation for the task of estimating 3D human pose from a single view image. We use a recent body pose detector~.",
+      "We modify the decoder to accommodate the differentiable Basel model. We train the network with three dataset combinations, i.e., 3DDFA, HUMBI, and 3DDFA+HUMBI, and for each training, we minimize the loss of the reprojection error with weak perspective projection model. To measure the accuracy, we use the reprojection error scaled to the input image resolution (256 pixel)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 shows the reconstruction of body occupancy maps, which is relevant to 3D body prediction. Text 0 discusses the performance of monocular 3D body mesh prediction using different datasets, specifically mentioning HUMBI and UP-3D.\",\n    \"Answer\": \"The monocular 3D body prediction network shows improved accuracy when trained with a combination of datasets. Specifically, using HUMBI in combination with other datasets like UP-3D enhances the generalization ability and prediction accuracy compared to using a single dataset alone.\"\n}"
+  },
+  "4": {
+    "question": "What are the different stages of HUMBI body and cloth reconstruction?",
+    "ground_truth": "The different stages of HUMBI body and cloth reconstruction are: \n1. Input image of the person (Ibody)\n2. Keypoint estimation (Kbody)\n3. Occupancy map generation (Obody)\n4. Body model fitting (Mbody)\n5. Cloth model fitting (Mcloth)",
+    "selected_figures_names": [
+      "1812.00281v3-Figure15-1.png",
+      "1812.00281v3-Table7-1.png",
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Figure15-1.png",
+      "1812.00281v3-Table7-1.png",
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Figure2-1.png",
+      "1812.00281v3-Figure11-1.png",
+      "1812.00281v3-Figure5-1.png",
+      "1812.00281v3-Table2-1.png",
+      "1812.00281v3-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows qualitative results of 3D body prediction using different datasets, which is relevant to body and cloth reconstruction. Text 0 discusses the use of the SMPL body model for cloth motion parametrization, which is crucial for understanding the stages of reconstruction.",
+    "answer": "The stages of HUMBI body and cloth reconstruction involve using the SMPL body model to parametrize cloth motion, ensuring physically plausible cloth geometry while preserving wrinkle details. This is followed by matching the deformed cloth to the outer surface of the occupancy map with regularization techniques.",
+    "text_chunks": [
+      "To ensure the same topology when segmenting the cloth from 3D reconstruction, the SMPL body model can be used to parametrize cloth motion, which produces physically plausible cloth geometry while preserving wrinkle level details~. \\noindentOur Approach Unlike existing datasets focusing on each body expressions, HUMBI is designed to span geometry and appearance of total body expressions from a number of distinctive subjects using a dense camera array. Our tera-scale multiview visual data provide a new opportunity to generalize pose- and view-specific appearance.",
+      "The deformed cloth is matched to the outer surface of the occupancy map with a Laplacian regularization~ (see Appendix). Three garment topologies for each cloth piece are used, i.e., tops: sleeveless shirts (3,763 vertices and 7,261 faces), T-shirts (6,533 vertices, 13,074 faces), and long-sleeve shirts (8,269 vertices and 16,374 faces), and bottoms: short (3,975 vertices and 7,842 faces), medium (5,872 vertices and 11,618 faces), and long pants (11,238 vertices and 22,342 meshes), which are manually matched to each subject. \\vspace{-1mm Evaluation \\vspace{-1mm We evaluate HUMBI in terms of generalizability, diversity, and accuracy.",
+      "As of Nov 2019, the dataset is composed of 772 distinctive subjects with natural clothing across diverse age, gender, ethnicity, and physical condition captured by 107 HD synchronized cameras (68 cameras facing at frontal body). Comparing to existing datasets for human body expressions such as CMU Panoptic Studio~, MPII~, and INRIA~, HUMBI presents the unprecedented scale visual data (Figure~) that are ideal for learning the detailed appearance and geometry of five elementary human body expressions: gaze, face, hand, body, and garment (Figure~). Our analysis shows that HUMBI is effective.",
+      "Discussion We present HUMBI dataset that is designed to facilitate high resolution pose- and view-specific appearance of human body expressions. Five elementary body expressions (gaze, face, hand, body, and garment) are captured by a dense camera array composed of 107 synchronized cameras. The dataset includes diverse activities of 772 distinctive subjects across gender, ethnicity, age, and physical condition.",
+      "It show that HUMBI is more generalizable for predicting 3D body pose than Human3.6M and MPI-INF-3DHP (by a margin of 0.023 and 0.064 AUC). Moreover, HUMBI is complementary to each other dataset and the performance of model trained by another dataset alone is increased with HUMBI (by a margin of 0.057 and 0.078 AUC respectively). \\noindentMonocular 3D Body Mesh Prediction We compare the body mesh prediction accuracy using a recent CNN model trained on (1) HUMBI, (2) UP-3D, and (3) HUMBI+UP-3D. While we use~ for the testing CNN model, recent monocular body reconstruction methods~ can be alternative to test the generalization ability of HUMBI.",
+      "The network is trained by minimizing the reprojection error where only the regression network is newly trained. The training details are described in Figure~. More Results Mesh Prediction Results We use a recent CNN model to evaluate HUMBI as introduced in Section~. The qualitative evaluation on single view prediction is shown in Figure~ (face), Figure~ (hand), and Figure~ (body).",
+      "\\vspace{-6mm \\caption{(Top and bottom) HUMBI includes 772 distinctive subjects across gender, ethnicity, age, clothing style, and physical condition, which generates diverse appearance of human expressions. (Middle) For each subject, 107 HD cameras capture her/his expressions including gaze, face, hand, body, and garment.",
+      "Hand HUMBI Hand contains \\sim24M images (290 frames \\times 68 views per subject). We represent hand geometry using a 3D parametric model \\mathcal{M_{\\rm hand (MANO~) with 778 vertices and 1,538 faces. We reconstruct the mesh model using hand keypoints (\\mathcal{K_{\\rm hand with 21 keypoints), i.e., \\mathcal{M_{\\rm hand=f_{\\rm hand(\\mathcal{K_{\\rm face), where f_{\\rm hand is a hand alignment function."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows qualitative results of 3D body prediction using different datasets, which is relevant to body and cloth reconstruction. Text 0 discusses the use of the SMPL body model for cloth motion parametrization, which is crucial for understanding the stages of reconstruction.\",\n    \"Answer\": \"The stages of HUMBI body and cloth reconstruction involve using the SMPL body model to parametrize cloth motion, ensuring physically plausible cloth geometry while preserving wrinkle details. This is followed by matching the deformed cloth to the outer surface of the occupancy map with regularization techniques.\"\n}"
+  },
+  "5": {
+    "question": "Which dataset performs best when used alone for training a 3D body keypoint prediction model, and how does its performance compare to models trained on combined datasets?",
+    "ground_truth": "HUMBI performs best when used alone for training, with an average AUC of 0.399. While this is lower than the average AUC of models trained on combined datasets (0.433 for H36M+HUMBI and 0.413 for MI3D+HUMBI), HUMBI still achieves the highest score among the individual datasets.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure16-1.png",
+      "1812.00281v3-Table7-1.png",
+      "1812.00281v3-Figure3-1.png",
+      "1812.00281v3-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Figure16-1.png",
+      "1812.00281v3-Table7-1.png",
+      "1812.00281v3-Figure3-1.png",
+      "1812.00281v3-Figure4-1.png",
+      "1812.00281v3-Table1-1.png",
+      "1812.00281v3-Table8-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Figure2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 provides a table with cross-data evaluation results for 3D body keypoint prediction, showing performance metrics for different datasets. Text 2 discusses the generalizability and complementary nature of the HUMBI dataset, which is relevant for understanding the performance of models trained on different datasets.",
+    "answer": "The HUMBI dataset performs best when used alone for training a 3D body keypoint prediction model, with an AUC of 0.409. When combined with other datasets, such as H36M+HUMBI, the performance improves to an AUC of 0.433.",
+    "text_chunks": [
+      "The results are summarized in Table~. Due to the domain gap between the real and synthetic data, the prediction accuracy of the network trained with synthetic data is largely degraded on the real data. However, by combining two datasets, the performance is highly improved (even better than intra-data evaluation), e.g., ObMan+HUMBI can outperform ObMan and HUMBI 0.3 and 1.7 pixels, respectively. Body \\noindentBenchmark Datasets We use four benchmark datasets: (1) Human3.6M~ contains numerous 3D human poses of 11 actors/actresses measured by motion capture system with corresponding images from 4 cameras.",
+      "Table~ summarize the results. From the results of 3DDFA+HUMBI, the prediction accuracy is improved from both datasets (2.8 pixels from 3DDFA and 4.9 pixels from HUMBI) by combining two datasets, which indicates the complementary nature of HUMBI. Due to the multiview images in HUMBI, the network can learn the view-invariant geometric representation, which allows precise reconstruction even with considerable occlusion as shown in Figure~. Hand \\noindentBenchmark Datasets We use three benchmark datasets: (1) Rendered Handpose Dataset (RHD)~ is a synthesized hand dataset containing 44K images built from 20 freely available 3D models performing 39 actions.",
+      "It show that HUMBI is more generalizable for predicting 3D body pose than Human3.6M and MPI-INF-3DHP (by a margin of 0.023 and 0.064 AUC). Moreover, HUMBI is complementary to each other dataset and the performance of model trained by another dataset alone is increased with HUMBI (by a margin of 0.057 and 0.078 AUC respectively). \\noindentMonocular 3D Body Mesh Prediction We compare the body mesh prediction accuracy using a recent CNN model trained on (1) HUMBI, (2) UP-3D, and (3) HUMBI+UP-3D. While we use~ for the testing CNN model, recent monocular body reconstruction methods~ can be alternative to test the generalization ability of HUMBI.",
+      "We use previous two datasets for the hand keypoint evaluation and the last one for the hand mesh evaluation. \\noindentMonocular 3D Hand Pose Prediction To validate HUMBI Hand, we conduct a cross-data evaluation for the task of the 3D hand pose estimation from a single view image, where we use a recent hand pose detector~. We train and evaluate the model trained by each dataset and a combination of HUMBI and each other dataset.",
+      "The results are summarized in Table~. We use area under PCK curve (AUC) in an error range of 0-20mm as the metric. It show that HUMBI is more generalizable for predicting 3D hand pose than other three dataset (by a margin of 0.02-0.16 AUC). Moreover, HUMBI is complementary to other datasets and the performance of model trained by another dataset alone is increased with HUMBI (by a margin of 0.04-0.12 AUC).",
+      "One dataset is used for training and others are used for testing. Each data sample is defined as \\{(\\mathbf{e_{c,\\mathbf{h_{c), \\mathbf{g_{c\\, where \\mathbf{e_{c\\in\\mathbb{R^{36\\times60, \\mathbf{h_{c\\in\\mathbb{R^{2,\\mathbf{g_{c\\in\\mathbb{R^{2 are normalized eye patch, yaw and pitch angle of head pose, and gaze direction with respect to a virtual camera c. The detection network is trained to minimize the mean squared error of gaze yaw and pitch angles.",
+      "We train and evaluate model trained by each dataset and model trained by a combination of HUMBI and each other dataset. By following the training protocol of~, we use 2D landmark labels from MPII dataset~ for a weak supervision. The results are summarized in Table~. We use area under PCK curve (AUC) in an error range of 0-150 mm as the metric.",
+      "The network is trained by minimizing the reprojection error where only the regression network is newly trained. The training details are described in Figure~. More Results Mesh Prediction Results We use a recent CNN model to evaluate HUMBI as introduced in Section~. The qualitative evaluation on single view prediction is shown in Figure~ (face), Figure~ (hand), and Figure~ (body)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 provides a table with cross-data evaluation results for 3D body keypoint prediction, showing performance metrics for different datasets. Text 2 discusses the generalizability and complementary nature of the HUMBI dataset, which is relevant for understanding the performance of models trained on different datasets.\",\n    \"Answer\": \"The HUMBI dataset performs best when used alone for training a 3D body keypoint prediction model, with an AUC of 0.409. When combined with other datasets, such as H36M+HUMBI, the performance improves to an AUC of 0.433.\"\n}"
+  },
+  "6": {
+    "question": "Which training data configuration resulted in the lowest prediction error for both UP-3D and HUMBI test sets?",
+    "ground_truth": "Training with UP-3D + HUMBI resulted in the lowest prediction error for both UP-3D and HUMBI test sets.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Figure3-1.png",
+      "1812.00281v3-Table8-1.png",
+      "1812.00281v3-Table2-1.png",
+      "1812.00281v3-Figure15-1.png",
+      "1812.00281v3-Table6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the training setup for 3D mesh prediction, which is relevant to understanding the data configuration. Text 0 discusses the performance of models trained on HUMBI and UP-3D, which directly relates to the question about prediction error.",
+    "answer": "The combination of HUMBI and UP-3D resulted in the lowest prediction error for both test sets.",
+    "text_chunks": [
+      "It show that HUMBI is more generalizable for predicting 3D body pose than Human3.6M and MPI-INF-3DHP (by a margin of 0.023 and 0.064 AUC). Moreover, HUMBI is complementary to each other dataset and the performance of model trained by another dataset alone is increased with HUMBI (by a margin of 0.057 and 0.078 AUC respectively). \\noindentMonocular 3D Body Mesh Prediction We compare the body mesh prediction accuracy using a recent CNN model trained on (1) HUMBI, (2) UP-3D, and (3) HUMBI+UP-3D. While we use~ for the testing CNN model, recent monocular body reconstruction methods~ can be alternative to test the generalization ability of HUMBI.",
+      "The results are summarized in Table~. We use area under PCK curve (AUC) in an error range of 0-20mm as the metric. It show that HUMBI is more generalizable for predicting 3D hand pose than other three dataset (by a margin of 0.02-0.16 AUC). Moreover, HUMBI is complementary to other datasets and the performance of model trained by another dataset alone is increased with HUMBI (by a margin of 0.04-0.12 AUC).",
+      "We conduct a self-data evaluation for each dataset with 90\\%/10\\% of training/testing split. Table~ summarize the experiment results. The detector trained by MPII and UTMV shows weak performance on cross-data evaluation comparing to HUMBI with 3^\\circ-16^\\circ margin.",
+      "We train and evaluate model trained by each dataset and model trained by a combination of HUMBI and each other dataset. By following the training protocol of~, we use 2D landmark labels from MPII dataset~ for a weak supervision. The results are summarized in Table~. We use area under PCK curve (AUC) in an error range of 0-150 mm as the metric.",
+      "HUMBI exhibits strong performance on cross-data evaluation with minimal degradation (less than 1^\\circ drop). Also, UTMV + HUMBI and MPII + HUMBI outperform each alone by a margin of 4.1^\\circ and 13.9^\\circ when tested on the third dataset MPII and UTMV respectively, showing that HUMBI is complementary to UTMV and MPII. { \\renewcommand{\\tabcolsep{3pt % Face \\noindentBenchmark",
+      "Table~ summarize the results. From the results of 3DDFA+HUMBI, the prediction accuracy is improved from both datasets (2.8 pixels from 3DDFA and 4.9 pixels from HUMBI) by combining two datasets, which indicates the complementary nature of HUMBI. Due to the multiview images in HUMBI, the network can learn the view-invariant geometric representation, which allows precise reconstruction even with considerable occlusion as shown in Figure~. Hand \\noindentBenchmark Datasets We use three benchmark datasets: (1) Rendered Handpose Dataset (RHD)~ is a synthesized hand dataset containing 44K images built from 20 freely available 3D models performing 39 actions.",
+      "The results are summarized in Table~. Due to the domain gap between the real and synthetic data, the prediction accuracy of the network trained with synthetic data is largely degraded on the real data. However, by combining two datasets, the performance is highly improved (even better than intra-data evaluation), e.g., ObMan+HUMBI can outperform ObMan and HUMBI 0.3 and 1.7 pixels, respectively. Body \\noindentBenchmark Datasets We use four benchmark datasets: (1) Human3.6M~ contains numerous 3D human poses of 11 actors/actresses measured by motion capture system with corresponding images from 4 cameras.",
+      "The network decoder is modified to accommodate the differentiable SMPL parameter prediction. The reprojection error is used to supervise the network and to evaluate testing performance. The cross-data evaluation is summarized in Table~. We observe that the network trained with HUMBI shows weak performance because of the lack of diversity of poses."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the training setup for 3D mesh prediction, which is relevant to understanding the data configuration. Text 0 discusses the performance of models trained on HUMBI and UP-3D, which directly relates to the question about prediction error.\",\n    \"Answer\": \"The combination of HUMBI and UP-3D resulted in the lowest prediction error for both test sets.\"\n}"
+  },
+  "7": {
+    "question": "How does the number of cameras used affect the accuracy of the garment reconstruction?",
+    "ground_truth": "The accuracy of the garment reconstruction increases as the number of cameras used increases.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure3-1.png",
+      "1812.00281v3-Table7-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Figure12-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Figure3-1.png",
+      "1812.00281v3-Table7-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Table2-1.png",
+      "1812.00281v3-Figure8-1.png",
+      "1812.00281v3-Figure4-1.png",
+      "1812.00281v3-Table6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 shows the setup with multiple cameras capturing subjects, which is relevant to understanding how camera numbers affect garment reconstruction. Text 1 discusses a study on how the number of cameras impacts garment reconstruction quality, making it directly relevant to the question.",
+    "answer": "The number of cameras affects the garment reconstruction quality by influencing the reconstruction accuracy and density. Reducing the number of cameras can decrease the quality, but the performance remains optimal even with fewer than 107 cameras.",
+    "text_chunks": [
+      "The reconstruction accuracy metric is the closest point distance from the 3D garment surface reconstructed by shape-from-silhouette~. In both cases, the performance reaches to the optimal even without 107 cameras as shown in Figure~, ensuring that our garment reconstruction is accurate (density: 90 cameras \\approx 107 cameras; accuracy: 60 cameras \\approx 107 cameras). The additional evaluations on the garment silhouette accuracy can be found in the Appendix.",
+      "However, it is highly complementary to other datasets as it provides various appearance from 107 viewpoints as shown in Figure~. Garment We conduct camera-ablation study to evaluate how the number of cameras affect garment reconstruction quality. We incrementally reduce the number of cameras and measure the reconstruction accuracy and density. The reconstruction density is computed by the number of 3D points produced by multiview stereo~.",
+      "Garment Reconstruction Accuracy We provide additional evaluation of view-dependent garment silhouette accuracy measured by the Chamfer distance between the annotated and the reprojected garment boundary in 2D. We pick a half-sleeve shirts and half pants models as a representative garment of top and bottom and measure the accuracy from each camera view that has different angle with respect to the most frontal camera. On average in Figure~, the silhouette error seen from the side view (11 pixels) is higher than the frontal (7.5 pixels) and rear views (8 pixels). \\end{appendices",
+      "For the generalizability, we conduct the cross-data evaluation on tasks of single view human reconstruction, e.g., monocular 3D face mesh prediction. For diversity, we visualize the distribution of HUMBI, e.g., gaze direction distribution along the yaw and pitch angle. For the accuracy, we measure how the number of cameras affects the quality of reconstruction.",
+      "To ensure the same topology when segmenting the cloth from 3D reconstruction, the SMPL body model can be used to parametrize cloth motion, which produces physically plausible cloth geometry while preserving wrinkle level details~. \\noindentOur Approach Unlike existing datasets focusing on each body expressions, HUMBI is designed to span geometry and appearance of total body expressions from a number of distinctive subjects using a dense camera array. Our tera-scale multiview visual data provide a new opportunity to generalize pose- and view-specific appearance.",
+      "The variance map shows that the appearance is dependent on view points. Garment Given the body reconstruction, we represent the garment geometry using a garment mesh model \\mathcal{M_{\\rm cloth as similar to~. An alignment function \\mathcal{M_{\\rm cloth=f_{\\rm cloth(\\mathcal{M_{\\rm body,\\mathcal{O_{\\rm body) is used to reconstruct the cloth mesh model from the body model and occupancy map. A set of fiducial correspondences between the cloth and body meshes are predefined, which are used as control points for cloth deformation.",
+      "We modify the decoder to accommodate the differentiable Basel model. We train the network with three dataset combinations, i.e., 3DDFA, HUMBI, and 3DDFA+HUMBI, and for each training, we minimize the loss of the reprojection error with weak perspective projection model. To measure the accuracy, we use the reprojection error scaled to the input image resolution (256 pixel).",
+      "Further, a 4D scanner~ enabled high resolution body capture to construct a parametric human models, e.g., SMPL~. Notably, image-to-surface correspondences on 50K COCO images~ enabled modeling humans from a single view image~. Further, rendering of human model in images could alleviate annotation efforts~. \\noindentClothes Previous works have proposed to capture the natural cloth deformation in response to human body movement. Cloth regions were segmented in 3D using multiview reconstruction~."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 shows the setup with multiple cameras capturing subjects, which is relevant to understanding how camera numbers affect garment reconstruction. Text 1 discusses a study on how the number of cameras impacts garment reconstruction quality, making it directly relevant to the question.\",\n    \"Answer\": \"The number of cameras affects the garment reconstruction quality by influencing the reconstruction accuracy and density. Reducing the number of cameras can decrease the quality, but the performance remains optimal even with fewer than 107 cameras.\"\n}"
+  },
+  "8": {
+    "question": "How does HUMBI capture diverse appearance of human expressions?",
+    "ground_truth": "HUMBI includes 772 distinctive subjects across gender, ethnicity, age, clothing style, and physical condition, which generates diverse appearance of human expressions.",
+    "selected_figures_names": [
+      "1812.00281v3-Table4-1.png",
+      "1812.00281v3-Table3-1.png",
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Table4-1.png",
+      "1812.00281v3-Table3-1.png",
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Figure3-1.png",
+      "1812.00281v3-Figure16-1.png",
+      "1812.00281v3-Figure10-1.png",
+      "1812.00281v3-Figure4-1.png",
+      "1812.00281v3-Table1-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 visually demonstrates the setup of the HUMBI dataset, showing multiple subjects captured by a dense camera array, which is crucial for understanding how diverse appearances are captured. Text 0 provides a detailed explanation of the dataset's design, highlighting the use of 107 synchronized cameras to capture various human expressions across a diverse group of subjects.",
+    "answer": "HUMBI captures diverse appearances of human expressions using a dense camera array composed of 107 synchronized cameras. This setup allows for high-resolution, pose- and view-specific capture of expressions such as gaze, face, hand, body, and garment across 772 distinctive subjects, ensuring diversity in gender, ethnicity, age, and physical condition.",
+    "text_chunks": [
+      "Discussion We present HUMBI dataset that is designed to facilitate high resolution pose- and view-specific appearance of human body expressions. Five elementary body expressions (gaze, face, hand, body, and garment) are captured by a dense camera array composed of 107 synchronized cameras. The dataset includes diverse activities of 772 distinctive subjects across gender, ethnicity, age, and physical condition.",
+      "\\vspace{-6mm \\caption{(Top and bottom) HUMBI includes 772 distinctive subjects across gender, ethnicity, age, clothing style, and physical condition, which generates diverse appearance of human expressions. (Middle) For each subject, 107 HD cameras capture her/his expressions including gaze, face, hand, body, and garment.",
+      "As of Nov 2019, the dataset is composed of 772 distinctive subjects with natural clothing across diverse age, gender, ethnicity, and physical condition captured by 107 HD synchronized cameras (68 cameras facing at frontal body). Comparing to existing datasets for human body expressions such as CMU Panoptic Studio~, MPII~, and INRIA~, HUMBI presents the unprecedented scale visual data (Figure~) that are ideal for learning the detailed appearance and geometry of five elementary human body expressions: gaze, face, hand, body, and garment (Figure~). Our analysis shows that HUMBI is effective.",
+      "We use a 3D mesh model to represent the expressions where the view-dependent appearance is coordinated by its canonical atlas. Our evaluation shows that HUMBI outperforms existing datasets as modeling nearly exhaustive views and can be complementary to such datasets. HUMBI is the first-of-its-kind dataset that attempts to span the general appearance of assorted people by pushing towards two extremes: views and subjects.",
+      "To ensure the same topology when segmenting the cloth from 3D reconstruction, the SMPL body model can be used to parametrize cloth motion, which produces physically plausible cloth geometry while preserving wrinkle level details~. \\noindentOur Approach Unlike existing datasets focusing on each body expressions, HUMBI is designed to span geometry and appearance of total body expressions from a number of distinctive subjects using a dense camera array. Our tera-scale multiview visual data provide a new opportunity to generalize pose- and view-specific appearance.",
+      "The variance map shows that the appearance is highly dependent on viewpoint in particular in the iris region. Face HUMBI Face contains \\sim17.3M images (330 frames \\times 68 views per subject). We represent face geometry using a 3D blend shape model \\mathcal{M_{face (Surrey~) with 3,448 vertices and 6,736 faces.",
+      "\\vspace{-3mm \\end{figure* HUMBI HUMBI is composed of 772 distinctive subjects captured by 107 synchronized HD cameras. 69 cameras are uniformly distributed across dodecagon frame with 2.5m diameter along the two levels of an arc (0.8 m and 1.6 m) where the baseline between adjacent cameras is approximately 10^\\circ (22 cm). Another 38 cameras are distributed across the frontal quadrant of the dodecagon frame (average baseline: 10 cm) to densify cameras used for capturing face/gaze.",
+      "HUMBI covers a wide and continuous range of head poses, due to numerous views and natural head movements by many subjects. The yaw and pitch of gaze and eye poses are distributed uniformly across all angles. The quantitative analysis of the bias and variance of the gaze distribution is summarized in Table~. HUMBI shows the smallest average bias (5.98^\\circ compared to 6.69^\\circ-14.04^\\circ from other datasets) and second-largest average variance (24.61^\\circ compared to 25.93^\\circ of UTMV)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 visually demonstrates the setup of the HUMBI dataset, showing multiple subjects captured by a dense camera array, which is crucial for understanding how diverse appearances are captured. Text 0 provides a detailed explanation of the dataset's design, highlighting the use of 107 synchronized cameras to capture various human expressions across a diverse group of subjects.\",\n    \"Answer\": \"HUMBI captures diverse appearances of human expressions using a dense camera array composed of 107 synchronized cameras. This setup allows for high-resolution, pose- and view-specific capture of expressions such as gaze, face, hand, body, and garment across 772 distinctive subjects, ensuring diversity in gender, ethnicity, age, and physical condition.\"\n}"
+  },
+  "9": {
+    "question": "What is the difference between the \"median appearance\" and the \"view-specific appearance\"?",
+    "ground_truth": "The median appearance is the average of all the multiview images, while the view-specific appearance is a single image that is rendered from a specific viewpoint.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure4-1.png",
+      "1812.00281v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Figure4-1.png",
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Figure2-1.png",
+      "1812.00281v3-Table8-1.png",
+      "1812.00281v3-Table7-1.png",
+      "1812.00281v3-Figure3-1.png",
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Table3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows examples of view-specific and median appearances for different body parts, which directly relates to the question. Text 0 explains the concept of view-specific appearance and its dependence on views, which helps clarify the difference between median and view-specific appearances.",
+    "answer": "The 'median appearance' represents an average or typical appearance across multiple views, while the 'view-specific appearance' captures how the appearance changes depending on the specific viewpoint. The median appearance is a generalized representation, whereas the view-specific appearance accounts for variations seen from different angles.",
+    "text_chunks": [
+      "For each view, the projection map between the image and atlas coordinate is established through the corresponding 3D locations in the reconstructed mesh with bilinear interpolation. Figure~ illustrates view-specific appearance across views with median and variance of appearance. The variance map shows that the appearance is dependent on views, e.g. the regions of salient landmarks such as eye, eyebrows, nose, and mouth, which justifies the necessity of view-specific appearance modeling~.",
+      "Figure~ illustrates view-specific appearance across views with median and variance of appearance. The variance map shows that the appearance is dependent on view points. Body Each subject performs a sequence of motion and dance performance, which constitutes \\sim26M images.",
+      "For appearance, we select vertices of eye region in the Surrey face model~ to build a canonical atlas coordinate (UV) for each eye. We represent view-specific appearance map \\mathcal{A_{\\rm gaze by projecting pixels in the image onto that the atlas coordinate. Figure~ illustrates view-specific appearance across views with median and variance of appearance.",
+      "The occupancy map is generated by human body segmentation~. As a by-product, the semantics (i.e., head, torso, upper arm, lower arm, upper leg, and lower leg) can be labeled at each location in the occupancy map by associating with the projected body label~ as shown in Figure~. Given the reconstructed body mesh model, we construct a view-specific appearance map \\mathcal{A_{\\rm body by projecting pixels in an image onto the canonical atlas coordinate. Figure~ illustrates view-specific appearance across views with median and variance of appearance.",
+      "For eye appearance, we provide two representations: (1) normalized eye patches and (2) pose-independent appearance map. For the normalized eye patches, we warp an eye patch region such that the orientation and distance remain constant across views. RGB values are histogram-equalized.",
+      "We use a 3D mesh model to represent the expressions where the view-dependent appearance is coordinated by its canonical atlas. Our evaluation shows that HUMBI outperforms existing datasets as modeling nearly exhaustive views and can be complementary to such datasets. HUMBI is the first-of-its-kind dataset that attempts to span the general appearance of assorted people by pushing towards two extremes: views and subjects.",
+      "Their activities are loosely guided by performance instructions, which generates natural body expressions. (4) Diverse: 772 distinctive subjects with diverse clothing styles, skin colors, time-varying geometry of gaze/face/body/hand, and range of motion. (5) Fine: with multiview HD cameras, we reconstruct the high fidelity 3D model using 3D meshes, which allows representing view-specific appearance in its canonical atlas.",
+      "For facial appearance, a deep appearance model~ introduces view-dependent appearance using a conditional variational autoencoder, which outperforms linear active appearance model~. \\noindentHand Dexterous hand manipulation frequently introduces self-occlusion, which makes building a 3D hand pose dataset challenging. A depth image that provides trivial hand segmentation in conjunction with tracking has been used to establish the ground truth hand pose~. However, such approaches still require intense manual adjustments."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows examples of view-specific and median appearances for different body parts, which directly relates to the question. Text 0 explains the concept of view-specific appearance and its dependence on views, which helps clarify the difference between median and view-specific appearances.\",\n    \"Answer\": \"The 'median appearance' represents an average or typical appearance across multiple views, while the 'view-specific appearance' captures how the appearance changes depending on the specific viewpoint. The median appearance is a generalized representation, whereas the view-specific appearance accounts for variations seen from different angles.\"\n}"
+  },
+  "10": {
+    "question": "What is the purpose of the decoder in the 3D mesh prediction pipeline?",
+    "ground_truth": "The decoder is responsible for generating the final 3D mesh from the intermediate representations produced by the regression network.",
+    "selected_figures_names": [
+      "1812.00281v3-Figure12-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Figure16-1.png",
+      "1812.00281v3-Figure8-1.png",
+      "1812.00281v3-Figure2-1.png",
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Table8-1.png",
+      "1812.00281v3-Figure11-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a visual representation of the 3D mesh prediction pipeline, showing the role of the decoder. Text 1 explains the decoder's function in the context of mesh prediction, mentioning its role in reconstructing body model parameters.",
+    "answer": "The purpose of the decoder in the 3D mesh prediction pipeline is to reconstruct the body model parameters, such as the 3D mesh shape and pose, from the encoded features.",
+    "text_chunks": [
+      "We manually pre-define the correspondences between two models in the canonical coordinates. \\noindentMonocular 3D Face Mesh Prediction We evaluate HUMBI Face by predicting a 3D face mesh using a recent mesh reconstruction network~. The network encoder directly regresses the 3D face shape and head pose from a single view image.",
+      "E_{\\rm cloth^{b measures the correspondence error: where \\overline{\\mathcal{V_{\\rm body and \\overline{\\mathcal{V_{\\rm cloth are the corresponding vertices. E_{\\rm cloth^{o measures the Chamfer distance to align \\mathcal{M_{\\rm cloth with \\mathcal{O_{\\rm body: E_{\\rm cloth^{r is the spatial regularization (Laplacian) that prevents from reconstructing unrealistic cloth structure by penalizing a non-smooth and non-rigid vertex with respect to its neighboring vertices~: Training Mesh Prediction Network To train the mesh prediction function of each body expression (i.e., face, hand, and body described in Section 4.1-4.3 of the main paper), we use the recent neural network~ that can regress a single image to the body model parameters, e.g., SMPL body shape and pose coefficients, and camera viewpoint. In Figure~, the encoder is implemented with , and the decoder with the pre-trained weights of each body model, i.e., 3DMM~ for face, SMPL~ for body, and MANO~ for hand.",
+      "We modify the decoder to accommodate the differentiable Basel model. We train the network with three dataset combinations, i.e., 3DDFA, HUMBI, and 3DDFA+HUMBI, and for each training, we minimize the loss of the reprojection error with weak perspective projection model. To measure the accuracy, we use the reprojection error scaled to the input image resolution (256 pixel).",
+      "\\noindentMonocular 3D Hand Mesh Prediction We compare HUMBI Hand with synthetic ObMan~ dataset. We use a recent regression network~ that outputs the hand mesh shape and camera pose with minor modifications, e.g., we change the size of the latent coefficient and the hand mesh decoder to the ones from the MANO hand model. We train and evaluate the network based on the reprojection error with weak perspective projection model.",
+      "It show that HUMBI is more generalizable for predicting 3D body pose than Human3.6M and MPI-INF-3DHP (by a margin of 0.023 and 0.064 AUC). Moreover, HUMBI is complementary to each other dataset and the performance of model trained by another dataset alone is increased with HUMBI (by a margin of 0.057 and 0.078 AUC respectively). \\noindentMonocular 3D Body Mesh Prediction We compare the body mesh prediction accuracy using a recent CNN model trained on (1) HUMBI, (2) UP-3D, and (3) HUMBI+UP-3D. While we use~ for the testing CNN model, recent monocular body reconstruction methods~ can be alternative to test the generalization ability of HUMBI.",
+      "E^{p_{\\rm body penalizes the distance between the reconstructed 3D body keypoints \\mathcal{K_{\\rm body and the keypoints of the SMPL \\overline{\\mathcal{V_{\\rm body: E^{s_{\\rm body encourages the shape of the estimated body model \\mathcal{M_{\\rm body to be aligned with the outer surface of the occupancy map \\mathcal{O_{\\rm body. We use Chamfer distance to measure the alignment: % where d_{\\rm chamfer measures Chamfer distance between two sets of point clouds. E^r_{body penalizes the difference between the estimated shape \\boldsymbol{\\beta_{b and the subject-aware mean shape \\boldsymbol{\\beta^{\\rm prior_{b as follows:",
+      "The network decoder is modified to accommodate the differentiable SMPL parameter prediction. The reprojection error is used to supervise the network and to evaluate testing performance. The cross-data evaluation is summarized in Table~. We observe that the network trained with HUMBI shows weak performance because of the lack of diversity of poses.",
+      "Table~ summarize the results. From the results of 3DDFA+HUMBI, the prediction accuracy is improved from both datasets (2.8 pixels from 3DDFA and 4.9 pixels from HUMBI) by combining two datasets, which indicates the complementary nature of HUMBI. Due to the multiview images in HUMBI, the network can learn the view-invariant geometric representation, which allows precise reconstruction even with considerable occlusion as shown in Figure~. Hand \\noindentBenchmark Datasets We use three benchmark datasets: (1) Rendered Handpose Dataset (RHD)~ is a synthesized hand dataset containing 44K images built from 20 freely available 3D models performing 39 actions."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a visual representation of the 3D mesh prediction pipeline, showing the role of the decoder. Text 1 explains the decoder's function in the context of mesh prediction, mentioning its role in reconstructing body model parameters.\",\n    \"Answer\": \"The purpose of the decoder in the 3D mesh prediction pipeline is to reconstruct the body model parameters, such as the 3D mesh shape and pose, from the encoded features.\"\n}"
+  },
+  "11": {
+    "question": "Which dataset provides data for **both** facial expressions and full-body motion capture, including clothing, in a natural setting (not synthesized)? ",
+    "ground_truth": "HUMBI is the only dataset that provides data for both facial expressions and full-body motion capture, including clothing, in a natural setting. ",
+    "selected_figures_names": [
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Figure9-1.png",
+      "1812.00281v3-Table1-1.png",
+      "1812.00281v3-Figure12-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00281v3-Table6-1.png",
+      "1812.00281v3-Figure9-1.png",
+      "1812.00281v3-Table1-1.png",
+      "1812.00281v3-Figure12-1.png",
+      "1812.00281v3-Table2-1.png",
+      "1812.00281v3-Figure6-1.png",
+      "1812.00281v3-Figure5-1.png",
+      "1812.00281v3-Figure4-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 provides a comprehensive table of datasets, showing which ones include facial expressions, full-body motion capture, and clothing. Text 1 describes the HUMBI dataset, highlighting its natural setting and coverage of facial expressions, full-body motion, and clothing.",
+    "answer": "The HUMBI dataset provides data for both facial expressions and full-body motion capture, including clothing, in a natural setting.",
+    "text_chunks": [
+      "Related Work We briefly review the existing datasets for modeling human body expressions: gaze, face, hand, body, and garment. These datasets are summarized in Table~. \\noindentGaze Columbia Gaze dataset~ and UT-Multiview dataset~ have been captured in a controlled environments where the head poses are fixed. In subsequent work, such constraints have been relaxed.",
+      "As of Nov 2019, the dataset is composed of 772 distinctive subjects with natural clothing across diverse age, gender, ethnicity, and physical condition captured by 107 HD synchronized cameras (68 cameras facing at frontal body). Comparing to existing datasets for human body expressions such as CMU Panoptic Studio~, MPII~, and INRIA~, HUMBI presents the unprecedented scale visual data (Figure~) that are ideal for learning the detailed appearance and geometry of five elementary human body expressions: gaze, face, hand, body, and garment (Figure~). Our analysis shows that HUMBI is effective.",
+      "Discussion We present HUMBI dataset that is designed to facilitate high resolution pose- and view-specific appearance of human body expressions. Five elementary body expressions (gaze, face, hand, body, and garment) are captured by a dense camera array composed of 107 synchronized cameras. The dataset includes diverse activities of 772 distinctive subjects across gender, ethnicity, age, and physical condition.",
+      "The dataset includes the five elementary body expressions: gaze, face, hand, body, and garment. We use COLMAP~ to calibrate cameras, and upgrade the reconstruction to the metric scale using physical camera baselines. Notable subject statistics includes: evenly distributed gender (50.7\\% female; 49.3\\% male); a wide range of age groups (11\\% of thirties, 29\\% of twenties, and 26\\% of teenagers); diverse skin colors (black, dark brown, light brown, and white); various styles of clothing (dress, short-/long-sleeve t-shirt, jacket, hat, and short-/long-pants).",
+      "Eyediap dataset~ captured gaze while allowing head motion, providing natural gaze movements. MPII-Gaze dataset~ measured in-the-wild gaze from laptops, including 214K images across 15 subjects. This contains a variety of appearance and illumination.",
+      "(1) Complete: it captures the total body, including gaze, face, hand, foot, body, and garment to represent holistic body signals~, e.g., perceptual asynchrony between the face and hand movements. (2) Dense: 107 HD cameras create a dense light field that observe the minute body expressions with minimal self-occlusion. This dense light field allows us to model precise appearance as a function of view~. (3) Natural: the subjects are all voluntary participants (no actor/actress/student/researcher).",
+      "The results are summarized in Table~. Due to the domain gap between the real and synthetic data, the prediction accuracy of the network trained with synthetic data is largely degraded on the real data. However, by combining two datasets, the performance is highly improved (even better than intra-data evaluation), e.g., ObMan+HUMBI can outperform ObMan and HUMBI 0.3 and 1.7 pixels, respectively. Body \\noindentBenchmark Datasets We use four benchmark datasets: (1) Human3.6M~ contains numerous 3D human poses of 11 actors/actresses measured by motion capture system with corresponding images from 4 cameras.",
+      "RT-GENE dataset~ takes a step further by measuring free-ranging point of regard where the ground truth was obtained by using motion capture of mobile eye-tracking glasses. \\noindentFace 3D Morphable Model (3DMM)~ was constructed by 3D scans of large population to model the complex geometry and appearance of human faces. For instance, 3D faces were reconstructed by leveraging facial landmarks~, and dense face mesh~. Notably, 3DMM is fitted to 60K samples from several face alignment datasets~ to create the 300W-LP dataset~."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 provides a comprehensive table of datasets, showing which ones include facial expressions, full-body motion capture, and clothing. Text 1 describes the HUMBI dataset, highlighting its natural setting and coverage of facial expressions, full-body motion, and clothing.\",\n    \"Answer\": \"The HUMBI dataset provides data for both facial expressions and full-body motion capture, including clothing, in a natural setting.\"\n}"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "0": {
+    "question": "Which model performed the best on the MSRP task for the Ordered Sentences dataset?",
+    "ground_truth": "SkipThought",
+    "selected_figures_names": [
+      "1703.02507v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table5-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "The image provides a detailed comparison of model performances on various tasks, including MSRP, for both unordered and ordered sentences. Text chunk 2 explains how the best performances are indicated, which helps in interpreting the table.",
+    "answer": "The SkipThought model performed the best on the MSRP task for the Ordered Sentences dataset with an accuracy of 73.0.",
+    "text_chunks": [
+      "Our models are weaker on the MSRP task (which consists of the identification of labelled paraphrases) compared to state-of-the-art methods. However, we observe that the models which perform very strongly on this task end up faring very poorly on the other tasks, indicating a lack of generalizability. % On rest of the tasks, our models perform extremely well.",
+      "We evaluate paraphrase identification (MSRP) , classification of movie review sentiment~(MR) , product reviews (CR) , subjectivity classification (SUBJ) , opinion polarity (MPQA) and question type classification (TREC) . To classify, we use the code provided by in the same manner as in . For the MSRP dataset, containing pairs of sentences (S_1,S_2) with associated paraphrase label, we generate feature vectors by concatenating their Sent2Vec representations |\\vv_{S_1 - \\vv_{S_2| with the component-wise product \\vv_{S_1\\odot \\vv_{S_2.",
+      "An underline indicates the best performance for the dataset. Top 3 performances in each data category are shown in bold. The average is calculated as the average of accuracy for each category (For MSRP, we take the accuracy). )",
+      "In Table , we see that our Sent2Vec models are state-of-the-art on the majority of tasks when comparing to all the unsupervised models trained on the Toronto corpus, and clearly achieve the best averaged performance. Our Sent2Vec models also on average outperform or are at par with the C-PHRASE model, despite significantly lagging behind on the STS 2014 WordNet and News subtasks. This observation can be attributed to the fact that a big chunk of the data that the C-PHRASE model is trained on comes from English Wikipedia, helping it to perform well on datasets involving definition and news items.",
+      "To use \\citet{arora2017's method in a supervised setup, we precomputed and stored the common discourse vector \\cv_0 using 2 million random Wikipedia sentences. On an average, our models outperform their unsupervised models by a significant margin, this despite the fact that they used GloVe embeddings trained on larger corpora than ours (42 times larger). Our models also outperform their semi-supervised PSL + WR model.",
+      "We also see a noticeable improvement in accuracy as we use larger datasets like Twitter and Wikipedia. We furthermore see that the Sent2Vec models are faster to train when compared to methods like SkipThought and DictRep, owing to the SGD optimizer allowing a high degree of parallelizability. \\caption{Best unsupervised and semi-supervised methods ranked by macro average along with their training times.",
+      "Unsupervised Models Independent of Sentence Ordering The ParagraphVector DBOW model is a log-linear model which is trained to learn sentence as well as word embeddings and then use a softmax distribution to predict words contained in the sentence given the sentence vector representation. They also propose a different model ParagraphVector DM where they use n-grams of consecutive words along with the sentence vector representation to predict the next word. also presented an early approach to obtain compositional embeddings from word vectors.",
+      "The SkipThought model is able to outperform our models on most of the tasks as it is trained to predict the previous and next sentences and a lot of tasks are able to make use of this contextual information missing in our Sent2Vec models. For example, the TREC task is a poor measure of how one predicts the content of the sentence (the question) but a good measure of how the next sentence in the sequence (the answer) is predicted. Unsupervised Similarity Evaluation Results."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"The image provides a detailed comparison of model performances on various tasks, including MSRP, for both unordered and ordered sentences. Text chunk 2 explains how the best performances are indicated, which helps in interpreting the table.\",\n    \"Answer\": \"The SkipThought model performed the best on the MSRP task for the Ordered Sentences dataset with an accuracy of 73.0.\"\n}"
+  },
+  "1": {
+    "question": "Which model performs best on the SICK 2014 dataset in terms of average Spearman and Pearson correlation?",
+    "ground_truth": "C-PHRASE",
+    "selected_figures_names": [
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides a detailed comparison of different models' performance on the SICK 2014 dataset using Spearman and Pearson correlation measures. Text 0 explains the evaluation process for sentence embeddings using these correlation scores on the SICK 2014 dataset.",
+    "answer": "The Sent2Vec wiki uni. + bi. model performs best on the SICK 2014 dataset in terms of average Spearman and Pearson correlation.",
+    "text_chunks": [
+      "We perform unsupervised evaluation of the learnt sentence embeddings using the sentence cosine similarity, on the STS 2014 and SICK 2014 datasets. These similarity scores are compared to the gold-standard human judgements using Pearson's r and Spearman's \\rho correlation scores. The SICK dataset consists of about 10,000 sentence pairs along with relatedness scores of the pairs.",
+      "We observe that our results are competitive with the embeddings of \\citet{arora2017 for purely unsupervised methods. It is important to note that the scores obtained from supervised task-specific PSL embeddings trained for the purpose of semantic similarity outperform our method on both SICK and average STS 2014, which is expected as our model is trained purely unsupervised. In order to facilitate a more detailed comparison, we also evaluated the unsupervised Glove + WR embeddings on downstream supervised tasks and compared them to our twitter models.",
+      "This can be attributed to the superior generalizability of our model across supervised and unsupervised tasks. \\caption{Comparison of the performance of the unsupervised and semi-supervised sentence embeddings by with our models. Unsupervised comparisons are in terms of Pearson's correlation, while comparisons on supervised tasks are stating the average described in Table .",
+      "We set \\tau to be 0.0005 for both the Wikipedia and the Toronto Book Corpus unigrams + bigrams models. Performance comparison with Sent2Vec models trained on different corpora \\normalsize \\caption{Comparison of the performance of different Sent2Vec models with different semi-supervised/supervised models on different downstream supervised evaluation tasks. An underline indicates the best performance for the dataset and Sent2Vec model performances are bold if they perform as well or better than all other non-Sent2Vec models, including those presented in Table .",
+      "We also see a noticeable improvement in accuracy as we use larger datasets like Twitter and Wikipedia. We furthermore see that the Sent2Vec models are faster to train when compared to methods like SkipThought and DictRep, owing to the SGD optimizer allowing a high degree of parallelizability. \\caption{Best unsupervised and semi-supervised methods ranked by macro average along with their training times.",
+      "On running supervised evaluations and observing the results in Table , we find that on an average our models are second only to SkipThought vectors. Also, both our models achieve state of the art results on the CR task. We also observe that on half of the supervised tasks, our unigrams + bigram model is the best model after SkipThought.",
+      "In Table , we see that our Sent2Vec models are state-of-the-art on the majority of tasks when comparing to all the unsupervised models trained on the Toronto corpus, and clearly achieve the best averaged performance. Our Sent2Vec models also on average outperform or are at par with the C-PHRASE model, despite significantly lagging behind on the STS 2014 WordNet and News subtasks. This observation can be attributed to the fact that a big chunk of the data that the C-PHRASE model is trained on comes from English Wikipedia, helping it to perform well on datasets involving definition and news items.",
+      "To use \\citet{arora2017's method in a supervised setup, we precomputed and stored the common discourse vector \\cv_0 using 2 million random Wikipedia sentences. On an average, our models outperform their unsupervised models by a significant margin, this despite the fact that they used GloVe embeddings trained on larger corpora than ours (42 times larger). Our models also outperform their semi-supervised PSL + WR model."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides a detailed comparison of different models' performance on the SICK 2014 dataset using Spearman and Pearson correlation measures. Text 0 explains the evaluation process for sentence embeddings using these correlation scores on the SICK 2014 dataset.\",\n    \"Answer\": \"The Sent2Vec wiki uni. + bi. model performs best on the SICK 2014 dataset in terms of average Spearman and Pearson correlation.\"\n}"
+  },
+  "2": {
+    "question": "What is the relationship between the $L_2$-norm of a word vector and its frequency?",
+    "ground_truth": "The $L_2$-norm of a word vector is inversely proportional to its frequency.",
+    "selected_figures_names": [
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Table7-1.png"
+    ],
+    "all_figures_names": [
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table1-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table8-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Text chunk 0 discusses the relationship between the L_2-norm of word vectors and their frequency, which directly addresses the question. Image 0 provides context on different methods but does not specifically address the L_2-norm or frequency.",
+    "answer": "The L_2-norm of a word vector is related to its frequency, with the norm profile showing an interesting distribution as a function of the logarithm of word frequency. This suggests that the importance of each word is influenced by its frequency.",
+    "text_chunks": [
+      "Our model -- by learning how to generate and compose word vectors -- has to learn both the direction of the word embeddings as well as their norm. Considering the norms of the used word vectors as by our averaging over the sentence, we observe an interesting distribution of the ``importance'' of each word. In Figure we show the profile of the L_2-norm as a function of \\log(f_w) for each w\\in \\vocab, and compare it to the static down-weighting mechanism of \\citet{arora2017.",
+      "Additionally, encouraging sparsity in the embedding vectors is beneficial for memory reasons, allowing higher embedding dimensions h. We propose to apply L1 regularization individually to each word (and n-gram) vector (both source and target vectors). Formally, the training objective function \\eqref{eq:trainObj then becomes where \\tau is the regularization parameter.",
+      "\\times h and \\Vm\\in\\R^{h\\times |\\vocab|, where \\vocab denotes the vocabulary. Here, the columns of the matrix \\Vm represent the learnt source word vectors whereas those of \\Um represent the target word vectors. For a given sentence~S, which can be of arbitrary length, the indicator vector \\id_S \\in \\{0,1\\^{|\\vocab| is a binary vector encoding S (bag of words encoding).",
+      "Therefore, this model tries to generate sentences as a mixture of three type of words: words matching the sentence discourse vector \\cv_s, syntactical words matching \\cv_0, and words with high~f_w. demonstrated that for this model, the MLE of \\tilde{\\cv_s can be approximated by \\sum_{w \\in S \\frac{a{f_w + a \\vv_w, where a is a scalar. The sentence discourse vector can hence be obtained by subtracting \\cv_0 estimated by the first principal component of \\tilde{\\cv_s's on a set of sentences. In other words, the sentence embeddings are obtained by a weighted average of the word vectors stripping away the syntax by subtracting the common discourse vector and down-weighting frequent tokens.",
+      "\\cv_0 is the common discourse vector, representing a shared component among all discourses, mainly related to syntax. It allows the model to better generate syntactical features. The \\alpha f_w term is here to enable the model to generate some frequent words even if their matching with the discourse vector \\tilde{\\cv_s is low.",
+      "They use different compositional techniques including static averaging or Fisher vectors of a multivariate Gaussian to obtain sentence embeddings from word2vec models. \\citet{Hill:2016uu propose a Sequential (Denoising) Autoencoder, S(D)AE. This model first introduces noise in the input data: % Firstly each word is deleted with probability p_0, then for each non-overlapping bigram, words are swapped with probability p_x.",
+      "We can observe that our model is learning to down-weight frequent tokens by itself. It is also down-weighting rare tokens and the \\mathop{norm profile seems to roughly follow Luhn's hypothesis , a well known information retrieval paradigm, stating that mid-rank terms are the most significant to discriminate content. \\vspace{-1.3mm Conclusion \\vspace{-1.3mm",
+      "In our case, g(z) = \\|z\\|_1 and the corresponding proximal operator is given by where \\odot corresponds to element-wise product. Similar to the proximal-gradient scheme, in our case we can optionally use the thresholding operator on the updated word and n-gram vectors after an SGD step. The soft thresholding parameter used for this update is \\frac{\\tau \\cdot lr'{|R(S\\setminus\\{w_t\\)| and {\\tau \\cdot lr' for the source and target vectors respectively where lr' is the current learning rate, \\tau is the L1 regularization parameter and S is the sentence on which SGD is being run."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Text chunk 0 discusses the relationship between the L_2-norm of word vectors and their frequency, which directly addresses the question. Image 0 provides context on different methods but does not specifically address the L_2-norm or frequency.\",\n    \"Answer\": \"The L_2-norm of a word vector is related to its frequency, with the norm profile showing an interesting distribution as a function of the logarithm of word frequency. This suggests that the importance of each word is influenced by its frequency.\"\n}"
+  },
+  "3": {
+    "question": "Which dataset has the shortest average sentence length?",
+    "ground_truth": "Headlines.",
+    "selected_figures_names": [
+      "1703.02507v3-Table8-1.png"
+    ],
+    "all_figures_names": [
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table2-1.png",
+      "1703.02507v3-Table1-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table5-1.png",
+      "1703.02507v3-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a direct comparison of average sentence lengths across datasets, which is the focus of the question. Text 1 gives context about the STS 2014 dataset, which is relevant to the image data.",
+    "answer": "The dataset with the shortest average sentence length is the 'Headlines' category from the STS 2014 dataset, with an average length of 7.82.",
+    "text_chunks": [
+      "\\end{table* Dataset Description \\normalsize \\caption{Average sentence lengths for the datasets used in the comparison. \\end{table*",
+      "The STS 2014 dataset contains 3,770 pairs, divided into six different categories on the basis of the origin of sentences/phrases, namely Twitter, headlines, news, forum, WordNet and images. Results and Discussion In Tables and , we compare our results with those obtained by on different models.",
+      "Therefore, this model tries to generate sentences as a mixture of three type of words: words matching the sentence discourse vector \\cv_s, syntactical words matching \\cv_0, and words with high~f_w. demonstrated that for this model, the MLE of \\tilde{\\cv_s can be approximated by \\sum_{w \\in S \\frac{a{f_w + a \\vv_w, where a is a scalar. The sentence discourse vector can hence be obtained by subtracting \\cv_0 estimated by the first principal component of \\tilde{\\cv_s's on a set of sentences. In other words, the sentence embeddings are obtained by a weighted average of the word vectors stripping away the syntax by subtracting the common discourse vector and down-weighting frequent tokens.",
+      "The Wikipedia and Toronto books sentences have been tokenized using the Stanford NLP library , while for tweets we used the NLTK tweets tokenizer . For training, we select a sentence randomly from the dataset and then proceed to select all the possible target unigrams using subsampling. We update the weights using SGD with a linearly decaying learning rate.",
+      "We perform unsupervised evaluation of the learnt sentence embeddings using the sentence cosine similarity, on the STS 2014 and SICK 2014 datasets. These similarity scores are compared to the gold-standard human judgements using Pearson's r and Spearman's \\rho correlation scores. The SICK dataset consists of about 10,000 sentence pairs along with relatedness scores of the pairs.",
+      "In Table , we see that our Sent2Vec models are state-of-the-art on the majority of tasks when comparing to all the unsupervised models trained on the Toronto corpus, and clearly achieve the best averaged performance. Our Sent2Vec models also on average outperform or are at par with the C-PHRASE model, despite significantly lagging behind on the STS 2014 WordNet and News subtasks. This observation can be attributed to the fact that a big chunk of the data that the C-PHRASE model is trained on comes from English Wikipedia, helping it to perform well on datasets involving definition and news items.",
+      "We can observe that our model is learning to down-weight frequent tokens by itself. It is also down-weighting rare tokens and the \\mathop{norm profile seems to roughly follow Luhn's hypothesis , a well known information retrieval paradigm, stating that mid-rank terms are the most significant to discriminate content. \\vspace{-1.3mm Conclusion \\vspace{-1.3mm",
+      "We also see a noticeable improvement in accuracy as we use larger datasets like Twitter and Wikipedia. We furthermore see that the Sent2Vec models are faster to train when compared to methods like SkipThought and DictRep, owing to the SGD optimizer allowing a high degree of parallelizability. \\caption{Best unsupervised and semi-supervised methods ranked by macro average along with their training times."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a direct comparison of average sentence lengths across datasets, which is the focus of the question. Text 1 gives context about the STS 2014 dataset, which is relevant to the image data.\",\n    \"Answer\": \"The dataset with the shortest average sentence length is the 'Headlines' category from the STS 2014 dataset, with an average length of 7.82.\"\n}"
+  },
+  "4": {
+    "question": "Which model performed the best on the MSRP task for the Twitter dataset?",
+    "ground_truth": "The Sent2Vec uni. + bi. model performed the best on the MSRP task for the Twitter dataset.",
+    "selected_figures_names": [
+      "1703.02507v3-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1703.02507v3-Table8-1.png",
+      "1703.02507v3-Table7-1.png",
+      "1703.02507v3-Table6-1.png",
+      "1703.02507v3-Table4-1.png",
+      "1703.02507v3-Figure1-1.png",
+      "1703.02507v3-Table5-1.png",
+      "1703.02507v3-Table3-1.png",
+      "1703.02507v3-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "The image provides a detailed comparison of different models' performances on various tasks, including MSRP, specifically for the Twitter dataset. The text chunk explains the evaluation process for the MSRP task, which is relevant to understanding the context of the results.",
+    "answer": "The Sent2Vec uni. + bi. model performed the best on the MSRP task for the Twitter dataset with an accuracy of 72.4%.",
+    "text_chunks": [
+      "Our models are weaker on the MSRP task (which consists of the identification of labelled paraphrases) compared to state-of-the-art methods. However, we observe that the models which perform very strongly on this task end up faring very poorly on the other tasks, indicating a lack of generalizability. % On rest of the tasks, our models perform extremely well.",
+      "We also see a noticeable improvement in accuracy as we use larger datasets like Twitter and Wikipedia. We furthermore see that the Sent2Vec models are faster to train when compared to methods like SkipThought and DictRep, owing to the SGD optimizer allowing a high degree of parallelizability. \\caption{Best unsupervised and semi-supervised methods ranked by macro average along with their training times.",
+      "An underline indicates the best performance for the dataset. Top 3 performances in each data category are shown in bold. The average is calculated as the average of accuracy for each category (For MSRP, we take the accuracy). )",
+      "We evaluate paraphrase identification (MSRP) , classification of movie review sentiment~(MR) , product reviews (CR) , subjectivity classification (SUBJ) , opinion polarity (MPQA) and question type classification (TREC) . To classify, we use the code provided by in the same manner as in . For the MSRP dataset, containing pairs of sentences (S_1,S_2) with associated paraphrase label, we generate feature vectors by concatenating their Sent2Vec representations |\\vv_{S_1 - \\vv_{S_2| with the component-wise product \\vv_{S_1\\odot \\vv_{S_2.",
+      "In Table , we see that our Sent2Vec models are state-of-the-art on the majority of tasks when comparing to all the unsupervised models trained on the Toronto corpus, and clearly achieve the best averaged performance. Our Sent2Vec models also on average outperform or are at par with the C-PHRASE model, despite significantly lagging behind on the STS 2014 WordNet and News subtasks. This observation can be attributed to the fact that a big chunk of the data that the C-PHRASE model is trained on comes from English Wikipedia, helping it to perform well on datasets involving definition and news items.",
+      "We observe that our results are competitive with the embeddings of \\citet{arora2017 for purely unsupervised methods. It is important to note that the scores obtained from supervised task-specific PSL embeddings trained for the purpose of semantic similarity outperform our method on both SICK and average STS 2014, which is expected as our model is trained purely unsupervised. In order to facilitate a more detailed comparison, we also evaluated the unsupervised Glove + WR embeddings on downstream supervised tasks and compared them to our twitter models.",
+      "The Wikipedia and Toronto books sentences have been tokenized using the Stanford NLP library , while for tweets we used the NLTK tweets tokenizer . For training, we select a sentence randomly from the dataset and then proceed to select all the possible target unigrams using subsampling. We update the weights using SGD with a linearly decaying learning rate.",
+      "To use \\citet{arora2017's method in a supervised setup, we precomputed and stored the common discourse vector \\cv_0 using 2 million random Wikipedia sentences. On an average, our models outperform their unsupervised models by a significant margin, this despite the fact that they used GloVe embeddings trained on larger corpora than ours (42 times larger). Our models also outperform their semi-supervised PSL + WR model."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"The image provides a detailed comparison of different models' performances on various tasks, including MSRP, specifically for the Twitter dataset. The text chunk explains the evaluation process for the MSRP task, which is relevant to understanding the context of the results.\",\n    \"Answer\": \"The Sent2Vec uni. + bi. model performed the best on the MSRP task for the Twitter dataset with an accuracy of 72.4%.\"\n}"
+  }
+}

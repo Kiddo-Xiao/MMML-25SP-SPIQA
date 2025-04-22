@@ -1,0 +1,259 @@
+{
+  "0": {
+    "question": "What is the role of the auxiliary discriminator $D_{X_{\\textit{aux}}}$ in the Conditional CycleGAN for identity-guided face generation?",
+    "ground_truth": " The auxiliary discriminator $D_{X_{\\textit{aux}}}$ helps to enforce the identity constraint in the generated image. It takes the generated image or the ground truth image as input and outputs a feature embedding. This embedding is then used to compute the identity loss, which encourages the generated image to have the same identity as the input image.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure12-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure2-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image and text both describe the Conditional CycleGAN architecture, specifically highlighting the role of the auxiliary discriminator $D_{X_{aux}}$. The text explicitly mentions its function in the network.",
+    "answer": "The auxiliary discriminator $D_{X_{aux}}$ in the Conditional CycleGAN is used as both the source of the conditional vector z and for the proposed identity loss. It is pretrained and helps guide the identity in face generation.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image and text both describe the Conditional CycleGAN architecture, specifically highlighting the role of the auxiliary discriminator $D_{X_{aux}}$. The text explicitly mentions its function in the network.\",\n    \"Answer\": \"The auxiliary discriminator $D_{X_{aux}}$ in the Conditional CycleGAN is used as both the source of the conditional vector z and for the proposed identity loss. It is pretrained and helps guide the identity in face generation.\"\n}"
+  },
+  "1": {
+    "question": "How does the proposed method compare to the method in~\\cite{kim2017learning}?",
+    "ground_truth": "The proposed method produces more realistic and natural-looking images than the method in~\\cite{kim2017learning}.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure5-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 provides a comparison of SSIM scores for different methods, including the proposed Conditional CycleGAN. Text 0 mentions the method in~\\cite{kim2017learning}, which is relevant for comparison.",
+    "answer": "The proposed Conditional CycleGAN method achieves a higher SSIM score of 0.92 compared to the method in~\\cite{kim2017learning}, which is an Unsupervised GAN with an SSIM score of 0.87.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 provides a comparison of SSIM scores for different methods, including the proposed Conditional CycleGAN. Text 0 mentions the method in~\\\\cite{kim2017learning}, which is relevant for comparison.\",\n    \"Answer\": \"The proposed Conditional CycleGAN method achieves a higher SSIM score of 0.92 compared to the method in~\\\\cite{kim2017learning}, which is an Unsupervised GAN with an SSIM score of 0.87.\"\n}"
+  },
+  "2": {
+    "question": "Which of the methods among Conditional GAN, Unsupervised GAN and Consitional CycleGAN would you expect to produce images that are most visually similar to the real images in the CelebA dataset?",
+    "ground_truth": "The Conditional CycleGAN method is expected to produce images most visually similar to the real images.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure11-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure11-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure1-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure13-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 illustrates the Conditional CycleGAN, which is relevant to the question about generating realistic images. Text 0 discusses the effectiveness of Conditional GANs, which is pertinent to evaluating visual similarity.",
+    "answer": "Conditional CycleGAN is expected to produce images most visually similar to real images in the CelebA dataset due to its use of identity loss and face verification, enhancing realism.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 illustrates the Conditional CycleGAN, which is relevant to the question about generating realistic images. Text 0 discusses the effectiveness of Conditional GANs, which is pertinent to evaluating visual similarity.\",\n    \"Answer\": \"Conditional CycleGAN is expected to produce images most visually similar to real images in the CelebA dataset due to its use of identity loss and face verification, enhancing realism.\"\n}"
+  },
+  "3": {
+    "question": "How does the proposed attribute-guided face generation method compare to conventional face super-resolution methods in terms of identity preservation?",
+    "ground_truth": "The proposed attribute-guided face generation method preserves the identity of the person in the high-resolution result, while conventional face super-resolution methods do not necessarily guarantee this.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure11-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure11-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure5-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure2-1.png",
+      "1705.09966v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 and Text 0 provide a direct comparison of face swapping results, highlighting how the method preserves identity by altering specific facial features while maintaining others. This is relevant to understanding identity preservation in face generation.",
+    "answer": "The proposed attribute-guided face generation method preserves identity by altering specific facial features such as eyes and eyebrows while keeping other factors like head pose and facial expression intact. This approach ensures better identity preservation compared to conventional methods.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 and Text 0 provide a direct comparison of face swapping results, highlighting how the method preserves identity by altering specific facial features while maintaining others. This is relevant to understanding identity preservation in face generation.\",\n    \"Answer\": \"The proposed attribute-guided face generation method preserves identity by altering specific facial features such as eyes and eyebrows while keeping other factors like head pose and facial expression intact. This approach ensures better identity preservation compared to conventional methods.\"\n}"
+  },
+  "4": {
+    "question": "What role does the low-resolution input play in the identity-guided face generation process?",
+    "ground_truth": "The low-resolution input provides an overall shape constraint for the generated high-resolution image. The head pose and facial expression of the generated high-res images adopt those in the low-res inputs.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure12-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 and Text 0 both focus on the process of generating high-resolution images from low-resolution inputs while preserving identity. Image 1 specifically shows identity-guided face generation, which is directly relevant to the question.",
+    "answer": "The low-resolution input serves as the base image from which high-resolution images are generated, ensuring that the identity of the person is preserved in the process.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 and Text 0 both focus on the process of generating high-resolution images from low-resolution inputs while preserving identity. Image 1 specifically shows identity-guided face generation, which is directly relevant to the question.\",\n    \"Answer\": \"The low-resolution input serves as the base image from which high-resolution images are generated, ensuring that the identity of the person is preserved in the process.\"\n}"
+  },
+  "5": {
+    "question": "What happens when there is a conflict between the low-res image and the feature vector?",
+    "ground_truth": "The generated high-res digit follows the given class label.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure2-1.png",
+      "1705.09966v2-Figure12-1.png",
+      "1705.09966v2-Figure1-1.png",
+      "1705.09966v2-Figure7-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure2-1.png",
+      "1705.09966v2-Figure12-1.png",
+      "1705.09966v2-Figure1-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure11-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 and Text 0 describe a Conditional CycleGAN model that uses an attribute vector to guide face generation, which is relevant to understanding conflicts between low-res images and feature vectors.",
+    "answer": "When there is a conflict between the low-res image and the feature vector, the Conditional CycleGAN model uses the attribute vector to guide the generation process, potentially overriding conflicting features in the low-res image to match the specified attributes.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 and Text 0 describe a Conditional CycleGAN model that uses an attribute vector to guide face generation, which is relevant to understanding conflicts between low-res images and feature vectors.\",\n    \"Answer\": \"When there is a conflict between the low-res image and the feature vector, the Conditional CycleGAN model uses the attribute vector to guide the generation process, potentially overriding conflicting features in the low-res image to match the specified attributes.\"\n}"
+  },
+  "6": {
+    "question": "What is the difference between the input and output of the frontal face generation process?",
+    "ground_truth": "The input is a low-resolution frontal face image and a high-resolution side-face image. The output is a high-resolution frontal face image.",
+    "selected_figures_names": [
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure5-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure10-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure5-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure3-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 shows the process of generating frontal faces from low-resolution templates, which directly relates to the question. Text 0 provides information on the effectiveness of different methods, which can support understanding the quality of the output.",
+    "answer": "The input of the frontal face generation process is a low-resolution template, while the output is a high-resolution frontal face generated from different side faces. The process enhances the resolution and changes the perspective to a frontal view.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 shows the process of generating frontal faces from low-resolution templates, which directly relates to the question. Text 0 provides information on the effectiveness of different methods, which can support understanding the quality of the output.\",\n    \"Answer\": \"The input of the frontal face generation process is a low-resolution template, while the output is a high-resolution frontal face generated from different side faces. The process enhances the resolution and changes the perspective to a frontal view.\"\n}"
+  },
+  "7": {
+    "question": "How does the proposed method preserve facial details and expression during face swapping?",
+    "ground_truth": "The proposed method utilizes Light-CNN as both the source of the identity features and face verification loss. This allows the method to transfer the appearance of eyes, eyebrows, hairs, etc., while keeping other factors intact, e.g., head pose, shape of face, and facial expression.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure5-1.png",
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure6-1.png",
+      "1705.09966v2-Figure11-1.png",
+      "1705.09966v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 both focus on face generation and transformation, which is relevant to preserving facial details and expressions during face swapping.",
+    "answer": "The proposed method preserves facial details and expressions by using a low-resolution template to generate high-resolution frontal faces, maintaining the unique features and expressions of the original faces.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 both focus on face generation and transformation, which is relevant to preserving facial details and expressions during face swapping.\",\n    \"Answer\": \"The proposed method preserves facial details and expressions by using a low-resolution template to generate high-resolution frontal faces, maintaining the unique features and expressions of the original faces.\"\n}"
+  },
+  "8": {
+    "question": "How does the proposed method compare to icGAN in terms of generating images with different hair colors?",
+    "ground_truth": "The proposed method is able to generate images with different hair colors more accurately than icGAN.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure8-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure14-1.png",
+      "1705.09966v2-Figure7-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure8-1.png",
+      "1705.09966v2-Table1-1.png",
+      "1705.09966v2-Figure1-1.png",
+      "1705.09966v2-Figure15-1.png",
+      "1705.09966v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 directly compares the proposed method with icGAN in terms of swapping facial attributes, including hair color. The text chunk provides context about interpolation results, which is relevant to understanding attribute manipulation.",
+    "answer": "The proposed method generates better images compared to icGAN when changing hair colors, as shown in the comparison of facial attributes in Image 1.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 directly compares the proposed method with icGAN in terms of swapping facial attributes, including hair color. The text chunk provides context about interpolation results, which is relevant to understanding attribute manipulation.\",\n    \"Answer\": \"The proposed method generates better images compared to icGAN when changing hair colors, as shown in the comparison of facial attributes in Image 1.\"\n}"
+  },
+  "9": {
+    "question": "What is the role of the attribute vector $z$ in the Conditional CycleGAN network?",
+    "ground_truth": "The attribute vector $z$ provides additional information about the desired attributes of the generated high-resolution face image $\\hat{X}$. This information is used by the generator networks $G_{X \\to Y}$ and $G_{Y \\to X}$ to generate images that are more consistent with the desired attributes.",
+    "selected_figures_names": [
+      "1705.09966v2-Figure15-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure2-1.png",
+      "1705.09966v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09966v2-Figure15-1.png",
+      "1705.09966v2-Figure13-1.png",
+      "1705.09966v2-Figure2-1.png",
+      "1705.09966v2-Figure1-1.png",
+      "1705.09966v2-Figure10-1.png",
+      "1705.09966v2-Figure4-1.png",
+      "1705.09966v2-Figure9-1.png",
+      "1705.09966v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 both describe the Conditional CycleGAN network and the role of the attribute vector $z$. They explain how $z$ is used to guide the generation of face images with specific attributes.",
+    "answer": "The attribute vector $z$ in the Conditional CycleGAN network is used to guide the generation of face images with specific attributes, such as hair color. It is embedded with the input attribute image to train the generator, allowing for attribute-guided face generation.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 both describe the Conditional CycleGAN network and the role of the attribute vector $z$. They explain how $z$ is used to guide the generation of face images with specific attributes.\",\n    \"Answer\": \"The attribute vector $z$ in the Conditional CycleGAN network is used to guide the generation of face images with specific attributes, such as hair color. It is embedded with the input attribute image to train the generator, allowing for attribute-guided face generation.\"\n}"
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "0": {
+    "question": "What does the parameter network do to the initial surface?",
+    "ground_truth": "The parameter network weights the initial surface, causing it to deform.",
+    "selected_figures_names": [
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure9-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure6-1.png",
+      "1704.07854v4-Figure16-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides an overview of the algorithm, showing the role of the parameter network in the process. Text 3 explains the function of the parameter network, describing how it combines and weights known deformation fields.",
+    "answer": "The parameter network learns to combine and weight known deformation fields to apply weighted deformations to the initial surface.",
+    "text_chunks": [
+      "To illustrate the capabilities of the deformation network, we start with a completely flat initial surface as \\psiref, and train the deformation network to recover the targets. As no pre-computed deformations are used for this case, we do not train a parameter network. The flat initial surface represents an especially tough case, as the network can not rely on any small scale details in the reference to match with the features of the targets.",
+      "\\revA{The next column of this figure (in pink) shows the surfaces obtained with the learned deformation weights with our parameter network (\\myreffig{fig:network top), but without an additional deformation network. As this case is based on end-point deformations, it cannot adapt to larger changes of surface structure in the middle of the domain. In contrast, using our full pipeline with the deformation network yields surfaces that adapt to the varying behavior in the interior of the parameter space, as shown on the right side of \\myreffig{fig:2d_comparison_defx.",
+      "Once we introduce a regular initial surface for \\psiref, in this case the zero parameter configuration with the drop in one corner of the domain with the largest size, our networks perform even better than for the 2D data discussed above. The weighted deformations lead to a loss reduction to 55.6\\% of the initial value, and the learned deformation reduce the loss further to 22.2\\% of the baseline loss (\\myreffig{fig:graphs). An example is shown in \\myreffig{fig:drop4dComparison.",
+      "The parameter network corresponds to an STN which learns to combine and weight known deformation fields. The deformation network, on the other hand, resembles the thin plate spline STNs, where a network generates an offset for each cell center, which is then used to sample a deformed image or grid. Note that in our case, this sampling process corresponds to the semi-Lagrangian advection of a fluid simulation.",
+      "This figure compares the surface after applying weighted and inferred deformations, i.e. our full method (right), with a surface deformed by only by deformations weighted by the parameter network (left). The NN deformation manages to reconstruct the two arm in the center of the surface, which the pre-computed deformations fail to capture. It is also apparent that despite the improvement, this surface does not reach the tip of the arms.",
+      "The effect of our trained networks in terms of loss reductions is shown on the left side of \\myreffig{fig:graphs under {\\em Liquid 2D. As baseline we show the loss for the undeformed surface w.r.t. the test data samples. For this 2D data set, employing the trained parameter network reduces the loss to 59.4\\% of the initial value.",
+      "For this network we choose a structure with a set of four-dimensional deconvolution layers that generate a dense space-time deformation field. We apply the trained deformation with an additional advection step after applying the deformations weighted by the parameter network: Thus, the deformation network only has to learn to refine the surface \\tilde{\\psi after applying the weighted deformations, in order to accommodate the nonlinear behavior of \\phialpha.",
+      "However, in this case the parameter and deformation network only lead to negligible changes in the solution due to the closely matching surface from the pre-computed deformations. \\paragraph{Stairs Our second test setup illustrates a different parameter space that captures a variety of obstacle boundary conditions para\\-metrized with \\vAlpha."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides an overview of the algorithm, showing the role of the parameter network in the process. Text 3 explains the function of the parameter network, describing how it combines and weights known deformation fields.\",\n    \"Answer\": \"The parameter network learns to combine and weight known deformation fields to apply weighted deformations to the initial surface.\"\n}"
+  },
+  "1": {
+    "question": "How do the parameter network and the deformation network differ in terms of complexity and function?",
+    "ground_truth": "The parameter network is a simple structure with two fully connected layers, while the deformation network is more complex and contains two fully connected layers followed by two or more four-dimensional de-convolution layers. The parameter network learns how to apply multiple long-range, non-linear deformation fields, while the deformation network learns to generate dense deformation fields to refine the final surface.",
+    "selected_figures_names": [
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure12-1.png",
+      "1704.07854v4-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure12-1.png",
+      "1704.07854v4-Figure6-1.png",
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 provides a visual overview of the parameter and deformation networks, showing their structures and components. Text 2 explains the complexity and function of both networks, highlighting the parameter network's simplicity and the deformation network's ability to generate dense deformation fields.",
+    "answer": "The parameter network is simpler, consisting of two fully connected layers, and is designed to apply multiple long-range, non-linear deformation fields. The deformation network is more complex, using several de-convolutional layers to generate dense deformation fields for refining the final surface.",
+    "text_chunks": [
+      "The parameter network corresponds to an STN which learns to combine and weight known deformation fields. The deformation network, on the other hand, resembles the thin plate spline STNs, where a network generates an offset for each cell center, which is then used to sample a deformed image or grid. Note that in our case, this sampling process corresponds to the semi-Lagrangian advection of a fluid simulation.",
+      "\\revA{The next column of this figure (in pink) shows the surfaces obtained with the learned deformation weights with our parameter network (\\myreffig{fig:network top), but without an additional deformation network. As this case is based on end-point deformations, it cannot adapt to larger changes of surface structure in the middle of the domain. In contrast, using our full pipeline with the deformation network yields surfaces that adapt to the varying behavior in the interior of the parameter space, as shown on the right side of \\myreffig{fig:2d_comparison_defx.",
+      "The main difficulty lies in the non-linearity of the deformations, which is why we propose a novel method to robustly approximate both functions with NNs: f_p will be represented by the {\\em parameter network to compute \\vBeta, and we make use of a {\\em deformation network that to generate \\defonn. We employ relatively simple neural networks for both functions. Key for training them is encoding the effect of deformations in the loss functions to make the training process aware of their influence.",
+      "To illustrate the capabilities of the deformation network, we start with a completely flat initial surface as \\psiref, and train the deformation network to recover the targets. As no pre-computed deformations are used for this case, we do not train a parameter network. The flat initial surface represents an especially tough case, as the network can not rely on any small scale details in the reference to match with the features of the targets.",
+      "This figure compares the surface after applying weighted and inferred deformations, i.e. our full method (right), with a surface deformed by only by deformations weighted by the parameter network (left). The NN deformation manages to reconstruct the two arm in the center of the surface, which the pre-computed deformations fail to capture. It is also apparent that despite the improvement, this surface does not reach the tip of the arms.",
+      "For this network we choose a structure with a set of four-dimensional deconvolution layers that generate a dense space-time deformation field. We apply the trained deformation with an additional advection step after applying the deformations weighted by the parameter network: Thus, the deformation network only has to learn to refine the surface \\tilde{\\psi after applying the weighted deformations, in order to accommodate the nonlinear behavior of \\phialpha.",
+      "Learning Deformation Weighting We will first focus on the parameter network to infer the weighting of the pre-computed deformation fields based on the input parameters \\vAlpha. Thus, the NN has the goal to compute \\vBeta(\\vAlpha) \\in \\mathbb{R^N = (\\beta_1(\\vAlpha), \\dots, \\beta_N(\\vAlpha)) in order to minimize \\myrefeq{eq:discrete_L2_lossB. The application of the deformations weighted by \\vBeta includes our alignment step from \\myrefsec{sec:align, and hence the neural networks needs to be aware of its influence. To train the parameter network, we need to specify gradients of \\myrefeq{eq:discrete_L2_lossB with respect to the network weights \\theta_i.",
+      "\\paragraph{Learning to Generate Deformations Based on \\vBeta, we apply the deformation sequence \\vect{u_i. The goal of our second network, the deformation network f_d, is to compute the refinement deformation \\v{w. In contrast to the pre-computed \\v{u_i, f_d(\\vAlpha)=\\v{w now directly depends on \\vAlpha, and can thus capture the interior of the parameter space."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 provides a visual overview of the parameter and deformation networks, showing their structures and components. Text 2 explains the complexity and function of both networks, highlighting the parameter network's simplicity and the deformation network's ability to generate dense deformation fields.\",\n    \"Answer\": \"The parameter network is simpler, consisting of two fully connected layers, and is designed to apply multiple long-range, non-linear deformation fields. The deformation network is more complex, using several de-convolutional layers to generate dense deformation fields for refining the final surface.\"\n}"
+  },
+  "2": {
+    "question": "Which gradient approximation method leads to a more stable and lower loss value during training?",
+    "ground_truth": "The corrected gradient method leads to a more stable and lower loss value during training.",
+    "selected_figures_names": [
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure17-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure16-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure17-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure16-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Figure15-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 shows the influence of the deformation network on surfaces, indicating how closely they match the target. Text 1 discusses the convergence of the learning process and the lower loss value achieved with deformation training.",
+    "answer": "The gradient approximation method using deformation training leads to a more stable and lower loss value during training.",
+    "text_chunks": [
+      "We verified that the solution converged by continuing training for another 36000 steps, during which the change of the solution was negligible. As mentioned above, it might seem attractive to use a simpler approximation for the forward advection in \\myrefeq{eq:gradLossBetaApp, i.e., using a simpler, regular advection step. However, due to the strong non-linearity of our setting, this prevents the network from converging, as shown in \\myreffig{fig:training_wrong_gradient.",
+      "\\myreffig{fig:2d_training shows the validation loss and the training loss over the iterations both for parameter learning and for deformation learning. We observe that in both cases the learning process reduces the loss, and finally converges to a stable solution. This value is lower in the case of deformation training, which can be easily explained with the increased expressive capabilities of the deformation network.",
+      "Hence, we will focus on describing the loss functions for both networks and the corresponding discretized gradients in the following. \\paragraph{Learning Deformation Weights For training the NNs we propose the following objective function, which measures the similarity of a known reference surface \\phialpha and the corresponding, approximated result \\psiref(\\vect{x, \\vAlpha) for a parameter value \\vAlpha. We introduce the numerical equivalent of the continuous L_2 loss from \\myrefeq{eq:cont_L2_loss as which approximates the spatial integral via the sum over all sample points i with corresponding evaluation positions \\vect{x_i \\in \\mathbb{R^4, where \\Delta x_i",
+      "Hence, we extrapolate the SDF values with \\partial \\psi(\\v{x) / \\partial \\v{n =\\pm 1 in order to retrieve non zero gradients at the domain sides. To train both networks we use stochastic gradient descent with an ADAM optimizer and a learning rate of 10^{-3.",
+      "\\partial \\v{n = 0 for all \\v{x at the domain sides leads to vanishing gradients \\grad{\\psi(\\vect{x)=\\vect{0 in App.~,~\\myrefeq{eq:gradientDefoLearning. We found this causes artificial minima and maxima in the loss function impeding the training process.",
+      "The effect of our trained networks in terms of loss reductions is shown on the left side of \\myreffig{fig:graphs under {\\em Liquid 2D. As baseline we show the loss for the undeformed surface w.r.t. the test data samples. For this 2D data set, employing the trained parameter network reduces the loss to 59.4\\% of the initial value.",
+      "The main difficulty lies in the non-linearity of the deformations, which is why we propose a novel method to robustly approximate both functions with NNs: f_p will be represented by the {\\em parameter network to compute \\vBeta, and we make use of a {\\em deformation network that to generate \\defonn. We employ relatively simple neural networks for both functions. Key for training them is encoding the effect of deformations in the loss functions to make the training process aware of their influence.",
+      "In particular, we put emphasis on incorporating the influence of deformation alignment into the loss gradients. This alignment step is necessary to ensure the correct application of multiple consecutive deformations fields. The second stage of our algorithm is a generative model for deformation fields, for which we rely on a known parametrization of the inputs."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 shows the influence of the deformation network on surfaces, indicating how closely they match the target. Text 1 discusses the convergence of the learning process and the lower loss value achieved with deformation training.\",\n    \"Answer\": \"The gradient approximation method using deformation training leads to a more stable and lower loss value during training.\"\n}"
+  },
+  "3": {
+    "question": "How does the flow of water change as the central wall obstacle is shifted to the right?",
+    "ground_truth": "The flow of water increases as the central wall obstacle is shifted to the right.",
+    "selected_figures_names": [
+      "1704.07854v4-Figure8-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure8-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure14-1.png",
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 and Text 1 both describe the setup involving a central wall obstacle and how shifting it affects the flow of water. This directly addresses the question about changes in water flow.",
+    "answer": "As the central wall obstacle is shifted to the right, the flow of water increases correspondingly.",
+    "text_chunks": [
+      "While this setup has more temporal coherence in its motion than the drop setup, the changing obstacle boundary conditions lead to strongly differing streams over the steps of the obstacle geometry. E.g., changing the position of the divider changes the flow from a narrow, fast stream to a slow, broad front. \\end{table*",
+      "A next setup, shown in \\myreffig{fig:waterfallAdded, captures a continuous flow around a set of obstacles. Liquid is generated in one corner of the simulation domain, and then flows in a U-shaped path around a wall, down several steps. In the interactive visualization, green arrows highlight in- and outflow regions.",
+      "Our first two simulation parameters are the heights of two stair-like steps, while the third parameter is controlling the position of a middle divider obstacle, as illustrated in \\myreffig{fig:waterfall4dDefos. The liquid flows in a U-shaped manner around the divider, down the steps. For this setup, we use a higher overall resolution for both space-time SDFs, as well as for the output of the deformation network.",
+      "Water, and liquids in general, are ubiquitous in our world. At the same time, they represent an especially tough class of physics problems, as the constantly changing boundary conditions at the liquid-gas interface result in a complex space of surface motions and configurations. In this work we present a novel approach to capture parametrized spaces of liquid behavior that is based on space-time deformations.",
+      "The three dimensional parametrization of this setup captures a range of positions for the wall and two steps leading to very different flow behaviors for the liquid. In this case the data set consists of 1331 SDFs, and our app uses an output resolution of 50^4. The corresponding loss measurements can be found in the right graphs of \\myreffig{fig:graphs.",
+      "Images with deformations show the source in dark blue, and the deformed surface in light blue. In this example, the two deformations should be combined such that the horizontal position and the drop size can be independently controlled by changing \\beta_1 and \\beta_2. E.g., on the top right, a correct solution for \\beta_1=0.5, \\beta_2=1 is shown.",
+      "The results shown on the right side of \\myreffig{fig:directSdfComp neither represent the initial drop in (a), nor the resulting splash in (b). Rather, the SDF interpolation leads to strong ghosting artifacts, and an overall loss of detail. Instead of the single drop and splash that our method produces, it leads to four smoothed, and repeated copies.",
+      "In the bottom left we see the deformation field \\vsum from previous work. It is also the starting point of our improved alignment, but never applied directly. Our method corrects \\vsum by transforming it into \\vfull, bottom center, which acts on the correct spatial locations."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 and Text 1 both describe the setup involving a central wall obstacle and how shifting it affects the flow of water. This directly addresses the question about changes in water flow.\",\n    \"Answer\": \"As the central wall obstacle is shifted to the right, the flow of water increases correspondingly.\"\n}"
+  },
+  "4": {
+    "question": "Which of the two scenes, Drop or Staris, requires more computation time for rendering?",
+    "ground_truth": "Staris",
+    "selected_figures_names": [
+      "1704.07854v4-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure6-1.png",
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Figure18-1.png",
+      "1704.07854v4-Figure1-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Table1-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure11-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a direct comparison of the rendering times for the Drop and Stairs scenes. Text 0 supports this by detailing the rendering process and times.",
+    "answer": "The Stairs scene requires more computation time for rendering, taking 35ms compared to 21ms for the Drop scene.",
+    "text_chunks": [
+      "For this liquid drop setup, evaluating the network takes 69ms on average, and assembling the final deformation field another 21.5ms. We use double buffering, and hence both tasks are evaluated in a background thread. Rendering the implicit surface takes an average of 21ms, with an average frame rate of 50 fps.",
+      "While this setup has more temporal coherence in its motion than the drop setup, the changing obstacle boundary conditions lead to strongly differing streams over the steps of the obstacle geometry. E.g., changing the position of the divider changes the flow from a narrow, fast stream to a slow, broad front. \\end{table*",
+      "The original simulation for the drop setup of \\myreffig{fig:dropAdded took 530 seconds on average with a parallel implementation to generate a single 4D surface data point. Assuming a best-case slowdown of only 4x for the mobile device, it would require more than 32 minutes to run the original simulation there. Our app generates and renders a full liquid animation in less than one second in total.",
+      "\\paragraph{Liquid Drop As our first 4D test case, we chose a drop of liquid falling into a basin. As our simulation parameters we chose the x- and y-coordinates of the initial drop position, as well as the size of the drop. We typically assume that the z-axis points upwards.",
+      "Thus, our algorithm generates the result roughly 2000 times faster than the regular simulation. Our approach also represents the space of more than 1700 input simulations, i.e., more than 17GB, with less than 30MB of storage. \\paragraph{Stairs",
+      "As simulation parameters we choose \\alpha_1 to be the size of the drop, and \\alpha_2 to be its initial x-position, as shown in \\myreffig{fig:twoDdefoSetup. From this simulation we extract a single frame at t=30, which gives us a two-dimensional parameter-space \\vAlpha = (\\alpha_1, \\alpha_2), where each instance of \\vAlpha has a corresponding two-dimensional SDF. In order to train the networks described in section , we sample the parameter domain with a regular 44\\times49 grid, which gives us 2156 training samples, of which we used 100 as a validation set.",
+      "The results shown on the right side of \\myreffig{fig:directSdfComp neither represent the initial drop in (a), nor the resulting splash in (b). Rather, the SDF interpolation leads to strong ghosting artifacts, and an overall loss of detail. Instead of the single drop and splash that our method produces, it leads to four smoothed, and repeated copies.",
+      "Our first two simulation parameters are the heights of two stair-like steps, while the third parameter is controlling the position of a middle divider obstacle, as illustrated in \\myreffig{fig:waterfall4dDefos. The liquid flows in a U-shaped manner around the divider, down the steps. For this setup, we use a higher overall resolution for both space-time SDFs, as well as for the output of the deformation network."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a direct comparison of the rendering times for the Drop and Stairs scenes. Text 0 supports this by detailing the rendering process and times.\",\n    \"Answer\": \"The Stairs scene requires more computation time for rendering, taking 35ms compared to 21ms for the Drop scene.\"\n}"
+  },
+  "5": {
+    "question": "What is the relationship between the resolution of the simulation and the training time?",
+    "ground_truth": " The higher the resolution of the simulation, the longer the training time. ",
+    "selected_figures_names": [
+      "1704.07854v4-Figure3-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure7-1.png",
+      "1704.07854v4-Figure13-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure3-1.png",
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure7-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure15-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 6,
+    "rationale": "Image 1 provides a table with details on simulation and training setups, including resolutions and training times. Text 6 discusses the use of different resolutions for training and simulation, which is relevant to understanding their relationship.",
+    "answer": "The resolution of the simulation affects the training time, as higher resolutions typically require more computational resources and time. Image 1 shows that different setups with varying resolutions have different training times, indicating a direct relationship between resolution and training duration.",
+    "text_chunks": [
+      "\\myreffig{fig:2d_training shows the validation loss and the training loss over the iterations both for parameter learning and for deformation learning. We observe that in both cases the learning process reduces the loss, and finally converges to a stable solution. This value is lower in the case of deformation training, which can be easily explained with the increased expressive capabilities of the deformation network.",
+      "Note that in general the SDF resolution and the deformation resolution do not need to be identical. Given a fixed SDF resolution, we can use a smaller resolution for the deformation, which reduces the number of weights and computations required for training. Thus in practice, each four-dimensional vector of the deformation acts on a region of the SDF, for which we assume the deformation to be constant.",
+      "Training is performed separately for both networks, with typically 1000 steps for f_d, and another ca. 9000 steps for f_d. Full parameters can be found in App.~,~Table~. As training data we generate sets of implicit surfaces from liquid simulations with the FLIP method . For our 2D inputs, we use single time steps, while our 4D data concatenates 3D surfaces over time to assemble a space-time surface.",
+      "As with the two previously discussed data sets, our approach leads to very significant reductions of the surface loss across the full parameter space, with a final residual loss of 31.3\\% after applying the learned deformation. Due to larger size of the implicit surfaces and the inferred deformation field, the performance reduces to a frame rate of 30 fps on average, which, however, still allows for responsive user interactions. \\paragraph{Discussion",
+      "As input, we supply the deformation network with the simulation parameters \\vAlpha = (\\alpha_i, \\dots, \\alpha_N) as a vector. The output of the network are four-component vectors, with the resolution R_x \\times R_y \\times R_z \\times R_t.",
+      "To generate the training data, we sample the parameter space on a regular grid, and run simulations, each with a spatial resolution of 100^3 to generate a total of 1764 reference SDFs. Here, \\psiref contains a 4D SDF of a large drop falling into the upper right corner of the basin. In \\myreffig{fig:dropMont we show additional examples how the introduction of the deformation network helps to represent the target surface across the full parameter range.",
+      "In order to evaluate our method, we first use a two-dimensional parameter space with two dimensional implicit surfaces from a liquid simulation. An overview of the space of 2156 training samples of size 100^2 can be found in the supplemental materials. For our training and synthesis runs, we typically downsample the SDF data, and use a correspondingly smaller resolution for the output of the deformation network, see \\myrefapp{sec:addresults, \\myreftab{tab:setups.",
+      "We verified that the solution converged by continuing training for another 36000 steps, during which the change of the solution was negligible. As mentioned above, it might seem attractive to use a simpler approximation for the forward advection in \\myrefeq{eq:gradLossBetaApp, i.e., using a simpler, regular advection step. However, due to the strong non-linearity of our setting, this prevents the network from converging, as shown in \\myreffig{fig:training_wrong_gradient."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 6,\n    \"Rationale\": \"Image 1 provides a table with details on simulation and training setups, including resolutions and training times. Text 6 discusses the use of different resolutions for training and simulation, which is relevant to understanding their relationship.\",\n    \"Answer\": \"The resolution of the simulation affects the training time, as higher resolutions typically require more computational resources and time. Image 1 shows that different setups with varying resolutions have different training times, indicating a direct relationship between resolution and training duration.\"\n}"
+  },
+  "6": {
+    "question": "What is the role of the parameter network in the weighting and refinement stage?",
+    "ground_truth": "The parameter network is used to infer a weighting function.",
+    "selected_figures_names": [
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure10-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Table2-1.png",
+      "1704.07854v4-Figure4-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure10-1.png",
+      "1704.07854v4-Figure16-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure9-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 provides a visual representation of the loss reduction achieved by the parameter network, which is relevant to understanding its role in weighting and refinement. Text 2 explains the parameter network's function in learning to combine and weight deformation fields, which is crucial for the weighting and refinement process.",
+    "answer": "The parameter network learns to combine and weight known deformation fields, which is essential for the initial weighting stage. It helps in reducing the loss by effectively aligning the deformations, setting the stage for further refinement by the deformation network.",
+    "text_chunks": [
+      "Learning Deformation Weighting We will first focus on the parameter network to infer the weighting of the pre-computed deformation fields based on the input parameters \\vAlpha. Thus, the NN has the goal to compute \\vBeta(\\vAlpha) \\in \\mathbb{R^N = (\\beta_1(\\vAlpha), \\dots, \\beta_N(\\vAlpha)) in order to minimize \\myrefeq{eq:discrete_L2_lossB. The application of the deformations weighted by \\vBeta includes our alignment step from \\myrefsec{sec:align, and hence the neural networks needs to be aware of its influence. To train the parameter network, we need to specify gradients of \\myrefeq{eq:discrete_L2_lossB with respect to the network weights \\theta_i.",
+      "In a second step, we synthesize a dense deformation field for refinement. As both the parameter weighting problem and the deformation synthesis are highly non-linear problems, we demonstrate that neural networks are a particularly suitable solver to robustly find solutions. We will demonstrate that it is possible to incorporate the non-linear effects of weighted deformations into the loss functions of neural networks.",
+      "The parameter network corresponds to an STN which learns to combine and weight known deformation fields. The deformation network, on the other hand, resembles the thin plate spline STNs, where a network generates an offset for each cell center, which is then used to sample a deformed image or grid. Note that in our case, this sampling process corresponds to the semi-Lagrangian advection of a fluid simulation.",
+      "\\revA{The next column of this figure (in pink) shows the surfaces obtained with the learned deformation weights with our parameter network (\\myreffig{fig:network top), but without an additional deformation network. As this case is based on end-point deformations, it cannot adapt to larger changes of surface structure in the middle of the domain. In contrast, using our full pipeline with the deformation network yields surfaces that adapt to the varying behavior in the interior of the parameter space, as shown on the right side of \\myreffig{fig:2d_comparison_defx.",
+      "For this network we choose a structure with a set of four-dimensional deconvolution layers that generate a dense space-time deformation field. We apply the trained deformation with an additional advection step after applying the deformations weighted by the parameter network: Thus, the deformation network only has to learn to refine the surface \\tilde{\\psi after applying the weighted deformations, in order to accommodate the nonlinear behavior of \\phialpha.",
+      "\\paragraph{Learning to Generate Deformations Based on \\vBeta, we apply the deformation sequence \\vect{u_i. The goal of our second network, the deformation network f_d, is to compute the refinement deformation \\v{w. In contrast to the pre-computed \\v{u_i, f_d(\\vAlpha)=\\v{w now directly depends on \\vAlpha, and can thus capture the interior of the parameter space.",
+      "Once we introduce a regular initial surface for \\psiref, in this case the zero parameter configuration with the drop in one corner of the domain with the largest size, our networks perform even better than for the 2D data discussed above. The weighted deformations lead to a loss reduction to 55.6\\% of the initial value, and the learned deformation reduce the loss further to 22.2\\% of the baseline loss (\\myreffig{fig:graphs). An example is shown in \\myreffig{fig:drop4dComparison.",
+      "The effect of our trained networks in terms of loss reductions is shown on the left side of \\myreffig{fig:graphs under {\\em Liquid 2D. As baseline we show the loss for the undeformed surface w.r.t. the test data samples. For this 2D data set, employing the trained parameter network reduces the loss to 59.4\\% of the initial value."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 provides a visual representation of the loss reduction achieved by the parameter network, which is relevant to understanding its role in weighting and refinement. Text 2 explains the parameter network's function in learning to combine and weight deformation fields, which is crucial for the weighting and refinement process.\",\n    \"Answer\": \"The parameter network learns to combine and weight known deformation fields, which is essential for the initial weighting stage. It helps in reducing the loss by effectively aligning the deformations, setting the stage for further refinement by the deformation network.\"\n}"
+  },
+  "7": {
+    "question": "Which of the methods is able to reconstruct the shape of the liquid properly?",
+    "ground_truth": "Only the full method with a deformation network is able to produce a perfect reconstruction.",
+    "selected_figures_names": [
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure16-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Figure15-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure16-1.png",
+      "1704.07854v4-Figure11-1.png",
+      "1704.07854v4-Figure6-1.png",
+      "1704.07854v4-Figure3-1.png",
+      "1704.07854v4-Figure13-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 5,
+    "rationale": "Image 3 shows different methods of reconstructing liquid surfaces, including the use of a deformation network. Text 5 explains how the NN deformation manages to reconstruct parts of the surface that other methods cannot. This combination provides a clear comparison of methods and their effectiveness.",
+    "answer": "The method using the deformation network is able to reconstruct the shape of the liquid properly.",
+    "text_chunks": [
+      "Water, and liquids in general, are ubiquitous in our world. At the same time, they represent an especially tough class of physics problems, as the constantly changing boundary conditions at the liquid-gas interface result in a complex space of surface motions and configurations. In this work we present a novel approach to capture parametrized spaces of liquid behavior that is based on space-time deformations.",
+      "Our approach generates liquid animations several orders of magnitude faster than a traditional simulator, and achieves effective speed up factors of more than 2000, as we will outline in \\myrefsec{sec:results. The central contributions of our work are: \\begin{itemize \\item A novel {\\em deformation-aware neural network approach to very efficiently represent large collections of space-time surfaces with complex behavior. \\item We show how to compute suitable loss gradient approximations for the sub-problems of parameter and deformation inference.",
+      "Our first two simulation parameters are the heights of two stair-like steps, while the third parameter is controlling the position of a middle divider obstacle, as illustrated in \\myreffig{fig:waterfall4dDefos. The liquid flows in a U-shaped manner around the divider, down the steps. For this setup, we use a higher overall resolution for both space-time SDFs, as well as for the output of the deformation network.",
+      "Alternative methods have been proposed to work with 4D simulation data , however, without being able to capture larger spaces of physical behavior. Due to its focus on deformations, our work also shares similarities with methods for optical flow inference and image correspondences . A difference to these approaches is that we learn deformations and their weighting in an unsupervised manner, without explicit ground truth data.",
+      "In order to evaluate our method, we first use a two-dimensional parameter space with two dimensional implicit surfaces from a liquid simulation. An overview of the space of 2156 training samples of size 100^2 can be found in the supplemental materials. For our training and synthesis runs, we typically downsample the SDF data, and use a correspondingly smaller resolution for the output of the deformation network, see \\myrefapp{sec:addresults, \\myreftab{tab:setups.",
+      "This figure compares the surface after applying weighted and inferred deformations, i.e. our full method (right), with a surface deformed by only by deformations weighted by the parameter network (left). The NN deformation manages to reconstruct the two arm in the center of the surface, which the pre-computed deformations fail to capture. It is also apparent that despite the improvement, this surface does not reach the tip of the arms.",
+      "This first step robustly covers rough, large scale deformations. As a second step, we employ f_d, which is realized as a generative CNN, to infer a deformation for refining the solution. Below we will explain the resulting equations for training.",
+      "Images with deformations show the source in dark blue, and the deformed surface in light blue. In this example, the two deformations should be combined such that the horizontal position and the drop size can be independently controlled by changing \\beta_1 and \\beta_2. E.g., on the top right, a correct solution for \\beta_1=0.5, \\beta_2=1 is shown."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 5,\n    \"Rationale\": \"Image 3 shows different methods of reconstructing liquid surfaces, including the use of a deformation network. Text 5 explains how the NN deformation manages to reconstruct parts of the surface that other methods cannot. This combination provides a clear comparison of methods and their effectiveness.\",\n    \"Answer\": \"The method using the deformation network is able to reconstruct the shape of the liquid properly.\"\n}"
+  },
+  "8": {
+    "question": "How do the initial conditions of the simulations vary?",
+    "ground_truth": "The initial conditions of the simulations vary in two dimensions: the position of the liquid drop along the x-axis (\u03b11) and the size of the drop (\u03b12).",
+    "selected_figures_names": [
+      "1704.07854v4-Figure6-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1704.07854v4-Figure6-1.png",
+      "1704.07854v4-Figure13-1.png",
+      "1704.07854v4-Figure2-1.png",
+      "1704.07854v4-Figure5-1.png",
+      "1704.07854v4-Figure16-1.png",
+      "1704.07854v4-Figure9-1.png",
+      "1704.07854v4-Figure7-1.png",
+      "1704.07854v4-Figure4-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 5,
+    "rationale": "Image 1 and Text 5 both describe the initial conditions of the simulations, focusing on the variation in drop position and size. Image 1 visually represents these variations, while Text 5 explains the parameters used in the simulation.",
+    "answer": "The initial conditions of the simulations vary by the x-position and size of the liquid drop. These parameters are used to create a two-dimensional parameter space for the simulations.",
+    "text_chunks": [
+      "The original simulation for the drop setup of \\myreffig{fig:dropAdded took 530 seconds on average with a parallel implementation to generate a single 4D surface data point. Assuming a best-case slowdown of only 4x for the mobile device, it would require more than 32 minutes to run the original simulation there. Our app generates and renders a full liquid animation in less than one second in total.",
+      "Our first two simulation parameters are the heights of two stair-like steps, while the third parameter is controlling the position of a middle divider obstacle, as illustrated in \\myreffig{fig:waterfall4dDefos. The liquid flows in a U-shaped manner around the divider, down the steps. For this setup, we use a higher overall resolution for both space-time SDFs, as well as for the output of the deformation network.",
+      "While this setup has more temporal coherence in its motion than the drop setup, the changing obstacle boundary conditions lead to strongly differing streams over the steps of the obstacle geometry. E.g., changing the position of the divider changes the flow from a narrow, fast stream to a slow, broad front. \\end{table*",
+      "\\paragraph{Liquid Drop As our first 4D test case, we chose a drop of liquid falling into a basin. As our simulation parameters we chose the x- and y-coordinates of the initial drop position, as well as the size of the drop. We typically assume that the z-axis points upwards.",
+      "Our approach in its current form has several limitations that are worth mentioning. E.g., we assume that the space of target surfaces have a certain degree of similarity, such that a single surface can be selected as initial surface \\psiref. In addition, our method currently does not make use of the fact that the inputs are generated by a physical process.",
+      "As simulation parameters we choose \\alpha_1 to be the size of the drop, and \\alpha_2 to be its initial x-position, as shown in \\myreffig{fig:twoDdefoSetup. From this simulation we extract a single frame at t=30, which gives us a two-dimensional parameter-space \\vAlpha = (\\alpha_1, \\alpha_2), where each instance of \\vAlpha has a corresponding two-dimensional SDF. In order to train the networks described in section , we sample the parameter domain with a regular 44\\times49 grid, which gives us 2156 training samples, of which we used 100 as a validation set.",
+      "Training is performed separately for both networks, with typically 1000 steps for f_d, and another ca. 9000 steps for f_d. Full parameters can be found in App.~,~Table~. As training data we generate sets of implicit surfaces from liquid simulations with the FLIP method . For our 2D inputs, we use single time steps, while our 4D data concatenates 3D surfaces over time to assemble a space-time surface.",
+      "We will employ two neural networks to approximate the two functions, which we will denote as f_p, and f_d below. Both functions depend only on the simulation parameters space \\vAlpha, i.e., f_p(\\vAlpha)=\\vBeta, and f_d(\\vAlpha)=\\defonn. Splitting the problem into f_p and f_d is important, as each of the pre-computed deformations weighted by f_p"
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 5,\n    \"Rationale\": \"Image 1 and Text 5 both describe the initial conditions of the simulations, focusing on the variation in drop position and size. Image 1 visually represents these variations, while Text 5 explains the parameters used in the simulation.\",\n    \"Answer\": \"The initial conditions of the simulations vary by the x-position and size of the liquid drop. These parameters are used to create a two-dimensional parameter space for the simulations.\"\n}"
+  }
+}

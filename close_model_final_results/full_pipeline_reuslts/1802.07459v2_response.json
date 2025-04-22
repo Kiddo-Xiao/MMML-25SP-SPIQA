@@ -1,0 +1,90 @@
+{
+  "0": {
+    "question": " How many negative samples are there in the training set of the CNSE dataset?",
+    "ground_truth": "There are approximately 9,719 negative samples in the training set of the CNSE dataset.",
+    "selected_figures_names": [
+      "1802.07459v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07459v2-Table1-1.png",
+      "1802.07459v2-Figure1-1.png",
+      "1802.07459v2-Table2-1.png",
+      "1802.07459v2-Figure2-1.png",
+      "1802.07459v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image provides a detailed breakdown of the dataset, including the number of positive and negative samples in the training set. Text chunk 0 gives an overview of the dataset but does not specify the number of negative samples in the training set.",
+    "answer": "16198",
+    "text_chunks": [
+      "The CNSE dataset contains 29,063 pairs of news articles with labels representing whether a pair of news articles are reporting about the same breaking news event. Similarly, the CNSS dataset contains 33,503 pairs of articles with labels representing whether two documents fall into the same news story. The average number of words for all documents in the datasets is 734 and the maximum value is 21791.",
+      "The datasets have been made publicly available for research purpose. Table~ shows a detailed breakdown of the two datasets. For both datasets, we use 60\\% of all the samples as the training set, 20\\% as the development (validation) set, and the remaining 20\\% as the test set.",
+      "For graph transformation, we utilize 2 layers of GCN for experiments on the CNSS dataset, and 3 layers of GCN for experiments on the CNSE dataset. When the vertex encoder is the five-dimensional features, we set the output size of GCN layers to be 16. When the vertex encoder is the Siamese network encoder, we set the output size of GCN layers to be 128 except the last layer.",
+      "We use the ADAM optimizer with \\beta_1 = 0.8,\\ \\beta_2 = 0.999,\\ \\epsilon = 10^{\u22128. We use a learning rate warm-up scheme with an inverse exponential increase from 0.0 to 0.001 in the first 1000 steps, and then maintain a constant learning rate for the remainder of training.",
+      "For all the experiments, we set the maximum number of training epochs to be 10. Results and Analysis Table~ summarizes the performance of all the compared methods on both datasets. Our model achieves the best performance on both two datasets and significantly outperforms all other methods.",
+      "To the best of our knowledge, there is no publicly available dataset for long document matching tasks. We created two datasets: the Chinese News Same Event dataset (CNSE) and Chinese News Same Story dataset (CNSS), which are labeled by professional editors. They contain long Chinese news articles collected from major Internet news providers in China, covering diverse topics in the open domain.",
+      "We use L2 weight decay on all the trainable variables, with parameter \\lambda = 3 \\times 10^{-7. The dropout rate between every two layers is 0.1. We apply gradient clipping with maximum gradient norm 5.0.",
+      "In our datasets, we only labeled the major event (or story) that a news article is reporting, since in the real world, each breaking news article on the Internet must be intended to report some specific breaking news that has just happened to attract clicks and views. Our objective is to determine whether two news articles intend to report the same breaking news. Note that the negative samples in the two datasets are not randomly generated: we select document pairs that contain similar keywords, and exclude samples with TF-IDF similarity below a certain threshold."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image provides a detailed breakdown of the dataset, including the number of positive and negative samples in the training set. Text chunk 0 gives an overview of the dataset but does not specify the number of negative samples in the training set.\",\n    \"Answer\": \"16198\"\n}"
+  },
+  "1": {
+    "question": "Which model variant achieves the best performance on the CNSS dataset in terms of F1-score, and what are its key components?",
+    "ground_truth": "Model XVIII, CIG-Sim&Siam-GCN-Sim$^{g}$, achieves the best performance on the CNSS dataset with an F1-score of 90.29%. This model utilizes the following key components:\n\n1. CIG: It directly uses keywords as concepts without community detection.\n2. Sim & Siam: It employs both term-based similarity encoder (\"Sim\") and Siamese encoder (\"Siam\") for generating matching vectors on vertices.\n3. GCN: It performs convolution on local matching vectors through GCN layers.\n4. Sim$^{g}$: It incorporates additional global features based on the five term-based similarity metrics.",
+    "selected_figures_names": [
+      "1802.07459v2-Table1-1.png",
+      "1802.07459v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07459v2-Table1-1.png",
+      "1802.07459v2-Figure1-1.png",
+      "1802.07459v2-Table2-1.png",
+      "1802.07459v2-Figure2-1.png",
+      "1802.07459v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 provides a detailed comparison of accuracy and F1 scores for different models on the CNSS dataset, which directly answers the question. Text 1 explains the importance of graphical decomposition and convolutions, which are key components in the models.",
+    "answer": "The model variant 'CIG-Sim&Siam-GCN-Sim^g' achieves the best performance on the CNSS dataset with an F1-score of 90.29. Its key components include graphical decomposition and convolutions.",
+    "text_chunks": [
+      "For all the experiments, we set the maximum number of training epochs to be 10. Results and Analysis Table~ summarizes the performance of all the compared methods on both datasets. Our model achieves the best performance on both two datasets and significantly outperforms all other methods.",
+      "This shows that graphical decomposition and convolutions are the main factors that contribute to the performance improvement. Since they already learn to aggregate local comparisons into a global semantic relationship, additionally engineered global features cannot help. Model Size and Parameter Sensitivity: Our biggest model without BERT is XVIII, which contains only \\sim34K parameters.",
+      "Compare methods XII and XI, and compare methods XV and XIV. We can see that incorporating GCN layers has significantly improved the performance on both datasets. Each GCN layer updates the hidden vector of each vertex by integrating the vectors from its neighboring vertices.",
+      "We carefully ensure that different splits do not contain any overlaps to avoid data leakage. The metrics used for performance evaluation are the accuracy and F1 scores of binary classification results. For each evaluated method, we perform training for 10 epochs and then choose the epoch with the best validation performance to be evaluated on the test set.",
+      "The CNSE dataset contains 29,063 pairs of news articles with labels representing whether a pair of news articles are reporting about the same breaking news event. Similarly, the CNSS dataset contains 33,503 pairs of articles with labels representing whether two documents fall into the same news story. The average number of words for all documents in the datasets is 734 and the maximum value is 21791.",
+      "In comparison, BERT contains 110M-340M parameters. However, our model significantly outperforms BERT. We tested the sensitivity of different parameters in our model.",
+      "For graph transformation, we utilize 2 layers of GCN for experiments on the CNSS dataset, and 3 layers of GCN for experiments on the CNSE dataset. When the vertex encoder is the five-dimensional features, we set the output size of GCN layers to be 16. When the vertex encoder is the Siamese network encoder, we set the output size of GCN layers to be 128 except the last layer.",
+      "Results suggest that the proposed graphical decomposition and the structural transformation by GCN layers are critical to the performance improvement in matching article pairs. \\bibliography{main \\bibliographystyle{acl_natbib"
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 provides a detailed comparison of accuracy and F1 scores for different models on the CNSS dataset, which directly answers the question. Text 1 explains the importance of graphical decomposition and convolutions, which are key components in the models.\",\n    \"Answer\": \"The model variant 'CIG-Sim&Siam-GCN-Sim^g' achieves the best performance on the CNSS dataset with an F1-score of 90.29. Its key components include graphical decomposition and convolutions.\"\n}"
+  },
+  "2": {
+    "question": "What are the different stages involved in constructing the Concept Interaction Graph (CIG) from a pair of documents?",
+    "ground_truth": "The different stages involved in constructing the Concept Interaction Graph (CIG) from a pair of documents are: (a) Representation, (b) Encoding, (c) Transformation, and (d) Aggregation.",
+    "selected_figures_names": [
+      "1802.07459v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07459v2-Table1-1.png",
+      "1802.07459v2-Figure1-1.png",
+      "1802.07459v2-Table2-1.png",
+      "1802.07459v2-Figure2-1.png",
+      "1802.07459v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a visual overview of the stages involved in constructing the Concept Interaction Graph (CIG) from a pair of documents, while Text 5 describes the process in detail, including the steps of representation, encoding, transformation, and aggregation.",
+    "answer": "The stages involved in constructing the Concept Interaction Graph (CIG) from a pair of documents are: (a) Representation - constructing a KeyGraph by word co-occurrence, detecting concepts by community detection, and assigning sentences by similarities; (b) Encoding - using a feature extractor for vertex features; (c) Transformation - applying Graph Convolutional Networks (GCN) layers; (d) Aggregation - combining features for classification.",
+    "text_chunks": [
+      "Specifically, we have made the following contributions: First, % we propose the so-called Concept Interaction Graph (CIG) to represent a document as a weighted graph of concepts, where each concept vertex is either a keyword or a set of tightly connected keywords. The sentences in the article associated with each concept serve as the features for local comparison to the same concept appearing in another article. Furthermore, two concept vertices in an article are also connected by a weighted edge which indicates their interaction strength.",
+      "With the same encoding or term-based feature representation of a pair of articles, our approach based on graphical decomposition and convolutions can improve the classification accuracy by 17.31\\% and 23.09\\% on the two datasets, respectively. Concept Interaction Graph In this section, we present our Concept Interaction Graph (CIG) to represent a document as an undirected weighted graph, which decomposes a document into subsets of sentences, each subset focusing on a different concept.",
+      "Here we first describe the detailed steps to construct a CIG for a single document: KeyGraph Construction. Given a document \\mathcal{D, we first extract the named entities and keywords by TextRank~. After that, we construct a keyword co-occurrence graph, called KeyGraph, based on the set of found keywords. Each keyword is a vertex in the KeyGraph.",
+      "The attachment of sentences to concepts naturally dissects the original document into multiple disjoint sentence subsets. As a result, we have represented the original document with a graph of key concepts, each with a sentence subset, as well as the interaction topology among them. Fig~ (a) illustrates the construction of CIGs for a pair of documents aligned by the discovered concepts.",
+      "% Given a document \\mathcal{D, a CIG is a graph G_D, where each vertex in G_D is called a concept, which is a keyword or a set of highly correlated keywords in document \\mathcal{D. Each sentence in \\mathcal{D will be attached to the single concept vertex that it is the most related to, which most frequently is the concept the sentence mentions. Hence, vertices will have their own sentence sets, which are disjoint. The weight of the edge between a pair of concepts denotes how much the two concepts are related to each other and can be determined in various ways.",
+      "Article Pair Matching through Graph Convolutions Given the merged CIG G_{AB of two documents \\mathcal{D_A and \\mathcal{D_B described in Sec.~, we match a pair of articles in a ``divide-and-conquer'' manner by matching the sentence sets from \\mathcal{D_A and \\mathcal{D_B associated with each concept and aggregating local matching results into a final result through multiple graph convolutional layers. Our approach overcomes the limitation of previous text matching algorithms, by extending text representation from a sequential (or grid) point of view to a graphical view, and can therefore better capture the rich semantic interactions in longer text. Fig.~ illustrates the overall architecture of our proposed method, which consists of four steps: a) representing a pair of documents by a single merged CIG, b) learning multi-viewed matching features for each concept vertex, c) structurally transforming local matching features by graph convolutional layers, and d) aggregating local matching features to get the final result.",
+      "Conclusion We propose the Concept Interaction Graph to organize documents into a graph of concepts, and introduce a divide-and-conquer approach to matching a pair of articles based on graphical decomposition and convolutional aggregation. We created two new datasets for long document matching with the help of professional editors, consisting of about 60K pairs of news articles, on which we have performed extensive evaluations. In the experiments, our proposed approaches significantly outperformed an extensive range of state-of-the-art schemes, including both term-based and deep-model-based text matching algorithms.",
+      "For CIG construction, let N_s be the number of sentences in two documents, N_w be the number of unique words in documents, and N_k represents the number of unique keywords in a document. Building keyword graph requires \\mathcal{O(N_s N_k + N_w^2) complexity , and betweenness-based community detection requires \\mathcal{O(N_k^3). The complexity of sentence assignment and weight calculation is \\mathcal{O(N_s N_k + N_k^2)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a visual overview of the stages involved in constructing the Concept Interaction Graph (CIG) from a pair of documents, while Text 5 describes the process in detail, including the steps of representation, encoding, transformation, and aggregation.\",\n    \"Answer\": \"The stages involved in constructing the Concept Interaction Graph (CIG) from a pair of documents are: (a) Representation - constructing a KeyGraph by word co-occurrence, detecting concepts by community detection, and assigning sentences by similarities; (b) Encoding - using a feature extractor for vertex features; (c) Transformation - applying Graph Convolutional Networks (GCN) layers; (d) Aggregation - combining features for classification.\"\n}"
+  }
+}

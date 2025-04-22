@@ -1,0 +1,56 @@
+{
+  "0": {
+    "question": "Which method performed best according to the P@1 metric for the QA-Expert task, and how much better did it perform compared to the average P@1 score of the D2V method? ",
+    "ground_truth": "The WeakFG method achieved the highest P@1 score for the QA-Expert task with a score of 52.8. This is 23.2% higher than the average P@1 score of the D2V method, which was 29.6. ",
+    "selected_figures_names": [
+      "1611.04363v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1611.04363v2-Table1-1.png",
+      "1611.04363v2-Figure2-1.png",
+      "1611.04363v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides the necessary data to compare the P@1 metric for different methods in the QA-Expert task. Text 3 explains the evaluation measures, including P@N, which is relevant to understanding the performance metrics.",
+    "answer": "The WeakFG method performed best according to the P@1 metric for the QA-Expert task with a score of 52.8. Compared to the average P@1 score of the D2V method, which is 29.6, WeakFG performed 23.2 points better.",
+    "text_chunks": [
+      "In addition, our model can outperform RankSVM. WeakFG leverages the correlation between experts and thus further improves the performance. \\hide{ We find in Expert, WMD significantly outperforms Jaccard and has the best performance of P@N within four methods.",
+      "We conducted experiments on two datasets. % QA-Expert: this dataset is from an online international QA challenge^\\text{2.% ~~It consists of 87,988 users and 47,656 questions with 43,913 invitations and 9,561 responses. To reduce noise, we select those questions with at least 5 invited users and 1 response in our experiment.",
+      "To further capture the semantic information, we can use the recently developed embedding method~, which has shown promising results in many fields such as natural language processing, image processing, and speech recognition. More specifically, a query q can be considered as a document, and an expert e can be considered as a document set \\{d_k\\, k\\in\\{1,\\cdots,N_e\\, where each d_k represents a document authored by e, e.g., an answer provided by e or a paper published by e. We define the expertise matching score R(q, e) as the similarity between query document q and the document set \\{d_k\\, \\beq{ R(q, e)=\\bigoplus_{k\\in\\{1,\\cdots,N_e\\\\mathrm{Sim(q, d_k) \\noindent where \\bigoplus is an aggregation function, e.g., max or avg.",
+      "\\vpara{Evaluation Measures. We consider the problem as a ranking problem and evaluate different methods by Precision of the top-N results (P@N), Mean Average Precision (MAP), and R-prec~. Experimental Results Table lists the performance of all methods on the datasets. Overall, the proposed WeakFG clearly outperforms all the comparison methods by 1.5-10.7\\% in terms of MAP.",
+      "\\vpara{How embeddings help? Taking a closer look, we observed that the embedding-based methods (WMD and D2V) perform better than the other methods (LM and BM25) using only keywords. LDA can be also considered as an embedding-like algorithm by using topics.",
+      "+ (1-\\alpha) R'(q, e_i) \\noindent where \\alpha is a tunable parameter to trade off the importance between the matching degree of expert e_i with query q and the acceptance probability of expert e_i to answer q. Setting \\alpha=1 would reduce the problem to the traditional expert finding problem without considering the acceptance probability of the invited expert. \\hide{ Besides, peer review has long been criticized for being ineffective, slow and of low-quality. Just to mention a few, American Political Science Review reported only 2051 of 4516 reviewers agreed to review in 2013 (decline rate: 54.6\\%) , and the decline rate is 49.6\\% in 2014 .",
+      "Experimental results show that the proposed model can achieve better performance (1.5-10.7\\% by MAP) than several state-of-the-art algorithms. To validate the generality of the proposed model, we applied it to a related, but somehow different, setting: peer-reviewer recommendation --- recommending reviewers to scientific articles. We use the bidding information of a major computer science conference with \\sim1,000 submissions and 440 program committee members to evaluate the prediction on acceptance of review invitation.",
+      "Accordingly, we can estimate the second term of Eq. , and can further estimate the gradient. Experiments \\hide{ To empirically evaluate the effectiveness of the proposed model, we conduct experiments on three different datasets: QA-Expert, Paper-Reviewer, and Topic-Expert. Moreover, we use an online reviewer recommendation system to demonstrate the effectiveness of our model."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides the necessary data to compare the P@1 metric for different methods in the QA-Expert task. Text 3 explains the evaluation measures, including P@N, which is relevant to understanding the performance metrics.\",\n    \"Answer\": \"The WeakFG method performed best according to the P@1 metric for the QA-Expert task with a score of 52.8. Compared to the average P@1 score of the D2V method, which is 29.6, WeakFG performed 23.2 points better.\"\n}"
+  },
+  "1": {
+    "question": "What is the relationship between the decline probability of an expert and whether or not they have a \"friend\" who has already declined?",
+    "ground_truth": "The decline probability of an expert is higher if they have a \"friend\" who has already declined.",
+    "selected_figures_names": [
+      "1611.04363v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1611.04363v2-Table1-1.png",
+      "1611.04363v2-Figure2-1.png",
+      "1611.04363v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 visually represents the decline probability of an expert based on whether they have a 'friend' who has already declined, which directly relates to the question. Text 2 discusses the correlation between experts and how it affects decline probability, providing context and explanation.",
+    "answer": "The decline probability of an expert is higher if they have a 'friend' who has already declined. This correlation is evident in both QA-Expert and Paper-Reviewer datasets.",
+    "text_chunks": [
+      "From \\figref{declinecorr we can see that the decline probability of a reviewer having a correlated expert who has already declined is higher than that of those without (cf. the Experiments section for details of the datasets). Recent studies~ have also utilized the social relations for expert finding in QA systems.",
+      "Another survey of political science journals also finds that decline rate is related to the expert's personal experience, e.g., top experts are more likely to decline than junior experts~. Technically, the challenge is how to design a principled approach to deal with the problem of expertise matching by considering the expert response. \\vpara{Our Solution and Contributions.",
+      "One potential solution to this end is weakly supervised learning~, which essentially leverages some kind of correlation between training instances to propagate the labeled information to unlabeled instances. Widely used correlations include similarity and links (e.g., friend or coauthor relationships). Figure~ shows the decline probability of an expert, conditioned on whether or not the expert has a ``friend'' who has already declined.",
+      "Experts with higher h-index decline review invitations more often than experts with lower h-index. Moreover, we find that correlations between expert are informative for prediction. Correlations can be different on different genres of data, such as co-author relationship in the paper reviewing and co-reply in QA.",
+      "+ (1-\\alpha) R'(q, e_i) \\noindent where \\alpha is a tunable parameter to trade off the importance between the matching degree of expert e_i with query q and the acceptance probability of expert e_i to answer q. Setting \\alpha=1 would reduce the problem to the traditional expert finding problem without considering the acceptance probability of the invited expert. \\hide{ Besides, peer review has long been criticized for being ineffective, slow and of low-quality. Just to mention a few, American Political Science Review reported only 2051 of 4516 reviewers agreed to review in 2013 (decline rate: 54.6\\%) , and the decline rate is 49.6\\% in 2014 .",
+      "% In both datasets, statistical features play an important role in the prediction. It confirms the finding in a recent survey , which says ``decline'' is related to the expert's academic status (corresponding to statistics here). Again, the results verify that correlations are very important for prediction---without correlations, the performance of WeakFG drops 4.0\\% on QA-Expert.% \\hide{We compare different expertise matching measures' effects in the RankFG model.",
+      "To tackle this challenge, we extract various features for the experts from their profiles and historical activities and train a model to predict the expert's response. For example, senior experts are more likely to decline to reviewer a paper than junior experts. \\figref{declinehindex shows statistics on our journal reviewer data in the experiments.",
+      "In this paper, our general goal is to recommend appropriate experts to a given question and predict the willingness of the experts to accept or decline an invitation. To the best of our knowledge, we are the first to study the declination prediction problem. % Related research can be traced back to 30 years ago."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 visually represents the decline probability of an expert based on whether they have a 'friend' who has already declined, which directly relates to the question. Text 2 discusses the correlation between experts and how it affects decline probability, providing context and explanation.\",\n    \"Answer\": \"The decline probability of an expert is higher if they have a 'friend' who has already declined. This correlation is evident in both QA-Expert and Paper-Reviewer datasets.\"\n}"
+  }
+}

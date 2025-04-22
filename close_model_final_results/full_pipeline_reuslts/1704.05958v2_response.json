@@ -1,0 +1,104 @@
+{
+  "0": {
+    "question": "Can you estimate the percentage of entity pairs in the NYT training set that have a corresponding relational fact in the Knowledge Base (KB)?",
+    "ground_truth": "Approximately 6.66%.",
+    "selected_figures_names": [
+      "1704.05958v2-Figure6-1.png",
+      "1704.05958v2-Figure4-1.png",
+      "1704.05958v2-Figure7-1.png",
+      "1704.05958v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1704.05958v2-Figure6-1.png",
+      "1704.05958v2-Figure4-1.png",
+      "1704.05958v2-Figure7-1.png",
+      "1704.05958v2-Table1-1.png",
+      "1704.05958v2-Figure3-1.png",
+      "1704.05958v2-Figure1-1.png",
+      "1704.05958v2-Table2-1.png",
+      "1704.05958v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 5,
+    "rationale": "Image 3 provides the necessary statistics of the NYT dataset, including the number of entity pairs and relational facts from the KB. Text 5 explains the concept of multiplicity and how entity pairs relate to relational facts, which is relevant for understanding the dataset's structure.",
+    "answer": "The percentage of entity pairs in the NYT training set that have a corresponding relational fact in the KB is approximately 6.66% (19,429 relational facts / 291,699 entity pairs * 100).",
+    "text_chunks": [
+      "Recently a joint embedding approach has been attempted in the context of knowledge base completion~, but it is still based on local statistics, i.e., individual relational facts. Joint embedding with global statistics remains an open problem. Compared with the size of the training corpora for word embedding (up to hundred of billions of tokens), the NYT dataset is quite small in scale.",
+      "Case Study Table~ shows two examples. For better illustration, we choose entity pairs that have only one contextual sentence. For the first example, PCNN+ATT predicts that most likely there is no KB relation between the entity pair, while both LoRE and GloRE identify the correct relation with high confidence.",
+      "More formally, for each entity pair (e, e') and a set of contextual sentences C containing this entity pair, a relation extraction model assigns a score E(z | C) to each candidate relational fact z = (e, r, e'), r \\in \\mathcal{R. On the other hand, our textual relation embedding model works on the sentence level. It assign a score G(z | s) to each contextual sentence s in C as for how well the textual relation t between the entity pair in the sentence matches the KB relation r, i.e., G(z | s) = p(r | t). It poses a challenge to aggregate the sentence-level scores to get a set-level score G(z | C), which can be used to combine with the original score E(z | C) to get a better evaluation of the candidate relational fact.",
+      "In contrast, we embed textual relations with distant supervision~, which provides much larger-scale training data without the need of manual annotation. However, the assertion of distant supervision, ``any sentence containing a pair of entities that participate in a knowledge base (KB) relation is likely to express the relation,'' can be violated more often than not, resulting in many wrongly labeled training examples. A representative example is shown in Figure~. Embedding quality is thus compromised by the noise in training data.",
+      "Embeddings of entity pairs and relations, either directly or via neural networks, are then learned on the matrix entries, which are still individual relational facts, and the wrong labeling problem remains. Global co-occurrence frequencies (see Figure~ (Right)) are not taken into account, which is the focus of this study. Another distinction is that our method directly models the association between textual and KB relations, while universal schema learns embedding for shared entity pairs and use that as a bridge between the two types of relations.",
+      "The multiplicity of an entity pair, m_{S(t_i)( e, e' ), is the number of occurrences of the corresponding relational fact (e, t_i, e') in the corpus. For example, if the support of t_i is S(t_i) = \\left\\{ \\left(e_1, e'_1\\right), \\left(e_1, e'_1\\right), \\left(e_2, e'_2\\right), \\dots \\right\\, entity pair \\left( e_1, e'_1 \\right) has a multiplicity of 2 because the relational fact \\left( e_1, t_i, e'_1 \\right) occur in two sentences. We also get a set of KB relations \\mathcal{R",
+      "We use a separate GRU cell followed by softmax to map a textual relation embedding to a distribution over KB relations; the full model thus resembles the sequence-to-sequence architecture~. Given a textual relation t_i and its embedding \\bm{h_m, the predicted conditional probability of a KB relation r_j is thus: \\noindent where ()_j denotes the j-th element of a vector, and \\textless GO\\textgreater is a special token indicating the start of decoding. The training objective is to minimize \\noindent where \\mathcal{E is the edge set of the relation graph.",
+      "For each entity pair \\left(e, e'\\right) in the sentence, we extract the fully lexicalized shortest dependency path as a textual relation t, forming a relational fact \\left(e, t, e'\\right). There are two outcomes from this step: a set of textual relations \\mathcal{T = \\left\\{ t_i \\right\\, and the support S(t_i) for each t_i. The support of a textual relation is a multiset containing the entity pairs of the textual relation."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 5,\n    \"Rationale\": \"Image 3 provides the necessary statistics of the NYT dataset, including the number of entity pairs and relational facts from the KB. Text 5 explains the concept of multiplicity and how entity pairs relate to relational facts, which is relevant for understanding the dataset's structure.\",\n    \"Answer\": \"The percentage of entity pairs in the NYT training set that have a corresponding relational fact in the KB is approximately 6.66% (19,429 relational facts / 291,699 entity pairs * 100).\"\n}"
+  },
+  "1": {
+    "question": "Why is conventional distant supervision problematic?",
+    "ground_truth": "Conventional distant supervision can lead to wrong labeling of textual relations with KB relations.",
+    "selected_figures_names": [
+      "1704.05958v2-Table1-1.png",
+      "1704.05958v2-Figure3-1.png",
+      "1704.05958v2-Figure1-1.png",
+      "1704.05958v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1704.05958v2-Table1-1.png",
+      "1704.05958v2-Figure3-1.png",
+      "1704.05958v2-Figure1-1.png",
+      "1704.05958v2-Figure5-1.png",
+      "1704.05958v2-Table3-1.png",
+      "1704.05958v2-Figure6-1.png",
+      "1704.05958v2-Table2-1.png",
+      "1704.05958v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 visually illustrates the wrong labeling problem in distant supervision, showing how textual relations can be incorrectly labeled with multiple knowledge base relations. Text 1 explains the issue with distant supervision, where sentences containing entity pairs are often wrongly labeled, compromising embedding quality.",
+    "answer": "Conventional distant supervision is problematic because it often results in wrongly labeled training examples. The assumption that any sentence containing a pair of entities participating in a knowledge base relation expresses that relation is frequently violated, leading to noise in the training data.",
+    "text_chunks": [
+      "In contrast, we embed textual relations with distant supervision~, which provides much larger-scale training data at a low cost. Various efforts have been made to combat the long-criticized wrong labeling problem of distant supervision. Riedel et al.~\\shortcite{riedel2010modeling, Hoffmann et al.~\\shortcite{hoffmann2011knowledge, and Surdeanu et al.~\\shortcite{surdeanu2012multi have attempted a multi-instance learning~ framework to soften the assumption of distant supervision, but their models are still feature-based.",
+      "In contrast, we embed textual relations with distant supervision~, which provides much larger-scale training data without the need of manual annotation. However, the assertion of distant supervision, ``any sentence containing a pair of entities that participate in a knowledge base (KB) relation is likely to express the relation,'' can be violated more often than not, resulting in many wrongly labeled training examples. A representative example is shown in Figure~. Embedding quality is thus compromised by the noise in training data.",
+      "Our main contribution is a novel way to combat the wrong labeling problem of distant supervision. Traditional embedding methods~ are based on local statistics, i.e., individual textual-KB relation pairs like in Figure~ (Left). Our key hypothesis is that global statistics is more robust to noise than local statistics.",
+      "As a result, its prediction on NA is not very confident. On the other hand, GloRE learns that if a person ``came to'' a place, likely it is not his/her birthplace. In the training data, due to the wrong labeling problem of distant supervision, the textual relation is wrongly labeled with \\texttt{place\\_of\\_death and \\texttt{nationality a couple of times, and both PCNN+ATT and LoRE suffer from the training noise.",
+      "Using PCNN+ATT as base model, they show that adversarial training can improve its performance by a good margin. However, the base model implementation used by them performed inferior to the one in the original paper and in ours, and therefore the results are not directly comparable. No prior study has exploited global statistics to combat the wrong labeling problem of distant supervision.",
+      "Large-scale training data of embedding can be easily solicited from distant supervision, and the global statistics of relations provide a natural way to combat the wrong labeling problem of distant supervision. The idea of relation embedding based on global statistics can be further expanded along several directions. In this work we have focused on embedding textual relations, but it is in principle beneficial to jointly embed knowledge base relations and optionally entities.",
+      "Another interesting venue for future research is to construct much larger-scale distant supervision datasets to train general-purpose textual relation embedding that can help a wide range of downstream relational tasks such as question answering and textual entailment. \\section*{Acknowledgements The authors would like to thank the anonymous reviewers for their thoughtful comments.",
+      "However, the learned textual relation embedding turned out to be not very helpful for relation extraction. One possible reason is that PPMI (even the smoothed version) gives inappropriately large weights to rare relations . There are many textual relations that correspond to none of the target KB relations but are falsely labeled with some KB relations a few times by distant supervision."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 visually illustrates the wrong labeling problem in distant supervision, showing how textual relations can be incorrectly labeled with multiple knowledge base relations. Text 1 explains the issue with distant supervision, where sentences containing entity pairs are often wrongly labeled, compromising embedding quality.\",\n    \"Answer\": \"Conventional distant supervision is problematic because it often results in wrongly labeled training examples. The assumption that any sentence containing a pair of entities participating in a knowledge base relation expresses that relation is frequently violated, leading to noise in the training data.\"\n}"
+  },
+  "2": {
+    "question": "What is the role of the GRU cell in the embedding model?",
+    "ground_truth": "The GRU cell is used to map a textual relation embedding to a probability distribution over KB relations.",
+    "selected_figures_names": [
+      "1704.05958v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1704.05958v2-Figure5-1.png",
+      "1704.05958v2-Figure2-1.png",
+      "1704.05958v2-Figure7-1.png",
+      "1704.05958v2-Figure3-1.png",
+      "1704.05958v2-Table1-1.png",
+      "1704.05958v2-Figure4-1.png",
+      "1704.05958v2-Table2-1.png",
+      "1704.05958v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually represents the embedding model using a GRU cell to map textual relation embeddings to a probability distribution over KB relations. Text 0 explains the use of a GRU cell followed by softmax for this mapping process.",
+    "answer": "The GRU cell in the embedding model maps a textual relation embedding to a probability distribution over KB relations.",
+    "text_chunks": [
+      "We use a separate GRU cell followed by softmax to map a textual relation embedding to a distribution over KB relations; the full model thus resembles the sequence-to-sequence architecture~. Given a textual relation t_i and its embedding \\bm{h_m, the predicted conditional probability of a KB relation r_j is thus: \\noindent where ()_j denotes the j-th element of a vector, and \\textless GO\\textgreater is a special token indicating the start of decoding. The training objective is to minimize \\noindent where \\mathcal{E is the edge set of the relation graph.",
+      "We call our approach Global Relation Embedding (GloRE) in light of global statistics of relations. Embedding via RNN Given the relation graph, a straightforward way of relation embedding is matrix factorization, similar to latent semantic analysis~ for word embedding. However, textual relations are different from words in that they are sequences composed of words and typed dependency relations.",
+      "Therefore, we use recurrent neural networks (RNNs) for embedding, which respect the compositionality of textual relations and can learn the shared sub-structures of different textual relations~. For the examples in Figure~, an RNN can learn, from both textual relations, that the shared dependency relation ``{\\small nmod:in'' is indicative of location modifiers. It is worth noting that other models like convolutional neural networks can also be used, but it is not the focus of this paper to compare all the alternative embedding models; rather, we aim to show the effectiveness of global statistics with a reasonable embedding model.",
+      "An RNN with gated recurrent units (GRUs)~ is then applied to consecutively process the sequence as shown in Figure . We have also explored more advanced constructs like attention, but the results are similar, so we opt for a vanilla RNN in consideration of model simplicity. Let \\phi denote the function that maps a token x_l to a fixed-dimensional vector, the hidden state vectors of the RNN are calculated recursively: \\noindent \\textsc{GRU follows the definition in Cho et al.~\\shortcite{cho2014learning.",
+      "Training Objective We use global statistics in the relation graph to train the embedding model. Specifically, we model the semantics of a textual relation as its co-occurrence distribution of KB relations, and learn textual relation embedding to reconstruct the corresponding co-occurrence distributions.",
+      "Embeddings of entity pairs and relations, either directly or via neural networks, are then learned on the matrix entries, which are still individual relational facts, and the wrong labeling problem remains. Global co-occurrence frequencies (see Figure~ (Right)) are not taken into account, which is the focus of this study. Another distinction is that our method directly models the association between textual and KB relations, while universal schema learns embedding for shared entity pairs and use that as a bridge between the two types of relations.",
+      "The skip-gram model~ is based on local statistics: During training, we sweep through the corpus and slightly tune the embedding model in each local window (e.g., 10 consecutive words). In contrast, in global statistics based methods, exemplified by latent semantic analysis~ and GloVe~, we process the entire corpus to collect global statistics like word-word co-occurrence counts, normalize the raw statistics, and train an embedding model directly on the normalized global statistics. Most existing studies on relation extraction are based on local statistics of relations, i.e., models are trained on individual relation examples.",
+      "In Section we discuss related work. For the modeling part, we first describe how to collect global co-occurrence statistics of relations in Section , then introduce a neural network based embedding model in Section , and finally discuss how to combine the learned textual relation embedding with existing relation extraction models in Section . We empirically evaluate the proposed method in Section , and conclude in Section ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually represents the embedding model using a GRU cell to map textual relation embeddings to a probability distribution over KB relations. Text 0 explains the use of a GRU cell followed by softmax for this mapping process.\",\n    \"Answer\": \"The GRU cell in the embedding model maps a textual relation embedding to a probability distribution over KB relations.\"\n}"
+  }
+}

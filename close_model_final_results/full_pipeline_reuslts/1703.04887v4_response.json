@@ -1,0 +1,153 @@
+{
+  "0": {
+    "question": "What is the relationship between the number of Monte Carlo samples (N) and the translation performance of the BR-CSGAN model? Why is there a trade-off when choosing the value of N?",
+    "ground_truth": "The table and passage show that the translation performance of the BR-CSGAN model generally improves as the number of Monte Carlo samples (N) increases. However, this improvement plateaus after N reaches a certain point (around 20 in this case).\n\nThere is a trade-off when choosing the value of N because increasing N also increases the computational complexity and training time. While a higher N leads to more accurate reward estimations and better performance, it also requires more computational resources and longer training times. Therefore, choosing the optimal N involves balancing the desired performance with the available computational resources and time constraints.",
+    "selected_figures_names": [
+      "1703.04887v4-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1703.04887v4-Table3-1.png",
+      "1703.04887v4-Figure2-1.png",
+      "1703.04887v4-Table2-1.png",
+      "1703.04887v4-Table1-1.png",
+      "1703.04887v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a table showing the translation performance of the BR-CSGAN model with different values of N, which directly relates to the question about the relationship between N and performance. Text 5 discusses the impact of increasing N on translation performance and the trade-off involved, which is crucial for understanding why choosing N involves a trade-off.",
+    "answer": "The translation performance of the BR-CSGAN model improves as the number of Monte Carlo samples (N) increases, up to a point. The table shows that performance increases with N, peaking around N=20. The trade-off when choosing N is between accuracy and computational complexity. Higher N values improve performance but also increase computation time, and beyond N=20, the performance gains are minimal compared to the additional computational cost.",
+    "text_chunks": [
+      "Therefore, there is a trade-off between the accuracy and computation complexity here. We investigate this problem on the Chinese-English translation task. Table presents the translation performance of the BR-CSGAN on the test sets when the N are set from 5 to 30 with interval 5.",
+      "Sample times for Monto Carol search We are also curious about how the sample times N for Monte Carlo search affects the translation performance. Intuitively, if N is set as a small number, the intermediate reward for each word may be incorrect since there is a large variance for the Monto Carol search when the sample time is too small. And if otherwise, the computation shall be very time consuming because we need to do much more sampling.",
+      "We perform one optimization step for the discriminator for each step of the generator. In our practice, we set \\xi as 0.82, \\eta as 5000, \\epsilon as 1.0 and the N for Monte Carlo search as 20. Experiments and Results We evaluate our BR-CSGAN on English-German and Chinese-English translation tasks and we test two different architectures for the generator, the traditional RNNSearch and the newly emerged state-of-the-art Transformer.",
+      "We pre-train five discriminators which have the accuracy as 0.6, 0.7, 0.8, 0.9 and 0.95 respectively. With the five discriminators, we train five different BR-CSGAN models (with the generator as RNNSearch and \\lambda set as 0.7) and test their translation performances on the development set at regular intervals. Figure reports the results and we can find that the initial accuracy of the discriminator shows great impacts on the translation performance of the proposed BR-CSGAN.",
+      "To obtain more stable reward and reduce the variance, we represent an N-time Monte Carlo search as: where T_i represents the length of the sentence sampled by the i'th Monte Carlo search. (Y_{1:t,X)=(y_1,\\ldots,y_t,X) is the current state and Y_{t+1:T_N^N is sampled based on the policy G_\\theta. The discriminator provides N rewards for the sampled N sentences respectively.",
+      "Since the training for GAN is not stable, the wrong gradient direction exacerbates the unstableness and results in the BLEU getting worse and worse. With the increasing of N, the translation performance of the model gets improved. However, with N set larger than 20, we get little improvement than the model with N set as 20 and the training time exceeds our expectation.",
+      "Experiments on the Transformer show the same trends. While the Transformer has achieved state-of-the-art translation performances, our approach still achieves +0.81 BLEU points improvement on Chinese-English translation and +0.62 BLEU points improvement on English-German. These results indicate that the proposed BR-CSGAN consistently outperforms the baselines and it shows better translation performance than the naive GAN and the model guided only by the BLEU objective.",
+      "On the RNNSearch model, the naive GAN (i.e., the line of RNNSearch+BR-CSGAN (\\lambda=1) in table ) achieves improvement up to +1.11 BLEU points averagely on Chinese-English test sets and +0.9 BLEU points on English-German test set. Armed with the BLEU objective, the BR-CSGAN (the line of RNNSearch+BR-CSGAN (\\lambda=0.7)) leads to more significant improvements, +1.83 BLEU points averagely on Chinese-English translation and +1.69 BLEU points on English-German translation. We also test the translation performance when the RNNSearch is only guided by the static BLEU objective (the line of RNNSearch+BR-CSGAN (\\lambda=0)), and we only get +0.58 BLEU points improvement on Chinese-English translation and +0.55 BLEU points improvement on English-German."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a table showing the translation performance of the BR-CSGAN model with different values of N, which directly relates to the question about the relationship between N and performance. Text 5 discusses the impact of increasing N on translation performance and the trade-off involved, which is crucial for understanding why choosing N involves a trade-off.\",\n    \"Answer\": \"The translation performance of the BR-CSGAN model improves as the number of Monte Carlo samples (N) increases, up to a point. The table shows that performance increases with N, peaking around N=20. The trade-off when choosing N is between accuracy and computational complexity. Higher N values improve performance but also increase computation time, and beyond N=20, the performance gains are minimal compared to the additional computational cost.\"\n}"
+  },
+  "1": {
+    "question": "How does the initial accuracy of the discriminator affect the BLEU score?",
+    "ground_truth": "The BLEU score decreases as the initial accuracy of the discriminator increases.",
+    "selected_figures_names": [
+      "1703.04887v4-Table3-1.png",
+      "1703.04887v4-Figure2-1.png",
+      "1703.04887v4-Table2-1.png",
+      "1703.04887v4-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1703.04887v4-Table3-1.png",
+      "1703.04887v4-Figure2-1.png",
+      "1703.04887v4-Table2-1.png",
+      "1703.04887v4-Table1-1.png",
+      "1703.04887v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 shows the BLEU score trends for different initial accuracies of the discriminator, which directly visualizes the impact on translation performance. Text 3 discusses the effect of initial discriminator accuracy on translation performance, providing context and explanation.",
+    "answer": "The initial accuracy of the discriminator significantly affects the BLEU score. If the accuracy is too low (e.g., 0.6 or 0.7), the BLEU score decreases rapidly, indicating poor performance. An initial accuracy around 0.8 maintains a stable and higher BLEU score, suggesting a balanced relationship between the generator and discriminator is crucial for optimal performance.",
+    "text_chunks": [
+      "From figure , we show that the initial accuracy of the discriminator needs to be set carefully and either it is too high (0.9 and 0.95) or too low (0.6 and 0.7), the model performs badly . This suggests that it is important for the generator and discriminator to keep a balanced relationship at the beginning of the generative adversarial training. If the discriminator is too strong, the generator is always penalized for its bad predictions and gets no idea about right predictions.",
+      "A natural question is that when shall we end the pre-training. Do we need to pre-train the discriminator with the highest accuracy? To answer this question, we test the impact of the initial accuracy of the discriminator.",
+      "From table , the proposed model achieves no improvement than the baseline (i.e., the pre-trained generator) when N are set less than 15 and the BLEU scores are not reported on the table. As a matter of fact, the translation performance of the model gets worse and worse. We conjecture that the approximated reward is far from the expected reward due to the large variance when N is set too small, and gives wrong gradient directions for model updating.",
+      "We pre-train five discriminators which have the accuracy as 0.6, 0.7, 0.8, 0.9 and 0.95 respectively. With the five discriminators, we train five different BR-CSGAN models (with the generator as RNNSearch and \\lambda set as 0.7) and test their translation performances on the development set at regular intervals. Figure reports the results and we can find that the initial accuracy of the discriminator shows great impacts on the translation performance of the proposed BR-CSGAN.",
+      "Since the training for GAN is not stable, the wrong gradient direction exacerbates the unstableness and results in the BLEU getting worse and worse. With the increasing of N, the translation performance of the model gets improved. However, with N set larger than 20, we get little improvement than the model with N set as 20 and the training time exceeds our expectation.",
+      "This kind of adversarial training achieves a win-win situation when the generator and discriminator reach a Nash Equilibrium . Besides generating the desired distribution, we also want to directly guide the generator with a static and specific objective, such as generating sentences with high BLEU points. To this end, the smoothed sentence-level BLEU is utilized as the reinforced objective for the generator.",
+      "Hence, the generator is discouraged all the time and the performance gets worse and worse. On the other hand, if the discriminator is too weak, the discriminator is unable to give right guidance for the generator, i.e. the gradient direction for updating the generator is random. Empirically, we pre-train the discriminator until its accuracy reaches around 0.8.",
+      "Minimum risk training (MRT) is proposed to alleviate such a limitation by adopting the sequence level objective, i.e., the sentence-level BLEU, for traditional NMT models. Yet somewhat improved, this objective still does not guarantee the translation results to be natural and sufficient. Since the BLEU point is computed as the geometric mean of the modified n-gram precisions , almost all of the existing objectives essentially train NMT models to generate sentences with n-gram precisions as high as possible (MLE can be viewed to generate sentences with high 1-gram precisions)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 shows the BLEU score trends for different initial accuracies of the discriminator, which directly visualizes the impact on translation performance. Text 3 discusses the effect of initial discriminator accuracy on translation performance, providing context and explanation.\",\n    \"Answer\": \"The initial accuracy of the discriminator significantly affects the BLEU score. If the accuracy is too low (e.g., 0.6 or 0.7), the BLEU score decreases rapidly, indicating poor performance. An initial accuracy around 0.8 maintains a stable and higher BLEU score, suggesting a balanced relationship between the generator and discriminator is crucial for optimal performance.\"\n}"
+  },
+  "2": {
+    "question": "How does BR-CSGAN compare to MRT in terms of translation performance and what is the likely reason for this difference?",
+    "ground_truth": "BR-CSGAN consistently outperforms MRT on both Chinese-English and English-German translation tasks, achieving higher BLEU scores.\n\nWhile both methods optimize similar objectives, BR-CSGAN uses a reinforcement learning procedure with a dynamic discriminator to maximize rewards for the generator. This dynamic feedback seems to be more effective than the static objective and random sampling approach used by MRT, leading to better translation performance.",
+    "selected_figures_names": [
+      "1703.04887v4-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1703.04887v4-Table3-1.png",
+      "1703.04887v4-Figure2-1.png",
+      "1703.04887v4-Table2-1.png",
+      "1703.04887v4-Table1-1.png",
+      "1703.04887v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 provides a direct comparison of BLEU scores between MRT and BR-CSGAN, showing the performance difference. Text 2 explains that BR-CSGAN achieves better translation performance than MRT, with specific BLEU score improvements, indicating the effectiveness of the approach.",
+    "answer": "BR-CSGAN outperforms MRT in translation performance, achieving higher BLEU scores on both Chinese-English and English-German tasks. The likely reason for this difference is that BR-CSGAN uses a dynamic discriminator and reinforcement learning to optimize translation quality, as opposed to MRT's static objective approach.",
+    "text_chunks": [
+      "Specifically, compared to naive GAN which is trained without specific objective guidance, BR-CSGAN utilizes the BLEU objective to guide the generator to generate sentences with higher BLEU points. And compared to MRT which is trained only with the static objective, the BR-CSGAN applies a dynamic discriminator which updates synchronously with the generator, to feedback the dynamic rewards for the generator. Table compares the translation performance between the MRT and BR-CSGAN on Chinese-English and English-German translation tasks.",
+      "It is easy to be found that, under this condition (i.e., \\lambda set as zero), the proposed BR-CSGAN optimizes almost the same objective with MRT. The only difference is that the reinforcement learning procedure is utilized in BR-CSGAN to maximize the total reward and MRT instead applies random sampling to approximate the risk. Actually, the BR-CSGAN is a weighted sum of the naive GAN (\\lambda=1) and MRT (\\lambda=0), and it incorporates the advantages of the two approaches.",
+      "Experiments on the Transformer show the same trends. While the Transformer has achieved state-of-the-art translation performances, our approach still achieves +0.81 BLEU points improvement on Chinese-English translation and +0.62 BLEU points improvement on English-German. These results indicate that the proposed BR-CSGAN consistently outperforms the baselines and it shows better translation performance than the naive GAN and the model guided only by the BLEU objective.",
+      "We only conduct experiments on the RNNSearch because we only get the open-source implementation of MRT on the RNNSearch . Results show that the proposed BR-CSGAN consistently outperforms the MRT on the Chinese-English and English-German translations. When to stop pre-training The initial accuracy \\xi of the discriminator which is viewed as a hyper-parameter, can be set carefully during the process of pre-training.",
+      "Therefore, there is a trade-off between the accuracy and computation complexity here. We investigate this problem on the Chinese-English translation task. Table presents the translation performance of the BR-CSGAN on the test sets when the N are set from 5 to 30 with interval 5.",
+      "We perform one optimization step for the discriminator for each step of the generator. In our practice, we set \\xi as 0.82, \\eta as 5000, \\epsilon as 1.0 and the N for Monte Carlo search as 20. Experiments and Results We evaluate our BR-CSGAN on English-German and Chinese-English translation tasks and we test two different architectures for the generator, the traditional RNNSearch and the newly emerged state-of-the-art Transformer.",
+      "We pre-train five discriminators which have the accuracy as 0.6, 0.7, 0.8, 0.9 and 0.95 respectively. With the five discriminators, we train five different BR-CSGAN models (with the generator as RNNSearch and \\lambda set as 0.7) and test their translation performances on the development set at regular intervals. Figure reports the results and we can find that the initial accuracy of the discriminator shows great impacts on the translation performance of the proposed BR-CSGAN.",
+      "Conclusion and Future Work In this work, we propose the BR-CSGAN which leverages the BLEU reinforced generative adversarial net to improve the NMT. We show that the proposed approach is a weighted combination of the naive GAN and MRT. To verify the effectiveness of our approach, we test two different architectures for the generator, the traditional RNNSearch and the state-of-the-art Transformer."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 provides a direct comparison of BLEU scores between MRT and BR-CSGAN, showing the performance difference. Text 2 explains that BR-CSGAN achieves better translation performance than MRT, with specific BLEU score improvements, indicating the effectiveness of the approach.\",\n    \"Answer\": \"BR-CSGAN outperforms MRT in translation performance, achieving higher BLEU scores on both Chinese-English and English-German tasks. The likely reason for this difference is that BR-CSGAN uses a dynamic discriminator and reinforcement learning to optimize translation quality, as opposed to MRT's static objective approach.\"\n}"
+  },
+  "3": {
+    "question": "Which model and configuration achieves the best performance on the Chinese-English translation task, and how much improvement does it offer compared to the baseline RNNSearch model?",
+    "ground_truth": "The Transformer+BR-CSGAN model with \u03bb=0.8 achieves the best performance on the Chinese-English translation task with an average BLEU score of 42.61. This represents an improvement of 0.81 BLEU points compared to the baseline RNNSearch model.",
+    "selected_figures_names": [
+      "1703.04887v4-Table3-1.png",
+      "1703.04887v4-Figure2-1.png",
+      "1703.04887v4-Table2-1.png",
+      "1703.04887v4-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1703.04887v4-Table3-1.png",
+      "1703.04887v4-Figure2-1.png",
+      "1703.04887v4-Table2-1.png",
+      "1703.04887v4-Table1-1.png",
+      "1703.04887v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 2,
+    "rationale": "Image 3 provides a detailed comparison of BLEU scores for different models and configurations, including RNNSearch and Transformer with BR-CSGAN. Text 2 discusses the improvements achieved by BR-CSGAN over the baseline models, which is relevant for understanding the performance gains.",
+    "answer": "The Transformer+BR-CSGAN(\u03bb=0.8) achieves the best performance on the Chinese-English translation task with a BLEU score of 42.61. This offers an improvement of 8.67 BLEU points compared to the baseline RNNSearch model, which has a BLEU score of 33.94.",
+    "text_chunks": [
+      "On the RNNSearch model, the naive GAN (i.e., the line of RNNSearch+BR-CSGAN (\\lambda=1) in table ) achieves improvement up to +1.11 BLEU points averagely on Chinese-English test sets and +0.9 BLEU points on English-German test set. Armed with the BLEU objective, the BR-CSGAN (the line of RNNSearch+BR-CSGAN (\\lambda=0.7)) leads to more significant improvements, +1.83 BLEU points averagely on Chinese-English translation and +1.69 BLEU points on English-German translation. We also test the translation performance when the RNNSearch is only guided by the static BLEU objective (the line of RNNSearch+BR-CSGAN (\\lambda=0)), and we only get +0.58 BLEU points improvement on Chinese-English translation and +0.55 BLEU points improvement on English-German.",
+      "BLEU is utilized as the evaluation metric. We apply the script mteval-v11b.pl to evaluate the Chinese-English translation and utilize the script multi-belu.pl for English-German translation . Main results The model of RNNSearch is optimized with the mini-batch of 64 examples.",
+      "Experiments on the Transformer show the same trends. While the Transformer has achieved state-of-the-art translation performances, our approach still achieves +0.81 BLEU points improvement on Chinese-English translation and +0.62 BLEU points improvement on English-German. These results indicate that the proposed BR-CSGAN consistently outperforms the baselines and it shows better translation performance than the naive GAN and the model guided only by the BLEU objective.",
+      "We perform one optimization step for the discriminator for each step of the generator. In our practice, we set \\xi as 0.82, \\eta as 5000, \\epsilon as 1.0 and the N for Monte Carlo search as 20. Experiments and Results We evaluate our BR-CSGAN on English-German and Chinese-English translation tasks and we test two different architectures for the generator, the traditional RNNSearch and the newly emerged state-of-the-art Transformer.",
+      "We only conduct experiments on the RNNSearch because we only get the open-source implementation of MRT on the RNNSearch . Results show that the proposed BR-CSGAN consistently outperforms the MRT on the Chinese-English and English-German translations. When to stop pre-training The initial accuracy \\xi of the discriminator which is viewed as a hyper-parameter, can be set carefully during the process of pre-training.",
+      "It takes about 30 hours to pre-train the RNNSearch on the Chinese-English data set and 46 hours on the English-German data set. During generative adversarial training, it takes about 35 hours on the Chinese-English data set and about 50 hours on the English-German data set. For the Transformer, each training batch contains a set of sentence pairs containing approximately 25000 source tokens and 25000 target tokens.",
+      "Therefore, there is a trade-off between the accuracy and computation complexity here. We investigate this problem on the Chinese-English translation task. Table presents the translation performance of the BR-CSGAN on the test sets when the N are set from 5 to 30 with interval 5.",
+      "Chinese-English: For Chinese-English translation, our training data consists of 1.6M sentence pairs randomly extracted from LDC corpora . Both the source and target sentences are encoded with byte-pair encoding and the tokens in the source and target vocabulary is about 38000 and 34000 respectively . We choose the NIST02 as the development set."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 2,\n    \"Rationale\": \"Image 3 provides a detailed comparison of BLEU scores for different models and configurations, including RNNSearch and Transformer with BR-CSGAN. Text 2 discusses the improvements achieved by BR-CSGAN over the baseline models, which is relevant for understanding the performance gains.\",\n    \"Answer\": \"The Transformer+BR-CSGAN(\u03bb=0.8) achieves the best performance on the Chinese-English translation task with a BLEU score of 42.61. This offers an improvement of 8.67 BLEU points compared to the baseline RNNSearch model, which has a BLEU score of 33.94.\"\n}"
+  },
+  "4": {
+    "question": "What is the role of the discriminator (D) in the proposed BR-CSGAN model?",
+    "ground_truth": " The discriminator (D) is responsible for distinguishing between real sentence pairs translated by humans and generated sentence pairs produced by the generator (G). It provides feedback to G in the form of rewards, helping G improve its ability to generate realistic sentence pairs.",
+    "selected_figures_names": [
+      "1703.04887v4-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1703.04887v4-Table3-1.png",
+      "1703.04887v4-Figure2-1.png",
+      "1703.04887v4-Table2-1.png",
+      "1703.04887v4-Table1-1.png",
+      "1703.04887v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 7,
+    "rationale": "Image 0 visually represents the role of the discriminator in the BR-CSGAN model, showing its interaction with the generator and the reward process. Text 7 provides a detailed explanation of the discriminator's function, describing how it distinguishes machine-generated sentences from human translations and acts as a dynamic objective.",
+    "answer": "In the BR-CSGAN model, the discriminator (D) is conditioned on the source-language sentences and tries to distinguish machine-generated sentences from human translations. It acts as a dynamic objective, updating synchronously with the generator to provide feedback and guide the generation towards higher BLEU points.",
+    "text_chunks": [
+      "We pre-train five discriminators which have the accuracy as 0.6, 0.7, 0.8, 0.9 and 0.95 respectively. With the five discriminators, we train five different BR-CSGAN models (with the generator as RNNSearch and \\lambda set as 0.7) and test their translation performances on the development set at regular intervals. Figure reports the results and we can find that the initial accuracy of the discriminator shows great impacts on the translation performance of the proposed BR-CSGAN.",
+      "We perform one optimization step for the discriminator for each step of the generator. In our practice, we set \\xi as 0.82, \\eta as 5000, \\epsilon as 1.0 and the N for Monte Carlo search as 20. Experiments and Results We evaluate our BR-CSGAN on English-German and Chinese-English translation tasks and we test two different architectures for the generator, the traditional RNNSearch and the newly emerged state-of-the-art Transformer.",
+      "Specifically, compared to naive GAN which is trained without specific objective guidance, BR-CSGAN utilizes the BLEU objective to guide the generator to generate sentences with higher BLEU points. And compared to MRT which is trained only with the static objective, the BR-CSGAN applies a dynamic discriminator which updates synchronously with the generator, to feedback the dynamic rewards for the generator. Table compares the translation performance between the MRT and BR-CSGAN on Chinese-English and English-German translation tasks.",
+      "Conclusion and Future Work In this work, we propose the BR-CSGAN which leverages the BLEU reinforced generative adversarial net to improve the NMT. We show that the proposed approach is a weighted combination of the naive GAN and MRT. To verify the effectiveness of our approach, we test two different architectures for the generator, the traditional RNNSearch and the state-of-the-art Transformer.",
+      "There are some differences in training strategies and experimental settings between and this work. And the most significant difference is that we propose a novel BLEU-reinforced GAN for NMT. The Approach Model overview In this section, we describe the architecture of the proposed BLEU reinforced conditional sequence generative adversarial net (referred to as BR-CSGAN) in detail.",
+      "It is easy to be found that, under this condition (i.e., \\lambda set as zero), the proposed BR-CSGAN optimizes almost the same objective with MRT. The only difference is that the reinforcement learning procedure is utilized in BR-CSGAN to maximize the total reward and MRT instead applies random sampling to approximate the risk. Actually, the BR-CSGAN is a weighted sum of the naive GAN (\\lambda=1) and MRT (\\lambda=0), and it incorporates the advantages of the two approaches.",
+      "Unfortunately, this objective is usually intractable due to the exponential search space. To alleviate this problem, a subset of the search space is sampled to approximate this objective. In this paper, when we set \\lambda as zero, the objective for the proposed BR-CSGAN comes to where the Q(Y_{1:T, Y^*) is also a loss function between the predicted translation Y_{1:T and the training example Y^*.",
+      "The model mainly consists of three sub modules: Generator Based on the source-language sentences, the generator G aims to generate target-language sentences indistinguishable from human translations. Discriminator The discriminator D, conditioned on the source-language sentences, tries to distinguish the machine-generated sentences from human translations. D can be viewed as a dynamic objective since it is updated synchronously with G. BLEU objective The sentence-level BLEU Q serves as the reinforced objective, guiding the generation towards high BLEU points."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 7,\n    \"Rationale\": \"Image 0 visually represents the role of the discriminator in the BR-CSGAN model, showing its interaction with the generator and the reward process. Text 7 provides a detailed explanation of the discriminator's function, describing how it distinguishes machine-generated sentences from human translations and acts as a dynamic objective.\",\n    \"Answer\": \"In the BR-CSGAN model, the discriminator (D) is conditioned on the source-language sentences and tries to distinguish machine-generated sentences from human translations. It acts as a dynamic objective, updating synchronously with the generator to provide feedback and guide the generation towards higher BLEU points.\"\n}"
+  }
+}

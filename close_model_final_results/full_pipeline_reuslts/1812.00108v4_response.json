@@ -1,0 +1,65 @@
+{
+  "0": {
+    "question": "How does the Multi-DPP module increase diversity within the selected time-steps?",
+    "ground_truth": "The Multi-DPP module increases diversity within the selected time-steps by using a determinantal point process (DPP) to select a subset of diverse time-steps from the input sequence.",
+    "selected_figures_names": [
+      "1812.00108v4-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00108v4-Figure2-1.png",
+      "1812.00108v4-Table3-1.png",
+      "1812.00108v4-Table2-1.png",
+      "1812.00108v4-Table1-1.png",
+      "1812.00108v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image provides a visual representation of the Multi-DPP module, showing how it integrates with other components to increase diversity. The text chunk explains the process of using Multi-DPP to select diverse time-steps.",
+    "answer": "The Multi-DPP module increases diversity within the selected time-steps by using a determinantal point process (DPP) to select diverse subsets of time-steps. This is visually represented in the diagram where Multi-DPP is applied to the outputs of different views, ensuring that the selected time-steps are diverse.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image provides a visual representation of the Multi-DPP module, showing how it integrates with other components to increase diversity. The text chunk explains the process of using Multi-DPP to select diverse time-steps.\",\n    \"Answer\": \"The Multi-DPP module increases diversity within the selected time-steps by using a determinantal point process (DPP) to select diverse subsets of time-steps. This is visually represented in the diagram where Multi-DPP is applied to the outputs of different views, ensuring that the selected time-steps are diverse.\"\n}"
+  },
+  "1": {
+    "question": "How does the performance of the model change as the number of views increases?",
+    "ground_truth": "The performance of the model generally improves as the number of views increases. For example, when the model is trained and tested on two-view data, the F1-score is 29.67. However, when the model is trained and tested on three-view data, the F1-score increases to 30.2. This suggests that the model is able to learn more effectively from data with more views.",
+    "selected_figures_names": [
+      "1812.00108v4-Figure2-1.png",
+      "1812.00108v4-Table3-1.png",
+      "1812.00108v4-Table2-1.png",
+      "1812.00108v4-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00108v4-Figure2-1.png",
+      "1812.00108v4-Table3-1.png",
+      "1812.00108v4-Table2-1.png",
+      "1812.00108v4-Table1-1.png",
+      "1812.00108v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 3,
+    "rationale": "Image 3 and Text 3 provide detailed performance metrics for two-view and three-view settings, showing how the model's precision, recall, and F1-score change with the number of views. This directly addresses the question about performance changes with different view counts.",
+    "answer": "The performance of the model improves as the number of views increases. In the two-view setting, the model achieves a precision of 23.91, recall of 24.72, and F1-score of 24.18. In the three-view setting, the precision is 25.06, recall is 25.79, and F1-score is 25.03. This indicates better performance with more views.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 3,\n    \"Rationale\": \"Image 3 and Text 3 provide detailed performance metrics for two-view and three-view settings, showing how the model's precision, recall, and F1-score change with the number of views. This directly addresses the question about performance changes with different view counts.\",\n    \"Answer\": \"The performance of the model improves as the number of views increases. In the two-view setting, the model achieves a precision of 23.91, recall of 24.72, and F1-score of 24.18. In the three-view setting, the precision is 25.06, recall is 25.79, and F1-score is 25.03. This indicates better performance with more views.\"\n}"
+  },
+  "2": {
+    "question": "Which method achieved the highest F1 score on the Lobby dataset?",
+    "ground_truth": "Ours-supervised achieved the highest F1 score on the Lobby dataset with a score of 93.4.",
+    "selected_figures_names": [
+      "1812.00108v4-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.00108v4-Figure2-1.png",
+      "1812.00108v4-Table3-1.png",
+      "1812.00108v4-Table2-1.png",
+      "1812.00108v4-Table1-1.png",
+      "1812.00108v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "The image contains a table with F1 scores for different methods across various datasets, including the Lobby dataset. This directly answers the question.",
+    "answer": "The 'Ours-supervised' method achieved the highest F1 score on the Lobby dataset with a score of 93.4.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"The image contains a table with F1 scores for different methods across various datasets, including the Lobby dataset. This directly answers the question.\",\n    \"Answer\": \"The 'Ours-supervised' method achieved the highest F1 score on the Lobby dataset with a score of 93.4.\"\n}"
+  }
+}

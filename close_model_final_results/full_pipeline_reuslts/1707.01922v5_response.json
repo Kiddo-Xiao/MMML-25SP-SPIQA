@@ -1,0 +1,212 @@
+{
+  "0": {
+    "question": "What is the difference between testing domain adaptation and testing sensor fusion?",
+    "ground_truth": "In testing domain adaptation, the source and target CNNs are trained on different domains, and the joint classifier is used to predict the class of the target data. In testing sensor fusion, the source and target CNNs are trained on the same domain, and the joint classifier is used to predict the class of the target data using both the source and target data.",
+    "selected_figures_names": [
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table6-1.png",
+      "1707.01922v5-Table3-1.png",
+      "1707.01922v5-Table2-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table5-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 3,
+    "rationale": "Image 2 provides a visual overview of the ZDDA testing procedure, showing both domain adaptation and sensor fusion processes. Text 3 explains the goals of ZDDA, including domain adaptation and sensor fusion, which are relevant to understanding the differences in testing these processes.",
+    "answer": "Testing domain adaptation involves using task-relevant source-domain data to make predictions, while testing sensor fusion involves combining task-relevant dual-domain pairs with noise to make predictions. Domain adaptation focuses on adapting models to new domains, whereas sensor fusion integrates data from multiple sources to improve prediction accuracy.",
+    "text_chunks": [
+      "(2) Given no task-relevant target-domain training data, we show that ZDDA can perform sensor fusion and that ZDDA is more robust to noisy testing data in either source or target or both domains compared with a naive fusion approach in the scene classification task from the SUN RGB-D~ dataset. Related Work Domain adaptation (DA) has been extensively studied in computer vision and applied to various applications such as image classification~, semantic segmentation~, and image captioning~. With the advance of deep neural networks in recent years, the state-of-the-art methods successfully perform DA with (fully or partially) labeled~ or unlabeled~ T-R target-domain data.",
+      "4) Data import/export regulations. Such impractical assumption is also assumed true in the existing works of sensor fusion such as~, where the goal is to obtain a dual-domain (source and target) TOI solution which is robust to noise in either domain. This unsolved issue motivates us to propose zero-shot deep domain adaptation (ZDDA), a DA and sensor fusion approach which learns from the task-irrelevant dual-domain training pairs without using the task-relevant target-domain training data, where we use the term task-irrelevant data to refer to the data which is not task-relevant.",
+      "Although we only use black images as the noise model for ZDDA_3 at training time, we expect that adding different noise models can improve the robustness of ZDDA_3. Conclusion and Future Work We propose zero-shot deep domain adaptation (ZDDA), a novel approach to perform domain adaptation (DA) and sensor fusion with no need of the task-relevant target-domain training data which can be inaccessible in reality. Rather than solving the zero-shot DA problem in general, we aim at solving the problems under the assumption that task-relevant source-domain data and task-irrelevant dual-domain paired data are available.",
+      "Targeting on the temporal data, Yang et al.~ follow the setup of multimodal learning in~, and validate their proposed encoder-decoder architecture using video-sensor and audio-video data. Although certain progress about sensor fusion is achieved in the previous works~, we are unaware of any existing sensor fusion method which overcomes the issue of lacking T-R target-domain training data, which is the issue that ZDDA is designed to solve. Our Proposed Method --- ZDDA Given a task of interest (TOI), a source domain D_s, and a target domain D_t, our proposed method, zero-shot deep domain adaptation (ZDDA), is designed to achieve the following two goals: 1) Domain adaptation: Derive the solutions of the TOI for both D_s and D_t when the T-R training data in D_t is unavailable.",
+      "We use the notation ZDDA_3 to refer to the method using the training procedure in Fig.~ up to step 3 and the testing procedure in Fig.~. Experiment Setup Datasets For domain adaptation (DA), we validate the efficacy of ZDDA under classification tasks using the MNIST~, Fashion-MNIST~, NIST~, EMNIST~, and SUN RGB-D~ datasets. For sensor fusion, we experiment on the SUN RGB-D~ dataset. We summarize the statistics of these datasets in Table~, where we list the dataset IDs which we use to refer to these datasets.",
+      "We assume that we have access to the T-R labeled training data in D_s and the T-I dual-domain pairs in D_s and D_t. 2) Sensor fusion: Given the previous assumption, derive the solution of TOI when the testing data in both D_s and D_t is available. The testing data in either D_s or D_t can be noisy.",
+      "For the baseline of sensor fusion, we compare ZDDA_3 with a naive fusion method by predicting the label with the highest probability from C_{RGB and C_D in Sec.~. Experimental Result We first compare ZDDA_2 with the baseline in four domain adaptation (DA) tasks (adapting from gray scale to RGB images) involving D_M, D_F, D_N, and D_E, and the result is summarized in Table~, where the first two numbers represent the overall/average per class accuracy (\\%). Darker cells in each column represent better classification accuracy in each task. In Table~, the middle four rows represent the performance of ZDDA_2.",
+      "After step 2, we can form the scene classifier in depth/RGB (denoted as C_D/C_{RGB) by concatenating s2/t and the trained source classifier (as shown in Fig.~), which meets our first goal, domain adaptation. We use the notation ZDDA_2 to refer to the method using the training procedure in Fig.~ up to step 2 and the testing procedure in Fig.~. To perform sensor fusion, we propose step 3, where we train a joint classifier for RGB-D input using only the T-R depth training data. We create two CNNs, s3 and s4 (each with the same network architecture as that of CNN_{s\\text{1), and add a concatenation layer on top of them to concatenate their output representations."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 3,\n    \"Rationale\": \"Image 2 provides a visual overview of the ZDDA testing procedure, showing both domain adaptation and sensor fusion processes. Text 3 explains the goals of ZDDA, including domain adaptation and sensor fusion, which are relevant to understanding the differences in testing these processes.\",\n    \"Answer\": \"Testing domain adaptation involves using task-relevant source-domain data to make predictions, while testing sensor fusion involves combining task-relevant dual-domain pairs with noise to make predictions. Domain adaptation focuses on adapting models to new domains, whereas sensor fusion integrates data from multiple sources to improve prediction accuracy.\"\n}"
+  },
+  "1": {
+    "question": "Which method performs better in terms of classification accuracy?",
+    "ground_truth": "ZDDA3",
+    "selected_figures_names": [
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table7-1.png"
+    ],
+    "all_figures_names": [
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Table2-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Figure1-1.png",
+      "1707.01922v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides a direct comparison of classification accuracy between naive fusion and ZDDA3 under different noise conditions, showing that ZDDA3 generally performs better. Text 0 discusses the robustness of ZDDA3 to noisy input, supporting the visual data.",
+    "answer": "ZDDA3 performs better in terms of classification accuracy compared to the naive fusion method.",
+    "text_chunks": [
+      "In Table~, Table~, and Table~, the classification accuracy is reported under the condition of noise-free training and testing data. To let ZDDA be more robust to noisy input, we train ZDDA_3 step 3 with noisy training data (we use p_{train=20 as explained in Sec.~), and evaluate the classification accuracy under different noise conditions for both RGB and depth testing data. The result is presented in Fig.~, where ZDDA_3 (Fig.~) outperforms the naive fusion method (Fig.~) under most conditions, and the performance improvement is shown in Fig.~. Both Fig.~ and Fig.~ show that the performance degradation caused by the noisy depth testing data is larger than that caused by the noisy RGB testing data, which supports that the trained RGB-D classifier relies more on the depth domain.",
+      "For the baseline of sensor fusion, we compare ZDDA_3 with a naive fusion method by predicting the label with the highest probability from C_{RGB and C_D in Sec.~. Experimental Result We first compare ZDDA_2 with the baseline in four domain adaptation (DA) tasks (adapting from gray scale to RGB images) involving D_M, D_F, D_N, and D_E, and the result is summarized in Table~, where the first two numbers represent the overall/average per class accuracy (\\%). Darker cells in each column represent better classification accuracy in each task. In Table~, the middle four rows represent the performance of ZDDA_2.",
+      "Darker cells represent better accuracy in each column. We verify the irrelevance degree between T-R and T-I data by measuring the semantic similarity using the word2vec~ (the same method we use in Table~). For the 10-class experiment in Table~, S(D_S(T-R), D_S(T-I))=0.198 (close to the reference S(object, scene)=0.192), which we believe shows high irrelevance between our T-I and T-R data.",
+      "(2) Given no task-relevant target-domain training data, we show that ZDDA can perform sensor fusion and that ZDDA is more robust to noisy testing data in either source or target or both domains compared with a naive fusion approach in the scene classification task from the SUN RGB-D~ dataset. Related Work Domain adaptation (DA) has been extensively studied in computer vision and applied to various applications such as image classification~, semantic segmentation~, and image captioning~. With the advance of deep neural networks in recent years, the state-of-the-art methods successfully perform DA with (fully or partially) labeled~ or unlabeled~ T-R target-domain data.",
+      "For simplicity, we use E_i to refer to the experiment specified by exp. ID i in this section. For the fully supervised methods in depth domain, ZDDA (E_2, E_3) outperforms the baseline (E_1) due to the extra information brought by the T-I RGB-D pairs.",
+      "\\{D_N, D_N-M\\ and \\{D_E, D_E-M\\ cannot be the T-I data for each other because they are both directly related to the letter classification tasks. Table~ shows that regardless of which T-I data we use, ZDDA_2 significantly outperforms the baseline (source only). To see how the semantic similarity between the T-R dataset (denoted as D_{T-R) and T-I dataset (denoted as D_{T-I) affects the performance, we are inspired by~ and use the word2vec~ to compute the mean similarity (denoted as S) of any two labels from D_{T-R and D_{T-I (one from each).",
+      "The performance of the solution (e.g. the classifier for classification tasks) we learn from one domain often degrades when the same solution is applied to other domains, which is caused by domain shift~ in a typical domain adaptation (DA) task, where source-domain training data, target-domain training data, and a task of interest (TOI) are given. The goal of a DA task is to derive solution(s) of the TOI for both the source and target domains. The state-of-the-art DA methods such as~ are proposed to solve DA tasks under the assumption that the task-relevant data, the data directly applicable and related to the TOI (regardless of whether it is labeled or not), in the target domain is available at training time, which is not always true in practice.",
+      "After step 2, we can form the scene classifier in depth/RGB (denoted as C_D/C_{RGB) by concatenating s2/t and the trained source classifier (as shown in Fig.~), which meets our first goal, domain adaptation. We use the notation ZDDA_2 to refer to the method using the training procedure in Fig.~ up to step 2 and the testing procedure in Fig.~. To perform sensor fusion, we propose step 3, where we train a joint classifier for RGB-D input using only the T-R depth training data. We create two CNNs, s3 and s4 (each with the same network architecture as that of CNN_{s\\text{1), and add a concatenation layer on top of them to concatenate their output representations."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides a direct comparison of classification accuracy between naive fusion and ZDDA3 under different noise conditions, showing that ZDDA3 generally performs better. Text 0 discusses the robustness of ZDDA3 to noisy input, supporting the visual data.\",\n    \"Answer\": \"ZDDA3 performs better in terms of classification accuracy compared to the naive fusion method.\"\n}"
+  },
+  "2": {
+    "question": "What is the role of the task-irrelevant data in ZDDA?",
+    "ground_truth": "The task-irrelevant data is used to simulate the RGB representation using the gray scale image. This allows ZDDA to learn a joint network that can be used to classify digits in both the gray scale and RGB domains.",
+    "selected_figures_names": [
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Figure2-1.png",
+      "1707.01922v5-Table5-1.png",
+      "1707.01922v5-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Figure2-1.png",
+      "1707.01922v5-Table5-1.png",
+      "1707.01922v5-Figure1-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table7-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 5,
+    "rationale": "Image 1 provides a visual overview of the ZDDA training procedure, illustrating how task-irrelevant data is used in the process. Text 5 explains that ZDDA learns from task-irrelevant dual-domain pairs without using task-relevant target-domain training data, highlighting the role of task-irrelevant data in simulating target-domain representation.",
+    "answer": "In ZDDA, task-irrelevant data is used to simulate the target-domain representation by learning from dual-domain pairs. This allows ZDDA to perform domain adaptation and sensor fusion without needing task-relevant target-domain training data.",
+    "text_chunks": [
+      "4) Data import/export regulations. Such impractical assumption is also assumed true in the existing works of sensor fusion such as~, where the goal is to obtain a dual-domain (source and target) TOI solution which is robust to noise in either domain. This unsolved issue motivates us to propose zero-shot deep domain adaptation (ZDDA), a DA and sensor fusion approach which learns from the task-irrelevant dual-domain training pairs without using the task-relevant target-domain training data, where we use the term task-irrelevant data to refer to the data which is not task-relevant.",
+      "In the rest of the paper, we use T-R and T-I as the shorthand of task-relevant and task-irrelevant, respectively. We illustrate what ZDDA is designed to achieve in Fig.~ using an example DA task (MNIST~\\rightarrowMNIST-M~). We recommend that the readers view all the figures and tables in color.",
+      "Our key idea is to use the task-relevant source-domain data to simulate the task-relevant target-domain representations by learning from the task-irrelevant dual-domain pairs. Experimenting on the MNIST~, Fashion-MNIST~, NIST~, EMNIST~, and SUN RGB-D~ datasets, we show that ZDDA outperforms the baselines in DA and sensor fusion even without the task-relevant target-domain training data. In the task adapting from MNIST~ to MNIST-M~, ZDDA can even outperform several state-of-the-art DA methods which require access to the MNIST-M~ training data.",
+      "Although we only use black images as the noise model for ZDDA_3 at training time, we expect that adding different noise models can improve the robustness of ZDDA_3. Conclusion and Future Work We propose zero-shot deep domain adaptation (ZDDA), a novel approach to perform domain adaptation (DA) and sensor fusion with no need of the task-relevant target-domain training data which can be inaccessible in reality. Rather than solving the zero-shot DA problem in general, we aim at solving the problems under the assumption that task-relevant source-domain data and task-irrelevant dual-domain paired data are available.",
+      "One industrial use case which we plan to apply ZDDA to in our follow-up work is training an RGD object classifier given only the textureless CAD models of those objects. In this case, depth and RGB images are source and target domains, respectively. The depth images can be rendered from the provided CAD models, and publicly available RGB-D datasets can serve as the task-irrelevant RGB-D data.",
+      "Although different strategies such as the domain adversarial loss~ and the domain confusion loss~ are proposed to improve the performance in the DA tasks, most of the existing methods need the T-R target-domain training data, which can be unavailable in reality. In contrast, we propose ZDDA to learn from the T-I dual-domain pairs without using the T-R target-domain training data. One part of ZDDA includes simulating the target-domain representation using the source-domain data, and similar concepts have been mentioned in~. However, both of~ require the access to the T-R dual-domain training pairs, but ZDDA needs no T-R target-domain data.",
+      "(2) Given no task-relevant target-domain training data, we show that ZDDA can perform sensor fusion and that ZDDA is more robust to noisy testing data in either source or target or both domains compared with a naive fusion approach in the scene classification task from the SUN RGB-D~ dataset. Related Work Domain adaptation (DA) has been extensively studied in computer vision and applied to various applications such as image classification~, semantic segmentation~, and image captioning~. With the advance of deep neural networks in recent years, the state-of-the-art methods successfully perform DA with (fully or partially) labeled~ or unlabeled~ T-R target-domain data.",
+      "Other problems related to ZDDA include unsupervised domain adaptation (UDA), multi-view learning (MVL), and domain generalization (DG), and we compare their problem settings in Table~, which shows that the ZDDA problem setting is different from those of UDA, MVL, and DG. In UDA and MVL, T-R target-domain training data is given. In MVL and DG, T-R training data in multiple domains is given."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 5,\n    \"Rationale\": \"Image 1 provides a visual overview of the ZDDA training procedure, illustrating how task-irrelevant data is used in the process. Text 5 explains that ZDDA learns from task-irrelevant dual-domain pairs without using task-relevant target-domain training data, highlighting the role of task-irrelevant data in simulating target-domain representation.\",\n    \"Answer\": \"In ZDDA, task-irrelevant data is used to simulate the target-domain representation by learning from dual-domain pairs. This allows ZDDA to perform domain adaptation and sensor fusion without needing task-relevant target-domain training data.\"\n}"
+  },
+  "3": {
+    "question": "What is the key difference between ZDDA and UDA/MVL in terms of the available training data?",
+    "ground_truth": "The key difference lies in the availability of target-domain training data. While UDA and MVL methods require T-R training data from the target domain, ZDDA does not. ZDDA only requires T-R training data from a single source domain.",
+    "selected_figures_names": [
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Figure1-1.png",
+      "1707.01922v5-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Figure1-1.png",
+      "1707.01922v5-Table3-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table5-1.png",
+      "1707.01922v5-Figure2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 visually explains the concept of ZDDA, showing the use of task-irrelevant data for domain adaptation. Text 1 provides a detailed explanation of how ZDDA differs from UDA/MVL by not requiring task-relevant target-domain training data.",
+    "answer": "The key difference is that ZDDA does not require task-relevant target-domain training data, whereas UDA and MVL do require such data.",
+    "text_chunks": [
+      "Other problems related to ZDDA include unsupervised domain adaptation (UDA), multi-view learning (MVL), and domain generalization (DG), and we compare their problem settings in Table~, which shows that the ZDDA problem setting is different from those of UDA, MVL, and DG. In UDA and MVL, T-R target-domain training data is given. In MVL and DG, T-R training data in multiple domains is given.",
+      "However, in ZDDA, T-R target-domain training data is unavailable and the only available T-R training data is in one source domain. We further compare ZDDA with the existing methods relevant to our problem setting in Table~, which shows that among the listed methods, only ZDDA can work under all four conditions. In terms of sensor fusion, Ngiam et al.~ define the three components for multimodal learning (multimodal fusion, cross modality learning, and shared representation learning) based on the modality used for feature learning, supervised training, and testing, and experiment on audio-video data with their proposed deep belief network and autoencoder based method.",
+      "Although different strategies such as the domain adversarial loss~ and the domain confusion loss~ are proposed to improve the performance in the DA tasks, most of the existing methods need the T-R target-domain training data, which can be unavailable in reality. In contrast, we propose ZDDA to learn from the T-I dual-domain pairs without using the T-R target-domain training data. One part of ZDDA includes simulating the target-domain representation using the source-domain data, and similar concepts have been mentioned in~. However, both of~ require the access to the T-R dual-domain training pairs, but ZDDA needs no T-R target-domain data.",
+      "Second, in Table~, we compare ZDDA_2 with the existing DA methods because the DA task D_M\\rightarrow D_M-M is considered as one of the standard experiments in recent works~. Although this is not a fair comparison (because ZDDA_2 has no access to the T-R target-domain training data), we find that ZDDA_2 can reach the accuracy comparable to those of the state-of-the-art methods (even outperform some of them), which supports that ZDDA_2 is a promising DA method when the T-R target-domain training data is unavailable. Third, we test the efficacy of ZDDA on the DA tasks constructed from D_S (adapting from depth to RGB images).",
+      "Specifically, ZDDA achieves this by simulating the RGB representation using the gray scale image and building a joint network with the supervision of the TOI in the gray scale domain. We present the details of ZDDA in Sec.~. We make the following two contributions: (1) To the best of our knowledge, our proposed method, ZDDA, is the first deep learning based method performing domain adaptation between one source image modality and another different target image modality (not just different datasets in the same modality such as the Office dataset~) without using the task-relevant target-domain training data. We show ZDDA's efficacy using the MNIST~, Fashion-MNIST~, NIST~, EMNIST~, and SUN RGB-D~ datasets with cross validation.",
+      "Targeting on the temporal data, Yang et al.~ follow the setup of multimodal learning in~, and validate their proposed encoder-decoder architecture using video-sensor and audio-video data. Although certain progress about sensor fusion is achieved in the previous works~, we are unaware of any existing sensor fusion method which overcomes the issue of lacking T-R target-domain training data, which is the issue that ZDDA is designed to solve. Our Proposed Method --- ZDDA Given a task of interest (TOI), a source domain D_s, and a target domain D_t, our proposed method, zero-shot deep domain adaptation (ZDDA), is designed to achieve the following two goals: 1) Domain adaptation: Derive the solutions of the TOI for both D_s and D_t when the T-R training data in D_t is unavailable.",
+      "Although we only use black images as the noise model for ZDDA_3 at training time, we expect that adding different noise models can improve the robustness of ZDDA_3. Conclusion and Future Work We propose zero-shot deep domain adaptation (ZDDA), a novel approach to perform domain adaptation (DA) and sensor fusion with no need of the task-relevant target-domain training data which can be inaccessible in reality. Rather than solving the zero-shot DA problem in general, we aim at solving the problems under the assumption that task-relevant source-domain data and task-irrelevant dual-domain paired data are available.",
+      "We find that for most listed tasks, ZDDA_3 (E_3) outperforms ZDDA_2 (E_2), which is consistent with our intuition because the source representation in ZDDA_2 is constrained by the L2 loss, while the counterpart in ZDDA_3 is learned without the L2 constraint given the simulated target representation. The fully supervised method in RGB domain (E_6) outperforms the baseline of the domain adaptation (E_4) and ZDDA_2 (E_5) because E_6 has access to the T-R RGB training data which is unavailable for E_4 and E_5. The performance improvement from E_4 to E_5 is caused by ZDDA_2's training procedure as well as the extra T-I RGB-D training pairs."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 visually explains the concept of ZDDA, showing the use of task-irrelevant data for domain adaptation. Text 1 provides a detailed explanation of how ZDDA differs from UDA/MVL by not requiring task-relevant target-domain training data.\",\n    \"Answer\": \"The key difference is that ZDDA does not require task-relevant target-domain training data, whereas UDA and MVL do require such data.\"\n}"
+  },
+  "4": {
+    "question": "If you are performing domain adaptation with ZDDA using AlexNet as the base network architecture and $D_F$ as the target domain, which layers of the network would be considered part of the source CNN and which would be part of the source classifier?",
+    "ground_truth": "In this scenario, the source CNN would consist of the AlexNet architecture up to and including the \"fc7\" layer. The remaining layers of AlexNet would then be used as the source classifier.",
+    "selected_figures_names": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1707.01922v5-Figure3-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table9-1.png",
+      "1707.01922v5-Table3-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Figure1-1.png",
+      "1707.01922v5-Table6-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 provides the base network architecture details, including the layer separation for AlexNet. Text 0 discusses the architecture and layer separation in the context of ZDDA.",
+    "answer": "For AlexNet, the layers up to 'fc7' are part of the source/target CNN, and the rest are part of the source classifier.",
+    "text_chunks": [
+      "When experimenting on different scene classification tasks using different selections of scenes, we only use the training/testing data associated with those selected scenes as the T-R data. Training Details We use Caffe~ to implement ZDDA. Table~ lists the base network architecture (BNA) we use and the layer separating the source/target CNN and the source classifier in Fig.~. For instance, in the case when the BNA is LeNet~, the architecture of each source/target CNN in Fig.~ is the LeNet~ architecture up to the ``ip1\" layer, and the rest of the LeNet~ architecture is used as the source classifier.",
+      "For the DA tasks involving D_M, D_F, D_N, and D_E, we use the LeNet~ as the BNA and train all the CNNs in Fig.~ from scratch except that the target CNN is pre-trained from the T-I dataset and fixed afterwards. For example, when using D_F and D_F-M as the T-I data in the DA task D_M\\rightarrow D_M-M, we train a CNN (denoted as CNN_{ref) with the LeNet~ architecture from scratch using the images and labels of D_F-M, and pre-train the target CNNs in Fig.~ from CNN_{ref. We follow similar procedures for other DA tasks and T-I datasets involving D_M, D_F, D_N, and D_E.",
+      "After step 2, we can form the scene classifier in depth/RGB (denoted as C_D/C_{RGB) by concatenating s2/t and the trained source classifier (as shown in Fig.~), which meets our first goal, domain adaptation. We use the notation ZDDA_2 to refer to the method using the training procedure in Fig.~ up to step 2 and the testing procedure in Fig.~. To perform sensor fusion, we propose step 3, where we train a joint classifier for RGB-D input using only the T-R depth training data. We create two CNNs, s3 and s4 (each with the same network architecture as that of CNN_{s\\text{1), and add a concatenation layer on top of them to concatenate their output representations.",
+      "When the BNA is LeNet~, we train the classifier from scratch. For the other BNAs, we pre-train the classifier in the same way as that described in Sec.~. After training, for each DA task, we get two fully supervised classifiers C_{fs,s and C_{fs,t in the source and target domains respectively. For the baseline of the DA task, we directly feed the target-domain testing images to C_{fs,s to obtain the performance without applying any DA method.",
+      "One industrial use case which we plan to apply ZDDA to in our follow-up work is training an RGD object classifier given only the textureless CAD models of those objects. In this case, depth and RGB images are source and target domains, respectively. The depth images can be rendered from the provided CAD models, and publicly available RGB-D datasets can serve as the task-irrelevant RGB-D data.",
+      "For the experiment involving D_S, we mostly use GoogleNet~ as the BNA, but we also use AlexNet~ and SqueezeNet\\_v1.1~ in the cross validation experiment with respect to different BNAs. Since only limited amount of RGB-D pairs are available in D_S, we pre-train all the CNNs in Fig.~ from the BVLC GoogleNet model~, BVLC AlexNet model~, and the reference SqueezeNet model~ when the BNA is GoogleNet~, AlexNet~, and SqueezeNet\\_v1.1~, respectively. These pre-trained models are trained for the ImageNet~ classification task.",
+      "Specifically, ZDDA achieves this by simulating the RGB representation using the gray scale image and building a joint network with the supervision of the TOI in the gray scale domain. We present the details of ZDDA in Sec.~. We make the following two contributions: (1) To the best of our knowledge, our proposed method, ZDDA, is the first deep learning based method performing domain adaptation between one source image modality and another different target image modality (not just different datasets in the same modality such as the Office dataset~) without using the task-relevant target-domain training data. We show ZDDA's efficacy using the MNIST~, Fashion-MNIST~, NIST~, EMNIST~, and SUN RGB-D~ datasets with cross validation.",
+      "After the training procedure in Fig.~, we can form three scene classifiers in RGB, depth, and RGB-D domains (one classifier per domain), and our trained RGB-D classifier is expected to be able to handle noisy input with reasonable performance degradation. The 3-step training procedure of ZDDA in Fig.~ can be framed as an end-to-end training process with proper learning curriculum. We separate these 3 steps due to the ease of explanation."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 provides the base network architecture details, including the layer separation for AlexNet. Text 0 discusses the architecture and layer separation in the context of ZDDA.\",\n    \"Answer\": \"For AlexNet, the layers up to 'fc7' are part of the source/target CNN, and the rest are part of the source classifier.\"\n}"
+  },
+  "5": {
+    "question": "Which of the following statements about the training procedure of ZDDA is true?\n\n(a) ZDDA simulates the target-domain representation using the source-domain data. (b) ZDDA builds a joint network with the supervision from the target domain. (c) ZDDA trains a sensor fusion network in step 1. (d) ZDDA trains a sensor fusion network in step 2.",
+    "ground_truth": "(a) ZDDA simulates the target-domain representation using the source-domain data.",
+    "selected_figures_names": [
+      "1707.01922v5-Figure2-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1707.01922v5-Figure2-1.png",
+      "1707.01922v5-Figure4-1.png",
+      "1707.01922v5-Table7-1.png",
+      "1707.01922v5-Table1-1.png",
+      "1707.01922v5-Table3-1.png",
+      "1707.01922v5-Table8-1.png",
+      "1707.01922v5-Table4-1.png",
+      "1707.01922v5-Table5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a visual overview of the ZDDA training procedure, showing the steps involved, including simulating the target representation and training a sensor fusion network. Text 0 describes the training procedure of ZDDA, including simulating the RGB representation using the depth image and building a joint network.",
+    "answer": "(a) ZDDA simulates the target-domain representation using the source-domain data.",
+    "text_chunks": [
+      "According to the our previous assumption, we have access to the T-R labeled depth data and T-I RGB-D pairs at training time. The training procedure of ZDDA is illustrated in Fig.~, where we simulate the RGB representation using the depth image, build a joint network with the supervision of the TOI in depth images, and train a sensor fusion network in step 1, step 2, and step 3 respectively. We use the ID marked at the bottom of each convolutional neural networks (CNN) in Fig.~ to refer to each CNN.",
+      "Although different strategies such as the domain adversarial loss~ and the domain confusion loss~ are proposed to improve the performance in the DA tasks, most of the existing methods need the T-R target-domain training data, which can be unavailable in reality. In contrast, we propose ZDDA to learn from the T-I dual-domain pairs without using the T-R target-domain training data. One part of ZDDA includes simulating the target-domain representation using the source-domain data, and similar concepts have been mentioned in~. However, both of~ require the access to the T-R dual-domain training pairs, but ZDDA needs no T-R target-domain data.",
+      "However, in ZDDA, T-R target-domain training data is unavailable and the only available T-R training data is in one source domain. We further compare ZDDA with the existing methods relevant to our problem setting in Table~, which shows that among the listed methods, only ZDDA can work under all four conditions. In terms of sensor fusion, Ngiam et al.~ define the three components for multimodal learning (multimodal fusion, cross modality learning, and shared representation learning) based on the modality used for feature learning, supervised training, and testing, and experiment on audio-video data with their proposed deep belief network and autoencoder based method.",
+      "After step 2, we can form the scene classifier in depth/RGB (denoted as C_D/C_{RGB) by concatenating s2/t and the trained source classifier (as shown in Fig.~), which meets our first goal, domain adaptation. We use the notation ZDDA_2 to refer to the method using the training procedure in Fig.~ up to step 2 and the testing procedure in Fig.~. To perform sensor fusion, we propose step 3, where we train a joint classifier for RGB-D input using only the T-R depth training data. We create two CNNs, s3 and s4 (each with the same network architecture as that of CNN_{s\\text{1), and add a concatenation layer on top of them to concatenate their output representations.",
+      "Specifically, ZDDA achieves this by simulating the RGB representation using the gray scale image and building a joint network with the supervision of the TOI in the gray scale domain. We present the details of ZDDA in Sec.~. We make the following two contributions: (1) To the best of our knowledge, our proposed method, ZDDA, is the first deep learning based method performing domain adaptation between one source image modality and another different target image modality (not just different datasets in the same modality such as the Office dataset~) without using the task-relevant target-domain training data. We show ZDDA's efficacy using the MNIST~, Fashion-MNIST~, NIST~, EMNIST~, and SUN RGB-D~ datasets with cross validation.",
+      "(2) Given no task-relevant target-domain training data, we show that ZDDA can perform sensor fusion and that ZDDA is more robust to noisy testing data in either source or target or both domains compared with a naive fusion approach in the scene classification task from the SUN RGB-D~ dataset. Related Work Domain adaptation (DA) has been extensively studied in computer vision and applied to various applications such as image classification~, semantic segmentation~, and image captioning~. With the advance of deep neural networks in recent years, the state-of-the-art methods successfully perform DA with (fully or partially) labeled~ or unlabeled~ T-R target-domain data.",
+      "Targeting on the temporal data, Yang et al.~ follow the setup of multimodal learning in~, and validate their proposed encoder-decoder architecture using video-sensor and audio-video data. Although certain progress about sensor fusion is achieved in the previous works~, we are unaware of any existing sensor fusion method which overcomes the issue of lacking T-R target-domain training data, which is the issue that ZDDA is designed to solve. Our Proposed Method --- ZDDA Given a task of interest (TOI), a source domain D_s, and a target domain D_t, our proposed method, zero-shot deep domain adaptation (ZDDA), is designed to achieve the following two goals: 1) Domain adaptation: Derive the solutions of the TOI for both D_s and D_t when the T-R training data in D_t is unavailable.",
+      "Although we only use black images as the noise model for ZDDA_3 at training time, we expect that adding different noise models can improve the robustness of ZDDA_3. Conclusion and Future Work We propose zero-shot deep domain adaptation (ZDDA), a novel approach to perform domain adaptation (DA) and sensor fusion with no need of the task-relevant target-domain training data which can be inaccessible in reality. Rather than solving the zero-shot DA problem in general, we aim at solving the problems under the assumption that task-relevant source-domain data and task-irrelevant dual-domain paired data are available."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a visual overview of the ZDDA training procedure, showing the steps involved, including simulating the target representation and training a sensor fusion network. Text 0 describes the training procedure of ZDDA, including simulating the RGB representation using the depth image and building a joint network.\",\n    \"Answer\": \"(a) ZDDA simulates the target-domain representation using the source-domain data.\"\n}"
+  }
+}

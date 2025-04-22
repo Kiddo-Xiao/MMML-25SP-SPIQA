@@ -1,0 +1,229 @@
+{
+  "0": {
+    "question": "What is the range of values for the context number hyperparameter?",
+    "ground_truth": "The range of values for the context number hyperparameter is from 1 to 20.",
+    "selected_figures_names": [
+      "1901.00056v2-Table5-1.png"
+    ],
+    "all_figures_names": [
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 directly shows the hyperparameter settings, including the range for the context number. Text 1 mentions varying hyperparameters, which supports the information in the image.",
+    "answer": "The range of values for the context number hyperparameter is {1, 3, 5, 10, 15, 20}.",
+    "text_chunks": [
+      "Figure shows the performance curves when we vary one hyperparameter while keeping the remaining fixed. As the number of contexts P increases, the model generally performs better. Due to limitations on computing resources, we are only able to verify the performance of up to 20 pieces of randomly sampled contexts.",
+      "The Context Encoder gives the model an average of 3.17\\% improvement in AUC on all three datasets, and up to 5.17\\% improvement in MAP. \\paragraph{Hyperparameters We train the proposed model with a wide range of hyperparameter configurations, as shown in Table . For the model architecture, we vary the number of randomly sampled contexts",
+      "P=Q for each entity from 1 to 20. Each piece of context is chunked by a maximum length of T. For the context encoder, we vary the hidden dimension d_{CE from 8 to 1024. The margin value m in triplet loss function is varied from 0.1 to 1.75.",
+      "[{\\mathbf{\\overset{\\lower0.5em\\hbox{\\smash{\\scriptscriptstyle\\rightarrow{\\mathbf{h^{(t_e)_p , {\\mathbf{\\overset{\\lower0.5em\\hbox{\\smash{\\scriptscriptstyle\\leftarrow{\\mathbf{h^{(t_e)_p ], where t_e is the index of the entity word e in the context and \\mathbf{h_p\\in\\mathbb{R^{1\\times d_{CE. By doing this, the context encoder summarizes the context while explicitly considers the entity's location in the context. Note that more advanced and sophisticated encoding methods can be used, such as ElMo, BERT, or XLNet.",
+      "= (w^{(1)_{p, ..., w^{(T)_{p), where T is the length of the context, which varies from one instance to another. {w^{(t)_{p is the t-th word in the p-th context retrieved for an entity e. Context Encoder For the p-th context c_p, an encoder tries to learn a continuous vector that represents the context. For example, a recurrent neural network (RNN) such as a bidirectional LSTM (Bi-LSTM) can be applied to sequentially encode the context into hidden states: \\end{equation where \\mathbf{w^{(t)_{p is the word embedding vector used for the word w^{(t)_{p.",
+      "The model achieves the best AUC and MAP when the maximum context length T=50: longer contexts may introduce noise while shorter contexts may be less informative. Related Works \\paragraph{Synonym Discovery The synonym discovery focuses on detecting entity synonyms. Most existing works try to achieve this goal by learning from structured information such as query logs .",
+      "They utilize user click-through data and learn query/document embeddings for information retrieval and web search ranking tasks. Although the above methods achieve decent performance on sentence-level matching, the sentence matching task is different from context modeling for synonym discovery in essence. Context matching focuses on local information, while the overall sentence could contain much more information, which is useful to represent the sentence-level semantics, but can be quite noisy for context modeling.",
+      "We denote the retrieved contexts for e as a set C=\\{c_1,...,c_P\\, where P is the number of context pieces. Each piece of context c_p \\in C contains a sequence of words c_p"
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 directly shows the hyperparameter settings, including the range for the context number. Text 1 mentions varying hyperparameters, which supports the information in the image.\",\n    \"Answer\": \"The range of values for the context number hyperparameter is {1, 3, 5, 10, 15, 20}.\"\n}"
+  },
+  "1": {
+    "question": "What is the effect of increasing the margin on the AUC and MAP values?",
+    "ground_truth": "The AUC and MAP values initially increase with increasing margin, but then decrease after a certain point.",
+    "selected_figures_names": [
+      "1901.00056v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 7,
+    "rationale": "Image 0 shows the effect of varying the margin on AUC and MAP values, which is directly related to the question. Text 7 discusses the impact of margin in the context of the model's performance, making it relevant to understanding how margin affects AUC and MAP.",
+    "answer": "Increasing the margin initially improves AUC and MAP values, but after a certain point, further increases in margin lead to a decrease in both AUC and MAP values.",
+    "text_chunks": [
+      "The Context Encoder gives the model an average of 3.17\\% improvement in AUC on all three datasets, and up to 5.17\\% improvement in MAP. \\paragraph{Hyperparameters We train the proposed model with a wide range of hyperparameter configurations, as shown in Table . For the model architecture, we vary the number of randomly sampled contexts",
+      "Performance Evaluation We report Area Under the Curve (AUC) and Mean Average Precision (MAP) in Table . From the upper part of Table we can see that {\\modelname performances consistently better than those from baselines on three datasets.",
+      "The last hidden states in both forward and backward directions in Bi-LSTM are concatenated; ``w/o Leaky Unit\" does not have the ability to ignore uninformative contexts during the bilateral matching process: all contexts retrieved based on the entity, whether informative or not, are utilized in bilateral matching. From the lower part of Table we can see that both modules (Leaky Unit and the Context Encoder) contribute to the effectiveness of the model. The leaky unit contributes 1.72\\% improvement in AUC and 2.61\\% improvement in MAP on the Wiki dataset when trained with the triplet objective.",
+      "The model achieves the best AUC and MAP when the maximum context length T=50: longer contexts may introduce noise while shorter contexts may be less informative. Related Works \\paragraph{Synonym Discovery The synonym discovery focuses on detecting entity synonyms. Most existing works try to achieve this goal by learning from structured information such as query logs .",
+      "The numbers with \\dag markers in Table indicate that the improvement is significant with p<0.05. Table shows a case for entity \\texttt{UNGA. In the upper part of Table , candidate entities are generated with nearest neighbor search on pretrained word embeddings using skip-gram.",
+      "A novel neural network model {\\modelname is introduced for synonym detection, which tries to determine whether or not two given entities are synonym with each other. {\\modelname makes use of multiple pieces of contexts in which each entity is mentioned, and compares the context-level similarity via a bilateral matching schema to determine synonymity. Experiments on three real-world datasets show that the proposed method {\\modelname has the ability to discover synonym entities effectively on both generic and domain-specific datasets with an improvement up to 4.16\\% in AUC and 3.19\\% in MAP.",
+      "During testing, we also sample random entity pairs as negative samples to evaluate the performance. Note that all test synonym entities are from unobserved groups of synonym entities: none of the test entities is observed in the training data. The area under the curve (AUC) and Mean Average Precision (MAP) are used to evaluate the model.",
+      "For L_{-(e,k), it remains zero when s(\\mathbf{\\bar h ,\\mathbf{\\bar g) is smaller than a margin m. Otherwise L_{-(e,k) increases as s(\\mathbf{\\bar h ,\\mathbf{\\bar g) becomes larger. \\noindentTriplet Architecture The Siamese loss makes the model assign rational pairs with absolute high scores and irrational ones with low scores, while the rationality of entity synonymity could be dynamic based on entities and contexts."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 7,\n    \"Rationale\": \"Image 0 shows the effect of varying the margin on AUC and MAP values, which is directly related to the question. Text 7 discusses the impact of margin in the context of the model's performance, making it relevant to understanding how margin affects AUC and MAP.\",\n    \"Answer\": \"Increasing the margin initially improves AUC and MAP values, but after a certain point, further increases in margin lead to a decrease in both AUC and MAP values.\"\n}"
+  },
+  "2": {
+    "question": "Which model and training objective combination performs best on the PubMed + UMLS dataset, and how does it compare to the DPE baseline?",
+    "ground_truth": "The SYNONYMNET(Pairwise) model with Leaky Unit performs best on the PubMed + UMLS dataset, achieving an AUC of 0.9838 and a MAP of 0.9872. This is a statistically significant improvement over the DPE baseline, which achieved an AUC of 0.9513 and a MAP of 0.9623.",
+    "selected_figures_names": [
+      "1901.00056v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1901.00056v2-Figure1-1.png",
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides a detailed comparison of model performances on the PubMed + UMLS dataset, showing AUC and MAP values. Text 3 discusses the performance evaluation metrics used, which are relevant for understanding the comparison.",
+    "answer": "The SYNONYMNET (Pairwise) model performs best on the PubMed + UMLS dataset with an AUC of 0.9838 and MAP of 0.9827. Compared to the DPE baseline, which has an AUC of 0.9422 and MAP of 0.9393, SYNONYMNET shows significant improvement.",
+    "text_chunks": [
+      "{\\modelname with the triplet training objective achieves the best performance on Wiki +Freebase, while the Siamese objective works better on PubMed + UMLS and MedBook + MKG. Word2vec is generally performing better than GloVe. SRNs achieve decent performance on PubMed + UMLS and MedBook + MKG.",
+      "This is probably because the synonym entities obtained from the medical domain tend to share more character-level similarities, such as \\texttt{6-aminohexanoic acid and \\texttt{aminocaproic acid. However, even if the character-level features are not explicitly used in our model, our model still performances better, by exploiting multiple pieces of contexts effectively. DPE has the best performance among other baselines, by annotating each piece of context with dependency parsing results.",
+      "The PubMed is an English dataset where 0.82M research paper abstracts are collected from PubMed and UMLS contains existing entity synonym information in the medical domain. The {Wiki + FreeBase and {PubMed + UMLS are public available datasets used in previous synonym discovery tasks . The MedBook is a Chinese dataset collected by authors where we collect 0.51M pieces of contexts from Chinese medical textbooks as well as online medical question answering forums.",
+      "Performance Evaluation We report Area Under the Curve (AUC) and Mean Average Precision (MAP) in Table . From the upper part of Table we can see that {\\modelname performances consistently better than those from baselines on three datasets.",
+      "We adopt MaLSTM by feeding the character-level sequence to the model. Unlike SRN that uses Bi-LSTM, MaLSTM uses a single direction LSTM and l-1 norm is used to measure the distance between two entities. (5) DPE : a model that utilizes dependency parsing results as the structured annotation on a single piece of context for synonym discovery.",
+      "Synonym entities in the medical domain are obtained from MKG, a medical knowledge graph. Table shows the dataset statistics. \\paragraph{Preprocessing Wiki +Freebase and PubMed + UMLS come with entities and synonym entity annotations, we adopt the Stanford CoreNLP package to do the tokenization.",
+      "The last hidden states in both forward and backward directions in Bi-LSTM are concatenated; ``w/o Leaky Unit\" does not have the ability to ignore uninformative contexts during the bilateral matching process: all contexts retrieved based on the entity, whether informative or not, are utilized in bilateral matching. From the lower part of Table we can see that both modules (Leaky Unit and the Context Encoder) contribute to the effectiveness of the model. The leaky unit contributes 1.72\\% improvement in AUC and 2.61\\% improvement in MAP on the Wiki dataset when trained with the triplet objective.",
+      "For the training, we try different optimizers, vary batch sizes and learning rates. We apply random search to obtain the best-performing hyperparameter setting on the validation dataset, listed in Table . Furthermore, we provide sensitivity analysis of the proposed model with different hyperparameters in Wiki + Freebase dataset in Figure ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides a detailed comparison of model performances on the PubMed + UMLS dataset, showing AUC and MAP values. Text 3 discusses the performance evaluation metrics used, which are relevant for understanding the comparison.\",\n    \"Answer\": \"The SYNONYMNET (Pairwise) model performs best on the PubMed + UMLS dataset with an AUC of 0.9838 and MAP of 0.9827. Compared to the DPE baseline, which has an AUC of 0.9422 and MAP of 0.9393, SYNONYMNET shows significant improvement.\"\n}"
+  },
+  "3": {
+    "question": "Which dataset has the most entities?",
+    "ground_truth": "MedBook + MKG",
+    "selected_figures_names": [
+      "1901.00056v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Figure1-1.png",
+      "1901.00056v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "The image provides a table with dataset statistics, including the number of entities for each dataset. Text chunk 2 mentions the datasets and their use in synonym discovery tasks, which supports understanding the context of the datasets.",
+    "answer": "The MedBook + MKG dataset has the most entities with 32,002.",
+    "text_chunks": [
+      "The candidate entity e_{NN is considered as a synonym to the query entity e when it receives a higher score s(e, e_{NN) than other non-synonym entities, or exceeds a specific threshold. Experiments Experiment Setup \\paragraph{Datasets Three datasets are prepared to show the effectiveness of the proposed model on synonym discovery. The Wiki dataset contains 6.8M documents from Wikipedia with generic synonym entities obtained from Freebase.",
+      "Synonym entities in the medical domain are obtained from MKG, a medical knowledge graph. Table shows the dataset statistics. \\paragraph{Preprocessing Wiki +Freebase and PubMed + UMLS come with entities and synonym entity annotations, we adopt the Stanford CoreNLP package to do the tokenization.",
+      "The PubMed is an English dataset where 0.82M research paper abstracts are collected from PubMed and UMLS contains existing entity synonym information in the medical domain. The {Wiki + FreeBase and {PubMed + UMLS are public available datasets used in previous synonym discovery tasks . The MedBook is a Chinese dataset collected by authors where we collect 0.51M pieces of contexts from Chinese medical textbooks as well as online medical question answering forums.",
+      "A novel neural network model {\\modelname is introduced for synonym detection, which tries to determine whether or not two given entities are synonym with each other. {\\modelname makes use of multiple pieces of contexts in which each entity is mentioned, and compares the context-level similarity via a bilateral matching schema to determine synonymity. Experiments on three real-world datasets show that the proposed method {\\modelname has the ability to discover synonym entities effectively on both generic and domain-specific datasets with an improvement up to 4.16\\% in AUC and 3.19\\% in MAP.",
+      "The numbers with \\dag markers in Table indicate that the improvement is significant with p<0.05. Table shows a case for entity \\texttt{UNGA. In the upper part of Table , candidate entities are generated with nearest neighbor search on pretrained word embeddings using skip-gram.",
+      "Thus it is imperative to focus on multiple pieces of contexts with a dynamic matching schema. In light of these challenges, we propose a framework to discover synonym entities from a massive corpus without additional structured annotations. A neural network model {\\modelname is proposed to detect entity synonyms based on two given entities via a bilateral matching among multiple pieces of contexts in which each entity appears.",
+      "assume that entities are given as structured records extracted from texts, where each entity record provides contextual information about the entity. The goal is to determine whether two entities are the same by comparing and aligning their attributes. We discover synonym entities without such structured annotations.",
+      "The entity representations are learned based on the GloVe algorithm. The classifier is trained with the same scoring function Score_D, but with the learned glove embedding for synonym discovery. (3) SRN : a character-level approach that uses a siamese multi-layer bi-directional recurrent neural networks to encode the entity as a sequence of characters."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"The image provides a table with dataset statistics, including the number of entities for each dataset. Text chunk 2 mentions the datasets and their use in synonym discovery tasks, which supports understanding the context of the datasets.\",\n    \"Answer\": \"The MedBook + MKG dataset has the most entities with 32,002.\"\n}"
+  },
+  "4": {
+    "question": "What are the four steps involved in the synonym discovery process using {\\modelname}?",
+    "ground_truth": " The four steps involved in the synonym discovery process are: \n\n1. **Entity representation learning:** Learn entity representations from the corpus using WEMBED.\n2. **NN search:** Perform a nearest neighbor search to find candidate entities for the query entity.\n3. **Synonym score calculation:** Calculate the synonym score between the query entity and each candidate entity using SYNONYM NET.\n4. **Synonym entity discovery:** Select the candidate entities with the highest synonym scores as the discovered synonym entities.",
+    "selected_figures_names": [
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table5-1.png"
+    ],
+    "all_figures_names": [
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Table6-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 both provide insights into the synonym discovery process using the {\u007fmodelname}. Image 2 shows the candidate entities and the final entities with their scores, which is part of the process. Text 2 describes the steps involved, including ranking entities and calculating scores.",
+    "answer": "The four steps involved in the synonym discovery process using {\u007fmodelname} are: 1) Ranking entities by their embedding proximities with the query entity. 2) Fetching multiple pieces of contexts for each candidate entity and the query entity. 3) Feeding these contexts into the {\u007fmodelname} model. 4) Calculating a synonym score based on bilateral matching with leaky units over multiple contexts.",
+    "text_chunks": [
+      "A novel neural network model {\\modelname is introduced for synonym detection, which tries to determine whether or not two given entities are synonym with each other. {\\modelname makes use of multiple pieces of contexts in which each entity is mentioned, and compares the context-level similarity via a bilateral matching schema to determine synonymity. Experiments on three real-world datasets show that the proposed method {\\modelname has the ability to discover synonym entities effectively on both generic and domain-specific datasets with an improvement up to 4.16\\% in AUC and 3.19\\% in MAP.",
+      "The model achieves the best AUC and MAP when the maximum context length T=50: longer contexts may introduce noise while shorter contexts may be less informative. Related Works \\paragraph{Synonym Discovery The synonym discovery focuses on detecting entity synonyms. Most existing works try to achieve this goal by learning from structured information such as query logs .",
+      "Ranking entities by their embedding proximities with the query entity significantly narrows down the search space for synonym discovery. In the third step, for each candidate entity e_{NN \\in E_{NN and the query entity e, we randomly fetch multiple pieces of contexts in which entities are mentioned, and feed them into the proposed {\\modelname model. In the last step, {\\modelname calculates a score s(e, e_{NN) based on the bilateral matching with leaky units over multiple pieces of contexts.",
+      "The lower part of Table shows the discovered synonym entities by refining the candidates using the proposed {\\modelname model, where a threshold score of 0.8 is used. \\paragraph{Ablation Study To study the contribution of different modules of {\\modelname for synonym discovery, we also report ablation test results in the lower part of Table . ``with Bi-LSTM Encoder\" uses Bi-LSTM as the context encoder.",
+      "Here for simplicity, we adopt 200-dimensional word vectors using skip-gram . Context window is set as 5 with a negative sampling of 5 words for training. \\paragraph{Evaluation Metrics For synonym detection using {\\modelname and other alternatives, we train the models with existing synonym and randomly sampled entity pairs as negative samples.",
+      "We utilize context-aware word representations to obtain candidate entities that narrow down the search space. The {\\modelname verifies entity synonymity by assigning a synonym score for two entities based on multiple pieces of contexts. The overall framework is described in Figure .",
+      "Thus it is imperative to focus on multiple pieces of contexts with a dynamic matching schema. In light of these challenges, we propose a framework to discover synonym entities from a massive corpus without additional structured annotations. A neural network model {\\modelname is proposed to detect entity synonyms based on two given entities via a bilateral matching among multiple pieces of contexts in which each entity appears.",
+      "\\modelname We introduce {\\modelname, our proposed model that detects whether or not two entities are synonyms to each other based on a bilateral matching between multiple pieces of contexts in which entities appear. Figure gives an overview of the proposed model. Context Retriever For each entity e, the context retriever randomly fetches P pieces of contexts from the corpus D in which the entity appears."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 both provide insights into the synonym discovery process using the {\\u007fmodelname}. Image 2 shows the candidate entities and the final entities with their scores, which is part of the process. Text 2 describes the steps involved, including ranking entities and calculating scores.\",\n    \"Answer\": \"The four steps involved in the synonym discovery process using {\\u007fmodelname} are: 1) Ranking entities by their embedding proximities with the query entity. 2) Fetching multiple pieces of contexts for each candidate entity and the query entity. 3) Feeding these contexts into the {\\u007fmodelname} model. 4) Calculating a synonym score based on bilateral matching with leaky units over multiple contexts.\"\n}"
+  },
+  "5": {
+    "question": "What is the role of the Leaky Unit in the SYNONYMNET model?",
+    "ground_truth": "The Leaky Unit helps to aggregate the context information from different sources and allows the model to learn the relationships between entities and their contexts.",
+    "selected_figures_names": [
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Figure1-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides a visual overview of the SYNONYMNET model, showing how the leaky unit is integrated into the bilateral matching process. Text 3 explains the role of the leaky unit in routing uninformative contexts, which is crucial for understanding its function in the model.",
+    "answer": "The leaky unit in the SYNONYMNET model is used during bilateral matching to route uninformative contexts, preventing them from being forced to match with informative contexts. This helps in effectively handling noise and improving the model's performance in synonym detection.",
+    "text_chunks": [
+      "A leaky unit is designed to explicitly alleviate the noises from uninformative context during the matching process. We generate synonym entities that are completely unseen during training in the experiments. The contribution of this work is summarized as follows:",
+      "The leaky unit is a dummy vector \\mathbf{l \\in \\mathbb{R^{1\\times d_{CE, where its representation can be either trained with the whole model for each task/dataset, or kept as a fixed zero vector. We adopt the later design for simplicity. If we use the H\\rightarrowG matching phrase as an example, the matching score from the leaky unit \\mathbf{l to the q-th encoded context in \\mathbf{g_q is: If there is any uninformative context in H, say the {\\tilde p-th encoded context, \\mathbf{h_{\\tilde p will contribute less when matched with \\mathbf{g_q due to the leaky effect: when \\mathbf{h_{\\tilde p is less informative than the leaky unit \\mathbf{l.",
+      "The last hidden states in both forward and backward directions in Bi-LSTM are concatenated; ``w/o Leaky Unit\" does not have the ability to ignore uninformative contexts during the bilateral matching process: all contexts retrieved based on the entity, whether informative or not, are utilized in bilateral matching. From the lower part of Table we can see that both modules (Leaky Unit and the Context Encoder) contribute to the effectiveness of the model. The leaky unit contributes 1.72\\% improvement in AUC and 2.61\\% improvement in MAP on the Wiki dataset when trained with the triplet objective.",
+      "Not all contexts are informative during the matching for two given entities. Some contexts may contain intricate contextual information even if they mention the entity explicitly. In this work, we introduce a leaky unit during the bilateral matching, so that uninformative contexts can be routed via the leaky unit rather than forced to be matched with any informative contexts.",
+      "In context matching, missing such property could be unsatisfactory as noisy contexts exist among multiple contexts for an entity. We adopt a bilateral matching which involves a leaky unit to explicitly deal with uninformative contexts while preserving the expression diversity from multiple pieces of contexts. Conclusions In this paper, we propose a framework for synonym discovery from free-text corpus in an open-world setting.",
+      "The encoder itself is not the main focus of this work. Bilateral Matching with Leaky Unit Considering the base case, where we want to identify whether or not two entities, say e and k, are synonyms with each other, we propose to find the consensus information from multiple pieces of contexts via a bilateral matching schema. Recall that for entity e, P pieces of contexts H = \\{\\mathbf{h_1, \\mathbf{h_2, ..., \\mathbf{h_{P\\ are randomly fetched and encoded.",
+      "Ranking entities by their embedding proximities with the query entity significantly narrows down the search space for synonym discovery. In the third step, for each candidate entity e_{NN \\in E_{NN and the query entity e, we randomly fetch multiple pieces of contexts in which entities are mentioned, and feed them into the proposed {\\modelname model. In the last step, {\\modelname calculates a score s(e, e_{NN) based on the bilateral matching with leaky units over multiple pieces of contexts.",
+      "A novel neural network model {\\modelname is introduced for synonym detection, which tries to determine whether or not two given entities are synonym with each other. {\\modelname makes use of multiple pieces of contexts in which each entity is mentioned, and compares the context-level similarity via a bilateral matching schema to determine synonymity. Experiments on three real-world datasets show that the proposed method {\\modelname has the ability to discover synonym entities effectively on both generic and domain-specific datasets with an improvement up to 4.16\\% in AUC and 3.19\\% in MAP."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides a visual overview of the SYNONYMNET model, showing how the leaky unit is integrated into the bilateral matching process. Text 3 explains the role of the leaky unit in routing uninformative contexts, which is crucial for understanding its function in the model.\",\n    \"Answer\": \"The leaky unit in the SYNONYMNET model is used during bilateral matching to route uninformative contexts, preventing them from being forced to match with informative contexts. This helps in effectively handling noise and improving the model's performance in synonym detection.\"\n}"
+  },
+  "6": {
+    "question": "Which dataset and evaluation metric combination shows the largest performance gap between the best performing model and the baseline model DPE?",
+    "ground_truth": "The largest performance gap is observed in the PubMed + UMLS dataset using the F1@K metric with K=1.",
+    "selected_figures_names": [
+      "1901.00056v2-Table4-1.png"
+    ],
+    "all_figures_names": [
+      "1901.00056v2-Table3-1.png",
+      "1901.00056v2-Table1-1.png",
+      "1901.00056v2-Table5-1.png",
+      "1901.00056v2-Table6-1.png",
+      "1901.00056v2-Figure2-1.png",
+      "1901.00056v2-Table4-1.png",
+      "1901.00056v2-Figure3-1.png",
+      "1901.00056v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 provides a table with performance metrics for different datasets, which is directly relevant to evaluating performance gaps. Text 6 discusses performance metrics and statistical significance tests, which are useful for understanding performance differences.",
+    "answer": "The largest performance gap between the best performing model and the baseline model DPE is observed in the PubMed + UMLS dataset using the R@K metric.",
+    "text_chunks": [
+      "This is probably because the synonym entities obtained from the medical domain tend to share more character-level similarities, such as \\texttt{6-aminohexanoic acid and \\texttt{aminocaproic acid. However, even if the character-level features are not explicitly used in our model, our model still performances better, by exploiting multiple pieces of contexts effectively. DPE has the best performance among other baselines, by annotating each piece of context with dependency parsing results.",
+      "Performance Evaluation We report Area Under the Curve (AUC) and Mean Average Precision (MAP) in Table . From the upper part of Table we can see that {\\modelname performances consistently better than those from baselines on three datasets.",
+      "We adopt MaLSTM by feeding the character-level sequence to the model. Unlike SRN that uses Bi-LSTM, MaLSTM uses a single direction LSTM and l-1 norm is used to measure the distance between two entities. (5) DPE : a model that utilizes dependency parsing results as the structured annotation on a single piece of context for synonym discovery.",
+      "{\\modelname with the triplet training objective achieves the best performance on Wiki +Freebase, while the Siamese objective works better on PubMed + UMLS and MedBook + MKG. Word2vec is generally performing better than GloVe. SRNs achieve decent performance on PubMed + UMLS and MedBook + MKG.",
+      "For the training, we try different optimizers, vary batch sizes and learning rates. We apply random search to obtain the best-performing hyperparameter setting on the validation dataset, listed in Table . Furthermore, we provide sensitivity analysis of the proposed model with different hyperparameters in Wiki + Freebase dataset in Figure .",
+      "Figure shows the performance curves when we vary one hyperparameter while keeping the remaining fixed. As the number of contexts P increases, the model generally performs better. Due to limitations on computing resources, we are only able to verify the performance of up to 20 pieces of randomly sampled contexts.",
+      "However, the dependency parsing results could be error-prone for the synonym discovery task, especially when two entities share the similar usage but with different semantics, such as \\texttt{NBA finals and \\texttt{NFL playoffs. Table reports the performance on Synonym Discovery in P@K, R@K, and F1@K. We conduct statistical significance tests to validate the performance improvement. The single-tailed t-test is performed for all experiments, which measures whether or not the results from the proposed model are significantly better than ones from baselines.",
+      "The candidate entity e_{NN is considered as a synonym to the query entity e when it receives a higher score s(e, e_{NN) than other non-synonym entities, or exceeds a specific threshold. Experiments Experiment Setup \\paragraph{Datasets Three datasets are prepared to show the effectiveness of the proposed model on synonym discovery. The Wiki dataset contains 6.8M documents from Wikipedia with generic synonym entities obtained from Freebase."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 provides a table with performance metrics for different datasets, which is directly relevant to evaluating performance gaps. Text 6 discusses performance metrics and statistical significance tests, which are useful for understanding performance differences.\",\n    \"Answer\": \"The largest performance gap between the best performing model and the baseline model DPE is observed in the PubMed + UMLS dataset using the R@K metric.\"\n}"
+  }
+}

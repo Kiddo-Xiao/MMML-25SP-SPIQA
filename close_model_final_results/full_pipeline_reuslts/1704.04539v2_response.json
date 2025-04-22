@@ -1,0 +1,118 @@
+{
+  "0": {
+    "question": "What is the relationship between the Silver Snatch and the Gold Snatch?",
+    "ground_truth": "The Silver Snatch and the Gold Snatch are positively correlated. As the Gold Snatch increases, the Silver Snatch also increases.",
+    "selected_figures_names": [
+      "1704.04539v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure4-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 provides a comparison of Silver, Gold, and Cycle Smatch scores across different systems and languages, which is directly relevant to understanding their relationship. Text 4 discusses the correlation between Silver and Gold evaluations, providing insight into their reliability and relationship.",
+    "answer": "The Silver Smatch score has a lower correlation with the Gold Smatch score compared to the Full-cycle evaluation. The Pearson correlation coefficient is 0.47 for Silver and 0.95 for Full-cycle, indicating that Full-cycle is a more reliable proxy for Gold evaluation than Silver.",
+    "text_chunks": [
+      "A good proxy for gold evaluation should rank different systems similarly. We hence computed the Kendall-tau score , a measure for similarity between permutations, of the rankings extracted from Table 1. The results further confirm that full-cycle approximate gold better than silver does: the score is 0.40 for silver and 0.82 for full-cycle.",
+      "It looks for the best alignment between the predicted AMR and the reference AMR and it then computes precision, recall and F_1 of their edges. The original English parser achieves 65\\% Smatch score on the test split of LDC2015E86. Full-cycle and gold evaluations use the same dataset, while silver evaluation is performed on the split of the parallel corpora we reserved for testing.",
+      "Figure~ shows linear regression lines. Unlike silver, full-cycle uses the same dataset as gold evaluation and it does not contain parsing mistakes, which makes it more reliable than silver. Interestingly, if we ignore the scores obtained for Chinese, the correlation between silver and gold dramatically increases, perhaps indicating that Europarl is more suitable than the UN corpus for this task: the Pearson coefficient becomes 0.97 for full-cycle and 0.87 for silver.",
+      "SILVER uses a parsed parallel corpus as reference (``Ref''), FULL-CYCLE uses the English gold standard (Gold e) and GOLD uses the target language gold standard we collected (Silver f). \\end{figure* Experiments We run experiments on four languages: Italian, Spanish, German and Chinese.",
+      "\\paragraph{Are silver and full-cycle evaluations reliable? We computed the Pearson correlation coefficients for the Smatch scores of Table~ to determine how well silver and full-cycle correlate with gold evaluation. Full-cycle correlates better than silver: the Pearson coefficient is 0.95 for full-cycle and 0.47 for silver.",
+      "Full cycle introduces additional noise but it is not as expensive as gold and is more reliable than silver. Related Work AMR parsing for languages other than English has made only a few steps forward. In previous work , nodes of the target graph were labeled with either English words or with words in the target language.",
+      "\\caption{Description of SILVER, FULL-CYCLE and GOLD evaluations. e stands for English and f stands for the target (foreign) language. Dashed lines represent the process of transferring learning across languages (e.g. with annotation projection).",
+      "We hypothesize that the full-cycle score can be used as a more reliable proxy than the silver score for evaluating the target parser. We provide evidence to this claim by comparing the three evaluation procedures (silver, full-cycle, and gold) across languages and parsers. Our main contributions are: Cross-lingual AMR parsing AMR is a semantic representation heavily biased towards English, where labels for nodes and edges are either English words or Propbank frames ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 provides a comparison of Silver, Gold, and Cycle Smatch scores across different systems and languages, which is directly relevant to understanding their relationship. Text 4 discusses the correlation between Silver and Gold evaluations, providing insight into their reliability and relationship.\",\n    \"Answer\": \"The Silver Smatch score has a lower correlation with the Gold Smatch score compared to the Full-cycle evaluation. The Pearson correlation coefficient is 0.47 for Silver and 0.95 for Full-cycle, indicating that Full-cycle is a more reliable proxy for Gold evaluation than Silver.\"\n}"
+  },
+  "1": {
+    "question": "Which system performs best on the IT domain in terms of full-cycle Smatch score, and how does its performance compare to the projection-based system in the same domain?",
+    "ground_truth": "The GT system achieves the highest full-cycle Smatch score in the IT domain with a score of 59. This is 14 points higher than the projection-based system in the same domain, which scored 45.",
+    "selected_figures_names": [
+      "1704.04539v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure4-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides the Smatch scores for different systems across domains, including the IT domain. Text 5 explains the full-cycle evaluation process, which is relevant to understanding the context of the scores.",
+    "answer": "In the IT domain, the GT system performs best in terms of full-cycle Smatch score with a score of 59. Compared to the projection-based system, which has a score of 45, the GT system performs significantly better.",
+    "text_chunks": [
+      "Results are shown in Table~. The Google Translate system outperforms all other systems, but is not directly comparable to them, as it has the unfair advantage of being trained on a much larger dataset. Due to noisy {JAMR alignments and silver training data involved in the annotation projection approach, the MT-based systems give in general better parsing results. The BLEU scores of all translation systems are shown in Table~. There are several sources of noise in the annotation projection method, which affect the parsing results: 1) the parsers are trained on silver data obtained by an automatic parser for English; 2) the projection uses noisy word alignments; % 3) the AMR alignments on the source side are also noisy; 4) translation divergences exist between the languages, making it sometimes difficult to project the annotation without loss of information.",
+      "\\paragraph{Are silver and full-cycle evaluations reliable? We computed the Pearson correlation coefficients for the Smatch scores of Table~ to determine how well silver and full-cycle correlate with gold evaluation. Full-cycle correlates better than silver: the Pearson coefficient is 0.95 for full-cycle and 0.47 for silver.",
+      "A good proxy for gold evaluation should rank different systems similarly. We hence computed the Kendall-tau score , a measure for similarity between permutations, of the rankings extracted from Table 1. The results further confirm that full-cycle approximate gold better than silver does: the score is 0.40 for silver and 0.82 for full-cycle.",
+      "We hypothesize that the full-cycle score can be used as a more reliable proxy than the silver score for evaluating the target parser. We provide evidence to this claim by comparing the three evaluation procedures (silver, full-cycle, and gold) across languages and parsers. Our main contributions are: Cross-lingual AMR parsing AMR is a semantic representation heavily biased towards English, where labels for nodes and edges are either English words or Propbank frames .",
+      "It looks for the best alignment between the predicted AMR and the reference AMR and it then computes precision, recall and F_1 of their edges. The original English parser achieves 65\\% Smatch score on the test split of LDC2015E86. Full-cycle and gold evaluations use the same dataset, while silver evaluation is performed on the split of the parallel corpora we reserved for testing.",
+      "\\paragraph{FULL-CYCLE In order to perform the evaluation on a gold test set, we propose full-cycle evaluation: after learning the target parser from the English parser, we invert this process to learn a new English parser from the target parser, in the same way that we learned the target parser from the English parser. The resulting English parser is then evaluated against the (English) AMR gold standard.",
+      "Figure~ shows linear regression lines. Unlike silver, full-cycle uses the same dataset as gold evaluation and it does not contain parsing mistakes, which makes it more reliable than silver. Interestingly, if we ignore the scores obtained for Chinese, the correlation between silver and gold dramatically increases, perhaps indicating that Europarl is more suitable than the UN corpus for this task: the Pearson coefficient becomes 0.97 for full-cycle and 0.87 for silver.",
+      "The full-cycle procedure is not limited to AMR parsing and could be used for other cross-lingual problems in NLP. The results of the projection-based AMR parsers indicate that there is a vast room for improvements, especially in terms of generating better alignments. We encourage further work in this direction by releasing professional translations of the AMR test set into four languages."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides the Smatch scores for different systems across domains, including the IT domain. Text 5 explains the full-cycle evaluation process, which is relevant to understanding the context of the scores.\",\n    \"Answer\": \"In the IT domain, the GT system performs best in terms of full-cycle Smatch score with a score of 59. Compared to the projection-based system, which has a score of 45, the GT system performs significantly better.\"\n}"
+  },
+  "2": {
+    "question": "Which translation system performs the best and how does its performance compare to Google Translate (GT)? Is the comparison with GT completely fair? Explain your answer.",
+    "ground_truth": "According to Table 2, Moses achieves the highest BLEU scores among the listed translation systems (Moses, Nematus) across all language pairs. However, its performance still falls behind Google Translate (GT) in every case.\n\nThe comparison with GT might not be entirely fair because, as GT has the advantage of being trained on a significantly larger dataset. This suggests that GT's performance advantage might be partially due to its training data rather than solely its inherent capabilities.",
+    "selected_figures_names": [
+      "1704.04539v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure4-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides BLEU scores for different translation systems, showing their performance. Text 0 explains that Google Translate outperforms other systems but has an unfair advantage due to a larger training dataset.",
+    "answer": "Google Translate (GT) performs the best among the translation systems, as shown by the higher BLEU scores in Image 0. However, the comparison is not completely fair because GT has access to a much larger training dataset, giving it an advantage over the other systems.",
+    "text_chunks": [
+      "Results are shown in Table~. The Google Translate system outperforms all other systems, but is not directly comparable to them, as it has the unfair advantage of being trained on a much larger dataset. Due to noisy {JAMR alignments and silver training data involved in the annotation projection approach, the MT-based systems give in general better parsing results. The BLEU scores of all translation systems are shown in Table~. There are several sources of noise in the annotation projection method, which affect the parsing results: 1) the parsers are trained on silver data obtained by an automatic parser for English; 2) the projection uses noisy word alignments; % 3) the AMR alignments on the source side are also noisy; 4) translation divergences exist between the languages, making it sometimes difficult to project the annotation without loss of information.",
+      "We also propose an alternative approach, where Machine Translation (MT) is used to translate the input sentences into English so that an available English AMR parser can be employed. This method is an even quicker solution which only requires translation models between the target languages and English. Due to the lack of gold standard in the target languages, we exploit the English data to evaluate the parsers for the target languages.",
+      "In order to experiment with the approach of Section~, we experimented with translations from Google Translate.. As Google Translate has access to a much larger training corpus, we also trained baseline MT models using Moses and Nematus , with the same training data we use for the projection method and default hyper-parameters. Smatch is used to evaluate AMR parsers.",
+      "If the automatic translation is close to the reference translation, then the predicted AMR graph will be close to the reference AMR graph. It is therefore evident that this method is not informative in terms of the cross-lingual properties of AMR. However, its simplicity makes it a compelling engineering solution for parsing other languages.",
+      "Qualitative analysis showed that the parsers are able to overcome translational divergence and that concept identification must be more accurate in order to provide good parsing results. We therefore argue that the suboptimal performance of the parsers in terms of Smatch scores is due to the many sources of noise in the annotation projection approach rather than instability of AMR across languages. We provide strong evidence that cross-lingual AMR parsing is indeed feasible and hope that the release of the gold standard test sets will motivate further work in this direction.",
+      "We apply this method to project existing AMR annotations to other languages, which are then used to train the target parsers. Method 2: Machine Translation We invoke an MT system to translate the sentence into English so that we can use an available English parser to obtain its AMR graph. Naturally, the quality of the output graph depends on the quality of the translations.",
+      "A comparison with this work is difficult, as the authors do not report results for the parsers (due to the lack of an annotated corpus) or release their code. Besides AMR, other semantic parsing frameworks for non-English languages have been investigated . \\newcite{evangcross is the most closely related to our work as it uses a projection mechanism similar to ours for CCG.",
+      "We call this ``full-cycle'' evaluation. Similarly to \\newcite{evangcross, we also directly evaluate the target parser on ``silver'' data, obtained by parsing the English side of a parallel corpus. In order to assess the reliability of these evaluation methods, we collected gold standard datasets for Italian, Spanish, German and Chinese by acquiring professional translations of the AMR gold standard data to these languages."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides BLEU scores for different translation systems, showing their performance. Text 0 explains that Google Translate outperforms other systems but has an unfair advantage due to a larger training dataset.\",\n    \"Answer\": \"Google Translate (GT) performs the best among the translation systems, as shown by the higher BLEU scores in Image 0. However, the comparison is not completely fair because GT has access to a much larger training dataset, giving it an advantage over the other systems.\"\n}"
+  },
+  "3": {
+    "question": "What is the difference between the parsing trees for \"I like eating\" and \"I like grapes\"?",
+    "ground_truth": "The parsing tree for \"I like eating\" has only one argument, while the parsing tree for \"I like grapes\" has two arguments.",
+    "selected_figures_names": [
+      "1704.04539v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1704.04539v2-Figure3-1.png",
+      "1704.04539v2-Figure4-1.png",
+      "1704.04539v2-Figure5-1.png",
+      "1704.04539v2-Table1-1.png",
+      "1704.04539v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 and Text 2 both discuss the parsing of 'I like eating' and 'I like grapes' in terms of head swapping and thematic divergence, respectively. Image 0 visually represents these divergences, while Text 2 explains the head swapping in 'I like eating'.",
+    "answer": "The parsing tree for 'I like eating' involves head swapping, where 'like' is the head of 'eating' in English, but in German, the dependency is inverted ('Ich esse gern'). For 'I like grapes', there is a thematic divergence where the semantic roles are inverted in Spanish ('Me gustan uvas'), with 'I' as the object instead of the subject.",
+    "text_chunks": [
+      "Unlike all other examples, in this case, the German parser does not cope well with this divergence: it is unable to recognize like-01 as the main concept in the sentence, as shown in Figure~d. \\paragraph{Thematic. Finally, the parse of Figure~f has to deal with a thematic divergence, which happens when the semantic roles of a predicate are inverted. In the sentence I like grapes, translated to Spanish as Me gustan uvas, I is the subject in English while Me is the object in Spanish.",
+      "Even though we note an erroneous reentrant edge between grape and I, the thematic divergence does not create problems: the parser correctly recognizes the :ARG0 relationship between like-01 and I and the :ARG1 relationship between like-01 and grape. In this case, the edge labels are important, as this type of divergence is concerned with the semantic roles. \\caption{Parsing examples in several languages involving common translational divergence phenomena: (a) contains a categorical divergence, (b) and (e) conflational divergences, (c) a structural divergence, (d) an head swapping and (f) a thematic divergence.",
+      "\\paragraph{Head swapping. This divergence occurs when the direction of the dependency between two words is inverted. For example, I like eating, where like is head of eating, becomes Ich esse gern (I eat likingly) in German, where the dependency is inverted.",
+      "\\paragraph{Categorical. This divergence happens when two languages use different POS tags to express the same meaning. For example, the English sentence I am jealous of you is translated into Spanish as Tengo envidia de ti (I have jealousy of you).",
+      "Introduction Abstract Meaning Representation (AMR) parsing is the process of converting natural language sentences into their corresponding AMR representations . An AMR is a graph with nodes representing the concepts of the sentence and edges representing the semantic relations between them. Most available AMR datasets large enough to train statistical models consist of pairs of English sentences and AMR graphs.",
+      "\\caption{Description of SILVER, FULL-CYCLE and GOLD evaluations. e stands for English and f stands for the target (foreign) language. Dashed lines represent the process of transferring learning across languages (e.g. with annotation projection).",
+      "A crucial difference is that, in order to project CCG parse trees to the target languages, they only make use of literal translation. Previous work has also focused on assessing the stability across languages of semantic frameworks such as AMR , UCCA and Propbank . Cross-lingual techniques can cope with the lack of labeled data on languages when this data is available in at least one language, usually English.",
+      "Figure~e shows that also this divergence is dealt properly by the Italian parser: ho paura correctly triggers the root fear-01. \\paragraph{Structural. This divergence happens when verb arguments result in different syntactic configurations, for example, due to an additional PP attachment."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 and Text 2 both discuss the parsing of 'I like eating' and 'I like grapes' in terms of head swapping and thematic divergence, respectively. Image 0 visually represents these divergences, while Text 2 explains the head swapping in 'I like eating'.\",\n    \"Answer\": \"The parsing tree for 'I like eating' involves head swapping, where 'like' is the head of 'eating' in English, but in German, the dependency is inverted ('Ich esse gern'). For 'I like grapes', there is a thematic divergence where the semantic roles are inverted in Spanish ('Me gustan uvas'), with 'I' as the object instead of the subject.\"\n}"
+  }
+}

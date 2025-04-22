@@ -1,0 +1,346 @@
+{
+  "0": {
+    "question": "What is the effect of downsampling on the quality of reconstructed frames?",
+    "ground_truth": "Downsampling reduces the quality of reconstructed frames.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure6-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 shows the video quality assessment scores (PSNR, SSIM, MS-SSIM) for different resolutions, indicating how quality improves with higher resolution. Text 0 discusses the scaling sizes used in downsampling and their effect on frame size, which is directly related to the quality of reconstructed frames.",
+    "answer": "Downsampling reduces the spatial resolution of frames, which can decrease the quality of reconstructed frames. However, as the resolution increases, the quality scores (PSNR, SSIM, MS-SSIM) improve, indicating better reconstruction quality.",
+    "text_chunks": [
+      "To simplify experiments, the downsampler only scaled the frames by factors for 4 \\times 4 and 8 \\times 8. Quality of reconstructed downsampled frame To study the relative qualities of reconstructed frames using different levels of {downsampling, we employed three scaling sizes, (1,1), (4,4) and (8,8). Hence, an original frame of size 256\\times256, became 256\\times256, 64\\times64, and 32\\times32, respectively (Figure~).",
+      "Let S and Q_k denote the outputs of the downsampler and the soft edge detector, and x_I' and x_G be the outputs of the lossless compressor respectively. The downsampling step reduces the spatial resolution of each frame, but does not affect the number of frames. The purpose of downsampling is to produce a more compact representation that is easier to compress.",
+      "Quality of reconstructed quantized frame We also examined the relationship between the quality of reconstructed frames and the level of quantization delivered by the soft edge detector (see Section~). As a toy example, assume E_1=E_2=I, i.e, X_I=X_I'. E_2 taken to the soft edge detector with quantization level k (Q_k) without any downsampling (Figure~).",
+      "In addition, at the second stage of encoding we fixed soft edge detector with quantization level 2 (Q_2) without lossless compression, to isolate the effects of downsampling. As the scaling size was increased, the reconstructed frames became more recognizable (Figure~). Accordingly, the measured VQA scores also increased monotonously, as the size of x_G was increased (Table~).",
+      "It is quite possible that in this context, conventional VQA models may not accurately predict the subjective quality of GAN-compressed videos. As shown in Figure , our scheme apparently reconstructs frames of better quality than H.264. For example, H.264 compressed at 7.00 Kbps resulted in unrecognizable reconstructed frames (many blurred blocks), while our model at 6.51 Kbps yielded more detailed frames than even H.264 at 11 Kbps.",
+      "At higher bitrates, our model produces competitive visual results but worse VQA scores. Much of the reason for this is that the representations created by the GAN, while visually accurate, are not guided to be pixel-wise accurate, particularly on image textures. Our approach is re-establishing the importance of edges in modern DNN-based video compression architectures.",
+      "This is likely because the GAN-based compressor produces representations that appear very similar to the original, but differ numerically, e.g., over textured regions composed of similar, but differently arranged elements. This suggests that novel quality assessment metrics, designed for video based DNNs, are a worthy research area for further investigation. Our video compression experiments are focused on very low bitrate ranges (3-30 Kbps) and encoding resolutions (256 \\times 256).",
+      "We employed an 8 \\times 8 downsampler and the Q_8 soft edge detector. As a method of objective quantitative analysis, the scores produced by several leading perceptual video quality metrics (PSNR, mean SSIM, mean MS-SSIM, and VMAF scores) were plotted for the reconstructed videos. The red curves denotes the results of our model, while the blue curves are those for H.264."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 shows the video quality assessment scores (PSNR, SSIM, MS-SSIM) for different resolutions, indicating how quality improves with higher resolution. Text 0 discusses the scaling sizes used in downsampling and their effect on frame size, which is directly related to the quality of reconstructed frames.\",\n    \"Answer\": \"Downsampling reduces the spatial resolution of frames, which can decrease the quality of reconstructed frames. However, as the resolution increases, the quality scores (PSNR, SSIM, MS-SSIM) improve, indicating better reconstruction quality.\"\n}"
+  },
+  "1": {
+    "question": "How does the proposed method compare to H.264 in terms of MS-SSIM score at low bitrates?",
+    "ground_truth": "The proposed method achieves significantly higher MS-SSIM scores than H.264 at bitrates below 10 Kbps.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure7-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 shows a comparison of MS-SSIM scores between the proposed model and H.264 at low bitrates, which is directly relevant to the question. Text 1 discusses the performance of the proposed model compared to H.264, specifically highlighting the MS-SSIM scores at low bitrates.",
+    "answer": "The proposed method achieves significantly higher MS-SSIM scores than H.264 at low bitrates.",
+    "text_chunks": [
+      "Our codec (4th row) delivered significantly better visual quality at low bitrates than did H.264. As a method of objective quantitative analysis, VQA metrics were plotted on the right side of Figure~. For example, our model achieved MS-SSIM of 0.9188 at 8.33 Kbps, while H.264 resulted in MS-SSIM score of 0.8884 at 13 Kbps. Since most of the videos in the KTH dataset contain simple, repeated object movements, we further validated our model on a variety of videos from the YouTube dataset~, contain more diverse activities and impredictable movements.",
+      "The red curves correspond to our model while the blue curves represent the performance of H.264. Notably, in the below 10 Kbps, our scheme achieved significantly higher MS-SSIM scores than did H.264. Similar results were observed on PSNR, SSIM and VMAF (please see Supplementary material).",
+      "However, the VQA scores were often lower for our model than for H.264. For example, Figure (b) plots the temporal evolution of objective video quality scores on seven consecutive frames. Remarkably, although the visual appearance of the video compressed by our model was much better than the H.264 result, the PSNR and SSIM scores at 6.51 Kbps (red lines) yielded a reverse relationship against H.264 at 7.00 and 11.00 Kbps (black and blue lines respectively).",
+      "Our model was able to achieve much higher video quality scores below 10 Kbps than did H.264. Interestingly, our codec was able to successfully compress the video at less than 7.5 Kbps, while H.264 failed (no output). To examine the performance of the proposed method, we implemented an experiment on videos from four semantic categories in the KTH ~. Figure~ plots RD curves of bitrate against VQA scores for 100 videos.",
+      "We employed an 8 \\times 8 downsampler and the Q_8 soft edge detector. As a method of objective quantitative analysis, the scores produced by several leading perceptual video quality metrics (PSNR, mean SSIM, mean MS-SSIM, and VMAF scores) were plotted for the reconstructed videos. The red curves denotes the results of our model, while the blue curves are those for H.264.",
+      "In our experiments, our scheme achieved fair performance using only a very small number of key frames, e.g., \\alpha=1\\%. In the experiments in the coming sections, we set \\alpha \\leq 1.5\\%. Comparison with H.264 One of our experimental results is summarized in Figure~; seven consecutive frames from an original video and three compressed videos: (1) H.264 at 7.62 Kbps, (2) H.264 at 10.36 Kbps, and (3) our model at 7.14 Kbps, are depicted.",
+      "\\caption{Two videos from (a) the KTH and (b) the YouTube dataset. Selected frames from original video and reconstructed videos using H.264 (low bitrate), H.264 (high bitrate), and the proposed model are aligned vertically along time. Our scheme demonstrated significantly better performance than the current standard codecs at low bitrates.",
+      "Our model delivered noticeably better quality at the lowest bitrate than H.264. To train our network using a conditional GAN, 80 key frames (N_I=80) were collected from a single video having 8000 frames (\\alpha=1\\%), and assigned 2.02 Kbps of the overall 7.14 Kbps. Seven test frames were not included in the training set."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 shows a comparison of MS-SSIM scores between the proposed model and H.264 at low bitrates, which is directly relevant to the question. Text 1 discusses the performance of the proposed model compared to H.264, specifically highlighting the MS-SSIM scores at low bitrates.\",\n    \"Answer\": \"The proposed method achieves significantly higher MS-SSIM scores than H.264 at low bitrates.\"\n}"
+  },
+  "2": {
+    "question": "What is the purpose of the second-stage decoder $D_2$?",
+    "ground_truth": "The second-stage decoder $D_2$ takes soft edges $x_G$ as input and produces reconstructed frames.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure2-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 provides a visual representation of the framework involving the second-stage decoder D2, showing its role in the process. Text 6 explains how D2 is trained using a GAN and a discriminator, highlighting its purpose in learning associations between key frames and soft edge maps.",
+    "answer": "The purpose of the second-stage decoder D2 is to reconstruct frames using soft edge maps as input, by learning associations between key frames and these maps through a conditional GAN framework.",
+    "text_chunks": [
+      "Implementation ~Architecture of {\\boldmath{D_2: The second stage of the decoder D_2 is trained by a discriminator D_D. In our experiments, the original frames were re-sized and cropped to size 2^8\\times2^8 over eight consequent layers. A stride size of 2\\times2 was used when training the DNNs.",
+      "Once D_2 is trained, it can be guided by the soft edge maps x_G to reconstruct the G-frames X_G (non-key frames), which the decoder has never seen before. When the soft edge map contains more information, it can guide the decoder to reconstruct frames with better quality. Second stage encoder, E_2 The second encoding stage is composed of a downsampler and a soft edge detector which feeds a lossless compressor (see Figure ).",
+      "As shown in Figure ), we achieve a 4.95\\times compression gain over JBIG2, across all 567 frames for a given test video. Second stage decoder, D_2 We utilize the conditional GAN framework of Isola \\etal~ to train the decompressor D_2 and discriminator D_D by parsing the compressed data x_i' into both original data X_I' and decompressed data \\hat{X_I in an adversarial manner. Note that only key frames are used to train D_2 and D_D (Figure~).",
+      "Here, we implement E_1/D_1 using a conventional H.264 encoder (decoder), which is efficient and performs very well for key frame compression. If every frame is selected as a key frame, then our scheme degenerates to a frame-based H.264 encoder, without any motion prediction/compensation. The second encoding stage is significantly different and involves a series of steps: down-sampling, soft edge detection and a novel spatio-temporal edge map compression scheme (see Figure ).",
+      "If n(X_I)<N, then X_I' and X_G further follow a second stage of encoding; the encoder E_2 encodes X_I' and (X_G) to generate x_I' and x_G. Then, the second stage decoder (D2), decodes x_I' and x_G, yielding the reconstructions \\hat{X_I and (\\hat{X_G). Notably, we can use any conventional codec to implement E_1/ D_1.",
+      "Our model can be implemented using any options for resizing and cropping. The batch size and the number of epochs were fixed at 1 and 1000, respectively. ~Architecture of {\\boldmath{E_2: The second stage encoder E_2 has a predetermined structure composed of a downsampler, the soft edge detector and the lossless compressor (Figure ).",
+      "The corresponding decoder D_2 is trained using a GAN and a discriminator D_D. Naturally, the encoder E_2 cannot learn evolving representations of non-key frames using information from key frames only. Hence, we employ a conditional GAN to train D_2 using pairs of key frames and their corresponding soft edge maps. During training, D_2 learns associations between the key frames and the soft edge maps.",
+      "This generative model is trained at the receiver using x'_I and X'_I using a discriminator D_D. After training, D_2 takes soft edges x_G as input and produces reconstructed frames (see also Figure ). Only x_I and x_G are required to reconstruct the decompressed video. \\end{figure*"
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 provides a visual representation of the framework involving the second-stage decoder D2, showing its role in the process. Text 6 explains how D2 is trained using a GAN and a discriminator, highlighting its purpose in learning associations between key frames and soft edge maps.\",\n    \"Answer\": \"The purpose of the second-stage decoder D2 is to reconstruct frames using soft edge maps as input, by learning associations between key frames and these maps through a conditional GAN framework.\"\n}"
+  },
+  "3": {
+    "question": "What are the steps involved in the second encoding stage ($E_2$)?",
+    "ground_truth": "The second encoding stage involves three steps: down-sampling, soft edge detection, and spatio-temporal edge map compression.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure2-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 3,
+    "rationale": "Image 3 provides a visual overview of the second encoding stage (E2), showing the steps involved. Text 3 describes the second encoding stage, mentioning down-sampling, soft edge detection, and a novel spatio-temporal edge map compression scheme.",
+    "answer": "The steps involved in the second encoding stage (E2) are down-sampling, soft edge detection, and spatio-temporal lossless compression.",
+    "text_chunks": [
+      "Once D_2 is trained, it can be guided by the soft edge maps x_G to reconstruct the G-frames X_G (non-key frames), which the decoder has never seen before. When the soft edge map contains more information, it can guide the decoder to reconstruct frames with better quality. Second stage encoder, E_2 The second encoding stage is composed of a downsampler and a soft edge detector which feeds a lossless compressor (see Figure ).",
+      "Our model can be implemented using any options for resizing and cropping. The batch size and the number of epochs were fixed at 1 and 1000, respectively. ~Architecture of {\\boldmath{E_2: The second stage encoder E_2 has a predetermined structure composed of a downsampler, the soft edge detector and the lossless compressor (Figure ).",
+      "If n(X_I)<N, then X_I' and X_G further follow a second stage of encoding; the encoder E_2 encodes X_I' and (X_G) to generate x_I' and x_G. Then, the second stage decoder (D2), decodes x_I' and x_G, yielding the reconstructions \\hat{X_I and (\\hat{X_G). Notably, we can use any conventional codec to implement E_1/ D_1.",
+      "Here, we implement E_1/D_1 using a conventional H.264 encoder (decoder), which is efficient and performs very well for key frame compression. If every frame is selected as a key frame, then our scheme degenerates to a frame-based H.264 encoder, without any motion prediction/compensation. The second encoding stage is significantly different and involves a series of steps: down-sampling, soft edge detection and a novel spatio-temporal edge map compression scheme (see Figure ).",
+      "Implementation ~Architecture of {\\boldmath{D_2: The second stage of the decoder D_2 is trained by a discriminator D_D. In our experiments, the original frames were re-sized and cropped to size 2^8\\times2^8 over eight consequent layers. A stride size of 2\\times2 was used when training the DNNs.",
+      "In addition, at the second stage of encoding we fixed soft edge detector with quantization level 2 (Q_2) without lossless compression, to isolate the effects of downsampling. As the scaling size was increased, the reconstructed frames became more recognizable (Figure~). Accordingly, the measured VQA scores also increased monotonously, as the size of x_G was increased (Table~).",
+      "As shown in Figure ), we achieve a 4.95\\times compression gain over JBIG2, across all 567 frames for a given test video. Second stage decoder, D_2 We utilize the conditional GAN framework of Isola \\etal~ to train the decompressor D_2 and discriminator D_D by parsing the compressed data x_i' into both original data X_I' and decompressed data \\hat{X_I in an adversarial manner. Note that only key frames are used to train D_2 and D_D (Figure~).",
+      "The corresponding decoder D_2 is trained using a GAN and a discriminator D_D. Naturally, the encoder E_2 cannot learn evolving representations of non-key frames using information from key frames only. Hence, we employ a conditional GAN to train D_2 using pairs of key frames and their corresponding soft edge maps. During training, D_2 learns associations between the key frames and the soft edge maps."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 3,\n    \"Rationale\": \"Image 3 provides a visual overview of the second encoding stage (E2), showing the steps involved. Text 3 describes the second encoding stage, mentioning down-sampling, soft edge detection, and a novel spatio-temporal edge map compression scheme.\",\n    \"Answer\": \"The steps involved in the second encoding stage (E2) are down-sampling, soft edge detection, and spatio-temporal lossless compression.\"\n}"
+  },
+  "4": {
+    "question": "Which lossless compression scheme achieved the highest compression gain in the example shown in Figure 1?",
+    "ground_truth": "The proposed scheme achieved the highest compression gain.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure2-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides a visual comparison of different lossless compression schemes, showing the bit per pixel (BPP) values. Text 3 discusses the compression gain achieved over JBIG2, which is relevant to understanding the performance of the proposed scheme.",
+    "answer": "The proposed lossless compression scheme achieved the highest compression gain in the example shown.",
+    "text_chunks": [
+      "Therefore, we devised the following lossless compression scheme. We first applied run-length encoding~ on the soft edge maps along both the spatial and the temporal directions. Then, we performed another lossless compression step using Huffmann encoding~. Thanks to the sparse nature of the soft edge maps, our scheme produces great compression results compared to JBIG2~, a state-of-the-art approach for bi-level image compression.",
+      "Comparison to conventional schemes We compared the performance of our GAN-based compresssor with the currently prevailing codec H.264 (refer to the supplementary material for a comparison with H.265). We do not compare our scheme with recent video compression models based on DNNs~, since (1) our model is only trained on a subset of the frames from the single target video without any pre-training process and (2) our model does not rely on any interpolation. Our innovations are complementary to the other DNN-based compression schemes and can be fruitfully combined in future work.",
+      "The maps Q_{256 and Q_8 in Figure (a) appear quite similar, yet the entropy of Q_{8 is much reduced relative to that of Q_{256 (2.0904 vs 7.0358). \\subsubsection{Lossless compression Since most of the outputs Q of the soft edge detector are zero, we found it useful to perform lossless compression on the generated soft edge maps. However, and to the best of our knowledge, there have been no lossless compression schemes developed for soft edge maps.",
+      "As shown in Figure ), we achieve a 4.95\\times compression gain over JBIG2, across all 567 frames for a given test video. Second stage decoder, D_2 We utilize the conditional GAN framework of Isola \\etal~ to train the decompressor D_2 and discriminator D_D by parsing the compressed data x_i' into both original data X_I' and decompressed data \\hat{X_I in an adversarial manner. Note that only key frames are used to train D_2 and D_D (Figure~).",
+      "We also repeated this experiment with k=4 and k=8. In this toy example, our network was trained on only one image, assuming no compression for X_I (X_I'=X_I). In addition, at the second stage of encoding, no downsampler or lossless compression was used.",
+      "While these parameters are lower than traditionally used bitrate ladders, our goal in this paper was to demonstrate a proof of concept for our GAN-based model. Conclusions We proposed a video compression framework that is based on conditional GANs guided by soft edge detection. We showed that our scheme achieved better visual results and higher objective VQA scores than current standard video codecs at low bitrates.",
+      "Our model was able to achieve much higher video quality scores below 10 Kbps than did H.264. Interestingly, our codec was able to successfully compress the video at less than 7.5 Kbps, while H.264 failed (no output). To examine the performance of the proposed method, we implemented an experiment on videos from four semantic categories in the KTH ~. Figure~ plots RD curves of bitrate against VQA scores for 100 videos.",
+      "Similar ideas have been applied to video compression, e.g., by casting the motion estimation task as an interpolation solved by training on a large volume of videos~. These approaches have achieved performance approaching that of prevailing standardized codecs such as H.264 and HEVC~. Here, we propose a novel video compression framework that uses conditional Generative Adversarial Networks (GANs). Our proposed model automatically generates low-level semantic label maps using a newly conceived soft edge detector combined with a down-sampler (encoder)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides a visual comparison of different lossless compression schemes, showing the bit per pixel (BPP) values. Text 3 discusses the compression gain achieved over JBIG2, which is relevant to understanding the performance of the proposed scheme.\",\n    \"Answer\": \"The proposed lossless compression scheme achieved the highest compression gain in the example shown.\"\n}"
+  },
+  "5": {
+    "question": "How does the proposed model compare to H.264 in terms of visual quality at low bitrates?",
+    "ground_truth": "The proposed model delivers significantly better visual quality at low bitrates than H.264.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure2-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure2-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Figure6-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 visually compares the proposed model and H.264, showing better performance at low bitrates. Text 1 provides quantitative evidence of superior visual quality by the proposed model at low bitrates compared to H.264.",
+    "answer": "The proposed model delivers significantly better visual quality at low bitrates compared to H.264.",
+    "text_chunks": [
+      "Our model was able to achieve much higher video quality scores below 10 Kbps than did H.264. Interestingly, our codec was able to successfully compress the video at less than 7.5 Kbps, while H.264 failed (no output). To examine the performance of the proposed method, we implemented an experiment on videos from four semantic categories in the KTH ~. Figure~ plots RD curves of bitrate against VQA scores for 100 videos.",
+      "Our codec (4th row) delivered significantly better visual quality at low bitrates than did H.264. As a method of objective quantitative analysis, VQA metrics were plotted on the right side of Figure~. For example, our model achieved MS-SSIM of 0.9188 at 8.33 Kbps, while H.264 resulted in MS-SSIM score of 0.8884 at 13 Kbps. Since most of the videos in the KTH dataset contain simple, repeated object movements, we further validated our model on a variety of videos from the YouTube dataset~, contain more diverse activities and impredictable movements.",
+      "\\caption{Two videos from (a) the KTH and (b) the YouTube dataset. Selected frames from original video and reconstructed videos using H.264 (low bitrate), H.264 (high bitrate), and the proposed model are aligned vertically along time. Our scheme demonstrated significantly better performance than the current standard codecs at low bitrates.",
+      "Our model delivered noticeably better quality at the lowest bitrate than H.264. To train our network using a conditional GAN, 80 key frames (N_I=80) were collected from a single video having 8000 frames (\\alpha=1\\%), and assigned 2.02 Kbps of the overall 7.14 Kbps. Seven test frames were not included in the training set.",
+      "It is quite possible that in this context, conventional VQA models may not accurately predict the subjective quality of GAN-compressed videos. As shown in Figure , our scheme apparently reconstructs frames of better quality than H.264. For example, H.264 compressed at 7.00 Kbps resulted in unrecognizable reconstructed frames (many blurred blocks), while our model at 6.51 Kbps yielded more detailed frames than even H.264 at 11 Kbps.",
+      "However, the VQA scores were often lower for our model than for H.264. For example, Figure (b) plots the temporal evolution of objective video quality scores on seven consecutive frames. Remarkably, although the visual appearance of the video compressed by our model was much better than the H.264 result, the PSNR and SSIM scores at 6.51 Kbps (red lines) yielded a reverse relationship against H.264 at 7.00 and 11.00 Kbps (black and blue lines respectively).",
+      "In our experiments, our scheme achieved fair performance using only a very small number of key frames, e.g., \\alpha=1\\%. In the experiments in the coming sections, we set \\alpha \\leq 1.5\\%. Comparison with H.264 One of our experimental results is summarized in Figure~; seven consecutive frames from an original video and three compressed videos: (1) H.264 at 7.62 Kbps, (2) H.264 at 10.36 Kbps, and (3) our model at 7.14 Kbps, are depicted.",
+      "Figure~(b) visually compares compression performance on one YouTube video. Our proposed codec outperformed H.264 regards to perceptual quality versus bitrate. Similar results were observed on the other 30 videos from the YouTube pose dataset (see Supplementary material)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 visually compares the proposed model and H.264, showing better performance at low bitrates. Text 1 provides quantitative evidence of superior visual quality by the proposed model at low bitrates compared to H.264.\",\n    \"Answer\": \"The proposed model delivers significantly better visual quality at low bitrates compared to H.264.\"\n}"
+  },
+  "6": {
+    "question": "How does the level of quantization affect the output of the soft edge detector?",
+    "ground_truth": "As the quantization level $k$ is decreased, the cardinality of colors co-located with edges decreases.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure2-1.png",
+      "1811.10673v1-Table1-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 shows the outputs of the soft edge detector at different quantization levels, visually demonstrating how the output changes. Text 2 explains the process of soft edge detection and quantization, detailing how different levels of quantization affect the clustering of pixels.",
+    "answer": "The level of quantization affects the output of the soft edge detector by determining the number of clusters formed from the colored pixels mapped to edge pixels. Higher quantization levels result in more clusters, leading to more detailed and precise reconstructed representations.",
+    "text_chunks": [
+      "Quality of reconstructed quantized frame We also examined the relationship between the quality of reconstructed frames and the level of quantization delivered by the soft edge detector (see Section~). As a toy example, assume E_1=E_2=I, i.e, X_I=X_I'. E_2 taken to the soft edge detector with quantization level k (Q_k) without any downsampling (Figure~).",
+      "In addition, at the second stage of encoding we fixed soft edge detector with quantization level 2 (Q_2) without lossless compression, to isolate the effects of downsampling. As the scaling size was increased, the reconstructed frames became more recognizable (Figure~). Accordingly, the measured VQA scores also increased monotonously, as the size of x_G was increased (Table~).",
+      "\\subsubsection{Soft edge detector Following downsampling, we perform a soft edge detection step, which further produces a compressible representation of S. First, we apply the Canny edge detector~ to find an edge pixel map I = [I_{i,j], where I_{i,j= Following edge detection, we perform vector quantization to form clusters of colored pixels mapped to edge pixels, i.e., \\noindent where s_{(i,j) and q_{(i,j) are the (i,j)-th elements of the downsampled frame S and a subsequent quantized frame Q. \\mathbb{V_k (\\cdot) is a vector quantizer which uses the k-nearest mean~, to form k-1 clusters of colored pixels mapped to I_{i,j=1. The large cluster of pixels I_{i,j=0 is not included.",
+      "Let S and Q_k denote the outputs of the downsampler and the soft edge detector, and x_I' and x_G be the outputs of the lossless compressor respectively. The downsampling step reduces the spatial resolution of each frame, but does not affect the number of frames. The purpose of downsampling is to produce a more compact representation that is easier to compress.",
+      "The aforementioned soft edge detection approach is illustrated in Figure . In Figure (a), we show a 64\\times 64 frame downsampled from a reconstructed 256\\times 256 frame {X'_I^{(1) from one video of the {YouTube Pose dataset~. The next four frames in Figure (a) are outputs from the soft edge detector for several different levels of quantization.",
+      "The maps Q_{256 and Q_8 in Figure (a) appear quite similar, yet the entropy of Q_{8 is much reduced relative to that of Q_{256 (2.0904 vs 7.0358). \\subsubsection{Lossless compression Since most of the outputs Q of the soft edge detector are zero, we found it useful to perform lossless compression on the generated soft edge maps. However, and to the best of our knowledge, there have been no lossless compression schemes developed for soft edge maps.",
+      "While these parameters are lower than traditionally used bitrate ladders, our goal in this paper was to demonstrate a proof of concept for our GAN-based model. Conclusions We proposed a video compression framework that is based on conditional GANs guided by soft edge detection. We showed that our scheme achieved better visual results and higher objective VQA scores than current standard video codecs at low bitrates.",
+      "While this approach has been effective, it is likely inappropriate for live video streaming, since long term frame predictions can produce severe and systemic artifacts (such as missing or blurred objects). Furthermore, the predictive accuracy of theses approaches can be degraded severely in the presence of large or sudden movements of objects. Our approach seeks to combat theses problems using soft edge-guided conditional GANs, as explained in Section~. Soft edge detection The detection of substantive changes in luminance, or edges, once a cornerstone of computer vision theory, is also regarded a plausible front-end feature extraction process in biological vision systems~."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 shows the outputs of the soft edge detector at different quantization levels, visually demonstrating how the output changes. Text 2 explains the process of soft edge detection and quantization, detailing how different levels of quantization affect the clustering of pixels.\",\n    \"Answer\": \"The level of quantization affects the output of the soft edge detector by determining the number of clusters formed from the colored pixels mapped to edge pixels. Higher quantization levels result in more clusters, leading to more detailed and precise reconstructed representations.\"\n}"
+  },
+  "7": {
+    "question": "How does the quality of the reconstructed frames change as the resolution increases?",
+    "ground_truth": "The quality of the reconstructed frames increases monotonically as the resolution increases.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure6-1.png",
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 shows the performance of the proposed framework against different downsampling levels, illustrating how the quality of reconstructed frames improves with increased resolution. Text 0 discusses the scaling sizes and the resulting frame sizes, which aligns with the visual information in Image 2.",
+    "answer": "As the resolution increases, the reconstructed frames become more recognizable and of higher quality.",
+    "text_chunks": [
+      "To simplify experiments, the downsampler only scaled the frames by factors for 4 \\times 4 and 8 \\times 8. Quality of reconstructed downsampled frame To study the relative qualities of reconstructed frames using different levels of {downsampling, we employed three scaling sizes, (1,1), (4,4) and (8,8). Hence, an original frame of size 256\\times256, became 256\\times256, 64\\times64, and 32\\times32, respectively (Figure~).",
+      "Quality of reconstructed quantized frame We also examined the relationship between the quality of reconstructed frames and the level of quantization delivered by the soft edge detector (see Section~). As a toy example, assume E_1=E_2=I, i.e, X_I=X_I'. E_2 taken to the soft edge detector with quantization level k (Q_k) without any downsampling (Figure~).",
+      "As the quantization level k was increased, the quality of the reconstructed frames improved qualitatively (\\hat{X_G in Figure ). This improvement was also measured by quantitative VQA scores, which also indicated a trend of improvement with higher value of k (Table ). Performance against key frame density In our framework, performance and bitrate are closely associated with \\alpha, which we define as the ratio of the number of key frames to the total number of frames in one video.",
+      "It is quite possible that in this context, conventional VQA models may not accurately predict the subjective quality of GAN-compressed videos. As shown in Figure , our scheme apparently reconstructs frames of better quality than H.264. For example, H.264 compressed at 7.00 Kbps resulted in unrecognizable reconstructed frames (many blurred blocks), while our model at 6.51 Kbps yielded more detailed frames than even H.264 at 11 Kbps.",
+      "We have found that the use of soft edges, rather than strictly defined binary hard constraints on the reconstruction, produces much better results (see Section~). One important implication of our work is on re-establishing the importance of edges, as inspired by biological vision, but for informing a modern deep video compression architecture. Preliminaries Let X \\in \\mathbb{R^{W \\times H \\times 3 \\times N denote the set of whole frames in a video, having a spatial resolution of W \\times H pixels, three ({RGB) channels and temporal duration of N frames.",
+      "At higher bitrates, our model produces competitive visual results but worse VQA scores. Much of the reason for this is that the representations created by the GAN, while visually accurate, are not guided to be pixel-wise accurate, particularly on image textures. Our approach is re-establishing the importance of edges in modern DNN-based video compression architectures.",
+      "In addition, at the second stage of encoding we fixed soft edge detector with quantization level 2 (Q_2) without lossless compression, to isolate the effects of downsampling. As the scaling size was increased, the reconstructed frames became more recognizable (Figure~). Accordingly, the measured VQA scores also increased monotonously, as the size of x_G was increased (Table~).",
+      "Let S and Q_k denote the outputs of the downsampler and the soft edge detector, and x_I' and x_G be the outputs of the lossless compressor respectively. The downsampling step reduces the spatial resolution of each frame, but does not affect the number of frames. The purpose of downsampling is to produce a more compact representation that is easier to compress."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 shows the performance of the proposed framework against different downsampling levels, illustrating how the quality of reconstructed frames improves with increased resolution. Text 0 discusses the scaling sizes and the resulting frame sizes, which aligns with the visual information in Image 2.\",\n    \"Answer\": \"As the resolution increases, the reconstructed frames become more recognizable and of higher quality.\"\n}"
+  },
+  "8": {
+    "question": "How does the quality of the reconstructed frames change as the quantization level of the soft edge detector increases?",
+    "ground_truth": "The quality of the reconstructed frames increases as the quantization level of the soft edge detector increases.",
+    "selected_figures_names": [
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure5-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Figure4-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 5,
+    "rationale": "Image 1 shows the effect of different quantization levels on the reconstructed frames, illustrating how higher quantization levels lead to more precise representations. Text 5 explains that as the quantization level increases, the quality of the reconstructed frames improves, supported by quantitative VQA scores.",
+    "answer": "As the quantization level of the soft edge detector increases, the quality of the reconstructed frames improves, becoming more precise and similar to the original frames.",
+    "text_chunks": [
+      "Quality of reconstructed quantized frame We also examined the relationship between the quality of reconstructed frames and the level of quantization delivered by the soft edge detector (see Section~). As a toy example, assume E_1=E_2=I, i.e, X_I=X_I'. E_2 taken to the soft edge detector with quantization level k (Q_k) without any downsampling (Figure~).",
+      "In addition, at the second stage of encoding we fixed soft edge detector with quantization level 2 (Q_2) without lossless compression, to isolate the effects of downsampling. As the scaling size was increased, the reconstructed frames became more recognizable (Figure~). Accordingly, the measured VQA scores also increased monotonously, as the size of x_G was increased (Table~).",
+      "The aforementioned soft edge detection approach is illustrated in Figure . In Figure (a), we show a 64\\times 64 frame downsampled from a reconstructed 256\\times 256 frame {X'_I^{(1) from one video of the {YouTube Pose dataset~. The next four frames in Figure (a) are outputs from the soft edge detector for several different levels of quantization.",
+      "Let S and Q_k denote the outputs of the downsampler and the soft edge detector, and x_I' and x_G be the outputs of the lossless compressor respectively. The downsampling step reduces the spatial resolution of each frame, but does not affect the number of frames. The purpose of downsampling is to produce a more compact representation that is easier to compress.",
+      "\\subsubsection{Soft edge detector Following downsampling, we perform a soft edge detection step, which further produces a compressible representation of S. First, we apply the Canny edge detector~ to find an edge pixel map I = [I_{i,j], where I_{i,j= Following edge detection, we perform vector quantization to form clusters of colored pixels mapped to edge pixels, i.e., \\noindent where s_{(i,j) and q_{(i,j) are the (i,j)-th elements of the downsampled frame S and a subsequent quantized frame Q. \\mathbb{V_k (\\cdot) is a vector quantizer which uses the k-nearest mean~, to form k-1 clusters of colored pixels mapped to I_{i,j=1. The large cluster of pixels I_{i,j=0 is not included.",
+      "As the quantization level k was increased, the quality of the reconstructed frames improved qualitatively (\\hat{X_G in Figure ). This improvement was also measured by quantitative VQA scores, which also indicated a trend of improvement with higher value of k (Table ). Performance against key frame density In our framework, performance and bitrate are closely associated with \\alpha, which we define as the ratio of the number of key frames to the total number of frames in one video.",
+      "We have found that the use of soft edges, rather than strictly defined binary hard constraints on the reconstruction, produces much better results (see Section~). One important implication of our work is on re-establishing the importance of edges, as inspired by biological vision, but for informing a modern deep video compression architecture. Preliminaries Let X \\in \\mathbb{R^{W \\times H \\times 3 \\times N denote the set of whole frames in a video, having a spatial resolution of W \\times H pixels, three ({RGB) channels and temporal duration of N frames.",
+      "Once D_2 is trained, it can be guided by the soft edge maps x_G to reconstruct the G-frames X_G (non-key frames), which the decoder has never seen before. When the soft edge map contains more information, it can guide the decoder to reconstruct frames with better quality. Second stage encoder, E_2 The second encoding stage is composed of a downsampler and a soft edge detector which feeds a lossless compressor (see Figure )."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 5,\n    \"Rationale\": \"Image 1 shows the effect of different quantization levels on the reconstructed frames, illustrating how higher quantization levels lead to more precise representations. Text 5 explains that as the quantization level increases, the quality of the reconstructed frames improves, supported by quantitative VQA scores.\",\n    \"Answer\": \"As the quantization level of the soft edge detector increases, the quality of the reconstructed frames improves, becoming more precise and similar to the original frames.\"\n}"
+  },
+  "9": {
+    "question": "Which quality factor improves the most as k is increased?",
+    "ground_truth": "MS-SSIM",
+    "selected_figures_names": [
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1811.10673v1-Figure9-1.png",
+      "1811.10673v1-Figure10-1.png",
+      "1811.10673v1-Figure8-1.png",
+      "1811.10673v1-Table2-1.png",
+      "1811.10673v1-Figure7-1.png",
+      "1811.10673v1-Figure4-1.png",
+      "1811.10673v1-Figure3-1.png",
+      "1811.10673v1-Figure2-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 provides a table showing the improvement in PSNR, SSIM, and MS-SSIM as the quantization level k increases. Text 0 discusses the improvement in quality with higher quantization levels, which is relevant to understanding which quality factor improves the most.",
+    "answer": "MS-SSIM improves the most as k is increased.",
+    "text_chunks": [
+      "As the quantization level k was increased, the quality of the reconstructed frames improved qualitatively (\\hat{X_G in Figure ). This improvement was also measured by quantitative VQA scores, which also indicated a trend of improvement with higher value of k (Table ). Performance against key frame density In our framework, performance and bitrate are closely associated with \\alpha, which we define as the ratio of the number of key frames to the total number of frames in one video.",
+      "As the quantization level k is decreased, the cardinality of colors co-located with edges decreases. Figure (b) plots the histograms of the gray-scale brightness in each Q_k. Each video will have a different set of centroids for a given k. Figure (c) depicts three-dimensional scatter-plots (R/G/B axis) of S with different colors assigned to each of its clusters Q_k.",
+      "Quality of reconstructed quantized frame We also examined the relationship between the quality of reconstructed frames and the level of quantization delivered by the soft edge detector (see Section~). As a toy example, assume E_1=E_2=I, i.e, X_I=X_I'. E_2 taken to the soft edge detector with quantization level k (Q_k) without any downsampling (Figure~).",
+      "Our codec (4th row) delivered significantly better visual quality at low bitrates than did H.264. As a method of objective quantitative analysis, VQA metrics were plotted on the right side of Figure~. For example, our model achieved MS-SSIM of 0.9188 at 8.33 Kbps, while H.264 resulted in MS-SSIM score of 0.8884 at 13 Kbps. Since most of the videos in the KTH dataset contain simple, repeated object movements, we further validated our model on a variety of videos from the YouTube dataset~, contain more diverse activities and impredictable movements.",
+      "The scores produced by several leading perceptual video quality metrics were depicted on the right side. Please refer to the supplementary for reconstructed videos and results on additional 129 videos. \\end{figure* Limitations \\caption{Example of lower VQA scores on videos compressed by our model than those compressed using H.264, despite the apparent better subjective quality produced by our model.",
+      "Our model was able to achieve much higher video quality scores below 10 Kbps than did H.264. Interestingly, our codec was able to successfully compress the video at less than 7.5 Kbps, while H.264 failed (no output). To examine the performance of the proposed method, we implemented an experiment on videos from four semantic categories in the KTH ~. Figure~ plots RD curves of bitrate against VQA scores for 100 videos.",
+      "However, the VQA scores were often lower for our model than for H.264. For example, Figure (b) plots the temporal evolution of objective video quality scores on seven consecutive frames. Remarkably, although the visual appearance of the video compressed by our model was much better than the H.264 result, the PSNR and SSIM scores at 6.51 Kbps (red lines) yielded a reverse relationship against H.264 at 7.00 and 11.00 Kbps (black and blue lines respectively).",
+      "Figure~ shows the performance of our codec, as compared to H.264. Figure~(a) shows selected frames from both an original KTH video and also compressed videos using H.264 at 9 Kbps, H.264 at 13 Kbps, and our compression model. The videos are aligned vertically for visual comparison."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 provides a table showing the improvement in PSNR, SSIM, and MS-SSIM as the quantization level k increases. Text 0 discusses the improvement in quality with higher quantization levels, which is relevant to understanding which quality factor improves the most.\",\n    \"Answer\": \"MS-SSIM improves the most as k is increased.\"\n}"
+  }
+}

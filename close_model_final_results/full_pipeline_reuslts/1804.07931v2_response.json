@@ -1,0 +1,153 @@
+{
+  "0": {
+    "question": "What are the two auxiliary tasks that are used in the ESMM architecture for CVR modeling?",
+    "ground_truth": "The two auxiliary tasks are CTR and CTCVR.",
+    "selected_figures_names": [
+      "1804.07931v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 visually represents the ESMM architecture, showing the auxiliary tasks of CTR and CTCVR. Text 1 explains how these tasks help tackle challenges in CVR modeling.",
+    "answer": "The two auxiliary tasks used in the ESMM architecture for CVR modeling are CTR (Click-Through Rate) and CTCVR (Click-Through Conversion Rate).",
+    "text_chunks": [
+      "Borrowing the idea from multi-task learning~, ESMM introduces two auxiliary tasks of CTR and CTCVR and eliminates the aforementioned problems for CVR modeling simultaneously. On the whole, ESMM simultaneously outputs \\textsl{pCTR, \\textsl{pCVR as well as \\textsl{pCTCVR w.r.t. a given impression.",
+      "ESMM makes good use of sequential patten of user actions. With the help of two auxiliary tasks of CTR and CTCVR, ESMM elegantly tackles challenges of sample selection bias and data sparsity for CVR modeling encountered in real practice. Experiments on real dataset demonstrate the superior performance of the proposed ESMM.",
+      "The first four methods are different variations to model CVR directly based on state-of-the-art deep network. DIVISION, ESMM-NS and ESMM share the same idea to model CVR over entire space which involve three networks of CVR, CTR and CTCVR. ESMM-NS and ESMM co-train the three networks and take the output from CVR network for model comparison.",
+      "Trained with the whole dataset, ESMM achieves absolute AUC gain of 2.18\\% on CVR task and 2.32\\% on CTCVR task over BASE model. This is a significant improvement for industrial applications where 0.1\\% AUC gain is remarkable. \\vspace{-0.1cm Conclusions and Future Work In this paper, we propose a novel approach ESMM for CVR modeling task.",
+      "To be fair, all competitors including \\uppercase{ESMM share the same network structure and hyper parameters with \\uppercase{Base model, which i) uses ReLU activation function, ii) sets the dimension of embedding vector to be 18, iii) sets dimensions of each layers in MLP network to be 360 \\times 200 \\times 80 \\times 2, iv) uses adam solver with parameter \\beta_1 = 0.9,\\beta_2 = 0.999,\\epsilon = 10^{-8. Metric. The comparisons are made on two different tasks: (1) conventional CVR prediction task which estimates \\textsl{pCVR on dataset with clicked impressions, (2) CTCVR prediction task which estimates \\textsl{pCTCVR on dataset with all impressions.",
+      "Note that the sub-network in ESMM can be substituted with some recently developed models~, which might get better performance. Due to limited space, we omit it and focus on tackling challenges encountered in real practice for CVR modeling. \\end{comment\\end{comment Experiments Experimental Setup Datasets.",
+      "There are some highlights in ESMM, which have notable effects on CVR modeling and distinguish ESMM from conventional methods. Modeling over entire space. Eq.() gives us hints, which can be transformed into Eq.().",
+      "(1) Among all the three variations of \\uppercase{Base model, only \\uppercase{AMAN performs a little worse on CVR task, which may be due to the sensitive of random sampling. \\uppercase{Oversampling and \\uppercase{Unbias show improvement over \\uppercase{Base model on both CVR and CTCVR tasks. % (2) Both \\uppercase{Division and ESMM-NS estimate \\textsl{pCVR over entire space and achieve remarkable promotions over \\uppercase{Base model."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 visually represents the ESMM architecture, showing the auxiliary tasks of CTR and CTCVR. Text 1 explains how these tasks help tackle challenges in CVR modeling.\",\n    \"Answer\": \"The two auxiliary tasks used in the ESMM architecture for CVR modeling are CTR (Click-Through Rate) and CTCVR (Click-Through Conversion Rate).\"\n}"
+  },
+  "1": {
+    "question": "What is the relationship between clicks and impressions?",
+    "ground_truth": "Clicks are a subset of impressions.",
+    "selected_figures_names": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides statistics on clicks and impressions, showing their relative quantities, which is crucial for understanding their relationship. Text 3 discusses the sparsity of click events compared to impressions, highlighting the rarity of clicks in relation to impressions.",
+    "answer": "Clicks are a subset of impressions, meaning every click is an impression, but not every impression results in a click. The occurrence of clicks is much rarer compared to impressions, often being 1-3 orders of magnitude less frequent.",
+    "text_chunks": [
+      "M is the number of clicks over all impressions. Obviously, \\mathcal{S_c is a subset of \\mathcal{S. % Note that in \\mathcal{S_c, (clicked) impressions without conversion are treated as negative samples and impressions with conversion (also clicked) as positive samples. In practice, CVR modeling encounters several task-specific problems, making it challenging.",
+      "Mathematically, Eq.() decomposes y \\rightarrow z into two parts\\footnote[3]{Corresponding to labels of CTR and CTCVR tasks, which construct training datasets as follows: i) samples are composed of all impressions, ii) for CTR task, clicked impressions are labeled y=1, otherwise y=0, iii) for CTCVR task, impressions with click and conversion events occurred simultaneously are labeled y\\&z=1, otherwise y\\&z=0: y and y\\&z, which in fact makes use of the sequential dependence of click and conversion labels. Feature representation transfer.",
+      "In brief, conventional CVR modeling methods directly estimate the post-click conversion rate p(z=1|y=1,\\bm{x). They train models with samples of clicked impressions, i.e., \\mathcal{S_c = \\{(\\bm{x_j, z_j) | y_j = 1\\|_{j=1^{M .",
+      "The rare occurrence of click event causes training data for CVR modeling to be extremely sparse. Intuitively, it is generally 1-3 orders of magnitude less than the associated CTR task, which is trained on dataset of \\mathcal{S with all impressions. Table shows the statistics of our experimental datasets, where number of samples for CVR task is just 4\\% of that for CTR task.",
+      "\\forall \\bm{x_c \\in \\mathcal{X_c there exists a pair (\\bm{x=\\bm{x_c,y_{\\bm{x=1) where \\bm{x \\in \\mathcal{X and y_{\\bm{x is the click label of \\bm{x. In this way, q(z=1|\\bm{x_c) is trained over space \\mathcal{X_c with clicked samples of \\mathcal{S_c. At inference stage, the prediction of p(z=1|y=1,\\bm{x) over entire space \\mathcal{X is calculated as q(z=1|\\bm{x) under the assumption that for any pair of (\\bm{x,y_{\\bm{x=1) where \\bm{x \\in \\mathcal{X, \\bm{x belongs to \\mathcal{X_c.",
+      "It follows a feature representation transfer learning paradigm. Training samples with all impressions for CTR task is relatively much richer than CVR task. This parameter sharing mechanism enables CVR network in ESMM to learn from un-clicked impressions and provides great help for alleviating the \\textsl{data sparsity trouble.",
+      "This method can be easily generalized to user action prediction in scenario with sequential dependence. In the future, we intend to design global optimization models in applications with multi-stage actions like request \\rightarrow impression \\rightarrow click \\rightarrow conversion. \\bibliographystyle{ACM-Reference-Format \\bibliography{reference",
+      "This assumption would be violated with a large probability as \\mathcal{X_c is just a small part of entire space \\mathcal{X. It is affected heavily by the randomness of rarely occurred click event, whose probability varies over regions in space \\mathcal{X. Moreover, without enough observations in practice, space \\mathcal{X_c may be quite different from \\mathcal{X. This would bring the drift of distribution of training samples from truly underling distribution and hurt the generalization performance for CVR modeling. Data sparsity (DS). Conventional methods train CVR model with clicked samples of \\mathcal{S_c."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides statistics on clicks and impressions, showing their relative quantities, which is crucial for understanding their relationship. Text 3 discusses the sparsity of click events compared to impressions, highlighting the rarity of clicks in relation to impressions.\",\n    \"Answer\": \"Clicks are a subset of impressions, meaning every click is an impression, but not every impression results in a click. The occurrence of clicks is much rarer compared to impressions, often being 1-3 orders of magnitude less frequent.\"\n}"
+  },
+  "2": {
+    "question": "How much more prevalent are click events compared to conversion events in the Product Dataset?",
+    "ground_truth": "Click events are roughly 184 times more prevalent than conversion events in the Product Dataset.",
+    "selected_figures_names": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides the statistics of the Product Dataset, showing the number of clicks and conversions. Text 0 discusses the sparsity of click events compared to conversion events, which is relevant to understanding their prevalence.",
+    "answer": "In the Product Dataset, click events (324M) are approximately 182 times more prevalent than conversion events (1.774M).",
+    "text_chunks": [
+      "The rare occurrence of click event causes training data for CVR modeling to be extremely sparse. Intuitively, it is generally 1-3 orders of magnitude less than the associated CTR task, which is trained on dataset of \\mathcal{S with all impressions. Table shows the statistics of our experimental datasets, where number of samples for CVR task is just 4\\% of that for CTR task.",
+      "During our survey, no public datasets with sequential labels of click and conversion are found in CVR modeling area. % To evaluate the proposed approach, we collect traffic logs from Taobao's recommender system and release a 1\\% random sampling version of the whole dataset, whose size still reaches 38GB (without compression). In the rest of the paper, we refer to the released dataset as \\textsl{Public Dataset and the whole one as \\textsl{Product Dataset.",
+      "M is the number of clicks over all impressions. Obviously, \\mathcal{S_c is a subset of \\mathcal{S. % Note that in \\mathcal{S_c, (clicked) impressions without conversion are treated as negative samples and impressions with conversion (also clicked) as positive samples. In practice, CVR modeling encounters several task-specific problems, making it challenging.",
+      "Mathematically, Eq.() decomposes y \\rightarrow z into two parts\\footnote[3]{Corresponding to labels of CTR and CTCVR tasks, which construct training datasets as follows: i) samples are composed of all impressions, ii) for CTR task, clicked impressions are labeled y=1, otherwise y=0, iii) for CTCVR task, impressions with click and conversion events occurred simultaneously are labeled y\\&z=1, otherwise y\\&z=0: y and y\\&z, which in fact makes use of the sequential dependence of click and conversion labels. Feature representation transfer.",
+      "In brief, conventional CVR modeling methods directly estimate the post-click conversion rate p(z=1|y=1,\\bm{x). They train models with samples of clicked impressions, i.e., \\mathcal{S_c = \\{(\\bm{x_j, z_j) | y_j = 1\\|_{j=1^{M .",
+      "Results on Product Dataset We further evaluate ESMM on our product dataset with 8.9 billions of samples, two orders of magnitude larger than public one.",
+      "This assumption would be violated with a large probability as \\mathcal{X_c is just a small part of entire space \\mathcal{X. It is affected heavily by the randomness of rarely occurred click event, whose probability varies over regions in space \\mathcal{X. Moreover, without enough observations in practice, space \\mathcal{X_c may be quite different from \\mathcal{X. This would bring the drift of distribution of training samples from truly underling distribution and hurt the generalization performance for CVR modeling. Data sparsity (DS). Conventional methods train CVR model with clicked samples of \\mathcal{S_c.",
+      "This method can be easily generalized to user action prediction in scenario with sequential dependence. In the future, we intend to design global optimization models in applications with multi-stage actions like request \\rightarrow impression \\rightarrow click \\rightarrow conversion. \\bibliographystyle{ACM-Reference-Format \\bibliography{reference"
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides the statistics of the Product Dataset, showing the number of clicks and conversions. Text 0 discusses the sparsity of click events compared to conversion events, which is relevant to understanding their prevalence.\",\n    \"Answer\": \"In the Product Dataset, click events (324M) are approximately 182 times more prevalent than conversion events (1.774M).\"\n}"
+  },
+  "3": {
+    "question": "Which model performs best overall on both the CVR and CTCVR tasks?",
+    "ground_truth": "The ESMM model performs the best overall on both the CVR and CTCVR tasks.",
+    "selected_figures_names": [
+      "1804.07931v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 provides a direct comparison of AUC scores for different models on both CVR and CTCVR tasks, showing that ESMM has the highest scores. Text 4 supports this by stating that ESMM maintains a large margin of AUC promotion over all competitors on both tasks.",
+    "answer": "ESMM performs best overall on both the CVR and CTCVR tasks.",
+    "text_chunks": [
+      "Task (2) aims to compare different CVR modeling methods over entire input space, which reflects the model performance corresponding to \\textsl{SSB problem. In CTCVR task, all models calculate \\textsl{pCTCVR by \\textsl{pCTR \\times \\textsl{pCVR, where: i) \\textsl{pCVR is estimated by each model respectively, ii) \\textsl{pCTR is estimated with a same independently trained CTR network (same structure and hyper parameters as BASE model). Both of the two tasks split the first 1/2 data in the time sequence to be training set while the rest to be test set.",
+      "Compared with BASE model, ESMM achieves absolute AUC gain of 2.56\\% on CVR task, which indicates its good generalization performance even for biased samples. On CTCVR task with full samples, it brings 3.25\\% AUC gain. These results validate the effectiveness of our modeling method.",
+      "(1) Among all the three variations of \\uppercase{Base model, only \\uppercase{AMAN performs a little worse on CVR task, which may be due to the sensitive of random sampling. \\uppercase{Oversampling and \\uppercase{Unbias show improvement over \\uppercase{Base model on both CVR and CTCVR tasks. % (2) Both \\uppercase{Division and ESMM-NS estimate \\textsl{pCVR over entire space and achieve remarkable promotions over \\uppercase{Base model.",
+      "Trained with the whole dataset, ESMM achieves absolute AUC gain of 2.18\\% on CVR task and 2.32\\% on CTCVR task over BASE model. This is a significant improvement for industrial applications where 0.1\\% AUC gain is remarkable. \\vspace{-0.1cm Conclusions and Future Work In this paper, we propose a novel approach ESMM for CVR modeling task.",
+      "different sampling rates. In particular, ESMM maintains a large margin of AUC promotion over all competitors on both CVR and CTCVR tasks. BASE model is the latest version which serves the main traffic in our real system.",
+      "It mainly consists of two sub-networks: CVR network illustrated in the left part of Fig. and CTR network in the right part. Both CVR and CTR networks adopt the same structure as BASE model. CTCVR takes the product of outputs from CVR and CTR network as the output.",
+      "The first four methods are different variations to model CVR directly based on state-of-the-art deep network. DIVISION, ESMM-NS and ESMM share the same idea to model CVR over entire space which involve three networks of CVR, CTR and CTCVR. ESMM-NS and ESMM co-train the three networks and take the output from CVR network for model comparison.",
+      "It follows a feature representation transfer learning paradigm. Training samples with all impressions for CTR task is relatively much richer than CVR task. This parameter sharing mechanism enables CVR network in ESMM to learn from un-clicked impressions and provides great help for alleviating the \\textsl{data sparsity trouble."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 provides a direct comparison of AUC scores for different models on both CVR and CTCVR tasks, showing that ESMM has the highest scores. Text 4 supports this by stating that ESMM maintains a large margin of AUC promotion over all competitors on both tasks.\",\n    \"Answer\": \"ESMM performs best overall on both the CVR and CTCVR tasks.\"\n}"
+  },
+  "4": {
+    "question": "How does the performance of ESMM compare to other models on the CVR task and CTCVR task with different training set sizes?",
+    "ground_truth": "ESMM-NS and ESMM outperform all other models consistently across different training set sizes on both the CVR and CTCVR tasks.",
+    "selected_figures_names": [
+      "1804.07931v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1804.07931v2-Table1-1.png",
+      "1804.07931v2-Table2-1.png",
+      "1804.07931v2-Figure3-1.png",
+      "1804.07931v2-Figure2-1.png",
+      "1804.07931v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a visual comparison of different models, including ESMM, on CVR and CTCVR tasks across various training set sizes. Text 1 highlights the performance gains of ESMM over the BASE model, indicating its effectiveness. Together, they provide a comprehensive view of ESMM's performance relative to other models.",
+    "answer": "ESMM outperforms other models on both the CVR and CTCVR tasks across different training set sizes. It achieves significant AUC gains, indicating superior performance and generalization capabilities.",
+    "text_chunks": [
+      "Trained with the whole dataset, ESMM achieves absolute AUC gain of 2.18\\% on CVR task and 2.32\\% on CTCVR task over BASE model. This is a significant improvement for industrial applications where 0.1\\% AUC gain is remarkable. \\vspace{-0.1cm Conclusions and Future Work In this paper, we propose a novel approach ESMM for CVR modeling task.",
+      "Compared with BASE model, ESMM achieves absolute AUC gain of 2.56\\% on CVR task, which indicates its good generalization performance even for biased samples. On CTCVR task with full samples, it brings 3.25\\% AUC gain. These results validate the effectiveness of our modeling method.",
+      "ESMM makes good use of sequential patten of user actions. With the help of two auxiliary tasks of CTR and CTCVR, ESMM elegantly tackles challenges of sample selection bias and data sparsity for CVR modeling encountered in real practice. Experiments on real dataset demonstrate the superior performance of the proposed ESMM.",
+      "Borrowing the idea from multi-task learning~, ESMM introduces two auxiliary tasks of CTR and CTCVR and eliminates the aforementioned problems for CVR modeling simultaneously. On the whole, ESMM simultaneously outputs \\textsl{pCTR, \\textsl{pCVR as well as \\textsl{pCTCVR w.r.t. a given impression.",
+      "different sampling rates. In particular, ESMM maintains a large margin of AUC promotion over all competitors on both CVR and CTCVR tasks. BASE model is the latest version which serves the main traffic in our real system.",
+      "It follows a feature representation transfer learning paradigm. Training samples with all impressions for CTR task is relatively much richer than CVR task. This parameter sharing mechanism enables CVR network in ESMM to learn from un-clicked impressions and provides great help for alleviating the \\textsl{data sparsity trouble.",
+      "To be fair, all competitors including \\uppercase{ESMM share the same network structure and hyper parameters with \\uppercase{Base model, which i) uses ReLU activation function, ii) sets the dimension of embedding vector to be 18, iii) sets dimensions of each layers in MLP network to be 360 \\times 200 \\times 80 \\times 2, iv) uses adam solver with parameter \\beta_1 = 0.9,\\beta_2 = 0.999,\\epsilon = 10^{-8. Metric. The comparisons are made on two different tasks: (1) conventional CVR prediction task which estimates \\textsl{pCVR on dataset with clicked impressions, (2) CTCVR prediction task which estimates \\textsl{pCTCVR on dataset with all impressions.",
+      "The first four methods are different variations to model CVR directly based on state-of-the-art deep network. DIVISION, ESMM-NS and ESMM share the same idea to model CVR over entire space which involve three networks of CVR, CTR and CTCVR. ESMM-NS and ESMM co-train the three networks and take the output from CVR network for model comparison."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a visual comparison of different models, including ESMM, on CVR and CTCVR tasks across various training set sizes. Text 1 highlights the performance gains of ESMM over the BASE model, indicating its effectiveness. Together, they provide a comprehensive view of ESMM's performance relative to other models.\",\n    \"Answer\": \"ESMM outperforms other models on both the CVR and CTCVR tasks across different training set sizes. It achieves significant AUC gains, indicating superior performance and generalization capabilities.\"\n}"
+  }
+}

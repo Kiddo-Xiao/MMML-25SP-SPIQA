@@ -1,0 +1,95 @@
+{
+  "0": {
+    "question": "What are the three main components of the Action Search model architecture?",
+    "ground_truth": "The three main components of the Action Search model architecture are the visual encoder, the LSTM, and the spotting target.",
+    "selected_figures_names": [
+      "1706.04269v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure3-1.png",
+      "1706.04269v2-Figure4-1.png",
+      "1706.04269v2-Figure5-1.png",
+      "1706.04269v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "The image provides a visual representation of the Action Search model architecture, showing the components and their interactions, which directly answers the question.",
+    "answer": "The three main components of the Action Search model architecture are the visual encoder, the LSTM, and the temporal location predictor.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"The image provides a visual representation of the Action Search model architecture, showing the components and their interactions, which directly answers the question.\",\n    \"Answer\": \"The three main components of the Action Search model architecture are the visual encoder, the LSTM, and the temporal location predictor.\"\n}"
+  },
+  "1": {
+    "question": "Which method requires the fewest observations to spot an action in a video with 2.5% action coverage?",
+    "ground_truth": "Action Search",
+    "selected_figures_names": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure3-1.png",
+      "1706.04269v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure3-1.png",
+      "1706.04269v2-Figure4-1.png",
+      "1706.04269v2-Figure5-1.png",
+      "1706.04269v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 3,
+    "rationale": "Image 3 and Text 3 provide data on the expected number of observations needed to spot an action at various levels of action coverage, including 2.5%. This directly addresses the question about which method requires the fewest observations.",
+    "answer": "Action Search requires the fewest observations to spot an action in a video with 2.5% action coverage.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 3,\n    \"Rationale\": \"Image 3 and Text 3 provide data on the expected number of observations needed to spot an action at various levels of action coverage, including 2.5%. This directly addresses the question about which method requires the fewest observations.\",\n    \"Answer\": \"Action Search requires the fewest observations to spot an action in a video with 2.5% action coverage.\"\n}"
+  },
+  "2": {
+    "question": "How does Action Search use temporal context to reason about where to search next?",
+    "ground_truth": "Action Search uses temporal context to reason about where to search next by looking at the frames before and after the current frame. This allows the model to learn the temporal patterns of actions and to predict where the action is most likely to occur in the next frame.",
+    "selected_figures_names": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure3-1.png",
+      "1706.04269v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure3-1.png",
+      "1706.04269v2-Figure4-1.png",
+      "1706.04269v2-Figure5-1.png",
+      "1706.04269v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 both describe how the model uses temporal context and LSTM to predict the next search location in a video. This directly addresses the question about how Action Search uses temporal context.",
+    "answer": "Action Search uses temporal context by employing an LSTM that processes the visual observations and their temporal locations. The LSTM updates its state based on the current observation and history, predicting the next search location in the video.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 both describe how the model uses temporal context and LSTM to predict the next search location in a video. This directly addresses the question about how Action Search uses temporal context.\",\n    \"Answer\": \"Action Search uses temporal context by employing an LSTM that processes the visual observations and their temporal locations. The LSTM updates its state based on the current observation and history, predicting the next search location in the video.\"\n}"
+  },
+  "3": {
+    "question": "How does the training size of the Action Search model affect its performance?",
+    "ground_truth": "As the training size increases, the mAP and S score of the Action Search model also improve.",
+    "selected_figures_names": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure3-1.png",
+      "1706.04269v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1706.04269v2-Figure2-1.png",
+      "1706.04269v2-Figure1-1.png",
+      "1706.04269v2-Figure3-1.png",
+      "1706.04269v2-Figure4-1.png",
+      "1706.04269v2-Figure5-1.png",
+      "1706.04269v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 provides a comparison of efficiency between humans, Action Search, and other methods, which is relevant to understanding performance. Text 3 discusses the performance of Action Search in terms of observations needed, which relates to model efficiency and performance.",
+    "answer": "The training size of the Action Search model affects its performance by influencing its efficiency in spotting actions. A well-trained model can spot actions with fewer observations, as shown by the Action Search model taking fewer observations than baseline methods. This suggests that a larger or more effective training set could improve the model's ability to efficiently localize actions.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 provides a comparison of efficiency between humans, Action Search, and other methods, which is relevant to understanding performance. Text 3 discusses the performance of Action Search in terms of observations needed, which relates to model efficiency and performance.\",\n    \"Answer\": \"The training size of the Action Search model affects its performance by influencing its efficiency in spotting actions. A well-trained model can spot actions with fewer observations, as shown by the Action Search model taking fewer observations than baseline methods. This suggests that a larger or more effective training set could improve the model's ability to efficiently localize actions.\"\n}"
+  }
+}

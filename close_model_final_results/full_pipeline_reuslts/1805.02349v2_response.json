@@ -1,0 +1,28 @@
+{
+  "0": {
+    "question": "Which algorithm has the fastest runtime?",
+    "ground_truth": "The algorithm proposed in this paper has the fastest runtime.",
+    "selected_figures_names": [
+      "1805.02349v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1805.02349v2-Figure1-1.png",
+      "1805.02349v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a direct comparison of algorithms and their runtimes, which is essential for determining the fastest algorithm. Text 5 discusses the efficiency of the algorithms, providing context for the runtimes shown in the image.",
+    "answer": "The algorithm from 'This paper' has the fastest runtime, as it operates in n^O(log n) time.",
+    "text_chunks": [
+      "We let c be some sufficiently large constant. \\end{algorithm This algorithm will indeed run in polynomial time:",
+      "To the best of our knowledge, the best previously known algorithms for any pn<n^{1-\\epsilon required subexponential (i.e., \\exp(n^{\\Omega(1))) time. \\medskip At first, the requirement that the average degree pn be in a union of two disjoint intervals may seem strange.",
+      "\\end{proof \\section*{Discussion and open problems We have shown the first (nearly) efficient algorithms for the graph matching problem on correlated \\ER graphs in a wide range of parameters. However, our results can still be improved in several ways. First of all, for the actual recovery task, we obtain only quasipolynomial as opposed to polynomial time algorithms.",
+      "However, if we can ensure that the joint occurrences of our family of test graphs cover all the vertices of G_0 and G_1, then we can actually recover the permutation. This underlies our recovery algorithm. To simultaneously ensure these conditions we need to make the number of vertices of each H_i logarithmic rather than constant, which results in a quasipolynomial time algorithm.",
+      "One of the most common heuristics is the propagation graph matching (PGM) algorithm that gradually grows knowledge of the permutation from a ``seed set'' by looking at vertices that have at least r neighbors into this set. From our perspective, this can be thought of as an algorithm that looks for a particular subgraph H which is the ``star graph'' with one internal vertex and r leaves. Our results suggest that it might be possible to get some mileage from looking at more complicated patterns and more than one pattern.",
+      "Our results In this work we give quasipolynomial time algorithms for recovering the hidden permutation \\pi in the \\bb{G(n,p;\\noise) model for every constant (and even slightly sub-constant) \\noise and a wide range of p. One can see that we obtain (nearly) efficient recovery even for sub-polynomial degrees. As discussed in \\cref{sec:recovery, our results are more general and handle (slightly) sub-constant noise \\noise. See \\cref{thm:recovery for a precise statement of the parameters (including the o(1) in the minimum sparsity np = n^{o(1)).",
+      "Specifically, they showed recovery is possible if p\\noise^2 > \\tfrac{\\log n + \\omega(1){n and impossible when p\\noise^2 < \\tfrac{\\log n - \\omega(1){n. However, none of these works have given efficient algorithms. Yartseva and Grossglauser~ analyzed a simple algorithm known as Percolation Graph Matching (PGM), which was used successfully by Narayanan and Shmatikov~ to de-anonymize many real-world networks.",
+      "Note that \\cref{thm:recovery implies \\cref{thm:recovery:intro.\\\\ Our algorithm first finds a rough estimate of \\pi^* using test subgraphs (as we did for our distinguishing algorithm), then completes the estimate via a boosting procedure. We fill in the details of our strategy in \\cref{sec:test-rec,sec:alg. In \\cref{sec:unique,sec:coverin,sec:partial,sec:moments, we prove that our algorithm successfully estimates \\pi^*, and in \\cref{sec:boost we give the boosting algorithm."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a direct comparison of algorithms and their runtimes, which is essential for determining the fastest algorithm. Text 5 discusses the efficiency of the algorithms, providing context for the runtimes shown in the image.\",\n    \"Answer\": \"The algorithm from 'This paper' has the fastest runtime, as it operates in n^O(log n) time.\"\n}"
+  }
+}

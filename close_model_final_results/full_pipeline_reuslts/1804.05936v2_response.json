@@ -1,0 +1,212 @@
+{
+  "0": {
+    "question": "Which relevance label category of documents received the most significant rank promotion according to the NegPair reduction metric?",
+    "ground_truth": "The perfect results received the largest promotions in rank.",
+    "selected_figures_names": [
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 1,
+    "rationale": "Image 3 visually shows the NegPair reduction across different relevance labels, which directly answers the question. Text 1 provides specific numerical values for the NegPair reduction, indicating that documents with a 'perfect' label received the most significant rank promotion.",
+    "answer": "Documents with the 'perfect' relevance label received the most significant rank promotion according to the NegPair reduction metric.",
+    "text_chunks": [
+      "To answer the first question, we plotted the average NegPair reduction for documents with different relevance labels in Figure~. The numbers are averaged both on document level and on query level (average on documents within each query and then on all the queries). As shown in Figure~, the perfect results (documents with label 4) received the largest promotions in rank.",
+      "The average NegPair reduction per document on perfect is 1.88, which means that the positions of these documents have been effectively increased by nearly 2 in their ranked lists. The NegPair reduction on excellent results (label 3) are smaller but still promising (0.43 per document). On good and fair results (label 2 and label 1), however, there is almost no improvement when comparing the DLCM with LambdaMART.",
+      "The overall results in Figure~ show that the NegPair reduction gradually increases when the query has more perfect results. The NegPair reduction is 0.99 (13.5\\%) on queries with one perfect document but 2.64 (22.8\\%) on queries with four perfect documents. These numbers imply that the DLCMs are more useful in queries with more than one perfect result in the original ranked list.",
+      "% These observations indicate that our DLCMs are particularly good at finding perfect and excellent results from the initial ranked list, but not capable of discriminating fair results from irrelevant ones. To answer the second question, we showed the distribution of NegPair reduction for perfect documents by splitting queries according to how many perfect results they have. In Figure~, the horizontal axis represents the number of perfect results in each query (and the count of queries within that category) and the vertical axises represent both the average NegPair reduction (NP(d, LambdaMART)-NP(d,DLCM)) and corresponding improvement proportion (e.g. NegPair reduction is 2.64 and NP(d,LambdaMART) is 11.57 on queries with four perfect documents, so the improvement proportion is 22.79\\%).",
+      "A negative ranking pair (NegPair) is a document pair (d, d') where d' is ranked higher than d in query q while y_{(q,d') < y_{(q,d). In other words, the number of negative pairs is the number of documents which have been incorrectly placed in front of d. % For simplicity, we use NP(d, LambdaMART) and NP(d,DLCM) to denote the negative ranking pair of d in the ranked lists of LambdaMART and DLCM with AttRank.",
+      "The NegPair reduction is defined as NP(d, LambdaMART)-NP(d,DLCM). \\caption{The performance of the DLCMs on Microsoft 30k with different hyper-parameters. \\end{figure*",
+      "(2) What queries received more improvements from the use of local ranking context? For analysis purposes, we used the ranked lists of LambdaMART and its DLCM with AttRank from one test fold of Microsoft 30k and analyzed the pairwise ranking changes on documents with different relevance labels y_{(q,d). The statistics of the test fold are shown in Table~. We measured the improvement of the DLCM with AttRank over LambdaMART on a document d by counting the reduction of negative ranking pairs.",
+      "If we further assume that the relevance judgment scores of a document directly reflect its information gain, the best strategy to maximize the total information gain in a limited time is to allocate more attention to the best results, less attention to the fair results and no attention to the irrelevant results. The idea of Attention Rank is to compute an attention distribution with the ranking scores of our models and compare it with the attention strategy computed with the relevance judgments. Let the relevance label y_{(q,d_i) represent the information gain of document d_i"
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 1,\n    \"Rationale\": \"Image 3 visually shows the NegPair reduction across different relevance labels, which directly answers the question. Text 1 provides specific numerical values for the NegPair reduction, indicating that documents with a 'perfect' label received the most significant rank promotion.\",\n    \"Answer\": \"Documents with the 'perfect' relevance label received the most significant rank promotion according to the NegPair reduction metric.\"\n}"
+  },
+  "1": {
+    "question": "What is the role of the GRU in the Deep Listwise Context Model (DLCM)?",
+    "ground_truth": "The GRU is used to process the ranked list of documents provided by a global ranking function.",
+    "selected_figures_names": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Table1-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 provides a visual representation of the DLCM structure, highlighting the role of the GRU in processing feature vectors and computing scores. Text 2 explains how the GRU in the DLCM satisfies the requirements of a local context model by learning to combine current and previous inputs.",
+    "answer": "The GRU in the Deep Listwise Context Model (DLCM) is used to encode the sequence of feature vectors from the top retrieved documents. It combines current inputs with previous inputs encoded in the network state, allowing the model to automatically learn the local ranking context without manually defining heuristics.",
+    "text_chunks": [
+      "The final state vector can be viewed as an encoding of all the information that has been fed into the network. In our DLCM, we use a RNN with gated recurrent unit (GRU). The GRU network is a technique proposed by Cho et al.~ which aims to solve the problem of gradient vanishing in RNN.",
+      "Global information from the initial retrieval, namely the ranking positions of top results, is a strong indicator of document relevance and should be considered when we encode and fine-tune the ranked list for each query. To tackle these challenges, we propose a Deep Listwise Context Model (DLCM) that directly encodes the feature vectors of top retrieved documents to learn a local context embedding and use it to improve the learning-to-rank systems. Specifically, we sequentially feed the original features of the top ranked results from a global learning-to-rank model into a recurrent neural network (RNN).",
+      "The encoded local context model I(R_q^n,X_q^n) is the final network state \\bm{s_n. The RNN with GRU in the DLCM naturally satisfies the two requirements of a local context model as discussed in Section~. The inputs of RNN are a sequence of vectors, which could be the scalar features from learning-to-rank systems. Because the RNN automatically learns to combine the current input with previous inputs encoded in the network state, we do not need to manually define heuristics to model the local ranking context.",
+      "The overall idea of our model is to encode the top retrieved documents of each query with a recurrent neural network and refine the ranked list based on the encoded local context model. We refer our model as the Deep Listwise Context Model (DLCM). The pipeline of document ranking with DLCM includes three steps.",
+      "The improvement on ERR@10 is not noticeable when we increased k from 3 to 15 and the performance of the DLCM fluctuated before 12,000 iterations, but remained stable afterward. Conclusion and Future Work In this paper, we propose a Deep Listwise Context Model to improve learning-to-rank systems with the local ranking context. Our model uses a RNN to encode the top retrieved documents from a global learning-to-rank algorithm and refines the ranked list with a local context model.",
+      "To differentiate it from models that score one document a time, we call this new baseline as the Listwise Input Deep Neural Network (LIDNN). Similar to the DLCM, we implemented LIDNN with ListMLE, SoftRank and AttRank respectively. Due to the limitations of the datasets, we cannot access the text data of queries and documents, which makes it impossible to construct relevance models, extract document relationship features or compute query similarities.",
+      "Without explicitly modeling the position effect, we would lose the global ranking information and harm the generalization ability of the whole system. Deep Listwise Context Model In this paper, we propose a deep neural model to incorporate the local ranking context into the learning-to-rank framework.",
+      "Because \\bm{x'_{(q,d_i) could be reduced to \\bm{x_{(q,d_i) when \\beta is equal to zero, we do not differentiate them in further discussions. Encoding the Listwise Local Context Given the top n results retrieved by a global ranking function f and their corresponding feature vectors X_q^n =\\{\\bm{x_{(q,d_i) | d_i \\in R_q^n\\, the local context model I in DLCM is implemented with a recurrent neural network (RNN)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 provides a visual representation of the DLCM structure, highlighting the role of the GRU in processing feature vectors and computing scores. Text 2 explains how the GRU in the DLCM satisfies the requirements of a local context model by learning to combine current and previous inputs.\",\n    \"Answer\": \"The GRU in the Deep Listwise Context Model (DLCM) is used to encode the sequence of feature vectors from the top retrieved documents. It combines current inputs with previous inputs encoded in the network state, allowing the model to automatically learn the local ranking context without manually defining heuristics.\"\n}"
+  },
+  "2": {
+    "question": "How does the NegPair reduction vary with the number of perfect results in a query?",
+    "ground_truth": "The NegPair reduction generally increases as the number of perfect results in a query increases.",
+    "selected_figures_names": [
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Table1-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table3-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 shows the NegPair reduction for documents with different relevance labels, highlighting the impact on perfect results. Text 1 explains how NegPair reduction varies with the number of perfect results in a query, providing specific values and improvement proportions.",
+    "answer": "The NegPair reduction increases with the number of perfect results in a query. It is 0.99 (13.5%) for queries with one perfect document and 2.64 (22.8%) for queries with four perfect documents.",
+    "text_chunks": [
+      "The overall results in Figure~ show that the NegPair reduction gradually increases when the query has more perfect results. The NegPair reduction is 0.99 (13.5\\%) on queries with one perfect document but 2.64 (22.8\\%) on queries with four perfect documents. These numbers imply that the DLCMs are more useful in queries with more than one perfect result in the original ranked list.",
+      "% These observations indicate that our DLCMs are particularly good at finding perfect and excellent results from the initial ranked list, but not capable of discriminating fair results from irrelevant ones. To answer the second question, we showed the distribution of NegPair reduction for perfect documents by splitting queries according to how many perfect results they have. In Figure~, the horizontal axis represents the number of perfect results in each query (and the count of queries within that category) and the vertical axises represent both the average NegPair reduction (NP(d, LambdaMART)-NP(d,DLCM)) and corresponding improvement proportion (e.g. NegPair reduction is 2.64 and NP(d,LambdaMART) is 11.57 on queries with four perfect documents, so the improvement proportion is 22.79\\%).",
+      "The average NegPair reduction per document on perfect is 1.88, which means that the positions of these documents have been effectively increased by nearly 2 in their ranked lists. The NegPair reduction on excellent results (label 3) are smaller but still promising (0.43 per document). On good and fair results (label 2 and label 1), however, there is almost no improvement when comparing the DLCM with LambdaMART.",
+      "To answer the first question, we plotted the average NegPair reduction for documents with different relevance labels in Figure~. The numbers are averaged both on document level and on query level (average on documents within each query and then on all the queries). As shown in Figure~, the perfect results (documents with label 4) received the largest promotions in rank.",
+      "The NegPair reduction is defined as NP(d, LambdaMART)-NP(d,DLCM). \\caption{The performance of the DLCMs on Microsoft 30k with different hyper-parameters. \\end{figure*",
+      "A negative ranking pair (NegPair) is a document pair (d, d') where d' is ranked higher than d in query q while y_{(q,d') < y_{(q,d). In other words, the number of negative pairs is the number of documents which have been incorrectly placed in front of d. % For simplicity, we use NP(d, LambdaMART) and NP(d,DLCM) to denote the negative ranking pair of d in the ranked lists of LambdaMART and DLCM with AttRank.",
+      "First, Yahoo! Letor set 1 is a relatively easy dataset and the ranked lists produced by the baseline methods are nearly perfect (e.g. LambdaMART had 0.738 on NDCG@10). When we input those nearly perfect ranked lists into the DLCM, it is less likely to learn anything new other than producing the same ranking from the initial ranked list.",
+      "The first one is the Normalized Discounted Cumulative Gain (NDCG)~, and the second one is Expected Reciprocal Rank (ERR)~. For both NDCG and ERR, we reported results at rank 1,3,5 and 10 to show the performance of our models on different positions. Statistical differences are computed with the Fisher randomization test~ (p \\leq 0.01). Model training."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 shows the NegPair reduction for documents with different relevance labels, highlighting the impact on perfect results. Text 1 explains how NegPair reduction varies with the number of perfect results in a query, providing specific values and improvement proportions.\",\n    \"Answer\": \"The NegPair reduction increases with the number of perfect results in a query. It is 0.99 (13.5%) for queries with one perfect document and 2.64 (22.8%) for queries with four perfect documents.\"\n}"
+  },
+  "3": {
+    "question": "Which dataset would be most suitable for training a learning-to-rank model with limited computational resources, and why?",
+    "ground_truth": "Microsoft 10k would be the most suitable dataset for training with limited computational resources.",
+    "selected_figures_names": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.05936v2-Table3-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Table1-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides a comparison of different models and loss functions on the Microsoft 10K dataset, showing performance metrics like nDCG and ERR. Text 3 discusses the efficiency of the DLCM model, highlighting its lower number of trainable parameters compared to other models. This combination helps identify a dataset and model setup suitable for limited computational resources.",
+    "answer": "The Microsoft 10K dataset would be suitable for training a learning-to-rank model with limited computational resources. The DLCM model, which performs well on this dataset, has a lower number of trainable parameters compared to other models, making it more efficient for such scenarios.",
+    "text_chunks": [
+      "Also, it can be directly applied in the unbiased learning to rank framework~. Experimental Setup In our experiments, we used three benchmark datasets, Microsoft 30k, Microsoft 10k~ and Yahoo! Webscope v2.0 set 1.",
+      "The improvement on ERR@10 is not noticeable when we increased k from 3 to 15 and the performance of the DLCM fluctuated before 12,000 iterations, but remained stable afterward. Conclusion and Future Work In this paper, we propose a Deep Listwise Context Model to improve learning-to-rank systems with the local ranking context. Our model uses a RNN to encode the top retrieved documents from a global learning-to-rank algorithm and refines the ranked list with a local context model.",
+      "Our model can be efficiently trained with our attention-based listwise ranking loss and directly deployed over existing learning-to-rank models without additional feature extraction or retrieval processing. In our experiments, we showed that our DLCM can significantly improve the performance of baseline methods on benchmark learning-to-rank datasets. Also, our analysis indicates that the DLCM is particularly good at finding the best documents from the initial ranked list.",
+      "On LambdaMART, which is considered to be one of the state-of-the-art learning-to-rank models, the DLCM with AttRank achieved 1.3\\%, 4.7\\% improvements on NDCG@1, ERR@1 and 1.1\\%, 2.0\\% improvements on NDCG@10, ERR@10. Although the number of trainable parameters in DLCMs is close to the re-ranking baselines and much lower than LIDNNs, the DCLMs significantly outperformed them in our experiments. This indicates that incorporating local ranking context with the DLCM is beneficial for global ranking algorithms.",
+      "The goal of our work is to improve learning-to-rank systems with the local ranking context but not to extract new features or design new models for query expansion. Therefore, we did not include models that use the raw text of queries or documents as baselines in our experiments~. Evaluation. Our datasets have five-level relevance judgments, from 0 (irrelevant) to 4 (perfectly relevant), so we use two types of multi-label ranking metrics.",
+      "Compared to text-based retrieval models, there has not been much work on using the top retrieved documents for learning-to-rank algorithms. To the best of our knowledge, the only studies in this area are the CRF-based ranking model~ and the score regularization technique~. Different from our work, both of them focus on utilizing the document similarity features computed with word distributions but not the modeling of local ranking context. They are expensive and limited because they require accessing the raw text of documents after the initial retrieval for feature extraction and ignore document relationships based on ranking features other than term vectors.",
+      "Models trained with our attention-based loss are more efficient and effective than those trained with traditional listwise loss functions such as ListMLE~. % To demonstrate and understand the effectiveness of our model, we conducted empirical experiments on large-scale learning-to-rank corpora. Experimental results show that our model outperformed the state-of-the-art learning-to-rank algorithms significantly and consistently. In addition, our analysis shows that our model was particularly good at finding the best document from a group of results, which potentially makes it useful for ranking scenarios where performance at high ranks is extremely important.",
+      "% For the re-ranking baselines and the LIDNNs, we tried both two-layer and three-layer feedforward neural networks with hidden layer units from 64 to 1024. We only reported the best results for each baseline. For the training of RNN and local ranking functions, we used stochastic gradient descent with batch size 256."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides a comparison of different models and loss functions on the Microsoft 10K dataset, showing performance metrics like nDCG and ERR. Text 3 discusses the efficiency of the DLCM model, highlighting its lower number of trainable parameters compared to other models. This combination helps identify a dataset and model setup suitable for limited computational resources.\",\n    \"Answer\": \"The Microsoft 10K dataset would be suitable for training a learning-to-rank model with limited computational resources. The DLCM model, which performs well on this dataset, has a lower number of trainable parameters compared to other models, making it more efficient for such scenarios.\"\n}"
+  },
+  "4": {
+    "question": "Which of the following methods has the best performance?",
+    "ground_truth": "LambdaMART",
+    "selected_figures_names": [
+      "1804.05936v2-Table1-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1804.05936v2-Table1-1.png",
+      "1804.05936v2-Table5-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 provides a detailed comparison of different models and loss functions, showing performance metrics like nDCG and ERR. Text 1 discusses the effectiveness of the attention-based model, which aligns with the performance data in the image.",
+    "answer": "The DLCM with AttRank has the best performance, as shown by its superior metrics in the comparison table.",
+    "text_chunks": [
+      "For different variations, the DLCMs with AttRank consistently produced better results than the DLCMs with ListMLE and outperformed its SoftRank version on Microsoft 30K LambdaMART, Microsoft 10K LambdaMART and Yahoo! SVMrank. Because the Attention Rank loss is much simpler and more efficient than the ListMLE (2 times faster) and the SoftRank (20 times faster) empirically, we believe that it has great potentials in real applications.",
+      "Models trained with our attention-based loss are more efficient and effective than those trained with traditional listwise loss functions such as ListMLE~. % To demonstrate and understand the effectiveness of our model, we conducted empirical experiments on large-scale learning-to-rank corpora. Experimental results show that our model outperformed the state-of-the-art learning-to-rank algorithms significantly and consistently. In addition, our analysis shows that our model was particularly good at finding the best document from a group of results, which potentially makes it useful for ranking scenarios where performance at high ranks is extremely important.",
+      "The pairwise methods transform the document ranking into a pairwise classification task by taking two documents a time and optimizing their relative positions in the final ranked list~. The listwise methods further extend the above methods by taking multiple documents together and directly maximizing the ranking metrics~. For example, Taylor et al.~ trained models by optimizing the expected ranking metric computed with the expected rank of each document given a predefined Gaussian distribution.",
+      "We tried other settings like replacing \\bm{o with \\bm{x and implementing \\phi with a three-layer feed forward network or a neural tensor network . However, their performance were either worse or not significantly better than our method in the experiments, so we only report the results of \\phi defined as Equation~ in this paper. Loss Function To train our DLCM, we implemented two existing listwise loss functions (ListMLE~ and SoftRank~) and also proposed a new listwise loss function called Attention Rank.",
+      "The way to find this optimal f is to minimize a loss function \\mathcal{L defined as where Q is the set of all possible queries, D is the set of candidate documents, \\ell is the local loss computed with the document score f(\\bm{x_{(q,d)) and corresponding relevance judgment y_{(q,d). Now, suppose that we can capture the local ranking context of q with a local context model I(R_q, X_q) where R_q = \\{d \\text{ sorted by f(\\bm{x_{(q,d))\\ and X_q = \\{\\bm{x_{(q,d)|d\\in R_q\\, then the loss of learning to rank with local context can be formulated as: where \\phi is a scoring function that ranks documents based on both their features and the local context model I(R_q, X_q). The goal is to find the optimal I and \\phi that minimize the loss function \\mathcal{L.",
+      "Our model can be efficiently trained with our attention-based listwise ranking loss and directly deployed over existing learning-to-rank models without additional feature extraction or retrieval processing. In our experiments, we showed that our DLCM can significantly improve the performance of baseline methods on benchmark learning-to-rank datasets. Also, our analysis indicates that the DLCM is particularly good at finding the best documents from the initial ranked list.",
+      "If we further assume that the relevance judgment scores of a document directly reflect its information gain, the best strategy to maximize the total information gain in a limited time is to allocate more attention to the best results, less attention to the fair results and no attention to the irrelevant results. The idea of Attention Rank is to compute an attention distribution with the ranking scores of our models and compare it with the attention strategy computed with the relevance judgments. Let the relevance label y_{(q,d_i) represent the information gain of document d_i",
+      "The main advantages of Attention Rank are its simplicity and efficiency. By using the rectified exponential function \\psi(x), we explicitly allocate more effort to optimize high-relevance results in the training process. The training of the DLCM with Attention Rank was 2 and 20 times faster than the DLCM with ListMLE and SoftRank in our experiments."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 provides a detailed comparison of different models and loss functions, showing performance metrics like nDCG and ERR. Text 1 discusses the effectiveness of the attention-based model, which aligns with the performance data in the image.\",\n    \"Answer\": \"The DLCM with AttRank has the best performance, as shown by its superior metrics in the comparison table.\"\n}"
+  },
+  "5": {
+    "question": "Which combination of initial list, model, and loss function achieved the best overall performance on the Yahoo! set 1, as measured by nDCG@10 and ERR@10?",
+    "ground_truth": "LambdaMART initial list, DLCM model, and AttRank loss function achieved the best overall performance on the Yahoo! set 1, with an nDCG@10 of 0.743 and an ERR@10 of 0.453.",
+    "selected_figures_names": [
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1804.05936v2-Figure4-1.png",
+      "1804.05936v2-Figure2-1.png",
+      "1804.05936v2-Table2-1.png",
+      "1804.05936v2-Figure3-1.png",
+      "1804.05936v2-Figure1-1.png",
+      "1804.05936v2-Table1-1.png",
+      "1804.05936v2-Table4-1.png",
+      "1804.05936v2-Table3-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides a detailed comparison of models and loss functions, including nDCG@10 and ERR@10 metrics, which are directly relevant to the question. Text 0 discusses the performance of baseline methods on Yahoo! Letor set 1, indicating the context of the dataset's difficulty.",
+    "answer": "The combination of LambdaMART as the initial list, DLCM as the model, and AttRank as the loss function achieved the best overall performance on Yahoo! set 1, with nDCG@10 of 0.463 and ERR@10 of 0.362.",
+    "text_chunks": [
+      "First, Yahoo! Letor set 1 is a relatively easy dataset and the ranked lists produced by the baseline methods are nearly perfect (e.g. LambdaMART had 0.738 on NDCG@10). When we input those nearly perfect ranked lists into the DLCM, it is less likely to learn anything new other than producing the same ranking from the initial ranked list.",
+      "The first one is the Normalized Discounted Cumulative Gain (NDCG)~, and the second one is Expected Reciprocal Rank (ERR)~. For both NDCG and ERR, we reported results at rank 1,3,5 and 10 to show the performance of our models on different positions. Statistical differences are computed with the Fisher randomization test~ (p \\leq 0.01). Model training.",
+      "Models trained with our attention-based loss are more efficient and effective than those trained with traditional listwise loss functions such as ListMLE~. % To demonstrate and understand the effectiveness of our model, we conducted empirical experiments on large-scale learning-to-rank corpora. Experimental results show that our model outperformed the state-of-the-art learning-to-rank algorithms significantly and consistently. In addition, our analysis shows that our model was particularly good at finding the best document from a group of results, which potentially makes it useful for ranking scenarios where performance at high ranks is extremely important.",
+      "% These observations indicate that our DLCMs are particularly good at finding perfect and excellent results from the initial ranked list, but not capable of discriminating fair results from irrelevant ones. To answer the second question, we showed the distribution of NegPair reduction for perfect documents by splitting queries according to how many perfect results they have. In Figure~, the horizontal axis represents the number of perfect results in each query (and the count of queries within that category) and the vertical axises represent both the average NegPair reduction (NP(d, LambdaMART)-NP(d,DLCM)) and corresponding improvement proportion (e.g. NegPair reduction is 2.64 and NP(d,LambdaMART) is 11.57 on queries with four perfect documents, so the improvement proportion is 22.79\\%).",
+      "Compared to other datasets, we notice that the improvements from the DLCMs are relatively small on Yahoo! Letor set 1. This, however, is not surprising considering the special properties of the Yahoo! data.",
+      "Our model can be efficiently trained with our attention-based listwise ranking loss and directly deployed over existing learning-to-rank models without additional feature extraction or retrieval processing. In our experiments, we showed that our DLCM can significantly improve the performance of baseline methods on benchmark learning-to-rank datasets. Also, our analysis indicates that the DLCM is particularly good at finding the best documents from the initial ranked list.",
+      "Second, every feature in Yahoo! Letor set 1 is a high-quality ranking signal in itself. The 700 features in Yahoo! data are the outputs of a feature selection where the most predictive features for ranking are kept~.",
+      "If we start the selection from the top of a ranked list R^n_q and remove the selected document from the candidate set after each step, we have the probability of observing R^n_q given the ranking scores \\bm{S as Let \\mathcal{R^{*_q be the best possible ranked list for query q, then the ListMLE loss is defined as the minus of the log likelihood of \\mathcal{R^{*_q given \\bm{S. SoftRank, firstly proposed by Taylor et al.~, is a listwise loss function that directly optimizes the ranking metrics of information retrieval such as NDCG. Let S_i and S_j be the ranking scores of document d_i and d_j for query q."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides a detailed comparison of models and loss functions, including nDCG@10 and ERR@10 metrics, which are directly relevant to the question. Text 0 discusses the performance of baseline methods on Yahoo! Letor set 1, indicating the context of the dataset's difficulty.\",\n    \"Answer\": \"The combination of LambdaMART as the initial list, DLCM as the model, and AttRank as the loss function achieved the best overall performance on Yahoo! set 1, with nDCG@10 of 0.463 and ERR@10 of 0.362.\"\n}"
+  }
+}

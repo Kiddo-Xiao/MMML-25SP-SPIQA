@@ -1,0 +1,90 @@
+{
+  "0": {
+    "question": "How does increasing the parameter value (\u03c1 for LIME with Euclidean distance, \u03bc for LIME with cosine similarity, and \u03c3 for Parzen) seem to affect the influence vectors?",
+    "ground_truth": "As the parameter value increases, the influence vectors generally become smoother and less noisy.",
+    "selected_figures_names": [
+      "1708.02153v2-Table2-1.png",
+      "1708.02153v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1708.02153v2-Table2-1.png",
+      "1708.02153v2-Table3-1.png",
+      "1708.02153v2-Table1-1.png",
+      "1708.02153v2-Table4-1.png",
+      "1708.02153v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 and Text 2 both discuss the effects of varying parameters on influence vectors. Image 1 visually shows how changes in parameters affect the influence and shifted POI, while Text 2 explains the impact of parameter size on the weight distribution and noise in the influence measure.",
+    "answer": "Increasing the parameter values (\u03c1 for LIME with Euclidean distance, \u03bc for LIME with cosine similarity, and \u03c3 for Parzen) results in more neighbors being considered, leading to a more informative influence measure. However, for LIME, larger values make the influence measure noisier.",
+    "text_chunks": [
+      "Parzen is parameterized by the choice of \\sigma in Equation~\\eqref{eq:parzen-kernel in the main paper. Table~ highlights the effects of parameter choice for both LIME and Parzen. For Parzen, we vary the \\sigma parameter, whereas for LIME we vary \\rho (for the Euclidean distance method compared to in the main paper) and \\mu (for the cosine similarity version).",
+      "In Section~, we test LIME and Parzen with certain parameter choices. LIME is parameterized by a variable \\rho governing the behavior of a distance function \\alpha_\\rho (see the definition of LIME in Equation~\\eqref{eq:LIME of the main paper); increasing \\rho makes LIME assign influence to points further away from the point of interest. We also consider LIME with (inverse) cosine similarity as our choice of \\alpha in Equation~\\eqref{eq:LIME of the main paper; this is again parameterized by a \\mu parameter controlling the amount of weight placed on points further away from the point of interest.",
+      "As can be seen in Table~, small parameters make the measures place a lot of weight on the point of interest itself, and the resulting influence measure is a near-replica of it. As we increase the parameters, more neighbors are considered, resulting in a more informative influence measure. Large values of \\rho and \\mu make LIME much noisier.",
+      "Shifting the picture along the influence vector seems to make the person in the picture smile wider, and open their mouth slightly. The Parzen vector differs from the MIM vector mainly in that it suggests dark eyes as indicative of the label and does not indicate the eyebrows as strongly. LIME, while generally agreeing with the other two, results in a more 'shattered' image.",
+      "In Table depicted are five happy and five sad labeled images, their influence vector and the images shifted along the vector to `enhance' their label as suggested by the influence vector; we use MIM, Parzen and LIME to compute influence. MIM and Parzen produce similar vectors, while the outputs of LIME are visibly more jagged, introducing much more noise to the shifted image. As one might expect, influence vectors for opposing labels tend to have similar but inverted direction.",
+      "% \\setlength\\tabcolsep{6pt % While MIM and Parzen have similar outputs on the data: the average cosine similarity between the two measures is \\ge0.94 (taken over \\ge 8000 randomly sampled points). Two example MIM influence measurements are depicted in Table~ .",
+      "This can be explained by the fact that when the parameters are sufficiently large, LIME effectively tries to fit a linear classifier to the entire dataset. This linear classifier is highly inaccurate, resulting at a rather uninformative local influence measure. Parzen doesn't suffer from this problem, it seemingly converges to a generic version of a happy face.",
+      "Characterizing Monotone Influence Measures In what follows, we show that influence measures satisfying the axioms in Section~ must follow a specific formula, described in Theorem~. Below, \\indicator(p) is a \\{1,-1\\-valued indicator (i.e. 1 if p is true and -1 otherwise), and \\dist{\\vec x is the Euclidean length of \\vec x; our analysis admits other distances over \\R^n, but we stick with \\dist{\\cdot for concreteness. We begin by showing a simple technical lemma."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 and Text 2 both discuss the effects of varying parameters on influence vectors. Image 1 visually shows how changes in parameters affect the influence and shifted POI, while Text 2 explains the impact of parameter size on the weight distribution and noise in the influence measure.\",\n    \"Answer\": \"Increasing the parameter values (\u03c1 for LIME with Euclidean distance, \u03bc for LIME with cosine similarity, and \u03c3 for Parzen) results in more neighbors being considered, leading to a more informative influence measure. However, for LIME, larger values make the influence measure noisier.\"\n}"
+  },
+  "1": {
+    "question": "Which explanation method seems to place the most emphasis on specific, localized features rather than smooth, gradual changes in pixel intensity?",
+    "ground_truth": "LIME appears to place the most emphasis on specific, localized features.",
+    "selected_figures_names": [
+      "1708.02153v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1708.02153v2-Table2-1.png",
+      "1708.02153v2-Table3-1.png",
+      "1708.02153v2-Table1-1.png",
+      "1708.02153v2-Table4-1.png",
+      "1708.02153v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 shows the influence maps for MIM, Parzen, and LIME, which are relevant to understanding how each method emphasizes features. Text 6 explains LIME's approach, focusing on local interpretability, which aligns with emphasizing specific, localized features.",
+    "answer": "LIME seems to place the most emphasis on specific, localized features rather than smooth, gradual changes in pixel intensity.",
+    "text_chunks": [
+      "This is due to the fact that the dataset does not describe the locality of the image well enough; one can expect this to be the case for many images if the dataset is so small (12000) for such a complex feature space (48\\times 48 = 2304 features, with each potentially taking 256 different shades of gray). This exemplifies the dependency of MIM on the dataset provided, and indicates it needs a relatively dense locality in order to perform reasonably well, if black-box access to the classifier or any domain knowledge cannot be assumed. Additional Experiments on the Facial Expression Dataset \\newlength{\\pictureWidthInTable \\setlength{\\pictureWidthInTable{0.66in Tables and present additional experimental results on the dataset from , with influence vectors computed similarly as in Section~ of the main paper.",
+      "Seemingly it's better for a classifier to focus it's weights on a smaller set of features, while for MIM and Parzen you can see that neighbouring pixels actually have similar influence. The second row shows another example picture and its corresponding influence vectors; however here, all measures fail to offer a meaningful explanation. This is likely to be since the face in the image is tilted, unlike the majority of images in the dataset.",
+      "This can be explained by the fact that when the parameters are sufficiently large, LIME effectively tries to fit a linear classifier to the entire dataset. This linear classifier is highly inaccurate, resulting at a rather uninformative local influence measure. Parzen doesn't suffer from this problem, it seemingly converges to a generic version of a happy face.",
+      "Designing provably sound methods for measuring the effect of pairwise (or k-wise) interactions amongst features is a major challenge. Non-linear explanations naturally trade-off {\\em accuracy and {\\em interpretability. A linear explanation is easy to understand, but lacks the explanatory power of a measure that captures k-wise interactions.",
+      "Intuitively, both parameters control the locality of their respective measures. Small values imply that points closer to the point of interest are considered with more weight or, to frame it in terms of window functions, the weight of points further away is suppressed. Larger parameter values diminish this effect.",
+      "Several recent works propose making algorithms more transparent by using numerical influence measures: methods for measuring the importance of every feature in a dataset. However, these works, by and large, do not justify {\\em why their particular methodology is sound. Our work takes an axiomatic approach to influence measurement in data-driven domains.",
+      "LIME The approach followed by \\citename{Ribeiro2016should is based on the idea of using an interpretable classifier approximating the original in a region around \\vec x; this simpler classifier then can be thought of as an explanation. This approach is termed Local Interpretable Model-agnostic Explanation (LIME). \\citeauthor{Ribeiro2016should provide a concrete applicable framework, providing explanations in specific application domains.",
+      "Secondly, computing QII is computationally intensive, both when deriving the value of a set of features in v(S;\\vec x) and when aggregating marginal effect in \\eqref{eq:QII (\\citename{chen2018lshapley propose workarounds to these issues). Black-Box Access Vs. Data-Driven Approaches Influence measures in data domains seem to follow either one of two paradigms. One class of methods relies on {\\em black-box access to the underlying classifier; for example, QII~ requires classifier queries in order to compute v(S;\\vec x); LIME makes such queries to sample a local region of \\vec x. {\\em Data-driven methods (e.g. Parzen, MIM) do not require black-box access."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 shows the influence maps for MIM, Parzen, and LIME, which are relevant to understanding how each method emphasizes features. Text 6 explains LIME's approach, focusing on local interpretability, which aligns with emphasizing specific, localized features.\",\n    \"Answer\": \"LIME seems to place the most emphasis on specific, localized features rather than smooth, gradual changes in pixel intensity.\"\n}"
+  },
+  "2": {
+    "question": "Explain why the \"Last contact\" feature has a significant positive influence on the SSL score in both examples, even though it is not directly used by the SSL algorithm.",
+    "ground_truth": "The \"Last contact\" feature shows a strong positive influence on the SSL score because it is likely correlated with other features that are used by the algorithm. As the passage mentions, data-driven methods like MIM can assign influence to features that are not directly used by the model if they are correlated with other influential features. In this case, a recent \"Last contact\" date might be correlated with a higher number of recent offenses or other factors that contribute to a higher SSL score.",
+    "selected_figures_names": [
+      "1708.02153v2-Table4-1.png"
+    ],
+    "all_figures_names": [
+      "1708.02153v2-Table2-1.png",
+      "1708.02153v2-Table3-1.png",
+      "1708.02153v2-Table1-1.png",
+      "1708.02153v2-Table4-1.png",
+      "1708.02153v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a detailed breakdown of feature influences on the SSL score, showing 'Last contact' with a significant positive influence. Text 0 explains that the latest date of contact with the police often has a significant positive influence on the score, despite not being directly used by the algorithm.",
+    "answer": "The 'Last contact' feature has a significant positive influence on the SSL score because it is correlated with other variables that the algorithm uses, even though it is not directly used by the algorithm itself.",
+    "text_chunks": [
+      "As exemplified in Table~ , the influence of a single crime-related event tends to grow with the number of events of the same type. In the vast majority of cases, age has significant negative influence on the SSL score. Interestingly, the latest date of contact with the police often has significant positive influence on the score, despite not being used by the algorithm directly.",
+      "\\citename{asher2017ssl analyze the eight features used by the SSL Algorithm. Their results suggest that age has significant negative influence on the SSL score, while other features contribute positively in varying degrees. The MIM outputs confirm this statement, but suggest that the degree to which the features contribute to the SSL score vary greatly between cases.",
+      "In other cases, race has significant influence as well. This last point highlights some of the issues of using a data-driven method: features that are not used by the classifier can be assigned a significant amount of influence; this is simply because race is correlated with other variables used by the SSL algorithm. Indeed, in order to ascertain that race is not an input to the algorithm, black-box access is required.",
+      "Our final parameter choices aimed at striking a balance between ignoring the effect of other points in the dataset, and maintaining a locality at the point of influence; there is a rather broad range of parameters which strike this balance, so the precise parameter choice is less critical in this experiment. \\newpage The Strategic Subject List Dataset The dataset used for this experiment is the anonymized listing of arrest data used by the Chicago Police Department's Strategic Subject Algorithm to create a risk assessment score, known as the Strategic Subject List or SSL .",
+      "These attributes are: age during the latest arrest (1), number of times being the victim of a shooting incident (2), number of times being the victim of aggravated battery or assault (3), number of prior arrests for violent offenses (4), presence of gang affiliation (5), number of prior narcotic arrests (6), trend in recent criminal activity (7) and number of prior unlawful use of weapon arrests (8). Additionally, in this experiment, we measure the influence of features not available to the algorithm (but which are part of the dataset): sex (9), race (10), occurrence of at least one weapon arrest in past 10 years (11), occurrence of at least one drug arrest in past 10 years (12), the subject being currently on parole (13), and the latest year of contact with the police (14). The dataset requires some adjustments to the original definitions of MIM and Parzen.",
+      "By random labels and flip faithfulness, \\alpha_1 = - \\alpha_2, thus \\phi(\\vec x, \\X) = (\\vec y - \\vec x)\\alpha(\\dist{\\vec y - \\vec x) \\indicator(c(\\vec x) = c(\\vec y)), where \\alpha depends only on \\dist{\\vec y - \\vec x. Suppose the hypothesis holds when |\\cal X|\\le k. Consider any dataset \\cal Y of size k+1. The cases where the dataset \\cal Y does not contain at least three different points are handled in a manner similar to when k = 1,2. \\kuba{To first talk about three different points and then two distinct points, is so confusing that I'm not sure if it's correct Suppose \\cal Y contains at least two distinct datapoints \\vec y,\\vec z \\neq \\vec x.",
+      "By using the Shapley value, QII immediately guarantees several desirable properties `for free' (as the Shapley value satisfies them); moreover, the Shapley value (and thus, QII) is the {\\em only way of measuring influence that can satisfy these properties. However, QII suffers from two major drawbacks. The first is that when computing v(S;\\vec x), one assumes the ability to query the classifier on points that are not in the dataset (in particular, when computing c(\\vec x_{-S,\\vec y_S)).",
+      "In Figure~, we have a single feature ranging from 0 to 2; we are measuring influence for the point \\vec x_0 (marked with a green circle). When we add two more positive labels slightly to its right, monotonicity requires that the value of \\phi_{\\Parzen_\\sigma(\\vec x_0,\\D) should not decrease; however, this addition `flattens' the potential function, decreasing the influence of the feature. Non-bias is violated on any dataset with at least two distinct points."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a detailed breakdown of feature influences on the SSL score, showing 'Last contact' with a significant positive influence. Text 0 explains that the latest date of contact with the police often has a significant positive influence on the score, despite not being directly used by the algorithm.\",\n    \"Answer\": \"The 'Last contact' feature has a significant positive influence on the SSL score because it is correlated with other variables that the algorithm uses, even though it is not directly used by the algorithm itself.\"\n}"
+  }
+}

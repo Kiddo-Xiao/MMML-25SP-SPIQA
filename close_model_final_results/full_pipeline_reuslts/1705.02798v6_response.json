@@ -1,0 +1,206 @@
+{
+  "0": {
+    "question": "Which component of the model seems to have the biggest impact on the F1 score on SQuAD dataset, and how much does removing it affect the score?",
+    "ground_truth": "The DCRL training method appears to have the biggest impact on the F1 score. Removing it leads to a drop of 0.9 points in F1, which is the largest decrease observed for any single component in the ablation study.",
+    "selected_figures_names": [
+      "1705.02798v6-Figure5-1.png",
+      "1705.02798v6-Figure1-1.png",
+      "1705.02798v6-Table1-1.png",
+      "1705.02798v6-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02798v6-Figure5-1.png",
+      "1705.02798v6-Figure1-1.png",
+      "1705.02798v6-Table1-1.png",
+      "1705.02798v6-Table3-1.png",
+      "1705.02798v6-Table4-1.png",
+      "1705.02798v6-Figure3-1.png",
+      "1705.02798v6-Table2-1.png",
+      "1705.02798v6-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 shows predictions with DCRL, which is relevant to understanding its impact. Text 3 discusses the contributions of the reattention mechanism and DCRL training method, noting their influence on the F1 score.",
+    "answer": "The DCRL training method has a significant impact on the F1 score. Removing it results in a huge drop in the F1 metric.",
+    "text_chunks": [
+      "As shown in Table , R.M-Reader achieves an EM score of 79.5\\% and F1 score of 86.6\\%. Since SQuAD is a competitve MRC benchmark, we also build an ensemble model that consists of 12 single models with the same architecture but initialized with different parameters. Our ensemble model improves the metrics to 82.3\\% and 88.5\\% respectively.",
+      "On SQuAD, our single model obtains an exact match (EM) score of 79.5\\% and F1 score of 86.6\\%, while our ensemble model further boosts the result to 82.3\\% and 88.5\\% respectively. On adversarial SQuAD, our model surpasses existing approahces by more than 6\\% on both AddSent and AddOneSent datasets. MRC with Reattention Task Description For the MRC tasks, a question Q and a context C are given, our goal is to predict an answer A, which has different forms according to the specific task.",
+      "Table shows the performance comparison on two adversarial datasets, AddSent and AddOneSent. All models are trained on the original train set of SQuAD, and are tested on the two datasets. As we can see, R.M-Reader comfortably outperforms all previous models by more than 6\\% in both EM and F1 scores, indicating that our model is more robust against adversarial attacks.",
+      "Ablation Study The contributions of each component of our model are shown in Table . Firstly, ablation (1-4) explores the utility of reattention mechanism and DCRL training method. We notice that reattention has more influences on EM score while DCRL contributes more to F1 metric, and removing both of them results in huge drops on both metrics.",
+      "The size of character embedding and corresponding LSTMs is 50, the main hidden size is 100, and the hyperparameter \\gamma is 3. Overall Results We submitted our model on the hidden test set of SQuAD for evaluation. Two evaluation metrics are used: Exact Match (EM), which measures whether the predicted answer are exactly matched with the ground truth, and F1 score, which measures the degree of word overlap at token level.",
+      "We then finetune this model with Eq. , until the F1 score on the development set no longer improves. We use the Adam optimizer~ for both ML and DCRL training. The initial learning rates are 0.0008 and 0.0001 respectively, and are halved whenever meeting a bad iteration.",
+      "More specifically, let R(A^s, A^*) denote the F1 score between a sampled answer A^s and the ground truth A^*. The training objective is to minimize the negative expected reward by where we abbreviate the model distribution p(A|C,Q;\\theta) as p_{\\theta(A), and the reward function R(A^s, A^*) as R(A^s). \\hat{A is obtained by greedily maximizing the model distribution: \\begin{displaymath\\hat{A = \\arg\\max_{Ap(A|C,Q;\\theta)\\end{displaymath",
+      "Finally the end probability p_2(j|i) is computed as Experiments Implementation Details We mainly focus on the SQuAD dataset~ to train and evaluate our model. SQuAD is a machine comprehension dataset, totally containing more than 100,000 questions manually annotated by crowdsourcing workers on a set of 536 Wikipedia articles. In addition, we also test our model on two adversarial SQuAD datasets~, namely AddSent and AddOneSent."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 shows predictions with DCRL, which is relevant to understanding its impact. Text 3 discusses the contributions of the reattention mechanism and DCRL training method, noting their influence on the F1 score.\",\n    \"Answer\": \"The DCRL training method has a significant impact on the F1 score. Removing it results in a huge drop in the F1 metric.\"\n}"
+  },
+  "1": {
+    "question": "Which model performs the best on the AddOneSent dataset in terms of F1 score?",
+    "ground_truth": "R.M.-Reader.",
+    "selected_figures_names": [
+      "1705.02798v6-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02798v6-Table3-1.png",
+      "1705.02798v6-Table5-1.png",
+      "1705.02798v6-Figure5-1.png",
+      "1705.02798v6-Figure4-1.png",
+      "1705.02798v6-Figure3-1.png",
+      "1705.02798v6-Figure2-1.png",
+      "1705.02798v6-Table1-1.png",
+      "1705.02798v6-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image provides a clear comparison of model performances on the AddOneSent dataset, showing F1 scores. Text chunk 0 explains that the R.M-Reader outperforms other models, which aligns with the data in the image.",
+    "answer": "R.M-Reader performs the best on the AddOneSent dataset in terms of F1 score.",
+    "text_chunks": [
+      "Table shows the performance comparison on two adversarial datasets, AddSent and AddOneSent. All models are trained on the original train set of SQuAD, and are tested on the two datasets. As we can see, R.M-Reader comfortably outperforms all previous models by more than 6\\% in both EM and F1 scores, indicating that our model is more robust against adversarial attacks.",
+      "On SQuAD, our single model obtains an exact match (EM) score of 79.5\\% and F1 score of 86.6\\%, while our ensemble model further boosts the result to 82.3\\% and 88.5\\% respectively. On adversarial SQuAD, our model surpasses existing approahces by more than 6\\% on both AddSent and AddOneSent datasets. MRC with Reattention Task Description For the MRC tasks, a question Q and a context C are given, our goal is to predict an answer A, which has different forms according to the specific task.",
+      "We then finetune this model with Eq. , until the F1 score on the development set no longer improves. We use the Adam optimizer~ for both ML and DCRL training. The initial learning rates are 0.0008 and 0.0001 respectively, and are halved whenever meeting a bad iteration.",
+      "As shown in Table , R.M-Reader achieves an EM score of 79.5\\% and F1 score of 86.6\\%. Since SQuAD is a competitve MRC benchmark, we also build an ensemble model that consists of 12 single models with the same architecture but initialized with different parameters. Our ensemble model improves the metrics to 82.3\\% and 88.5\\% respectively.",
+      "Ablation Study The contributions of each component of our model are shown in Table . Firstly, ablation (1-4) explores the utility of reattention mechanism and DCRL training method. We notice that reattention has more influences on EM score while DCRL contributes more to F1 metric, and removing both of them results in huge drops on both metrics.",
+      "Finally the end probability p_2(j|i) is computed as Experiments Implementation Details We mainly focus on the SQuAD dataset~ to train and evaluate our model. SQuAD is a machine comprehension dataset, totally containing more than 100,000 questions manually annotated by crowdsourcing workers on a set of 536 Wikipedia articles. In addition, we also test our model on two adversarial SQuAD datasets~, namely AddSent and AddOneSent.",
+      "More specifically, let R(A^s, A^*) denote the F1 score between a sampled answer A^s and the ground truth A^*. The training objective is to minimize the negative expected reward by where we abbreviate the model distribution p(A|C,Q;\\theta) as p_{\\theta(A), and the reward function R(A^s, A^*) as R(A^s). \\hat{A is obtained by greedily maximizing the model distribution: \\begin{displaymath\\hat{A = \\arg\\max_{Ap(A|C,Q;\\theta)\\end{displaymath",
+      "The size of character embedding and corresponding LSTMs is 50, the main hidden size is 100, and the hyperparameter \\gamma is 3. Overall Results We submitted our model on the hidden test set of SQuAD for evaluation. Two evaluation metrics are used: Exact Match (EM), which measures whether the predicted answer are exactly matched with the ground truth, and F1 score, which measures the degree of word overlap at token level."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image provides a clear comparison of model performances on the AddOneSent dataset, showing F1 scores. Text chunk 0 explains that the R.M-Reader outperforms other models, which aligns with the data in the image.\",\n    \"Answer\": \"R.M-Reader performs the best on the AddOneSent dataset in terms of F1 score.\"\n}"
+  },
+  "2": {
+    "question": "How does the performance of the single R.M-Reader model compare to the best single models of other approaches on the SQuAD test set?",
+    "ground_truth": "The single R.M-Reader model achieves an EM score of 79.5% and an F1 score of 86.6% on the SQuAD test set. This performance is better than all other single models listed in the table, except for SLQA and Hybrid AoA Reader, which achieve slightly higher F1 scores of 87.0% and 87.3%, respectively.",
+    "selected_figures_names": [
+      "1705.02798v6-Figure4-1.png",
+      "1705.02798v6-Table5-1.png",
+      "1705.02798v6-Figure1-1.png",
+      "1705.02798v6-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02798v6-Figure4-1.png",
+      "1705.02798v6-Table5-1.png",
+      "1705.02798v6-Figure1-1.png",
+      "1705.02798v6-Figure5-1.png",
+      "1705.02798v6-Table2-1.png",
+      "1705.02798v6-Figure2-1.png",
+      "1705.02798v6-Table4-1.png",
+      "1705.02798v6-Figure3-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides an example from the SQuAD dataset, which is relevant for understanding the context of the question. Text 0 gives specific performance metrics of the R.M-Reader model on the SQuAD test set, which directly addresses the question about performance comparison.",
+    "answer": "The single R.M-Reader model achieves an EM score of 79.5% and an F1 score of 86.6% on the SQuAD test set, indicating strong performance compared to other single models.",
+    "text_chunks": [
+      "As shown in Table , R.M-Reader achieves an EM score of 79.5\\% and F1 score of 86.6\\%. Since SQuAD is a competitve MRC benchmark, we also build an ensemble model that consists of 12 single models with the same architecture but initialized with different parameters. Our ensemble model improves the metrics to 82.3\\% and 88.5\\% respectively.",
+      "Table shows the performance comparison on two adversarial datasets, AddSent and AddOneSent. All models are trained on the original train set of SQuAD, and are tested on the two datasets. As we can see, R.M-Reader comfortably outperforms all previous models by more than 6\\% in both EM and F1 scores, indicating that our model is more robust against adversarial attacks.",
+      "On SQuAD, our single model obtains an exact match (EM) score of 79.5\\% and F1 score of 86.6\\%, while our ensemble model further boosts the result to 82.3\\% and 88.5\\% respectively. On adversarial SQuAD, our model surpasses existing approahces by more than 6\\% on both AddSent and AddOneSent datasets. MRC with Reattention Task Description For the MRC tasks, a question Q and a context C are given, our goal is to predict an answer A, which has different forms according to the specific task.",
+      "In this way, the normalized reward is ensured to be always positive so that no convergence suppression will be made. All of the above innovations are integrated into a new end-to-end neural architecture called Reinforced Mnemonic Reader in Figure . We conducted extensive experiments on both the SQuAD~ dataset and two adversarial SQuAD datasets~ to evaluate the proposed model.",
+      "The size of character embedding and corresponding LSTMs is 50, the main hidden size is 100, and the hyperparameter \\gamma is 3. Overall Results We submitted our model on the hidden test set of SQuAD for evaluation. Two evaluation metrics are used: Exact Match (EM), which measures whether the predicted answer are exactly matched with the ground truth, and F1 score, which measures the degree of word overlap at token level.",
+      "In both adversarial datasets, a confusing sentence with a wrong answer is appended at the end of the context in order to fool the model. We evaluate the Reinforced Mnemonic Reader (R.M-Reader) by running the following setting. We first train the model until convergence by optimizing Eq. .",
+      "Besides, our model outperforms existing approaches by more than 6\\% on two adversarial SQuAD datasets. We believe that both reattention and DCRL are general approaches, and can be applied to other NLP task such as natural language inference. Our future work is to study the compatibility of our proposed methods.",
+      "We then finetune this model with Eq. , until the F1 score on the development set no longer improves. We use the Adam optimizer~ for both ML and DCRL training. The initial learning rates are 0.0008 and 0.0001 respectively, and are halved whenever meeting a bad iteration."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides an example from the SQuAD dataset, which is relevant for understanding the context of the question. Text 0 gives specific performance metrics of the R.M-Reader model on the SQuAD test set, which directly addresses the question about performance comparison.\",\n    \"Answer\": \"The single R.M-Reader model achieves an EM score of 79.5% and an F1 score of 86.6% on the SQuAD test set, indicating strong performance compared to other single models.\"\n}"
+  },
+  "3": {
+    "question": "What are the two types of attention mechanisms used in the Reinforced Mnemonic Reader architecture?",
+    "ground_truth": "The two types of attention mechanisms are reattention and self-attention.",
+    "selected_figures_names": [
+      "1705.02798v6-Table5-1.png",
+      "1705.02798v6-Figure5-1.png",
+      "1705.02798v6-Table2-1.png",
+      "1705.02798v6-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02798v6-Table5-1.png",
+      "1705.02798v6-Figure5-1.png",
+      "1705.02798v6-Table2-1.png",
+      "1705.02798v6-Figure1-1.png",
+      "1705.02798v6-Table3-1.png",
+      "1705.02798v6-Table4-1.png",
+      "1705.02798v6-Table1-1.png",
+      "1705.02798v6-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a comparison of attention distributions, which is relevant to understanding attention mechanisms. Text 5 directly mentions the reattention mechanism and dynamic-critical reinforcement learning, which are key components of the Reinforced Mnemonic Reader.",
+    "answer": "The two types of attention mechanisms used in the Reinforced Mnemonic Reader architecture are the reattention mechanism and dynamic-critical reinforcement learning.",
+    "text_chunks": [
+      "We demonstrates that this is because SCST encounters the convergence suppression problem, which impedes the prediction of ground truth answer boundaries. DCRL, however, successfully avoids such problem and thus finds the exactly correct entity. Conclusion We propose the Reinforced Mnemonic Reader, an enhanced attention reader with two main contributions.",
+      "End-to-end Architecture Based on previous innovations, we introduce an end-to-end architecture called Reinforced Mnemonic Reader, which is shown in Figure . It consists of three main components: 1) an encoder builds contextual representations for question and context jointly; 2) an iterative aligner performs multi-round alignments between question and context with the reattention mechanism; 3) an answer pointer predicts the answer span sequentially. Beblow we give more details of each component.",
+      "In this way, the normalized reward is ensured to be always positive so that no convergence suppression will be made. All of the above innovations are integrated into a new end-to-end neural architecture called Reinforced Mnemonic Reader in Figure . We conducted extensive experiments on both the SQuAD~ dataset and two adversarial SQuAD datasets~ to evaluate the proposed model.",
+      "In both adversarial datasets, a confusing sentence with a wrong answer is appended at the end of the context in order to fool the model. We evaluate the Reinforced Mnemonic Reader (R.M-Reader) by running the following setting. We first train the model until convergence by optimizing Eq. .",
+      "Despite of the advancements, we argue that there still exists two limitations: To address the first problem, we present a reattention mechanism that temporally memorizes past attentions and uses them to refine current attentions in a multi-round alignment architecture. The computation is based on the fact that two words should share similar semantics if their attentions about same texts are highly overlapped, and be less similar vice versa. Therefore, the reattention can be more concentrated if past attentions focus on same parts of the input, or be relatively more distracted so as to focus on new regions if past attentions are not overlapped at all.",
+      "First, a reattention mechanism is introduced to alleviate the problems of attention redundancy and deficiency in multi-round alignment architectures. Second, a dynamic-critical reinforcement learning approach is presented to address the convergence suppression problem existed in traditional reinforcement learning methods. Our model achieves the state-of-the-art results on the SQuAD dataset, outperforming several strong competing systems.",
+      "Each block consists of three modules: 1) an interactive alignment to attend the question into the context; 2) a self alignment to attend the context against itself; 3) an evidence collection to model the context representation with a BiLSTM. The reattention mechanism is utilized between two blocks, where past attentions are temporally memorizes to help modulating current attentions. Below we first describe a single block in details, which is shown in Figure , and then introduce the entire architecture.",
+      "A detailed comparison of different alignment architectures is shown in Table . Early work for MRC, such as Match-LSTM~, utilizes the attention mechanism stemmed from neural machine translation~ serially, where the attention is computed inside the cell of recurrent neural networks. A more popular approach is to compute attentions in parallel, resulting in a similarity matrix."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a comparison of attention distributions, which is relevant to understanding attention mechanisms. Text 5 directly mentions the reattention mechanism and dynamic-critical reinforcement learning, which are key components of the Reinforced Mnemonic Reader.\",\n    \"Answer\": \"The two types of attention mechanisms used in the Reinforced Mnemonic Reader architecture are the reattention mechanism and dynamic-critical reinforcement learning.\"\n}"
+  },
+  "4": {
+    "question": "What is the purpose of the fusion modules in the interactive alignment and self-alignment modules?",
+    "ground_truth": "The fusion modules are used to combine the outputs of the interactive alignment and self-alignment modules.",
+    "selected_figures_names": [
+      "1705.02798v6-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02798v6-Table5-1.png",
+      "1705.02798v6-Figure3-1.png",
+      "1705.02798v6-Table2-1.png",
+      "1705.02798v6-Table3-1.png",
+      "1705.02798v6-Figure2-1.png",
+      "1705.02798v6-Figure4-1.png",
+      "1705.02798v6-Table4-1.png",
+      "1705.02798v6-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a visual representation of the interactive alignment, self-alignment, and evidence collection modules, which are relevant to understanding the fusion modules. Text 1 describes the components of each block, including the interactive and self-alignment modules, which are directly related to the question.",
+    "answer": "The purpose of the fusion modules in the interactive alignment and self-alignment modules is to integrate attentive information into the context, allowing for a refined context representation by combining input vectors with intermediate vectors. This helps in capturing dependencies and enhancing the context representation.",
+    "text_chunks": [
+      "To efficiently fuse the attentive information into the context, an heuristic fusion function, denoted as o=\\mathrm{fusion(x, y), is proposed as where \\sigma denotes the sigmoid activation function, \\circ denotes element-wise multiplication, and the bias term is omitted. The computation is similar to the highway networks~, where the output vector o is a linear interpolation of the input x and the intermediate vector \\tilde{x. A gate g is used to control the composition degree to which the intermediate vector is exposed.",
+      "Each block consists of three modules: 1) an interactive alignment to attend the question into the context; 2) a self alignment to attend the context against itself; 3) an evidence collection to model the context representation with a BiLSTM. The reattention mechanism is utilized between two blocks, where past attentions are temporally memorizes to help modulating current attentions. Below we first describe a single block in details, which is shown in Figure , and then introduce the entire architecture.",
+      "With this function, the question-aware context vectors H=[h_1,...,h_m] can be obtained as: h_j = \\mathrm{fusion(u_j, \\tilde{v_j). Similar to the above computation, a self alignment is applied to capture the long-term dependencies among context words.",
+      "We refer to the above process as a single-round alignment architecture. Such architecture, however, is limited in its capability to capture complex interactions among question and context. Therefore, recent works build multi-round alignment architectures by stacking several identical aligning layers~. More specifically, let V^t=\\{v_i^t\\_{i=1^n and U^t=\\{u_j^t\\_{j=1^m denote the hidden representations of question and context in t-th layer, and H^t=\\{h_j^t\\_{j=1^m is the corresponding question-aware context representation.",
+      "Later, Wang et al. \\shortcite{Wang17b propose a serial self aligning method to align the context aginst itself for capturing long-term dependencies among context words. Weissenborn et al.~ apply the self alignment in a similar way of Eq. , yielding another similarity matrix B \\in\\mathbb{R^{m \\times m as where \\mathds{1_{\\{ \\cdot \\ is an indicator function ensuring that the context word is not aligned with itself. Finally, the attentive information can be integrated to form a self-aware context representation Z=\\{z_j\\_{j=1^m, which is used to predict the answer.",
+      "End-to-end Architecture Based on previous innovations, we introduce an end-to-end architecture called Reinforced Mnemonic Reader, which is shown in Figure . It consists of three main components: 1) an encoder builds contextual representations for question and context jointly; 2) an iterative aligner performs multi-round alignments between question and context with the reattention mechanism; 3) an answer pointer predicts the answer span sequentially. Beblow we give more details of each component.",
+      "First, a reattention mechanism is introduced to alleviate the problems of attention redundancy and deficiency in multi-round alignment architectures. Second, a dynamic-critical reinforcement learning approach is presented to address the convergence suppression problem existed in traditional reinforcement learning methods. Our model achieves the state-of-the-art results on the SQuAD dataset, outperforming several strong competing systems.",
+      "To model each word with its contextual information, a weight-shared BiLSTM is utilized to perform the encoding Thus, the contextual representations for both question and context words can be obtained, denoted as two matrices: V=[v_1,...,v_n] \\in\\mathbb{R^{2d \\times n and U=[u_1,... ,u_m] \\in\\mathbb{R^{2d \\times m. \\noindent{\\bf Iterative Aligner. The iterative aligner contains a stack of three aligning blocks."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a visual representation of the interactive alignment, self-alignment, and evidence collection modules, which are relevant to understanding the fusion modules. Text 1 describes the components of each block, including the interactive and self-alignment modules, which are directly related to the question.\",\n    \"Answer\": \"The purpose of the fusion modules in the interactive alignment and self-alignment modules is to integrate attentive information into the context, allowing for a refined context representation by combining input vectors with intermediate vectors. This helps in capturing dependencies and enhancing the context representation.\"\n}"
+  },
+  "5": {
+    "question": "How does reattention affect the redundancy and deficiency of attention distributions? Can you explain the observed differences in the impact of reattention on different blocks?",
+    "ground_truth": "This paper shows that reattention helps alleviate both redundancy and deficiency in attention distributions.\n\nRedundancy: Reattention increases the KL divergence between adjacent attention blocks, indicating that the attention distributions across blocks become more distinct and less redundant.\nDeficiency: Reattention reduces the KL divergence between the normalized attention distribution ($E^t$) and the ideal uniform distribution (${E^t}^*$), suggesting that the attention becomes more balanced and closer to the desired distribution.\nHowever, the improvement in redundancy is more pronounced between the first two blocks ($E^1$ to $E^2$) than the last two blocks ($B^2$ to $B^3$). This suggests that the first reattention is more effective in capturing word pair similarities using the original word representations. In contrast, the later reattention might be negatively impacted by the highly non-linear word representations generated in the previous layers.",
+    "selected_figures_names": [
+      "1705.02798v6-Table2-1.png",
+      "1705.02798v6-Table3-1.png",
+      "1705.02798v6-Figure4-1.png",
+      "1705.02798v6-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.02798v6-Table2-1.png",
+      "1705.02798v6-Table3-1.png",
+      "1705.02798v6-Figure4-1.png",
+      "1705.02798v6-Table1-1.png",
+      "1705.02798v6-Figure3-1.png",
+      "1705.02798v6-Figure5-1.png",
+      "1705.02798v6-Table4-1.png",
+      "1705.02798v6-Table5-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 provides a visual representation of the reattention mechanism within the alignment blocks, which is crucial for understanding how reattention affects attention distributions. Text 1 discusses the impact of reattention on attention redundancy, specifically how it enlarges the divergence between adjacent blocks, which directly addresses the question.",
+    "answer": "Reattention helps alleviate attention redundancy by enlarging the divergence between adjacent blocks, meaning it reduces the similarity of attention distributions across blocks. The impact is more significant in the first blocks because the initial reattention uses original encoded word representations, while later blocks are influenced by more complex representations, leading to less improvement.",
+    "text_chunks": [
+      "We argue that this is because the model encounters the degradation problem existed in deep networks~. Effectiveness of Reattention We further present experiments to demonstrate the effectiveness of reattention mechanism. For the attention redundancy problem, we measure the distance of attention distributions in two adjacent aligning blocks, e.g., \\mathrm{softmax(E_{:j^1) and \\mathrm{softmax(E_{:j^2).",
+      "We use Kullback\u2013Leibler divergence as the distance function D, and we report the averaged value over all examples. Table shows the results. We first see that the reattention indeed help in alleviating the attention redundancy: the divergence between any two adjacent blocks has been successfully enlarged with reattention.",
+      "However, we find that the improvement between the first two blocks is larger than the one of last two blocks. We conjecture that the first reattention is more accurate at measuring the similarity of word pairs by using the original encoded word representation, while the latter reattention is distracted by highly nonlinear word representations. In addition, we notice that the attention deficiency has also been moderated: the divergence betwen normalized E^t and {E^t^* is reduced.",
+      "Higher distance means less attention redundancy. For the attention deficiency problem, we take the arithmetic mean of multiple attention distributions from the ensemble model as the ``ground truth'' attention distribution \\mathrm{softmax({E_{:j^t ^*), and compute the distance of individual attention \\mathrm{softmax(E_{:j^t) with it. Lower distance refers to less attention deficiency.",
+      "Each block consists of three modules: 1) an interactive alignment to attend the question into the context; 2) a self alignment to attend the context against itself; 3) an evidence collection to model the context representation with a BiLSTM. The reattention mechanism is utilized between two blocks, where past attentions are temporally memorizes to help modulating current attentions. Below we first describe a single block in details, which is shown in Figure , and then introduce the entire architecture.",
+      "Despite of the advancements, we argue that there still exists two limitations: To address the first problem, we present a reattention mechanism that temporally memorizes past attentions and uses them to refine current attentions in a multi-round alignment architecture. The computation is based on the fact that two words should share similar semantics if their attentions about same texts are highly overlapped, and be less similar vice versa. Therefore, the reattention can be more concentrated if past attentions focus on same parts of the input, or be relatively more distracted so as to focus on new regions if past attentions are not overlapped at all.",
+      "Then the two similarity matrices can be computed as However, one problem is that each alignment is not directly aware of previous alignments in such architecture. The attentive information can only flow to the subsequent layer through the hidden representation. This can cause two problems: 1) the attention redundancy, where multiple attention distributions are highly similar.",
+      "First, a reattention mechanism is introduced to alleviate the problems of attention redundancy and deficiency in multi-round alignment architectures. Second, a dynamic-critical reinforcement learning approach is presented to address the convergence suppression problem existed in traditional reinforcement learning methods. Our model achieves the state-of-the-art results on the SQuAD dataset, outperforming several strong competing systems."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 provides a visual representation of the reattention mechanism within the alignment blocks, which is crucial for understanding how reattention affects attention distributions. Text 1 discusses the impact of reattention on attention redundancy, specifically how it enlarges the divergence between adjacent blocks, which directly addresses the question.\",\n    \"Answer\": \"Reattention helps alleviate attention redundancy by enlarging the divergence between adjacent blocks, meaning it reduces the similarity of attention distributions across blocks. The impact is more significant in the first blocks because the initial reattention uses original encoded word representations, while later blocks are influenced by more complex representations, leading to less improvement.\"\n}"
+  }
+}

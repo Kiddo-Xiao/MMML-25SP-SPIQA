@@ -1,0 +1,303 @@
+{
+  "0": {
+    "question": "What is the value of the learning rate \u03b1 for the BAIR dataset?",
+    "ground_truth": "0.0002",
+    "selected_figures_names": [
+      "1809.00263v5-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Figure6-1.png",
+      "1809.00263v5-Table2-1.png",
+      "1809.00263v5-Figure15-1.png",
+      "1809.00263v5-Figure2-1.png",
+      "1809.00263v5-Figure12-1.png",
+      "1809.00263v5-Figure7-1.png",
+      "1809.00263v5-Table3-1.png",
+      "1809.00263v5-Figure10-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 provides the hyperparameters for training on different datasets, including the learning rate \u03b1 for the BAIR dataset. Text 3 mentions the use of the Adam optimizer but does not specify the learning rate for the BAIR dataset.",
+    "answer": "0.0002",
+    "text_chunks": [
+      "In 768 test sequences, we randomly select two digits for each sequence and synchronize all sequences' trajectories. Figure shows the normalized average variance of the distribution of z_t for frames 2 to 14 (generated), while frame 1 and 15 are the ground truth frames. BAIR robot pushing dataset The BAIR robot pushing dataset contains sequences of a robot arm pushing various objects in the RGB domain.",
+      "We also tested on 4 extended reference frames and find the benefit is insignificant. For the evaluation presented in our paper, all datasets have been trained with a input frame dimension of 64 \\times 64 with a interval of 7 frames. We also train on KTH with a input frame dimension of 128 \\times 128 (See Section 2 in the video web page) and BAIR with intervals of 9 frames (See Section 1 in the video web page).",
+      "We also provide the theoretical explanation of the full loss in the supplemental material. Experiments \\paragraph{Datasets We first test SDVI on 3 datasets with stochastic dynamics: Stochastic Moving MNIST(SM-MNIST) with random momentum after a bounce, KTH Action Database for deformable objects and BAIR robot pushing dataset for sudden stochastic movements.",
+      "We use standard Adam optimizer with 0.5 as the first momentum decay rate. All settings of the hyper parameters for different datasets are shown in . The \\beta is initially set to 1 and gradually reduce to 0.4.",
+      "Bair: By default, we use 40000 scenes for training, 3863 for validation and 256 for testing. We sample the ground truth video frames as 16 fps.",
+      "\\\\ Since our model is stochastic, we draw 100 samples for each interval as in and report a sample with the best SSIM. More video results for various settings (see the video web page), dataset details (Appendix D), network architectures and the training details (see Appendix C) can be found in the supplemental material. \\caption{Metrics averaging over all 7 intermediate frames.",
+      "To the best of our knowledge, it is the first study using extended reference frames and using a stochastic generation model to infill long intervals in videos. Three modules are introduced to sample a plausible sequence that preserves the coherence and the movement variety. Extensive ablation studies and comparisons with the state-of-the-art methods demonstrate our good performance on 4 datasets.",
+      "On the early stage of the training, a less meaningful \\hat{h_t would accumulatively disturb the cell state of LSTM_{infr and lead to a slow convergence. Dataset Details SMMNIST: Sequences were generated on the fly by randomly choosing two digits from MNIST: 50k digits from MNIST training set for training, 10k digits for validation, and 10k in MNIST testing set for testing. We create the ground truth video frames as 16 fps."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 provides the hyperparameters for training on different datasets, including the learning rate \u03b1 for the BAIR dataset. Text 3 mentions the use of the Adam optimizer but does not specify the learning rate for the BAIR dataset.\",\n    \"Answer\": \"0.0002\"\n}"
+  },
+  "1": {
+    "question": "Which feature has the highest dimensionality in the first two dimensions?",
+    "ground_truth": "All features have the same dimensionality in the first two dimensions.",
+    "selected_figures_names": [
+      "1809.00263v5-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Figure6-1.png",
+      "1809.00263v5-Figure9-1.png",
+      "1809.00263v5-Figure15-1.png",
+      "1809.00263v5-Table2-1.png",
+      "1809.00263v5-Figure10-1.png",
+      "1809.00263v5-Figure16-1.png",
+      "1809.00263v5-Table3-1.png",
+      "1809.00263v5-Figure11-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "The image provides a table showing the dimensionalities of different features, which directly answers the question about dimensionality in the first two dimensions.",
+    "answer": "All features have the same highest dimensionality of 4 in the first two dimensions.",
+    "text_chunks": [
+      "Since the input features to the bottom layer h_S, \\mathbf{0,...,h_T share the same feature space with \\hat{h_{S:T, inspired by , we add an residual connection between each two layers to elevate the bottom features directly to the top. In the end, RBConvLSTM combines all the three structures: the ConvLSTM, the bi-directional RNN and the residual connections. Inference Module As shown in Figure , We extract a dynamic vector h_t-1 from each X_t-1.",
+      "As illustrated in Figure , compare with interpolation models, an interval our model needs to infill has more uncertainties, even with more reference frames (frame 1 and 13). To inference the initial and final momentum, we expose extended reference frames both from the past (frame 1 and 7 in Figure ) and the future (frame 13 and 19) to the model. To achieve long-term coherence, we introduce {RBConvLSTM, a multi-layer bi-directional ConvLSTM with residual connections between adjacent layers.",
+      "Figure shows the qualitative evaluation for all comparisons. When the two digits in frames 8 and 16 having significant position differences, interpolation models such as SepConv and SuperSloMo would still choose to move the pixel based on the proximity between the two frames: the digits 2 and 5 gradually transfer to each other since the 2 in frame 8 is closer to the 5 in frame 16. Because the deterministic model FSTN cannot handle the uncertainty after a bounce, the model gets confused and generates a blurry result.",
+      "We found setting the map's weight to 3 on moving pixels is beneficial. Since most actions such as waving follow fixed patterns, the FSTN and the SepConv can achieve the best scores in PSNR and SSIM (Table ). However, if the object in frame 8 and 16 has a similar body pose, the SepConv and the SuperSloMo will freeze the object's body and slide the object to its new position (Figure ).",
+      "We also compare with the interpolation models on a challenging real-world dataset, UCF101. \\paragraph{Last Momentum Similarity and Other Metrics Three metrics are used for quantitative evaluation: structural similarity (SSIM), Peak Signal-to-Noise Ratio (PSNR), and Last Momentum Similarity (LMS). An infilled sequence that is different from the ground truth (low SSIM and PSNR) is still valid if it can guarantee the long-term coherence between \\tilde{X_{S:T-1 and X_{T.",
+      "Figure illustrates the stochastic nature of the long-term intermediate sequence. We observe the following two phenomena: (1) Compared with Scenario 1, since both the interval length and the difference between the two reference frames are larger, the uncertainties in the long-term interval (Scenario 2) are greater. (2) Taken frame 5 and 9 as references, both the red and the green motions between frame 5 and 9 are plausible.",
+      "The SVG-LP cannot converge in this setting since it doesn't have a constraint planning module like the RBConvLSTM to lead the sequence to the final frame. Without spatial independence, a non-spatial representation cannot sample different dynamics for different areas. The two digits in the result of \"SDVI non-spatial\" collapse into one, then move toward the final frame.",
+      "2. The observation of the last frame becomes a long-term coherence requirement, which gives more constraints to our model. Video prediction only needs to generate visually plausible frames smoothly transferred from previous frames, while video infilling is also required to guarantee the coherence between the previous sequence (\\tilde{X_{S+1:T-1) and the terminal frame X_{T. 3."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"The image provides a table showing the dimensionalities of different features, which directly answers the question about dimensionality in the first two dimensions.\",\n    \"Answer\": \"All features have the same highest dimensionality of 4 in the first two dimensions.\"\n}"
+  },
+  "2": {
+    "question": "What is the relationship between the length of the interval and the uncertainty in the generated frames?",
+    "ground_truth": "The uncertainty in the generated frames increases with the length of the interval.",
+    "selected_figures_names": [
+      "1809.00263v5-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Figure13-1.png",
+      "1809.00263v5-Figure2-1.png",
+      "1809.00263v5-Figure10-1.png",
+      "1809.00263v5-Figure3-1.png",
+      "1809.00263v5-Table2-1.png",
+      "1809.00263v5-Figure16-1.png",
+      "1809.00263v5-Figure15-1.png",
+      "1809.00263v5-Table3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually illustrates the difference in uncertainty between short-term and long-term intervals, showing how longer intervals lead to more uncertainty. Text 0 explains that greater interval length and differences between reference frames increase uncertainties.",
+    "answer": "The length of the interval is directly related to the uncertainty in the generated frames. Longer intervals result in greater uncertainty due to larger differences between reference frames.",
+    "text_chunks": [
+      "Figure illustrates the stochastic nature of the long-term intermediate sequence. We observe the following two phenomena: (1) Compared with Scenario 1, since both the interval length and the difference between the two reference frames are larger, the uncertainties in the long-term interval (Scenario 2) are greater. (2) Taken frame 5 and 9 as references, both the red and the green motions between frame 5 and 9 are plausible.",
+      "In Figure , our model can infer the people's motion consistently. However, it's challenging for SepConv and SuperSloMo to estimate the pixel movement for the middle frames(frame 4 to 6), even though they can generate sharper frames near the two reference frames. Conclusions and Future Work We have presented a stochastic generation framework SDVI that can infill long-term video intervals.",
+      "Our reported result is created using one extended references frame on each side (totally 2 extended reference frames). These two extra references bring extra long-term information into Reference module. However, frames too far away from the interval would contain too much unrelated information.",
+      "A concurrent work can generate an intermediate frame between two given frames. However, the model inclines to generate the frame at the time with low-uncertainty. Therefore their model cannot solve the infilling task since the generated sequence does not have a constant frame density.",
+      "If we also add frame 1 and 13 as references, only the green motion is plausible. Consequently, utilizing long-term information (frame 1 and 13 in Figure ) can benefit the dynamics inference and eliminate the uncertainties. Given start and end frames of a long-term interval in a video, we introduce stochastic dynamic video infilling (SDVI) framework to generate intermediate frames which contain varying content and transform smoothly from the start frame to the end frame.",
+      "Conditioned on frame 7 and 8, video interpolation generates transitional frames containing similar content for short intervals. However, video infilling generates frames in a long-term interval (from frame 8 to 12) and requires the model to produce varying content. At each timestamp, the model needs to sample a plausible dynamic sequence out of many possible movements.",
+      "To the best of our knowledge, it is the first study using extended reference frames and using a stochastic generation model to infill long intervals in videos. Three modules are introduced to sample a plausible sequence that preserves the coherence and the movement variety. Extensive ablation studies and comparisons with the state-of-the-art methods demonstrate our good performance on 4 datasets.",
+      "As illustrated in Figure , compare with interpolation models, an interval our model needs to infill has more uncertainties, even with more reference frames (frame 1 and 13). To inference the initial and final momentum, we expose extended reference frames both from the past (frame 1 and 7 in Figure ) and the future (frame 13 and 19) to the model. To achieve long-term coherence, we introduce {RBConvLSTM, a multi-layer bi-directional ConvLSTM with residual connections between adjacent layers."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually illustrates the difference in uncertainty between short-term and long-term intervals, showing how longer intervals lead to more uncertainty. Text 0 explains that greater interval length and differences between reference frames increase uncertainties.\",\n    \"Answer\": \"The length of the interval is directly related to the uncertainty in the generated frames. Longer intervals result in greater uncertainty due to larger differences between reference frames.\"\n}"
+  },
+  "3": {
+    "question": "Explain the likely reason why the \"SDVI loss term 1&3\" model performs worse than the full SDVI model in terms of PSNR and SSIM across all datasets.",
+    "ground_truth": "The \"SDVI loss term 1&3\" model only uses the pixel reconstruction loss and the inclusive KL divergence loss, while the full SDVI model additionally incorporates the pixel prediction loss and the exclusive KL divergence loss. According to the passage, the exclusive KL divergence term encourages the inference distribution to be more accurate, while the pixel prediction loss further improves video quality during inference. Therefore, the absence of these terms in the \"SDVI loss term 1&3\" model likely explains its inferior performance compared to the full SDVI model.",
+    "selected_figures_names": [
+      "1809.00263v5-Figure7-1.png",
+      "1809.00263v5-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Figure12-1.png",
+      "1809.00263v5-Figure7-1.png",
+      "1809.00263v5-Table1-1.png",
+      "1809.00263v5-Figure14-1.png",
+      "1809.00263v5-Table2-1.png",
+      "1809.00263v5-Figure11-1.png",
+      "1809.00263v5-Figure9-1.png",
+      "1809.00263v5-Figure6-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 provides a detailed comparison of PSNR and SSIM scores across different models, including the 'SDVI loss term 1&3' and the full SDVI model. Text 3 explains the importance of balancing different loss terms to achieve better accuracy and diversity, which is likely why the full SDVI model outperforms the 'SDVI loss term 1&3' model.",
+    "answer": "The 'SDVI loss term 1&3' model performs worse than the full SDVI model because it lacks the balance between accuracy and diversity provided by the additional loss terms in the full model. The full SDVI model minimizes a combined loss that includes terms for posterior reconstruction and distribution similarity, which enhances performance in terms of PSNR and SSIM.",
+    "text_chunks": [
+      "Our loss has two more terms than another stochastic model . Therefore we also conduct experiments with only the pixel reconstruction loss and the inclusive KL loss. We denote this setting by ``SDVI loss term 1 \\& 3''.",
+      "The movements of the arm do not follow smooth trajectories, and the movement changes are prompt. As shown in Table , although our SDVI marginally outperforms other models on SSIM, the SepConv achieves the best PSNR. As shown in Figure , since the SepConv relies more on pixel proximity, the shapes of the static objects in this method are nicely preserved.",
+      "We also provide the theoretical explanation of the full loss in the supplemental material. Experiments \\paragraph{Datasets We first test SDVI on 3 datasets with stochastic dynamics: Stochastic Moving MNIST(SM-MNIST) with random momentum after a bounce, KTH Action Database for deformable objects and BAIR robot pushing dataset for sudden stochastic movements.",
+      "To better serve our task, we decide to keep both terms to strike a balance between accuracy and diversity. \\paragraph{Full Loss Overall, our final objective is to minimize the combined full loss: {\\small The \\beta balances the posterior reconstruction and the inference reconstruction, while the \\alpha determines the trade-off between the reconstruction and the similarity of the two distributions. To show the effectiveness of these loss terms, we also compare the full loss \\eqref{obj with a loss only composed of the pixel reconstruction loss and the inclusive KL loss (similar to the loss in ), shown as \\text{``SDVI loss term 1\\&3\" in Table .",
+      "Theoretical Explanation of Pixel Reconstruction Loss and Inclusive KL loss Because the neural network has the tendency to use the easiest way to fit the objective, if we only maximize the right side of \\eqref{eq3, LSTM_{pst will ignore the information introduced by X_t. The P_{pst(z_t) and P_{infr(z_t) will degenerate to a convenient fixed value to lower the D_{KL. To prevent the degeneration, we also need to maximize a sequence's probability P(X_{S:T) from the Posterior Module.",
+      "SDVI without frame 0 and 24 suffers from the uncertainty of the initial state (Figure ). The result of FSTN (in ) contains blurry pixels on moving region although it keeps the static parts sharp.",
+      "We found setting the map's weight to 3 on moving pixels is beneficial. Since most actions such as waving follow fixed patterns, the FSTN and the SepConv can achieve the best scores in PSNR and SSIM (Table ). However, if the object in frame 8 and 16 has a similar body pose, the SepConv and the SuperSloMo will freeze the object's body and slide the object to its new position (Figure ).",
+      "The objects created by SDVI without spatial sampling are more blurry since all the areas will be disturbed by the change of the dynamics. On the other hand, the result of SDVI without using reference frames 0 and 24 diverges too much away from the ground truth movement. Our full model cannot only sample a similar sequence to the ground truth, but sequences with reasonably varied movements (last two rows in Figure )."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 provides a detailed comparison of PSNR and SSIM scores across different models, including the 'SDVI loss term 1&3' and the full SDVI model. Text 3 explains the importance of balancing different loss terms to achieve better accuracy and diversity, which is likely why the full SDVI model outperforms the 'SDVI loss term 1&3' model.\",\n    \"Answer\": \"The 'SDVI loss term 1&3' model performs worse than the full SDVI model because it lacks the balance between accuracy and diversity provided by the additional loss terms in the full model. The full SDVI model minimizes a combined loss that includes terms for posterior reconstruction and distribution similarity, which enhances performance in terms of PSNR and SSIM.\"\n}"
+  },
+  "4": {
+    "question": "What is the difference between the Inference module and the Posterior module?",
+    "ground_truth": "The Inference module takes the previous frame (Xt-1) and the dynamic constraint (h\u0302t) as input, while the Posterior module takes the current frame (Xt) as input. This means that the Inference module is trying to predict the next frame based on the previous frame and the dynamic constraint, while the Posterior module is trying to reconstruct the current frame.",
+    "selected_figures_names": [
+      "1809.00263v5-Figure13-1.png",
+      "1809.00263v5-Figure10-1.png",
+      "1809.00263v5-Figure6-1.png",
+      "1809.00263v5-Figure7-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Figure13-1.png",
+      "1809.00263v5-Figure10-1.png",
+      "1809.00263v5-Figure6-1.png",
+      "1809.00263v5-Figure7-1.png",
+      "1809.00263v5-Figure15-1.png",
+      "1809.00263v5-Figure4-1.png",
+      "1809.00263v5-Table3-1.png",
+      "1809.00263v5-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 shows the results of different models, including SDVI, which involves inference and posterior processes. Text 2 explains the role of the Posterior module in generating a target distribution for the Inference module to match, highlighting their differences.",
+    "answer": "The Inference module predicts an embedding distribution based on past frames, while the Posterior module generates a target distribution using current frames to guide the Inference module during training.",
+    "text_chunks": [
+      "Model Details As illustrated in Figure , SDVI consists of 3 major modules: Reference, Inference and Posterior modules. Given reference frames \\mathbf{X_{WR, Reference module propagates the constraints and generate a constraint vector \\hat{h_t for time t. Inference module takes \\hat{h_t and inference an embedding distribution P_{infr based on X_{S:t-1. Posterior module inference another embedding distribution P_{pst based on X_{S:t. We sample an embedding vector z_t",
+      "At test, Posterior module is not required and z_t is sampled from P_{infr. We list the notations as follows: Reference Module Reference module includes an Extractor and a RBConvLSTM. Given all the frames in \\mathbf{X_{WR, the Extractor learns the momentum and output two vectors C_{start and C_{end.",
+      "Therefore our model need to acquire a target distribution P_{pst for step t, so Inference module can be trained by matching P_{infr to the target. Here we expose the frame X_t to Posterior module, so it can generate a posterior distribution P_{pst = P(z_t|X_{S:t) for P_{infr to match. Training and Inference From P_{pst, we can sample a embedding vector vector z_t^{pst.",
+      "LSTM_{infr takes the h_{t-1 and the constraint vector \\hat{h_t, then infers a distribution P_{infr of a possible dynamic change. This module resembles the prior distribution learning of stochastic prediction, however, P_{infr here is written as P_{infr = P(z_t|X_{S:t-1, \\mathbf{X_{WR). Posterior Module A generated sequence \\tilde{X_{S+1:T-1 can still be valid even it is different from the ground truth X_{S+1:T-1.",
+      "As shown in Figure , the first layer of RBConvLSTM uses C_{start as the initial state of the forward cell and C_{end for the backward cell. We need to propagate sparse constraints h_S, h_T to every time step from S+1 to T-1 to get outputs \\hat{h_S, \\hat{h_{S+1,...,\\hat{h_T as constraint vectors for Inference Module. They are critical to achieve the long-term coherence.",
+      "Conditioned on the previous ground truth frames and z_t^{pst, the Decoder generates the \\tilde{X_t^{pst. Separately, we also sample a vector z_t^{infr from P_{infr, and generate the \\tilde{X_t^{infr in the same way. Since the ground truth frames X_t is not available at time t, we can only use Inference module to sample a z_t.",
+      "Since the input features to the bottom layer h_S, \\mathbf{0,...,h_T share the same feature space with \\hat{h_{S:T, inspired by , we add an residual connection between each two layers to elevate the bottom features directly to the top. In the end, RBConvLSTM combines all the three structures: the ConvLSTM, the bi-directional RNN and the residual connections. Inference Module As shown in Figure , We extract a dynamic vector h_t-1 from each X_t-1.",
+      "\\paragraph{KL Divergence Loss P_{pst(z_t|X_{S:t) carries the dynamics from the h_t to reconstruct the X_t. Since we use only Inference module during inference, the P_{infr(z_t|X_{S:t-1, \\mathbf{X_{WR) needs to predict the embedding vector alone. Therefore, we also add two KL divergences between P_{infr and P_{pst: {\\small Both the forward and the reverse KL-divergence of P_{infr and P_{pst achieve the minimum when the two distributions are equal."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 shows the results of different models, including SDVI, which involves inference and posterior processes. Text 2 explains the role of the Posterior module in generating a target distribution for the Inference module to match, highlighting their differences.\",\n    \"Answer\": \"The Inference module predicts an embedding distribution based on past frames, while the Posterior module generates a target distribution using current frames to guide the Inference module during training.\"\n}"
+  },
+  "5": {
+    "question": "Which method generates the best moving objects?",
+    "ground_truth": "SDVI",
+    "selected_figures_names": [
+      "1809.00263v5-Table3-1.png",
+      "1809.00263v5-Figure5-1.png",
+      "1809.00263v5-Figure4-1.png",
+      "1809.00263v5-Figure11-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Table3-1.png",
+      "1809.00263v5-Figure5-1.png",
+      "1809.00263v5-Figure4-1.png",
+      "1809.00263v5-Figure11-1.png",
+      "1809.00263v5-Figure15-1.png",
+      "1809.00263v5-Figure16-1.png",
+      "1809.00263v5-Figure13-1.png",
+      "1809.00263v5-Figure7-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 1,
+    "rationale": "Image 3 provides a visual comparison of different methods (SuperSloMo, SepConv, SDVI) in generating moving objects, which is directly relevant to the question. Text 1 discusses the performance of SepConv in terms of PSNR and SSIM, indicating its effectiveness in preserving shapes of static objects, which can be related to moving objects.",
+    "answer": "SepConv generates the best moving objects based on PSNR performance.",
+    "text_chunks": [
+      "We found setting the map's weight to 3 on moving pixels is beneficial. Since most actions such as waving follow fixed patterns, the FSTN and the SepConv can achieve the best scores in PSNR and SSIM (Table ). However, if the object in frame 8 and 16 has a similar body pose, the SepConv and the SuperSloMo will freeze the object's body and slide the object to its new position (Figure ).",
+      "The movements of the arm do not follow smooth trajectories, and the movement changes are prompt. As shown in Table , although our SDVI marginally outperforms other models on SSIM, the SepConv achieves the best PSNR. As shown in Figure , since the SepConv relies more on pixel proximity, the shapes of the static objects in this method are nicely preserved.",
+      "In Figure , our model can infer the people's motion consistently. However, it's challenging for SepConv and SuperSloMo to estimate the pixel movement for the middle frames(frame 4 to 6), even though they can generate sharper frames near the two reference frames. Conclusions and Future Work We have presented a stochastic generation framework SDVI that can infill long-term video intervals.",
+      "Notably, two of the generative models and can also conduct video completion. However both methods, due to their forward generation mechanism, cannot hold the coherence between the last frame and the generated sequence. SDVI adopts the decomposition of the motion and the content, uses the ConvLSTM in the motion inference and iteratively generates the frame.",
+      "However, the optical flow estimation is known to be inaccurate for a long time interval. Estimating motion dynamics becomes a more favorable option. The phase-based methods such as modify the pixel phase to generate intermediate frames.",
+      "Thus we introduce the last momentum similarity (LMS) calculated by the mean square distance between the optical flow from X_{T-1 to X_{T and the optical flow from \\tilde{X^{infr_{T-1 to X_{T. We find LMS a good indicator of the video coherence since no matter how the dynamic being sampled, both the object's position and speed should make a smooth transition to X_T. \\paragraph{Movement Weight Map During training, we apply a movement weight map to each location of the pixel loss to encourage movement generation. For a ground truth frame X_t, if a pixel value stays the same in X_{t-1, the weight is 1 on that location.",
+      "To the best of our knowledge, it is the first study using extended reference frames and using a stochastic generation model to infill long intervals in videos. Three modules are introduced to sample a plausible sequence that preserves the coherence and the movement variety. Extensive ablation studies and comparisons with the state-of-the-art methods demonstrate our good performance on 4 datasets.",
+      "The mainstream video prediction methods take short consecutive sequences as input and generate deterministic futures by iteratively predicting next frame. use a convolutional network to generate each pixel of the new frame directly. Studies such as use a recurrent network to model the dynamics and improve the result drastically."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 1,\n    \"Rationale\": \"Image 3 provides a visual comparison of different methods (SuperSloMo, SepConv, SDVI) in generating moving objects, which is directly relevant to the question. Text 1 discusses the performance of SepConv in terms of PSNR and SSIM, indicating its effectiveness in preserving shapes of static objects, which can be related to moving objects.\",\n    \"Answer\": \"SepConv generates the best moving objects based on PSNR performance.\"\n}"
+  },
+  "6": {
+    "question": "What is the effect of the sliding tendency of SepConv on the generated images?",
+    "ground_truth": "The sliding tendency of SepConv will cause motion errors and high LMS.",
+    "selected_figures_names": [
+      "1809.00263v5-Table3-1.png",
+      "1809.00263v5-Figure1-1.png",
+      "1809.00263v5-Figure6-1.png",
+      "1809.00263v5-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Table3-1.png",
+      "1809.00263v5-Figure1-1.png",
+      "1809.00263v5-Figure6-1.png",
+      "1809.00263v5-Figure5-1.png",
+      "1809.00263v5-Figure12-1.png",
+      "1809.00263v5-Table1-1.png",
+      "1809.00263v5-Figure9-1.png",
+      "1809.00263v5-Figure13-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 illustrates the concept of video interpolation, which is relevant to understanding how SepConv generates frames. Text 2 discusses the sliding tendency of SepConv, explaining how it affects the generated images by freezing the object's body and sliding it to a new position.",
+    "answer": "The sliding tendency of SepConv causes the object's body to freeze and slide to a new position, affecting the generated images by not accurately capturing dynamic movements.",
+    "text_chunks": [
+      "However, SepConv can't model the stochasticity while its movement is simplified to a straight sliding. The frames in the middle suffer the most in all metrics (Figure ). The stochasticity of the movement makes it hard for SVG-LP's arm to go back to the final frame and for FSTN to generate sharp shapes.",
+      "In Figure , our model can infer the people's motion consistently. However, it's challenging for SepConv and SuperSloMo to estimate the pixel movement for the middle frames(frame 4 to 6), even though they can generate sharper frames near the two reference frames. Conclusions and Future Work We have presented a stochastic generation framework SDVI that can infill long-term video intervals.",
+      "We found setting the map's weight to 3 on moving pixels is beneficial. Since most actions such as waving follow fixed patterns, the FSTN and the SepConv can achieve the best scores in PSNR and SSIM (Table ). However, if the object in frame 8 and 16 has a similar body pose, the SepConv and the SuperSloMo will freeze the object's body and slide the object to its new position (Figure ).",
+      "The movements of the arm do not follow smooth trajectories, and the movement changes are prompt. As shown in Table , although our SDVI marginally outperforms other models on SSIM, the SepConv achieves the best PSNR. As shown in Figure , since the SepConv relies more on pixel proximity, the shapes of the static objects in this method are nicely preserved.",
+      "Figure shows the qualitative evaluation for all comparisons. When the two digits in frames 8 and 16 having significant position differences, interpolation models such as SepConv and SuperSloMo would still choose to move the pixel based on the proximity between the two frames: the digits 2 and 5 gradually transfer to each other since the 2 in frame 8 is closer to the 5 in frame 16. Because the deterministic model FSTN cannot handle the uncertainty after a bounce, the model gets confused and generates a blurry result.",
+      "By far, this branch of approaches achieves the best result and has the potential to solve our task. In our evaluation, we use SepConv and SuperSloMo as comparisons. Deterministic Video Prediction",
+      "Except for SuperSloMo, all models are trained from scratch under the same conditions for all datasets. We select two high-performance interpolation models SepConv and SuperSloMo. Due to SepConv's limitation (sequences must have the length of 2^n - 1), all the following evaluations are under the generation of 7 frames.",
+      "Following their instruction, we complete the training code of SepConv. We can't get the code of SuperSloMo, but we acquire the results from the authors of . Two prediction models are picked: FSTN, a deterministic generation model; SVG-LP, an advanced stochastic prediction model."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 illustrates the concept of video interpolation, which is relevant to understanding how SepConv generates frames. Text 2 discusses the sliding tendency of SepConv, explaining how it affects the generated images by freezing the object's body and sliding it to a new position.\",\n    \"Answer\": \"The sliding tendency of SepConv causes the object's body to freeze and slide to a new position, affecting the generated images by not accurately capturing dynamic movements.\"\n}"
+  },
+  "7": {
+    "question": "What is the role of the residual connections in the RBConvLSTM network?",
+    "ground_truth": "The residual connections add the output of the previous layer to the input of the next layer. This helps to improve the flow of information through the network and can help to prevent vanishing gradients.",
+    "selected_figures_names": [
+      "1809.00263v5-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Figure9-1.png",
+      "1809.00263v5-Figure10-1.png",
+      "1809.00263v5-Figure13-1.png",
+      "1809.00263v5-Table1-1.png",
+      "1809.00263v5-Figure4-1.png",
+      "1809.00263v5-Figure15-1.png",
+      "1809.00263v5-Figure3-1.png",
+      "1809.00263v5-Figure11-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually represents the RBConvLSTM structure, showing how residual connections are integrated between layers. Text 0 explains the purpose of these connections, which is to elevate bottom features directly to the top, enhancing feature propagation.",
+    "answer": "The residual connections in the RBConvLSTM network elevate bottom features directly to the top, improving feature propagation and enhancing the network's ability to maintain long-term coherence.",
+    "text_chunks": [
+      "Since the input features to the bottom layer h_S, \\mathbf{0,...,h_T share the same feature space with \\hat{h_{S:T, inspired by , we add an residual connection between each two layers to elevate the bottom features directly to the top. In the end, RBConvLSTM combines all the three structures: the ConvLSTM, the bi-directional RNN and the residual connections. Inference Module As shown in Figure , We extract a dynamic vector h_t-1 from each X_t-1.",
+      "With the dynamics and momentum of X_S and X_T, RBConvLSTM outputs a constraint vector \\hat{h_t for each intermediate step t. The whole sequence of the constraint vector has a conditional distribution P(\\hat{h_{S:T|\\mathbf{X_{WR). \\paragraph{RBConvLSTM RBConvLSTM, a residual bi-directional ConvLSTM, is based on the studies of seq2seq .",
+      "As shown in Figure , the first layer of RBConvLSTM uses C_{start as the initial state of the forward cell and C_{end for the backward cell. We need to propagate sparse constraints h_S, h_T to every time step from S+1 to T-1 to get outputs \\hat{h_S, \\hat{h_{S+1,...,\\hat{h_T as constraint vectors for Inference Module. They are critical to achieve the long-term coherence.",
+      "As illustrated in Figure , compare with interpolation models, an interval our model needs to infill has more uncertainties, even with more reference frames (frame 1 and 13). To inference the initial and final momentum, we expose extended reference frames both from the past (frame 1 and 7 in Figure ) and the future (frame 13 and 19) to the model. To achieve long-term coherence, we introduce {RBConvLSTM, a multi-layer bi-directional ConvLSTM with residual connections between adjacent layers.",
+      "At test, Posterior module is not required and z_t is sampled from P_{infr. We list the notations as follows: Reference Module Reference module includes an Extractor and a RBConvLSTM. Given all the frames in \\mathbf{X_{WR, the Extractor learns the momentum and output two vectors C_{start and C_{end.",
+      "introduces ConvLSTM, which has been proved to be powerful in spatial sequence modeling. propose to model the content and the dynamics independently to reduce the workload for the networks. incorporate GANs into their model and improve the quality.",
+      "The SVG-LP cannot converge in this setting since it doesn't have a constraint planning module like the RBConvLSTM to lead the sequence to the final frame. Without spatial independence, a non-spatial representation cannot sample different dynamics for different areas. The two digits in the result of \"SDVI non-spatial\" collapse into one, then move toward the final frame.",
+      "For step S and T, feature maps of all layers in Encoder will be gathered as a multi-scale residuals ctn_{S and ctn_{S to help reconstruct the static content. LSTM_{infr, LSTM_{pst and LSTM_{dyn use the structure of one layer ConvLSTM. The output dimensions of our modules are listed in Table ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually represents the RBConvLSTM structure, showing how residual connections are integrated between layers. Text 0 explains the purpose of these connections, which is to elevate bottom features directly to the top, enhancing feature propagation.\",\n    \"Answer\": \"The residual connections in the RBConvLSTM network elevate bottom features directly to the top, improving feature propagation and enhancing the network's ability to maintain long-term coherence.\"\n}"
+  },
+  "8": {
+    "question": "What is the relationship between the feature maps of $\\sigma$ and $\\mu$ and the sampled vector?",
+    "ground_truth": "The sampled vector is element-wise multiplied by the feature map of $\\sigma$ and added to the feature map of $\\mu$.",
+    "selected_figures_names": [
+      "1809.00263v5-Figure12-1.png",
+      "1809.00263v5-Figure16-1.png",
+      "1809.00263v5-Figure7-1.png",
+      "1809.00263v5-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1809.00263v5-Figure12-1.png",
+      "1809.00263v5-Figure16-1.png",
+      "1809.00263v5-Figure7-1.png",
+      "1809.00263v5-Figure5-1.png",
+      "1809.00263v5-Figure6-1.png",
+      "1809.00263v5-Figure4-1.png",
+      "1809.00263v5-Figure10-1.png",
+      "1809.00263v5-Figure9-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows a sequence of frames with different sampling methods, which relates to the concept of spatial sampling. Text 0 discusses the use of spatial feature maps for \\(\\mu_t\\) and \\(\\sigma_t\\), which is directly related to the question about the relationship between these feature maps and the sampled vector.",
+    "answer": "The feature maps of \\(\\mu\\) and \\(\\sigma\\) are used instead of vectors to enable spatial sampling, which helps in modeling spatial independence and prevents uniform influence across areas.",
+    "text_chunks": [
+      "Uniformly draw a sample following the same distribution everywhere will hinder the modeling (see SDVI non-spatial in Table ). Consequently, we introduce a spatial sampling process (Figure ). Instead of using vectors , we use spatial feature maps for \\mu_t and \\sigma_t.",
+      "1. To show that the spatial sampling enables spatial independence, we replace the feature map by a vector in the dynamic sampling process and denote it by ``SDVI non-spatial''. If we up-sample a vector, the information from one area would have an equivalent influence to another area. Therefore it tends to generate a sequence with a single movement (Figure non-spatial).",
+      "The inference pipeline is shown in Figure . Dynamic Spatial Sampling Using the re-parameterization trick , we model P_{pst and P_{infr as Gaussian distributions N_{pst(\\mu_t,\\sigma_t) and N_{infr(\\mu_t,\\sigma_t). Different locations in one frame may have different levels of uncertainty.",
+      "We found setting the map's weight to 3 on moving pixels is beneficial. Since most actions such as waving follow fixed patterns, the FSTN and the SepConv can achieve the best scores in PSNR and SSIM (Table ). However, if the object in frame 8 and 16 has a similar body pose, the SepConv and the SuperSloMo will freeze the object's body and slide the object to its new position (Figure ).",
+      "Thus we introduce the last momentum similarity (LMS) calculated by the mean square distance between the optical flow from X_{T-1 to X_{T and the optical flow from \\tilde{X^{infr_{T-1 to X_{T. We find LMS a good indicator of the video coherence since no matter how the dynamic being sampled, both the object's position and speed should make a smooth transition to X_T. \\paragraph{Movement Weight Map During training, we apply a movement weight map to each location of the pixel loss to encourage movement generation. For a ground truth frame X_t, if a pixel value stays the same in X_{t-1, the weight is 1 on that location.",
+      "\\\\ Since our model is stochastic, we draw 100 samples for each interval as in and report a sample with the best SSIM. More video results for various settings (see the video web page), dataset details (Appendix D), network architectures and the training details (see Appendix C) can be found in the supplemental material. \\caption{Metrics averaging over all 7 intermediate frames.",
+      "Following their instruction, we complete the training code of SepConv. We can't get the code of SuperSloMo, but we acquire the results from the authors of . Two prediction models are picked: FSTN, a deterministic generation model; SVG-LP, an advanced stochastic prediction model.",
+      "Since the input features to the bottom layer h_S, \\mathbf{0,...,h_T share the same feature space with \\hat{h_{S:T, inspired by , we add an residual connection between each two layers to elevate the bottom features directly to the top. In the end, RBConvLSTM combines all the three structures: the ConvLSTM, the bi-directional RNN and the residual connections. Inference Module As shown in Figure , We extract a dynamic vector h_t-1 from each X_t-1."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows a sequence of frames with different sampling methods, which relates to the concept of spatial sampling. Text 0 discusses the use of spatial feature maps for \\\\(\\\\mu_t\\\\) and \\\\(\\\\sigma_t\\\\), which is directly related to the question about the relationship between these feature maps and the sampled vector.\",\n    \"Answer\": \"The feature maps of \\\\(\\\\mu\\\\) and \\\\(\\\\sigma\\\\) are used instead of vectors to enable spatial sampling, which helps in modeling spatial independence and prevents uniform influence across areas.\"\n}"
+  }
+}

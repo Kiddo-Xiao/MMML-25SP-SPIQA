@@ -1,0 +1,107 @@
+{
+  "0": {
+    "question": "Which estimator performs best in the presence of noisy confounders and how does it compare to the Covariate Control (CC) estimator?",
+    "ground_truth": "The Entropy Balancing (EB) estimator performs best across all measures (Bias, MAE, and MSE) when confounders are noisy. While the CC estimator also performs well, it exhibits slightly higher bias and MAE compared to EB.",
+    "selected_figures_names": [
+      "1906.10843v1-Table1-1.png",
+      "1906.10843v1-Table5-1.png",
+      "1906.10843v1-Table4-1.png",
+      "1906.10843v1-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1906.10843v1-Table1-1.png",
+      "1906.10843v1-Table5-1.png",
+      "1906.10843v1-Table4-1.png",
+      "1906.10843v1-Figure1-1.png",
+      "1906.10843v1-Figure5-1.png",
+      "1906.10843v1-Figure6-1.png",
+      "1906.10843v1-Figure7-1.png",
+      "1906.10843v1-Figure2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 provides a table comparing the performance of different estimators, including Entropy Balancing (EB) and Covariate Control (CC), in the presence of noisy confounders. Text 0 discusses the performance of various estimators, highlighting that EB and CC have small biases and good MSE performance.",
+    "answer": "The Entropy Balancing (EB) estimator performs best in the presence of noisy confounders, with the lowest bias, MAE, and MSE. It outperforms the Covariate Control (CC) estimator, which also shows good performance but is slightly less effective than EB.",
+    "text_chunks": [
+      "In our setting, the OR estimator consistently underestimates counterfactuals for the treatment-assigned respondents, resulting in a bias that is comparable with the naive estimator. CC, EB and IPW have small biases; EB and CC estimators have the best MSE performance across all estimators. In scenario 2, we relax our assumption on our ability to observe the true confounders, and we assume that we can only observe transformations of the true confounders as given in Eq.~\\eqref{eq.z1-\\eqref{eq.z2.",
+      "By definition this is an inconsistent estimator and does not take into account observed confounders. The remaining estimators are based on Lemma~, and use the observed covariates to correct for the underlying bias. We implemented outcome regression (OR)~, inverse propensity weighing (IPW)~, a doubly robust (DR) estimator based on OR and IPW~, and an adversarial balancing based estimator (AB) using Logistic Regression as the classifier~. We measured the performance of each estimator via bias, median absolute error (MAE), and mean squared error (MSE)], MAE = Median(|ATE - \\hat{ATE|), and MSE = E[(ATE- \\hat{ATE)^2] as discussed in~. Results are given in Table~. See Figure~ for the distribution of estimates.",
+      "IPW has a large bias comparable to the naive estimator. The DR estimator's performance falls in between OR and IPW. In scenario 2, we relax our assumption on the ability to observe the true confounders.",
+      "Interestingly, a simple regression-based covariate control (CC) was one of the best estimators for the fully observed case, suggesting more complicated techniques do not necessarily provide superior performance. Our novel framework combined with simple regression or balancing techniques has the potential to be integrated with existing experimentation platforms to provide robust, efficient, and automatic impact calculations for sentiment metrics. \\bibliography{bib_1 \\bibliographystyle{acm \\appendix Proof of Lemma~ First recall that ATETR is defined as E[Y(1)-Y(0)| T=1, \\Delta(T) = 1] in Equation~\\eqref{main2_eq.",
+      "In scenario 1, we assume that we can observe the actual values of the confounding factors, i.e., X_1,X_2. This allows us to correctly specify a model to adjust for all of the confounding variables, and Assumption~ holds. Our first estimator is a naive mean comparison among respondents.",
+      "Then we show that a simple difference between the two quantities provides a consistent estimator of the ATE. This also enables parallel execution for more efficient computation. We simulate the problem with both fully observed and transformed confounders, observing significant performance decreases between two settings, highlighting the potential sensitivity of causal inference techniques to model misspecification.",
+      "The AB estimator seems to provide a balance between bias and variance. Sentiment Average Treatment Effect on Treated and Responded (ATETR) Similar to the ATE case, we have implemented five different estimators under two different scenarios. In scenario 1, we assume that we can observe the actual values of the confounding factors, i.e., X_1,X_2.",
+      "Results and boxplots are given in Table~ and Figure~, respectively. CC suffers from a dramatic drop in performance when compared to the fully observed covariates scenario. We also observe dramatic bias and higher levels of variance in IPW as well as a large number of estimates with extreme values."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 provides a table comparing the performance of different estimators, including Entropy Balancing (EB) and Covariate Control (CC), in the presence of noisy confounders. Text 0 discusses the performance of various estimators, highlighting that EB and CC have small biases and good MSE performance.\",\n    \"Answer\": \"The Entropy Balancing (EB) estimator performs best in the presence of noisy confounders, with the lowest bias, MAE, and MSE. It outperforms the Covariate Control (CC) estimator, which also shows good performance but is slightly less effective than EB.\"\n}"
+  },
+  "1": {
+    "question": "Which ATE estimator is most affected by the presence of noisy confounders?",
+    "ground_truth": "Outcome Regression (OR)",
+    "selected_figures_names": [
+      "1906.10843v1-Figure2-1.png",
+      "1906.10843v1-Table3-1.png",
+      "1906.10843v1-Table4-1.png",
+      "1906.10843v1-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1906.10843v1-Figure2-1.png",
+      "1906.10843v1-Table3-1.png",
+      "1906.10843v1-Table4-1.png",
+      "1906.10843v1-Table2-1.png",
+      "1906.10843v1-Table1-1.png",
+      "1906.10843v1-Figure6-1.png",
+      "1906.10843v1-Figure3-1.png",
+      "1906.10843v1-Figure4-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 provides a table showing the performance of different ATE estimators when noisy confounders are observed, highlighting the drop in performance of the OR estimator. Text 1 discusses the sensitivity of causal inference techniques to model misspecification, which is relevant to the impact of noisy confounders.",
+    "answer": "The Outcome Regression (OR) estimator is most affected by the presence of noisy confounders.",
+    "text_chunks": [
+      "The AB estimator seems to provide a balance between bias and variance. Sentiment Average Treatment Effect on Treated and Responded (ATETR) Similar to the ATE case, we have implemented five different estimators under two different scenarios. In scenario 1, we assume that we can observe the actual values of the confounding factors, i.e., X_1,X_2.",
+      "Then we show that a simple difference between the two quantities provides a consistent estimator of the ATE. This also enables parallel execution for more efficient computation. We simulate the problem with both fully observed and transformed confounders, observing significant performance decreases between two settings, highlighting the potential sensitivity of causal inference techniques to model misspecification.",
+      "In our setting, the OR estimator consistently underestimates counterfactuals for the treatment-assigned respondents, resulting in a bias that is comparable with the naive estimator. CC, EB and IPW have small biases; EB and CC estimators have the best MSE performance across all estimators. In scenario 2, we relax our assumption on our ability to observe the true confounders, and we assume that we can only observe transformations of the true confounders as given in Eq.~\\eqref{eq.z1-\\eqref{eq.z2.",
+      "By definition this is an inconsistent estimator and does not take into account observed confounders. The remaining estimators are based on Lemma~, and use the observed covariates to correct for the underlying bias. We implemented outcome regression (OR)~, inverse propensity weighing (IPW)~, a doubly robust (DR) estimator based on OR and IPW~, and an adversarial balancing based estimator (AB) using Logistic Regression as the classifier~. We measured the performance of each estimator via bias, median absolute error (MAE), and mean squared error (MSE)], MAE = Median(|ATE - \\hat{ATE|), and MSE = E[(ATE- \\hat{ATE)^2] as discussed in~. Results are given in Table~. See Figure~ for the distribution of estimates.",
+      "Our first estimator is a naive mean comparison among respondents. The naive estimator will return the same estimate for ATE and ATETR. We implemented outcome regression (OR)~, inverse propensity weighing (IPW)~, covariate control (CC), an adversarial balancing based estimator (AB)~, and an entropy balancing based method (EB)~. The main difference between ATE and ATETR estimation is the latter utilizes data among respondents only.",
+      "The adversarial balancing estimator seems to provide a desirable balance between bias and variance in the transformed confounders scenario. In the case of Average Treatment Effect on Treated and Responded (ATETR), we showed that one can focus on respondent data only. Our problem can be mapped onto a standard causal analysis setting, i.e., matching respondents in the control group to respondents in the treatment group using the observed covariates.",
+      "IPW has a large bias comparable to the naive estimator. The DR estimator's performance falls in between OR and IPW. In scenario 2, we relax our assumption on the ability to observe the true confounders.",
+      "This enabled us to leverage existing techniques in the causal analysis literature. Similarly to ATE, we observe significant performance decreases between the two ATETR settings. In particular, IPW suffers from dramatic performance degradation (potentially due to extreme values of predicted propensities)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 provides a table showing the performance of different ATE estimators when noisy confounders are observed, highlighting the drop in performance of the OR estimator. Text 1 discusses the sensitivity of causal inference techniques to model misspecification, which is relevant to the impact of noisy confounders.\",\n    \"Answer\": \"The Outcome Regression (OR) estimator is most affected by the presence of noisy confounders.\"\n}"
+  },
+  "2": {
+    "question": "Which estimator has the smallest bias and best MSE performance in the case of fully observed confounders?",
+    "ground_truth": "The Entropy Balancing (EB) and Covariate Control (CC) estimators.",
+    "selected_figures_names": [
+      "1906.10843v1-Figure3-1.png",
+      "1906.10843v1-Figure7-1.png",
+      "1906.10843v1-Figure5-1.png",
+      "1906.10843v1-Table5-1.png"
+    ],
+    "all_figures_names": [
+      "1906.10843v1-Figure3-1.png",
+      "1906.10843v1-Figure7-1.png",
+      "1906.10843v1-Figure5-1.png",
+      "1906.10843v1-Table5-1.png",
+      "1906.10843v1-Figure4-1.png",
+      "1906.10843v1-Figure1-1.png",
+      "1906.10843v1-Table3-1.png",
+      "1906.10843v1-Figure8-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 provides a table with detailed performance metrics (Bias, MAE, MSE) for different estimators, which directly answers the question. Text 0 discusses the performance of various estimators, highlighting that EB and CC have the best MSE performance, which aligns with the information needed.",
+    "answer": "The Entropy Balancing (EB) estimator has the smallest bias and best MSE performance in the case of fully observed confounders.",
+    "text_chunks": [
+      "In our setting, the OR estimator consistently underestimates counterfactuals for the treatment-assigned respondents, resulting in a bias that is comparable with the naive estimator. CC, EB and IPW have small biases; EB and CC estimators have the best MSE performance across all estimators. In scenario 2, we relax our assumption on our ability to observe the true confounders, and we assume that we can only observe transformations of the true confounders as given in Eq.~\\eqref{eq.z1-\\eqref{eq.z2.",
+      "By definition this is an inconsistent estimator and does not take into account observed confounders. The remaining estimators are based on Lemma~, and use the observed covariates to correct for the underlying bias. We implemented outcome regression (OR)~, inverse propensity weighing (IPW)~, a doubly robust (DR) estimator based on OR and IPW~, and an adversarial balancing based estimator (AB) using Logistic Regression as the classifier~. We measured the performance of each estimator via bias, median absolute error (MAE), and mean squared error (MSE)], MAE = Median(|ATE - \\hat{ATE|), and MSE = E[(ATE- \\hat{ATE)^2] as discussed in~. Results are given in Table~. See Figure~ for the distribution of estimates.",
+      "Our first observation is the dramatic drop in the performance of OR. The estimator performs the worst in both bias and MSE. DR achieves the best performance in this case with respect to bias, however it once again suffers from large variance.",
+      "Then we show that a simple difference between the two quantities provides a consistent estimator of the ATE. This also enables parallel execution for more efficient computation. We simulate the problem with both fully observed and transformed confounders, observing significant performance decreases between two settings, highlighting the potential sensitivity of causal inference techniques to model misspecification.",
+      "The performance of the AB estimator seems comparable between the two scenarios. While the EB estimator suffers from increased bias, its bias and MSE are nevertheless the lowest. Conclusion In this paper, we focused on a scenario where user reported sentiment is used as a success metric for a fully randomized A/B test.",
+      "IPW has a large bias comparable to the naive estimator. The DR estimator's performance falls in between OR and IPW. In scenario 2, we relax our assumption on the ability to observe the true confounders.",
+      "In scenario 1, we assume that we can observe the actual values of the confounding factors, i.e., X_1,X_2. This allows us to correctly specify a model to adjust for all of the confounding variables, and Assumption~ holds. Our first estimator is a naive mean comparison among respondents.",
+      "In some of our simulations, we relax the observability on the true confounders X_1,X_2 to study the effects of model misspecification. We instead assume that we can observe functions of the confonfounders, Z_1, Z_2 where: This corresponds to a scenario where a researcher cannot directly observe the confounders but has access to a set of proxy variables for the confounders."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 provides a table with detailed performance metrics (Bias, MAE, MSE) for different estimators, which directly answers the question. Text 0 discusses the performance of various estimators, highlighting that EB and CC have the best MSE performance, which aligns with the information needed.\",\n    \"Answer\": \"The Entropy Balancing (EB) estimator has the smallest bias and best MSE performance in the case of fully observed confounders.\"\n}"
+  }
+}

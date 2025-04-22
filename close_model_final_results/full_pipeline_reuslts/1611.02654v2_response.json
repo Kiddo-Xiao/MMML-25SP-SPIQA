@@ -1,0 +1,155 @@
+{
+  "0": {
+    "question": "Which model performed the best on the SICK dataset according to the MSE metric?",
+    "ground_truth": "The supervised model performed the best on the SICK dataset according to the MSE metric.",
+    "selected_figures_names": [
+      "1611.02654v2-Table4-1.png"
+    ],
+    "all_figures_names": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a table with performance metrics including MSE for different models on the SICK dataset. Text 5 mentions the table but does not provide additional relevant information.",
+    "answer": "The supervised model performed the best on the SICK dataset according to the MSE metric with a value of 0.253.",
+    "text_chunks": [
+      "The Seq2seq model performs worse than the window network. Interestingly, \\citet{li2016neural observe that the Seq2seq model outperforms the window network in an order discrimination task on Wikipedia data. However, the Wikipedia data considered in their work is an order of magnitude larger than the datasets considered here, and that could have potentially helped the generative model.",
+      "In Table we compare our results with traditional approaches and recent data-driven approaches. % The entity grid model provides a strong baseline on the Accidents dataset, only outperformed by our model and \\citet{li2016neural.",
+      "On the Earthquakes data the window approach of \\citet{li2016neural performs strongly. Our approach outperforms prior models on both datasets, achieving near perfect performance on the Earthquakes dataset. While these datasets have been widely used, they are quite formulaic in nature and are no longer challenging.",
+      "We assess the performance of our model against baseline methods in Table . The window network performs strongly compared to the other baselines. % Our model does better by a significant margin by exploiting global context, demonstrating that global context is important in this task.",
+      "% Our proposed model achieves state-of-the-art performance on two benchmark datasets for this task, outperforming several classical approaches and recent data-driven approaches. Addressing the more challenging task of ordering a given collection of sentences, we consider the novel and interesting task of ordering sentences from abstracts of scientific articles. Our model strongly outperforms previous work on this task.",
+      "The first row shows the best performing purely supervised methods. The last section shows our models. \\end{table*",
+      "We initialize all models with pre-trained GloVe word embeddings. \\hspace{1em \\hspace{0.6em \\raisebox{0.4em{ \\caption{t-SNE embeddings of representations learned by the model for sentences from the test set.",
+      "The number of read cycles in the encoder is set to 10. The same model architecture is used across all experiments. We used the Adam optimizer \\citep{kingma2014adam with batch size 10 and learning rate 5e-4 for learning."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a table with performance metrics including MSE for different models on the SICK dataset. Text 5 mentions the table but does not provide additional relevant information.\",\n    \"Answer\": \"The supervised model performed the best on the SICK dataset according to the MSE metric with a value of 0.253.\"\n}"
+  },
+  "1": {
+    "question": "What is the effect of pre-training with the ordering task on the ROUGE-L score for extractive summarization?",
+    "ground_truth": "Pre-training with the ordering task increases the ROUGE-L score for extractive summarization.",
+    "selected_figures_names": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png"
+    ],
+    "all_figures_names": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 directly compares the ROUGE scores for models trained from scratch and those pre-trained with the ordering task, which is relevant to the question. Text 0 discusses the benefits of pre-training with the ordering task, supporting the image data.",
+    "answer": "Pre-training with the ordering task improves the ROUGE-L score for extractive summarization. For a summary length of 75b, the score increases from 12.79 to 13.25, and for 275b, it increases from 33.69 to 34.27.",
+    "text_chunks": [
+      "We observe that the model pre-trained with the ordering task scores consistently better than the model trained from scratch. The results can be improved further by using larger news corpora. % This shows that sentence ordering is an attractive unsupervised objective for exploiting large unlabelled corpora to improve summarization systems.",
+      "% We train a model from scratch to perform extractive summarization in the above fashion. We then consider a model that is pre-trained on the ordering task and is fine-tuned on the above task. The DailyMail and CNN datasets \\citep{cheng2016neural were used for experimentation.",
+      "Sentence Ordering and Summarization In this section we show that sentence ordering models learn coherence properties useful for summarization. We consider a variation of our model where the model takes a set of sentences from several documents as input and sequentially picks summary sentences until it predicts a special `stop' symbol. % A key distinction between this model and recent work \\citep{cheng2016neural,nallapati2016classify is that the input order of sentences is assumed to be unknown, making it applicable to multi-document summarization.",
+      "We train with a vocabulary of 400k words; the above results are based on a training time of two days on a GTX Titan X GPU. Word Influence We attempt to understand what text-level clues the model uses to perform the ordering task. Inspired by \\citet{li2015visualizing, we use gradients of prediction decisions with respect to words of the correct sentence as a proxy for the salience of each word.",
+      "Experimental Results We first consider the order discrmination task that has been widely used in the literature for evaluating coherence models. We then consider the more challenging ordering problem where a coherent order of a given collection of sentences needs to be determined. We then demonstrate that our ordering model learns coherence properties useful for summarization.",
+      "It is also used as a heuristic during decoding. Training Objective. The model is trained using the maximum likelihood objective where D denotes the training set and each training instance is given by an ordered document of sentences x = (x^1,...,x^{|x|).",
+      "% The LSTM takes the embedding of the previous sentence as input instead of the attention readout. At training time the correct order of sentences (s_{o_1, s_{o_2,...,s_{o_n) = (x^1, x^2,...,x^n) is known (o represents the correct order) and x^{t-1 is used as the input.",
+      "It further shows that the coherence scores obtained from the ordering model correlates well with summary quality. Learned Sentence Representations One of the original motivations for this work is the question of whether we can learn high-quality sentence representations by learning to model text coherence. To address this question we trained our model on a large number of paragraphs using the BookCorpus dataset~\\citep{kiros2015skip."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 directly compares the ROUGE scores for models trained from scratch and those pre-trained with the ordering task, which is relevant to the question. Text 0 discusses the benefits of pre-training with the ordering task, supporting the image data.\",\n    \"Answer\": \"Pre-training with the ordering task improves the ROUGE-L score for extractive summarization. For a summary length of 75b, the score increases from 12.79 to 13.25, and for 275b, it increases from 33.69 to 34.27.\"\n}"
+  },
+  "2": {
+    "question": "Which model performs the best for the order discrimination task on the Accidents dataset and how does it compare to the other data-driven approaches?",
+    "ground_truth": "The proposed model in this paper achieves the best performance for the order discrimination task on the Accidents dataset with an accuracy of 0.944. It outperforms the other data-driven approaches, namely Window (Recurrent) with 0.840, Window (Recursive) with 0.864, and Seq2seq with 0.930.",
+    "selected_figures_names": [
+      "1611.02654v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a direct comparison of model performances on the Accidents dataset, showing mean accuracy for each model. Text 0 discusses the comparison of results with traditional and recent data-driven approaches, which is relevant to understanding how the models compare.",
+    "answer": "The model labeled 'Ours' performs the best for the order discrimination task on the Accidents dataset with a mean accuracy of 0.944. It outperforms other data-driven approaches like the Seq2seq model, which has an accuracy of 0.930.",
+    "text_chunks": [
+      "In Table we compare our results with traditional approaches and recent data-driven approaches. % The entity grid model provides a strong baseline on the Accidents dataset, only outperformed by our model and \\citet{li2016neural.",
+      "The ordering problem is traditionally formulated as a binary classification task: Given a reference paragraph and its permuted version, identify the more coherent one \\citep{barzilay2008modeling. The datasets widely used for this task in previous work are the Accidents and Earthquakes news reports. In each of these datasets the training and test sets include 100 articles and approximately 20 permutations of each article.",
+      "The Seq2seq model performs worse than the window network. Interestingly, \\citet{li2016neural observe that the Seq2seq model outperforms the window network in an order discrimination task on Wikipedia data. However, the Wikipedia data considered in their work is an order of magnitude larger than the datasets considered here, and that could have potentially helped the generative model.",
+      "% Our proposed model achieves state-of-the-art performance on two benchmark datasets for this task, outperforming several classical approaches and recent data-driven approaches. Addressing the more challenging task of ordering a given collection of sentences, we consider the novel and interesting task of ordering sentences from abstracts of scientific articles. Our model strongly outperforms previous work on this task.",
+      "On the Earthquakes data the window approach of \\citet{li2016neural performs strongly. Our approach outperforms prior models on both datasets, achieving near perfect performance on the Earthquakes dataset. While these datasets have been widely used, they are quite formulaic in nature and are no longer challenging.",
+      "Our model has a hierarchical structure similar to these models, but takes a discriminative approach. % Combinatorial optimization with RNNs. \\citet{vinyals2015order equip sequence-to-sequence models with the ability to handle input and output sets, and discuss experiments on sorting, language modeling and parsing.",
+      "The model is regularized using early stopping. Hyperparameters were chosen using the validation set. Order Discrimination",
+      "Results for only uni-directional versions of models are discussed here for a fair comparison. Similar to the skip-thought (ST) paper, we train two models - one predicting the correct order in the forward direction and another in the backward direction. The numbers shown for the ordering model were obtained by concatenating the representations from the two models."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a direct comparison of model performances on the Accidents dataset, showing mean accuracy for each model. Text 0 discusses the comparison of results with traditional and recent data-driven approaches, which is relevant to understanding how the models compare.\",\n    \"Answer\": \"The model labeled 'Ours' performs the best for the order discrimination task on the Accidents dataset with a mean accuracy of 0.944. It outperforms other data-driven approaches like the Seq2seq model, which has an accuracy of 0.930.\"\n}"
+  },
+  "3": {
+    "question": "What can you say about the relationship between the sentences in a document based on the t-SNE embeddings?",
+    "ground_truth": "Sentences that are closer together in the embedding space are more semantically similar than those that are farther apart.",
+    "selected_figures_names": [
+      "1611.02654v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The image shows t-SNE embeddings of sentence representations, color-coded by their position in the document, which helps visualize the relationship between sentences. Text 0 provides context about these embeddings and their purpose.",
+    "answer": "The t-SNE embeddings illustrate how sentences are distributed based on their position in a document. Sentences with similar positions tend to cluster together, indicating a relationship in their semantic or structural role within the document.",
+    "text_chunks": [
+      "These models are also expensive during inference since they involve computing and sampling from word distributions. Fig. shows t-SNE embeddings of sentence representations learned by our sentence encoder. These are sentences from test sets, color coded by their positions in the source abstract.",
+      "We initialize all models with pre-trained GloVe word embeddings. \\hspace{1em \\hspace{0.6em \\raisebox{0.4em{ \\caption{t-SNE embeddings of representations learned by the model for sentences from the test set.",
+      "% Henceforth, we use s to refer to a sentence or its embedding interchangeably. The embeddings \\{s_1,s_2,...,s_n\\ of a given set of n sentences constitute the sentence memory, available to be accessed by subsequent components.",
+      "We use the encoder-decoder terminology that is more common in the following discussion. The model is comprised of a sentence encoder RNN, an encoder RNN and a decoder RNN (Fig. ). The sentence encoder takes as input the words of a sentence s sequentially and computes an embedding representation of the sentence.",
+      "The Sequence-to-sequence (Seq2seq) framework \\citep{sutskever2014sequence and its variants have fueled RNN based approaches to a range of problems such as language modeling, text generation, MT, QA, and many others. In this work we propose an RNN-based approach to the sentence ordering problem which exploits the set-to-sequence framework of \\citet{vinyals2015order. A word-level RNN encoder produces sentence embeddings, and a sentence-level set encoder RNN iteratively attends to these embeddings and constructs a context representation.",
+      "To evaluate the quality of sentence embeddings derived from the model, we use the evaluation pipeline of \\citet{kiros2015skip for tasks that involve understanding sentence semantics. These evaluations are performed by training a classifier on top of the embeddings derived from the model (holding the embeddings fixed) so that the performance is indicative of the quality of sentence representations. We present a comparison for the semantic relatedness and paraphrase detection tasks in Table .",
+      "Embeddings are color coded by the position of the sentence in the document it appears. \\end{figure* \\hfill \\parbox{.58\\linewidth{ \\caption{ % Performance comparison for semantic similarity and paraphrase detection.",
+      "% Unlike previous approaches, we do not use any handcrafted features and adopt an embedding-based approach. Local coherence is taken into account by a next-sentence prediction component in our model, and global dependencies are naturally captured by an RNN. % We demonstrate that our model can capture both logical and topical structure by several evaluation benchmarks."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The image shows t-SNE embeddings of sentence representations, color-coded by their position in the document, which helps visualize the relationship between sentences. Text 0 provides context about these embeddings and their purpose.\",\n    \"Answer\": \"The t-SNE embeddings illustrate how sentences are distributed based on their position in a document. Sentences with similar positions tend to cluster together, indicating a relationship in their semantic or structural role within the document.\"\n}"
+  },
+  "4": {
+    "question": "How does the proposed model compare to the other models in terms of accuracy on the NIPS Abstracts dataset?",
+    "ground_truth": "The proposed model has the highest accuracy on the NIPS Abstracts dataset, with an accuracy of 51.55.",
+    "selected_figures_names": [
+      "1611.02654v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1611.02654v2-Table4-1.png",
+      "1611.02654v2-Table3-1.png",
+      "1611.02654v2-Figure2-1.png",
+      "1611.02654v2-Table5-1.png",
+      "1611.02654v2-Table1-1.png",
+      "1611.02654v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a direct comparison of accuracy for different models on the NIPS Abstracts dataset, showing the proposed model's performance. Text 0 discusses the state-of-the-art performance of the proposed model, supporting the image data.",
+    "answer": "The proposed model achieves an accuracy of 51.55% on the NIPS Abstracts dataset, outperforming all other models listed.",
+    "text_chunks": [
+      "% Our proposed model achieves state-of-the-art performance on two benchmark datasets for this task, outperforming several classical approaches and recent data-driven approaches. Addressing the more challenging task of ordering a given collection of sentences, we consider the novel and interesting task of ordering sentences from abstracts of scientific articles. Our model strongly outperforms previous work on this task.",
+      "In Table we compare our results with traditional approaches and recent data-driven approaches. % The entity grid model provides a strong baseline on the Accidents dataset, only outperformed by our model and \\citet{li2016neural.",
+      "On the Earthquakes data the window approach of \\citet{li2016neural performs strongly. Our approach outperforms prior models on both datasets, achieving near perfect performance on the Earthquakes dataset. While these datasets have been widely used, they are quite formulaic in nature and are no longer challenging.",
+      "% Unlike previous approaches, we do not use any handcrafted features and adopt an embedding-based approach. Local coherence is taken into account by a next-sentence prediction component in our model, and global dependencies are naturally captured by an RNN. % We demonstrate that our model can capture both logical and topical structure by several evaluation benchmarks.",
+      "The Seq2seq model performs worse than the window network. Interestingly, \\citet{li2016neural observe that the Seq2seq model outperforms the window network in an order discrimination task on Wikipedia data. However, the Wikipedia data considered in their work is an order of magnitude larger than the datasets considered here, and that could have potentially helped the generative model.",
+      "\\citet{li2015hierarchical proposed a hierarchical autoencoder for generation and summarization applications. More relevant to our work is a similar model considered by \\citet{lin2015hierarchical. % A sentence-level RNN predicts the bag of words in the next sentence given the previous sentences and a word-level RNN predicts the word sequence conditioned on the sentence RNN hidden state.",
+      "% We train a model from scratch to perform extractive summarization in the above fashion. We then consider a model that is pre-trained on the ordering task and is fine-tuned on the above task. The DailyMail and CNN datasets \\citep{cheng2016neural were used for experimentation.",
+      "We assess the performance of our model against baseline methods in Table . The window network performs strongly compared to the other baselines. % Our model does better by a significant margin by exploiting global context, demonstrating that global context is important in this task."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a direct comparison of accuracy for different models on the NIPS Abstracts dataset, showing the proposed model's performance. Text 0 discusses the state-of-the-art performance of the proposed model, supporting the image data.\",\n    \"Answer\": \"The proposed model achieves an accuracy of 51.55% on the NIPS Abstracts dataset, outperforming all other models listed.\"\n}"
+  }
+}

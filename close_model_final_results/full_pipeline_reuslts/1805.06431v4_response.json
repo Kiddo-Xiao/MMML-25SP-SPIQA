@@ -1,0 +1,597 @@
+{
+  "0": {
+    "question": "Which method appears to be the safest for autonomous driving on straight lanes with different levels of outlier vehicles?",
+    "ground_truth": "ChoiceNet appears to be the safest method for autonomous driving on straight lanes, regardless of the percentage of outlier vehicles present.",
+    "selected_figures_names": [
+      "1805.06431v4-Table7-1.png",
+      "1805.06431v4-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table11-1.png",
+      "1805.06431v4-Table7-1.png",
+      "1805.06431v4-Table4-1.png",
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Table10-1.png",
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Figure10-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a table of collision rates for different methods, which directly relates to safety in autonomous driving. Text 0 discusses the performance of ChoiceNet in terms of safety and stability, making it relevant to the question.",
+    "answer": "ChoiceNet appears to be the safest method for autonomous driving on straight lanes, as it consistently shows the lowest collision rates across different levels of outlier vehicles.",
+    "text_chunks": [
+      "ChoiceNet clearly outperforms compared methods in terms of both safety (low collision rates) and stability (low RMS lane deviation distances). Here, we describe the features used for the autonomous driving experiments. As shown in the manuscript, we use a four dimensional feature, a lane deviation distance of an ego car, and three frontal distances to the closest car at left, center, and right lanes as shown in Figure .",
+      "We would like to note that this task does not have a reference target function in that all demonstrations are collected manually. Hence, we evaluated the performances of the compared methods by running the trained policies on a straight track by randomly deploying static cars. Table and Table indicate collision rates and RMS lane deviation distances of the tested methods, respectively, where the statistics are computed from 50 independent runs on the straight lane by randomly placing static cars as shown in Figure .",
+      "We upperbound the frontal distance to 40m. Figure and illustrate manually collected trajectories of a safe driving mode and a careless driving mode. Classification Tasks Here, we conduct comprehensive classification experiments using MNIST, CIFAR-10, and Large Movie Review datasets to evaluate the performance of ChoiceNet on corrupt labels. For the image datasets, we followed two different settings to generate noisy datasets: one following the setting in \\citep{Zhang_18_mixup and the other from \\citep{Han_18 which covers both symmetric and asymmetric noises.",
+      "Given training datasets whose outlier rates exceed 40\\%, however, only ChoiceNet successfully fits the target function whereas the other methods fail as shown in Figure . \\paragraph{Boston Housing Dataset Here, we used a real world dataset, a Boston housing price dataset, and checked the robustness of the proposed method and compared with standard multi-layer perceptrons with four different types of loss functions: standard L2-loss, L1-loss which is known to be robust to outliers, a robust loss (RL) function proposed in \\citep{Belagiannis_15_RobustReg, and a leaky robust loss (LeakyRL) function.",
+      "In particular, the tested methods are asked to learn the policy from driving demonstrations collected from both safe and careless driving modes. We use the same set of methods used for the previous task. The policy function is defined as a mapping between four dimensional input features consist of three frontal distances to left, center, and right lanes and lane deviation distance from the center of the lane to the desired heading.",
+      "We compared our proposed method with a mixture density network (MDN) and fully connected layers with an L_2-loss (MLP) and a robust loss (Robust) proposed in . We use three-layers with 64 units and ReLU activations, and for both the proposed method and an MDN, five mixtures are used. The average absolute fitting errors of three different functions are shown in Figure -, respectively where we can see that the proposed method outperforms or show comparable results with low outlier rates and shows superior performances with a high outlier rate (>50\\%).",
+      "A bootstrapping method which trains a neural network with a convex combination of the output of the current network and the noisy target was proposed. proposed DisturbLabel, a simple method that randomly replaces a percentage of the labels with incorrect values for each iteration. Mixing both input and output data was also proposed .",
+      "In all experiments, we used two hidden layers with 128 units and ReLU activations. The test accuracies of the compared methods are shown in Table . ChoiceNet shows the superior performance in the presence of outliers where we observe that the proposed method can be used for NLP tasks as well."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a table of collision rates for different methods, which directly relates to safety in autonomous driving. Text 0 discusses the performance of ChoiceNet in terms of safety and stability, making it relevant to the question.\",\n    \"Answer\": \"ChoiceNet appears to be the safest method for autonomous driving on straight lanes, as it consistently shows the lowest collision rates across different levels of outlier vehicles.\"\n}"
+  },
+  "1": {
+    "question": "Which of the compared methods is most likely to be the safest?",
+    "ground_truth": "ChoiceNet",
+    "selected_figures_names": [
+      "1805.06431v4-Figure8-1.png",
+      "1805.06431v4-Table8-1.png",
+      "1805.06431v4-Figure10-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure8-1.png",
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Figure12-1.png",
+      "1805.06431v4-Figure2-1.png",
+      "1805.06431v4-Table8-1.png",
+      "1805.06431v4-Figure10-1.png",
+      "1805.06431v4-Table15-1.png",
+      "1805.06431v4-Table13-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 shows the resulting trajectories of compared methods, which is relevant for assessing safety in driving scenarios. Text 6 discusses ChoiceNet's superior performance in terms of safety, specifically mentioning low collision rates and stability, which are key indicators of safety.",
+    "answer": "ChoiceNet is most likely to be the safest method.",
+    "text_chunks": [
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset.",
+      "We evaluate the performances of the compared methods using 500 state-action pairs with different mixing ratio and measure the average return over 100 consecutive episodes. The results are shown in Table . In both cases, ChoiceNet outperforms compared methods by a significant margin.",
+      "In all corruption rates, ChoiceNet achieves the best performance compared to two baseline methods. The learning curves of the biased label experiments are depicted in Figure . Particularly, we observe unstable learning curves regarding the test accuracies of ConvNet and Mixup.",
+      "A model is trained on a noisy dataset and evaluated on the clean test set. For fair comparisons, we keep other configurations such as the network topology to be the same as . Table shows the test accuracy of compared methods under different noise settings.",
+      "In all experiments, we used two hidden layers with 128 units and ReLU activations. The test accuracies of the compared methods are shown in Table . ChoiceNet shows the superior performance in the presence of outliers where we observe that the proposed method can be used for NLP tasks as well.",
+      "While our proposed method outperforms all compared methods on the symmetric noise settings, it shows the second best performance on asymmetric noise settings (Pair-45\\%). This shows the weakness of the proposed method. In other words, as Pair-45\\% assigns 45\\% of each label to its next label, the MCDN fails to correctly infer the dominant label distributions.",
+      "ChoiceNet clearly outperforms compared methods in terms of both safety (low collision rates) and stability (low RMS lane deviation distances). Here, we describe the features used for the autonomous driving experiments. As shown in the manuscript, we use a four dimensional feature, a lane deviation distance of an ego car, and three frontal distances to the closest car at left, center, and right lanes as shown in Figure .",
+      "Our proposed method outperforms all compared methods on the symmetric noise settings with a large margin over 10\\%p. On asymmetric noise settings (Pair-45\\%), our method shows the second best performance, and this reveals the weakness of the proposed method. As Pair-45\\% assigns 45\\% of each label to its next label, The Cholesky Block fails to infer the dominant label distributions correctly."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 shows the resulting trajectories of compared methods, which is relevant for assessing safety in driving scenarios. Text 6 discusses ChoiceNet's superior performance in terms of safety, specifically mentioning low collision rates and stability, which are key indicators of safety.\",\n    \"Answer\": \"ChoiceNet is most likely to be the safest method.\"\n}"
+  },
+  "2": {
+    "question": "How does the ChoiceNet model perform on datasets with uniform corruptions?",
+    "ground_truth": "The ChoiceNet model performs poorly on datasets with uniform corruptions.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table11-1.png",
+      "1805.06431v4-Table1-1.png",
+      "1805.06431v4-Figure4-1.png",
+      "1805.06431v4-Table4-1.png",
+      "1805.06431v4-Table14-1.png",
+      "1805.06431v4-Table9-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Figure10-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the fitting results and correlations for datasets with uniform corruptions, which directly relates to the question. Text 0 discusses the performance of ChoiceNet on datasets with corruptions, providing context for understanding the model's behavior.",
+    "answer": "ChoiceNet successfully estimates the target function even with uniform corruptions, as shown in the fitting results. It maintains performance despite the corruptions.",
+    "text_chunks": [
+      "We train on two datasets with the same target function but with different types of corruptions by replacing 50\\% of the output values whose input values are within 0 to 2: one uniformly sampled from -1 to 3 and the other from a flipped target function as shown in Figure and . Throughout this experiment, we set K = 2 for better visualization. As shown in Figure , ChoiceNet successfully estimates the target function with partial corruption.",
+      "In all corruption rates, ChoiceNet achieves the best performance compared to two baseline methods. The learning curves of the biased label experiments are depicted in Figure . Particularly, we observe unstable learning curves regarding the test accuracies of ConvNet and Mixup.",
+      "We apply random horizontal flip and random crop with 4-pixel-padding and use a weight decay of 0.0001 for the baseline network as \\citep{he2016deep. The classification results are shown in Table where ChoiceNet consistently outperforms ConvNet and ConvNet+Mixup by a significant margin, and the difference between the accuracies of ChoiceNet and the others becomes more clear as the corruption probability increases. Here, we also present additional experimental results using the MNIST dataset on following three different scenarios: The best and final accuracies on the intact test dataset for biased label experiments are shown in Table .",
+      "ChoiceNet consistently outperforms the baseline in most of the configurations except for 80\\%-corrupted SVHN dataset. Moreover, we expect that performance gains can increase when dataset-specific hyperparameter tuning is applied. The results suggest that the proposed ChoiceNet can easily be applied to other noisy datasets and show a performance improvement without large efforts.",
+      "The convolutional neural networks trained with Mixup show robust learning behaviors when 80\\% of the training labels are uniformly shuffled. However, given an extremely noisy dataset (90\\% and 95\\%), the test accuracies of baseline methods decrease as the number of epochs increases. ChoiceNet shows outstanding robustness to the noisy dataset in that the test accuracies do not drop even after 50 epochs for the cases where the corruption rates are below 90\\%.",
+      "To further understand how ChoiceNet works, we also plot the correlation of each mixture at each input with different colors. When using the first dataset where we flip the outputs whose inputs are between 0 and 2, the correlations of the second mixture at the corrupt region becomes -1 (see Figure ). This is exactly what we wanted ChoiceNet to behave in that having -1 correlation will simply flip the output.",
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset.",
+      "We have demonstrated that the proposed method can robustly infer the target distribution on corrupt training data in both regression and classification tasks. However, we have seen that in the case of extreme asymmetric noises, the proposed method showed suboptimal performances. We believe that it could resolved by combining our method with other robust learning methods where we have demonstrated that ChoiceNet can effectively be combined with mix-up ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the fitting results and correlations for datasets with uniform corruptions, which directly relates to the question. Text 0 discusses the performance of ChoiceNet on datasets with corruptions, providing context for understanding the model's behavior.\",\n    \"Answer\": \"ChoiceNet successfully estimates the target function even with uniform corruptions, as shown in the fitting results. It maintains performance despite the corruptions.\"\n}"
+  },
+  "3": {
+    "question": "Which method performs the best when there are a lot of outliers in the data?",
+    "ground_truth": "ChoiceNet.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure7-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure5-1.png",
+      "1805.06431v4-Table15-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Figure3-1.png",
+      "1805.06431v4-Table14-1.png",
+      "1805.06431v4-Figure7-1.png",
+      "1805.06431v4-Table11-1.png",
+      "1805.06431v4-Figure8-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 visually shows the performance of different methods at various outlier rates, highlighting how each method fits the data. Text 2 discusses the performance of the proposed method compared to others, specifically noting its superior performance with high outlier rates.",
+    "answer": "ChoiceNet performs the best when there are a lot of outliers in the data.",
+    "text_chunks": [
+      "Given training datasets whose outlier rates exceed 40\\%, however, only ChoiceNet successfully fits the target function whereas the other methods fail as shown in Figure . \\paragraph{Boston Housing Dataset Here, we used a real world dataset, a Boston housing price dataset, and checked the robustness of the proposed method and compared with standard multi-layer perceptrons with four different types of loss functions: standard L2-loss, L1-loss which is known to be robust to outliers, a robust loss (RL) function proposed in \\citep{Belagiannis_15_RobustReg, and a leaky robust loss (LeakyRL) function.",
+      "In all experiments, we used two hidden layers with 128 units and ReLU activations. The test accuracies of the compared methods are shown in Table . ChoiceNet shows the superior performance in the presence of outliers where we observe that the proposed method can be used for NLP tasks as well.",
+      "We compared our proposed method with a mixture density network (MDN) and fully connected layers with an L_2-loss (MLP) and a robust loss (Robust) proposed in . We use three-layers with 64 units and ReLU activations, and for both the proposed method and an MDN, five mixtures are used. The average absolute fitting errors of three different functions are shown in Figure -, respectively where we can see that the proposed method outperforms or show comparable results with low outlier rates and shows superior performances with a high outlier rate (>50\\%).",
+      "We vary the outlier rates from 0\\% (clean) to 80\\% (extremely noisy). Table illustrates the RMSEs (root mean square errors) between the reference target function and the fitted results of ChoiceNet and other compared methods. Given an intact training dataset, all the methods show stable performances in that the RMSEs are all below 0.1.",
+      "More Experiments Regression Tasks We conduct three regression experiments: 1) a synthetic scenario where the training dataset contains outliers sampled from other distributions, 2) using a Boston housing dataset with synthetic outliers, 3) a behavior cloning scenario where the demonstrations are collected from both expert and adversarial policies. \\paragraph{Synthetic Example We first apply ChoiceNet to a simple one-dimensional regression problem of fitting f(x) = \\cos(\\frac{\\pi{2x) \\exp(-(\\frac{x{2)^2) where x \\in [-3,+3] as shown in Figure . ChoiceNet is compared with a naive multilayer perceptron (MLP), Gaussian process regression (GPR) \\citep{Rasmussen_06, leveraged Gaussian process regression (LGPR) with leverage optimization \\citep{SJChoi_16, and robust Gaussian process regression (RGPR) with an infinite Gaussian process mixture model \\citep{Rasmussen_02_imgp are also compared.",
+      "ChoiceNet has five mixtures and it has two hidden layers with 32 nodes with a ReLU activation function. For the GP based methods, we use a squared-exponential kernel function and the hyper-parameters are determined using a simple median trick \\citep{Dai_14\\footnote{ A median trick selects the length parameter of a kernel function to be the median of all pairwise distances between training data.. To evaluate its performance in corrupt datasets, we randomly replace the original target values with outliers whose output values are uniformly sampled from -1 to +3.",
+      "\\paragraph{Boston Housing Dataset A Boston housing price dataset is used to check the robustness of the proposed method. We compare our method with standard feedforward networks using four different loss functions: standard L2-loss, L1-loss which is known to be robust to outliers, a robust loss (RL) function proposed in , and a leaky robust loss (LeakyRL) function where the results are shown in Table . Implementation details can be found in the supplementary material.",
+      "Existing work for handing noisy training data can be categorized into four groups: small-loss tricks % , estimating label corruptions % \\cite{Patrini_17_LossCorrection,Goldberger_17_NoiseAdaptation, Sukhbaatar_14, Bekker_16_unreliableLabel, Hendrycks_18_GLC, Veit_17_noisy, using robust loss functions % , and explicit and implicit regularization methods % . Our proposed method is mostly related to the robust loss function approach but cannot fully be categorized into this group in that we present a novel architecture, a mixture of correlated densities network block, for achieving robustness based on the correlation estimation."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 visually shows the performance of different methods at various outlier rates, highlighting how each method fits the data. Text 2 discusses the performance of the proposed method compared to others, specifically noting its superior performance with high outlier rates.\",\n    \"Answer\": \"ChoiceNet performs the best when there are a lot of outliers in the data.\"\n}"
+  },
+  "4": {
+    "question": "Which of the two approaches, density estimation or mixture of classifiers, is more robust to outliers?",
+    "ground_truth": "Mixture of classifiers.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table8-1.png",
+      "1805.06431v4-Figure9-1.png",
+      "1805.06431v4-Figure7-1.png",
+      "1805.06431v4-Table5-1.png",
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Table6-1.png",
+      "1805.06431v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 illustrates the process of using a mixture of classifiers for binary classification on corrupt data, which is relevant to understanding robustness to outliers. Text 1 discusses the superior performance of ChoiceNet in the presence of outliers, indicating robustness.",
+    "answer": "The mixture of classifiers approach is more robust to outliers, as it effectively handles corrupt data by using a mixture model, as shown in the image and supported by the text.",
+    "text_chunks": [
+      "We compared our proposed method with a mixture density network (MDN) and fully connected layers with an L_2-loss (MLP) and a robust loss (Robust) proposed in . We use three-layers with 64 units and ReLU activations, and for both the proposed method and an MDN, five mixtures are used. The average absolute fitting errors of three different functions are shown in Figure -, respectively where we can see that the proposed method outperforms or show comparable results with low outlier rates and shows superior performances with a high outlier rate (>50\\%).",
+      "In all experiments, we used two hidden layers with 128 units and ReLU activations. The test accuracies of the compared methods are shown in Table . ChoiceNet shows the superior performance in the presence of outliers where we observe that the proposed method can be used for NLP tasks as well.",
+      "Given training datasets whose outlier rates exceed 40\\%, however, only ChoiceNet successfully fits the target function whereas the other methods fail as shown in Figure . \\paragraph{Boston Housing Dataset Here, we used a real world dataset, a Boston housing price dataset, and checked the robustness of the proposed method and compared with standard multi-layer perceptrons with four different types of loss functions: standard L2-loss, L1-loss which is known to be robust to outliers, a robust loss (RL) function proposed in \\citep{Belagiannis_15_RobustReg, and a leaky robust loss (LeakyRL) function.",
+      "On the contrary, the second mixture predictions of test inputs whose original labels are 1 are mostly focusing on label 1. Experiments In this section, we validate the performance of ChoiceNet on both regression problems in Section and classification problems in Section where we mainly focus on evaluating the robustness of the proposed method. Regression Tasks Here, we show the regression performances using synthetic regression tasks and a Boston housing dataset with outliers.",
+      "While it may seem to resemble a mixture density network (MDN) , this ability to model dependencies between mixtures lets us to effectively infer and distinguish the target distributions from other noisy distributions as will be shown in the experimental sections. When using the MDN, particularly, it is not straightforward to select which mixture to use other than using the one with the largest mixture probability which may lead to inferior performance given noisy datasets\\footnote{ We test the MDN in both regression and classification tasks and the MDN shows poor performances.. Let us elaborate on the overall mechanism of ChoiceNet.",
+      "However, if corrupt training data are given by \\eqref{eq:classification, the linear functional W and the feature map h(\\cdot) may have -Wh(\\mathbf{x)\\cdot\\hat{y>0 and using an ordinary loss function, such as a cross-entropy loss, might lead to over-fitting of the contaminated pattern of \\mathcal{D_{\\text{train. Motivated from (), we employ the mixture density to discriminate the corrupt data by using another linear classifier \\widetilde{W which is expected to reveal the reverse patterns by minimizing the following mixture classification loss: Here \\pi_{\\widetilde{W(\\mathbf{x) is the mixture weight which models the choice probability of the reverse classifier \\widetilde{W and eventually estimates the corruption probability \\pi_{\\text{corrupt in \\eqref{eq:data-generating. See Figure for the illustrative example in binary classification.",
+      "We vary the outlier rates from 0\\% (clean) to 80\\% (extremely noisy). Table illustrates the RMSEs (root mean square errors) between the reference target function and the fitted results of ChoiceNet and other compared methods. Given an intact training dataset, all the methods show stable performances in that the RMSEs are all below 0.1.",
+      "More Experiments Regression Tasks We conduct three regression experiments: 1) a synthetic scenario where the training dataset contains outliers sampled from other distributions, 2) using a Boston housing dataset with synthetic outliers, 3) a behavior cloning scenario where the demonstrations are collected from both expert and adversarial policies. \\paragraph{Synthetic Example We first apply ChoiceNet to a simple one-dimensional regression problem of fitting f(x) = \\cos(\\frac{\\pi{2x) \\exp(-(\\frac{x{2)^2) where x \\in [-3,+3] as shown in Figure . ChoiceNet is compared with a naive multilayer perceptron (MLP), Gaussian process regression (GPR) \\citep{Rasmussen_06, leveraged Gaussian process regression (LGPR) with leverage optimization \\citep{SJChoi_16, and robust Gaussian process regression (RGPR) with an infinite Gaussian process mixture model \\citep{Rasmussen_02_imgp are also compared."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 illustrates the process of using a mixture of classifiers for binary classification on corrupt data, which is relevant to understanding robustness to outliers. Text 1 discusses the superior performance of ChoiceNet in the presence of outliers, indicating robustness.\",\n    \"Answer\": \"The mixture of classifiers approach is more robust to outliers, as it effectively handles corrupt data by using a mixture model, as shown in the image and supported by the text.\"\n}"
+  },
+  "5": {
+    "question": "How does the performance of the different models change as the corruption level increases? Which model appears to be the most robust to label corruption?",
+    "ground_truth": "As the corruption level increases, the performance of all models decreases. However, ChoiceNet consistently outperforms both ConvNet and ConvNet+Mixup across all corruption levels, maintaining high accuracy even when almost half of the labels are incorrect. This suggests that ChoiceNet is significantly more robust to label corruption compared to the other models.",
+    "selected_figures_names": [
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Table14-1.png",
+      "1805.06431v4-Table12-1.png",
+      "1805.06431v4-Table11-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Table14-1.png",
+      "1805.06431v4-Table12-1.png",
+      "1805.06431v4-Table11-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Table10-1.png",
+      "1805.06431v4-Table4-1.png",
+      "1805.06431v4-Table8-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 2,
+    "rationale": "Image 3 and Text 2 both provide detailed information on how different models perform under varying levels of label corruption. Image 3 shows test accuracies for ConvNet, ConvNet+Mixup, and ChoiceNet at different corruption levels, highlighting ChoiceNet's robustness. Text 2 discusses the robustness of ChoiceNet compared to other methods, especially under high corruption rates.",
+    "answer": "As the corruption level increases, the performance of ConvNet and ConvNet+Mixup decreases significantly, especially at higher corruption rates (90% and 95%). ChoiceNet, however, maintains high test accuracies even at these high corruption levels, indicating it is the most robust model to label corruption.",
+    "text_chunks": [
+      "In all corruption rates, ChoiceNet achieves the best performance compared to two baseline methods. The learning curves of the biased label experiments are depicted in Figure . Particularly, we observe unstable learning curves regarding the test accuracies of ConvNet and Mixup.",
+      "An earlier study in proposed an extra layer for the modeling of output noises. extended the approach mentioned above by adding an additional noise adaptation layer with aggressive dropout regularization. A similar method was then proposed in which initially estimated the label corruption matrix with a learned classifier and used the corruption matrix to fine-tune the classifier.",
+      "The convolutional neural networks trained with Mixup show robust learning behaviors when 80\\% of the training labels are uniformly shuffled. However, given an extremely noisy dataset (90\\% and 95\\%), the test accuracies of baseline methods decrease as the number of epochs increases. ChoiceNet shows outstanding robustness to the noisy dataset in that the test accuracies do not drop even after 50 epochs for the cases where the corruption rates are below 90\\%.",
+      "We apply random horizontal flip and random crop with 4-pixel-padding and use a weight decay of 0.0001 for the baseline network as \\citep{he2016deep. The classification results are shown in Table where ChoiceNet consistently outperforms ConvNet and ConvNet+Mixup by a significant margin, and the difference between the accuracies of ChoiceNet and the others becomes more clear as the corruption probability increases. Here, we also present additional experimental results using the MNIST dataset on following three different scenarios: The best and final accuracies on the intact test dataset for biased label experiments are shown in Table .",
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset.",
+      "MentorNet concentrated on the training of an additional neural network, which assigns a weight to each instance of training data to supervise the training of a base network, termed StudentNet, to overcome the over-fitting of corrupt training data. Recent work presented Co-teaching by maintaining two separate networks where each network is trained with small-loss instances selected from its peer network. The second group of estimating label corruption information is mainly presented for classification tasks where training labels are assumed to be corrupt with a possibly unknown corruption matrix.",
+      "However, if corrupt training data are given by \\eqref{eq:classification, the linear functional W and the feature map h(\\cdot) may have -Wh(\\mathbf{x)\\cdot\\hat{y>0 and using an ordinary loss function, such as a cross-entropy loss, might lead to over-fitting of the contaminated pattern of \\mathcal{D_{\\text{train. Motivated from (), we employ the mixture density to discriminate the corrupt data by using another linear classifier \\widetilde{W which is expected to reveal the reverse patterns by minimizing the following mixture classification loss: Here \\pi_{\\widetilde{W(\\mathbf{x) is the mixture weight which models the choice probability of the reverse classifier \\widetilde{W and eventually estimates the corruption probability \\pi_{\\text{corrupt in \\eqref{eq:data-generating. See Figure for the illustrative example in binary classification.",
+      "However, the above setting is not likely to work in practice as both W and \\widetilde{W may learn the corrupt patterns independently hence \\pi_{\\widetilde{W(\\mathbf{x) adhere to 1/2 under \\eqref{eq:mixture-loss. In other words, the lack of dependencies between W and \\widetilde{W makes it hard to distinguish clean and corrupt patterns. To aid W to learn the pattern of data with a clean label, we need a self-regularizing way to help \\pi_{\\widetilde{W to infer the corruption probability of given data point \\mathbf{x by guiding \\widetilde{W to learn the reverse mapping of given feature h(\\mathbf{x)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 2,\n    \"Rationale\": \"Image 3 and Text 2 both provide detailed information on how different models perform under varying levels of label corruption. Image 3 shows test accuracies for ConvNet, ConvNet+Mixup, and ChoiceNet at different corruption levels, highlighting ChoiceNet's robustness. Text 2 discusses the robustness of ChoiceNet compared to other methods, especially under high corruption rates.\",\n    \"Answer\": \"As the corruption level increases, the performance of ConvNet and ConvNet+Mixup decreases significantly, especially at higher corruption rates (90% and 95%). ChoiceNet, however, maintains high test accuracies even at these high corruption levels, indicating it is the most robust model to label corruption.\"\n}"
+  },
+  "6": {
+    "question": "Which method appears to be most robust to the presence of outliers in the training data?",
+    "ground_truth": "ChoiceNet appears to be the most robust to outliers in the training data.",
+    "selected_figures_names": [
+      "1805.06431v4-Table4-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure1-1.png",
+      "1805.06431v4-Figure10-1.png",
+      "1805.06431v4-Table5-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Table4-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Table15-1.png",
+      "1805.06431v4-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a table of RMSEs for different methods at various outlier rates, directly showing the performance of each method. Text 1 discusses the RMSEs and confirms that ChoiceNet maintains low RMSEs even with high outlier rates, indicating robustness.",
+    "answer": "ChoiceNet appears to be the most robust to the presence of outliers in the training data.",
+    "text_chunks": [
+      "Given training datasets whose outlier rates exceed 40\\%, however, only ChoiceNet successfully fits the target function whereas the other methods fail as shown in Figure . \\paragraph{Boston Housing Dataset Here, we used a real world dataset, a Boston housing price dataset, and checked the robustness of the proposed method and compared with standard multi-layer perceptrons with four different types of loss functions: standard L2-loss, L1-loss which is known to be robust to outliers, a robust loss (RL) function proposed in \\citep{Belagiannis_15_RobustReg, and a leaky robust loss (LeakyRL) function.",
+      "We vary the outlier rates from 0\\% (clean) to 80\\% (extremely noisy). Table illustrates the RMSEs (root mean square errors) between the reference target function and the fitted results of ChoiceNet and other compared methods. Given an intact training dataset, all the methods show stable performances in that the RMSEs are all below 0.1.",
+      "In all experiments, we used two hidden layers with 128 units and ReLU activations. The test accuracies of the compared methods are shown in Table . ChoiceNet shows the superior performance in the presence of outliers where we observe that the proposed method can be used for NLP tasks as well.",
+      "Existing work for handing noisy training data can be categorized into four groups: small-loss tricks % , estimating label corruptions % \\cite{Patrini_17_LossCorrection,Goldberger_17_NoiseAdaptation, Sukhbaatar_14, Bekker_16_unreliableLabel, Hendrycks_18_GLC, Veit_17_noisy, using robust loss functions % , and explicit and implicit regularization methods % . Our proposed method is mostly related to the robust loss function approach but cannot fully be categorized into this group in that we present a novel architecture, a mixture of correlated densities network block, for achieving robustness based on the correlation estimation.",
+      "\\paragraph{Boston Housing Dataset A Boston housing price dataset is used to check the robustness of the proposed method. We compare our method with standard feedforward networks using four different loss functions: standard L2-loss, L1-loss which is known to be robust to outliers, a robust loss (RL) function proposed in , and a leaky robust loss (LeakyRL) function where the results are shown in Table . Implementation details can be found in the supplementary material.",
+      "We compared our proposed method with a mixture density network (MDN) and fully connected layers with an L_2-loss (MLP) and a robust loss (Robust) proposed in . We use three-layers with 64 units and ReLU activations, and for both the proposed method and an MDN, five mixtures are used. The average absolute fitting errors of three different functions are shown in Figure -, respectively where we can see that the proposed method outperforms or show comparable results with low outlier rates and shows superior performances with a high outlier rate (>50\\%).",
+      "The convolutional neural networks trained with Mixup show robust learning behaviors when 80\\% of the training labels are uniformly shuffled. However, given an extremely noisy dataset (90\\% and 95\\%), the test accuracies of baseline methods decrease as the number of epochs increases. ChoiceNet shows outstanding robustness to the noisy dataset in that the test accuracies do not drop even after 50 epochs for the cases where the corruption rates are below 90\\%.",
+      "We have demonstrated that the proposed method can robustly infer the target distribution on corrupt training data in both regression and classification tasks. However, we have seen that in the case of extreme asymmetric noises, the proposed method showed suboptimal performances. We believe that it could resolved by combining our method with other robust learning methods where we have demonstrated that ChoiceNet can effectively be combined with mix-up ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a table of RMSEs for different methods at various outlier rates, directly showing the performance of each method. Text 1 discusses the RMSEs and confirms that ChoiceNet maintains low RMSEs even with high outlier rates, indicating robustness.\",\n    \"Answer\": \"ChoiceNet appears to be the most robust to the presence of outliers in the training data.\"\n}"
+  },
+  "7": {
+    "question": "Which method performs best when there is no label corruption (p = 0%) on the Large Movie Review dataset and how does its performance change as the corruption level increases?",
+    "ground_truth": "When there is no label corruption (p = 0%), Mixup achieves the highest test accuracy of 79.77%. However, as the corruption level increases, Mixup's performance deteriorates more rapidly compared to other methods. ChoiceNet, on the other hand, demonstrates a more stable performance across different corruption levels, maintaining the highest accuracy when p is 10%, 20%, 30%, and 40%.",
+    "selected_figures_names": [
+      "1805.06431v4-Table15-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure5-1.png",
+      "1805.06431v4-Table11-1.png",
+      "1805.06431v4-Figure4-1.png",
+      "1805.06431v4-Table15-1.png",
+      "1805.06431v4-Figure7-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Table10-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a table showing test accuracies for different methods at various corruption levels, which directly answers the question. Text 1 describes the dataset and methods used, providing context for the results shown in the image.",
+    "answer": "When there is no label corruption (p = 0%), Mixup performs best with an accuracy of 79.77%. As the corruption level increases, Mixup's performance decreases, reaching 69.63% at 40% corruption.",
+    "text_chunks": [
+      "For the Large Movie Review dataset, we simply shuffle the labels to the other in that it only contains two labels. \\paragraph{MNIST For MNIST experiments, we randomly shuffle a percentage of the labels with the corruption probability p from 50\\% to 95\\% and compare median accuracies after five runs for each configuration following the setting in \\citep{Zhang_18_mixup. We construct two networks: a network with two residual blocks \\citep{he2016deep with 3 \\times 3 \\times 64 convolutional layers followed by a fully-connected layer with 256 output units (ConvNet) and ChoiceNet with the same two residual blocks followed by the MCDN block (ConvNet+CN).",
+      "\\paragraph{Large Movie Review Dataset We also conduct a natural language processing task using a Large Movie Review dataset which consists of 25,000 movie reviews for training and 25,000 reviews for testing. Each movie review (sentences) is mapped to a 128-dimensional embedding vector using a feed-forward Neural-Net Language Models \\citep{Bengio_03. We evaluated the robustness of the proposed method with Mixup \\citep{Zhang_18_mixup, VAT , and naive MLP baseline by randomly flipping the labels with a corruption probability p.",
+      "We also note that ChoiceNet (without Mixup) outperforms WideResNet+Mixup when the corruption ratio is over 50\\% on the last accuracies. We conduct additional experiments on the CIFAR-10 dataset to better evaluate the performance on both both symmetric and asymmetric noises following \\citep{Han_18: Pair-45\\%, Symmetry-50\\%, and Symmetry-20\\%. Pair-45\\% flips 45\\% of each label to the next label, e.g., randomly flipping 45\\% of label 1 to label 2 and label 2 to label 3, and Symmetry-50\\% randomly assigns 50\\% of each label to other labels uniformly.",
+      "The convolutional neural networks trained with Mixup show robust learning behaviors when 80\\% of the training labels are uniformly shuffled. However, given an extremely noisy dataset (90\\% and 95\\%), the test accuracies of baseline methods decrease as the number of epochs increases. ChoiceNet shows outstanding robustness to the noisy dataset in that the test accuracies do not drop even after 50 epochs for the cases where the corruption rates are below 90\\%.",
+      "For the first scenario following \\citep{Zhang_18_mixup, we apply symmetric noises to the labels and vary the corruption probabilities from 50\\% to 80\\%. We compare our method with Mixup \\citep{Zhang_18_mixup, VAT \\citep{Miyato18, and MentorNet \\citep{Jiang_17_mentornet.\\footnote{ We use the authors\u2019 implementations available online. We adopt WideResNet (WRN) \\citep{Zagoruyko2016WRN with 22 layers and a widening factor of 4.",
+      "In all corruption rates, ChoiceNet achieves the best performance compared to two baseline methods. The learning curves of the biased label experiments are depicted in Figure . Particularly, we observe unstable learning curves regarding the test accuracies of ConvNet and Mixup.",
+      "We apply random horizontal flip and random crop with 4-pixel-padding and use a weight decay of 0.0001 for the baseline network as \\citep{he2016deep. The classification results are shown in Table where ChoiceNet consistently outperforms ConvNet and ConvNet+Mixup by a significant margin, and the difference between the accuracies of ChoiceNet and the others becomes more clear as the corruption probability increases. Here, we also present additional experimental results using the MNIST dataset on following three different scenarios: The best and final accuracies on the intact test dataset for biased label experiments are shown in Table .",
+      "However, the above setting is not likely to work in practice as both W and \\widetilde{W may learn the corrupt patterns independently hence \\pi_{\\widetilde{W(\\mathbf{x) adhere to 1/2 under \\eqref{eq:mixture-loss. In other words, the lack of dependencies between W and \\widetilde{W makes it hard to distinguish clean and corrupt patterns. To aid W to learn the pattern of data with a clean label, we need a self-regularizing way to help \\pi_{\\widetilde{W to infer the corruption probability of given data point \\mathbf{x by guiding \\widetilde{W to learn the reverse mapping of given feature h(\\mathbf{x)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a table showing test accuracies for different methods at various corruption levels, which directly answers the question. Text 1 describes the dataset and methods used, providing context for the results shown in the image.\",\n    \"Answer\": \"When there is no label corruption (p = 0%), Mixup performs best with an accuracy of 79.77%. As the corruption level increases, Mixup's performance decreases, reaching 69.63% at 40% corruption.\"\n}"
+  },
+  "8": {
+    "question": "How does the accuracy of the WideResNet model compare to the ChoiceNet model on the CIFAR-10 dataset with 50% random shuffle?",
+    "ground_truth": "The WideResNet model has higher accuracy than the ChoiceNet model on the CIFAR-10 dataset with 50% random shuffle.",
+    "selected_figures_names": [
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Figure14-1.png",
+      "1805.06431v4-Figure3-1.png",
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Table7-1.png",
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table4-1.png",
+      "1805.06431v4-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a direct comparison of test accuracies between WideResNet and ChoiceNet on the CIFAR-10 dataset with 50% corruption. Text 0 discusses the performance of ChoiceNet and WideResNet under similar conditions, making it relevant for understanding the context of the comparison.",
+    "answer": "On the CIFAR-10 dataset with 50% random shuffle, the WideResNet model achieves a test accuracy of 54.97%, while the ChoiceNet model achieves a higher test accuracy of 90.28%.",
+    "text_chunks": [
+      "We also note that ChoiceNet (without Mixup) outperforms WideResNet+Mixup when the corruption ratio is over 50\\% on the last accuracies. We conduct additional experiments on the CIFAR-10 dataset to better evaluate the performance on both both symmetric and asymmetric noises following \\citep{Han_18: Pair-45\\%, Symmetry-50\\%, and Symmetry-20\\%. Pair-45\\% flips 45\\% of each label to the next label, e.g., randomly flipping 45\\% of label 1 to label 2 and label 2 to label 3, and Symmetry-50\\% randomly assigns 50\\% of each label to other labels uniformly.",
+      "The convolutional neural networks trained with Mixup show robust learning behaviors when 80\\% of the training labels are uniformly shuffled. However, given an extremely noisy dataset (90\\% and 95\\%), the test accuracies of baseline methods decrease as the number of epochs increases. ChoiceNet shows outstanding robustness to the noisy dataset in that the test accuracies do not drop even after 50 epochs for the cases where the corruption rates are below 90\\%.",
+      "We also construct ChoiceNet by replacing the last two layers (`average pooling` and `linear`) with the Cholesky Block. We train the networks on CIFAR-10, CIFAR-100, FMNIST, MNIST and SVHN datasets with noisy labels. We generate noisy datasets with symmetric noise setting and vary corruption ratios from 20\\% to 50\\%.",
+      "We upperbound the frontal distance to 40m. Figure and illustrate manually collected trajectories of a safe driving mode and a careless driving mode. Classification Tasks Here, we conduct comprehensive classification experiments using MNIST, CIFAR-10, and Large Movie Review datasets to evaluate the performance of ChoiceNet on corrupt labels. For the image datasets, we followed two different settings to generate noisy datasets: one following the setting in \\citep{Zhang_18_mixup and the other from \\citep{Han_18 which covers both symmetric and asymmetric noises.",
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset.",
+      "In particular, we replaced 40\\% of the training data with label 0 to 1. To implement ChoiceNet, we use two-layer convolutional neural networks with 64 channels and two mixtures. We trained ChoiceNet for 10 epochs where the final train and test accuracies are 81.7\\% and 98.1\\%, respectively, which indicates ChoiceNet successfully infers clean data distribution.",
+      "We apply random horizontal flip and random crop with 4-pixel-padding and use a weight decay of 0.0001 for the baseline network as \\citep{he2016deep. The classification results are shown in Table where ChoiceNet consistently outperforms ConvNet and ConvNet+Mixup by a significant margin, and the difference between the accuracies of ChoiceNet and the others becomes more clear as the corruption probability increases. Here, we also present additional experimental results using the MNIST dataset on following three different scenarios: The best and final accuracies on the intact test dataset for biased label experiments are shown in Table .",
+      "We would like to emphasize that the training accuracy of the proposed method in Table is close to the expected true ratio\\footnote{ Since a noisy label can be assigned to any labels, we can expect 82\\%, 55\\% true labels on noisy datasets with a corruption probability of 20\\%, 50\\%, respectively.. This implies that our proposed Cholesky Block can separate true labels and false labels from a noisy dataset. We also note that training ChoiceNet on CIFAR-100 datasets requires a modification in a loss weight."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a direct comparison of test accuracies between WideResNet and ChoiceNet on the CIFAR-10 dataset with 50% corruption. Text 0 discusses the performance of ChoiceNet and WideResNet under similar conditions, making it relevant for understanding the context of the comparison.\",\n    \"Answer\": \"On the CIFAR-10 dataset with 50% random shuffle, the WideResNet model achieves a test accuracy of 54.97%, while the ChoiceNet model achieves a higher test accuracy of 90.28%.\"\n}"
+  },
+  "9": {
+    "question": "Which of the four methods has the best performance in terms of average error for the step function?",
+    "ground_truth": "The proposed method.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table4-1.png",
+      "1805.06431v4-Figure1-1.png",
+      "1805.06431v4-Table6-1.png",
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Table8-1.png",
+      "1805.06431v4-Figure4-1.png",
+      "1805.06431v4-Table10-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the average fitting errors for different methods across various outlier rates, specifically for the step function. Text 0 discusses the performance of the proposed method compared to others, indicating it outperforms or shows comparable results. Both provide relevant information about the performance of the methods.",
+    "answer": "The proposed method has the best performance in terms of average error for the step function.",
+    "text_chunks": [
+      "We compared our proposed method with a mixture density network (MDN) and fully connected layers with an L_2-loss (MLP) and a robust loss (Robust) proposed in . We use three-layers with 64 units and ReLU activations, and for both the proposed method and an MDN, five mixtures are used. The average absolute fitting errors of three different functions are shown in Figure -, respectively where we can see that the proposed method outperforms or show comparable results with low outlier rates and shows superior performances with a high outlier rate (>50\\%).",
+      "More experimental results using synthetic data and behavior cloning scenarios in MuJoCo environments where the demonstrations are collected and mixed from both expert and adversarial policies as well as detailed experimental settings can be found in the supplementary material. \\paragraph{Synthetic Data In order to evaluate the robustness of the proposed method, we use three different 1-D target functions. Particularly, we use the following target functions: cosexp, linear, and step functions as shown in Figure -, respectively, and collected 1,000 points per each function while replacing a certain portion of outputs to random values uniformly sampled between -1.5 and 2.5.",
+      "Given training datasets whose outlier rates exceed 40\\%, however, only ChoiceNet successfully fits the target function whereas the other methods fail as shown in Figure . \\paragraph{Boston Housing Dataset Here, we used a real world dataset, a Boston housing price dataset, and checked the robustness of the proposed method and compared with standard multi-layer perceptrons with four different types of loss functions: standard L2-loss, L1-loss which is known to be robust to outliers, a robust loss (RL) function proposed in \\citep{Belagiannis_15_RobustReg, and a leaky robust loss (LeakyRL) function.",
+      "Existing work for handing noisy training data can be categorized into four groups: small-loss tricks % , estimating label corruptions % \\cite{Patrini_17_LossCorrection,Goldberger_17_NoiseAdaptation, Sukhbaatar_14, Bekker_16_unreliableLabel, Hendrycks_18_GLC, Veit_17_noisy, using robust loss functions % , and explicit and implicit regularization methods % . Our proposed method is mostly related to the robust loss function approach but cannot fully be categorized into this group in that we present a novel architecture, a mixture of correlated densities network block, for achieving robustness based on the correlation estimation.",
+      "We vary the outlier rates from 0\\% (clean) to 80\\% (extremely noisy). Table illustrates the RMSEs (root mean square errors) between the reference target function and the fitted results of ChoiceNet and other compared methods. Given an intact training dataset, all the methods show stable performances in that the RMSEs are all below 0.1.",
+      "In all corruption rates, ChoiceNet achieves the best performance compared to two baseline methods. The learning curves of the biased label experiments are depicted in Figure . Particularly, we observe unstable learning curves regarding the test accuracies of ConvNet and Mixup.",
+      "ChoiceNet has five mixtures and it has two hidden layers with 32 nodes with a ReLU activation function. For the GP based methods, we use a squared-exponential kernel function and the hyper-parameters are determined using a simple median trick \\citep{Dai_14\\footnote{ A median trick selects the length parameter of a kernel function to be the median of all pairwise distances between training data.. To evaluate its performance in corrupt datasets, we randomly replace the original target values with outliers whose output values are uniformly sampled from -1 to +3.",
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the average fitting errors for different methods across various outlier rates, specifically for the step function. Text 0 discusses the performance of the proposed method compared to others, indicating it outperforms or shows comparable results. Both provide relevant information about the performance of the methods.\",\n    \"Answer\": \"The proposed method has the best performance in terms of average error for the step function.\"\n}"
+  },
+  "10": {
+    "question": " How does the performance of ChoiceNet compare to other methods under different noise settings? Briefly explain the strengths and weaknesses of ChoiceNet.",
+    "ground_truth": "ChoiceNet generally performs well compared to other methods, achieving the highest accuracy on both symmetric noise settings (sym-50% and sym-20%). However, it falls to second place under the Pair-45% asymmetric noise setting, indicating a weakness in handling this specific type of noise.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure3-1.png",
+      "1805.06431v4-Figure14-1.png",
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure3-1.png",
+      "1805.06431v4-Figure14-1.png",
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Table1-1.png",
+      "1805.06431v4-Table5-1.png",
+      "1805.06431v4-Table6-1.png",
+      "1805.06431v4-Figure9-1.png",
+      "1805.06431v4-Table13-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 4,
+    "rationale": "Image 2 provides a clear comparison of test accuracies for ChoiceNet and other methods under different noise settings, which directly addresses the question. Text 4 discusses the robustness and performance of ChoiceNet compared to baseline methods, highlighting its strengths in handling noisy labels.",
+    "answer": "ChoiceNet shows superior performance compared to other methods under different noise settings, particularly in symmetric noise scenarios. It is robust to extreme outliers and effectively distinguishes target distributions from noise. However, it may show suboptimal performance under extreme asymmetric noise conditions.",
+    "text_chunks": [
+      "ChoiceNet consistently outperforms the baseline in most of the configurations except for 80\\%-corrupted SVHN dataset. Moreover, we expect that performance gains can increase when dataset-specific hyperparameter tuning is applied. The results suggest that the proposed ChoiceNet can easily be applied to other noisy datasets and show a performance improvement without large efforts.",
+      "While it may seem to resemble a mixture density network (MDN) , this ability to model dependencies between mixtures lets us to effectively infer and distinguish the target distributions from other noisy distributions as will be shown in the experimental sections. When using the MDN, particularly, it is not straightforward to select which mixture to use other than using the one with the largest mixture probability which may lead to inferior performance given noisy datasets\\footnote{ We test the MDN in both regression and classification tasks and the MDN shows poor performances.. Let us elaborate on the overall mechanism of ChoiceNet.",
+      "We also construct ChoiceNet by replacing the last two layers (`average pooling` and `linear`) with the Cholesky Block. We train the networks on CIFAR-10, CIFAR-100, FMNIST, MNIST and SVHN datasets with noisy labels. We generate noisy datasets with symmetric noise setting and vary corruption ratios from 20\\% to 50\\%.",
+      "We have demonstrated that the proposed method can robustly infer the target distribution on corrupt training data in both regression and classification tasks. However, we have seen that in the case of extreme asymmetric noises, the proposed method showed suboptimal performances. We believe that it could resolved by combining our method with other robust learning methods where we have demonstrated that ChoiceNet can effectively be combined with mix-up .",
+      "ChoiceNet is first applied to synthetic regression tasks and a real-world regression task where we demonstrate its robustness to extreme outliers and its ability to distinguish the target distribution and noise distributions. Subsequently, we move on to image classification tasks using a number of benchmark datasets where we show that it shows comparable or superior performances compared to existing baseline methods in terms of robustness with regard to handling different types of noisy labels. Related Work Recently, robustness in deep learning has been actively studied as deep neural networks are being applied to diverse tasks involving real-world applications such as autonomous driving or medical diagnosis where a simple malfunction can have catastrophic results .",
+      "We upperbound the frontal distance to 40m. Figure and illustrate manually collected trajectories of a safe driving mode and a careless driving mode. Classification Tasks Here, we conduct comprehensive classification experiments using MNIST, CIFAR-10, and Large Movie Review datasets to evaluate the performance of ChoiceNet on corrupt labels. For the image datasets, we followed two different settings to generate noisy datasets: one following the setting in \\citep{Zhang_18_mixup and the other from \\citep{Han_18 which covers both symmetric and asymmetric noises.",
+      "We hypothesize that the hyperparameters of our proposed method are sensitive to a number of target classes in a dataset. Conclusion In this paper, we have presented ChoiceNet that can robustly learn a target distribution given noisy training data. The keystone of ChoiceNet is the mixture of correlated densities network block which can simultaneously estimate the underlying target distribution and the quality of each data where the quality is defined by the correlation between the target and generating distributions.",
+      "However, we would like to note that Co-teaching \\citep{Han_18 is complementary to our method where one can combine these two methods by using two ChoiceNets and update each network using Co-teaching. However, it is outside the scope of this paper. Here, we also present detailed learning curves of the CIFAR-10 experiments while varying the noise level from 20\\% to 80\\% following the configurations in \\citep{Zhang_18_mixup."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 4,\n    \"Rationale\": \"Image 2 provides a clear comparison of test accuracies for ChoiceNet and other methods under different noise settings, which directly addresses the question. Text 4 discusses the robustness and performance of ChoiceNet compared to baseline methods, highlighting its strengths in handling noisy labels.\",\n    \"Answer\": \"ChoiceNet shows superior performance compared to other methods under different noise settings, particularly in symmetric noise scenarios. It is robust to extreme outliers and effectively distinguishes target distributions from noise. However, it may show suboptimal performance under extreme asymmetric noise conditions.\"\n}"
+  },
+  "11": {
+    "question": "Which method generally performed better in the HalfCheetah task, ChoiceNet or MDN? How does the performance gap between these two methods change as the percentage of outliers increases?",
+    "ground_truth": "ChoiceNet generally performed better than MDN in the HalfCheetah task. This is evident from the higher average returns of ChoiceNet across all outlier percentages (10%, 20%, and 30%).\n\nThe performance gap between ChoiceNet and MDN appears to decrease as the percentage of outliers increases. At 10% outliers, ChoiceNet has a significantly higher average return than MDN (2068.14 vs. 192.53). However, at 30% outliers, the difference in average return is smaller (2035.91 vs. 363.08).",
+    "selected_figures_names": [
+      "1805.06431v4-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure2-1.png",
+      "1805.06431v4-Table2-1.png",
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table6-1.png",
+      "1805.06431v4-Table12-1.png",
+      "1805.06431v4-Figure14-1.png",
+      "1805.06431v4-Figure7-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 7,
+    "rationale": "Image 0 provides a direct comparison of the performance of ChoiceNet and MDN in the HalfCheetah task across different outlier percentages. Text 7 discusses the performance of ChoiceNet compared to MDN, particularly in the presence of outliers, which is relevant to understanding the performance gap.",
+    "answer": "ChoiceNet generally performed better than MDN in the HalfCheetah task. As the percentage of outliers increases, the performance gap between ChoiceNet and MDN decreases, but ChoiceNet consistently outperforms MDN.",
+    "text_chunks": [
+      "While it may seem to resemble a mixture density network (MDN) , this ability to model dependencies between mixtures lets us to effectively infer and distinguish the target distributions from other noisy distributions as will be shown in the experimental sections. When using the MDN, particularly, it is not straightforward to select which mixture to use other than using the one with the largest mixture probability which may lead to inferior performance given noisy datasets\\footnote{ We test the MDN in both regression and classification tasks and the MDN shows poor performances.. Let us elaborate on the overall mechanism of ChoiceNet.",
+      "We further implement the leaky version of \\citep{Belagiannis_15_RobustReg in that the original robust loss function with Tukey\u2019s biweight function discards the instances whose residuals exceed certain threshold. \\paragraph{Behavior Cloning Example In this experiment, we apply ChoiceNet to behavior cloning tasks when given demonstrations with mixed qualities where the proposed method is compared with a MLP and a MDN in two locomotion tasks: HalfCheetah and Walker2d.",
+      "ChoiceNet has five mixtures and it has two hidden layers with 32 nodes with a ReLU activation function. For the GP based methods, we use a squared-exponential kernel function and the hyper-parameters are determined using a simple median trick \\citep{Dai_14\\footnote{ A median trick selects the length parameter of a kernel function to be the median of all pairwise distances between training data.. To evaluate its performance in corrupt datasets, we randomly replace the original target values with outliers whose output values are uniformly sampled from -1 to +3.",
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset.",
+      "ChoiceNet consistently outperforms the baseline in most of the configurations except for 80\\%-corrupted SVHN dataset. Moreover, we expect that performance gains can increase when dataset-specific hyperparameter tuning is applied. The results suggest that the proposed ChoiceNet can easily be applied to other noisy datasets and show a performance improvement without large efforts.",
+      "In all experiments, we used two hidden layers with 128 units and ReLU activations. The test accuracies of the compared methods are shown in Table . ChoiceNet shows the superior performance in the presence of outliers where we observe that the proposed method can be used for NLP tasks as well.",
+      "To construct ChoiceNet, we replace the last layer of WideResNet with a MCDN block. We set K = 3, \\rho_\\text{max = 0.95, \\lambda_\\text{reg = 0.0001, and \\rho_k, \\pi_k, \\Sigma_0 modules consist of two fully connected layers with 64 hidden units and a ReLU activation function. We train each network for 300 epochs with a minibatch size of 256.",
+      "We compared our proposed method with a mixture density network (MDN) and fully connected layers with an L_2-loss (MLP) and a robust loss (Robust) proposed in . We use three-layers with 64 units and ReLU activations, and for both the proposed method and an MDN, five mixtures are used. The average absolute fitting errors of three different functions are shown in Figure -, respectively where we can see that the proposed method outperforms or show comparable results with low outlier rates and shows superior performances with a high outlier rate (>50\\%)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 7,\n    \"Rationale\": \"Image 0 provides a direct comparison of the performance of ChoiceNet and MDN in the HalfCheetah task across different outlier percentages. Text 7 discusses the performance of ChoiceNet compared to MDN, particularly in the presence of outliers, which is relevant to understanding the performance gap.\",\n    \"Answer\": \"ChoiceNet generally performed better than MDN in the HalfCheetah task. As the percentage of outliers increases, the performance gap between ChoiceNet and MDN decreases, but ChoiceNet consistently outperforms MDN.\"\n}"
+  },
+  "12": {
+    "question": "How does the performance of ChoiceNet compare to other methods under different noise settings on the CIFAR-10 dataset? Briefly explain the strengths and weaknesses of ChoiceNet. ",
+    "ground_truth": "ChoiceNet generally performs well compared to other methods, achieving the highest accuracy on both symmetric noise settings (sym-50% and sym-20%). However, it falls to second place under the Pair-45% asymmetric noise setting, indicating a weakness in handling this specific type of noise.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Table14-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Table14-1.png",
+      "1805.06431v4-Table10-1.png",
+      "1805.06431v4-Figure3-1.png",
+      "1805.06431v4-Figure8-1.png",
+      "1805.06431v4-Table13-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 5,
+    "rationale": "Image 3 provides a direct comparison of test accuracies for ChoiceNet and other methods under different noise settings on the CIFAR-10 dataset. Text 5 discusses the noise settings and provides context for the comparison, explaining how noisy labels are assigned in different settings.",
+    "answer": "ChoiceNet outperforms other methods like MentorNet, Co-teaching, F-correction, and MDN in most noise settings on the CIFAR-10 dataset. It achieves the highest accuracy in symmetric noise settings (sym-50% and sym-20%). A strength of ChoiceNet is its robustness to noise, particularly in symmetric settings. However, it may not perform as well in certain asymmetric noise conditions compared to Co-teaching.",
+    "text_chunks": [
+      "We also construct ChoiceNet by replacing the last two layers (`average pooling` and `linear`) with the Cholesky Block. We train the networks on CIFAR-10, CIFAR-100, FMNIST, MNIST and SVHN datasets with noisy labels. We generate noisy datasets with symmetric noise setting and vary corruption ratios from 20\\% to 50\\%.",
+      "We upperbound the frontal distance to 40m. Figure and illustrate manually collected trajectories of a safe driving mode and a careless driving mode. Classification Tasks Here, we conduct comprehensive classification experiments using MNIST, CIFAR-10, and Large Movie Review datasets to evaluate the performance of ChoiceNet on corrupt labels. For the image datasets, we followed two different settings to generate noisy datasets: one following the setting in \\citep{Zhang_18_mixup and the other from \\citep{Han_18 which covers both symmetric and asymmetric noises.",
+      "Classification Tasks Here, we conduct comprehensive classification experiments to investigate how ChoiceNet performs on image classification tasks with noisy labels. More experimental results on MNIST, CIFAR-10, and a natural language processing task and ablation studies of hyper-parameters can also be found in the supplementary material. \\paragraph{CIFAR-10",
+      "However, we would like to note that Co-teaching \\citep{Han_18 is complementary to our method where one can combine these two methods by using two ChoiceNets and update each network using Co-teaching. However, it is outside the scope of this paper. Here, we also present detailed learning curves of the CIFAR-10 experiments while varying the noise level from 20\\% to 80\\% following the configurations in \\citep{Zhang_18_mixup.",
+      "We also note that ChoiceNet (without Mixup) outperforms WideResNet+Mixup when the corruption ratio is over 50\\% on the last accuracies. We conduct additional experiments on the CIFAR-10 dataset to better evaluate the performance on both both symmetric and asymmetric noises following \\citep{Han_18: Pair-45\\%, Symmetry-50\\%, and Symmetry-20\\%. Pair-45\\% flips 45\\% of each label to the next label, e.g., randomly flipping 45\\% of label 1 to label 2 and label 2 to label 3, and Symmetry-50\\% randomly assigns 50\\% of each label to other labels uniformly.",
+      "Comparison We first evaluate the performance of our method and compare it with MentorNet , Co-teaching and F-correction on noisy CIFAR-10 datasets. We follow three different noise settings from : PairFlip-45\\%, Symmetry-50\\%, and Symmetry-20\\%. On `Symmetry` settings, noisy labels can be assigned to all classes, while, on `PairFlip` settings, all noisy labels from the same true label are assigned to a single noisy label.",
+      "ChoiceNet consistently outperforms the baseline in most of the configurations except for 80\\%-corrupted SVHN dataset. Moreover, we expect that performance gains can increase when dataset-specific hyperparameter tuning is applied. The results suggest that the proposed ChoiceNet can easily be applied to other noisy datasets and show a performance improvement without large efforts.",
+      "While it may seem to resemble a mixture density network (MDN) , this ability to model dependencies between mixtures lets us to effectively infer and distinguish the target distributions from other noisy distributions as will be shown in the experimental sections. When using the MDN, particularly, it is not straightforward to select which mixture to use other than using the one with the largest mixture probability which may lead to inferior performance given noisy datasets\\footnote{ We test the MDN in both regression and classification tasks and the MDN shows poor performances.. Let us elaborate on the overall mechanism of ChoiceNet."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 5,\n    \"Rationale\": \"Image 3 provides a direct comparison of test accuracies for ChoiceNet and other methods under different noise settings on the CIFAR-10 dataset. Text 5 discusses the noise settings and provides context for the comparison, explaining how noisy labels are assigned in different settings.\",\n    \"Answer\": \"ChoiceNet outperforms other methods like MentorNet, Co-teaching, F-correction, and MDN in most noise settings on the CIFAR-10 dataset. It achieves the highest accuracy in symmetric noise settings (sym-50% and sym-20%). A strength of ChoiceNet is its robustness to noise, particularly in symmetric settings. However, it may not perform as well in certain asymmetric noise conditions compared to Co-teaching.\"\n}"
+  },
+  "13": {
+    "question": "Which method performs best at all noise levels?",
+    "ground_truth": "ChoiceNet.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Table9-1.png",
+      "1805.06431v4-Table15-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Table9-1.png",
+      "1805.06431v4-Table15-1.png",
+      "1805.06431v4-Figure3-1.png",
+      "1805.06431v4-Figure8-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Figure12-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 6,
+    "rationale": "Image 2 provides a detailed comparison of test accuracies across different noise levels, showing which method performs best. Text 6 explains the noise settings and provides context for the performance evaluation.",
+    "answer": "ConvNet+CN performs best at all noise levels according to the data in Image 2.",
+    "text_chunks": [
+      "Our proposed method outperforms all compared methods on the symmetric noise settings with a large margin over 10\\%p. On asymmetric noise settings (Pair-45\\%), our method shows the second best performance, and this reveals the weakness of the proposed method. As Pair-45\\% assigns 45\\% of each label to its next label, The Cholesky Block fails to infer the dominant label distributions correctly.",
+      "While our proposed method outperforms all compared methods on the symmetric noise settings, it shows the second best performance on asymmetric noise settings (Pair-45\\%). This shows the weakness of the proposed method. In other words, as Pair-45\\% assigns 45\\% of each label to its next label, the MCDN fails to correctly infer the dominant label distributions.",
+      "Comparison We first evaluate the performance of our method and compare it with MentorNet , Co-teaching and F-correction on noisy CIFAR-10 datasets. We follow three different noise settings from : PairFlip-45\\%, Symmetry-50\\%, and Symmetry-20\\%. On `Symmetry` settings, noisy labels can be assigned to all classes, while, on `PairFlip` settings, all noisy labels from the same true label are assigned to a single noisy label.",
+      "A model is trained on a noisy dataset and evaluated on the clean test set. For fair comparisons, we keep other configurations such as the network topology to be the same as . Table shows the test accuracy of compared methods under different noise settings.",
+      "A bootstrapping method which trains a neural network with a convex combination of the output of the current network and the noisy target was proposed. proposed DisturbLabel, a simple method that randomly replaces a percentage of the labels with incorrect values for each iteration. Mixing both input and output data was also proposed .",
+      "Existing work for handing noisy training data can be categorized into four groups: small-loss tricks % , estimating label corruptions % \\cite{Patrini_17_LossCorrection,Goldberger_17_NoiseAdaptation, Sukhbaatar_14, Bekker_16_unreliableLabel, Hendrycks_18_GLC, Veit_17_noisy, using robust loss functions % , and explicit and implicit regularization methods % . Our proposed method is mostly related to the robust loss function approach but cannot fully be categorized into this group in that we present a novel architecture, a mixture of correlated densities network block, for achieving robustness based on the correlation estimation.",
+      "We also note that ChoiceNet (without Mixup) outperforms WideResNet+Mixup when the corruption ratio is over 50\\% on the last accuracies. We conduct additional experiments on the CIFAR-10 dataset to better evaluate the performance on both both symmetric and asymmetric noises following \\citep{Han_18: Pair-45\\%, Symmetry-50\\%, and Symmetry-20\\%. Pair-45\\% flips 45\\% of each label to the next label, e.g., randomly flipping 45\\% of label 1 to label 2 and label 2 to label 3, and Symmetry-50\\% randomly assigns 50\\% of each label to other labels uniformly.",
+      "In all experiments, we used two hidden layers with 128 units and ReLU activations. The test accuracies of the compared methods are shown in Table . ChoiceNet shows the superior performance in the presence of outliers where we observe that the proposed method can be used for NLP tasks as well."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 6,\n    \"Rationale\": \"Image 2 provides a detailed comparison of test accuracies across different noise levels, showing which method performs best. Text 6 explains the noise settings and provides context for the performance evaluation.\",\n    \"Answer\": \"ConvNet+CN performs best at all noise levels according to the data in Image 2.\"\n}"
+  },
+  "14": {
+    "question": "What is the role of the Cholesky block in the ChoiceNet architecture?",
+    "ground_truth": "The Cholesky block is used to decompose the covariance matrix \u03a3k into a lower triangular matrix and its transpose. This decomposition is used to ensure that the covariance matrix is positive definite, which is a requirement for the Gaussian distribution.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure1-1.png",
+      "1805.06431v4-Figure14-1.png",
+      "1805.06431v4-Table12-1.png",
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Figure3-1.png",
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table14-1.png",
+      "1805.06431v4-Figure9-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 7,
+    "rationale": "Image 0 provides a visual representation of the ChoiceNet architecture, highlighting the Cholesky Block's position and connections. Text 7 explains the role of the Cholesky Block in estimating the target distribution and correlation, which directly answers the question.",
+    "answer": "The Cholesky Block in the ChoiceNet architecture is used to estimate the target distribution and the correlation between distributions in a fully differentiable manner. It employs the Cholesky transform for sampling the weights of a neural network, enabling the modeling of correlated outputs.",
+    "text_chunks": [
+      "\\mathbf{W_{\\mathbf{h\\to\\boldsymbol{\\rho, \\mathbf{W_{\\mathbf{h\\to\\boldsymbol{\\pi\\in \\mathbb{R^{K\\times Q and \\mathbf{W_{\\mathbf{h\\to\\boldsymbol{\\Sigma_{0\\in\\mathbb{R^{D\\times Q are weight matrices where Q and D denote the dimensions of a feature vector \\mathbf{h and output \\mathbf{y, respectively, and K is the number of mixtures\\footnote{ Ablation studies regarding changing K and \\tau^{-1 are shown in the supplementary material where the results show that these hyper-parameters are not sensitive to the overall learning results.. ChoiceNet is a twofold architecture: (a) an arbitrary base network and (b) the Cholesky Block (see Figure ). Once the base network extracts features, The Cholesky Block estimates the mixture of the target distribution and other correlated distributions using the Cholesky transform in \\eqref{eq:cholesky.",
+      "We also construct ChoiceNet by replacing the last two layers (`average pooling` and `linear`) with the Cholesky Block. We train the networks on CIFAR-10, CIFAR-100, FMNIST, MNIST and SVHN datasets with noisy labels. We generate noisy datasets with symmetric noise setting and vary corruption ratios from 20\\% to 50\\%.",
+      "Proposed Method In this section, we present the motivation and the model architecture of the proposed method. The main ingredient is a Cholesky Block which can be built on top of any arbitrary base network.",
+      "To construct ChoiceNet, we replace the last layer of WideResNet with a MCDN block. We set K = 3, \\rho_\\text{max = 0.95, \\lambda_\\text{reg = 0.0001, and \\rho_k, \\pi_k, \\Sigma_0 modules consist of two fully connected layers with 64 hidden units and a ReLU activation function. We train each network for 300 epochs with a minibatch size of 256.",
+      "We would like to emphasize that the training accuracy of the proposed method in Table is close to the expected true ratio\\footnote{ Since a noisy label can be assigned to any labels, we can expect 82\\%, 55\\% true labels on noisy datasets with a corruption probability of 20\\%, 50\\%, respectively.. This implies that our proposed Cholesky Block can separate true labels and false labels from a noisy dataset. We also note that training ChoiceNet on CIFAR-100 datasets requires a modification in a loss weight.",
+      "Furthermore, one can use ChoiceNet for active learning by evaluating the quality of each training data using through the lens of correlations. \\medskip \\small \\newpage \\bibliographystyle{ieeepes \\bibliography{bib \\newpage \\onecolumn \\appendix Proof of Theorem in Section 3 In this appendix, we introduce fundamental theorems which lead to Cholesky transform for given random variables (W, Z).",
+      "We hypothesize that the hyperparameters of our proposed method are sensitive to a number of target classes in a dataset. Conclusion In this paper, we have presented ChoiceNet that can robustly learn a target distribution given noisy training data. The keystone of ChoiceNet is the mixture of correlated densities network block which can simultaneously estimate the underlying target distribution and the quality of each data where the quality is defined by the correlation between the target and generating distributions.",
+      "However, estimating the correct correlation requires access to the target distribution, whereas learning the correct target distribution requires knowing the correlation between the distributions to be known, making it a chicken-and-egg problem. To address the second question, we present a novel method that simultaneously estimates the target distribution as well as the correlation in a fully differentiable manner using stochastic gradient descent methods. The cornerstone of the proposed method is a Cholesky Block in which we employ the Cholesky transform for sampling the weights of a neural network that enables us to model correlated outputs."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 7,\n    \"Rationale\": \"Image 0 provides a visual representation of the ChoiceNet architecture, highlighting the Cholesky Block's position and connections. Text 7 explains the role of the Cholesky Block in estimating the target distribution and correlation, which directly answers the question.\",\n    \"Answer\": \"The Cholesky Block in the ChoiceNet architecture is used to estimate the target distribution and the correlation between distributions in a fully differentiable manner. It employs the Cholesky transform for sampling the weights of a neural network, enabling the modeling of correlated outputs.\"\n}"
+  },
+  "15": {
+    "question": "What is the purpose of the Cholesky Block in this figure?",
+    "ground_truth": "The Cholesky Block is used to distinguish abnormal patterns from normal patterns.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Figure6-1.png",
+      "1805.06431v4-Figure10-1.png",
+      "1805.06431v4-Table12-1.png",
+      "1805.06431v4-Table8-1.png",
+      "1805.06431v4-Figure13-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Figure1-1.png",
+      "1805.06431v4-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "The image illustrates the Cholesky Block, showing how it uses the Cholesky Transform to output a correlated weight matrix. Text chunk 5 explains the Cholesky Transform and its role in modeling dependencies among output mixtures, which aligns with the purpose depicted in the image.",
+    "answer": "The purpose of the Cholesky Block in this figure is to use the Cholesky Transform to model dependencies among output mixtures by constructing correlated weight matrices from uncorrelated random matrices.",
+    "text_chunks": [
+      "First, we illustrate the motivations of designing the Cholesky Block in Section . Section introduces a Cholesky transform which enables correlated sampling procedures. Subsequently, we present the overall mechanism of the proposed method and its loss functions for regression and classification tasks in Section followed by illustrative synthetic examples in Section .",
+      "Then, the Cholesky transform which is defined as \\end{equation is a mapping from (w,z)\\in\\mathbb{R^{2 to \\mathbb{R and can be used to construct \\tilde{w. In fact, \\tilde{w = \\text{\\cmtt{Cholesky (w,z,\\rho,\\mu_{w,\\sigma_{w,\\sigma_{z) and we can easily use () to construct a feed-forward layer with a correlated weight matrix which will be referred to as a Cholesky Block as shown in Figure . We also show that the correlation is preserved through the affine transformation making it applicable to a single fully-connected layer where all the derivations and proofs can be found in the supplementary material. In other words, we model correlated outputs by first sampling correlated weight matrices using Cholesky transfrom in an element-wise fashion and using the sampled weights for an affine transformation of a feature vector of a feed-forward layer.",
+      "Proposed Method In this section, we present the motivation and the model architecture of the proposed method. The main ingredient is a Cholesky Block which can be built on top of any arbitrary base network.",
+      "However, estimating the correct correlation requires access to the target distribution, whereas learning the correct target distribution requires knowing the correlation between the distributions to be known, making it a chicken-and-egg problem. To address the second question, we present a novel method that simultaneously estimates the target distribution as well as the correlation in a fully differentiable manner using stochastic gradient descent methods. The cornerstone of the proposed method is a Cholesky Block in which we employ the Cholesky transform for sampling the weights of a neural network that enables us to model correlated outputs.",
+      "\\mathbf{W_{\\mathbf{h\\to\\boldsymbol{\\rho, \\mathbf{W_{\\mathbf{h\\to\\boldsymbol{\\pi\\in \\mathbb{R^{K\\times Q and \\mathbf{W_{\\mathbf{h\\to\\boldsymbol{\\Sigma_{0\\in\\mathbb{R^{D\\times Q are weight matrices where Q and D denote the dimensions of a feature vector \\mathbf{h and output \\mathbf{y, respectively, and K is the number of mixtures\\footnote{ Ablation studies regarding changing K and \\tau^{-1 are shown in the supplementary material where the results show that these hyper-parameters are not sensitive to the overall learning results.. ChoiceNet is a twofold architecture: (a) an arbitrary base network and (b) the Cholesky Block (see Figure ). Once the base network extracts features, The Cholesky Block estimates the mixture of the target distribution and other correlated distributions using the Cholesky transform in \\eqref{eq:cholesky.",
+      "Cholesky Block for Correlated Sampling Now we introduce a Cholesky transform that enables modeling dependencies among output mixtures in a differentiable manner. The Cholesky transform is a way of constructing a random variable which is correlated with other random variables and can be used as a sampling routine for sampling correlated matrices from two uncorrelated random matrices. To be specific, suppose that w \\sim \\mathcal{N(\\mu_w,\\,\\sigma^2_w) and z \\sim \\mathcal{N(0,\\,\\sigma^2_z) and our goal is to construct a random variable \\tilde{w such that the correlation between w and \\tilde{w becomes \\rho.",
+      "presented a new regularization method based on virtual adversarial loss which measures the smoothness of conditional label distribution given input. Minimizing the virtual adversarial loss has a regularizing effect in that it makes the model smooth at each data point. The foundation of the proposed method is a Cholesky Block where the output distribution is modeled using a mixture of correlated distributions.",
+      "The Cholesky Block also computes the base output variance \\Sigma_0(\\mathbf{h) similar to an MDN. Then we sample K weight matrices \\{ \\widetilde{\\mathbf{W_i \\_{i=1^K from \\{\\mu_{*,\\Sigma_{*\\ and \\{\\rho_1,\\rho_2(\\mathbf{h),...,\\rho_K(\\mathbf{h)\\ using the Cholesky transform \\eqref{eq:cholesky so that the correlations between \\widetilde{\\mathbf{W_i and \\mathbf{W_{* becomes \\rho_i(\\cdot). Note that the correlation is preserved through an affine transform."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"The image illustrates the Cholesky Block, showing how it uses the Cholesky Transform to output a correlated weight matrix. Text chunk 5 explains the Cholesky Transform and its role in modeling dependencies among output mixtures, which aligns with the purpose depicted in the image.\",\n    \"Answer\": \"The purpose of the Cholesky Block in this figure is to use the Cholesky Transform to model dependencies among output mixtures by constructing correlated weight matrices from uncorrelated random matrices.\"\n}"
+  },
+  "16": {
+    "question": "Is it more beneficial to use ConvNet+CN with or without Mixup when the corruption probability is 80%? Explain your reasoning.",
+    "ground_truth": "ConvNet+CN with Mixup achieves a higher accuracy (75.4%) than ConvNet+CN without Mixup (65.2%) when the corruption probability is 80%.",
+    "selected_figures_names": [
+      "1805.06431v4-Table10-1.png",
+      "1805.06431v4-Figure8-1.png",
+      "1805.06431v4-Table9-1.png",
+      "1805.06431v4-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table10-1.png",
+      "1805.06431v4-Figure8-1.png",
+      "1805.06431v4-Table9-1.png",
+      "1805.06431v4-Figure1-1.png",
+      "1805.06431v4-Table1-1.png",
+      "1805.06431v4-Figure9-1.png",
+      "1805.06431v4-Table13-1.png",
+      "1805.06431v4-Figure2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides test accuracies for ConvNet, ConvNet+Mixup, ConvNet+CN, and MDN at various corruption probabilities, including 80%. Text 0 highlights the performance of ConvNet+CN and Mixup, indicating high accuracy even with 80% corruption. Both sources directly address the question.",
+    "answer": "It is more beneficial to use ConvNet+CN without Mixup when the corruption probability is 80%. ConvNet+CN achieves a higher accuracy of 98.2% compared to ConvNet+Mixup's 87.2%.",
+    "text_chunks": [
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset.",
+      "For the first scenario following \\citep{Zhang_18_mixup, we apply symmetric noises to the labels and vary the corruption probabilities from 50\\% to 80\\%. We compare our method with Mixup \\citep{Zhang_18_mixup, VAT \\citep{Miyato18, and MentorNet \\citep{Jiang_17_mentornet.\\footnote{ We use the authors\u2019 implementations available online. We adopt WideResNet (WRN) \\citep{Zagoruyko2016WRN with 22 layers and a widening factor of 4.",
+      "We apply random horizontal flip and random crop with 4-pixel-padding and use a weight decay of 0.0001 for the baseline network as \\citep{he2016deep. The classification results are shown in Table where ChoiceNet consistently outperforms ConvNet and ConvNet+Mixup by a significant margin, and the difference between the accuracies of ChoiceNet and the others becomes more clear as the corruption probability increases. Here, we also present additional experimental results using the MNIST dataset on following three different scenarios: The best and final accuracies on the intact test dataset for biased label experiments are shown in Table .",
+      "The convolutional neural networks trained with Mixup show robust learning behaviors when 80\\% of the training labels are uniformly shuffled. However, given an extremely noisy dataset (90\\% and 95\\%), the test accuracies of baseline methods decrease as the number of epochs increases. ChoiceNet shows outstanding robustness to the noisy dataset in that the test accuracies do not drop even after 50 epochs for the cases where the corruption rates are below 90\\%.",
+      "We also note that ChoiceNet (without Mixup) outperforms WideResNet+Mixup when the corruption ratio is over 50\\% on the last accuracies. We conduct additional experiments on the CIFAR-10 dataset to better evaluate the performance on both both symmetric and asymmetric noises following \\citep{Han_18: Pair-45\\%, Symmetry-50\\%, and Symmetry-20\\%. Pair-45\\% flips 45\\% of each label to the next label, e.g., randomly flipping 45\\% of label 1 to label 2 and label 2 to label 3, and Symmetry-50\\% randomly assigns 50\\% of each label to other labels uniformly.",
+      "For the Large Movie Review dataset, we simply shuffle the labels to the other in that it only contains two labels. \\paragraph{MNIST For MNIST experiments, we randomly shuffle a percentage of the labels with the corruption probability p from 50\\% to 95\\% and compare median accuracies after five runs for each configuration following the setting in \\citep{Zhang_18_mixup. We construct two networks: a network with two residual blocks \\citep{he2016deep with 3 \\times 3 \\times 64 convolutional layers followed by a fully-connected layer with 256 output units (ConvNet) and ChoiceNet with the same two residual blocks followed by the MCDN block (ConvNet+CN).",
+      "In all corruption rates, ChoiceNet achieves the best performance compared to two baseline methods. The learning curves of the biased label experiments are depicted in Figure . Particularly, we observe unstable learning curves regarding the test accuracies of ConvNet and Mixup.",
+      "Figure - show the fitting results along with training data. While our proposed method is built on top of an MDN, it is worthwhile noting the severe performance degradation of an MDN with an extreme noise level (60\\%). It is mainly because an MDN fails to allocate high mixture probability on the mixture corresponds to the target distribution as there are no dependencies among different mixtures."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides test accuracies for ConvNet, ConvNet+Mixup, ConvNet+CN, and MDN at various corruption probabilities, including 80%. Text 0 highlights the performance of ConvNet+CN and Mixup, indicating high accuracy even with 80% corruption. Both sources directly address the question.\",\n    \"Answer\": \"It is more beneficial to use ConvNet+CN without Mixup when the corruption probability is 80%. ConvNet+CN achieves a higher accuracy of 98.2% compared to ConvNet+Mixup's 87.2%.\"\n}"
+  },
+  "17": {
+    "question": "How does the accuracy of the Mixup method change as the level of random shuffle increases?",
+    "ground_truth": "The accuracy of the Mixup method decreases as the level of random shuffle increases.",
+    "selected_figures_names": [
+      "1805.06431v4-Figure12-1.png"
+    ],
+    "all_figures_names": [
+      "1805.06431v4-Table8-1.png",
+      "1805.06431v4-Figure14-1.png",
+      "1805.06431v4-Figure12-1.png",
+      "1805.06431v4-Figure7-1.png",
+      "1805.06431v4-Figure10-1.png",
+      "1805.06431v4-Table3-1.png",
+      "1805.06431v4-Table6-1.png",
+      "1805.06431v4-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the learning curves of Mixup and other methods at different noise levels, which directly illustrates how accuracy changes with increasing random shuffle. Text 0 discusses the behavior of Mixup under noisy conditions, providing context for the observed trends.",
+    "answer": "As the level of random shuffle increases, the accuracy of the Mixup method decreases. The test accuracy drops more significantly at higher noise levels, such as 90% and 95% random shuffle.",
+    "text_chunks": [
+      "The convolutional neural networks trained with Mixup show robust learning behaviors when 80\\% of the training labels are uniformly shuffled. However, given an extremely noisy dataset (90\\% and 95\\%), the test accuracies of baseline methods decrease as the number of epochs increases. ChoiceNet shows outstanding robustness to the noisy dataset in that the test accuracies do not drop even after 50 epochs for the cases where the corruption rates are below 90\\%.",
+      "Table shows the test accuracies of compared methods under different symmetric corruptions probabilities. In all cases, ConvNet+CN outperforms the compared methods. We would like to emphasize that when ChoiceNet and Mixup \\citep{Zhang_18_mixup are combined, it achieves a high accuracy of 75\\% even on the 80\\% shuffled dataset.",
+      "We also note that ChoiceNet (without Mixup) outperforms WideResNet+Mixup when the corruption ratio is over 50\\% on the last accuracies. We conduct additional experiments on the CIFAR-10 dataset to better evaluate the performance on both both symmetric and asymmetric noises following \\citep{Han_18: Pair-45\\%, Symmetry-50\\%, and Symmetry-20\\%. Pair-45\\% flips 45\\% of each label to the next label, e.g., randomly flipping 45\\% of label 1 to label 2 and label 2 to label 3, and Symmetry-50\\% randomly assigns 50\\% of each label to other labels uniformly.",
+      "For the first scenario following \\citep{Zhang_18_mixup, we apply symmetric noises to the labels and vary the corruption probabilities from 50\\% to 80\\%. We compare our method with Mixup \\citep{Zhang_18_mixup, VAT \\citep{Miyato18, and MentorNet \\citep{Jiang_17_mentornet.\\footnote{ We use the authors\u2019 implementations available online. We adopt WideResNet (WRN) \\citep{Zagoruyko2016WRN with 22 layers and a widening factor of 4.",
+      "As training accuracies of such methods show stable learning behaviors, this can be interpreted as the networks are simply memorizing noisy labels. In the contrary, the learning curves of ChoiceNet show stable behaviors which clearly indicates the robustness of the proposed method. The experimental results and learning curves of the random shuffle experiments are shown in Table and Figure .",
+      "For the Large Movie Review dataset, we simply shuffle the labels to the other in that it only contains two labels. \\paragraph{MNIST For MNIST experiments, we randomly shuffle a percentage of the labels with the corruption probability p from 50\\% to 95\\% and compare median accuracies after five runs for each configuration following the setting in \\citep{Zhang_18_mixup. We construct two networks: a network with two residual blocks \\citep{he2016deep with 3 \\times 3 \\times 64 convolutional layers followed by a fully-connected layer with 256 output units (ConvNet) and ChoiceNet with the same two residual blocks followed by the MCDN block (ConvNet+CN).",
+      "In other words, the second mixture {\\it takes care of the noisy (flipped) data by assigning -1 correlation while the first mixture component reserved for the target distribution is less affected by the noisy training data. When using the second dataset, the correlations of the second mixture at the corrupt region are not -1 but decreases as the input increase from 0 to 2 (see Figure ). Intuitively speaking, this is because the average deviations between the noisy output and the target output increases as the input increases.",
+      "We argue that this setting is more arduous than the random shuffle case in that we are intentionally changing the labels based on predefined permutation rules. \\paragraph{CIFAR-10 When using the CIFAR-10 dataset, we followed two different settings from \\citep{Zhang_18_mixup and \\citep{Han_18 for more comprehensive comparisons. Note that the setting in \\citep{Han_18 incorporates both symmetric and asymmetric noises."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the learning curves of Mixup and other methods at different noise levels, which directly illustrates how accuracy changes with increasing random shuffle. Text 0 discusses the behavior of Mixup under noisy conditions, providing context for the observed trends.\",\n    \"Answer\": \"As the level of random shuffle increases, the accuracy of the Mixup method decreases. The test accuracy drops more significantly at higher noise levels, such as 90% and 95% random shuffle.\"\n}"
+  }
+}

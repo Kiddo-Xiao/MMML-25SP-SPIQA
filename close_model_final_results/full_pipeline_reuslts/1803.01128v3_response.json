@@ -1,0 +1,174 @@
+{
+  "0": {
+    "question": "What are the key differences between Seq2Sick and existing attack methods on RNN-based models?",
+    "ground_truth": "Seq2Sick differs from existing attack methods in two key aspects:\n\n1. Search Strategy: While previous methods primarily rely on greedy search, which becomes increasingly inefficient for longer sequences, Seq2Sick employs group lasso regularization and projected gradient descent with gradient regularization. This allows for simultaneous searching of all replacement positions, leading to improved efficiency.\n\n2. Targeted Attack Type: Existing methods focus on targeting specific classes or binary classifications, while Seq2Sick introduces a novel \"keyword\" target type, allowing attacks to be directed towards specific keywords within the generated sequence.",
+    "selected_figures_names": [
+      "1803.01128v3-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table3-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a summary table comparing Seq2Sick with other attack methods on RNN models, highlighting key differences such as whether they are gradient-based, use word-level RNNs, have sequential output, and the type of targeted attack. Text 0 discusses the differences in focus between Seq2Sick and other methods, specifically mentioning BLEU score and self-defined loss functions.",
+    "answer": "Seq2Sick differs from existing attack methods on RNN-based models by being gradient-based, using word-level RNNs, producing sequential output, and targeting specific keywords. It focuses on BLEU score and self-defined loss functions, unlike other methods that may use different metrics.",
+    "text_chunks": [
+      "Table~ summarizes the key differences between the proposed framework Seq2Sick and the existing attack methods on RNN-based models. Note that our paper was the first method for attacking seq2seq model on arXiv and after our work, there are some followup papers such as~, where they use several similarity metrics to conduct the attack while our work are focusing on the BLEU score and self-defined loss functions. Before introducing the proposed algorithms, we first briefly describe the sequence-to-sequence (seq2seq) model.",
+      "Therefore, we conclude that, compared with the DNN models designed for other tasks such as image classification, seq2seq models are more robust to adversarial attacks. The main reason, as pointed out in the introduction, is that the seq2seq model has a finite and discrete input space and almost infinite output space, so it is more robust than visual classification models that have an infinite and continuous input space and a very small output space (e.g., 10 categories in MNIST and 1,000 categories in ImageNet). \\end{center \\end{table* \\end{center \\end{table* \\end{center \\end{table* Conclusion In this paper, we propose a novel framework, i.e., Seq2Sick, to generate adversarial examples for sequence-to-sequence neural network models.",
+      "This problem is challenging since it combines both aforementioned difficulties, i.e., discrete inputs and sequence outputs with an almost infinite number of possibilities. We choose this problem not only because it is challenging, but also because seq2seq models are widely used in many safety and security sensitive applications, e.g., machine translation~\\citep{bahdanau2014neural, text summarization~\\citep{rush2015neural, and speech recognition~, thus measuring its robustness becomes critical. Specifically, we aim to examine the following questions in this study: We provide an affirmative answer to the first question by developing an effective adversarial attack framework called Seq2Sick.",
+      "Our experimental results show that the proposed framework yields high success rates in both tasks. However, even if the proposed approach can successfully attack seq2seq models, our answer to the second question is ``Yes''. Compared with CNN-based classifiers that are highly sensitive to adversarial examples, seq2seq model is intrinsically more robust since it has discrete input space and the output space is exponentially large.",
+      "As a result, adversarial examples of seq2seq models usually have larger distortions and are more perceptible than the adversarial examples crafted for CNN-based image classifiers. {To the best of our knowledge, this paper is the first work that evaluates the robustness of seq2seq model, which has inspired many follow-up works and has been cited since its debut. Related work and Background \\citet{papernot2016crafting first uses Fast Gradient Sign Method (FGSM) to conduct an attack on RNN/LSTM-based classification problems.",
+      "It shows transformer model has a greater adversarial robustness. \\paragraph{Robustness of Seq2Seq Model Although our algorithm can achieve very good success rates (84\\%-100\\%) in both non-overlapping and targeted keywords attacks with 1 or 2 keywords, we also recognize some strengths of the seq2seq model: (i) unlike CNN models where targeted attack can be conducted easily with almost 100\\% success rate and very small distortion that cannot be perceived by human eyes~, it is harder to turn the entire seq2seq output into a particular sentence -- some sentences are even impossible to generate by seq2seq models; and (ii) since the input space of seq2seq is discrete, it is easier for human to detect the differences between the adversarial sequence and the original one, even if we only change one or few words.",
+      "The detailed steps of our approach, Seq2Sick, is presented in Algorithm~. Our source code is publicly available at \\url{https://github.com/cmhcbb/Seq2Sick. \\paragraph{Computational Cost: Our algorithm needs only one back-propagation to compute the gradient \\nabla_{\\bdeltaL(x+\\bdelta). The bottleneck here is to project the solution back into the word embedding space, which depends on the number of words in the input dictionary of the model.~\\citet{gong2018adversarial uses GloVe word embedding~ that contains millions of words to do a nearest neighbor search.",
+      "% Let \\x_i\\in \\mathbb{R^d be the embedding vector of each input word, N be the input sequence length, and M be the output sequence length. Let \\omega be the input vocabulary, and the output word \\y_j\\in \\nu where \\nu is the output vocabulary. The seq2seq model has an encoder-decoder framework that aims at mapping an input sequence of vectors \\X=(\\x_1,\\dots,\\x_N) to the output sequence \\Y=\\{\\y_1,\\dots,\\y_{M\\. Its encoder first reads the input sequence, then each RNN/LSTM cell computes \\h_t=f(\\x_t,\\ \\h_{t-1), where \\x_t is the current input, \\h_{t-1 and \\h_{t represent the previous and current cells' hidden states, respectively."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a summary table comparing Seq2Sick with other attack methods on RNN models, highlighting key differences such as whether they are gradient-based, use word-level RNNs, have sequential output, and the type of targeted attack. Text 0 discusses the differences in focus between Seq2Sick and other methods, specifically mentioning BLEU score and self-defined loss functions.\",\n    \"Answer\": \"Seq2Sick differs from existing attack methods on RNN-based models by being gradient-based, using word-level RNNs, producing sequential output, and targeting specific keywords. It focuses on BLEU score and self-defined loss functions, unlike other methods that may use different metrics.\"\n}"
+  },
+  "1": {
+    "question": "What is the relationship between the success rate of the non-overlapping attack and the number of words changed in the input sentence?",
+    "ground_truth": "There is a negative correlation between the success rate of the non-overlapping attack and the number of words changed in the input sentence. In other words, the fewer words that are changed, the higher the success rate of the attack.",
+    "selected_figures_names": [
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table3-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table7-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 7,
+    "rationale": "Image 2 provides examples of text summarization with changes in input sequences, which is relevant to understanding how word changes affect output. Text 7 discusses the relationship between word changes and the success of generating different outputs, directly addressing the question.",
+    "answer": "The success rate of the non-overlapping attack increases as more words are changed in the input sentence. On average, changing 2 or 3 words can generate entirely different outputs for more than 80% of sentences.",
+    "text_chunks": [
+      "A non-overlapping attack is treated as successful only if there is no common word at every position between output sequence and original sequence. We set \\lambda=1 in all non-overlapping experiments. Table~ summarizes the experimental results.",
+      "In this work, we focus on two kinds of attacks: non-overlapping attack and targeted keywords attack. The first attack requires that the output of the adversarial example shares no overlapping words with the original output. This task is strictly harder than untargeted attack, which only requires that the adversarial output to be different from the original output .",
+      "We ignore the task of untargeted attack since it is trivial for the proposed framework, which can easily achieve a 100\\% attack success rate, while \\citet{ebrahimi2017hotflip could achieve 76.24\\% attack success rate for text summarization and 98.8\\% success rate for machine translation with 1 word change. Targeted keywords attack is an even more challenging task than non-overlapping attack. Given a set of targeted keywords, the goal of targeted keywords attack is to find an adversarial input sequence such that all the keywords must appear in its corresponding output.",
+      "In the non-overlapping attack, the output of adversarial example should be entirely different from the original output \\mathbf{S, i.e., which is equivalent to Given this observation, we can define a hinge-like loss function L to generate adversarial examples in the non-overlapping attack, i.e., where \\epsilon\\ge 0 denotes the confidence margin parameter. Generally speaking, a larger \\epsilon will lead to a more confident output and a higher success rate, but with the cost of more iterations and longer running time. We note that non-overlapping attack is much more challenging than untargeted attack, which suffices to find a one-word difference from the original output~\\citep{zhao2017generating,ebrahimi2017hotflip.",
+      "In the following, we respectively introduce the loss functions developed for the two attack approaches. \\subsubsection{Non-overlapping Attack To formally define the non-overlapping attack, we let \\mathbf{s=\\{\\s_1,\\dots,\\s_M\\ be the original output sequence, where s_i denotes the location of the i-th word in the output vocabulary \\nu. \\{\\z_1, \\dots, \\z_M\\ % indicates the logit layer outputs of the adversarial example.",
+      "It shows transformer model has a greater adversarial robustness. \\paragraph{Robustness of Seq2Seq Model Although our algorithm can achieve very good success rates (84\\%-100\\%) in both non-overlapping and targeted keywords attacks with 1 or 2 keywords, we also recognize some strengths of the seq2seq model: (i) unlike CNN models where targeted attack can be conducted easily with almost 100\\% success rate and very small distortion that cannot be perceived by human eyes~, it is harder to turn the entire seq2seq output into a particular sentence -- some sentences are even impossible to generate by seq2seq models; and (ii) since the input space of seq2seq is discrete, it is easier for human to detect the differences between the adversarial sequence and the original one, even if we only change one or few words.",
+      "For the machine translation task, we train our model using 453k pairs from the Europal corpus of German-English WMT 15% \\url{http://www.statmt.org/wmt15/translation-task.html , common crawl and news-commentary. We use the hyper-parameters suggested by OpenNMT for both models, and have reproduced the performance reported in~\\citet{rush2015neural and \\citet{ha2016toward. Empirical Results \\subsubsection{Text Summarization For the non-overlapping attack, we use the proposed loss \\eqref{eq:untargeted in our objective function.",
+      "It shows that our algorithm only needs to change 2 or 3 words on average and can generate entirely different outputs for more than 80\\% of sentences. We have also included some adversarial examples in Table ~. % From these examples, we can only change one word to let output sequence look completely different with the original one and change the sentence's meaning completely."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 7,\n    \"Rationale\": \"Image 2 provides examples of text summarization with changes in input sequences, which is relevant to understanding how word changes affect output. Text 7 discusses the relationship between word changes and the success of generating different outputs, directly addressing the question.\",\n    \"Answer\": \"The success rate of the non-overlapping attack increases as more words are changed in the input sentence. On average, changing 2 or 3 words can generate entirely different outputs for more than 80% of sentences.\"\n}"
+  },
+  "2": {
+    "question": "How does the difficulty of performing a successful targeted keywords attack change as the number of targeted keywords increases?",
+    "ground_truth": "The difficulty of performing a successful targeted keywords attack increases as the number of targeted keywords increases.",
+    "selected_figures_names": [
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table7-1.png"
+    ],
+    "all_figures_names": [
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table5-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table3-1.png",
+      "1803.01128v3-Table4-1.png",
+      "1803.01128v3-Table2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides data on the success rates of targeted keywords attacks with varying numbers of keywords, showing a decrease in success as the number of keywords increases. Text 0 explains that the more targeted keywords there are, the harder the attack is, aligning with the data in Image 2.",
+    "answer": "The difficulty of performing a successful targeted keywords attack increases as the number of targeted keywords increases. This is because the success rate decreases with more keywords, making the attack harder to achieve.",
+    "text_chunks": [
+      "Instead, it is more natural to design a loss function that allows the targeted keywords to become the top-1 prediction at any positions. The attack is considered as successful only when ALL the targeted keywords appear in the output sequence. Therefore, the more targeted keywords there are, the harder the attack is.",
+      "We ignore the task of untargeted attack since it is trivial for the proposed framework, which can easily achieve a 100\\% attack success rate, while \\citet{ebrahimi2017hotflip could achieve 76.24\\% attack success rate for text summarization and 98.8\\% success rate for machine translation with 1 word change. Targeted keywords attack is an even more challenging task than non-overlapping attack. Given a set of targeted keywords, the goal of targeted keywords attack is to find an adversarial input sequence such that all the keywords must appear in its corresponding output.",
+      "For the targeted keywords attack, we randomly choose some targeted keywords from the output vocabulary after removing the stop words like ``a'' and ``the''. A targeted keywords attack is treated as successful only if the output sequence contains all the targeted keywords. We set \\lambda_1=\\lambda_2=1 in our objective function~\\eqref{eq:loss in all our experiments.",
+      "We do not take untargeted attack into account since it is straightforward and the replaced words could be some less important words such as ``the'' and ``a''. \\subsubsection{Targeted Keywords Attack Given a set of targeted keywords, the goal of targeted keywords attack is to generate an adversarial input sequence to ensure that all the targeted keywords appear in the output sequence. This task is important since it suggests adding a few malicious keywords can completely change the meaning of the output sequence.",
+      "In this work, we focus on two kinds of attacks: non-overlapping attack and targeted keywords attack. The first attack requires that the output of the adversarial example shares no overlapping words with the original output. This task is strictly harder than untargeted attack, which only requires that the adversarial output to be different from the original output .",
+      "When there exist more than one targeted keywords K = \\{k_1,k_2,\\dots,k_{|K|\\, where k_i denotes the i-th word in output vocabulary \\nu, we follow the same idea to define the loss function as follows: However, the loss defined in~\\eqref{eq:loss_keyword_1 suffers from the ``keyword collision'' problem. When there are more than one keyword, it is possible that multiple keywords compete at the same position to attack.",
+      "It infers that seq2seq model learns the relationship between changed word and target keyword. However, the model fails to decide where it should focus on, which is strongly related with attention layer used in the model. It encourages us to use self-attention such as transformer~ instead to extract all the attentions between any two words.% When attacking subword transformer model, the target 1 keyword attack has 17\\% lower success rate and 0.13 lower BLEU score.",
+      "It shows transformer model has a greater adversarial robustness. \\paragraph{Robustness of Seq2Seq Model Although our algorithm can achieve very good success rates (84\\%-100\\%) in both non-overlapping and targeted keywords attacks with 1 or 2 keywords, we also recognize some strengths of the seq2seq model: (i) unlike CNN models where targeted attack can be conducted easily with almost 100\\% success rate and very small distortion that cannot be perceived by human eyes~, it is harder to turn the entire seq2seq output into a particular sentence -- some sentences are even impossible to generate by seq2seq models; and (ii) since the input space of seq2seq is discrete, it is easier for human to detect the differences between the adversarial sequence and the original one, even if we only change one or few words."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides data on the success rates of targeted keywords attacks with varying numbers of keywords, showing a decrease in success as the number of keywords increases. Text 0 explains that the more targeted keywords there are, the harder the attack is, aligning with the data in Image 2.\",\n    \"Answer\": \"The difficulty of performing a successful targeted keywords attack increases as the number of targeted keywords increases. This is because the success rate decreases with more keywords, making the attack harder to achieve.\"\n}"
+  },
+  "3": {
+    "question": "Which method resulted in the highest BLEU score?",
+    "ground_truth": "The 1-keyword method resulted in the highest BLEU score of 0.705.",
+    "selected_figures_names": [
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table4-1.png"
+    ],
+    "all_figures_names": [
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table4-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table5-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 provides BLEU scores for different datasets and keyword counts, which directly answers the question about the highest BLEU score. Text 0 explains the significance of BLEU scores in evaluating text quality, providing context for understanding the results.",
+    "answer": "The method with 1 keyword on the Gigaword dataset resulted in the highest BLEU score of 0.801.",
+    "text_chunks": [
+      "Table ~ summarizes the performance, including the overall success rate, average BLEU score ~, and the average number of changed words in input sentences. Average BLEU score is defined by exponential average over BLEU 1,2,3,4, which is commonly used in evaluating the quality of text which has been machine-translated from one natural language to another. Also, we have included some adversarial examples crafted by our method in Table~. In Table~, some adversarial examples with 3 sets of keywords, where ``\\#\\#'' stands for a two-digit number after standard preprocessing in text summarization.",
+      "It infers that seq2seq model learns the relationship between changed word and target keyword. However, the model fails to decide where it should focus on, which is strongly related with attention layer used in the model. It encourages us to use self-attention such as transformer~ instead to extract all the attentions between any two words.% When attacking subword transformer model, the target 1 keyword attack has 17\\% lower success rate and 0.13 lower BLEU score.",
+      "Specifically, we use a word-level LSTM encoder and a word-based attention decoder for both applications~\\citep{bahdanau2014neural. For the text summarization task, we use 380k training pairs from Gigaword dataset to train a seq2seq model. %",
+      "Notably, almost all the previous methods are based on greedy search, i.e., at each step, they search for the best word and the best position to replace the previous word. As a result, their search space grows rapidly as the length of input sequence increases. To address this issue, we propose a novel approach that uses group lasso regularization and the projected gradient descent method with gradient regularization to simultaneously search all the replacement positions.",
+      "\\citet{gao2018black aims to attack sentiment classification models in a black-box setting. It develops some scoring functions to find the most important words to modify. \\citet{yang2018greedy applied a greedy approach and a Gumbel trick to speed up the inference time.",
+      "Table~ summarizes the key differences between the proposed framework Seq2Sick and the existing attack methods on RNN-based models. Note that our paper was the first method for attacking seq2seq model on arXiv and after our work, there are some followup papers such as~, where they use several similarity metrics to conduct the attack while our work are focusing on the BLEU score and self-defined loss functions. Before introducing the proposed algorithms, we first briefly describe the sequence-to-sequence (seq2seq) model.",
+      "The architecture consists of a 2-layer stacked LSTM with 500 hidden units. We conduct experiments on two types of models, one uses the pre-trained 300-dimensional GloVe word embeddings and the other one is trained from scratch. We set the beam search size to be 5 as suggested.",
+      "We first filter out stop words like ``Ein''(a), ``und''(and) in German vocabulary and randomly choose several nouns, verbs, adjectives or adverbs in German as targeted keywords. Similar to the text summarization experiments, we set \\lambda_1=\\lambda_2=1 in our objective function. The success rates, BLEU scores, and the average number of words changed are reported in Table~, with some adversarial examples shown in Table~. Analysis of Syntactic structure and Semantic Meaning Preservation In our algorithm we aim to make adversarial examples having similar meaning to original examples by constraining the number of changed words and enforcing the changed words are close to the original words in the embedding space."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 provides BLEU scores for different datasets and keyword counts, which directly answers the question about the highest BLEU score. Text 0 explains the significance of BLEU scores in evaluating text quality, providing context for understanding the results.\",\n    \"Answer\": \"The method with 1 keyword on the Gigaword dataset resulted in the highest BLEU score of 0.801.\"\n}"
+  },
+  "4": {
+    "question": "Do adversarial examples generated with the 2-keyword constraint maintain a similar syntactic structure to the original sentences?",
+    "ground_truth": "No, adversarial examples generated with the 2-keyword constraint deviate significantly from the original syntactic structure.",
+    "selected_figures_names": [
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1803.01128v3-Table9-1.png",
+      "1803.01128v3-Table1-1.png",
+      "1803.01128v3-Table8-1.png",
+      "1803.01128v3-Table3-1.png",
+      "1803.01128v3-Table6-1.png",
+      "1803.01128v3-Table7-1.png",
+      "1803.01128v3-Table2-1.png",
+      "1803.01128v3-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 shows examples of adversarial text summarization with targeted keywords, which is relevant to understanding how adversarial examples are constructed. Text 5 discusses the syntactic structure of adversarial examples, stating that they maintain the original syntactic structure, which directly answers the question.",
+    "answer": "Yes, adversarial examples generated with the 2-keyword constraint maintain a similar syntactic structure to the original sentences.",
+    "text_chunks": [
+      "It proves that almost all adversarial examples keep the same semantic classification unchanged. % Analysis and Discussions \\paragraph{Observation from adversarial example As shown in Table , our targeted keyword attack wouldn't just directly replace the keyword with some word in the source input. However, the word changed in the adversarial example and the target keyword are co-occurrent in the training dataset.",
+      "{However, depending on the implemented word embedding techniques, in general there is no guarantee that every word pair close in the embedding space have similar meanings. Therefore, we have conducted additional experiments to verify the syntactic and semantic quality of our generated adversarial examples. For syntactic structure part, as showed in Table~, we measure the perplexity of generated adversarial sentences in DUC2003 and DUC2004 dataset.",
+      "% In order to generate text adversarial examples,~\\citet{li2016understanding proposes to use reinforcement learning to locate important words that could be deleted in sentiment classification. \\citet{samanta2017towards and \\citet{liang2017deep generate adversarial sequences by inserting or replacing existing words with typos and synonyms.",
+      "It shows transformer model has a greater adversarial robustness. \\paragraph{Robustness of Seq2Seq Model Although our algorithm can achieve very good success rates (84\\%-100\\%) in both non-overlapping and targeted keywords attacks with 1 or 2 keywords, we also recognize some strengths of the seq2seq model: (i) unlike CNN models where targeted attack can be conducted easily with almost 100\\% success rate and very small distortion that cannot be perceived by human eyes~, it is harder to turn the entire seq2seq output into a particular sentence -- some sentences are even impossible to generate by seq2seq models; and (ii) since the input space of seq2seq is discrete, it is easier for human to detect the differences between the adversarial sequence and the original one, even if we only change one or few words.",
+      "We first filter out stop words like ``Ein''(a), ``und''(and) in German vocabulary and randomly choose several nouns, verbs, adjectives or adverbs in German as targeted keywords. Similar to the text summarization experiments, we set \\lambda_1=\\lambda_2=1 in our objective function. The success rates, BLEU scores, and the average number of words changed are reported in Table~, with some adversarial examples shown in Table~. Analysis of Syntactic structure and Semantic Meaning Preservation In our algorithm we aim to make adversarial examples having similar meaning to original examples by constraining the number of changed words and enforcing the changed words are close to the original words in the embedding space.",
+      "It shows that our examples keeps the original syntactic structure. For the semantic meaning part, We use DeepAI's online sentiment analysis {API to test whether our attack changes the sentiment of 500 sentences from DUC2003 dataset in summarization task. The results show that {\\bf only 2.2\\% of adversarial examples have semantic meaning differ from the original sentences.",
+      "It shows that our algorithm only needs to change 2 or 3 words on average and can generate entirely different outputs for more than 80\\% of sentences. We have also included some adversarial examples in Table ~. % From these examples, we can only change one word to let output sequence look completely different with the original one and change the sentence's meaning completely.",
+      "\\citet{alzantot2018generating proposed a genetic algorithm to attack sentiment analysis. These approaches differ from our method in that they study simple text classification problems while we focus on the more challenging seq2seq model with sequential outputs. Other than attacking text classifiers, \\citet{jia2017adversarial aims to fool reading comprehension systems by adding misleading sentences, which has a different focus than ours."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 shows examples of adversarial text summarization with targeted keywords, which is relevant to understanding how adversarial examples are constructed. Text 5 discusses the syntactic structure of adversarial examples, stating that they maintain the original syntactic structure, which directly answers the question.\",\n    \"Answer\": \"Yes, adversarial examples generated with the 2-keyword constraint maintain a similar syntactic structure to the original sentences.\"\n}"
+  }
+}

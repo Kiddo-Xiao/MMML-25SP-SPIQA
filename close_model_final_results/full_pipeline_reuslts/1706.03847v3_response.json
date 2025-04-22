@@ -1,0 +1,274 @@
+{
+  "0": {
+    "question": "How does the alpha parameter affect recommendation accuracy for different sample sizes on the CLASS dataset?",
+    "ground_truth": "The alpha parameter generally increases recommendation accuracy as the sample size increases. However, the effect of alpha varies depending on the loss function used. For cross-entropy loss, alpha has a relatively small effect on accuracy. For TOP1-max loss, alpha has a larger effect on accuracy, especially for smaller sample sizes. For BPR-max loss, alpha has a very large effect on accuracy, with higher values of alpha leading to much higher accuracy.",
+    "selected_figures_names": [
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure2-1.png",
+      "1706.03847v3-Table3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 directly shows the effect of the alpha parameter on recommendation accuracy for different sample sizes on the CLASS dataset. Text 2 explains how different alpha values impact recommendation accuracy, particularly in relation to sample sizes.",
+    "answer": "The alpha parameter affects recommendation accuracy by favoring higher values with low sample sizes and lower values for large samples. This is because popular samples are useful when the sample size is limited, but a more balanced sampling becomes beneficial with larger sample sizes.",
+    "text_chunks": [
+      "\\caption{The effect of the alpha parameter on recommendation accuracy at different sample sizes on the CLASS dataset. Left: cross-entropy loss; Middle: TOP1-max loss; Right: BPR-max loss.",
+      "Code is available publicly on GitHub for reproducibility. Using additional samples The first set of experiments examines the effect of additional negative samples on recommendation accuracy. Experiments were performed on the CLASS and the VIDEO datasets.",
+      "Cross-entropy favors higher \\alpha values with low sample sizes and low \\alpha values for large samples. This is inline with our discussion in Section~: popular samples are useful when the sample size is very limited and at the beginning of the training, but might be exhausted quickly, thus switching to a more balanced sampling can be beneficial if we have the means to (e.g.\\ large enough sample size). Also, the uniform sampling in this case is supplemented by the few popularity based samples of the mini-batch sampling.",
+      "These additional samples are used along with the N_B-1 samples coming from the mini-batch based sampling (described above). The additional samples can be sampled in any way. We chose to sample proportional to \\mathrm{supp_i^\\alpha, where \\mathrm{supp_i is the support of the item and \\alpha is the parameter of the sampling (0\\le\\alpha\\le1). \\alpha=0 and \\alpha=1 gives uniform and popularity-based sampling respectively.",
+      "Since results are quite similar we excluded the VIDEO results to save some space. Figure~ depicts the performance of the network with TOP1, cross-entropy, TOP1-max and BPR-max losses. Recommendation accuracy was measured with different number of additional samples, as well as in the case when all scores are computed and there is no sampling.",
+      "If the number of items is large, the small sample size further hinders the chance of including all of the high scoring negative examples. (2) Mini-batch size has a direct effect on the training. E.g.\\ we found that training with smaller mini-batch sizes (30-100) produces more accurate models, but training with larger ones is faster on the GPU due to parallelization.",
+      "\\end{figure* In the next experiment we perform a parameter sensitivity analysis of the \\alpha parameter that controls the sampling. Figure~ depicts the performance over different \\alpha values for the cross-entropy, TOP1-max and BPR-max losses.",
+      "Mini-batch sampling is basically a form of popularity-based sampling, since the training iterates through all events, thus the probability of an item acting as a negative sample is proportional to its support. The problem with popularity-based sampling is that learning can slow down after the algorithm learns to (generally) rank target items above popular ones, and thus can still be inaccurate for ranking long tail high scoring items. On the other hand, uniform sampling slows down learning, due to the high number of low scoring negative samples, but might produce an overall more accurate model if trained indefinitely."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 directly shows the effect of the alpha parameter on recommendation accuracy for different sample sizes on the CLASS dataset. Text 2 explains how different alpha values impact recommendation accuracy, particularly in relation to sample sizes.\",\n    \"Answer\": \"The alpha parameter affects recommendation accuracy by favoring higher values with low sample sizes and lower values for large samples. This is because popular samples are useful when the sample size is limited, but a more balanced sampling becomes beneficial with larger sample sizes.\"\n}"
+  },
+  "1": {
+    "question": "Which combination of method and dataset achieved the highest Recall@20 score, and how much higher was it compared to the original GRU4Rec model?",
+    "ground_truth": "The highest Recall@20 score was achieved by the GRU4Rec with additional samples and BPR-max loss function on the RSC15 dataset. This score was 42.37% higher than the Recall@20 score of the original GRU4Rec model on the same dataset.",
+    "selected_figures_names": [
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure2-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure5-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 provides a detailed table of Recall@20 scores for different methods and datasets, which directly answers the question. Text 0 discusses improvements in accuracy, which is relevant to understanding the context of the results.",
+    "answer": "The combination of BPR-max method and the VIDXL dataset achieved the highest Recall@20 score of 0.8058. This is 18.37% higher compared to the original GRU4Rec model's score of 0.6831.",
+    "text_chunks": [
+      "The increase with sampling and the proper loss function is stunning as the best results exceed the accuracy of the original GRU4Rec by 18-37.5\\% and that of item-kNN by up to 55\\%. BPR-max performs similarly (2 of 4) or better (2 of 4; +2-6\\% improvement) than cross-entropy when extra samples are used for both method. On RSC15, reported \\sim0.685 and \\sim0.29 in recall@20 and MRR@20 respectively using data augmentation.",
+      "Unlike our solutions, data augmentation greatly increases training times. Data augmentation and our improvements are not mutually exclusive, thus it is possible that by combining the two methods, even better results can be achieved. A recent paper proposes the Bayesian version of GRU4Rec and reports \\sim0.61 and \\sim0.25 in recall@20 and MRR@20 when using 100 units.",
+      "We essentially devise a new class of loss functions that combines learnings from the deep learning and the learning to rank literature. Experimental results on several datasets coming from industry validate these improvements by showing significant increase in recommendation accuracy measured by Mean Reciprocal Rank (MRR) and Recall@20. With these improvements the difference between RNNs and conventional memory-based collaborative filtering jumps to 53\\% in terms of MRR and Recall@20, demonstrating the potential that deep learning methods bring to the area of Recommender Systems.",
+      "Results: Figure~ shows the relative performance gain of GRU4Rec over the complex logic. The error bars represent the confidence interval at p=0.05. GRU4Rec outperforms the baseline in both prediction modes.",
+      "The trend is similar on the VIDEO dataset, with training times starting around 20 minutes, starting to increase at 2048 extra samples (to 24 minutes) and quickly above thereafter. This means that the proposed method can be used with zero to little additional cost in practice, unlike data augmentation methods. It is also clear that GRU4Rec can work just as well with a few thousands of negative examples as with the whole itemset, thus it can be kept scalable.",
+      "Preliminary experiments (Table~) show additional slight improvements in recall@20 and slight decrease in MRR@20 for most of the datasets. However, for the CLASS dataset both recall and MRR are increased significantly when unified embeddings are used (+18.74\\% and +29.44\\% in recall and MRR respectively, compared to the model trained without embeddings). Unified embeddings have the additional benefit of reducing the overall memory footprint and the model size by a factor of \\sim4.",
+      "We extend this sampling with an option for additional samples and argue that this is crucial for the increased recommendation accuracy we achieve (up to 53\\% improvement). In each training step, GRU4Rec takes the item of the current event in the session -- represented by a one-hot vector -- as an input. The output of the network is a set of scores over the items, corresponding to their likelihood of being the next item in the session.",
+      "Therefore GRU4Rec uses a sampling mechanism and computes the scores for only a subset of the items during training. Instead of making a forward and backward pass with one training example only and then moving to the next, the network is fed with a bundle of examples and is trained on the mean gradient. This common practice is called mini-batch training and has several benefits, e.g.\\ utilizing the parallelization capabilities of current hardware better, thus training faster, and producing more stable gradients than stochastic gradient training and thus converging faster."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 provides a detailed table of Recall@20 scores for different methods and datasets, which directly answers the question. Text 0 discusses improvements in accuracy, which is relevant to understanding the context of the results.\",\n    \"Answer\": \"The combination of BPR-max method and the VIDXL dataset achieved the highest Recall@20 score of 0.8058. This is 18.37% higher compared to the original GRU4Rec model's score of 0.6831.\"\n}"
+  },
+  "2": {
+    "question": "What is the performance of GRU4Rec relative to the baseline in terms of watch time?",
+    "ground_truth": "GRU4Rec has a slightly higher performance than the baseline in terms of watch time.",
+    "selected_figures_names": [
+      "1706.03847v3-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure2-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Table3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the relative performance of GRU4Rec in terms of watch time, video plays, and clicks, which directly answers the question. Text 0 provides additional context on the performance gain of GRU4Rec over the baseline.",
+    "answer": "The performance of GRU4Rec relative to the baseline in terms of watch time is slightly above 100%, indicating a performance gain.",
+    "text_chunks": [
+      "Results: Figure~ shows the relative performance gain of GRU4Rec over the complex logic. The error bars represent the confidence interval at p=0.05. GRU4Rec outperforms the baseline in both prediction modes.",
+      "The trend is similar on the VIDEO dataset, with training times starting around 20 minutes, starting to increase at 2048 extra samples (to 24 minutes) and quickly above thereafter. This means that the proposed method can be used with zero to little additional cost in practice, unlike data augmentation methods. It is also clear that GRU4Rec can work just as well with a few thousands of negative examples as with the whole itemset, thus it can be kept scalable.",
+      "Therefore GRU4Rec uses a sampling mechanism and computes the scores for only a subset of the items during training. Instead of making a forward and backward pass with one training example only and then moving to the next, the network is fed with a bundle of examples and is trained on the mean gradient. This common practice is called mini-batch training and has several benefits, e.g.\\ utilizing the parallelization capabilities of current hardware better, thus training faster, and producing more stable gradients than stochastic gradient training and thus converging faster.",
+      "The third group is served by GRU4Rec in ``sequence mode'' where GRU4Rec generates a sequence of items based on the session so far. The sequence is generated greedily, i.e.\\ the algorithm assumes that its next best guesses were correct so far. Bots and power users are filtered from the measurement as they can skew the results.",
+      "The big accuracy improvement comes from the combination of additional samples and the loss functions (fixed cross-entropy, TOP1-max and BPR-max). Table~ showcases our most important results. Besides the original version of GRU4Rec and the item-kNN, we included results with cross-entropy (XE) loss without additional sampling to confirm that the fixed cross-entropy loss still performs just slightly better than TOP1.",
+      "The former introduces some noise, while the latter does not allow the separated use of the transformation and the loss, but both methods stabilize the loss. We did not observe any differences in the results of the two variants. Ranking losses: TOP1 \\& BPR GRU4Rec offers two loss functions based on pairwise losses.",
+      "Users are divided into three groups. The first group is served by the baseline logic. The second group is served by GRU4Rec in ``next best'' mode, meaning that the algorithm shows recommendations that are very likely to be the next in the user's session.",
+      "next time (e.g.\\ if r_j was negative, moving it towards zero decreases the difference with r_i). The score regularization in TOP1 is very beneficial to the overall learning process, so even though the loss might not be theoretically optimal, it can achieve good results. GRU4Rec support two forms of regularization with every loss: dropout and \\ell_2 regularization of the model parameters."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the relative performance of GRU4Rec in terms of watch time, video plays, and clicks, which directly answers the question. Text 0 provides additional context on the performance gain of GRU4Rec over the baseline.\",\n    \"Answer\": \"The performance of GRU4Rec relative to the baseline in terms of watch time is slightly above 100%, indicating a performance gain.\"\n}"
+  },
+  "3": {
+    "question": "Which dataset contains the most interactions (events) in the training set and how much larger is it compared to the dataset with the least interactions in the training set?",
+    "ground_truth": "The VIDXL dataset contains the most interactions (events) in the training set with 69,312,698 events. This is roughly 7.7 times larger than the RSC15 dataset, which has the least interactions (9,011,321) in the training set. ",
+    "selected_figures_names": [
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Table2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 provides the number of events in the training set for each dataset, which is necessary to determine which dataset has the most interactions. Text 3 describes the CLASS dataset, which is relevant for understanding its context.",
+    "answer": "The VIDXL dataset contains the most interactions in the training set with 69,312,698 events. It is 60,301,377 events larger than the CLASS dataset, which has the least interactions with 9,011,321 events.",
+    "text_chunks": [
+      "Please note the logarithmic scale. The actual training time depends on not just the dataset, but on the model parameters as well (especially mini-batch size) and how certain operators used for computing the loss are supported by the framework. The trend, however, is similar for all losses.",
+      "Preliminary experiments (Table~) show additional slight improvements in recall@20 and slight decrease in MRR@20 for most of the datasets. However, for the CLASS dataset both recall and MRR are increased significantly when unified embeddings are used (+18.74\\% and +29.44\\% in recall and MRR respectively, compared to the model trained without embeddings). Unified embeddings have the additional benefit of reducing the overall memory footprint and the model size by a factor of \\sim4.",
+      "The trend is similar on the VIDEO dataset, with training times starting around 20 minutes, starting to increase at 2048 extra samples (to 24 minutes) and quickly above thereafter. This means that the proposed method can be used with zero to little additional cost in practice, unlike data augmentation methods. It is also clear that GRU4Rec can work just as well with a few thousands of negative examples as with the whole itemset, thus it can be kept scalable.",
+      "Finally, CLASS is a proprietary dataset containing item page view events from an online classified site. Datasets were subjugated to minor preprocessing then split into train and test sets so that a whole session either belongs to the train or to the test set. The split is based on the time of the first event of the sessions.",
+      "If the number of items is large, the small sample size further hinders the chance of including all of the high scoring negative examples. (2) Mini-batch size has a direct effect on the training. E.g.\\ we found that training with smaller mini-batch sizes (30-100) produces more accurate models, but training with larger ones is faster on the GPU due to parallelization.",
+      "Unlike our solutions, data augmentation greatly increases training times. Data augmentation and our improvements are not mutually exclusive, thus it is possible that by combining the two methods, even better results can be achieved. A recent paper proposes the Bayesian version of GRU4Rec and reports \\sim0.61 and \\sim0.25 in recall@20 and MRR@20 when using 100 units.",
+      "The figure depicts the median negative gradient w.r.t.\\ the target score in two cases, measured on a dataset sample during the 1^{st and 10^{th epochs (i.e.\\ beginning and end of the training): (left) no additional samples were used, only the other examples from a mini-batch of size 32; (middle \\& right) 2048 additional negative samples were added. The rightmost figure focuses on the first 200 ranks of the figure in the middle. The gradient is slightly higher for BPR when there are more relevant samples (i.e.\\ high ranks).",
+      "For example, the full training of the network is around 6-7 minutes, which does not increase with even 512 extra samples. At the point of diminishing returns, i.e.\\ at 2048 extra samples, training time is still around 7-8 minutes, which is only a slight increase. After that, training times grow quickly, due to exceeding the parallelization capabilities of the GPU we used."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 provides the number of events in the training set for each dataset, which is necessary to determine which dataset has the most interactions. Text 3 describes the CLASS dataset, which is relevant for understanding its context.\",\n    \"Answer\": \"The VIDXL dataset contains the most interactions in the training set with 69,312,698 events. It is 60,301,377 events larger than the CLASS dataset, which has the least interactions with 9,011,321 events.\"\n}"
+  },
+  "4": {
+    "question": "What is the purpose of negative sampling?",
+    "ground_truth": "Negative sampling is a technique used to reduce the number of negative examples that need to be considered during training.",
+    "selected_figures_names": [
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Figure2-1.png",
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 illustrates the concept of mini-batch based negative sampling, which is directly related to the question. Text 3 explains the purpose of negative sampling, emphasizing the need for high-scoring negative samples to produce high gradients, which is crucial for learning.",
+    "answer": "The purpose of negative sampling is to provide high-scoring negative samples that produce high gradients, which are essential for effective learning in models using pairwise losses. This helps the model learn to distinguish between target items and negative samples.",
+    "text_chunks": [
+      "Mini-batch sampling is basically a form of popularity-based sampling, since the training iterates through all events, thus the probability of an item acting as a negative sample is proportional to its support. The problem with popularity-based sampling is that learning can slow down after the algorithm learns to (generally) rank target items above popular ones, and thus can still be inaccurate for ranking long tail high scoring items. On the other hand, uniform sampling slows down learning, due to the high number of low scoring negative samples, but might produce an overall more accurate model if trained indefinitely.",
+      "This means that even if all negative samples would be relevant, their updates would still diminish as their number grows. \\caption{Median negative gradients of BPR and BPR-max w.r.t.\\ the target score against the rank of the target item. Left: only minibatch samples are used (minibatch size: 32); Center: 2048 additional negative samples were added to the minibatch samples; Right: same setting as the center, focusing on ranks 0-200.",
+      "For example, when comparing a niche target to a very popular sample -- especially during the early phase of learning -- the target score might be much lower than the sample score. We concentrated on the gradients w.r.t.\\ the target score, but a similar issue can be observed for the gradients on the negative scores. The gradient w.r.t.\\ the score of a negative sample is the gradient of the pairwise loss between the target and the sample divided by the number of negative samples.",
+      "With pairwise losses, one generally wants to have negative samples with high scores, as those samples produce high gradients. Or intuitively, if the score of the negative sample is already well below that of the target, there is nothing to learn from that negative sample anymore. For this discussion we will denote samples where r_j\\ll r_i irrelevant.",
+      "GRU4Rec introduced mini-batch based sampling . For each example in the mini-batch, the other examples of the same mini-batch serve as negative examples (see Figure~). This method is practical from an implementation point of view and can be also implemented efficiently for GPUs.",
+      "For example the gradient of BPR-max w.r.t.\\ a negative sample's score is as follows: Figure~ depicts how the gradients of BPR and BPR-max behave given the rank of the target item. The rank of the target is the number of negative scores exceeding it, e.g.\\ rank 0 means that the target score is higher than all sample scores. Lower rank means that there are fewer negative samples that are relevant.",
+      "The first part aims to push the target score above the score of the samples, while the second part lowers the score of negative samples towards zero. The latter acts as a regularizer, but instead of constraining the model weights directly, it penalizes high scores on the negative examples. Since all items act as a negative score in one training example or another, it generally pushes the scores down.",
+      "The relative importance of negative samples j and k is \\frac{\\sigma(r_i-r_j)s_j{\\sigma(r_i-r_k)s_k=\\frac{e^{r_j+e^{-r_i+r_j+r_k{e^{r_k+e^{-r_i+r_j+r_k, which behaves like softmax weights if r_i\\gg r_j+r_k or if both r_i and r_k are small. Otherwise it is a smoothed softmax. This means that while r_i is small, the weights are distributed more evenly, yet clear emphasis will be given to higher sample scores."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 illustrates the concept of mini-batch based negative sampling, which is directly related to the question. Text 3 explains the purpose of negative sampling, emphasizing the need for high-scoring negative samples to produce high gradients, which is crucial for learning.\",\n    \"Answer\": \"The purpose of negative sampling is to provide high-scoring negative samples that produce high gradients, which are essential for effective learning in models using pairwise losses. This helps the model learn to distinguish between target items and negative samples.\"\n}"
+  },
+  "5": {
+    "question": "How does the training time of the different losses change as the number of additional samples increases?",
+    "ground_truth": "The training time of all losses increases as the number of additional samples increases.",
+    "selected_figures_names": [
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure6-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 shows the training times for different losses as the number of additional samples increases, which directly addresses the question. Text 0 provides context on how training time changes with additional samples, mentioning the point of diminishing returns and the impact on training time.",
+    "answer": "As the number of additional samples increases, the training time for all losses initially remains stable but starts to increase significantly after a certain point. This is due to the limitations in parallelization capabilities, as shown in Image 3.",
+    "text_chunks": [
+      "For example, the full training of the network is around 6-7 minutes, which does not increase with even 512 extra samples. At the point of diminishing returns, i.e.\\ at 2048 extra samples, training time is still around 7-8 minutes, which is only a slight increase. After that, training times grow quickly, due to exceeding the parallelization capabilities of the GPU we used.",
+      "BPR-max improves with more samples all the way, but slightly loses accuracy when all items are used. Adding extra samples increases computational cost, yet due to easy parallelization on modern GPUs most of this cost is alleviated. Figure~ shows the training times at different sample sizes.",
+      "On the other hand, all three of the other losses react well to adding more samples. The point of diminishing returns is around a few thousand of extra samples for cross-entropy. TOP1-max starts to slightly lose accuracy after that.",
+      "Please note the logarithmic scale. The actual training time depends on not just the dataset, but on the model parameters as well (especially mini-batch size) and how certain operators used for computing the loss are supported by the framework. The trend, however, is similar for all losses.",
+      "The trend is similar on the VIDEO dataset, with training times starting around 20 minutes, starting to increase at 2048 extra samples (to 24 minutes) and quickly above thereafter. This means that the proposed method can be used with zero to little additional cost in practice, unlike data augmentation methods. It is also clear that GRU4Rec can work just as well with a few thousands of negative examples as with the whole itemset, thus it can be kept scalable.",
+      "As we discussed earlier, this latter scenario is a more theoretical one, because it is not scalable. As theory suggests (see Section~), the TOP1 loss does not cope well with lots of samples. There is a slight increase in performance with a few extra samples, as the chance of having relevant samples increases; but performance quickly degrades as sample size grows, thus lots of irrelevant samples are included.",
+      "Adding more samples naturally increases the complexity, since N_O increases from N_B to N_A+N_B. However, the computations are easily parallelizable, thus there is no actual increase in the training time on modern GPUs up to a certain sample size (see Section~). The efficient implementation of this sampling however is not trivial.",
+      "Unlike our solutions, data augmentation greatly increases training times. Data augmentation and our improvements are not mutually exclusive, thus it is possible that by combining the two methods, even better results can be achieved. A recent paper proposes the Bayesian version of GRU4Rec and reports \\sim0.61 and \\sim0.25 in recall@20 and MRR@20 when using 100 units."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 shows the training times for different losses as the number of additional samples increases, which directly addresses the question. Text 0 provides context on how training time changes with additional samples, mentioning the point of diminishing returns and the impact on training time.\",\n    \"Answer\": \"As the number of additional samples increases, the training time for all losses initially remains stable but starts to increase significantly after a certain point. This is due to the limitations in parallelization capabilities, as shown in Image 3.\"\n}"
+  },
+  "6": {
+    "question": "Which dataset has the highest Recall@20 and MRR@20?",
+    "ground_truth": "VIDXL has the highest Recall@20 and MRR@20.",
+    "selected_figures_names": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Table2-1.png",
+      "1706.03847v3-Figure5-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Figure2-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Figure6-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 provides detailed comparison of Recall@20 and MRR@20 across different datasets and methods, highlighting the best results. Text 3 confirms the improvements in Recall@20 and MRR@20 with unified embeddings, which is relevant for identifying the highest values.",
+    "answer": "The VIDXL dataset has the highest Recall@20 (0.8110) and MRR@20 (0.5099).",
+    "text_chunks": [
+      "We essentially devise a new class of loss functions that combines learnings from the deep learning and the learning to rank literature. Experimental results on several datasets coming from industry validate these improvements by showing significant increase in recommendation accuracy measured by Mean Reciprocal Rank (MRR) and Recall@20. With these improvements the difference between RNNs and conventional memory-based collaborative filtering jumps to 53\\% in terms of MRR and Recall@20, demonstrating the potential that deep learning methods bring to the area of Recommender Systems.",
+      "Preliminary experiments (Table~) show additional slight improvements in recall@20 and slight decrease in MRR@20 for most of the datasets. However, for the CLASS dataset both recall and MRR are increased significantly when unified embeddings are used (+18.74\\% and +29.44\\% in recall and MRR respectively, compared to the model trained without embeddings). Unified embeddings have the additional benefit of reducing the overall memory footprint and the model size by a factor of \\sim4.",
+      "The second metric used in the experiments is MRR@20 (Mean Reciprocal Rank). That is the average of reciprocal ranks of the desired items. The reciprocal rank is set to zero if the rank is above 20.",
+      "The increase with sampling and the proper loss function is stunning as the best results exceed the accuracy of the original GRU4Rec by 18-37.5\\% and that of item-kNN by up to 55\\%. BPR-max performs similarly (2 of 4) or better (2 of 4; +2-6\\% improvement) than cross-entropy when extra samples are used for both method. On RSC15, reported \\sim0.685 and \\sim0.29 in recall@20 and MRR@20 respectively using data augmentation.",
+      "Unlike our solutions, data augmentation greatly increases training times. Data augmentation and our improvements are not mutually exclusive, thus it is possible that by combining the two methods, even better results can be achieved. A recent paper proposes the Bayesian version of GRU4Rec and reports \\sim0.61 and \\sim0.25 in recall@20 and MRR@20 when using 100 units.",
+      "While this evaluation for VIDXL overestimates the performance, the comparison of algorithms remain fair . As recommender systems can only recommend a few items at once, the actual item a user might pick should be amongst the first few items of the list. Therefore, our primary evaluation metric is recall@20 that is the proportion of cases having the desired item amongst the top-20 items in all test cases.",
+      "Recall does not consider the actual rank of the item as long as it is amongst the top-N. This models certain practical scenarios well where there is no highlighting of recommendations and the absolute order does not matter. Recall also usually correlates well with important online KPIs, such as click-through rate (CTR).",
+      "MRR takes into account the rank of the item, which is important in cases where the order of recommendations matter (e.g.\\ the lower ranked items are only visible after scrolling). The natural baseline we use is the original GRU4Rec algorithm, upon which we aim to improve. We consider the results with the originally proposed TOP1 loss and tanh activation function on the output to be the baseline."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 provides detailed comparison of Recall@20 and MRR@20 across different datasets and methods, highlighting the best results. Text 3 confirms the improvements in Recall@20 and MRR@20 with unified embeddings, which is relevant for identifying the highest values.\",\n    \"Answer\": \"The VIDXL dataset has the highest Recall@20 (0.8110) and MRR@20 (0.5099).\"\n}"
+  },
+  "7": {
+    "question": "How does the addition of negative samples affect the gradient of BPR and BPR-max with respect to the target score?",
+    "ground_truth": "The addition of negative samples increases the gradient of BPR and BPR-max with respect to the target score.",
+    "selected_figures_names": [
+      "1706.03847v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1706.03847v3-Figure2-1.png",
+      "1706.03847v3-Figure4-1.png",
+      "1706.03847v3-Table1-1.png",
+      "1706.03847v3-Figure3-1.png",
+      "1706.03847v3-Figure1-1.png",
+      "1706.03847v3-Table3-1.png",
+      "1706.03847v3-Figure6-1.png",
+      "1706.03847v3-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 visually shows the effect of adding negative samples on the gradient of BPR and BPR-max, while Text 1 explains the differences in gradient behavior with and without additional negative samples.",
+    "answer": "The addition of negative samples increases the gradient of BPR and BPR-max with respect to the target score. The gradient is higher when more relevant samples are present, as shown in the middle and right figures of Image 0. Text 1 confirms that the gradient is slightly higher for BPR when there are more relevant samples.",
+    "text_chunks": [
+      "This means that even if all negative samples would be relevant, their updates would still diminish as their number grows. \\caption{Median negative gradients of BPR and BPR-max w.r.t.\\ the target score against the rank of the target item. Left: only minibatch samples are used (minibatch size: 32); Center: 2048 additional negative samples were added to the minibatch samples; Right: same setting as the center, focusing on ranks 0-200.",
+      "The figure depicts the median negative gradient w.r.t.\\ the target score in two cases, measured on a dataset sample during the 1^{st and 10^{th epochs (i.e.\\ beginning and end of the training): (left) no additional samples were used, only the other examples from a mini-batch of size 32; (middle \\& right) 2048 additional negative samples were added. The rightmost figure focuses on the first 200 ranks of the figure in the middle. The gradient is slightly higher for BPR when there are more relevant samples (i.e.\\ high ranks).",
+      "For example the gradient of BPR-max w.r.t.\\ a negative sample's score is as follows: Figure~ depicts how the gradients of BPR and BPR-max behave given the rank of the target item. The rank of the target is the number of negative scores exceeding it, e.g.\\ rank 0 means that the target score is higher than all sample scores. Lower rank means that there are fewer negative samples that are relevant.",
+      "As r_i becomes higher, the focus shifts quickly to the samples with high scores. This is an ideal behaviour. The gradient w.r.t.\\ a negative sample -- with both the BPR-max and TOP1-max -- is proportional to the softmax score of the example, meaning that only the items, near the maximum will be updated.",
+      "Of course, if all samples are irrelevant, the gradient becomes near zero, but this is not a problem, since if the target score is greater than all sample scores, there is nothing to be learned. Unfortunately, the sensitivity to large sample scores of TOP1 is still an issue as it is the consequence of the TOP1 pairwise loss and not the aggregation. BPR-max: Going back to the probability interpretation of BPR, the goal is to maximize the probability of the target score being higher than the maximal sample score r_{\\mathrm{max=\\max_{j{r_j.",
+      "This is beneficial, because if the score of a negative sample is low, it doesn't need to be updated. If the score of a sample is much higher than that of the others it will be the only one updated and the gradient will coincide with the gradient of the pairwise loss between the target and the sample score. In a more balanced setting the gradient is between the aforementioned gradient and 0.",
+      "For example, when comparing a niche target to a very popular sample -- especially during the early phase of learning -- the target score might be much lower than the sample score. We concentrated on the gradients w.r.t.\\ the target score, but a similar issue can be observed for the gradients on the negative scores. The gradient w.r.t.\\ the score of a negative sample is the gradient of the pairwise loss between the target and the sample divided by the number of negative samples.",
+      "The point of vanishing is relative to the total sample size. With small sample size, BPR's gradient starts vanishing around rank 5 (the BPR-max does not vanish until rank 0); meanwhile, with more samples, the BPR gradient is very low, even for rank 100-500 (again, the gradient BPR-max starts decreasing significantly later). This means that BPR can hardly push target scores up in the ranking after a certain point, which comes earlier as the number of sample size increases."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 visually shows the effect of adding negative samples on the gradient of BPR and BPR-max, while Text 1 explains the differences in gradient behavior with and without additional negative samples.\",\n    \"Answer\": \"The addition of negative samples increases the gradient of BPR and BPR-max with respect to the target score. The gradient is higher when more relevant samples are present, as shown in the middle and right figures of Image 0. Text 1 confirms that the gradient is slightly higher for BPR when there are more relevant samples.\"\n}"
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "0": {
+    "question": "Which system from Ortiz et al. achieved the highest BLEU and METEOR scores, and how does it compare to the CCA inference algorithm in terms of performance?",
+    "ground_truth": "The SMT system from Ortiz et al. achieved the highest BLEU score (43.7) and METEOR score (35.6) among their tested systems. While the SMT system outperforms the CCA inference algorithm in terms of BLEU score, the CCA algorithm achieves a slightly higher METEOR score (25.6 vs 25.5).",
+    "selected_figures_names": [
+      "1608.02784v2-Figure5-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1608.02784v2-Figure5-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 3,
+    "rationale": "Image 3 provides a visual comparison of BLEU scores for SMT and CCA, which is relevant for understanding performance differences. Text 3 gives specific BLEU and METEOR scores for both systems, allowing for a direct comparison.",
+    "answer": "The SMT system from Ortiz et al. achieved the highest BLEU score of 49.70 and a METEOR score of 40.10. In comparison, the CCA inference algorithm had a BLEU score of 41.80 and a METEOR score of 33.10, indicating that the SMT system performed better in terms of these metrics.",
+    "text_chunks": [
+      "This experiment is similar to the one done by Ortiz et al. The ranking results are given in Table~. The results show that our system tends to score higher for images which are highly ranked (by both the SMT system and CCA), but tends to score lower for images which are lower ranked. In addition, we checked the MT evaluation scores for highly ranked captions both for SMT and CCA (ranking larger than 4).",
+      "\\newcite{ortiz2015learning partially measure the success of their system by comparing BLEU and METEOR scores of their different systems while using the descriptions given in the dataset as a reference set. The scores for their different systems are given in Table~. They compare their system (SMT, based on phrase-based machine translation) against several baselines: model), but it performed badly, giving a BLEU score of 10.20 and a METEOR score of 15.20 with inappropriate captions. It seems like \\textsc{Seq2Seq models is unfit for this dataset, perhaps because of its size.",
+      "The average reference BLEU score is 24.1 and the average METEOR score is 20.0, a significant drop compared to the machine translation system of \\newcite{ortiz2015learning. We concluded from this result that the SMT system is not ``creatively'' mapping the images to their corresponding descriptions. It relies heavily on the training set captions, and learns how to map images to sentences in a manner which does not generalize very well outside of the training set.",
+      "For SMT, the BLEU scores are 49.70 (METEOR 40.10) and for CCA it is 41.80 (METEOR 33.10). This is not the result of images in SMT being ranked higher, as the average ranking among these images is 4.18 for the SMT system and 4.25 for CCA. The lower CCA score again indicates that our system gives captions which are not necessarily aligned with the references, but still correct.",
+      "It also highlights the flaw with using MT evaluation metrics for this dataset. Figure~ also demonstrates that the correlation between BLEU scores and human ranking is not high. More specifically, in that plot, the correlation between the x-axis (ranking) and y-axis (BLEU scores) for CCA is 0.3 and for the SMT system 0.31.",
+      "Another indication that our system creates a more diverse set of captions is that the number of {\\em unique captions it generates for the test set is significantly larger than that of the SMT system by Ortiz et al. The SMT system generates 359 unique captions (out of 2,004 instances in the test set), while CCA generates 496 captions, an increase of 38.1\\%. To test this hypothesis about caption diversity, we conducted the following human experiment.",
+      "See also \\newcite{rastogi2016weighting for similar results. Our system does not score as high as their machine translation system. \\caption{Examples of outputs from the machine translation system and from CCA inference.",
+      "In our CCA learning algorithm, we also need to decide on the value of m. We varied m between 30 and 300 (in steps of 10) and tuned its value on the development set by maximizing BLEU score against the set of references. package from \\url{https://github.com/jhclark/multeval. Interestingly enough, the BLEU scores did not change that much (they usually were within one point of each other for sufficiently large m), pointing to a stability of the algorithm with respect to the number of dimensions used."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 3,\n    \"Rationale\": \"Image 3 provides a visual comparison of BLEU scores for SMT and CCA, which is relevant for understanding performance differences. Text 3 gives specific BLEU and METEOR scores for both systems, allowing for a direct comparison.\",\n    \"Answer\": \"The SMT system from Ortiz et al. achieved the highest BLEU score of 49.70 and a METEOR score of 40.10. In comparison, the CCA inference algorithm had a BLEU score of 41.80 and a METEOR score of 33.10, indicating that the SMT system performed better in terms of these metrics.\"\n}"
+  },
+  "1": {
+    "question": "What is the difference between the outputs of the machine translation system (SMT) and the CCA inference?",
+    "ground_truth": "The SMT outputs are literal translations of the images, while the CCA outputs take into account the context of the images and generate more natural-sounding descriptions.",
+    "selected_figures_names": [
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Figure5-1.png",
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 provides a visual comparison of BLEU scores and human ratings for both SMT and CCA, which is relevant for understanding differences in their outputs. Text 2 discusses BLEU and METEOR scores for both systems, highlighting differences in alignment with references.",
+    "answer": "The SMT system has higher BLEU and METEOR scores compared to CCA, indicating better alignment with reference captions. However, CCA generates more diverse captions, which may not align as closely with references but are still correct.",
+    "text_chunks": [
+      "See also \\newcite{rastogi2016weighting for similar results. Our system does not score as high as their machine translation system. \\caption{Examples of outputs from the machine translation system and from CCA inference.",
+      "The top three images give examples where the CCA inference outputs were rated highly by human evaluations (4 or 5), and the SMT ones were rated poorly (1 or 2). The bottom three pictures give the reverse case. \\end{figure*",
+      "For SMT, the BLEU scores are 49.70 (METEOR 40.10) and for CCA it is 41.80 (METEOR 33.10). This is not the result of images in SMT being ranked higher, as the average ranking among these images is 4.18 for the SMT system and 4.25 for CCA. The lower CCA score again indicates that our system gives captions which are not necessarily aligned with the references, but still correct.",
+      "Figure~ describes six examples in which the human raters rated the SMT system highly and CCA poorly and vice-versa. Conclusion We described a technique to predict structures from complex input spaces to complex output spaces based on canonical correlation analysis. Our approach projects the input space into a low-dimensional representation, and then converts it back into an instance in the output space.",
+      "Another indication that our system creates a more diverse set of captions is that the number of {\\em unique captions it generates for the test set is significantly larger than that of the SMT system by Ortiz et al. The SMT system generates 359 unique captions (out of 2,004 instances in the test set), while CCA generates 496 captions, an increase of 38.1\\%. To test this hypothesis about caption diversity, we conducted the following human experiment.",
+      "This experiment is similar to the one done by Ortiz et al. The ranking results are given in Table~. The results show that our system tends to score higher for images which are highly ranked (by both the SMT system and CCA), but tends to score lower for images which are lower ranked. In addition, we checked the MT evaluation scores for highly ranked captions both for SMT and CCA (ranking larger than 4).",
+      "It also highlights the flaw with using MT evaluation metrics for this dataset. Figure~ also demonstrates that the correlation between BLEU scores and human ranking is not high. More specifically, in that plot, the correlation between the x-axis (ranking) and y-axis (BLEU scores) for CCA is 0.3 and for the SMT system 0.31.",
+      "The average reference BLEU score is 24.1 and the average METEOR score is 20.0, a significant drop compared to the machine translation system of \\newcite{ortiz2015learning. We concluded from this result that the SMT system is not ``creatively'' mapping the images to their corresponding descriptions. It relies heavily on the training set captions, and learns how to map images to sentences in a manner which does not generalize very well outside of the training set."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 provides a visual comparison of BLEU scores and human ratings for both SMT and CCA, which is relevant for understanding differences in their outputs. Text 2 discusses BLEU and METEOR scores for both systems, highlighting differences in alignment with references.\",\n    \"Answer\": \"The SMT system has higher BLEU and METEOR scores compared to CCA, indicating better alignment with reference captions. However, CCA generates more diverse captions, which may not align as closely with references but are still correct.\"\n}"
+  },
+  "2": {
+    "question": "Which system, CCA or SMT, generally performs better when the caption is of low quality (average rank less than 3)?",
+    "ground_truth": "It is difficult to definitively say which system performs better for low-quality captions based solely on the provided data. However, we can observe some trends:\n\n1. When the SMT average rank is below 3, the CCA average rank is also lower (1.64 vs. 1.77).\n2. When the SMT average rank is 3 or higher, the CCA average rank is significantly higher (3.54 vs. 3.46).\n\nThis suggests that CCA might perform relatively better for low-quality captions, but more data and analysis are needed for a conclusive answer.",
+    "selected_figures_names": [
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 6,
+    "rationale": "Image 2 provides a table showing average rankings by human judges for CCA and SMT when captions are rated below 3. Text 6 explains the meaning of scores, indicating that scores below 3 denote inadequate descriptions.",
+    "answer": "SMT generally performs better than CCA when the caption is of low quality (average rank less than 3), as indicated by higher average rankings in the table.",
+    "text_chunks": [
+      "For SMT, the BLEU scores are 49.70 (METEOR 40.10) and for CCA it is 41.80 (METEOR 33.10). This is not the result of images in SMT being ranked higher, as the average ranking among these images is 4.18 for the SMT system and 4.25 for CCA. The lower CCA score again indicates that our system gives captions which are not necessarily aligned with the references, but still correct.",
+      "This experiment is similar to the one done by Ortiz et al. The ranking results are given in Table~. The results show that our system tends to score higher for images which are highly ranked (by both the SMT system and CCA), but tends to score lower for images which are lower ranked. In addition, we checked the MT evaluation scores for highly ranked captions both for SMT and CCA (ranking larger than 4).",
+      "The top three images give examples where the CCA inference outputs were rated highly by human evaluations (4 or 5), and the SMT ones were rated poorly (1 or 2). The bottom three pictures give the reverse case. \\end{figure*",
+      "Another indication that our system creates a more diverse set of captions is that the number of {\\em unique captions it generates for the test set is significantly larger than that of the SMT system by Ortiz et al. The SMT system generates 359 unique captions (out of 2,004 instances in the test set), while CCA generates 496 captions, an increase of 38.1\\%. To test this hypothesis about caption diversity, we conducted the following human experiment.",
+      "Figure~ describes six examples in which the human raters rated the SMT system highly and CCA poorly and vice-versa. Conclusion We described a technique to predict structures from complex input spaces to complex output spaces based on canonical correlation analysis. Our approach projects the input space into a low-dimensional representation, and then converts it back into an instance in the output space.",
+      "The average reference BLEU score is 24.1 and the average METEOR score is 20.0, a significant drop compared to the machine translation system of \\newcite{ortiz2015learning. We concluded from this result that the SMT system is not ``creatively'' mapping the images to their corresponding descriptions. It relies heavily on the training set captions, and learns how to map images to sentences in a manner which does not generalize very well outside of the training set.",
+      "A score of 1 or 2 means that the caption likely does not adequately describe the scene. A score of 3 usually means that the caption describes some salient component in the scene, but perhaps not the most important one. Scores of 4 and 5 usually denote good captions that adequately describe the corresponding scenes.",
+      "It also highlights the flaw with using MT evaluation metrics for this dataset. Figure~ also demonstrates that the correlation between BLEU scores and human ranking is not high. More specifically, in that plot, the correlation between the x-axis (ranking) and y-axis (BLEU scores) for CCA is 0.3 and for the SMT system 0.31."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 6,\n    \"Rationale\": \"Image 2 provides a table showing average rankings by human judges for CCA and SMT when captions are rated below 3. Text 6 explains the meaning of scores, indicating that scores below 3 denote inadequate descriptions.\",\n    \"Answer\": \"SMT generally performs better than CCA when the caption is of low quality (average rank less than 3), as indicated by higher average rankings in the table.\"\n}"
+  },
+  "3": {
+    "question": "What is the purpose of the singular value decomposition step in the CCA algorithm?",
+    "ground_truth": "The singular value decomposition step is used to find the projection matrices U and V.",
+    "selected_figures_names": [
+      "1608.02784v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Figure5-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "The image provides a detailed algorithmic breakdown of the CCA process, including the SVD step. Text chunk 1 explains the purpose of SVD in CCA, which is to compute linear projections of random vectors that have maximal correlation.",
+    "answer": "The singular value decomposition (SVD) step in the CCA algorithm is used to compute linear projections of the random vectors that have maximal correlation. It helps in reducing the dimensionality of the data while preserving the relationships between the two sets of variables.",
+    "text_chunks": [
+      "The problem of CCA can be solved by applying singular value decomposition (SVD) on a cross-covariance matrix between the two random vectors X and Y, normalized by the covariance matrices of X and Y. More specifically, CCA is solved by applying thin singular value decomposition (SVD) on the empirical version of the following matrix: \\noindent where E[\\cdot] is the expectation operator and \\Sigma is a diagonal matrix of size m \\times m for some small m. Since this version of CCA requires inverting matrices of potentially large dimension (d \\times d and d'",
+      "Introduction Canonical correlation analysis (CCA) is a method to reduce the dimensionality of multiview data, introduced by \\newcite{hotelling1935canonical. It takes two random vectors and computes their corresponding empirical cross-covariance matrix. It then applies singular value decomposition (SVD) on this matrix to get linear projections of the random vectors that have maximal correlation.",
+      "\\times d'), it is often the case that only the diagonal elements from these matrices are used, as we see in Section~. CCA and its variants have been used in various contexts in NLP. They were used to derive word embeddings , derive multilingual embeddings , build bilingual lexicons , encode prior knowledge into embeddings , semantically analyze text and reduce the dimensions of text with many views . CCA is also an important sub-routine in the family of spectral algorithms for estimating structured models such as latent-variable PCFGs and HMMs or finding word clusters .",
+      "This dataset has been used for description generation , sentence-to-scene generation and object dynamics prediction so far. Learning and Decoding We now describe the learning algorithm, based on CCA, and the corresponding decoding algorithm when the output space is text. Learning Based on Canonical Correlation Analysis We assume two structured spaces, an input space \\inx and an output space \\outy.",
+      "In our CCA learning algorithm, we also need to decide on the value of m. We varied m between 30 and 300 (in steps of 10) and tuned its value on the development set by maximizing BLEU score against the set of references. package from \\url{https://github.com/jhclark/multeval. Interestingly enough, the BLEU scores did not change that much (they usually were within one point of each other for sufficiently large m), pointing to a stability of the algorithm with respect to the number of dimensions used.",
+      "The value of m should be relatively small compared to d and d'. We then choose u and v to be: \\end{center \\caption{Demonstration of CCA inference. An object from the input space \\inx (the image on the left x) is mapped to a unit vector.",
+      "Figure~ gives a description of our CCA algorithm in the context of this problem. The Abstract Scenes Dataset consists of 10,020 scenes, each represented as a set of clipart objects placed in different positions and sizes in a background image (consisting of a grassy area and sky). Cliparts can appear in different ways, for example, the boy and the girl (cliparts 18 and 19), can be depicted sad, angry, sitting or running.",
+      "The procedure that CCA follows finds a projection of the two views in a shared space of dimension m, such that the correlation between the two views is maximized at each coordinate, and there is minimal redundancy between the coordinates of each view. This means that CCA solves the following sequence of optimization problems for j \\in \\{1 ,\\ldots, m \\ where a_j \\in \\mathbb{R^{1 \\times d and b_j \\in \\mathbb{R^{1 \\times d': \\noindent where \\mathrm{corr is a function that accepts two vectors and returns the Pearson correlation between the pairwise elements of the two vectors."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"The image provides a detailed algorithmic breakdown of the CCA process, including the SVD step. Text chunk 1 explains the purpose of SVD in CCA, which is to compute linear projections of random vectors that have maximal correlation.\",\n    \"Answer\": \"The singular value decomposition (SVD) step in the CCA algorithm is used to compute linear projections of the random vectors that have maximal correlation. It helps in reducing the dimensionality of the data while preserving the relationships between the two sets of variables.\"\n}"
+  },
+  "4": {
+    "question": "What is the relationship between the input space and the output space in CCA inference?",
+    "ground_truth": "The input space and the output space are related by a cosine similarity measure.",
+    "selected_figures_names": [
+      "1608.02784v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 visually demonstrates the process of CCA inference, showing how an input image is mapped to a text output. Text 3 explains the method of using CCA for structured prediction by projecting inputs and outputs to a low-dimensional space, ensuring they correspond closely.",
+    "answer": "In CCA inference, the input space and output space are related by projecting both into a low-dimensional space where corresponding inputs and outputs are close to each other. This ensures that the input is mapped to the most relevant output.",
+    "text_chunks": [
+      "Figure~ describes six examples in which the human raters rated the SMT system highly and CCA poorly and vice-versa. Conclusion We described a technique to predict structures from complex input spaces to complex output spaces based on canonical correlation analysis. Our approach projects the input space into a low-dimensional representation, and then converts it back into an instance in the output space.",
+      "The value of m should be relatively small compared to d and d'. We then choose u and v to be: \\end{center \\caption{Demonstration of CCA inference. An object from the input space \\inx (the image on the left x) is mapped to a unit vector.",
+      "This dataset has been used for description generation , sentence-to-scene generation and object dynamics prediction so far. Learning and Decoding We now describe the learning algorithm, based on CCA, and the corresponding decoding algorithm when the output space is text. Learning Based on Canonical Correlation Analysis We assume two structured spaces, an input space \\inx and an output space \\outy.",
+      "In this paper, we investigate the idea of using CCA for a full-fledged structured prediction problem. More specifically, we suggest a method in which we take a structured prediction problem training set, and then project both the inputs and the outputs to low-dimensional space. The projection ensures that inputs and outputs that correspond to each other are projected to close points in low-dimensional space.",
+      "This is indeed the recipe that the cosine similarity metric follows. In Section~ we give an additional interpretation to the use of cosine similarity, as finding the maximum aposteriori solution for a re-normalized von Mises-Fisher distribution. When the Output Space is Language While our approach to mapping from an input space to an output space through CCA is rather abstract and general, in this paper we focus in cases where the output space \\outy",
+      "The top three images give examples where the CCA inference outputs were rated highly by human evaluations (4 or 5), and the SMT ones were rated poorly (1 or 2). The bottom three pictures give the reverse case. \\end{figure*",
+      "Introduction Canonical correlation analysis (CCA) is a method to reduce the dimensionality of multiview data, introduced by \\newcite{hotelling1935canonical. It takes two random vectors and computes their corresponding empirical cross-covariance matrix. It then applies singular value decomposition (SVD) on this matrix to get linear projections of the random vectors that have maximal correlation.",
+      "The procedure that CCA follows finds a projection of the two views in a shared space of dimension m, such that the correlation between the two views is maximized at each coordinate, and there is minimal redundancy between the coordinates of each view. This means that CCA solves the following sequence of optimization problems for j \\in \\{1 ,\\ldots, m \\ where a_j \\in \\mathbb{R^{1 \\times d and b_j \\in \\mathbb{R^{1 \\times d': \\noindent where \\mathrm{corr is a function that accepts two vectors and returns the Pearson correlation between the pairwise elements of the two vectors."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 visually demonstrates the process of CCA inference, showing how an input image is mapped to a text output. Text 3 explains the method of using CCA for structured prediction by projecting inputs and outputs to a low-dimensional space, ensuring they correspond closely.\",\n    \"Answer\": \"In CCA inference, the input space and output space are related by projecting both into a low-dimensional space where corresponding inputs and outputs are close to each other. This ensures that the input is mapped to the most relevant output.\"\n}"
+  },
+  "5": {
+    "question": "What is the role of the temperature variable t in the CCA decoding algorithm?",
+    "ground_truth": "The temperature variable t controls the probability of accepting a new candidate solution y. As t decreases, the probability of accepting a worse solution decreases.",
+    "selected_figures_names": [
+      "1608.02784v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Table2-1.png",
+      "1608.02784v2-Figure4-1.png",
+      "1608.02784v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a detailed view of the CCA decoding algorithm, which includes the role of the temperature variable t. Text 0 discusses the application of singular value decomposition in CCA, which is relevant to understanding the algorithm's context.",
+    "answer": "The temperature variable t in the CCA decoding algorithm is used to control the acceptance probability of new solutions. As t decreases, the algorithm becomes more selective, reducing the likelihood of accepting worse solutions, similar to simulated annealing.",
+    "text_chunks": [
+      "The problem of CCA can be solved by applying singular value decomposition (SVD) on a cross-covariance matrix between the two random vectors X and Y, normalized by the covariance matrices of X and Y. More specifically, CCA is solved by applying thin singular value decomposition (SVD) on the empirical version of the following matrix: \\noindent where E[\\cdot] is the expectation operator and \\Sigma is a diagonal matrix of size m \\times m for some small m. Since this version of CCA requires inverting matrices of potentially large dimension (d \\times d and d'",
+      "Introduction Canonical correlation analysis (CCA) is a method to reduce the dimensionality of multiview data, introduced by \\newcite{hotelling1935canonical. It takes two random vectors and computes their corresponding empirical cross-covariance matrix. It then applies singular value decomposition (SVD) on this matrix to get linear projections of the random vectors that have maximal correlation.",
+      "This dataset has been used for description generation , sentence-to-scene generation and object dynamics prediction so far. Learning and Decoding We now describe the learning algorithm, based on CCA, and the corresponding decoding algorithm when the output space is text. Learning Based on Canonical Correlation Analysis We assume two structured spaces, an input space \\inx and an output space \\outy.",
+      "\\times d'), it is often the case that only the diagonal elements from these matrices are used, as we see in Section~. CCA and its variants have been used in various contexts in NLP. They were used to derive word embeddings , derive multilingual embeddings , build bilingual lexicons , encode prior knowledge into embeddings , semantically analyze text and reduce the dimensions of text with many views . CCA is also an important sub-routine in the family of spectral algorithms for estimating structured models such as latent-variable PCFGs and HMMs or finding word clusters .",
+      "In our CCA learning algorithm, we also need to decide on the value of m. We varied m between 30 and 300 (in steps of 10) and tuned its value on the development set by maximizing BLEU score against the set of references. package from \\url{https://github.com/jhclark/multeval. Interestingly enough, the BLEU scores did not change that much (they usually were within one point of each other for sufficiently large m), pointing to a stability of the algorithm with respect to the number of dimensions used.",
+      "= \\cos \\theta. \\end{figure* For the similarity metric, we use the cosine similarity: Figure~ describes a sketch of our CCA inference algorithm.",
+      "The value of m should be relatively small compared to d and d'. We then choose u and v to be: \\end{center \\caption{Demonstration of CCA inference. An object from the input space \\inx (the image on the left x) is mapped to a unit vector.",
+      "For SMT, the BLEU scores are 49.70 (METEOR 40.10) and for CCA it is 41.80 (METEOR 33.10). This is not the result of images in SMT being ranked higher, as the average ranking among these images is 4.18 for the SMT system and 4.25 for CCA. The lower CCA score again indicates that our system gives captions which are not necessarily aligned with the references, but still correct."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a detailed view of the CCA decoding algorithm, which includes the role of the temperature variable t. Text 0 discusses the application of singular value decomposition in CCA, which is relevant to understanding the algorithm's context.\",\n    \"Answer\": \"The temperature variable t in the CCA decoding algorithm is used to control the acceptance probability of new solutions. As t decreases, the algorithm becomes more selective, reducing the likelihood of accepting worse solutions, similar to simulated annealing.\"\n}"
+  },
+  "6": {
+    "question": "What is the relationship between BLEU score and human ranking for CCA and SMT systems?",
+    "ground_truth": "The correlation between BLEU scores and human ranking is not high for either CCA or SMT systems.",
+    "selected_figures_names": [
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1608.02784v2-Table1-1.png",
+      "1608.02784v2-Table3-1.png",
+      "1608.02784v2-Figure6-1.png",
+      "1608.02784v2-Figure3-1.png",
+      "1608.02784v2-Figure1-1.png",
+      "1608.02784v2-Figure2-1.png",
+      "1608.02784v2-Figure5-1.png",
+      "1608.02784v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 provides visual examples of CCA and SMT outputs with human evaluations, which is relevant to understanding the relationship between BLEU scores and human rankings. Text 0 discusses the correlation between BLEU scores and human rankings, specifically mentioning the correlation values for CCA and SMT systems.",
+    "answer": "The correlation between BLEU scores and human ranking is not high for both CCA and SMT systems, with correlation values of 0.3 and 0.31 respectively. This indicates that BLEU scores do not strongly align with human evaluations for these systems.",
+    "text_chunks": [
+      "It also highlights the flaw with using MT evaluation metrics for this dataset. Figure~ also demonstrates that the correlation between BLEU scores and human ranking is not high. More specifically, in that plot, the correlation between the x-axis (ranking) and y-axis (BLEU scores) for CCA is 0.3 and for the SMT system 0.31.",
+      "For SMT, the BLEU scores are 49.70 (METEOR 40.10) and for CCA it is 41.80 (METEOR 33.10). This is not the result of images in SMT being ranked higher, as the average ranking among these images is 4.18 for the SMT system and 4.25 for CCA. The lower CCA score again indicates that our system gives captions which are not necessarily aligned with the references, but still correct.",
+      "The average reference BLEU score is 24.1 and the average METEOR score is 20.0, a significant drop compared to the machine translation system of \\newcite{ortiz2015learning. We concluded from this result that the SMT system is not ``creatively'' mapping the images to their corresponding descriptions. It relies heavily on the training set captions, and learns how to map images to sentences in a manner which does not generalize very well outside of the training set.",
+      "As such, the calculation of SMT evaluation scores with respect to a reference set is not necessarily the best mechanism to identify the correctness of a textual description. To demonstrate this point, we measure BLEU scores of one of the reference sentences while comparing it to the other references in the set. We did that for each of the eight batches of references available in the training set.",
+      "\\newcite{ortiz2015learning partially measure the success of their system by comparing BLEU and METEOR scores of their different systems while using the descriptions given in the dataset as a reference set. The scores for their different systems are given in Table~. They compare their system (SMT, based on phrase-based machine translation) against several baselines: model), but it performed badly, giving a BLEU score of 10.20 and a METEOR score of 15.20 with inappropriate captions. It seems like \\textsc{Seq2Seq models is unfit for this dataset, perhaps because of its size.",
+      "This experiment is similar to the one done by Ortiz et al. The ranking results are given in Table~. The results show that our system tends to score higher for images which are highly ranked (by both the SMT system and CCA), but tends to score lower for images which are lower ranked. In addition, we checked the MT evaluation scores for highly ranked captions both for SMT and CCA (ranking larger than 4).",
+      "In our CCA learning algorithm, we also need to decide on the value of m. We varied m between 30 and 300 (in steps of 10) and tuned its value on the development set by maximizing BLEU score against the set of references. package from \\url{https://github.com/jhclark/multeval. Interestingly enough, the BLEU scores did not change that much (they usually were within one point of each other for sufficiently large m), pointing to a stability of the algorithm with respect to the number of dimensions used.",
+      "The top three images give examples where the CCA inference outputs were rated highly by human evaluations (4 or 5), and the SMT ones were rated poorly (1 or 2). The bottom three pictures give the reverse case. \\end{figure*"
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 provides visual examples of CCA and SMT outputs with human evaluations, which is relevant to understanding the relationship between BLEU scores and human rankings. Text 0 discusses the correlation between BLEU scores and human rankings, specifically mentioning the correlation values for CCA and SMT systems.\",\n    \"Answer\": \"The correlation between BLEU scores and human ranking is not high for both CCA and SMT systems, with correlation values of 0.3 and 0.31 respectively. This indicates that BLEU scores do not strongly align with human evaluations for these systems.\"\n}"
+  }
+}

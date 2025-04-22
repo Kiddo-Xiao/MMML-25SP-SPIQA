@@ -1,0 +1,273 @@
+{
+  "0": {
+    "question": "How does GeoCUTS perform compared to other clusterings for highly active users?",
+    "ground_truth": "GeoCUTS performs comparably to other clusterings for highly active users.",
+    "selected_figures_names": [
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Figure5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 provides a detailed comparison of GeoCUTS with other clustering methods for highly active users, showing performance metrics. Text 4 discusses GeoCUTS' comparability to hand-designed geo-regions and its advantages over traditional methods.",
+    "answer": "GeoCUTS performs comparably to hand-designed geo-regions like DMAs and outperforms the baseline grid clustering for highly active users. It requires no manual effort and extends naturally to different regions and granularities.",
+    "text_chunks": [
+      "We see that GeoCUTS significantly outperforms the baseline grid regardless of the number of clusters. Conclusion We have presented an algorithm, GeoCUTS, for clustering user queries into geographical regions. These regions can be used to run cluster-based randomized experiments for measuring users' response under treatment.",
+      "We compare B-metrics in Table~. The results indicate that, in terms of balance, GeoCUTS performs equally to the alternatives for highly active graphs, and slightly better for the highly mobile graph. In summary, while we perform better in terms of interference, we do not compromise balance. Finally, we compare GeoCUTS to other clusterings with respect to cut size (see Table~) on the US log-normalized graph with grid size 0.25.",
+      "We evaluate GeoCUTS on these metrics, showing that it outperforms balanced partitioning baselines, and performs comparably to the state-of-the-art in hand-designed clustering. \\section*{Acknowledgments The authors would like to thank Kay Brodersen and Hal Varian for helpful advice. We also thank the Google New York graph mining team and especially Aaron Archer, Hossein Bateni, and Silvio Lattanzi.",
+      "Clustering users geographically offers two major advantages: 1) assigning identical treatments to different browser cookies of the same user, and 2) mitigating the interference effects of interactions between users assigned to different treatments. Unlike existing systems, GeoCUTS can be run in any region of the world and for any number of clusters. Alongside our clustering algorithm, we have introduced quality metrics for interference and balance of a given clustering for the purpose of running cluster-based randomized experiments.",
+      "Comparison against other clusterings In this section, we show that GeoCUTS regions are comparable to hand-designed geo-regions, while requiring no manual effort and extending naturally to different regions of the world and granularities. We compare GeoCUTS against the most popular set of hand-designed geo-regions in the US, Nielsen's DMAs (Designated Market Areas) \\textregistered\\,, which were created by Nielsen to correspond to television audiences. DMAs have the advantage of being well-established as a means of subdividing a user population.",
+      "Moreover their design has typically ignored the actual movements of web users, which means an increased number of users move between regions, causing interference between the treatment and control arms of the experiment, which violates the Stable Unit Treatment Value Assumption (SUTVA)~ on which standard causal inference analyses rely. In this paper, we aim to design a framework for running randomized experiments using geographic clustering. To this end, we first present a distributed algorithm, Geographic Clustering Using Travel Statistics (GeoCUTS) designed to mitigate interference whilst ensuring experimental power.",
+      "The average and query-weighted average of the Q-metric for each clustering algorithm are shown in Table~(a). For each metric, GeoCUTS beats the baseline grid clustering. Where applicable, GeoCUTS and DMAs perform similarly well.",
+      "It is important to note that in every evaluation, we compared only clusterings with similar numbers of clusters. Thus, in constructing the grid baseline, we picked the coarseness of the grid so that the number of regions in the grid approximated the number of clusters formed by GeoCUTS. We also used \\sim 200 clusters for GeoCUTS in the US, in order to provide an effective comparison with DMAs."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 provides a detailed comparison of GeoCUTS with other clustering methods for highly active users, showing performance metrics. Text 4 discusses GeoCUTS' comparability to hand-designed geo-regions and its advantages over traditional methods.\",\n    \"Answer\": \"GeoCUTS performs comparably to hand-designed geo-regions like DMAs and outperforms the baseline grid clustering for highly active users. It requires no manual effort and extends naturally to different regions and granularities.\"\n}"
+  },
+  "1": {
+    "question": "How is the Hilbert space-filling curve constructed?",
+    "ground_truth": "The Hilbert space-filling curve is constructed recursively. The curve starts with a simple square, and then at each subsequent iteration, the curve is subdivided into four smaller squares. The curve is then drawn through each of these squares in a specific order.",
+    "selected_figures_names": [
+      "1611.03780v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually represents the construction of Hilbert space-filling curves, showing their recursive nature. Text 0 explains the construction process and properties of the Hilbert curve, making them the most relevant sources.",
+    "answer": "The Hilbert space-filling curve is constructed recursively by dividing a space into cells, maintaining close distances in 2D space on a 1D line. It can be constructed up to any desired level of resolution.",
+    "text_chunks": [
+      "The algorithm that we employ at this stage is similar to the greedy assembly algorithm proposed in~. \\subsubsection{Hilbert curve embedding A Hilbert curve is a space-filling curve that has a fractal-like structure first described by German mathematician David Hilbert in~. Figure~ shows the first three steps of its construction. It can be recursively constructed up to any desired level to approximate a space by dividing it into cells. One of its most desirable properties is that close distances in 2D space also stay (mostly) close on the 1D line.",
+      "While this problem is computationally hard even for small instances, a seek a distributed solution for large-scale graphs. We first formally define balanced partitioning and then present our distributed algorithm for this problem on geographic graphs. Our algorithm improves on the the natural cuts heuristic~ by parallelizing two steps of the algorithm: the seed selection can be done in parallel using a Hilbert curve embedding (see \\S); the contraction around seed nodes can be done in parallel by using a distributed hash-table service~.",
+      "It is clear that the GeoCUTS algorithm produces better cut sizes compared to DMA and grid partitioning. We also compare against Linear Embedding~ and against partitions generated along a Hilbert curve , which the GeoCUTS algorithm similarly outperforms. Tuning the algorithm In this set of experiments, we consider how various design choices in the GeoCUTS algorithm affect performance.",
+      "This means that certain possible nodes do not have any weight in the graph. In the interest of complete geographic coverage, GeoCUTS fills these gaps by creating new nodes with small weight. In addition, for every two nodes that are geographically close, the algorithm creates an edge of low weight.",
+      "To build a graph, we form a grid on the geographical area we wish to partition. Each grid cell is a node in our graph, with the edge between two nodes weighted based on the number of cookies that issue queries in both corresponding grid cells. Thus, for each query we need only identify the cell it is issued from; for this purpose, we assume that each query is issued at the center of its bounding box.",
+      "{\\bf \\noindent Merging stage. If the size of the contracted graph is large, we iterate on the contraction stage until the size of the graph is small enough to fit in memory. When the contracted graph fits in memory, we can produce an output by applying any in-memory heuristic for balanced partitioning of graphs with node weights.",
+      "The edge weights of the graph are chosen to be representative of the interference structure and often the result of a domain-informed heuristic. In our case, there is a clear underlying bipartite graph between users and regions (see Figure ), from which we can build the interference graph between regions. Let a_{ik be the number of queries performed by user i in region",
+      "The algorithm proceeds in two phases. In Phase 1, we build a graph from the given data by setting nodes to discretized locations and assigning edges between pairs of nodes that frequently share users. In Phase 2, we find a clustering of this graph by applying a geographic clustering algorithm that combines recently developed techniques."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually represents the construction of Hilbert space-filling curves, showing their recursive nature. Text 0 explains the construction process and properties of the Hilbert curve, making them the most relevant sources.\",\n    \"Answer\": \"The Hilbert space-filling curve is constructed recursively by dividing a space into cells, maintaining close distances in 2D space on a 1D line. It can be constructed up to any desired level of resolution.\"\n}"
+  },
+  "2": {
+    "question": "How does the performance of GeoCUTS compare to the Grid method in identifying highly mobile clusters when the number of clusters is increased from approximately 25 to 50?",
+    "ground_truth": "GeoCUTS consistently outperforms the Grid method in identifying highly mobile clusters, regardless of the number of clusters. However, the performance of both methods decreases as the number of clusters increases.",
+    "selected_figures_names": [
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 6,
+    "rationale": "Image 1 provides a comparison of GeoCUTS and Grid methods in terms of Q-metric performance for highly mobile clusters, which is relevant to the question. Text 6 discusses the comparison of GeoCUTS against a baseline grid clustering, specifically mentioning the number of regions and clusters.",
+    "answer": "GeoCUTS outperforms the Grid method in identifying highly mobile clusters when the number of clusters is increased. The Q-metric percentages for GeoCUTS are higher compared to the Grid method, indicating better performance.",
+    "text_chunks": [
+      "We see that GeoCUTS significantly outperforms the baseline grid regardless of the number of clusters. Conclusion We have presented an algorithm, GeoCUTS, for clustering user queries into geographical regions. These regions can be used to run cluster-based randomized experiments for measuring users' response under treatment.",
+      "We compare B-metrics in Table~. The results indicate that, in terms of balance, GeoCUTS performs equally to the alternatives for highly active graphs, and slightly better for the highly mobile graph. In summary, while we perform better in terms of interference, we do not compromise balance. Finally, we compare GeoCUTS to other clusterings with respect to cut size (see Table~) on the US log-normalized graph with grid size 0.25.",
+      "It is important to note that in every evaluation, we compared only clusterings with similar numbers of clusters. Thus, in constructing the grid baseline, we picked the coarseness of the grid so that the number of regions in the grid approximated the number of clusters formed by GeoCUTS. We also used \\sim 200 clusters for GeoCUTS in the US, in order to provide an effective comparison with DMAs.",
+      "We evaluate GeoCUTS on these metrics, showing that it outperforms balanced partitioning baselines, and performs comparably to the state-of-the-art in hand-designed clustering. \\section*{Acknowledgments The authors would like to thank Kay Brodersen and Hal Varian for helpful advice. We also thank the Google New York graph mining team and especially Aaron Archer, Hossein Bateni, and Silvio Lattanzi.",
+      "To ensure that inaccuracies in estimating positions do not negatively impact our algorithm, grid cells must be large relative to the typical sizes of bounding boxes. We will take this assumption into account when we discuss the granularity of grid cells. In the rest of this section, we evaluate the performance of the GeoCUTS algorithm on different geographic regions, for each of which a separate graph was built and clustered.",
+      "The average and query-weighted average of the Q-metric for each clustering algorithm are shown in Table~(a). For each metric, GeoCUTS beats the baseline grid clustering. Where applicable, GeoCUTS and DMAs perform similarly well.",
+      "However, they are restricted to the US without a direct international equivalent, and their granularity is fixed, with approximately 200 regions. We previously defined the Q-metric to quantify the interference within a clustering. In Table , we compare the Q-metrics of the output of GeoCUTS against DMAs (within the US) and also against a baseline automatic clustering consisting of a simple grid subdivision (within both the US and France).",
+      "We perform a comprehensive evaluation on massive quantities of Google Search data to study the impact of different design choices on GeoCUTS and compare its performance against alternatives, for both novel and existing metrics. To do so, we describe a statistical framework for evaluating the quality of the clusters, and a new metric---the Q-metric---for this purpose. This statistical framework and the new metric are of independent interest as they present a novel way to measure effectiveness of clustering for such experimental design problems."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 6,\n    \"Rationale\": \"Image 1 provides a comparison of GeoCUTS and Grid methods in terms of Q-metric performance for highly mobile clusters, which is relevant to the question. Text 6 discusses the comparison of GeoCUTS against a baseline grid clustering, specifically mentioning the number of regions and clusters.\",\n    \"Answer\": \"GeoCUTS outperforms the Grid method in identifying highly mobile clusters when the number of clusters is increased. The Q-metric percentages for GeoCUTS are higher compared to the Grid method, indicating better performance.\"\n}"
+  },
+  "3": {
+    "question": "What is the relationship between the query graph and the interference graph?",
+    "ground_truth": " The interference graph is a folded version of the query graph. The nodes in the interference graph represent regions, and the edges represent the interference between regions. The edge weights in the interference graph are calculated from the edge weights in the query graph.",
+    "selected_figures_names": [
+      "1611.03780v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 visually represents the transformation from a query graph to an interference graph, showing the relationship between users and regions. Text 0 explains the concept of a bipartite graph between users and regions, which is essential for understanding the interference graph.",
+    "answer": "The query graph is a bipartite graph between users and regions, where users issue queries to regions. The interference graph is derived from the query graph by folding it, resulting in a graph between regions. The edge weights in the interference graph represent the interactions between regions based on user queries.",
+    "text_chunks": [
+      "The edge weights of the graph are chosen to be representative of the interference structure and often the result of a domain-informed heuristic. In our case, there is a clear underlying bipartite graph between users and regions (see Figure ), from which we can build the interference graph between regions. Let a_{ik be the number of queries performed by user i in region",
+      "As already noted, highly mobile graphs are more challenging to partition compared to highly active graphs. The data indicates that the gap between our algorithm and baseline is larger for highly mobile graphs. While the Q-metric quantifies the interference, we must also compare the clustering algorithms in terms of balance.",
+      "Because users travel from region to region, the outcome of one region does not depend only on whether that region is assigned to treatment or control, but also on the treatment status of all neighboring regions between which its users might travel. The causal inference literature often represents interference by a graph on the experimental units, where an edge is drawn between two units likely to interfere with one another~. In this representation, two disconnected components of the graph (groups of regions with no users travelling from one to the other) do not affect each other's outcome.",
+      "On the other hand, while some highly mobile users may issue fewer queries, they tend to move over a wider range. Therefore we expect interference to be higher for highly mobile users, which is validated in our experiments. For each of the United States and France, we collect two datasets - one for highly mobile and one for highly active cookies - and form a graph for each dataset.",
+      "First, we consider different types of normalization during the graph-building phase (see Table (a)). Specifically, we build graphs over US queries using logarithmic normalization of both vertices and edges, square root normalization, and also no normalization step at all. As expected, a stronger normalization is associated with better Q-metrics but worse B-metrics, demonstrating that normalization may be seen as mediating the trade-off between diminished interference and increased balance.",
+      "As a rule of thumb, the larger the number of clusters, the more difficult it will be to attain a high Q-metric. In the case of a complete interference graph for example, the highest achievable Q-metric is \\frac{1{M, the inverse of the number of clusters specified by the user. While having few clusters may achieve a high Q-metric score without necessarily impacting the B-metric, having few experimental units has other undesirable statistical properties: high variance of estimators, low coverage of confidence intervals, covariate imbalance, etc.",
+      "The Q-metric of the clustering is an appropriate measure for quantifying the quality of the geo-partitions in terms of interference: the higher \\bar Q, the lower the bias of the difference-in-means estimator. In fact, when \\bar Q is at its maximum (\\bar Q = 1), the estimator is unbiased for the treatment effect. It is, to the best of our knowledge, the first heuristic of its kind for measuring cluster quality in a bipartite interference-graph setting.",
+      "To build a graph, we form a grid on the geographical area we wish to partition. Each grid cell is a node in our graph, with the edge between two nodes weighted based on the number of cookies that issue queries in both corresponding grid cells. Thus, for each query we need only identify the cell it is issued from; for this purpose, we assume that each query is issued at the center of its bounding box."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 visually represents the transformation from a query graph to an interference graph, showing the relationship between users and regions. Text 0 explains the concept of a bipartite graph between users and regions, which is essential for understanding the interference graph.\",\n    \"Answer\": \"The query graph is a bipartite graph between users and regions, where users issue queries to regions. The interference graph is derived from the query graph by folding it, resulting in a graph between regions. The edge weights in the interference graph represent the interactions between regions based on user queries.\"\n}"
+  },
+  "4": {
+    "question": "Which metropolitan area is predicted by the GeoCUTS algorithm to include San Francisco, Berkeley, and Palo Alto, but not Sacramento?",
+    "ground_truth": "The Bay Area.",
+    "selected_figures_names": [
+      "1611.03780v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 visually represents the GeoCUTS algorithm applied to the United States, showing how metropolitan areas are identified. Text 2 discusses the GeoCUTS algorithm's ability to create regions comparable to hand-designed ones, which is relevant to understanding how it predicts metropolitan areas.",
+    "answer": "The GeoCUTS algorithm predicts that the metropolitan area including San Francisco, Berkeley, and Palo Alto, but not Sacramento, is the Bay Area.",
+    "text_chunks": [
+      "We see that GeoCUTS significantly outperforms the baseline grid regardless of the number of clusters. Conclusion We have presented an algorithm, GeoCUTS, for clustering user queries into geographical regions. These regions can be used to run cluster-based randomized experiments for measuring users' response under treatment.",
+      "It is clear that the GeoCUTS algorithm produces better cut sizes compared to DMA and grid partitioning. We also compare against Linear Embedding~ and against partitions generated along a Hilbert curve , which the GeoCUTS algorithm similarly outperforms. Tuning the algorithm In this set of experiments, we consider how various design choices in the GeoCUTS algorithm affect performance.",
+      "Comparison against other clusterings In this section, we show that GeoCUTS regions are comparable to hand-designed geo-regions, while requiring no manual effort and extending naturally to different regions of the world and granularities. We compare GeoCUTS against the most popular set of hand-designed geo-regions in the US, Nielsen's DMAs (Designated Market Areas) \\textregistered\\,, which were created by Nielsen to correspond to television audiences. DMAs have the advantage of being well-established as a means of subdividing a user population.",
+      "We evaluate GeoCUTS on these metrics, showing that it outperforms balanced partitioning baselines, and performs comparably to the state-of-the-art in hand-designed clustering. \\section*{Acknowledgments The authors would like to thank Kay Brodersen and Hal Varian for helpful advice. We also thank the Google New York graph mining team and especially Aaron Archer, Hossein Bateni, and Silvio Lattanzi.",
+      "To ensure that inaccuracies in estimating positions do not negatively impact our algorithm, grid cells must be large relative to the typical sizes of bounding boxes. We will take this assumption into account when we discuss the granularity of grid cells. In the rest of this section, we evaluate the performance of the GeoCUTS algorithm on different geographic regions, for each of which a separate graph was built and clustered.",
+      "However, they are restricted to the US without a direct international equivalent, and their granularity is fixed, with approximately 200 regions. We previously defined the Q-metric to quantify the interference within a clustering. In Table , we compare the Q-metrics of the output of GeoCUTS against DMAs (within the US) and also against a baseline automatic clustering consisting of a simple grid subdivision (within both the US and France).",
+      "This means that certain possible nodes do not have any weight in the graph. In the interest of complete geographic coverage, GeoCUTS fills these gaps by creating new nodes with small weight. In addition, for every two nodes that are geographically close, the algorithm creates an edge of low weight.",
+      "Figures~ and~ show the clusters generated for data from the United States and France, respectively, and Figure~ shows the GeoCUTS graph before clustering. Note that prior hand-designed geo-regions have largely focused on the United States and, unlike GeoCUTS, cannot be generalized to other regions without extensive additional labor. Mobility Stationary cookies (cookies that do not move) are not interesting for our problem."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 visually represents the GeoCUTS algorithm applied to the United States, showing how metropolitan areas are identified. Text 2 discusses the GeoCUTS algorithm's ability to create regions comparable to hand-designed ones, which is relevant to understanding how it predicts metropolitan areas.\",\n    \"Answer\": \"The GeoCUTS algorithm predicts that the metropolitan area including San Francisco, Berkeley, and Palo Alto, but not Sacramento, is the Bay Area.\"\n}"
+  },
+  "5": {
+    "question": "Which metropolitan areas are correctly identified by the GeoCUTS algorithm in France?",
+    "ground_truth": "Paris, Bordeaux, and Lyon.",
+    "selected_figures_names": [
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 shows the GeoCUTS graph for the US, which is relevant for understanding how the algorithm visualizes regions. Text 0 mentions the application of GeoCUTS to France, indicating its capability to generalize beyond the US.",
+    "answer": "The text and images provided do not specify which metropolitan areas in France are identified by the GeoCUTS algorithm.",
+    "text_chunks": [
+      "Figures~ and~ show the clusters generated for data from the United States and France, respectively, and Figure~ shows the GeoCUTS graph before clustering. Note that prior hand-designed geo-regions have largely focused on the United States and, unlike GeoCUTS, cannot be generalized to other regions without extensive additional labor. Mobility Stationary cookies (cookies that do not move) are not interesting for our problem.",
+      "However, they are restricted to the US without a direct international equivalent, and their granularity is fixed, with approximately 200 regions. We previously defined the Q-metric to quantify the interference within a clustering. In Table , we compare the Q-metrics of the output of GeoCUTS against DMAs (within the US) and also against a baseline automatic clustering consisting of a simple grid subdivision (within both the US and France).",
+      "Comparison against other clusterings In this section, we show that GeoCUTS regions are comparable to hand-designed geo-regions, while requiring no manual effort and extending naturally to different regions of the world and granularities. We compare GeoCUTS against the most popular set of hand-designed geo-regions in the US, Nielsen's DMAs (Designated Market Areas) \\textregistered\\,, which were created by Nielsen to correspond to television audiences. DMAs have the advantage of being well-established as a means of subdividing a user population.",
+      "We see that GeoCUTS significantly outperforms the baseline grid regardless of the number of clusters. Conclusion We have presented an algorithm, GeoCUTS, for clustering user queries into geographical regions. These regions can be used to run cluster-based randomized experiments for measuring users' response under treatment.",
+      "Our contribution to this literature is the parallelization of the ``natural cuts'' algorithm , which has been shown to be effective in solving the balanced partitioning problem, particularly for geographical graphs. Algorithm We now present the GeoCUTS algorithm. The input is a set of locations and individual users who have issued queries there.",
+      "To ensure that inaccuracies in estimating positions do not negatively impact our algorithm, grid cells must be large relative to the typical sizes of bounding boxes. We will take this assumption into account when we discuss the granularity of grid cells. In the rest of this section, we evaluate the performance of the GeoCUTS algorithm on different geographic regions, for each of which a separate graph was built and clustered.",
+      "It is clear that the GeoCUTS algorithm produces better cut sizes compared to DMA and grid partitioning. We also compare against Linear Embedding~ and against partitions generated along a Hilbert curve , which the GeoCUTS algorithm similarly outperforms. Tuning the algorithm In this set of experiments, we consider how various design choices in the GeoCUTS algorithm affect performance.",
+      "This means that certain possible nodes do not have any weight in the graph. In the interest of complete geographic coverage, GeoCUTS fills these gaps by creating new nodes with small weight. In addition, for every two nodes that are geographically close, the algorithm creates an edge of low weight."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 shows the GeoCUTS graph for the US, which is relevant for understanding how the algorithm visualizes regions. Text 0 mentions the application of GeoCUTS to France, indicating its capability to generalize beyond the US.\",\n    \"Answer\": \"The text and images provided do not specify which metropolitan areas in France are identified by the GeoCUTS algorithm.\"\n}"
+  },
+  "6": {
+    "question": "Which clustering algorithm produced the smallest cut size for highly active users in the US dataset, and how much smaller was it compared to the cut size produced by grid partitioning?",
+    "ground_truth": "Both GeoCUTS and Linear Embedding produced the smallest cut size for highly active users, with a cut size of 4%. This is 11% smaller than the cut size produced by grid partitioning, which had a cut size of 15%.",
+    "selected_figures_names": [
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Table3-1.png",
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Table5-1.png",
+      "1611.03780v2-Figure1-1.png",
+      "1611.03780v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 4,
+    "rationale": "Image 3 provides a direct comparison of cut sizes for different clustering algorithms, including GeoCUTS and grid partitioning, specifically for highly active users. Text 4 supports this by discussing the superior performance of GeoCUTS in terms of cut sizes.",
+    "answer": "GeoCUTS produced the smallest cut size for highly active users in the US dataset, with a cut size of 4%. This is 11% smaller compared to the cut size produced by grid partitioning, which was 15%.",
+    "text_chunks": [
+      "We see that GeoCUTS significantly outperforms the baseline grid regardless of the number of clusters. Conclusion We have presented an algorithm, GeoCUTS, for clustering user queries into geographical regions. These regions can be used to run cluster-based randomized experiments for measuring users' response under treatment.",
+      "The fraction of clusters and queries for different lower bounds of Q-metric are shown in Table~(b). For example 80\\% of queries in the highly active set are issued from minimum-cut clusters with a Q-metric of at least 0.8. For the grid, 62\\% of queries are issued from clusters with a Q-metric of at least 0.8.",
+      "We compare B-metrics in Table~. The results indicate that, in terms of balance, GeoCUTS performs equally to the alternatives for highly active graphs, and slightly better for the highly mobile graph. In summary, while we perform better in terms of interference, we do not compromise balance. Finally, we compare GeoCUTS to other clusterings with respect to cut size (see Table~) on the US log-normalized graph with grid size 0.25.",
+      "Furthermore, our paper builds upon existing literature for finding balanced clusters efficiently within a large network and evaluating the resulting clustering. In {\\em balanced partitioning, our goal is to find a set of clusters of almost equal size and to minimize the total weight of edges that cross clusters (i.e., minimize the cut). This is an NP-hard problem that is computationally hard even for medium-sized graphs~ as it captures the problem of graph bisection~.",
+      "It is clear that the GeoCUTS algorithm produces better cut sizes compared to DMA and grid partitioning. We also compare against Linear Embedding~ and against partitions generated along a Hilbert curve , which the GeoCUTS algorithm similarly outperforms. Tuning the algorithm In this set of experiments, we consider how various design choices in the GeoCUTS algorithm affect performance.",
+      "It is important to note that in every evaluation, we compared only clusterings with similar numbers of clusters. Thus, in constructing the grid baseline, we picked the coarseness of the grid so that the number of regions in the grid approximated the number of clusters formed by GeoCUTS. We also used \\sim 200 clusters for GeoCUTS in the US, in order to provide an effective comparison with DMAs.",
+      "An algorithm that produces highly unbalanced clusters may outperform other alternatives if only the Q-metric is considered. For example, if we partitioned the US into 200 clusters where 199 of them were in Alaska and one cluster covered the rest of the country, we would obtain an almost perfect Q-metric as relatively few users would cross between clusters. However, such a clustering would not be useful for our applications.",
+      "We evaluate GeoCUTS on these metrics, showing that it outperforms balanced partitioning baselines, and performs comparably to the state-of-the-art in hand-designed clustering. \\section*{Acknowledgments The authors would like to thank Kay Brodersen and Hal Varian for helpful advice. We also thank the Google New York graph mining team and especially Aaron Archer, Hossein Bateni, and Silvio Lattanzi."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 4,\n    \"Rationale\": \"Image 3 provides a direct comparison of cut sizes for different clustering algorithms, including GeoCUTS and grid partitioning, specifically for highly active users. Text 4 supports this by discussing the superior performance of GeoCUTS in terms of cut sizes.\",\n    \"Answer\": \"GeoCUTS produced the smallest cut size for highly active users in the US dataset, with a cut size of 4%. This is 11% smaller compared to the cut size produced by grid partitioning, which was 15%.\"\n}"
+  },
+  "7": {
+    "question": "Which method performs best for highly active users in the US?",
+    "ground_truth": "Both GeoCUTS and DMA perform equally well for highly active users in the US.",
+    "selected_figures_names": [
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1611.03780v2-Figure3-1.png",
+      "1611.03780v2-Table2-1.png",
+      "1611.03780v2-Table1-1.png",
+      "1611.03780v2-Figure5-1.png",
+      "1611.03780v2-Figure4-1.png",
+      "1611.03780v2-Figure2-1.png",
+      "1611.03780v2-Table4-1.png",
+      "1611.03780v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 5,
+    "rationale": "Image 1 provides a table comparing the performance of GeoCUTS, DMA, and Grid methods for highly active users in the US. Text 5 discusses the performance of GeoCUTS compared to other methods, indicating it performs equally well for highly active graphs.",
+    "answer": "GeoCUTS performs equally well as DMA and Grid for highly active users in the US.",
+    "text_chunks": [
+      "On the other hand, while some highly mobile users may issue fewer queries, they tend to move over a wider range. Therefore we expect interference to be higher for highly mobile users, which is validated in our experiments. For each of the United States and France, we collect two datasets - one for highly mobile and one for highly active cookies - and form a graph for each dataset.",
+      "We see that GeoCUTS significantly outperforms the baseline grid regardless of the number of clusters. Conclusion We have presented an algorithm, GeoCUTS, for clustering user queries into geographical regions. These regions can be used to run cluster-based randomized experiments for measuring users' response under treatment.",
+      "Query bounding boxes are in fact samples from the actual movement path, and a small number of samples is not enough to reconstruct the path. Hence, for our second dataset we consider {\\em highly active cookies only: cookies which issue a query in more than 10 out of the 28 days. Some highly active users may still have a limited movement and issue queries from the same geographical area.",
+      "To fix this problem, experiments are often run on geographical regions . This is a form of cluster-based randomization~. Assuming a user remains within one such region, the user will receive consistent experimental treatment regardless of which device or browser she uses.",
+      "We explored normalization because some individual users may have much more location data available than others, which would bias the graph strongly towards these users to the exclusion of others. We compared the efficacy of the square root normalization against other possible heuristics in \\S. \\subsubsection{Edge weights. The edges in this graph correspond to the intensity of transit between nodes.",
+      "We compare B-metrics in Table~. The results indicate that, in terms of balance, GeoCUTS performs equally to the alternatives for highly active graphs, and slightly better for the highly mobile graph. In summary, while we perform better in terms of interference, we do not compromise balance. Finally, we compare GeoCUTS to other clusterings with respect to cut size (see Table~) on the US log-normalized graph with grid size 0.25.",
+      "Since our setting is bipartite, we could consider users to be units of analysis (but not randomization) as explored in~. We would then face the problem of modeling user response to varying levels of treatment over time. As a user travels from region to region, he or she will be exposed to various values of treatment. For example, assume that a user's response is proportional to their ``treatment dose'', i.e.~the ratio of queries made within treated regions over the total queries made.",
+      "Users can clear their cookies whenever they want, and they frequently use multiple devices and multiple browsers.'' The authors further observe that ``Using a signed-in id may seem to mitigate this issue, but users can have multiple sign-ins and many queries are made while signed-out.'' Thus the effect measured by a cookie experiment is diluted by the fact that a user may be in the treatment group on one device or browser and in the control group in another."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 5,\n    \"Rationale\": \"Image 1 provides a table comparing the performance of GeoCUTS, DMA, and Grid methods for highly active users in the US. Text 5 discusses the performance of GeoCUTS compared to other methods, indicating it performs equally well for highly active graphs.\",\n    \"Answer\": \"GeoCUTS performs equally well as DMA and Grid for highly active users in the US.\"\n}"
+  }
+}

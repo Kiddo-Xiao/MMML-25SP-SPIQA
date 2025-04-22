@@ -1,0 +1,33 @@
+{
+  "0": {
+    "question": "Which steganography method achieves the best performance in terms of distortion for both cover and secret images when embedding 2 bits per channel?",
+    "ground_truth": "The proposed method achieves the best performance for both cover and secret images when embedding 2 bits per channel.",
+    "selected_figures_names": [
+      "1805.08465v3-Table1-1.png",
+      "1805.08465v3-Figure2-1.png",
+      "1805.08465v3-Figure1-1.png",
+      "1805.08465v3-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1805.08465v3-Table1-1.png",
+      "1805.08465v3-Figure2-1.png",
+      "1805.08465v3-Figure1-1.png",
+      "1805.08465v3-Figure3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 provides a table comparing the performance of different steganography methods, including the SIR values for both cover and secret images at different bits per channel. Text 2 discusses the comparison of methods, highlighting the superior performance of Reshuffled-TD. Together, they provide the necessary data to determine which method performs best at 2 bits per channel.",
+    "answer": "The Reshuffled-TD method achieves the best performance in terms of distortion for both cover and secret images when embedding 2 bits per channel.",
+    "text_chunks": [
+      "Image steganography is a classic problem for both computer vision and information security. In the existing methods, the most popular one is the least-significant-bits (LSB) method, which uses the least significant bits of the cover to hide the most significant bits of the image. In addition, the similar idea is also extended to transform domains like Fourier and wavelet~.",
+      "The high accuracy of our method is due to the fact that the exact-recovery conditions can be still theoretically satisfied as long as we assign an incoherent reshuffling operation R_i, even if the norms of some components equal zero. Image Steganography using Reshuffled-TD Steganography is about concealing a secret message within an ordinary message and then extracting it at its destination. In this experiment, we will use Reshuffled-TD for image steganography, i.e., to conceal a ``secret'' image in an ordinary ``cover'' image.",
+      "The experiment is conducted on 10 randomly chosen image pairs. We compare to three existing methods: (a) the LSB method (b) the discrete wavelet transform based method (DWT), and deep stego (DPS)~. Because DPS converts the grayscale cover image into a RGB image as the container, we just show the SIR for secret image in the table. As shown in Table , Reshuffled-TD significantly outperforms all the state-of-the-art methods in the experiment.",
+      "Meanwhile, we choose different types of images for steganography, e.g., natural, cartoon and fingerprint. { The datasets we used in the experiment include texture (DTD), natural (LIVE and FIVEK~), cartoon (CART.~) and fingerprint (FVC~) datasets.",
+      "For different datasets, we unify the shape of all images to 2000\\times{2000, and convert the image to grayscale when the cover image is colored. A sketch of our Reshuffled-TD method is shown in supplemental materials. During the concealing phase, we consider each channel of the secret image as one component, and they are randomly reshuffled.",
+      "For example, in FVC+FIVEK dataset, Reshuffled-TD achieves 20.25dB on the cover images and 12.80dB on the secret images. With the similar SIR on the cover image, LSB only achieves 3.32dB. Meanwhile, DWT and DPS achieve 8.30 and 8.90dB, respectively. As the worst performance, the FIVEK+FIVEK dataset shows an exception in the experiment.",
+      "Some recent approaches have used deep neural networks to hide and recover images~, but these methods require lots of training data, and they are generally sensitive to the images not present in the training data. The computational requirement is also heavy. In contrast, our method is much simpler.",
+      "It does not require any training, and therefore does not have any such sensitivity issues. We tried various ways to make the problem challenging for the methods. We try to conceal a full-size RGB image (8\\times{3 bits per pixel) into a grayscale image (8 bits per pixel)."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 provides a table comparing the performance of different steganography methods, including the SIR values for both cover and secret images at different bits per channel. Text 2 discusses the comparison of methods, highlighting the superior performance of Reshuffled-TD. Together, they provide the necessary data to determine which method performs best at 2 bits per channel.\",\n    \"Answer\": \"The Reshuffled-TD method achieves the best performance in terms of distortion for both cover and secret images when embedding 2 bits per channel.\"\n}"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "0": {
+    "question": "How do the different methods compare in terms of their ability to generate realistic faces?",
+    "ground_truth": "The baseline method generates faces that are blurry and unrealistic, while the other methods generate faces that are more realistic.",
+    "selected_figures_names": [
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Table1-1.png",
+      "1812.06589v2-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 provides a quantitative comparison of different methods using metrics like PSNR, SSIM, and LMD, which are relevant for assessing the quality of generated faces. Text 4 discusses the comparison of the proposed model with state-of-the-art methods, highlighting its superior performance in generating high-quality video frames.",
+    "answer": "The proposed method outperforms other state-of-the-art methods in generating realistic faces, as indicated by higher PSNR, SSIM, and lower LMD values.",
+    "text_chunks": [
+      "Then, the volunteers were asked to answer the following two questions: (1) which one appears more realistic and (2) which one provides more temporal synchronism referring to the ground truth. Table clearly demonstrates that our model achieves the highest rating in both realistic and synchronization. Conclusion We have proposed a novel model of talking face generation for arbitrary identities via exploring the cross-modality coherence in this paper.",
+      "Based on the above discussion, we propose a novel and robust method by exploring the coherence between audio and visual modalities for arbitrary talking face generation in this paper. The proposed model consists of three components: talking face generator, asymmetric mutual information estimator, and frame discriminator, as shown in Fig. . First, the talking face generator is designed to generate target frames from the given input: one audio clip, one still facial image, and the previous generated frame.",
+      "Introduction Talking face generation, which aims to generate a realistic talking video for the given still face image and speech clip, has been an active research topic. It has wide potential applications such as movie animation, teleconferencing, talking agents, and enhancing speech comprehension while preserving privacy. Although recent efforts have achieved impressive talking face synthesis for arbitrary identities, it is still a huge challenge due to the heterogeneous between audio and video, together with the appearance diversity of arbitrary identities.",
+      "We observe that a talking face video is mainly composited by the identity-related feature and the lip-related feature, where the former is more stable while the latter is more temporal dynamic. Therefore, it is essential to separate these two features for arbitrary identity generation. Herein, we propose to leverage the given face and previous generated frame to provide identity-related and lip-related information, respectively.",
+      "Quantitative Results We compare our model with four recent state-of-the-art methods, including Chung et al. \\shortcite{Chung2017YouST, Chen et al. \\shortcite{Chen2018LipMG Zhou et al. \\shortcite{Zhou2018TalkingFG, and Chen et al. \\shortcite{chen2019hierarchical. Table shows the quantitative results of our method and its competitors with higher PSNR, SSIM and lower LMD, suggesting the best quality of the generated video frames of the talking faces.",
+      "Directly leveraging the whole area of the given face tends to generate face images with a slight jitter problem. In order to capture different information among the given faces and disentangle the identity-related and lip-related information, we introduce a dynamic attention block. When generating a video sequence, we assign an initial attention rate to the first frame, then predict the fine-grained attention mask for the following video frames.",
+      "% Frames are aligned into 256 \\times 256 faces and audios are processed into (Mel Frequency Cepstrum Coefficient) MFCC features at the sampling rate of 5000Hz. Then we match each frame with an MFCC audio input with a size of 20 \\times 13. We use common reconstruction metrics such as PSNR and SSIM to evaluate the quality of the synthesized talking faces.",
+      "The attention masks of the following generated frame are predicted by the previous attention mask and the generated faces. In practice, we give a coarse mask area and an attention rate, the following frames generation only predict a fine-grained mask area which is close to the lip shape, while leaving the rate unchanged. Training Details In the training stage, % frame discriminator predicts the probability of whether frame and audio are paired or not, resulting in the following loss of our GAN: \\end{equation In order to synchronize the lip movements more accurately, we employ perceptual loss to capture high-level features differences between generated images and ground-truth."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 provides a quantitative comparison of different methods using metrics like PSNR, SSIM, and LMD, which are relevant for assessing the quality of generated faces. Text 4 discusses the comparison of the proposed model with state-of-the-art methods, highlighting its superior performance in generating high-quality video frames.\",\n    \"Answer\": \"The proposed method outperforms other state-of-the-art methods in generating realistic faces, as indicated by higher PSNR, SSIM, and lower LMD values.\"\n}"
+  },
+  "1": {
+    "question": "What is the effect of adding DA to the baseline method?",
+    "ground_truth": "Adding DA to the baseline method improves the PSNR and SSIM values, while slightly decreasing the LMD value.",
+    "selected_figures_names": [
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Table1-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure3-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 0,
+    "rationale": "Image 3 provides a table showing the evaluation metrics for different methods, including the baseline and the addition of DA. Text 0 discusses the role of DA in improving results, which is relevant to understanding its effect.",
+    "answer": "Adding DA to the baseline method improves the results, as shown by the increase in PSNR and SSIM values in the table from Image 3.",
+    "text_chunks": [
+      "% From Table , it is clear to see that, (1) Simply adopting MI into our baseline did not significantly improve the results, comparing Table (a) to baseline. (2) DA plays an important role in talking face generation, comparing Table (b) to baseline. (3) Introducing either Asy. or JS strategy shows the great improvement on almost metrics, comparing Table (e) and (f) to Table (c).",
+      "We first overview the architecture of our model, followed by the elaboration of two novel components: Asymmetric Mutual Information Estimator (AMIE) and Dynamic Attention (DA) modules. The training details are provided at the end of this section.",
+      "It is clear to see that, Zhou et al. suffer from a \"zoom-in-and-out\" effect, while the lip shapes of Chen et al. appear differences from the real one. In general, our model can generate more realistic and synchronous frames. Ablation Study In order to quantify the effect of each component of our method, we conduct ablation study experiments to verify the contributions of the two key components in our model: Asymmetric Mutual Information Estimator (AMIE) and Dynamic Attention (DA), and the two important strategies in AMIE: the asymmetric training strategy (Asy.) and JS represented estimator.",
+      "Asymmetric Mutual Information Estimator We first introduce the theory of mutual information neural estimation (MINE), followed by the mutual information estimation in talking face generation task which leverages the proposed AMIE to learn the cross-modal coherence. \\subsubsection{Preliminary Theory of 'MINE' Mutual information is a measurement of mutual dependency between two probability distributions, where p(x, y) is the joint probability function of X and Y, and p(x) and p(y) are the marginal probability distribution functions of X and Y respectively. Clearly, mutual information is equivalent to the Kullback-Leibler (KL-) divergence between the joint p(x, y) and the product of the marginal distributions p(x) and p(y): where D_{KL is defined as, Furthermore, the KL divergence admits the following Donsker-Varadhan (DV) representation : where the supremum is taken over all functions T and \\omega",
+      "% Specifically, let F represent real video frames, we update the mutual information estimator by maximizing mutual information between the real frames and the audio (I^{JS_\\Theta(F, A)), then use the updated estimator to maximize the mutual information between the generated frames and audio (I^{JS_\\Theta(\\hat{F, A)) for better GAN training. We refer to this as Asymmetric Mutual Information Estimator (AMIE) in this paper which can improve the quality of generation as verified in our experiments. As shown in Fig. , comparing our AMIE with conventional MINE, we see that our generated samples are closer to the real samples than those from MINE.",
+      "(4) After integrating the asymmetric training strategy (Asy.) and JS represented estimator into the MINE, our AMIE can further improve the performance on all the metrics, as shown in Table (g). (5) Integrating AMIE (comparing Table 'Ours' to Table (b)) can further boost the performance, while simply integrating MINE (comparing Table (c) to (b)) the performance declined, that verifies the contribution of proposed AMIE.",
+      "Our model leverages the asymmetric mutual information estimator to learn the correlation of audio and facial image features and utilizes dynamic attention to simulate the process of disentangling. Extensive experimental results on benchmark datasets demonstrate the promising performance of our method.% \\section*{Acknowledgments This work is partially funded by the Beijing Natural Science Foundation (JQ18017), Youth Innovation Promotion Association CAS (Grant No. Y201929), the National Nature Science Foundation of China (61976002), and the Open Project Program of the National Laboratory of Pattern Recognition (NLPR) (201900046). \\bibliographystyle{named \\bibliography{refs_mini",
+      "\\subset \\mathbb{R^d so that the two expectations are finite. Therefore, we leverage the bound: where I^{DV_\\Theta(X,Y) denotes the neural information measure, \\end{equation and T_\\theta denotes a neural network trained by maximizing the mutual information . \\subsubsection{'AMIE' in Talking Face Generation In this cross-modal talking face generation task, we propose to explore the mutual information between the audio and the visual modality via an Asymmetric Mutual Information Estimator."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 0,\n    \"Rationale\": \"Image 3 provides a table showing the evaluation metrics for different methods, including the baseline and the addition of DA. Text 0 discusses the role of DA in improving results, which is relevant to understanding its effect.\",\n    \"Answer\": \"Adding DA to the baseline method improves the results, as shown by the increase in PSNR and SSIM values in the table from Image 3.\"\n}"
+  },
+  "2": {
+    "question": "Which method performed the best on the GRID dataset?",
+    "ground_truth": "AMIE (Ours)",
+    "selected_figures_names": [
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table1-1.png",
+      "1812.06589v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 provides a table with evaluation metrics (PSNR, SSIM, LMD) for different methods on the GRID dataset, which directly answers the question. Text 0 discusses the performance of methods on the GRID dataset, highlighting the effectiveness of the model with the highest SSIM and lowest LMD.",
+    "answer": "AMIE (Ours) performed the best on the GRID dataset with the highest SSIM (0.97) and lowest LMD (0.78).",
+    "text_chunks": [
+      "Although Zhou et al. obtains the lowest PSNR, it obtains the second highest SSIM and its SSIM is significantly better than Chung et al. and Chen et al. . To further verify the robustness for arbitrary person generation, we evaluate our method on another benchmark dataset GRID and report the comparison results in Table . From Table , we observe that our model achieves the highest SSIM and the lowest LMD, demonstrating the effectiveness and robustness of our method.",
+      "We implement mutual information as described before. We try to maximize it between generated frames and audios, Our full model is optimized according to the following objective function: Experiments Dataset and Metrics We evaluate our method on prevalent benchmark datasets LRW and GRID .",
+      "Although the PSNR of our method is a little lower than that of Chen et al. , our method surpass on the metrics of both SSIM and LMD. Therefore, our method always achieves the highest PSNR and SSIM, demonstrating our method is able to generate high-quality videos. Qualitative Results To present the superiority of our method, we provide generated samples compared with Zhou et al. \\shortcite{Zhou2018TalkingFG, and Chen et al. \\shortcite{chen2019hierarchical.",
+      "Quantitative Results We compare our model with four recent state-of-the-art methods, including Chung et al. \\shortcite{Chung2017YouST, Chen et al. \\shortcite{Chen2018LipMG Zhou et al. \\shortcite{Zhou2018TalkingFG, and Chen et al. \\shortcite{chen2019hierarchical. Table shows the quantitative results of our method and its competitors with higher PSNR, SSIM and lower LMD, suggesting the best quality of the generated video frames of the talking faces.",
+      "% Furthermore, we use Landmark Distance (LMD) to evaluate the accuracy of the generated lip by calculating the landmark distance between the generated video and the original video. The lower LMD, the better of the generation.",
+      "% Specifically, let F represent real video frames, we update the mutual information estimator by maximizing mutual information between the real frames and the audio (I^{JS_\\Theta(F, A)), then use the updated estimator to maximize the mutual information between the generated frames and audio (I^{JS_\\Theta(\\hat{F, A)) for better GAN training. We refer to this as Asymmetric Mutual Information Estimator (AMIE) in this paper which can improve the quality of generation as verified in our experiments. As shown in Fig. , comparing our AMIE with conventional MINE, we see that our generated samples are closer to the real samples than those from MINE.",
+      "\\subset \\mathbb{R^d so that the two expectations are finite. Therefore, we leverage the bound: where I^{DV_\\Theta(X,Y) denotes the neural information measure, \\end{equation and T_\\theta denotes a neural network trained by maximizing the mutual information . \\subsubsection{'AMIE' in Talking Face Generation In this cross-modal talking face generation task, we propose to explore the mutual information between the audio and the visual modality via an Asymmetric Mutual Information Estimator.",
+      "Fig. demonstrates the visualized examples. User Study We conduct a user study on the LRW dataset with 42 volunteers in both realistic and synchronization of generation. We randomly select the samples generated by our method, Zhou et al. \\shortcite{Zhou2018TalkingFG and Chen et al. \\shortcite{chen2019hierarchical."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 provides a table with evaluation metrics (PSNR, SSIM, LMD) for different methods on the GRID dataset, which directly answers the question. Text 0 discusses the performance of methods on the GRID dataset, highlighting the effectiveness of the model with the highest SSIM and lowest LMD.\",\n    \"Answer\": \"AMIE (Ours) performed the best on the GRID dataset with the highest SSIM (0.97) and lowest LMD (0.78).\"\n}"
+  },
+  "3": {
+    "question": "What is the role of the frame discriminator in the proposed method?",
+    "ground_truth": "The frame discriminator is used to detect whether the generated frame and audio are matched or not.",
+    "selected_figures_names": [
+      "1812.06589v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 provides a visual representation of the entire pipeline, including the frame discriminator. Text 2 specifically describes the role of the frame discriminator, detailing its components and function.",
+    "answer": "The frame discriminator's role is to determine the probability of whether the inputs (audio and frame) are matched. It consists of an Image CNN, an Audio FC, and a classifier, which together produce a 1-dimensional output indicating the match probability.",
+    "text_chunks": [
+      "We shall elaborate on the details of the proposed AMIE in the following section. \\paragraph{Frame Discriminator. Frame discriminator is fed by the pairs of the real frame and audio clip \\{f_i, a_i\\, or the pairs of the generated frame and corresponding audio clip \\{\\hat{f_{i, a_i\\.",
+      "Based on the above discussion, we propose a novel and robust method by exploring the coherence between audio and visual modalities for arbitrary talking face generation in this paper. The proposed model consists of three components: talking face generator, asymmetric mutual information estimator, and frame discriminator, as shown in Fig. . First, the talking face generator is designed to generate target frames from the given input: one audio clip, one still facial image, and the previous generated frame.",
+      "The output of the discriminator is the probability of whether the inputs (audio and frame) are matched. The discriminator consists of an Image CNN, an Audio FC, and a classifier. We flatten the output of Image CNN, and the Audio FC then feed concatenated features to the final classifier to produce 1-dimensional output.",
+      "% Specifically, let F represent real video frames, we update the mutual information estimator by maximizing mutual information between the real frames and the audio (I^{JS_\\Theta(F, A)), then use the updated estimator to maximize the mutual information between the generated frames and audio (I^{JS_\\Theta(\\hat{F, A)) for better GAN training. We refer to this as Asymmetric Mutual Information Estimator (AMIE) in this paper which can improve the quality of generation as verified in our experiments. As shown in Fig. , comparing our AMIE with conventional MINE, we see that our generated samples are closer to the real samples than those from MINE.",
+      "The attention masks of the following generated frame are predicted by the previous attention mask and the generated faces. In practice, we give a coarse mask area and an attention rate, the following frames generation only predict a fine-grained mask area which is close to the lip shape, while leaving the rate unchanged. Training Details In the training stage, % frame discriminator predicts the probability of whether frame and audio are paired or not, resulting in the following loss of our GAN: \\end{equation In order to synchronize the lip movements more accurately, we employ perceptual loss to capture high-level features differences between generated images and ground-truth.",
+      "Recently, Belghazi et al. \\shortcite{Belghazi2018MutualIN proposed a backpropagation MI estimator that exploited a dual optimization based on dual representations of the KL-divergence to estimate divergences beyond the minimax objective as formalized in GANs. % Proposed Method In this paper, we propose a novel model for arbitrary talking face generation by attentively discovering the cross-modal coherence, as shown in Fig. .",
+      "We propose a dynamic attention block on lip area to preserve the identity information and leverage feature of lip motion, i.e., paying different attentions on given face image (identity-related) and the previous generated frame (lip-related) during different training stages. \\caption{Pipeline of our proposed method. \\end{figure*",
+      "Overview Our model consists of three parts: a Talking Face Generator, a Frame Discriminator, and a Mutual Information Estimator. \\paragraph{Talking Face Generator. There are three inputs of the generator: 1) the input face I_f which ensures the texture information of the output frame, 2) the speech audio clip A = \\{a_1, a_2, ..., a_n\\, working as the condition to supervise the lip changing, and 3) the previously generated frame \\hat{f_{i-1 \\in \\hat{F=\\{\\hat{f_1,\\hat{f_2,...,\\hat{f_n\\ where the i-th frame guarantees the smoothness of the image generation by feeding more temporal information. The three inputs are fed to the Identity Encoder, Audio Encoder, and Image Encoder respectively, while the target video frame \\hat{f_i is generated by the Frame Decoder."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 provides a visual representation of the entire pipeline, including the frame discriminator. Text 2 specifically describes the role of the frame discriminator, detailing its components and function.\",\n    \"Answer\": \"The frame discriminator's role is to determine the probability of whether the inputs (audio and frame) are matched. It consists of an Image CNN, an Audio FC, and a classifier, which together produce a 1-dimensional output indicating the match probability.\"\n}"
+  },
+  "4": {
+    "question": "How does the dynamic attention block improve the transition of generated video for arbitrary identities?",
+    "ground_truth": "The dynamic attention block decouples the lip-related and identity-related information, allowing the network to focus on the most important area for generating realistic talking faces.",
+    "selected_figures_names": [
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure6-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table1-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 shows the pipeline of the proposed method, including the dynamic attention block, which is directly relevant to understanding how it improves video generation. Text 1 explains the role of the dynamic attention block in preserving identity information and leveraging lip motion features, which is crucial for improving transitions in generated videos.",
+    "answer": "The dynamic attention block improves the transition of generated video for arbitrary identities by preserving identity information and focusing on lip motion features. It assigns different attention to the face image and the previous frame, enhancing the synchronization and realism of the generated video.",
+    "text_chunks": [
+      "Directly leveraging the whole area of the given face tends to generate face images with a slight jitter problem. In order to capture different information among the given faces and disentangle the identity-related and lip-related information, we introduce a dynamic attention block. When generating a video sequence, we assign an initial attention rate to the first frame, then predict the fine-grained attention mask for the following video frames.",
+      "We propose a dynamic attention block on lip area to preserve the identity information and leverage feature of lip motion, i.e., paying different attentions on given face image (identity-related) and the previous generated frame (lip-related) during different training stages. \\caption{Pipeline of our proposed method. \\end{figure*",
+      "We observe that a talking face video is mainly composited by the identity-related feature and the lip-related feature, where the former is more stable while the latter is more temporal dynamic. Therefore, it is essential to separate these two features for arbitrary identity generation. Herein, we propose to leverage the given face and previous generated frame to provide identity-related and lip-related information, respectively.",
+      "Introduction Talking face generation, which aims to generate a realistic talking video for the given still face image and speech clip, has been an active research topic. It has wide potential applications such as movie animation, teleconferencing, talking agents, and enhancing speech comprehension while preserving privacy. Although recent efforts have achieved impressive talking face synthesis for arbitrary identities, it is still a huge challenge due to the heterogeneous between audio and video, together with the appearance diversity of arbitrary identities.",
+      "Then, the asymmetric mutual information estimator is introduced to maximize the mutual information between generated video and audio distributions via the information learned from a neural network based on MI measure. Finally, we feed the generated frame and audio into frame discriminator to detect whether they are matched or not. In the training stage, the lip area will give different attention to make the network focus on the most important area by leveraging the Dynamic Attention block, as illustrated in Fig .",
+      "Existing state-of-the-art works either try to disentangle the content and identity features from the speech for the video generation step or leverage the landmark as a middle feature to bridge the gap between audio and video. Despite the great progress on feature representation for video generation, they usually leverage reconstruct loss between generated and real frames, while neglecting an essential problem in talking face generation: how to sufficiently express the audio feature into generated video? To reduce the uncertainty in the audio-to-video generation process and ensure the synchronized talking face transition, we argue that the giving audio and generated video should share maximum information, i.e., the minimized sharing entropy across modalities.",
+      "Dynamic Attention on Lip Area As we discussed in Sec. , we observe that a talking face video is mainly composited by the identity-related and lip-related features.",
+      "% Specifically, let F represent real video frames, we update the mutual information estimator by maximizing mutual information between the real frames and the audio (I^{JS_\\Theta(F, A)), then use the updated estimator to maximize the mutual information between the generated frames and audio (I^{JS_\\Theta(\\hat{F, A)) for better GAN training. We refer to this as Asymmetric Mutual Information Estimator (AMIE) in this paper which can improve the quality of generation as verified in our experiments. As shown in Fig. , comparing our AMIE with conventional MINE, we see that our generated samples are closer to the real samples than those from MINE."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 shows the pipeline of the proposed method, including the dynamic attention block, which is directly relevant to understanding how it improves video generation. Text 1 explains the role of the dynamic attention block in preserving identity information and leveraging lip motion features, which is crucial for improving transitions in generated videos.\",\n    \"Answer\": \"The dynamic attention block improves the transition of generated video for arbitrary identities by preserving identity information and focusing on lip motion features. It assigns different attention to the face image and the previous frame, enhancing the synchronization and realism of the generated video.\"\n}"
+  },
+  "5": {
+    "question": "Which method, AMIE or MINE, produces generated frames that are closer in distribution to the real frames?",
+    "ground_truth": "MINE",
+    "selected_figures_names": [
+      "1812.06589v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Table1-1.png",
+      "1812.06589v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 visually compares the distribution of real and generated frames using AMIE and MINE, showing that AMIE's generated samples are closer to the real samples. Text 1 explains that AMIE improves the quality of generation compared to MINE.",
+    "answer": "AMIE produces generated frames that are closer in distribution to the real frames.",
+    "text_chunks": [
+      "The generated frames \\hat{F should be similar to real frames F = \\{f_1,f_2,...,f_n\\. \\paragraph{Asymmetric Mutual Information Estimator (AMIE). AMIE aims to approximate the mutual information between the generated video frame and audio. It is trained using \\{f_i, a_i\\ and \\{f_j, a_k\\, where j and k are random sampled from 1\\sim n.",
+      "% Specifically, let F represent real video frames, we update the mutual information estimator by maximizing mutual information between the real frames and the audio (I^{JS_\\Theta(F, A)), then use the updated estimator to maximize the mutual information between the generated frames and audio (I^{JS_\\Theta(\\hat{F, A)) for better GAN training. We refer to this as Asymmetric Mutual Information Estimator (AMIE) in this paper which can improve the quality of generation as verified in our experiments. As shown in Fig. , comparing our AMIE with conventional MINE, we see that our generated samples are closer to the real samples than those from MINE.",
+      "We shall elaborate on the details of the proposed AMIE in the following section. \\paragraph{Frame Discriminator. Frame discriminator is fed by the pairs of the real frame and audio clip \\{f_i, a_i\\, or the pairs of the generated frame and corresponding audio clip \\{\\hat{f_{i, a_i\\.",
+      "Asymmetric Mutual Information Estimator We first introduce the theory of mutual information neural estimation (MINE), followed by the mutual information estimation in talking face generation task which leverages the proposed AMIE to learn the cross-modal coherence. \\subsubsection{Preliminary Theory of 'MINE' Mutual information is a measurement of mutual dependency between two probability distributions, where p(x, y) is the joint probability function of X and Y, and p(x) and p(y) are the marginal probability distribution functions of X and Y respectively. Clearly, mutual information is equivalent to the Kullback-Leibler (KL-) divergence between the joint p(x, y) and the product of the marginal distributions p(x) and p(y): where D_{KL is defined as, Furthermore, the KL divergence admits the following Donsker-Varadhan (DV) representation : where the supremum is taken over all functions T and \\omega",
+      "Unfortunately, it cannot be directly applied to talking face generation. On the one hand, if MINE for GANs uses generated sample and input pairs for both training and estimating, the mutual information estimation may be misled due to the low quality of generation in the early stages. Thinking that GANs push the generated sample distribution to the real frame distribution, we propose to use the real sample and its corresponding input to update the mutual information estimator, followed by asymmetrically maximizing the mutual information between the generated sample and input for better GAN training.",
+      "It is clear to see that, Zhou et al. suffer from a \"zoom-in-and-out\" effect, while the lip shapes of Chen et al. appear differences from the real one. In general, our model can generate more realistic and synchronous frames. Ablation Study In order to quantify the effect of each component of our method, we conduct ablation study experiments to verify the contributions of the two key components in our model: Asymmetric Mutual Information Estimator (AMIE) and Dynamic Attention (DA), and the two important strategies in AMIE: the asymmetric training strategy (Asy.) and JS represented estimator.",
+      "On the other hand, our objective is to maximize the MI between heterogeneous modalities while not concerning the accurate MI value , we therefore replace the original formulation of MI by Jensen-Shannon represented MI estimator, which estimates the relative amplitude of MI rather than the exact value, and has been well studied in neural network optimization with empirically more stable learning . We refer to our strategy as Asymmetric Mutual Information Estimator (AMIE). In addition, conventional approaches directly employ the whole global area on given face image during synthesis, which is difficult for neural networks to discover the relation between audio and local lips.",
+      "However, this may disturb the MI estimation since the generated frames are blurry and not accurate at earlier training epochs. Furthermore, GANs are usually used to learn the probability distribution consistent with the real data, and mutual information is used to estimate the amount of shared information between the two distributions. Therefore, our solution is to use mutual information in three distributions, we use the real frame and audio distribution during the training while the generated frame and audio distribution."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 visually compares the distribution of real and generated frames using AMIE and MINE, showing that AMIE's generated samples are closer to the real samples. Text 1 explains that AMIE improves the quality of generation compared to MINE.\",\n    \"Answer\": \"AMIE produces generated frames that are closer in distribution to the real frames.\"\n}"
+  },
+  "6": {
+    "question": " What are the limitations of the Zhou \\textit{et al.} and Chen \\textit{et al.} methods for generating talking-face videos, as compared to the method proposed in the paper?",
+    "ground_truth": " The Zhou \\textit{et al.} method suffers from a \"zoom-in-and-out\" effect, while the Chen \\textit{et al.} method produces lip shapes that differ from the real ones.",
+    "selected_figures_names": [
+      "1812.06589v2-Figure5-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Figure3-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table1-1.png",
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a visual comparison of the generated talking-face videos by different methods, including Zhou et al. and Chen et al., which helps in understanding the qualitative differences. Text 5 discusses the limitations of existing methods, including Zhou et al. and Chen et al., in terms of feature representation and synchronization between audio and video.",
+    "answer": "The limitations of the Zhou et al. and Chen et al. methods include a focus on either disentangling content and identity features or using landmarks as middle features, which may neglect the essential problem of expressing audio features into generated video. This can lead to less synchronized talking face transitions compared to the proposed method, which aims to maximize shared information between audio and video.",
+    "text_chunks": [
+      "Quantitative Results We compare our model with four recent state-of-the-art methods, including Chung et al. \\shortcite{Chung2017YouST, Chen et al. \\shortcite{Chen2018LipMG Zhou et al. \\shortcite{Zhou2018TalkingFG, and Chen et al. \\shortcite{chen2019hierarchical. Table shows the quantitative results of our method and its competitors with higher PSNR, SSIM and lower LMD, suggesting the best quality of the generated video frames of the talking faces.",
+      "Although the PSNR of our method is a little lower than that of Chen et al. , our method surpass on the metrics of both SSIM and LMD. Therefore, our method always achieves the highest PSNR and SSIM, demonstrating our method is able to generate high-quality videos. Qualitative Results To present the superiority of our method, we provide generated samples compared with Zhou et al. \\shortcite{Zhou2018TalkingFG, and Chen et al. \\shortcite{chen2019hierarchical.",
+      "Chen et al. \\shortcite{Zhou2018TalkingFG proposed to leverage landmark as middle information to better guide face generation. However, they mainly focused on the inner-modal coherence, while lacking of discovering the cross-modal coherence. % Mutual Information Estimation",
+      "Based on the above discussion, we propose a novel and robust method by exploring the coherence between audio and visual modalities for arbitrary talking face generation in this paper. The proposed model consists of three components: talking face generator, asymmetric mutual information estimator, and frame discriminator, as shown in Fig. . First, the talking face generator is designed to generate target frames from the given input: one audio clip, one still facial image, and the previous generated frame.",
+      "Next, some works tried to synthesized the talking faces for the identities from the dataset . Recently, the synthesis of the talking face for the arbitrary identities out of the dataset has drawn much attention. Zhou et al. \\shortcite{Zhou2018TalkingFG proposed an adversarial learning method to disentangle the different information for one image during generation.",
+      "Existing state-of-the-art works either try to disentangle the content and identity features from the speech for the video generation step or leverage the landmark as a middle feature to bridge the gap between audio and video. Despite the great progress on feature representation for video generation, they usually leverage reconstruct loss between generated and real frames, while neglecting an essential problem in talking face generation: how to sufficiently express the audio feature into generated video? To reduce the uncertainty in the audio-to-video generation process and ensure the synchronized talking face transition, we argue that the giving audio and generated video should share maximum information, i.e., the minimized sharing entropy across modalities.",
+      "We observe that a talking face video is mainly composited by the identity-related feature and the lip-related feature, where the former is more stable while the latter is more temporal dynamic. Therefore, it is essential to separate these two features for arbitrary identity generation. Herein, we propose to leverage the given face and previous generated frame to provide identity-related and lip-related information, respectively.",
+      "Introduction Talking face generation, which aims to generate a realistic talking video for the given still face image and speech clip, has been an active research topic. It has wide potential applications such as movie animation, teleconferencing, talking agents, and enhancing speech comprehension while preserving privacy. Although recent efforts have achieved impressive talking face synthesis for arbitrary identities, it is still a huge challenge due to the heterogeneous between audio and video, together with the appearance diversity of arbitrary identities."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a visual comparison of the generated talking-face videos by different methods, including Zhou et al. and Chen et al., which helps in understanding the qualitative differences. Text 5 discusses the limitations of existing methods, including Zhou et al. and Chen et al., in terms of feature representation and synchronization between audio and video.\",\n    \"Answer\": \"The limitations of the Zhou et al. and Chen et al. methods include a focus on either disentangling content and identity features or using landmarks as middle features, which may neglect the essential problem of expressing audio features into generated video. This can lead to less synchronized talking face transitions compared to the proposed method, which aims to maximize shared information between audio and video.\"\n}"
+  },
+  "7": {
+    "question": "Which method performed the best according to the LMD metric?",
+    "ground_truth": "AMIE (Ours)",
+    "selected_figures_names": [
+      "1812.06589v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1812.06589v2-Figure5-1.png",
+      "1812.06589v2-Table1-1.png",
+      "1812.06589v2-Figure1-1.png",
+      "1812.06589v2-Table4-1.png",
+      "1812.06589v2-Figure2-1.png",
+      "1812.06589v2-Figure4-1.png",
+      "1812.06589v2-Table3-1.png",
+      "1812.06589v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a table with quantitative results including the LMD metric, and Text 1 explains the significance of LMD, stating that a lower LMD indicates better performance.",
+    "answer": "AMIE (Ours) performed the best according to the LMD metric with a score of 1.21.",
+    "text_chunks": [
+      "Although Zhou et al. obtains the lowest PSNR, it obtains the second highest SSIM and its SSIM is significantly better than Chung et al. and Chen et al. . To further verify the robustness for arbitrary person generation, we evaluate our method on another benchmark dataset GRID and report the comparison results in Table . From Table , we observe that our model achieves the highest SSIM and the lowest LMD, demonstrating the effectiveness and robustness of our method.",
+      "% Furthermore, we use Landmark Distance (LMD) to evaluate the accuracy of the generated lip by calculating the landmark distance between the generated video and the original video. The lower LMD, the better of the generation.",
+      "Quantitative Results We compare our model with four recent state-of-the-art methods, including Chung et al. \\shortcite{Chung2017YouST, Chen et al. \\shortcite{Chen2018LipMG Zhou et al. \\shortcite{Zhou2018TalkingFG, and Chen et al. \\shortcite{chen2019hierarchical. Table shows the quantitative results of our method and its competitors with higher PSNR, SSIM and lower LMD, suggesting the best quality of the generated video frames of the talking faces.",
+      "Although the PSNR of our method is a little lower than that of Chen et al. , our method surpass on the metrics of both SSIM and LMD. Therefore, our method always achieves the highest PSNR and SSIM, demonstrating our method is able to generate high-quality videos. Qualitative Results To present the superiority of our method, we provide generated samples compared with Zhou et al. \\shortcite{Zhou2018TalkingFG, and Chen et al. \\shortcite{chen2019hierarchical.",
+      "We implement mutual information as described before. We try to maximize it between generated frames and audios, Our full model is optimized according to the following objective function: Experiments Dataset and Metrics We evaluate our method on prevalent benchmark datasets LRW and GRID .",
+      "Rithesh et al. \\shortcite{kumar2017obamanet used a time-delayed LSTM to generate key points synced to the audio and use another network to generate the video frames conditioned on the key points. Supasorn et al. \\shortcite{suwajanakorn2017synthesizing proposed a teeth proxy to improve the quality of the teeth during generation.",
+      "It is clear to see that, Zhou et al. suffer from a \"zoom-in-and-out\" effect, while the lip shapes of Chen et al. appear differences from the real one. In general, our model can generate more realistic and synchronous frames. Ablation Study In order to quantify the effect of each component of our method, we conduct ablation study experiments to verify the contributions of the two key components in our model: Asymmetric Mutual Information Estimator (AMIE) and Dynamic Attention (DA), and the two important strategies in AMIE: the asymmetric training strategy (Asy.) and JS represented estimator.",
+      "Our model leverages the asymmetric mutual information estimator to learn the correlation of audio and facial image features and utilizes dynamic attention to simulate the process of disentangling. Extensive experimental results on benchmark datasets demonstrate the promising performance of our method.% \\section*{Acknowledgments This work is partially funded by the Beijing Natural Science Foundation (JQ18017), Youth Innovation Promotion Association CAS (Grant No. Y201929), the National Nature Science Foundation of China (61976002), and the Open Project Program of the National Laboratory of Pattern Recognition (NLPR) (201900046). \\bibliographystyle{named \\bibliography{refs_mini"
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a table with quantitative results including the LMD metric, and Text 1 explains the significance of LMD, stating that a lower LMD indicates better performance.\",\n    \"Answer\": \"AMIE (Ours) performed the best according to the LMD metric with a score of 1.21.\"\n}"
+  }
+}

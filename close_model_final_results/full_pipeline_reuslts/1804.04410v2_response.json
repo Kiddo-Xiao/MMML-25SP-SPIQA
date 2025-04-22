@@ -1,0 +1,87 @@
+{
+  "0": {
+    "question": "How are documents ranked and pruned in the telescoping architecture?",
+    "ground_truth": "Documents are first matched using a pre-defined match plan. Then, they are passed through additional rank-and-prune stages, which are implemented as a cascade of machine learning models.",
+    "selected_figures_names": [
+      "1804.04410v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 visually represents the telescoping architecture, showing the stages of matching and subsequent ranking and pruning. Text 1 explains the process of rank-and-prune steps following the initial matching stage, which aligns with the visual representation.",
+    "answer": "In the telescoping architecture, documents are initially matched at level 0 (L0) and then undergo a series of rank-and-prune steps, such as L1 and L2. These steps refine the document set by ranking them and pruning less relevant ones, aggregating results across machines before further processing.",
+    "text_chunks": [
+      "\\ifanon \\censor{xxxxxx \\else Bing \\fi employs a telescoping framework \\citep{matveeva2006high to iteratively prune the set of candidate documents considered for a query. On receiving a search request, the backend classifies the query based on a set of available features---the historical popularity of the query, the number of query terms, and the document frequency of the query terms---into one of the few pre-determined categories. Based on the query category, a match plan---comprising of a sequence of match rules \\{mr_0 \\ldots mr_l\\---is selected that determines how the index should be scanned.",
+      "The matching stage---referred to as level 0, or L0---is followed by a number of rank-and-prune steps (\\eg, L1 and L2). This telescoping setup typically runs on each individual machine that has a portion of the document index, and the results are aggregated across all the machines, followed by more rank-and-prune stages. A significant amount of literature exists on machine learning approaches to ranking \\citep{Liu:2009, mitra2017introduction.",
+      "that maximizes the total estimated relevance of the documents recalled, while minimizing the index blocks accessed. So, our reward function has the following form: g(d_i) is the relevance of the i^\\text{th document which we estimate based on the L1 ranker score from the subsequent level of our telescoping setup. The constant n determines the number of top ranked documents we consider in the reward computation, where the ranking is determined by the L1 model.",
+      "The match plan may also choose to reset the scan to the beginning of the index before continuing with the next match rule. After the match plan execution terminates, the selected candidates are further ranked and pruned by a cascade of machine learning models. Figure visualizes this telescoping setup.",
+      "Documents are scanned based on the chosen match plan which consists of a sequence of match rules, and corresponding stopping criteria. A match rule defines the condition that a document should satisfy to be selected as a candidate for ranking, and the stopping criteria decides when the index scan using a particular match rule should terminate---and if the matching process should continue with the next match rule, or conclude, or reset to the beginning of the index. These match plans influence the trade-off between how quickly \\ifanon \\censor{xxxxxx \\else Bing \\fi responds to a query, and its result quality.",
+      "Therefore, we learn a policy that sequentially selects matching rules based on the current state---or decides to terminate or reset the scan. Notably, in reinforcement learning this approach is similar to an agent choosing between k available actions based on its present state. In the telescoping setup, it is important for the matching function to select documents that are likely to be ranked highly by the subsequent models in the pipeline.",
+      "If we assume that the index is sorted by \\ifanon PageRank, \\else static rank, \\fi then mr_B is still likely to locate the right document satisfying the navigational intent. In \\ifanon \\censor{xxxxxx, \\else Bing, \\fi the index data is read from disk to memory in fixed sized contiguous blocks. As the match plan is executed, two accumulators keep track of the number of blocks accessed u from disk and the cumulative number of term matches v in all the inspected documents so far.",
+      "E.g., long queries with rare intents may require more expensive match plans that consider the body text of the documents, and search deeper into the index to find more candidates. In contrast, for a popular navigational query a shallow scan against a subset of the document fields---\\eg, URL and title---may be sufficient. Prior to this work, these match plans were hand-crafted and statically assigned to each query category in \\ifanon \\censor{xxxxxx."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 visually represents the telescoping architecture, showing the stages of matching and subsequent ranking and pruning. Text 1 explains the process of rank-and-prune steps following the initial matching stage, which aligns with the visual representation.\",\n    \"Answer\": \"In the telescoping architecture, documents are initially matched at level 0 (L0) and then undergo a series of rank-and-prune steps, such as L1 and L2. These steps refine the document set by ranking them and pruning less relevant ones, aggregating results across machines before further processing.\"\n}"
+  },
+  "1": {
+    "question": "How does the RL policy compare to the baseline in terms of index blocks accessed?",
+    "ground_truth": "The RL policy accesses fewer index blocks than the baseline.",
+    "selected_figures_names": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 6,
+    "rationale": "Image 1 visually shows the reduction in index blocks accessed by the RL policy compared to the baseline. Text 6 explains that the model is trained to maximize cumulative reward while reducing index blocks accessed, indicating a significant reduction with minimal degradation in quality.",
+    "answer": "The RL policy significantly reduces the number of index blocks accessed compared to the baseline, with minimal or no degradation in candidate set quality.",
+    "text_chunks": [
+      "\\else Bing. \\fi We cast match planning as a reinforcement learning (RL) task. We learn a policy that sequentially decides which match rules to employ during candidate generation.",
+      "If we assume that the index is sorted by \\ifanon PageRank, \\else static rank, \\fi then mr_B is still likely to locate the right document satisfying the navigational intent. In \\ifanon \\censor{xxxxxx, \\else Bing, \\fi the index data is read from disk to memory in fixed sized contiguous blocks. As the match plan is executed, two accumulators keep track of the number of blocks accessed u from disk and the cumulative number of term matches v in all the inspected documents so far.",
+      "\\ifanon \\censor{xxxxxx's \\else Bing's \\fi index is distributed over a large number of machines. We train our policy using a single machine---containing one shard of the index---but test against a small cluster of machines containing approximately 10\\% of the entire index. During evaluation, the same policy is applied on every machine which, however, may lead to executing different sequences of match rules on each of them.",
+      "The goal of the agent is to learn a policy \\pi_{\\theta : \\mathcal{S \\rightarrow \\mathcal{A which maximizes the cumulative discounted reward R. In our setup, the action space includes the choice of Our state s_t \\in \\mathcal{S is a function of the cumulative index blocks accessed u_t and the cumulative number of term matches v_t at time t. We implement table based Q-learning \\citep{watkins1992q which requires that the state space to be discrete. So, we run the baseline match plans from \\ifanon \\censor{xxxxxx's \\else Bing's \\fi production system and collect a large set of \\{u_t, v_t\\ pairs recording after every match rule execution.",
+      "The index scan is terminated when the policy chooses a_\\text{stop, or we surpass a maximum execution time threshold. Data and Experiments To train our model, we sample approximately one million queries from \\ifanon \\censor{xxxxxx's \\else Bing's \\fi query logs. We train our policies individually for each query category using the corresponding queries from this sampled dataset.",
+      "This means given a choice between two documents with equal number of query term matches, the match plan should surface the document that the rankers in stage L1, and above, prefer. In Section , we will describe our reward function which uses the L1 scores as an approximation of the document's relevance. This implicitly optimizes for a higher agreement between our matching policy and upstream ranking functions.",
+      "The model is trained to maximize a cumulative reward computed based on the estimated relevance of the additional documents discovered, discounted by their cost of retrieval. We use table-based Q-learning and observe significant reduction in the number of index blocks accessed---with small or no degradations in the candidate set quality. Related work Response time is a key consideration in web search.",
+      "Documents are scanned based on the chosen match plan which consists of a sequence of match rules, and corresponding stopping criteria. A match rule defines the condition that a document should satisfy to be selected as a candidate for ranking, and the stopping criteria decides when the index scan using a particular match rule should terminate---and if the matching process should continue with the next match rule, or conclude, or reset to the beginning of the index. These match plans influence the trade-off between how quickly \\ifanon \\censor{xxxxxx \\else Bing \\fi responds to a query, and its result quality."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 6,\n    \"Rationale\": \"Image 1 visually shows the reduction in index blocks accessed by the RL policy compared to the baseline. Text 6 explains that the model is trained to maximize cumulative reward while reducing index blocks accessed, indicating a significant reduction with minimal degradation in quality.\",\n    \"Answer\": \"The RL policy significantly reduces the number of index blocks accessed compared to the baseline, with minimal or no degradation in candidate set quality.\"\n}"
+  },
+  "2": {
+    "question": "How does the performance of the learned policy compare to the production baseline for CAT2 queries in terms of relevance and efficiency?",
+    "ground_truth": "For CAT2 queries, the learned policy shows a slight improvement in relevance (NCG) for the weighted set and a significant reduction in index blocks accessed for both weighted and unweighted sets.",
+    "selected_figures_names": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1804.04410v2-Figure1-1.png",
+      "1804.04410v2-Figure2-1.png",
+      "1804.04410v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 and Text 2 provide specific data on the performance of the learned policy compared to the production baseline for CAT2 queries, including metrics on relevance (NCG@100) and efficiency (index blocks accessed).",
+    "answer": "For CAT2 queries, the learned policy shows a slight improvement in relevance (+0.2% NCG@100) and a significant reduction in index blocks accessed (-22.7%) compared to the production baseline.",
+    "text_chunks": [
+      "CAT1 consists of short multi-term queries with few occurrences over last 6 months. CAT2 includes multi-term queries, where every term has moderately high document frequency. As the absolute numbers are confidential, we report the relative improvements against the \\ifanon \\censor{xxxxxx \\else Bing \\fi production system in Table~. Notably, these efficiency improvements---also highlighted in Figure~---are over a strong baseline that has been tuned continuously by many \\ifanon \\censor{xxxxxx \\else Bing \\fi engineers over several years.",
+      "The goal of the agent is to learn a policy \\pi_{\\theta : \\mathcal{S \\rightarrow \\mathcal{A which maximizes the cumulative discounted reward R. In our setup, the action space includes the choice of Our state s_t \\in \\mathcal{S is a function of the cumulative index blocks accessed u_t and the cumulative number of term matches v_t at time t. We implement table based Q-learning \\citep{watkins1992q which requires that the state space to be discrete. So, we run the baseline match plans from \\ifanon \\censor{xxxxxx's \\else Bing's \\fi production system and collect a large set of \\{u_t, v_t\\ pairs recording after every match rule execution.",
+      "\\paragraph{Metrics We compare the candidate sets generated by the baseline match plans and our learned policies \\wrt both relevance and efficiency. Each candidate set D is unordered because it precedes the ranking steps. To quantify the relevance of an unordered candidate set using graded relevance judgments, we use the popular NDCG metric but without any position based discounting.",
+      "Therefore, we learn a policy that sequentially selects matching rules based on the current state---or decides to terminate or reset the scan. Notably, in reinforcement learning this approach is similar to an agent choosing between k available actions based on its present state. In the telescoping setup, it is important for the matching function to select documents that are likely to be ranked highly by the subsequent models in the pipeline.",
+      "\\else Bing. \\fi We cast match planning as a reinforcement learning (RL) task. We learn a policy that sequentially decides which match rules to employ during candidate generation.",
+      "In this work, we instead study the application of reinforcement learning to the matching stage. \\paragraph{Desiderata of candidate generation The candidate generation has a strong influence on both the quality of \\ifanon \\censor{xxxxxx's \\else Bing's \\fi results, as well as its response time. If the match plan fails to recall relevant candidates, the ranking stages that follow have no means to compensate for the missing documents.",
+      "Predicting query response times has been explored for intelligent scheduling \\citep{macdonald2012learning, as well as models for aggressive pruning \\citep{tonellotto2013efficient, culpepper2016dynamic, yun2015optimal. Finally, reinforcement learning has been applied in general to information retrieval \\citep{nogueira2017task and extraction \\citep{narasimhan2016improving tasks. However, we believe this is the first work that employs reinforcement learning for jointly optimizing efficiency and performance of query evaluation.",
+      "Finally, it is desirable that our matching strategy is customized for each query category. For example, the optimal matching policy for long queries containing rare terms is unlikely to be the best strategy for short navigational queries. We, therefore, train separate policies for each query category."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 and Text 2 provide specific data on the performance of the learned policy compared to the production baseline for CAT2 queries, including metrics on relevance (NCG@100) and efficiency (index blocks accessed).\",\n    \"Answer\": \"For CAT2 queries, the learned policy shows a slight improvement in relevance (+0.2% NCG@100) and a significant reduction in index blocks accessed (-22.7%) compared to the production baseline.\"\n}"
+  }
+}

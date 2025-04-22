@@ -1,0 +1,365 @@
+{
+  "0": {
+    "question": "What is the purpose of the residual connection in the decoding module?",
+    "ground_truth": "The residual connection allows the output of a layer to be added to the output of another layer, which helps to improve the flow of information through the network.",
+    "selected_figures_names": [
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure4-1.png",
+      "1802.07351v2-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure4-1.png",
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Table2-1.png",
+      "1802.07351v2-Figure7-1.png",
+      "1802.07351v2-Figure2-1.png",
+      "1802.07351v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a visual representation of the network structure, including the decoding module with residual connections. Text 0 describes the decoding module and mentions the use of residual connections, which is directly relevant to understanding their purpose.",
+    "answer": "The purpose of the residual connection in the decoding module is to facilitate the flow of information and gradients through the network, improving learning and performance by allowing the network to learn residual mappings instead of direct mappings.",
+    "text_chunks": [
+      "Decoding Module In the decoding module, we again use the U-Net structure with residual connections. The whole module structure is illustrated in Figure . Each stage has its own decoder.",
+      "Relation Module The relation module is illustrated in Figure . It concatenates the outputs of five deformable cost volumes, which have different neighborhood size k or dilation rate r, as shown in Table . Such combination enables dense correspondences nearby the center of an image location and sparse correspondences in peripheral to capture multi-scale motion.",
+      "Therefore, the artifacts discussed in \\textsection can be avoided. (3) The decoding module only receives inputs from the relation module. Therefore, neural networks infer the optical flow solely from the relations between two images, rather than memorize the optical flow pattern of a single image as a short-cut.",
+      "We remove the normalization in the relation modules. (5) Shared decoder. We let all stages share one decoder and set the hyparameters of the relation modules in second and third stage the same as the first stage.",
+      "We replace the deformable cost volumes with warping and standard cost volumes (with dilation). (2) With shortcut. We additionally concatenate the relation module with the feature maps of the first image and feed them into the decoder.",
+      "When the module does not receive an optical flow as one of the inputs (in the first stage), it is set to receive a zero-valued optical flow field. \\newpage Since the relation module captures multi-scale motion without reducing the resolution, the presence and precise location of small objects which move fast are retained. This allows Devon to have better chance in solving the ``small objects move fast\" problem.",
+      "Each stage is a neural network with an identical Siamese architecture, which consists of an encoding module, a relation module and a decoding module. Each stage outputs the optical flow field of 1/4 resolution and then the flow from last stage is bilinearly upsampled to obtain the final prediction. The optical flow estimated from a previous stage is propagated to the current one through the deformable cost volume and residual connections.",
+      "(6) Simple encoder. We replace the U-Net structure encoding module with a simpler one: 4 convolutional layers of 32 units receptive field size 3\\times3. The first two layers have stride 2 and the last two have stride 1."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a visual representation of the network structure, including the decoding module with residual connections. Text 0 describes the decoding module and mentions the use of residual connections, which is directly relevant to understanding their purpose.\",\n    \"Answer\": \"The purpose of the residual connection in the decoding module is to facilitate the flow of information and gradients through the network, improving learning and performance by allowing the network to learn residual mappings instead of direct mappings.\"\n}"
+  },
+  "1": {
+    "question": "What are the differences between the results of the three methods, LiteFlowNet, PWC-Net, and Devon, compared to the ground truth?",
+    "ground_truth": "LiteFlowNet, PWC-Net, and Devon all produce results that are similar to the ground truth, but there are some subtle differences. For example, LiteFlowNet tends to overestimate the motion of the small object, while PWC-Net and Devon tend to underestimate it. Additionally, all three methods produce some artifacts around the edges of the moving object.",
+    "selected_figures_names": [
+      "1802.07351v2-Figure9-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure5-1.png",
+      "1802.07351v2-Figure9-1.png",
+      "1802.07351v2-Figure8-1.png",
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Figure10-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a visual comparison of the results from LiteFlowNet, PWC-Net, and Devon against the ground truth, which is essential for understanding the differences in their outputs. Text 5 discusses Devon's performance in handling small objects moving fast, which is relevant to the question about differences in results.",
+    "answer": "The differences between the results of LiteFlowNet, PWC-Net, and Devon compared to the ground truth are primarily in their ability to handle small objects moving fast. Devon shows better results in visualizing these small objects, while PWC-Net and LiteFlowNet may struggle due to their multi-resolution approach, which can lead to loss of detail for small, fast-moving objects.",
+    "text_chunks": [
+      "No additional fine-tuning is applied. From Figure , and , we can see Devon gives much more accurate estimation of the small objects. The results on Sintel and KITTI are listed in Table , and , from which we can see Devon outperforms PWC-Net and LiteFlowNet on Sintel clean pass, though not on Sintel final pass and KITTI.",
+      "We compare Devon with the previous neural network models: FlowNetS , FlowNetC , FlowNet2 , SpyNet , PWC-Net and LiteFlowNet . We use Devon with three stages. We use l_1 norm for the deformable cost volumes.",
+      "PWC-Net and LiteFlowNet follow the same strategy except that they use strided convolutions instead of downsampling to reduce the resolution and use cost volumes as a more explicit representation of motion. As a result, a decoder in lower resolution has effectively a larger receptive size to cover large displacements. However, as pointed out in , the multi-resolution estimation of optical flow faces the ``small objects move fast\" problem as small objects disappear in lower resolution and cannot be recovered in higher resolution due to their large motion .",
+      "Compared to previous neural network models~, Devon is different in the following major ways: (1) All stages in Devon output optical flow of the same resolution. While Devon handles multi-scale motion by the deformable cost volume, it does not use the multi-resolution representation of motion. Extensive downsampling leads to the loss of information and deficiency in handling the ``small objects move fast\" problem.",
+      "The short-cut issue has appeared when applying neural networks to learn monocular stereo . On the contrary, in FlowNetC, PWC-Net and LiteFlowNet, the decoding module also receives inputs from the encoding module of the first image. (4) The encoding module is shared in all stages.",
+      "The timing was recorded on a NVIDIA TITAN Xp graphics card for processing a pair of RGB images of size 1024\\times 448. Discussions While Devon achieves better results in handling small objects moving fast in the visualization results, it does not outperform multi-resolution based methods such as PWC-Net on Sintel final pass and KITTI. We conjecture that this is due to the fact that Sintel and KITTI mostly contain large objects (e.g. human bodies, cars and buildings), for which the multi-resolution approach might be more suitable.",
+      "Training Our training procedure largely follows from . We first train our network on FlyingChairs. We use the l_2 loss function where F_{\\text{GT denotes the ground-truth optical flow and \\hat{F_t denotes the bilinear upsampled network output at stage t. For Devon with three stages, we choose \\gamma_1 = 0.2, \\gamma_2 = 0.3 and \\gamma_3 = 0.5.",
+      "This is consistent with the fact that small displacements are more frequent in natural videos and resembles the structure of retina, as illustrated in Figure . \\newpage Since Devon is a multi-stage model which performs coarse-to-fine estimation of optical flow, we gradually decrease the dilation rates as the optical flow is expected to get finer in later stages. We also experimented with using the cost volumes of the same neighbor sizes and dilation rates for all three stages, the result of which is reported in \\textsection ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a visual comparison of the results from LiteFlowNet, PWC-Net, and Devon against the ground truth, which is essential for understanding the differences in their outputs. Text 5 discusses Devon's performance in handling small objects moving fast, which is relevant to the question about differences in results.\",\n    \"Answer\": \"The differences between the results of LiteFlowNet, PWC-Net, and Devon compared to the ground truth are primarily in their ability to handle small objects moving fast. Devon shows better results in visualizing these small objects, while PWC-Net and LiteFlowNet may struggle due to their multi-resolution approach, which can lead to loss of detail for small, fast-moving objects.\"\n}"
+  },
+  "2": {
+    "question": "What is the difference between a standard cost volume and a deformable cost volume?",
+    "ground_truth": "A standard cost volume computes the matching costs for a neighborhood of the same location on the feature maps of the first and second images. A deformable cost volume computes the matching costs for a dilated neighborhood of the same location on the feature maps of the first and second images, offset by a flow vector.",
+    "selected_figures_names": [
+      "1802.07351v2-Figure2-1.png",
+      "1802.07351v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure2-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure10-1.png",
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Figure1-1.png",
+      "1802.07351v2-Table5-1.png",
+      "1802.07351v2-Figure8-1.png",
+      "1802.07351v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 3,
+    "rationale": "Image 0 visually illustrates the difference between standard and deformable cost volumes, showing how the deformable cost volume uses a dilated neighborhood and flow vector. Text 3 explains the concept of deforming the cost volume instead of images, introducing dilation to handle large displacements.",
+    "answer": "The difference between a standard cost volume and a deformable cost volume is that the deformable cost volume uses a dilated neighborhood and is offset by a flow vector, allowing it to handle large displacements without reducing resolution. In contrast, the standard cost volume does not incorporate these features, leading to potential ambiguities in matching.",
+    "text_chunks": [
+      "Along with Table , the result suggests that the deformable cost volume is a suitable replacement of warping and standard cost volume in Devon and potentially other models. The deformation in deformable cost volume is different from the one in deformable convolutional networks . In deformable cost volume, the cost volume is offset by an external optical flow and dilation.",
+      "The standard cost volume () with warping () gives That C(\\mathbf{p_1,\\mathbf{0) = C(\\mathbf{p_1,\\mathbf{p_2-\\mathbf{p_1) implies f_I(\\mathbf{p_1) has the same matching cost for f_J(\\mathbf{p_1) and f_J(\\mathbf{p_2), which does not hold in general and makes the matching ambiguous. On the other hand, with deformable cost volume () of dilation rate one, we have As C(\\mathbf{p_1,\\mathbf{0) \\neq C(\\mathbf{p_1,\\mathbf{p_2-\\mathbf{p_1) in general, the artifact is avoided.",
+      "An interesting extension of our work is to combine multi-resolution approach and Devon to handle objects of diverse sizes and speed. From Table , we can see using deformable cost volume achieves shorter runtime than using warping and standard cost volumes. This is because the deformation and the cost volume construction are merged into one process in deformable cost volume and therefore reduces the runtime.",
+      "The key idea is: instead of deforming images or their feature maps, we deform the cost volume and leave the images and the feature maps unchanged. The proposed deformable cost volume is defined as where r is the dilation rate and F(\\cdot) is an external flow field. The dilation rate r is introduced to enlarge the size of the neighborhood to handle large displacements without reducing the resolution.",
+      "Although neural networks as universal approximators might be able to learn the self-corrected correspondences if trained with ground-truth optical flow, one should be aware of the issue which might cause problems in designing non-learning-based methods or more interpretable neural network models. Deformable Cost Volume Let I denote the first image, J denote the second image and f_I: \\mathbb{R^2 \\rightarrow \\mathbb{R^d and f_J: \\mathbb{R^2 \\rightarrow \\mathbb{R^d denote their feature maps of dimensionality d, respectively. The standard cost volume is defined as for image location \\mathbf{p \\in \\mathbb{R^2, neighbor \\mathbf{v",
+      "This is inspired by the dilated convolution which enlarges its receptive field in a similar way. F(\\cdot) can be obtained from the optical flow estimated from a previous stage or an external algorithm. If F(\\mathbf{p)=0 for all \\mathbf{p and r=1, then the deformable cost volume is reduced to the standard cost volume.",
+      "The use of dilation in standard cost volume has been proposed in and used in , though it has not been used in a multi-scale fashion in each stage as ours to handle the small objects moving fast problem. Conclusions In this paper, we proposed a new neural network module, Deformable Cost Volume, which allows the representation of multi-scale motion in a single high resolution and avoids the drawback of warping. Based on it, we designed the Deformable Volume Network, which is demonstrated to be effective in estimating optical flow, especially in situations where small objects move fast.",
+      "(3) Without dilation. We replace the concatenated deformable cost volumes with one deformable cost volume of neighorhood size 13\\times 13 and dilation rate one. (4) Without norm."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 3,\n    \"Rationale\": \"Image 0 visually illustrates the difference between standard and deformable cost volumes, showing how the deformable cost volume uses a dilated neighborhood and flow vector. Text 3 explains the concept of deforming the cost volume instead of images, introducing dilation to handle large displacements.\",\n    \"Answer\": \"The difference between a standard cost volume and a deformable cost volume is that the deformable cost volume uses a dilated neighborhood and is offset by a flow vector, allowing it to handle large displacements without reducing resolution. In contrast, the standard cost volume does not incorporate these features, leading to potential ambiguities in matching.\"\n}"
+  },
+  "3": {
+    "question": "Based on the ablation study, which modification to the Devon model architecture had the most significant negative impact on performance for the KITTI 2015 dataset?",
+    "ground_truth": "Removing the normalization in the relation modules had the most significant negative impact on performance for the KITTI 2015 dataset.",
+    "selected_figures_names": [
+      "1802.07351v2-Figure8-1.png",
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Figure9-1.png",
+      "1802.07351v2-Table1-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure8-1.png",
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Figure9-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Table5-1.png",
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Table3-1.png",
+      "1802.07351v2-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 shows the performance of different models, including Devon, on a dataset with small objects moving fast, which is relevant to understanding performance impacts. Text 2 discusses Devon's performance on the KITTI dataset, noting it does not outperform multi-resolution methods, which is crucial for identifying modifications affecting performance.",
+    "answer": "The modification that had the most significant negative impact on performance for the KITTI 2015 dataset was Devon's lack of a multi-resolution approach, which is more suitable for datasets with large objects like KITTI.",
+    "text_chunks": [
+      "Ablation Analysis We perform an ablation analysis of Devon trained on FlyingChairs. There are six ablation cases: (1) With warping.",
+      "Compared to previous neural network models~, Devon is different in the following major ways: (1) All stages in Devon output optical flow of the same resolution. While Devon handles multi-scale motion by the deformable cost volume, it does not use the multi-resolution representation of motion. Extensive downsampling leads to the loss of information and deficiency in handling the ``small objects move fast\" problem.",
+      "The timing was recorded on a NVIDIA TITAN Xp graphics card for processing a pair of RGB images of size 1024\\times 448. Discussions While Devon achieves better results in handling small objects moving fast in the visualization results, it does not outperform multi-resolution based methods such as PWC-Net on Sintel final pass and KITTI. We conjecture that this is due to the fact that Sintel and KITTI mostly contain large objects (e.g. human bodies, cars and buildings), for which the multi-resolution approach might be more suitable.",
+      "No additional fine-tuning is applied. From Figure , and , we can see Devon gives much more accurate estimation of the small objects. The results on Sintel and KITTI are listed in Table , and , from which we can see Devon outperforms PWC-Net and LiteFlowNet on Sintel clean pass, though not on Sintel final pass and KITTI.",
+      "We also experimented with sharing decoder in all three stages. The result is reported in \\textsection . Experiments We evaluate Devon on two challenging benchmarks which contain large motions: Sintel and KITTI , as in .",
+      "The training set is mixed with KITTI 2012 and KITTI 2015. Invalid pixels are excluded in computing the loss. All the experiments are conducted with PyTorch.",
+      "This is consistent with the fact that small displacements are more frequent in natural videos and resembles the structure of retina, as illustrated in Figure . \\newpage Since Devon is a multi-stage model which performs coarse-to-fine estimation of optical flow, we gradually decrease the dilation rates as the optical flow is expected to get finer in later stages. We also experimented with using the cost volumes of the same neighbor sizes and dilation rates for all three stages, the result of which is reported in \\textsection .",
+      "Along with Table , the result suggests that the deformable cost volume is a suitable replacement of warping and standard cost volume in Devon and potentially other models. The deformation in deformable cost volume is different from the one in deformable convolutional networks . In deformable cost volume, the cost volume is offset by an external optical flow and dilation."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 shows the performance of different models, including Devon, on a dataset with small objects moving fast, which is relevant to understanding performance impacts. Text 2 discusses Devon's performance on the KITTI dataset, noting it does not outperform multi-resolution methods, which is crucial for identifying modifications affecting performance.\",\n    \"Answer\": \"The modification that had the most significant negative impact on performance for the KITTI 2015 dataset was Devon's lack of a multi-resolution approach, which is more suitable for datasets with large objects like KITTI.\"\n}"
+  },
+  "4": {
+    "question": "Which modification to the Devon model resulted in the fastest processing time for both forward and backward passes, and how much faster was it compared to the full model in terms of the backward pass? ",
+    "ground_truth": "The \"Without dilation\" configuration resulted in the fastest processing time for both forward and backward passes. It was approximately 29.43 ms faster than the full model in terms of the backward pass (147.74 ms vs. 177.17 ms).",
+    "selected_figures_names": [
+      "1802.07351v2-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Figure6-1.png",
+      "1802.07351v2-Figure7-1.png",
+      "1802.07351v2-Table2-1.png",
+      "1802.07351v2-Table3-1.png",
+      "1802.07351v2-Figure1-1.png",
+      "1802.07351v2-Figure8-1.png",
+      "1802.07351v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 provides a table with runtime data for different modifications of the Devon model, which directly answers the question about processing time. Text 4 mentions the runtime of Devon and its variants, indicating it contains relevant information about performance changes.",
+    "answer": "The modification 'Without dilation' resulted in the fastest processing time for both forward and backward passes. It was 29.43 ms faster than the full model in the backward pass.",
+    "text_chunks": [
+      "Compared to previous neural network models~, Devon is different in the following major ways: (1) All stages in Devon output optical flow of the same resolution. While Devon handles multi-scale motion by the deformable cost volume, it does not use the multi-resolution representation of motion. Extensive downsampling leads to the loss of information and deficiency in handling the ``small objects move fast\" problem.",
+      "The timing was recorded on a NVIDIA TITAN Xp graphics card for processing a pair of RGB images of size 1024\\times 448. Discussions While Devon achieves better results in handling small objects moving fast in the visualization results, it does not outperform multi-resolution based methods such as PWC-Net on Sintel final pass and KITTI. We conjecture that this is due to the fact that Sintel and KITTI mostly contain large objects (e.g. human bodies, cars and buildings), for which the multi-resolution approach might be more suitable.",
+      "No additional fine-tuning is applied. From Figure , and , we can see Devon gives much more accurate estimation of the small objects. The results on Sintel and KITTI are listed in Table , and , from which we can see Devon outperforms PWC-Net and LiteFlowNet on Sintel clean pass, though not on Sintel final pass and KITTI.",
+      "An interesting extension of our work is to combine multi-resolution approach and Devon to handle objects of diverse sizes and speed. From Table , we can see using deformable cost volume achieves shorter runtime than using warping and standard cost volumes. This is because the deformation and the cost volume construction are merged into one process in deformable cost volume and therefore reduces the runtime.",
+      "For (1)\\sim(5), the changes are applied to all stages in Devon. The results are listed in Table , from which we can see the architecture of Devon is robust to various changes. Runtime We report the runtime of Devon and its variants in Table .",
+      "We also experimented with sharing decoder in all three stages. The result is reported in \\textsection . Experiments We evaluate Devon on two challenging benchmarks which contain large motions: Sintel and KITTI , as in .",
+      "We compare Devon with the previous neural network models: FlowNetS , FlowNetC , FlowNet2 , SpyNet , PWC-Net and LiteFlowNet . We use Devon with three stages. We use l_1 norm for the deformable cost volumes.",
+      "This is consistent with the fact that small displacements are more frequent in natural videos and resembles the structure of retina, as illustrated in Figure . \\newpage Since Devon is a multi-stage model which performs coarse-to-fine estimation of optical flow, we gradually decrease the dilation rates as the optical flow is expected to get finer in later stages. We also experimented with using the cost volumes of the same neighbor sizes and dilation rates for all three stages, the result of which is reported in \\textsection ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 provides a table with runtime data for different modifications of the Devon model, which directly answers the question about processing time. Text 4 mentions the runtime of Devon and its variants, indicating it contains relevant information about performance changes.\",\n    \"Answer\": \"The modification 'Without dilation' resulted in the fastest processing time for both forward and backward passes. It was 29.43 ms faster than the full model in the backward pass.\"\n}"
+  },
+  "5": {
+    "question": "What is the purpose of the residual connection in the encoding module?",
+    "ground_truth": "The residual connection adds the output of a layer to the output of another layer, which helps to prevent the vanishing gradient problem.",
+    "selected_figures_names": [
+      "1802.07351v2-Figure4-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure10-1.png",
+      "1802.07351v2-Figure9-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure5-1.png",
+      "1802.07351v2-Table2-1.png",
+      "1802.07351v2-Figure4-1.png",
+      "1802.07351v2-Table4-1.png",
+      "1802.07351v2-Table5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 shows the encoding module with residual connections, which is directly relevant to understanding their purpose. Text 2 explains the use of residual connections in the context of neural networks, indicating their role in propagating information between stages.",
+    "answer": "The purpose of the residual connection in the encoding module is to propagate information between layers, helping to maintain the flow of information and gradients through the network, which can improve learning and performance.",
+    "text_chunks": [
+      "Decoding Module In the decoding module, we again use the U-Net structure with residual connections. The whole module structure is illustrated in Figure . Each stage has its own decoder.",
+      "(6) Simple encoder. We replace the U-Net structure encoding module with a simpler one: 4 convolutional layers of 32 units receptive field size 3\\times3. The first two layers have stride 2 and the last two have stride 1.",
+      "Each stage is a neural network with an identical Siamese architecture, which consists of an encoding module, a relation module and a decoding module. Each stage outputs the optical flow field of 1/4 resolution and then the flow from last stage is bilinearly upsampled to obtain the final prediction. The optical flow estimated from a previous stage is propagated to the current one through the deformable cost volume and residual connections.",
+      "Therefore, the artifacts discussed in \\textsection can be avoided. (3) The decoding module only receives inputs from the relation module. Therefore, neural networks infer the optical flow solely from the relations between two images, rather than memorize the optical flow pattern of a single image as a short-cut.",
+      "Relation Module The relation module is illustrated in Figure . It concatenates the outputs of five deformable cost volumes, which have different neighborhood size k or dilation rate r, as shown in Table . Such combination enables dense correspondences nearby the center of an image location and sparse correspondences in peripheral to capture multi-scale motion.",
+      "We remove the normalization in the relation modules. (5) Shared decoder. We let all stages share one decoder and set the hyparameters of the relation modules in second and third stage the same as the first stage.",
+      "When the module does not receive an optical flow as one of the inputs (in the first stage), it is set to receive a zero-valued optical flow field. \\newpage Since the relation module captures multi-scale motion without reducing the resolution, the presence and precise location of small objects which move fast are retained. This allows Devon to have better chance in solving the ``small objects move fast\" problem.",
+      "The output of this module has size (k_1^2+k_2 ^2+k_3 ^2+k_4^2+k_5^2)\\times m\\times n, where m is the height and n is the width of the feature maps."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 shows the encoding module with residual connections, which is directly relevant to understanding their purpose. Text 2 explains the use of residual connections in the context of neural networks, indicating their role in propagating information between stages.\",\n    \"Answer\": \"The purpose of the residual connection in the encoding module is to propagate information between layers, helping to maintain the flow of information and gradients through the network, which can improve learning and performance.\"\n}"
+  },
+  "6": {
+    "question": "What is the role of the relation module (Rt) in the Deformable Volume Network (Devon)?",
+    "ground_truth": "The relation module (Rt) is responsible for capturing the spatial relationships between the features extracted from the first and second images.",
+    "selected_figures_names": [
+      "1802.07351v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Figure10-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Table2-1.png",
+      "1802.07351v2-Figure7-1.png",
+      "1802.07351v2-Figure9-1.png",
+      "1802.07351v2-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 4,
+    "rationale": "Image 0 provides a visual representation of the Deformable Volume Network (Devon) and shows the relation module (Rt) in context. Text 4 explains the role of the relation module in capturing multi-scale motion and retaining the precise location of small, fast-moving objects.",
+    "answer": "The relation module (Rt) in the Deformable Volume Network (Devon) captures multi-scale motion without reducing resolution, retaining the precise location of small, fast-moving objects.",
+    "text_chunks": [
+      "Relation Module The relation module is illustrated in Figure . It concatenates the outputs of five deformable cost volumes, which have different neighborhood size k or dilation rate r, as shown in Table . Such combination enables dense correspondences nearby the center of an image location and sparse correspondences in peripheral to capture multi-scale motion.",
+      "\\newpage Deformable Volume Network Our proposed model is the Deformable Volume Network (Devon), as illustrated in Figure . Devon has multiple stages.",
+      "However, warping often creates distortions and artifacts. This issue will be discussed in details in \\textsection . In this paper, we introduce the Deformable Volume Network (Devon), which avoids the drawbacks of multi-resolution estimation and warping.",
+      "Along with Table , the result suggests that the deformable cost volume is a suitable replacement of warping and standard cost volume in Devon and potentially other models. The deformation in deformable cost volume is different from the one in deformable convolutional networks . In deformable cost volume, the cost volume is offset by an external optical flow and dilation.",
+      "When the module does not receive an optical flow as one of the inputs (in the first stage), it is set to receive a zero-valued optical flow field. \\newpage Since the relation module captures multi-scale motion without reducing the resolution, the presence and precise location of small objects which move fast are retained. This allows Devon to have better chance in solving the ``small objects move fast\" problem.",
+      "We replace the deformable cost volumes with warping and standard cost volumes (with dilation). (2) With shortcut. We additionally concatenate the relation module with the feature maps of the first image and feed them into the decoder.",
+      "The use of dilation in standard cost volume has been proposed in and used in , though it has not been used in a multi-scale fashion in each stage as ours to handle the small objects moving fast problem. Conclusions In this paper, we proposed a new neural network module, Deformable Cost Volume, which allows the representation of multi-scale motion in a single high resolution and avoids the drawback of warping. Based on it, we designed the Deformable Volume Network, which is demonstrated to be effective in estimating optical flow, especially in situations where small objects move fast.",
+      "The key idea is: instead of deforming images or their feature maps, we deform the cost volume and leave the images and the feature maps unchanged. The proposed deformable cost volume is defined as where r is the dilation rate and F(\\cdot) is an external flow field. The dilation rate r is introduced to enlarge the size of the neighborhood to handle large displacements without reducing the resolution."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 4,\n    \"Rationale\": \"Image 0 provides a visual representation of the Deformable Volume Network (Devon) and shows the relation module (Rt) in context. Text 4 explains the role of the relation module in capturing multi-scale motion and retaining the precise location of small, fast-moving objects.\",\n    \"Answer\": \"The relation module (Rt) in the Deformable Volume Network (Devon) captures multi-scale motion without reducing resolution, retaining the precise location of small, fast-moving objects.\"\n}"
+  },
+  "7": {
+    "question": "Explain the rationale behind using five deformable cost volumes with different hyperparameter settings in Devon's relation module.",
+    "ground_truth": "The five deformable cost volumes in Devon's relation module are designed to capture multi-scale motion by combining dense correspondences near the image center with sparser correspondences in the periphery. This is achieved by using different neighborhood sizes (k) and dilation rates (r) for each cost volume, as shown in Table 1. Smaller neighborhood sizes and dilation rates result in denser correspondences, focusing on finer details and small displacements, while larger values capture broader context and larger motions.",
+    "selected_figures_names": [
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Figure5-1.png",
+      "1802.07351v2-Figure2-1.png",
+      "1802.07351v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Figure5-1.png",
+      "1802.07351v2-Figure2-1.png",
+      "1802.07351v2-Table3-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Figure4-1.png",
+      "1802.07351v2-Figure8-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 0,
+    "rationale": "Image 1 visually represents the relation module with five deformable cost volumes, showing how they are concatenated to form relation features. Text 0 explains the purpose of using different neighborhood sizes and dilation rates in these volumes to capture multi-scale motion.",
+    "answer": "The rationale behind using five deformable cost volumes with different hyperparameter settings in Devon's relation module is to enable the capture of multi-scale motion. By varying the neighborhood size and dilation rate, the model can achieve dense correspondences near the center of an image location and sparse correspondences in the periphery, effectively handling different scales of motion.",
+    "text_chunks": [
+      "Relation Module The relation module is illustrated in Figure . It concatenates the outputs of five deformable cost volumes, which have different neighborhood size k or dilation rate r, as shown in Table . Such combination enables dense correspondences nearby the center of an image location and sparse correspondences in peripheral to capture multi-scale motion.",
+      "An interesting extension of our work is to combine multi-resolution approach and Devon to handle objects of diverse sizes and speed. From Table , we can see using deformable cost volume achieves shorter runtime than using warping and standard cost volumes. This is because the deformation and the cost volume construction are merged into one process in deformable cost volume and therefore reduces the runtime.",
+      "We replace the deformable cost volumes with warping and standard cost volumes (with dilation). (2) With shortcut. We additionally concatenate the relation module with the feature maps of the first image and feed them into the decoder.",
+      "Along with Table , the result suggests that the deformable cost volume is a suitable replacement of warping and standard cost volume in Devon and potentially other models. The deformation in deformable cost volume is different from the one in deformable convolutional networks . In deformable cost volume, the cost volume is offset by an external optical flow and dilation.",
+      "We compare Devon with the previous neural network models: FlowNetS , FlowNetC , FlowNet2 , SpyNet , PWC-Net and LiteFlowNet . We use Devon with three stages. We use l_1 norm for the deformable cost volumes.",
+      "\\newpage Deformable Volume Network Our proposed model is the Deformable Volume Network (Devon), as illustrated in Figure . Devon has multiple stages.",
+      "The key idea is: instead of deforming images or their feature maps, we deform the cost volume and leave the images and the feature maps unchanged. The proposed deformable cost volume is defined as where r is the dilation rate and F(\\cdot) is an external flow field. The dilation rate r is introduced to enlarge the size of the neighborhood to handle large displacements without reducing the resolution.",
+      "The use of dilation in standard cost volume has been proposed in and used in , though it has not been used in a multi-scale fashion in each stage as ours to handle the small objects moving fast problem. Conclusions In this paper, we proposed a new neural network module, Deformable Cost Volume, which allows the representation of multi-scale motion in a single high resolution and avoids the drawback of warping. Based on it, we designed the Deformable Volume Network, which is demonstrated to be effective in estimating optical flow, especially in situations where small objects move fast."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 0,\n    \"Rationale\": \"Image 1 visually represents the relation module with five deformable cost volumes, showing how they are concatenated to form relation features. Text 0 explains the purpose of using different neighborhood sizes and dilation rates in these volumes to capture multi-scale motion.\",\n    \"Answer\": \"The rationale behind using five deformable cost volumes with different hyperparameter settings in Devon's relation module is to enable the capture of multi-scale motion. By varying the neighborhood size and dilation rate, the model can achieve dense correspondences near the center of an image location and sparse correspondences in the periphery, effectively handling different scales of motion.\"\n}"
+  },
+  "8": {
+    "question": "Based on the table, which model achieved the best performance on the KITTI 2015 test set in terms of F1-all score, and how does its performance compare to Devon (ft) on the same dataset?",
+    "ground_truth": "PWC-Net (ft) achieved the best performance on the KITTI 2015 test set with an F1-all score of 9.16%. This is significantly better than Devon (ft), which achieved an F1-all score of 14.31% on the same dataset. ",
+    "selected_figures_names": [
+      "1802.07351v2-Table4-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure9-1.png",
+      "1802.07351v2-Table3-1.png",
+      "1802.07351v2-Figure7-1.png",
+      "1802.07351v2-Figure10-1.png",
+      "1802.07351v2-Table6-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure8-1.png",
+      "1802.07351v2-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 contains the table with performance metrics for different models on the KITTI dataset, which is directly relevant to the question. Text 6 provides context about the models being compared, including Devon and its competitors.",
+    "answer": "LiteFlowNet (ft) achieved the best performance on the KITTI 2015 test set with an F1-all score of 9.16%. Devon (ft) had a lower F1-all score of 14.31% on the same dataset.",
+    "text_chunks": [
+      "No additional fine-tuning is applied. From Figure , and , we can see Devon gives much more accurate estimation of the small objects. The results on Sintel and KITTI are listed in Table , and , from which we can see Devon outperforms PWC-Net and LiteFlowNet on Sintel clean pass, though not on Sintel final pass and KITTI.",
+      "The timing was recorded on a NVIDIA TITAN Xp graphics card for processing a pair of RGB images of size 1024\\times 448. Discussions While Devon achieves better results in handling small objects moving fast in the visualization results, it does not outperform multi-resolution based methods such as PWC-Net on Sintel final pass and KITTI. We conjecture that this is due to the fact that Sintel and KITTI mostly contain large objects (e.g. human bodies, cars and buildings), for which the multi-resolution approach might be more suitable.",
+      "We also experimented with sharing decoder in all three stages. The result is reported in \\textsection . Experiments We evaluate Devon on two challenging benchmarks which contain large motions: Sintel and KITTI , as in .",
+      "The training set is mixed with KITTI 2012 and KITTI 2015. Invalid pixels are excluded in computing the loss. All the experiments are conducted with PyTorch.",
+      "Compared to previous neural network models~, Devon is different in the following major ways: (1) All stages in Devon output optical flow of the same resolution. While Devon handles multi-scale motion by the deformable cost volume, it does not use the multi-resolution representation of motion. Extensive downsampling leads to the loss of information and deficiency in handling the ``small objects move fast\" problem.",
+      "For (1)\\sim(5), the changes are applied to all stages in Devon. The results are listed in Table , from which we can see the architecture of Devon is robust to various changes. Runtime We report the runtime of Devon and its variants in Table .",
+      "We compare Devon with the previous neural network models: FlowNetS , FlowNetC , FlowNet2 , SpyNet , PWC-Net and LiteFlowNet . We use Devon with three stages. We use l_1 norm for the deformable cost volumes.",
+      "This is consistent with the fact that small displacements are more frequent in natural videos and resembles the structure of retina, as illustrated in Figure . \\newpage Since Devon is a multi-stage model which performs coarse-to-fine estimation of optical flow, we gradually decrease the dilation rates as the optical flow is expected to get finer in later stages. We also experimented with using the cost volumes of the same neighbor sizes and dilation rates for all three stages, the result of which is reported in \\textsection ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 contains the table with performance metrics for different models on the KITTI dataset, which is directly relevant to the question. Text 6 provides context about the models being compared, including Devon and its competitors.\",\n    \"Answer\": \"LiteFlowNet (ft) achieved the best performance on the KITTI 2015 test set with an F1-all score of 9.16%. Devon (ft) had a lower F1-all score of 14.31% on the same dataset.\"\n}"
+  },
+  "9": {
+    "question": "Based on the table, which method performs best on the Sintel \"Final\" test set, and how does its performance compare to Devon (ft) on the same set? ",
+    "ground_truth": "PWC-Net (ft) performs best on the Sintel \"Final\" test set with an error of 5.04. Devon (ft) has a higher error of 6.35 on the same set. ",
+    "selected_figures_names": [
+      "1802.07351v2-Table2-1.png",
+      "1802.07351v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Figure5-1.png",
+      "1802.07351v2-Table5-1.png",
+      "1802.07351v2-Table4-1.png",
+      "1802.07351v2-Figure1-1.png",
+      "1802.07351v2-Table2-1.png",
+      "1802.07351v2-Table1-1.png",
+      "1802.07351v2-Figure7-1.png",
+      "1802.07351v2-Table3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 provides a comprehensive comparison of various methods on the Sintel 'Final' test set, including Devon (ft). Text 0 mentions Devon's performance on Sintel, which is relevant to understanding its comparison with other methods.",
+    "answer": "PWC-Net (ft) performs best on the Sintel 'Final' test set with an end-point error of 5.04. Devon (ft) has a higher error of 6.35 on the same set.",
+    "text_chunks": [
+      "No additional fine-tuning is applied. From Figure , and , we can see Devon gives much more accurate estimation of the small objects. The results on Sintel and KITTI are listed in Table , and , from which we can see Devon outperforms PWC-Net and LiteFlowNet on Sintel clean pass, though not on Sintel final pass and KITTI.",
+      "The timing was recorded on a NVIDIA TITAN Xp graphics card for processing a pair of RGB images of size 1024\\times 448. Discussions While Devon achieves better results in handling small objects moving fast in the visualization results, it does not outperform multi-resolution based methods such as PWC-Net on Sintel final pass and KITTI. We conjecture that this is due to the fact that Sintel and KITTI mostly contain large objects (e.g. human bodies, cars and buildings), for which the multi-resolution approach might be more suitable.",
+      "We also experimented with sharing decoder in all three stages. The result is reported in \\textsection . Experiments We evaluate Devon on two challenging benchmarks which contain large motions: Sintel and KITTI , as in .",
+      "This is consistent with the fact that small displacements are more frequent in natural videos and resembles the structure of retina, as illustrated in Figure . \\newpage Since Devon is a multi-stage model which performs coarse-to-fine estimation of optical flow, we gradually decrease the dilation rates as the optical flow is expected to get finer in later stages. We also experimented with using the cost volumes of the same neighbor sizes and dilation rates for all three stages, the result of which is reported in \\textsection .",
+      "Compared to previous neural network models~, Devon is different in the following major ways: (1) All stages in Devon output optical flow of the same resolution. While Devon handles multi-scale motion by the deformable cost volume, it does not use the multi-resolution representation of motion. Extensive downsampling leads to the loss of information and deficiency in handling the ``small objects move fast\" problem.",
+      "We compare Devon with the previous neural network models: FlowNetS , FlowNetC , FlowNet2 , SpyNet , PWC-Net and LiteFlowNet . We use Devon with three stages. We use l_1 norm for the deformable cost volumes.",
+      "An interesting extension of our work is to combine multi-resolution approach and Devon to handle objects of diverse sizes and speed. From Table , we can see using deformable cost volume achieves shorter runtime than using warping and standard cost volumes. This is because the deformation and the cost volume construction are merged into one process in deformable cost volume and therefore reduces the runtime.",
+      "For (1)\\sim(5), the changes are applied to all stages in Devon. The results are listed in Table , from which we can see the architecture of Devon is robust to various changes. Runtime We report the runtime of Devon and its variants in Table ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 provides a comprehensive comparison of various methods on the Sintel 'Final' test set, including Devon (ft). Text 0 mentions Devon's performance on Sintel, which is relevant to understanding its comparison with other methods.\",\n    \"Answer\": \"PWC-Net (ft) performs best on the Sintel 'Final' test set with an end-point error of 5.04. Devon (ft) has a higher error of 6.35 on the same set.\"\n}"
+  },
+  "10": {
+    "question": "Which of the three methods, LiteFlowNet, PWC-Net, or Devon, most accurately predicts the motion of the small object in the scene?",
+    "ground_truth": "Devon.",
+    "selected_figures_names": [
+      "1802.07351v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1802.07351v2-Table5-1.png",
+      "1802.07351v2-Table4-1.png",
+      "1802.07351v2-Figure3-1.png",
+      "1802.07351v2-Figure1-1.png",
+      "1802.07351v2-Figure10-1.png",
+      "1802.07351v2-Figure2-1.png",
+      "1802.07351v2-Table3-1.png",
+      "1802.07351v2-Figure8-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 provides a visual representation of Devon's architecture, which is relevant to understanding how it processes optical flow. Text 6 explains that Devon retains the presence and precise location of small objects that move fast, which is crucial for accurately predicting their motion.",
+    "answer": "Devon most accurately predicts the motion of the small object in the scene.",
+    "text_chunks": [
+      "No additional fine-tuning is applied. From Figure , and , we can see Devon gives much more accurate estimation of the small objects. The results on Sintel and KITTI are listed in Table , and , from which we can see Devon outperforms PWC-Net and LiteFlowNet on Sintel clean pass, though not on Sintel final pass and KITTI.",
+      "PWC-Net and LiteFlowNet follow the same strategy except that they use strided convolutions instead of downsampling to reduce the resolution and use cost volumes as a more explicit representation of motion. As a result, a decoder in lower resolution has effectively a larger receptive size to cover large displacements. However, as pointed out in , the multi-resolution estimation of optical flow faces the ``small objects move fast\" problem as small objects disappear in lower resolution and cannot be recovered in higher resolution due to their large motion .",
+      "We compare Devon with the previous neural network models: FlowNetS , FlowNetC , FlowNet2 , SpyNet , PWC-Net and LiteFlowNet . We use Devon with three stages. We use l_1 norm for the deformable cost volumes.",
+      "The timing was recorded on a NVIDIA TITAN Xp graphics card for processing a pair of RGB images of size 1024\\times 448. Discussions While Devon achieves better results in handling small objects moving fast in the visualization results, it does not outperform multi-resolution based methods such as PWC-Net on Sintel final pass and KITTI. We conjecture that this is due to the fact that Sintel and KITTI mostly contain large objects (e.g. human bodies, cars and buildings), for which the multi-resolution approach might be more suitable.",
+      "This is consistent with the fact that small displacements are more frequent in natural videos and resembles the structure of retina, as illustrated in Figure . \\newpage Since Devon is a multi-stage model which performs coarse-to-fine estimation of optical flow, we gradually decrease the dilation rates as the optical flow is expected to get finer in later stages. We also experimented with using the cost volumes of the same neighbor sizes and dilation rates for all three stages, the result of which is reported in \\textsection .",
+      "Compared to previous neural network models~, Devon is different in the following major ways: (1) All stages in Devon output optical flow of the same resolution. While Devon handles multi-scale motion by the deformable cost volume, it does not use the multi-resolution representation of motion. Extensive downsampling leads to the loss of information and deficiency in handling the ``small objects move fast\" problem.",
+      "When the module does not receive an optical flow as one of the inputs (in the first stage), it is set to receive a zero-valued optical flow field. \\newpage Since the relation module captures multi-scale motion without reducing the resolution, the presence and precise location of small objects which move fast are retained. This allows Devon to have better chance in solving the ``small objects move fast\" problem.",
+      "The short-cut issue has appeared when applying neural networks to learn monocular stereo . On the contrary, in FlowNetC, PWC-Net and LiteFlowNet, the decoding module also receives inputs from the encoding module of the first image. (4) The encoding module is shared in all stages."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 provides a visual representation of Devon's architecture, which is relevant to understanding how it processes optical flow. Text 6 explains that Devon retains the presence and precise location of small objects that move fast, which is crucial for accurately predicting their motion.\",\n    \"Answer\": \"Devon most accurately predicts the motion of the small object in the scene.\"\n}"
+  }
+}

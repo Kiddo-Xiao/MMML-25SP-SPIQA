@@ -1,0 +1,244 @@
+{
+  "0": {
+    "question": "How does the validation accuracy of the SRU model compare to that of the cuDNN LSTM and CNN models?",
+    "ground_truth": "The SRU model achieves comparable or slightly higher validation accuracy than the cuDNN LSTM and CNN models on all six benchmarks.",
+    "selected_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 shows validation accuracies of SRU, cuDNN LSTM, and CNN models over time, which directly addresses the question. Text 2 discusses the validation accuracy and stability of SRU compared to other models, providing relevant context.",
+    "answer": "The SRU model achieves higher validation accuracy compared to the cuDNN LSTM and CNN models, as shown in the graph. It also exhibits more stable performance with smaller variance.",
+    "text_chunks": [
+      "Despite our simple setup, SRU outperforms most previous methods and achieves comparable results compared to the state-of-the-art but more sophisticated model of~\\citet{zhao2015self. Figure~ shows validation performance relative to training time for SRU, cuDNN LSTM and the CNN model. Our SRU implementation runs 5--9 times faster than cuDNN LSTM, and 6--40\\% faster than the CNN model of~\\citet{Kim14.",
+      "SRU achieves 71.4\\% exact match and 80.2\\% F1 score, outperforming the bidirectional LSTM model by 1.9\\% (EM) and 1.4\\% (F1) respectively. SRU also exhibits over 5x speed-up over LSTM and 53--63\\% reduction in total training time. In comparison with QRNN, SRU obtains 0.8\\% improvement on exact match and 0.6\\% on F1 score, and runs 60\\% faster.",
+      "SRU also exhibits more stable performance, with smaller variance over 3 runs. Figure~ further compares the validation accuracy of different models. These results confirm that SRU is better at sequence modeling compared to the original feed-forward network (FFN), requiring fewer layers to achieve similar accuracy.",
+      "On classification and question answering datasets, SRU outperforms common recurrent and non-recurrent architectures, while achieving 5--9x speed-up compared to cuDNN LSTM. Stacking additional layers further improves performance, while incurring relatively small costs owing to the cheap computation of a single layer. We also obtain an average improvement of 0.7 BLEU score on the English to German translation task by incorporating SRU into Transformer~\\citep{vaswani2017attention.",
+      "\\citet{shazeer2017outrageously and \\citet{kuchaiev2017factorization improve the computation via conditional computing and matrix factorization respectively. Our implementation for SRU is inspired by the cuDNN-optimized LSTM~\\citep{cudnnlstm, but enables more parallelism -- while cuDNN LSTM requires six optimization steps, SRU achieves more significant speed-up via two optimizations. The design of recurrent networks, such as SRU and related architectures, raises questions about representational power and interpretability~\\citep{chen2017recurrent,peng2018emnlp.",
+      "The 8-layer SRU model achieves validation and test bits per character (BPC) of 1.21, outperforming previous best reported results of LSTM, QRNN and recurrent highway networks (RHN). Increasing the layer of SRU to 12 and using a longer context of 256 characters in training further improves the BPC to 1.19 Ablation Analysis We perform ablation analyses on SRU by successively disabling different components: We train model variants on the classification and question answering datasets. Table~ and Figure~ confirm the impact of our design decisions -- removing these components result in worse classification accuracies and exact match scores.",
+      "\\paragraph{Results Table~ shows the translation results. When SRU is incorporated into the architecture, both the 4-layer and 5-layer model outperform the Transformer base model. For instance, our 5-layer model obtains an average improvement of 0.7 test BLEU score and an improvement of 0.5 BLEU score by comparing the best results of each model achieved across three runs.",
+      "We substitute the feed-forward network using our SRU implementation: The intuition is that SRU can better capture sequential information as a recurrent network, and potentially achieve better performance while requiring fewer layers. We keep the model configuration the same as \\citet{vaswani2017attention: the model dimension is d_\\text{model=512, the feed-forward and SRU layer has inner dimensionality d_\\text{ff=d_\\text{sru=2048, and positional encoding~ is applied on the input word embeddings. The base model without SRU has 6 layers, while we set the number of layers to 4 and 5 when SRU is added."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 shows validation accuracies of SRU, cuDNN LSTM, and CNN models over time, which directly addresses the question. Text 2 discusses the validation accuracy and stability of SRU compared to other models, providing relevant context.\",\n    \"Answer\": \"The SRU model achieves higher validation accuracy compared to the cuDNN LSTM and CNN models, as shown in the graph. It also exhibits more stable performance with smaller variance.\"\n}"
+  },
+  "1": {
+    "question": "How does the processing time of SRU compare to that of cuDNN LSTM and word-level convolution with filter widths k=2 and k=3?",
+    "ground_truth": "The processing time of SRU is significantly faster than that of cuDNN LSTM and word-level convolution with filter widths k=2 and k=3.",
+    "selected_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 and Text 1 both provide direct comparisons of processing times between SRU, cuDNN LSTM, and word-level convolution models, which is exactly what the question asks about.",
+    "answer": "SRU processes batches faster than cuDNN LSTM and word-level convolution with filter widths k=2 and k=3. It runs 5-9 times faster than cuDNN LSTM and 6-40% faster than the CNN model.",
+    "text_chunks": [
+      "On classification and question answering datasets, SRU outperforms common recurrent and non-recurrent architectures, while achieving 5--9x speed-up compared to cuDNN LSTM. Stacking additional layers further improves performance, while incurring relatively small costs owing to the cheap computation of a single layer. We also obtain an average improvement of 0.7 BLEU score on the English to German translation task by incorporating SRU into Transformer~\\citep{vaswani2017attention.",
+      "Despite our simple setup, SRU outperforms most previous methods and achieves comparable results compared to the state-of-the-art but more sophisticated model of~\\citet{zhao2015self. Figure~ shows validation performance relative to training time for SRU, cuDNN LSTM and the CNN model. Our SRU implementation runs 5--9 times faster than cuDNN LSTM, and 6--40\\% faster than the CNN model of~\\citet{Kim14.",
+      "\\citet{shazeer2017outrageously and \\citet{kuchaiev2017factorization improve the computation via conditional computing and matrix factorization respectively. Our implementation for SRU is inspired by the cuDNN-optimized LSTM~\\citep{cudnnlstm, but enables more parallelism -- while cuDNN LSTM requires six optimization steps, SRU achieves more significant speed-up via two optimizations. The design of recurrent networks, such as SRU and related architectures, raises questions about representational power and interpretability~\\citep{chen2017recurrent,peng2018emnlp.",
+      "SRU achieves 71.4\\% exact match and 80.2\\% F1 score, outperforming the bidirectional LSTM model by 1.9\\% (EM) and 1.4\\% (F1) respectively. SRU also exhibits over 5x speed-up over LSTM and 53--63\\% reduction in total training time. In comparison with QRNN, SRU obtains 0.8\\% improvement on exact match and 0.6\\% on F1 score, and runs 60\\% faster.",
+      "Discussion This work presents Simple Recurrent Unit (SRU), a scalable recurrent architecture that operates as fast as feed-forward and convolutional units. We confirm the effectiveness of SRU on multiple natural language tasks ranging from classification to translation.",
+      "We substitute the feed-forward network using our SRU implementation: The intuition is that SRU can better capture sequential information as a recurrent network, and potentially achieve better performance while requiring fewer layers. We keep the model configuration the same as \\citet{vaswani2017attention: the model dimension is d_\\text{model=512, the feed-forward and SRU layer has inner dimensionality d_\\text{ff=d_\\text{sru=2048, and positional encoding~ is applied on the input word embeddings. The base model without SRU has 6 layers, while we set the number of layers to 4 and 5 when SRU is added.",
+      "Finally, adding SRU does not affect the parallelization or speed of Transformer -- the 4-layer model exhibits 10\\% speed improvement, while the 5-layer model is only 5\\% slower compared to the base model. We present more results and discussion in Appendix~. Character-level Language Modeling \\paragraph{Dataset We use Enwik8, a large dataset for character-level language modeling. Following standard practice, we use the first 90M characters for training and the remaining 10M split evenly for validation and test.",
+      "We use Adam~\\citep{Kingma:14adam with the default learning rate 0.001, a weight decay 0 and a hidden dimension of 128. We compare SRU with a wide range of methods on these datasets, including various convolutional models~\\citep{kalchbrenner:2014,Kim14,zhang2015sensitivity and a hierarchical sentence model~\\citep{zhao2015self reported as the state of the art on these datasets~\\citep{conneau17. Their setups are not exactly the same as ours, and may involve more tuning on word embeddings and other regularizations."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 and Text 1 both provide direct comparisons of processing times between SRU, cuDNN LSTM, and word-level convolution models, which is exactly what the question asks about.\",\n    \"Answer\": \"SRU processes batches faster than cuDNN LSTM and word-level convolution with filter widths k=2 and k=3. It runs 5-9 times faster than cuDNN LSTM and 6-40% faster than the CNN model.\"\n}"
+  },
+  "2": {
+    "question": "According to Table 1 and the passage, how does the performance of the SRU model compare to the LSTM model in terms of both accuracy and training speed on the SQuAD dataset?",
+    "ground_truth": "The SRU model outperforms the LSTM model in both accuracy and training speed on the SQuAD dataset.",
+    "selected_figures_names": [
+      "1709.02755v5-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a table with exact match (EM) and F1 scores, as well as training times for SRU and LSTM models on the SQuAD dataset. Text 1 offers a detailed comparison of SRU's performance against LSTM, highlighting improvements in both accuracy and speed.",
+    "answer": "The SRU model outperforms the LSTM model in terms of accuracy, achieving 71.4% exact match and 80.2% F1 score compared to LSTM's 69.5% EM and 78.8% F1. In terms of training speed, SRU is over five times faster than the LSTM model.",
+    "text_chunks": [
+      "Despite our simple setup, SRU outperforms most previous methods and achieves comparable results compared to the state-of-the-art but more sophisticated model of~\\citet{zhao2015self. Figure~ shows validation performance relative to training time for SRU, cuDNN LSTM and the CNN model. Our SRU implementation runs 5--9 times faster than cuDNN LSTM, and 6--40\\% faster than the CNN model of~\\citet{Kim14.",
+      "SRU achieves 71.4\\% exact match and 80.2\\% F1 score, outperforming the bidirectional LSTM model by 1.9\\% (EM) and 1.4\\% (F1) respectively. SRU also exhibits over 5x speed-up over LSTM and 53--63\\% reduction in total training time. In comparison with QRNN, SRU obtains 0.8\\% improvement on exact match and 0.6\\% on F1 score, and runs 60\\% faster.",
+      "On the movie review (MR) dataset for instance, SRU completes 100 training epochs within 40 seconds, while LSTM takes over 320 seconds. Question Answering \\paragraph{Dataset We use the Stanford Question Answering Dataset~\\citep[SQuAD;][]{rajpurkar2016squad. SQuAD is a large machine comprehension dataset that includes over 100K question-answer pairs extracted from Wikipedia articles.",
+      "On classification and question answering datasets, SRU outperforms common recurrent and non-recurrent architectures, while achieving 5--9x speed-up compared to cuDNN LSTM. Stacking additional layers further improves performance, while incurring relatively small costs owing to the cheap computation of a single layer. We also obtain an average improvement of 0.7 BLEU score on the English to German translation task by incorporating SRU into Transformer~\\citep{vaswani2017attention.",
+      "\\paragraph{Results Table~ shows the translation results. When SRU is incorporated into the architecture, both the 4-layer and 5-layer model outperform the Transformer base model. For instance, our 5-layer model obtains an average improvement of 0.7 test BLEU score and an improvement of 0.5 BLEU score by comparing the best results of each model achieved across three runs.",
+      "We also see that models with SRU exhibit much faster training progress with much lower training perplexity, suggesting the models could be tuned better with further training regularization. Character-level Language Modeling We train all models using a weight decay of 10^{-7 and a gradient clipping of 0.3. We set the learning rate factor of Noam scheduling to 3 and the warmup steps to 32,000.",
+      "SRU also exhibits more stable performance, with smaller variance over 3 runs. Figure~ further compares the validation accuracy of different models. These results confirm that SRU is better at sequence modeling compared to the original feed-forward network (FFN), requiring fewer layers to achieve similar accuracy.",
+      "Following the author suggestions, we use the Adamax optimizer~\\citep{Kingma:14adam and variational dropout~\\citep{Gal2016Theoretically during training. We compare with two alternative recurrent components: the bidirectional LSTM adopted in the original implementation of \\citet{chen2017reading and Quasi-RNN with highway connections for improved performance. \\paragraph{Results Table~ summarizes the results on SQuAD."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a table with exact match (EM) and F1 scores, as well as training times for SRU and LSTM models on the SQuAD dataset. Text 1 offers a detailed comparison of SRU's performance against LSTM, highlighting improvements in both accuracy and speed.\",\n    \"Answer\": \"The SRU model outperforms the LSTM model in terms of accuracy, achieving 71.4% exact match and 80.2% F1 score compared to LSTM's 69.5% EM and 78.8% F1. In terms of training speed, SRU is over five times faster than the LSTM model.\"\n}"
+  },
+  "3": {
+    "question": "Based on the table, how does the training process handle large vocabulary sizes?",
+    "ground_truth": "The training process uses several techniques to handle large vocabulary sizes. These include:\n\n1. **Token-based batching:** Instead of grouping sentences of similar lengths together, the training process batches together a fixed number of tokens (5120 tokens per batch). This approach ensures that the model sees a consistent amount of vocabulary regardless of sentence length variation.\n2. **Shared embedding:** This technique maps both source and target words to the same embedding space, effectively reducing the memory footprint needed to store word representations. \n3. **Positional encoding:** This method injects information about the position of words in a sentence into the model, helping it better understand long-range dependencies within the text. ",
+    "selected_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 1,
+    "rationale": "Image 2 provides a detailed comparison of model performance and processing time, which is relevant for understanding how different models handle large vocabulary sizes efficiently. Text 1 discusses handling out-of-vocabulary words, which directly addresses the question about managing large vocabulary sizes.",
+    "answer": "The training process handles large vocabulary sizes by initializing out-of-vocabulary words with random vectors, ensuring that all words have embeddings even if they are not in the pre-trained set.",
+    "text_chunks": [
+      "Table~ shows the list of configuration options used for training. For evaluation, we use beam size 5 and length penalty 0.6. Table~ shows the averaged BLEU score of each model from 20th to 40th epoch.",
+      "We use a batch size of 32 and a dropout probability of 0.5 for all models. In addition, we increment the dropout to 0.55 or 0.6 for the 8-layer SRU model. Following the implementation of~\\citep{Kim14, out-of-vocabulary words that are not in the pre-trained embeddings are initialized with random vectors with values from [-0.25, 0.25].",
+      "Experiments We evaluate SRU on several natural language processing tasks and perform additional analyses of the model. The set of tasks includes text classification, question answering, machine translation, and character-level language modeling. Training time on these benchmarks ranges from minutes (classification) to days (translation), providing a variety of computation challenges.",
+      "\\paragraph{Setup Similar to previous work, we use a batch size of 128 and an unroll size of 100 for truncated backpropagation during training. We also experiment with an unroll size of 256 and a batch size of 64 such that each training instance has longer context. We use a non-zero highway bias \\bb_r={-3 that is shown useful for training language model~\\citep{ZillySKS17.",
+      "We also see that models with SRU exhibit much faster training progress with much lower training perplexity, suggesting the models could be tuned better with further training regularization. Character-level Language Modeling We train all models using a weight decay of 10^{-7 and a gradient clipping of 0.3. We set the learning rate factor of Noam scheduling to 3 and the warmup steps to 32,000.",
+      "Previous methods employ different optimizers and learning rate schedulers for training. For simplicity and consistency, we use the Adam optimizer and the same learning rate scheduling (i.e., Noam scheduling) as the translation experiments. We train a maximum of 100 epochs (about 700,000 steps).",
+      "Introduction Recurrent neural networks (RNN) are at the core of state-of-the-art approaches for a large number of natural language tasks, including machine translation~\\citep{cho-al-emnlp14,Bahdanau:14neuralmt,jean15,luong2015:EMNLP, language modeling~\\citep{zaremba2014recurrent,Gal2016Theoretically,zoph2016neural, opinion mining~\\citep{Irsoy:14opinion, and situated language understanding~\\citep{Mei:16neuralnavi,Misra:17instructions,Suhr:18context,Suhr:18situated. Key to many of these advancements are architectures of increased capacity and computation. For instance, the top-performing models for semantic role labeling and translation use eight recurrent layers, requiring days to train~\\citep{he2017deep,wu2016gnmt.",
+      "On the movie review (MR) dataset for instance, SRU completes 100 training epochs within 40 seconds, while LSTM takes over 320 seconds. Question Answering \\paragraph{Dataset We use the Stanford Question Answering Dataset~\\citep[SQuAD;][]{rajpurkar2016squad. SQuAD is a large machine comprehension dataset that includes over 100K question-answer pairs extracted from Wikipedia articles."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 1,\n    \"Rationale\": \"Image 2 provides a detailed comparison of model performance and processing time, which is relevant for understanding how different models handle large vocabulary sizes efficiently. Text 1 discusses handling out-of-vocabulary words, which directly addresses the question about managing large vocabulary sizes.\",\n    \"Answer\": \"The training process handles large vocabulary sizes by initializing out-of-vocabulary words with random vectors, ensuring that all words have embeddings even if they are not in the pre-trained set.\"\n}"
+  },
+  "4": {
+    "question": "How does the variance of the hidden state $h_t$ compare to the variance of the input $x_t$ in deep layers of the SRU model?",
+    "ground_truth": "According to the passage, the variance of the hidden state is approximately equal to the variance of the input in deep layers.",
+    "selected_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 shows validation accuracies and standard deviations for SRU, which relates to variance. Text 2 discusses how the variance of hidden representations is reduced in deeper layers of SRU, directly addressing the question.",
+    "answer": "In deep layers of the SRU model, the variance of the hidden state $h_t$ is reduced compared to the variance of the input $x_t$, converging to a factor of 1/2.",
+    "text_chunks": [
+      "The internal state \\cc_t and \\h_t would be a weighted combination of inputs \\{\\x_1\\cdots \\x_t\\, which will increase the correlation of the state vectors at different steps. These state vectors are again fed into the next layer, and keep increasing the correlation. As a result, we expect the actual ratio between the variance of \\cc_t and that of the input of the current layer \\x_t lies between the two derived values, and would finally converge to the upper bound value of 1.",
+      "The variance of c_{t,i however depends on the correlation between input vectors. When the input vectors are independent: However, the two vectors in the input sequence, for instance \\x_t and \\x_t', are not necessarily independent, for example because two words in an input sentence are often correlated. When the input vectors are perfectly correlated \\x_t=\\x_{t-1=\\cdots=\\x, on the other hand, In practice, multiple SRU layers are stacked to construct a deep network.",
+      "This ensures the output variance remains approximately the same as the input variance after the matrix multiplication. However, the light recurrence and highway computation would still reduce the variance of hidden representations by a factor of 1/3 to 1/2: and the factor converges to 1/2 in deeper layers (see Appendix~). This implies the output \\h_t and the gradient would vanish in deep models.",
+      "Figure~ confirms our expectation by computing the empirical value of \\text{Var[c]/\\text{Var[x] in deep SRU networks. Computing Var[\\h_t] Given the result in Equation (5), we proceed to compute \\text{Var[\\h_t].",
+      "We open source our implementation to facilitate future NLP and deep learning research. \\paragraph{Trading capacity with layers SRU achieves high parallelization by simplifying the hidden-to-hidden dependency. This simplification is likely to reduce the representational power of a single layer and hence should be balanced to avoid performance loss.",
+      "\\yae{This finding motivates the design of SRU for both high parallelization and representational power.{ SRU also relates to IRNN~\\citep{le2015simple, which uses an identity diagonal matrix to initialize hidden-to-hidden connections. SRU uses point-wise multiplication for hidden connections, which is equivalent to using a diagonal weight matrix.",
+      "SRU also exhibits more stable performance, with smaller variance over 3 runs. Figure~ further compares the validation accuracy of different models. These results confirm that SRU is better at sequence modeling compared to the original feed-forward network (FFN), requiring fewer layers to achieve similar accuracy.",
+      "We substitute the feed-forward network using our SRU implementation: The intuition is that SRU can better capture sequential information as a recurrent network, and potentially achieve better performance while requiring fewer layers. We keep the model configuration the same as \\citet{vaswani2017attention: the model dimension is d_\\text{model=512, the feed-forward and SRU layer has inner dimensionality d_\\text{ff=d_\\text{sru=2048, and positional encoding~ is applied on the input word embeddings. The base model without SRU has 6 layers, while we set the number of layers to 4 and 5 when SRU is added."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 shows validation accuracies and standard deviations for SRU, which relates to variance. Text 2 discusses how the variance of hidden representations is reduced in deeper layers of SRU, directly addressing the question.\",\n    \"Answer\": \"In deep layers of the SRU model, the variance of the hidden state $h_t$ is reduced compared to the variance of the input $x_t$, converging to a factor of 1/2.\"\n}"
+  },
+  "5": {
+    "question": "How does scaling correction affect the training of SRU models?",
+    "ground_truth": "Scaling correction improves the training progress of SRU models, especially for deeper models with many stacked layers.",
+    "selected_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Text chunk 5 discusses the introduction of a scaling correction constant in the highway connection of SRU models and its impact on training progress. Image 0 shows training progress, which can help visualize the effect of such corrections.",
+    "answer": "The scaling correction affects the training of SRU models by adjusting the variance of the highway connection, which helps maintain consistent training progress. This correction ensures that the variance of the hidden states matches the input variance at initialization, leading to more stable and efficient training.",
+    "text_chunks": [
+      "We also see that models with SRU exhibit much faster training progress with much lower training perplexity, suggesting the models could be tuned better with further training regularization. Character-level Language Modeling We train all models using a weight decay of 10^{-7 and a gradient clipping of 0.3. We set the learning rate factor of Noam scheduling to 3 and the warmup steps to 32,000.",
+      "The 8-layer SRU model achieves validation and test bits per character (BPC) of 1.21, outperforming previous best reported results of LSTM, QRNN and recurrent highway networks (RHN). Increasing the layer of SRU to 12 and using a longer context of 256 characters in training further improves the BPC to 1.19 Ablation Analysis We perform ablation analyses on SRU by successively disabling different components: We train model variants on the classification and question answering datasets. Table~ and Figure~ confirm the impact of our design decisions -- removing these components result in worse classification accuracies and exact match scores.",
+      "Finally, adding SRU does not affect the parallelization or speed of Transformer -- the 4-layer model exhibits 10\\% speed improvement, while the 5-layer model is only 5\\% slower compared to the base model. We present more results and discussion in Appendix~. Character-level Language Modeling \\paragraph{Dataset We use Enwik8, a large dataset for character-level language modeling. Following standard practice, we use the first 90M characters for training and the remaining 10M split evenly for validation and test.",
+      "The improvement over the Transformer base model is consistent across different epochs. Figure~ plots the training and validation perplexity of three models. With a higher dropout (0.2) used for the SRU, the 5-layer model gets consistent lower validation perplexity over the base model and the 4-layer model.",
+      "SRU achieves 71.4\\% exact match and 80.2\\% F1 score, outperforming the bidirectional LSTM model by 1.9\\% (EM) and 1.4\\% (F1) respectively. SRU also exhibits over 5x speed-up over LSTM and 53--63\\% reduction in total training time. In comparison with QRNN, SRU obtains 0.8\\% improvement on exact match and 0.6\\% on F1 score, and runs 60\\% faster.",
+      "To offset the problem, we introduce a scaling correction constant \\alpha in the highway connection where \\alpha is set to \\sqrt{3 such that \\text{Var[\\h_t] \\approx \\text{Var[\\x_t] at initialization. When the highway network is initialized with a non-zero bias \\bb_r = b, the scaling constant \\alpha can be accordingly set as: Figure~ compares the training progress with and without the scaling correction. See Appendix~ for the derivation and more discussion.",
+      "We thank Alexander Rush and Yoon Kim for help with machine translation experiments, and Danqi Chen for help with SQuAD experiments. We thank Adam Yala, Howard Chen, Jeremy Wohlwend, Lili Yu, Kyle Swanson and Kevin Yang for providing useful feedback on the paper and the SRU implementation. A special thanks to Hugh Perkins for his support on the experimental environment setup and Runqi Yang for answering questions about his code.% \\bibliography{emnlp2018 \\bibliographystyle{acl_natbib_nourl \\newpage \\appendix Parameter Initialization Derivation Following the derivation of Glorot and Kaiming initialization~, we assume the values of each input vector \\x_t are i.i.d with zero mean and a small variance: We initialize each weight matrix with zero mean and a variance of 1/d. After a matrix multiplication \\mathbf{y = \\W\\x_t, each value y_i would have which means the scale of the values after matrix multiplication remains the same.",
+      "However, these models can potentially benefit from SRU since RNNs are incorporated in the model architecture. We use the open source implementation of Document Reader in our experiments. We train models for up to 100 epochs, with a batch size of 32 and a hidden dimension of 128."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Text chunk 5 discusses the introduction of a scaling correction constant in the highway connection of SRU models and its impact on training progress. Image 0 shows training progress, which can help visualize the effect of such corrections.\",\n    \"Answer\": \"The scaling correction affects the training of SRU models by adjusting the variance of the highway connection, which helps maintain consistent training progress. This correction ensures that the variance of the hidden states matches the input variance at initialization, leading to more stable and efficient training.\"\n}"
+  },
+  "6": {
+    "question": "How does the performance of SRU with 8 layers compare to the best reported results on the SUBJ dataset, and how does its training time compare to the other models in the \"Our setup\" section?",
+    "ground_truth": "While SRU with 8 layers achieves high test accuracy within the \"Our setup\" section on the SUBJ dataset (93.7%), it falls slightly short of the best reported result of 95.5% achieved by Zhao et al. (2015). However, SRU's training time of 879 seconds for 100 epochs on the SST dataset is faster than the LSTM model (2409 seconds) but slower than the CNN model (417 seconds) and the QRNN models (345 and 371 seconds).",
+    "selected_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1709.02755v5-Figure3-1.png",
+      "1709.02755v5-Figure1-1.png",
+      "1709.02755v5-Table2-1.png",
+      "1709.02755v5-Table6-1.png",
+      "1709.02755v5-Figure6-1.png",
+      "1709.02755v5-Figure2-1.png",
+      "1709.02755v5-Table4-1.png",
+      "1709.02755v5-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 2,
+    "rationale": "Image 0 shows validation accuracies for different models, including SRU, on various datasets, which is relevant for comparing performance on the SUBJ dataset. Text 2 provides information on the performance of an 8-layer SRU model, which is necessary for understanding its comparison to other models.",
+    "answer": "The 8-layer SRU model achieves better performance than previous models on the SUBJ dataset, as indicated by its lower bits per character (BPC) score. In terms of training time, SRU runs significantly faster than other models, such as cuDNN LSTM, as shown in the image and text.",
+    "text_chunks": [
+      "Despite our simple setup, SRU outperforms most previous methods and achieves comparable results compared to the state-of-the-art but more sophisticated model of~\\citet{zhao2015self. Figure~ shows validation performance relative to training time for SRU, cuDNN LSTM and the CNN model. Our SRU implementation runs 5--9 times faster than cuDNN LSTM, and 6--40\\% faster than the CNN model of~\\citet{Kim14.",
+      "\\paragraph{Results Table~ shows the translation results. When SRU is incorporated into the architecture, both the 4-layer and 5-layer model outperform the Transformer base model. For instance, our 5-layer model obtains an average improvement of 0.7 test BLEU score and an improvement of 0.5 BLEU score by comparing the best results of each model achieved across three runs.",
+      "The 8-layer SRU model achieves validation and test bits per character (BPC) of 1.21, outperforming previous best reported results of LSTM, QRNN and recurrent highway networks (RHN). Increasing the layer of SRU to 12 and using a longer context of 256 characters in training further improves the BPC to 1.19 Ablation Analysis We perform ablation analyses on SRU by successively disabling different components: We train model variants on the classification and question answering datasets. Table~ and Figure~ confirm the impact of our design decisions -- removing these components result in worse classification accuracies and exact match scores.",
+      "Finally, adding SRU does not affect the parallelization or speed of Transformer -- the 4-layer model exhibits 10\\% speed improvement, while the 5-layer model is only 5\\% slower compared to the base model. We present more results and discussion in Appendix~. Character-level Language Modeling \\paragraph{Dataset We use Enwik8, a large dataset for character-level language modeling. Following standard practice, we use the first 90M characters for training and the remaining 10M split evenly for validation and test.",
+      "The improvement over the Transformer base model is consistent across different epochs. Figure~ plots the training and validation perplexity of three models. With a higher dropout (0.2) used for the SRU, the 5-layer model gets consistent lower validation perplexity over the base model and the 4-layer model.",
+      "SRU also exhibits more stable performance, with smaller variance over 3 runs. Figure~ further compares the validation accuracy of different models. These results confirm that SRU is better at sequence modeling compared to the original feed-forward network (FFN), requiring fewer layers to achieve similar accuracy.",
+      "On classification and question answering datasets, SRU outperforms common recurrent and non-recurrent architectures, while achieving 5--9x speed-up compared to cuDNN LSTM. Stacking additional layers further improves performance, while incurring relatively small costs owing to the cheap computation of a single layer. We also obtain an average improvement of 0.7 BLEU score on the English to German translation task by incorporating SRU into Transformer~\\citep{vaswani2017attention.",
+      "SRU achieves 71.4\\% exact match and 80.2\\% F1 score, outperforming the bidirectional LSTM model by 1.9\\% (EM) and 1.4\\% (F1) respectively. SRU also exhibits over 5x speed-up over LSTM and 53--63\\% reduction in total training time. In comparison with QRNN, SRU obtains 0.8\\% improvement on exact match and 0.6\\% on F1 score, and runs 60\\% faster."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 2,\n    \"Rationale\": \"Image 0 shows validation accuracies for different models, including SRU, on various datasets, which is relevant for comparing performance on the SUBJ dataset. Text 2 provides information on the performance of an 8-layer SRU model, which is necessary for understanding its comparison to other models.\",\n    \"Answer\": \"The 8-layer SRU model achieves better performance than previous models on the SUBJ dataset, as indicated by its lower bits per character (BPC) score. In terms of training time, SRU runs significantly faster than other models, such as cuDNN LSTM, as shown in the image and text.\"\n}"
+  }
+}

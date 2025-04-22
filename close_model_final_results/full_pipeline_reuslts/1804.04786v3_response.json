@@ -1,0 +1,101 @@
+{
+  "0": {
+    "question": "What is the purpose of the audio encoder in the proposed conditional recurrent adversarial video generation network structure?",
+    "ground_truth": "The audio encoder extracts audio features from the MFCC features of each audio segment.",
+    "selected_figures_names": [
+      "1804.04786v3-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure1-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Figure6-1.png",
+      "1804.04786v3-Figure4-1.png",
+      "1804.04786v3-Figure5-1.png",
+      "1804.04786v3-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 provides a visual representation of the network structure, showing the role of the audio encoder. Text 6 explains the network architecture, including the audio encoder's function in processing audio features.",
+    "answer": "The purpose of the audio encoder in the proposed network is to process audio features, which are then used in conjunction with image features to generate video frames. This helps in capturing spatial-temporal information for realistic video generation.",
+    "text_chunks": [
+      "We presented a new conditional adversarial network for talking face video generation. Our framework mainly utilizes the recurrent adversarial network to capture the temporal dependency of sequential audio features and image information simultaneously. Furthermore, the framework incorporates three discriminators to further improve the image quality, video realism and lip movement accuracy in an adversarial training manner.",
+      "Conditional Recurrent Video Generation In order to map independent features to a sequence of correlated ones, we apply the recurrent unit on the hybrid features to enforce the temporal coherence on both image and audio signals. % Our proposed conditional recurrent video generation network is illustrated in Fig.~. The inputs to the network are collected by the following feature extraction modules. \\subsubsection{Audio Feature Extraction Given an entire audio sequence A, we use a sliding window to clip the audio file into several audio segments.",
+      "In this case, the problem can be solved by minimizing the distance between real video distribution and generated video distribution in an adversarial manner~. Let A \\equiv \\{A_1, A_2, \\cdots, A_t,\\cdots, A_K\\ be the audio sequence where each element A_t represents the audio clip in this audio sequence. Let I \\equiv \\{I_1, I_2, \\cdots, I_t, \\cdots, I_K\\ be the corresponding real talking face sequence. And I^{* \\in I is the identity image which can be any single image chosen from the real sequence of images.",
+      "It aims to predict the future frames conditioned on previous frames. % With the success of GAN~, a few works have attempted to generate videos through the adversarial training procedure. decomposed video generation into motion dynamic and background content generation.",
+      "In order to solve these problems, we propose a hybrid recurrent feature generation modeling scheme to capture both the visual and audio dependency over time. We use a recurrent neural network to ingest both the image and audio sequential signal and generate the image sequence directly from a decoder network. We will explain the detailed design in the following section.",
+      "Given the audio sequence A and one single identity image I^* as condition, the talking face generation task aims to generate a sequence of frames \\tilde{I = \\{\\tilde{I_1, \\tilde{I_2, \\cdots, \\tilde{I_t, \\cdots, \\tilde{I_K\\, so that the conditional probability distribution of \\tilde{I given A and I^* is close to that of I when given A and I^*, i.e., p(\\tilde{I | A, I^*) \\approx p(I |A, I^*).% Generally speaking, there have been two schemes developed for conditional video generation, namely, frame-to-frame (Fig.~) and sequential frame generation as used in Vid2Vid~ (Fig.~). The frame-to-frame scheme former simplifies the video generation problem into image generation by assuming the i.i.d between different frames.",
+      "For the lip-reading discriminator, we only feed the mouth regions in order to avoid other interference, such as facial expressions and large head movements. \\subsubsection{Network Architecture The audio encoder E_A, image encoder E_I, image discriminator D_I, and image decoder Dec are constructed by convolutional or deconvolutional networks. To capture the spatial-temporal information, we use 3D convolution to build the video discriminator D_V.",
+      "A series of audio feature variables denoted as z^A= [z^A_0, z^A_1, \\cdots,z^A_{t, \\cdots, z^A_{K] and the image feature z^I are concatenated to generate a hybrid feature where both the face and audio information are incorporated. The concatenated feature is later fed into the decoder network Dec to generate the target image with desired lip shape while preserving the same identity using the reconstruction loss {L_{rec. where \\tilde{I_{t =Dec(z^I,z^A) = G(A, I^*) and I_t are the generated and ground truth video frames, respectively. Adversarial Learning \\subsubsection{Lip-Reading Discriminator"
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 provides a visual representation of the network structure, showing the role of the audio encoder. Text 6 explains the network architecture, including the audio encoder's function in processing audio features.\",\n    \"Answer\": \"The purpose of the audio encoder in the proposed network is to process audio features, which are then used in conjunction with image features to generate video frames. This helps in capturing spatial-temporal information for realistic video generation.\"\n}"
+  },
+  "1": {
+    "question": "Which loss function combination is most important for generating realistic mouth movements?",
+    "ground_truth": "The combination of Lrec, LI, and LV is most important for generating realistic mouth movements.",
+    "selected_figures_names": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure1-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure1-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Figure6-1.png",
+      "1804.04786v3-Figure4-1.png",
+      "1804.04786v3-Figure5-1.png",
+      "1804.04786v3-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 6,
+    "rationale": "Image 2 shows the network structure with different discriminators, including the lip-reading discriminator, which is crucial for guiding realistic mouth movements. Text 6 explains the use of a lip-reading model as semantic guidance, highlighting its importance in generating accurate lip movements.",
+    "answer": "The combination of reconstruction loss and lip-reading adversarial loss is most important for generating realistic mouth movements.",
+    "text_chunks": [
+      "In other words, PSNR, SSIM and LMD cannot accurately reflect whether the generated lip movement is correct or not. For better evaluation of the lip sync result, we use the-state-of-the-art deep lip-reading model which is trained on real speech videos to quantify the accuracy. Computer vision based lip-reading models have been used to aid correction of lip movements to improve human's pronunciation~, and thus should be an ideal metric to justify the authenticity of the generated speech videos.",
+      "To measure the lip movement accuracy, we also use lip-reading accuracy~ and Landmark Distance Error (LMD)~ as the measuring criteria to understand the lip movement from the semantic level and pixel level respectively. Note that is excluded in our quantitative study because it only focuses on the lip region which would not be a fair comparison. We list quantitative evaluation results as well as the comparison with other methods on the LRW dataset in Table~. Our recurrent video generation framework has demonstrated better performance over other frame-by-frame generators.",
+      "The proposed method reduces these discontinuities by performing the recurrent generation to model the temporal dynamics, which has not been considered in other methods. \\subsubsection{Ablation Study To compare different generation schemes and analyze the effectiveness of different loss functions in our method, we carry out extensive ablation studies as follows. Effectiveness of different losses in the proposed method (Eq.~) is compared and demonstrated in Fig.~, where \\mathcal{L_r, \\mathcal{L_I, \\mathcal{L_V, \\mathcal{L_l represent reconstruction loss, image adversarial loss, video adversarial loss, and lip-reading adversarial loss, respectively.",
+      "Because of the usage of the lip-reading discriminator, the generator is forced to generate more accurate mouth shapes in order to predict the correct word label. Without such semantic guidance on the lip movement, the generated mouth shapes usually present less expressive and discriminative semantic cues, such as the comparison results listed in Fig.~ from ~. In addition, video frames generated by and contain inter-frame discontinuities and motion inconsistency which are more obvious in the video (provided in the supplement) than in Fig.~.",
+      "This phenomenon has been studied in many super-resolution related works. Similarly, we observe that the best LMD value is achieved by using only the reconstruction loss. We argue that LMD cannot precisely reflect the lip movement accuracy mainly from two aspects.",
+      "In addition, this method only models the lip and mouth region without considering the expression or head pose variations as a whole. Compared with these approaches, the proposed framework incorporates both image and audio in the recurrent unit to achieve temporal dependency in the generated video on both facial and lip movements, such that smooth transition across different video frames can be realized. We also observe that the image and audio features (or hybrid features) learned by minimizing the reconstruction error between the generated and ground truth frames are insufficient to accurately guide lip movement.",
+      "The reconstruction error alone is insufficient to accurately guide the lip movement during the training stage because it only calculates the averaged pixel-wise distance, instead of semantically penalizing the inaccurate lip movements. % To solve this problem, we use a lip-reading model as a semantic lip guidance, \\ie, a lip-reading discriminator, to update the generator in an adversarial manner. % The objective function for updating the lip-reading model D_l is shown in Eq.~. where y is the real word label, the output of D_{l is the predicted probability.",
+      "This is because the reconstruction error only calculates the averaged pixel-wise distance, instead of semantically penalizing inaccurate lip movements. In order to guide the network to learn features related to semantic lip movements, a lip-reading discriminator is adopted to train the network in an adversarial manner. In addition, we deploy a spatial-temporal discriminator to improve both photo-realism and video-realism."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 6,\n    \"Rationale\": \"Image 2 shows the network structure with different discriminators, including the lip-reading discriminator, which is crucial for guiding realistic mouth movements. Text 6 explains the use of a lip-reading model as semantic guidance, highlighting its importance in generating accurate lip movements.\",\n    \"Answer\": \"The combination of reconstruction loss and lip-reading adversarial loss is most important for generating realistic mouth movements.\"\n}"
+  },
+  "2": {
+    "question": "What is the difference between the sequential and recurrent generation schemes?",
+    "ground_truth": "The sequential generation scheme generates each frame of the video independently, while the recurrent generation scheme uses the previous frame to generate the next frame. This can be seen in the optical flow images, which show the motion of pixels between frames. The recurrent scheme has a smoother flow of motion, while the sequential scheme has more abrupt changes.",
+    "selected_figures_names": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure1-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1804.04786v3-Figure3-1.png",
+      "1804.04786v3-Figure1-1.png",
+      "1804.04786v3-Figure2-1.png",
+      "1804.04786v3-Figure6-1.png",
+      "1804.04786v3-Figure4-1.png",
+      "1804.04786v3-Figure5-1.png",
+      "1804.04786v3-Table1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 visually illustrates the differences between the frame-to-frame, sequential, and recurrent generation schemes, which is directly relevant to the question. Text 1 explains the limitations of the sequential scheme and introduces the recurrent scheme, highlighting the differences between them.",
+    "answer": "The sequential generation scheme models short-term dependencies by generating each frame based on the previous one, which can lead to identity preservation issues over long durations. In contrast, the recurrent generation scheme maintains long-term dependencies by incorporating the identity frame into the generation process, ensuring better identity preservation and smoother transitions between frames.",
+    "text_chunks": [
+      "% Effectiveness of different schemes is compared in Fig.~. We compare the recurrent generation (bottom block) with other two existing schemes, \\ie, sequential generation (top block) and frame-to-frame generation (middle block) as introduced in Sec.~. Obviously, the sequential generation scheme fails to preserve the identity while the frame-to-frame scheme exhibits large variance between adjacent frames as illustrated by the optical flow. The gray-scale map represents the motion intensity map which is calculated by averaging the optical flow for the whole sequence, where brighter pixels illustrate larger variation between adjacent frames.",
+      "The sequential generation scheme cannot preserve the facial identity in long duration because only short term dependency is modeled. % To solve these issues, instead, we propose the so-called recurrent frame generation scheme, as shown in Fig.~, where the next frame is generated not only depending on the previously generated frames but also the identity frame to preserve long term dependency. As illustrated in Fig.~, another problem with this modeling scheme is that although it considers the image temporal dependency, the audio temporal relation is still ignored.",
+      "On the other hand, the sequential scheme generates the current frame based on previously generated frame to model the short term dependency. For the talking face generation problem in specific where only the audio sequence and one single face image are given, it requires the generated image sequence to 1) preserve the identity across a long time range, 2) have accurate lip shape corresponding to the given audio, and 3) be both photo- and video-realistic. The video generated by the frame-to-frame scheme tends to exhibit jitter effect because no temporal dependency is modeled.",
+      "Compared with frame-to-frame generator, the recurrent scheme preserves the identity information well and achieves the smooth flow between frames, \\ie, most movements are around the mouth area. Quantitative Evaluation The same as current related works , we use PSNR and SSIM to evaluate the image quality.",
+      "In order to solve these problems, we propose a hybrid recurrent feature generation modeling scheme to capture both the visual and audio dependency over time. We use a recurrent neural network to ingest both the image and audio sequential signal and generate the image sequence directly from a decoder network. We will explain the detailed design in the following section.",
+      "The proposed method reduces these discontinuities by performing the recurrent generation to model the temporal dynamics, which has not been considered in other methods. \\subsubsection{Ablation Study To compare different generation schemes and analyze the effectiveness of different loss functions in our method, we carry out extensive ablation studies as follows. Effectiveness of different losses in the proposed method (Eq.~) is compared and demonstrated in Fig.~, where \\mathcal{L_r, \\mathcal{L_I, \\mathcal{L_V, \\mathcal{L_l represent reconstruction loss, image adversarial loss, video adversarial loss, and lip-reading adversarial loss, respectively.",
+      "However, with the unconditional setting, the generated video suffers from low-resolution and fixed short length issues. % To model the temporal consistency, Vid2Vid~ proposed a sequential generation scheme where current frame depends on previously generated frame(s). Concurrent Works Concurrent with our paper, there have been two recent closely related works~. focuses on generating the lip region movement.",
+      "Given the audio sequence A and one single identity image I^* as condition, the talking face generation task aims to generate a sequence of frames \\tilde{I = \\{\\tilde{I_1, \\tilde{I_2, \\cdots, \\tilde{I_t, \\cdots, \\tilde{I_K\\, so that the conditional probability distribution of \\tilde{I given A and I^* is close to that of I when given A and I^*, i.e., p(\\tilde{I | A, I^*) \\approx p(I |A, I^*).% Generally speaking, there have been two schemes developed for conditional video generation, namely, frame-to-frame (Fig.~) and sequential frame generation as used in Vid2Vid~ (Fig.~). The frame-to-frame scheme former simplifies the video generation problem into image generation by assuming the i.i.d between different frames."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 visually illustrates the differences between the frame-to-frame, sequential, and recurrent generation schemes, which is directly relevant to the question. Text 1 explains the limitations of the sequential scheme and introduces the recurrent scheme, highlighting the differences between them.\",\n    \"Answer\": \"The sequential generation scheme models short-term dependencies by generating each frame based on the previous one, which can lead to identity preservation issues over long durations. In contrast, the recurrent generation scheme maintains long-term dependencies by incorporating the identity frame into the generation process, ensuring better identity preservation and smoother transitions between frames.\"\n}"
+  }
+}

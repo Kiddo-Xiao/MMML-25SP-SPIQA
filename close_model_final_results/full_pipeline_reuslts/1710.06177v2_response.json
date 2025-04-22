@@ -1,0 +1,206 @@
+{
+  "0": {
+    "question": "How does the performance of VAGER+Voting compare to other VAGER variants in the 1-shot and 20-shot settings?",
+    "ground_truth": "VAGER+Voting consistently outperforms all other VAGER variants in both 1-shot and 20-shot settings, achieving the highest AUC and F1 scores.",
+    "selected_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png",
+      "1710.06177v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 provides a detailed comparison of VAGER+Voting with other VAGER variants across different shot settings, including 1-shot and 20-shot. Text 5 discusses the performance of VAGER+Voting in low-shot settings, highlighting its effectiveness compared to other methods.",
+    "answer": "In the 1-shot setting, VAGER+Voting achieves an AUC of 0.8718 and an F1 score of 0.5671, outperforming other VAGER variants. In the 20-shot setting, it also performs the best with an AUC of 0.9607 and an F1 score of 0.7510, indicating its superior performance across both settings.",
+    "text_chunks": [
+      "In contrast, LR performs the worst in 1-shot setting, which demonstrates the importance of generalization from base classes when the new class has very few samples. MRN does not work well in most settings, demonstrating that its basic hypothesis that the classification parameters trained by large samples and small samples respectively are correlated does not necessarily hold in real data. By comparing VAGER+Voting with the other five variant versions of our method, we can safely draw the conclusion that the major ingredients in our method, including network embedding for low dimensional representations, mapping function for transforming embedding space to classification parameter space, as well as the refinement strategy are necessary and effective and the results support that the Voting strategy performs the best in our scenario.",
+      "We randomly select 10 categories from the novel test categories and learn to distinguish these 10 categories on the 1-shot setting. We repeat random selections five times and the result is shown on the first 5 columns in Table . Our VAGER+Voting performs the best in all 5 groups, with promotion of around 2\\% of average top-1 accuracy, which demonstrates that our method is robust whatever the novel classes are.",
+      "Binary Classification In this section, we evaluate how well the classifiers learned by our method and other baselines can perform in novel classes on binary classification setting. The results are shown in Table . In all low-shot settings, our method VAGER+Voting consistently performs the best in both AUC and F1 metrics.",
+      "The complete version of our method is VAGER+Voting. \\\\ \\noindent Logistic Regression (LR) \\hspace{0.1cm Common logistic regression model on novel classes. In the setting of multi-class classification, it becomes Softmax Regression.",
+      "This method can also be regarded as a visual analogy approach, but the transferring process is heuristic. \\noindent VAGER \\hspace{0.1cm This is the VAGER algorithm without parameter refinement step.",
+      "Furthermore, we compare the performances of these methods in different low-shot settings, and the results are shown in Figure . Our method consistently performs the best in all settings, and the advantage of our method is more obvious when the novel classes have less training samples. Especially, by comparing our method and LR, we can see that LR needs about 20 shots to reach AUC 0.9, while we only need 2 shots, indicating that we can save 90\\% training data.",
+      "The second experiment is to evaluate our method on different numbers of novel classes. We design an 10/30/50/100-way 1-shot setting. The result is shown in the last four columns in Table .",
+      "We randomly choose 10 novel classes and test the performance of our algorithm and baselines on 1/2/3/4/5/10/20/50 shots. The result is shown in Figure . In all scenarios, our algorithm performs the best."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 provides a detailed comparison of VAGER+Voting with other VAGER variants across different shot settings, including 1-shot and 20-shot. Text 5 discusses the performance of VAGER+Voting in low-shot settings, highlighting its effectiveness compared to other methods.\",\n    \"Answer\": \"In the 1-shot setting, VAGER+Voting achieves an AUC of 0.8718 and an F1 score of 0.5671, outperforming other VAGER variants. In the 20-shot setting, it also performs the best with an AUC of 0.9607 and an F1 score of 0.7510, indicating its superior performance across both settings.\"\n}"
+  },
+  "1": {
+    "question": "Can you explain why the performance of VAGER is worse than LR for the \"Bubble\" class in the 1-shot binary classification setting, while it performs better for the other nine classes?",
+    "ground_truth": "VAGER leverages transfer learning, while LR does not. This means VAGER attempts to apply knowledge from other classes to improve its performance on new classes. For nine out of the ten novel classes, this strategy seems to be successful, as VAGER consistently outperforms LR. However, for the \"Bubble\" class, the transfer learning approach seems to have a negative impact, causing VAGER to perform worse than LR.",
+    "selected_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png",
+      "1710.06177v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 3,
+    "rationale": "Image 1 provides a direct comparison of VAGER and LR performance for the 'Bubble' class and other classes in the 1-shot setting. Text 3 discusses the effect of generalization and introduces the concept of Similarity Ratio, which can explain why VAGER might perform worse for certain classes like 'Bubble'.",
+    "answer": "The performance of VAGER is worse than LR for the 'Bubble' class because the generalization effect is negative for this class. The Similarity Ratio (SR) concept suggests that if a novel class is not similar to the base classes, it may not benefit from the transfer learning approach used by VAGER. This could be the case for the 'Bubble' class, leading to its poorer performance compared to LR.",
+    "text_chunks": [
+      "In contrast, LR performs the worst in 1-shot setting, which demonstrates the importance of generalization from base classes when the new class has very few samples. MRN does not work well in most settings, demonstrating that its basic hypothesis that the classification parameters trained by large samples and small samples respectively are correlated does not necessarily hold in real data. By comparing VAGER+Voting with the other five variant versions of our method, we can safely draw the conclusion that the major ingredients in our method, including network embedding for low dimensional representations, mapping function for transforming embedding space to classification parameter space, as well as the refinement strategy are necessary and effective and the results support that the Voting strategy performs the best in our scenario.",
+      "Binary Classification In this section, we evaluate how well the classifiers learned by our method and other baselines can perform in novel classes on binary classification setting. The results are shown in Table . In all low-shot settings, our method VAGER+Voting consistently performs the best in both AUC and F1 metrics.",
+      "We randomly select 10 categories from the novel test categories and learn to distinguish these 10 categories on the 1-shot setting. We repeat random selections five times and the result is shown on the first 5 columns in Table . Our VAGER+Voting performs the best in all 5 groups, with promotion of around 2\\% of average top-1 accuracy, which demonstrates that our method is robust whatever the novel classes are.",
+      "It's obvious that the effect of generalization is notable in 9 of them, but in the bubble class, the generalization plays a negative role. To discover the driving factor controlling success or failure of the generalization, we define and calculate the similarity ratio (SR) of a novel class with the base classes by: Here the similarity of two classes is calculated by Equation . Intuitively, if a new class is similar with the top-K base classes, while dissimilar with the remained base classes, its Similarity Ratio will be high, meaning that this new class can benefit more from the base classes.",
+      "To address the above problems, we first propose a novel Visual Analogy Graph Embedded Regression (VAGER) model to jointly learn a low-dimension embedding space and a linear mapping function from the embedding space to classification parameters for base classes. In particular, we learn a low-dimension embedding for each base class so that embedding similarity between two base classes can reflect their visual analogy in the original representation space. Meanwhile, we learn a linear mapping function from the embedding of a base class to its previously learned classification parameters (i.e. the logistic regression parameters).",
+      "Furthermore, we compare the performances of these methods in different low-shot settings, and the results are shown in Figure . Our method consistently performs the best in all settings, and the advantage of our method is more obvious when the novel classes have less training samples. Especially, by comparing our method and LR, we can see that LR needs about 20 shots to reach AUC 0.9, while we only need 2 shots, indicating that we can save 90\\% training data.",
+      "\\newtheorem{problem{Problem Note that the problem of learning to learn image classifiers differs from traditional image classification problems in that the learning of a classifier for a novel class depends on the previously learned base-class classifiers and the image representations in base classes besides the image samples in the novel class. The VAGER Model We define a graph G = (V, E) where V is the vertex set of the graph, with each vertex representing a base class and |V| = n. E is the edge set of the graph, each edge represents visual analogy relationship between two classes with the edge weight depicting the similarity degree. We use \\mathbf{A to represent the adjacency matrix of the network, and \\mathbf{A_{ij is the edge weight between vertex i and vertex j. \\mathbf{A_{i,: and \\mathbf{A_{:,j stands for the i-th row and the j-th column of \\mathbf{A respectively.",
+      "The VAGER model enables the transformation from the original representation space to embedding space and further into classification parameters. We then propose an out-of-sample embedding method to learn the embedding of a new class represented by a few samples through its visual analogy with base classes. By inputting the learned embedding into VAGER, we can derive the classification parameters for the new class."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 3,\n    \"Rationale\": \"Image 1 provides a direct comparison of VAGER and LR performance for the 'Bubble' class and other classes in the 1-shot setting. Text 3 discusses the effect of generalization and introduces the concept of Similarity Ratio, which can explain why VAGER might perform worse for certain classes like 'Bubble'.\",\n    \"Answer\": \"The performance of VAGER is worse than LR for the 'Bubble' class because the generalization effect is negative for this class. The Similarity Ratio (SR) concept suggests that if a novel class is not similar to the base classes, it may not benefit from the transfer learning approach used by VAGER. This could be the case for the 'Bubble' class, leading to its poorer performance compared to LR.\"\n}"
+  },
+  "2": {
+    "question": "What is the relationship between the Similarity Ratio and AUC Increasing?",
+    "ground_truth": "There is a positive linear relationship between the Similarity Ratio and AUC Increasing.",
+    "selected_figures_names": [
+      "1710.06177v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png",
+      "1710.06177v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 shows a linear regression of AUC improvement on Similarity Ratio, which directly visualizes the relationship. Text 1 explains that the relative improvement in a new class is positively correlated with the similarity ratio, providing statistical details.",
+    "answer": "The relationship between the Similarity Ratio and AUC Increasing is positive, meaning that as the Similarity Ratio increases, the AUC also tends to increase.",
+    "text_chunks": [
+      "For each new class, we calculate the relative improvement in AUC of our method over non-transfer method LR in 1-shot setting, and do linear regression over its Similarity Ratio with K=10. The dependent variable indicates the success degree of generalization. And we set K = 10.",
+      "We plot the similarity ratio and relative improvement of all novel classes in Figure . We can see that the relative improvement in a new class is positively correlated with the similarity ratio of the new class, with 95\\% confidence interval for the correlation coefficient range between 0.124 and 0.169 and R^2 = 0.45, showing that the SR ratio could explain 45\\% of the dependent variable. The results fully demonstrate that our method is consistent with the notion of human-like learning:",
+      "Furthermore, we compare the performances of these methods in different low-shot settings, and the results are shown in Figure . Our method consistently performs the best in all settings, and the advantage of our method is more obvious when the novel classes have less training samples. Especially, by comparing our method and LR, we can see that LR needs about 20 shots to reach AUC 0.9, while we only need 2 shots, indicating that we can save 90\\% training data.",
+      "First, we can learn a new concept faster if it is more similar to some previously learned concepts. (i.e. Leading to the increase of the numerator of the Similarity Ratio). Second, we can learn a new concept faster if we have learned more diversified concepts (i.e. Leading to the decrease of the denominator of the Similarity Ratio).",
+      "It's obvious that the effect of generalization is notable in 9 of them, but in the bubble class, the generalization plays a negative role. To discover the driving factor controlling success or failure of the generalization, we define and calculate the similarity ratio (SR) of a novel class with the base classes by: Here the similarity of two classes is calculated by Equation . Intuitively, if a new class is similar with the top-K base classes, while dissimilar with the remained base classes, its Similarity Ratio will be high, meaning that this new class can benefit more from the base classes.",
+      "We report the average AUC and F1-score across all test classes. As to the m-way k-shot classification, we use average top-1 accuracy across m novel classes. We compare our method with the baselines below.",
+      "In the testing phase, we randomly select 5 images per novel class from the rest images as the testing dataset. The experiment will repeat 500 times under each m-way k-shot setting. The evaluating metric in our experiment is the Area Under Curve (AUC) of the Receiver Operating Characteristic (ROC) and the F1-score, which are widely used in binary classification.",
+      "In our classification problem, we construct the visual analogy network as a undirected complete graph, and edge weight (i.e. degree of visual analogy) between two classes is calculated by: Here \\overline{\\mathbf{x_i^B means the average feature vector for class i and this equation is the cosine similarity between two base classes. Note that our graph is an undirected graph, and the adjacency matrix \\mathbf{A is symmetric."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 shows a linear regression of AUC improvement on Similarity Ratio, which directly visualizes the relationship. Text 1 explains that the relative improvement in a new class is positively correlated with the similarity ratio, providing statistical details.\",\n    \"Answer\": \"The relationship between the Similarity Ratio and AUC Increasing is positive, meaning that as the Similarity Ratio increases, the AUC also tends to increase.\"\n}"
+  },
+  "3": {
+    "question": "Which method performs best in the 10 classes 1-shot multi-class classification problem?",
+    "ground_truth": "VAGER + Voting",
+    "selected_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png",
+      "1710.06177v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 2,
+    "rationale": "Image 1 and Text 2 both focus on the performance of VAGER in a 1-shot setting across multiple novel classes, which is directly relevant to the question about 1-shot multi-class classification.",
+    "answer": "VAGER+Voting performs the best in the 10 classes 1-shot multi-class classification problem.",
+    "text_chunks": [
+      "We randomly choose 10 novel classes and test the performance of our algorithm and baselines on 1/2/3/4/5/10/20/50 shots. The result is shown in Figure . In all scenarios, our algorithm performs the best.",
+      "The second experiment is to evaluate our method on different numbers of novel classes. We design an 10/30/50/100-way 1-shot setting. The result is shown in the last four columns in Table .",
+      "We randomly select 10 categories from the novel test categories and learn to distinguish these 10 categories on the 1-shot setting. We repeat random selections five times and the result is shown on the first 5 columns in Table . Our VAGER+Voting performs the best in all 5 groups, with promotion of around 2\\% of average top-1 accuracy, which demonstrates that our method is robust whatever the novel classes are.",
+      "For each new class, we calculate the relative improvement in AUC of our method over non-transfer method LR in 1-shot setting, and do linear regression over its Similarity Ratio with K=10. The dependent variable indicates the success degree of generalization. And we set K = 10.",
+      "To eliminate randomness, for any k-shot setting, we run 50 times and report the average result in the following experiments. Section 4.4 shows an m-way k-shot classification problem, where the new classifier is learned to classify among the m novel classes, which is consistent with the classical setting in few-shot learning. In the training phase, we randomly select m novel classes and select k images from each of these classes as the training dataset.",
+      "(3) Whether the generalization process is explainable? In order to answer the above questions, we further conduct an insightful analysis. We randomly select 10 novel classes, and list the performance of our method compared with LR in one-shot setting on these classes, as shown in Table .",
+      "We report the average AUC and F1-score across all test classes. As to the m-way k-shot classification, we use average top-1 accuracy across m novel classes. We compare our method with the baselines below.",
+      "Furthermore, we compare the performances of these methods in different low-shot settings, and the results are shown in Figure . Our method consistently performs the best in all settings, and the advantage of our method is more obvious when the novel classes have less training samples. Especially, by comparing our method and LR, we can see that LR needs about 20 shots to reach AUC 0.9, while we only need 2 shots, indicating that we can save 90\\% training data."
+    ],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 2,\n    \"Rationale\": \"Image 1 and Text 2 both focus on the performance of VAGER in a 1-shot setting across multiple novel classes, which is directly relevant to the question about 1-shot multi-class classification.\",\n    \"Answer\": \"VAGER+Voting performs the best in the 10 classes 1-shot multi-class classification problem.\"\n}"
+  },
+  "4": {
+    "question": "What is the relationship between the novel class and the top-3 most similar base classes?",
+    "ground_truth": "The top-3 most similar base classes are the three classes that are most similar to the novel class, based on the embedding layer in a 5-shot setting.",
+    "selected_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png",
+      "1710.06177v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 4,
+    "rationale": "Image 2 shows a linear regression of AUC improvement on Similarity Ratio, which relates to how novel classes benefit from base classes. Text 4 discusses the impact of base classes on novel class formation, indicating a visual correlation and explainability in the generalization process.",
+    "answer": "The novel class is visually correlated with the top-3 most similar base classes, which significantly impacts the formation of the new classifier. This relationship is intuitive and explainable, aiding in the generalization process.",
+    "text_chunks": [
+      "This principle can also be used to guide the generalization process and help to determine whether a new class is fit for generalization. Finally, we validate whether the generalization process is explainable. Here we randomly select 5 novel classes, and for each novel class, we visualize the top-3 base classes that are most similar with the novel class in the visual analogy graph, as shown in Figure .",
+      "We calculate the similarity of a novel class with all base classes by Equation , and we denote this similarity vector by \\mathbf{a_{new \\in \\mathbb{R^n. Then we define the objective function for the novel class embedding inference and our goal is to minimize the following function: Equation is in fact the extension of the second term in Equation . As we have little information about the classification parameters of the novel class, we omit the first term in Equation .",
+      "It's obvious that the effect of generalization is notable in 9 of them, but in the bubble class, the generalization plays a negative role. To discover the driving factor controlling success or failure of the generalization, we define and calculate the similarity ratio (SR) of a novel class with the base classes by: Here the similarity of two classes is calculated by Equation . Intuitively, if a new class is similar with the top-K base classes, while dissimilar with the remained base classes, its Similarity Ratio will be high, meaning that this new class can benefit more from the base classes.",
+      "We plot the similarity ratio and relative improvement of all novel classes in Figure . We can see that the relative improvement in a new class is positively correlated with the similarity ratio of the new class, with 95\\% confidence interval for the correlation coefficient range between 0.124 and 0.169 and R^2 = 0.45, showing that the SR ratio could explain 45\\% of the dependent variable. The results fully demonstrate that our method is consistent with the notion of human-like learning:",
+      "In our method, these base classes have a large impact on the formation of the new classifier. We can see that the top-3 base classes are visually correlated with the novel classes, and the generalization process can be very intuitive and explainable. Multi-class Classification{In this section, we mainly show the performance of the experiments on multi-class classification.",
+      "We randomly choose 10 novel classes and test the performance of our algorithm and baselines on 1/2/3/4/5/10/20/50 shots. The result is shown in Figure . In all scenarios, our algorithm performs the best.",
+      "We randomly select 10 categories from the novel test categories and learn to distinguish these 10 categories on the 1-shot setting. We repeat random selections five times and the result is shown on the first 5 columns in Table . Our VAGER+Voting performs the best in all 5 groups, with promotion of around 2\\% of average top-1 accuracy, which demonstrates that our method is robust whatever the novel classes are.",
+      "(3) Whether the generalization process is explainable? In order to answer the above questions, we further conduct an insightful analysis. We randomly select 10 novel classes, and list the performance of our method compared with LR in one-shot setting on these classes, as shown in Table ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 4,\n    \"Rationale\": \"Image 2 shows a linear regression of AUC improvement on Similarity Ratio, which relates to how novel classes benefit from base classes. Text 4 discusses the impact of base classes on novel class formation, indicating a visual correlation and explainability in the generalization process.\",\n    \"Answer\": \"The novel class is visually correlated with the top-3 most similar base classes, which significantly impacts the formation of the new classifier. This relationship is intuitive and explainable, aiding in the generalization process.\"\n}"
+  },
+  "5": {
+    "question": "Which method performs the best when the number of shots is 50?",
+    "ground_truth": "VAGER+Voting",
+    "selected_figures_names": [
+      "1710.06177v2-Figure2-1.png"
+    ],
+    "all_figures_names": [
+      "1710.06177v2-Table1-1.png",
+      "1710.06177v2-Table2-1.png",
+      "1710.06177v2-Figure3-1.png",
+      "1710.06177v2-Figure2-1.png",
+      "1710.06177v2-Figure4-1.png",
+      "1710.06177v2-Figure5-1.png",
+      "1710.06177v2-Table3-1.png",
+      "1710.06177v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 shows the performance of different methods as the number of shots increases, which directly answers the question. Text 1 provides additional context about the performance of the methods, highlighting that VAGER+Voting consistently performs the best.",
+    "answer": "VAGER+Voting performs the best when the number of shots is 50.",
+    "text_chunks": [
+      "We randomly choose 10 novel classes and test the performance of our algorithm and baselines on 1/2/3/4/5/10/20/50 shots. The result is shown in Figure . In all scenarios, our algorithm performs the best.",
+      "Furthermore, we compare the performances of these methods in different low-shot settings, and the results are shown in Figure . Our method consistently performs the best in all settings, and the advantage of our method is more obvious when the novel classes have less training samples. Especially, by comparing our method and LR, we can see that LR needs about 20 shots to reach AUC 0.9, while we only need 2 shots, indicating that we can save 90\\% training data.",
+      "The second experiment is to evaluate our method on different numbers of novel classes. We design an 10/30/50/100-way 1-shot setting. The result is shown in the last four columns in Table .",
+      "As the result shows, our algorithm consistently gets the best performance. The third experiment is to evaluate our method on different shots. We control the number of novel classes and change the number of shots used for learning novel classifiers.",
+      "We randomly select 10 categories from the novel test categories and learn to distinguish these 10 categories on the 1-shot setting. We repeat random selections five times and the result is shown on the first 5 columns in Table . Our VAGER+Voting performs the best in all 5 groups, with promotion of around 2\\% of average top-1 accuracy, which demonstrates that our method is robust whatever the novel classes are.",
+      "To eliminate randomness, for any k-shot setting, we run 50 times and report the average result in the following experiments. Section 4.4 shows an m-way k-shot classification problem, where the new classifier is learned to classify among the m novel classes, which is consistent with the classical setting in few-shot learning. In the training phase, we randomly select m novel classes and select k images from each of these classes as the training dataset.",
+      "An interesting phenomenon is that the performance of Weighted-LR does not change as the shot number increases. The main reason is that the heuristic rule is not flexible enough to incorporate new information, which demonstrates the importance of learning to learn, rather than rule-based learning. Insightful Analysis",
+      "In the testing phase, we randomly select 5 images per novel class from the rest images as the testing dataset. The experiment will repeat 500 times under each m-way k-shot setting. The evaluating metric in our experiment is the Area Under Curve (AUC) of the Receiver Operating Characteristic (ROC) and the F1-score, which are widely used in binary classification."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 shows the performance of different methods as the number of shots increases, which directly answers the question. Text 1 provides additional context about the performance of the methods, highlighting that VAGER+Voting consistently performs the best.\",\n    \"Answer\": \"VAGER+Voting performs the best when the number of shots is 50.\"\n}"
+  }
+}

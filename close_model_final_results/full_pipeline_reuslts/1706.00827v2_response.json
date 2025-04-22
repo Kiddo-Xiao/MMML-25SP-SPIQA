@@ -1,0 +1,230 @@
+{
+  "0": {
+    "question": "Which method achieved the most accurate results for simultaneous line and circle fitting?",
+    "ground_truth": "Multi-X achieved the most accurate results for simultaneous line and circle fitting.",
+    "selected_figures_names": [
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Figure1-1.png",
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table7-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Figure1-1.png",
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": null,
+    "rationale": "Image 1 provides visual examples of multi-class multi-instance fitting, including simultaneous line and circle fitting, which is directly relevant to the question. The text chunks focus on misclassification errors for different tasks and datasets, but none specifically address line and circle fitting accuracy.",
+    "answer": "The image shows examples of simultaneous line and circle fitting, but does not specify which method is most accurate. More specific data is needed to determine the most accurate method.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": null,\n    \"Rationale\": \"Image 1 provides visual examples of multi-class multi-instance fitting, including simultaneous line and circle fitting, which is directly relevant to the question. The text chunks focus on misclassification errors for different tasks and datasets, but none specifically address line and circle fitting accuracy.\",\n    \"Answer\": \"The image shows examples of simultaneous line and circle fitting, but does not specify which method is most accurate. More specific data is needed to determine the most accurate method.\"\n}"
+  },
+  "1": {
+    "question": "Which method has the lowest average misclassification error for the cubechips image pair?",
+    "ground_truth": "Multi-X",
+    "selected_figures_names": [
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table8-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table8-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table3-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 2,
+    "rationale": "Image 2 contains the misclassification errors for two-view motion segmentation on the AdelaideRMF dataset, including the cubechips image pair. Text chunk 2 provides the necessary details about the methods and their performance.",
+    "answer": "Multi-X has the lowest average misclassification error for the cubechips image pair with an average error of 3.45%.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 2,\n    \"Rationale\": \"Image 2 contains the misclassification errors for two-view motion segmentation on the AdelaideRMF dataset, including the cubechips image pair. Text chunk 2 provides the necessary details about the methods and their performance.\",\n    \"Answer\": \"Multi-X has the lowest average misclassification error for the cubechips image pair with an average error of 3.45%.\"\n}"
+  },
+  "2": {
+    "question": "What is the difference between AdelaideRMF and Multi-H?",
+    "ground_truth": "AdelaideRMF tends to assign points to more planes than Multi-H.",
+    "selected_figures_names": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure1-1.png",
+      "1706.00827v2-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure1-1.png",
+      "1706.00827v2-Figure6-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table8-1.png",
+      "1706.00827v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 and Text 0 provide data on misclassification errors for two-view plane segmentation using AdelaideRMF test pairs, which directly relates to the question about differences in performance metrics between AdelaideRMF and Multi-H.",
+    "answer": "The difference between AdelaideRMF and Multi-H is in their misclassification error rates for two-view plane segmentation. AdelaideRMF (T-Lnkg) has higher average and median errors (44.68% and 44.49%) compared to Multi-H (14.35% and 9.56%).",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 and Text 0 provide data on misclassification errors for two-view plane segmentation using AdelaideRMF test pairs, which directly relates to the question about differences in performance metrics between AdelaideRMF and Multi-H.\",\n    \"Answer\": \"The difference between AdelaideRMF and Multi-H is in their misclassification error rates for two-view plane segmentation. AdelaideRMF (T-Lnkg) has higher average and median errors (44.68% and 44.49%) compared to Multi-H (14.35% and 9.56%).\"\n}"
+  },
+  "3": {
+    "question": "What is the relationship between the color of the points and the motion of the object?",
+    "ground_truth": "The color of the points indicates the motion that the Multi-X algorithm assigned to each point.",
+    "selected_figures_names": [
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Figure6-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Figure4-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": null,
+    "rationale": "Image 1 shows examples from the AdelaideRMF and Hopkins datasets where color indicates the motion Multi-X assigned a point to. This directly relates to the question about the relationship between point color and object motion.",
+    "answer": "The color of the points indicates the motion that Multi-X assigned to each point. Different colors represent different motions of the objects in the scene.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": null,\n    \"Rationale\": \"Image 1 shows examples from the AdelaideRMF and Hopkins datasets where color indicates the motion Multi-X assigned a point to. This directly relates to the question about the relationship between point color and object motion.\",\n    \"Answer\": \"The color of the points indicates the motion that Multi-X assigned to each point. Different colors represent different motions of the objects in the scene.\"\n}"
+  },
+  "4": {
+    "question": "Which of the five methods tested had the lowest average misclassification error?",
+    "ground_truth": "Multi-X",
+    "selected_figures_names": [
+      "1706.00827v2-Table5-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Figure6-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Table5-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "The image contains a table showing the average misclassification errors for different methods, which directly answers the question.",
+    "answer": "Multi-X had the lowest average misclassification error with 2.97%.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"The image contains a table showing the average misclassification errors for different methods, which directly answers the question.\",\n    \"Answer\": \"Multi-X had the lowest average misclassification error with 2.97%.\"\n}"
+  },
+  "5": {
+    "question": "In which scenario did Multi-X perform worse than another method in terms of misclassification error for simultaneous plane and cylinder fitting?",
+    "ground_truth": "Multi-X performed worse than PEARL in test case (6), with a misclassification error of 21.72% compared to PEARL's 17.35%. ",
+    "selected_figures_names": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table7-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Figure6-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 and Text 0 provide misclassification errors for plane segmentation, which is relevant to the question about simultaneous plane and cylinder fitting. The table shows Multi-X's performance compared to other methods.",
+    "answer": "Multi-X performed worse than T-Lnkg in terms of average misclassification error for simultaneous plane and cylinder fitting.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 and Text 0 provide misclassification errors for plane segmentation, which is relevant to the question about simultaneous plane and cylinder fitting. The table shows Multi-X's performance compared to other methods.\",\n    \"Answer\": \"Multi-X performed worse than T-Lnkg in terms of average misclassification error for simultaneous plane and cylinder fitting.\"\n}"
+  },
+  "6": {
+    "question": "How does the Mean-Shift algorithm perform in the presence of outliers?",
+    "ground_truth": "The Mean-Shift algorithm is robust to outliers.",
+    "selected_figures_names": [
+      "1706.00827v2-Figure1-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table7-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Figure1-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table7-1.png",
+      "1706.00827v2-Table8-1.png",
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "The question is about the performance of the Mean-Shift algorithm in the presence of outliers. Image 0 shows examples of multi-class multi-instance fitting, which is relevant to understanding how algorithms handle outliers. Text 0 provides context on the application of algorithms in scenarios with potential outliers.",
+    "answer": "The Mean-Shift algorithm can be sensitive to outliers, as it relies on density estimation. Outliers can affect the density estimation, leading to incorrect mode detection. Robust versions or preprocessing steps are often used to mitigate this issue.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"The question is about the performance of the Mean-Shift algorithm in the presence of outliers. Image 0 shows examples of multi-class multi-instance fitting, which is relevant to understanding how algorithms handle outliers. Text 0 provides context on the application of algorithms in scenarios with potential outliers.\",\n    \"Answer\": \"The Mean-Shift algorithm can be sensitive to outliers, as it relies on density estimation. Outliers can affect the density estimation, leading to incorrect mode detection. Robust versions or preprocessing steps are often used to mitigate this issue.\"\n}"
+  },
+  "7": {
+    "question": "Which method has the lowest average misclassification error?",
+    "ground_truth": "Multi-X",
+    "selected_figures_names": [
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Table6-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table3-1.png",
+      "1706.00827v2-Figure4-1.png",
+      "1706.00827v2-Figure6-1.png",
+      "1706.00827v2-Table4-1.png",
+      "1706.00827v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 2,
+    "rationale": "Image 3 provides a summary of average misclassification errors for different methods, which directly answers the question. Text 2 provides additional context on misclassification errors for specific test pairs, supporting the information in Image 3.",
+    "answer": "Multi-X has the lowest average misclassification error with 9.72%.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 2,\n    \"Rationale\": \"Image 3 provides a summary of average misclassification errors for different methods, which directly answers the question. Text 2 provides additional context on misclassification errors for specific test pairs, supporting the information in Image 3.\",\n    \"Answer\": \"Multi-X has the lowest average misclassification error with 9.72%.\"\n}"
+  },
+  "8": {
+    "question": "Which algorithm is generally faster for fitting planes and cylinders: Multi-X or T-Linkage?",
+    "ground_truth": "Multi-X is generally faster for fitting planes and cylinders compared to T-Linkage.",
+    "selected_figures_names": [
+      "1706.00827v2-Table8-1.png"
+    ],
+    "all_figures_names": [
+      "1706.00827v2-Table8-1.png",
+      "1706.00827v2-Figure3-1.png",
+      "1706.00827v2-Figure1-1.png",
+      "1706.00827v2-Table1-1.png",
+      "1706.00827v2-Figure2-1.png",
+      "1706.00827v2-Figure5-1.png",
+      "1706.00827v2-Table2-1.png",
+      "1706.00827v2-Table3-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": null,
+    "rationale": "The table in Image 0 provides the processing times for both Multi-X and T-Linkage across different problems, including fitting planes and cylinders. This directly answers the question about which algorithm is faster.",
+    "answer": "Multi-X is generally faster for fitting planes and cylinders.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": null,\n    \"Rationale\": \"The table in Image 0 provides the processing times for both Multi-X and T-Linkage across different problems, including fitting planes and cylinders. This directly answers the question about which algorithm is faster.\",\n    \"Answer\": \"Multi-X is generally faster for fitting planes and cylinders.\"\n}"
+  }
+}

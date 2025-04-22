@@ -1,0 +1,236 @@
+{
+  "0": {
+    "question": "Which year is most associated with the terms \"sept\", \"hijackers\", and \"attacks\"?",
+    "ground_truth": "2001",
+    "selected_figures_names": [
+      "1705.09296v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows a visual representation of the association between years and terms like 'sept', 'hijackers', and 'attacks'. Text 0 discusses the dominance of these terms in the vertical direction, indicating their association with specific years.",
+    "answer": "The year most associated with the terms 'sept', 'hijackers', and 'attacks' is 2001.",
+    "text_chunks": [
+      "Meanwhile, the events of 9/11 dominate the vertical direction, with the words sept, hijackers, and attacks increasing in probability as we move up in the space. If we wanted to look at each year individually, we could drop the embedding of years, and learn a sparse set of topic-year interactions, similar to tone in Table . Additional Related Work The literature on topic models is vast; in addition to papers cited throughout, other efforts to incorporate metadata into topic models include Dirichlet-multinomial regression (DMR; \\citealp{mimno.2008), Labeled LDA , and MedLDA .",
+      "We omit the topics in the interest of space, but Figure shows the learned embedding for each year, along with the top terms of the corresponding deviations. As can be seen, the model learns that adjacent years tend to produce similar deviations, {\\it even though we have not explicitly encoded this information. The left-right dimension roughly tracks a temporal trend with positive deviations shifting from the years of Clinton and INS on the left, to Obama and ICE on the right.",
+      "Finally, we demonstrate the ability to incorporate covariates and/or labels in an exploratory data analysis (\\S). The scores we report are generalization to held-out data, measured in terms of perplexity; coherence, measured in terms of non-negative point-wise mutual information (NPMI; \\citealp{chang.2009,newman.2010), and classification accuracy on test data. For coherence we evaluate NPMI using the top 10 words of each topic, both internally (using test data), and externally, using a decade of articles from the English Gigaword dataset \\citep{graff2003english.",
+      "For the external evaluation of NPMI, we use the co-occurrence statistics from all New York Times articles in the English Gigaword published from the start of 2000 to the end of 2009, processed in the same way as our data. For the text classification experiments, we use the \\texttt{scikit-learn implementation of logistic regression. We give it access to the same input data as our model (using the same vocabulary), and tune the strength of l_2 regularization using cross-validation.",
+      "\\paragraph{Combined model with temporal metadata. Finally, we incorporate both the tone annotations and the year of publication of each article, treating the former as a label and the latter as a covariate. In this model, we also include an embedding matrix, \\mathbf{W_c, to project the one-hot {\\em year vectors down to a two-dimensional continuous space, with a learned deviation for each dimension.",
+      "Next we consider using tone as a covariate, and build a model using both tone and tone-topic interactions. Table shows a set of topics learned from the immigration data, along with the most highly-weighted words in the corresponding tone-topic interaction terms. As can be seen, these interaction terms tend to capture different frames (e.g., ``criminal'' vs.~``detainees'', and ``illegals'' vs. ``newcomers'', etc).",
+      "Table shows the equivalent results for the Yahoo answers dataset, using 250 topics, and a 5,000-word vocabulary. These results closely match those for the IMDB dataset, with our model having higher perplexity but also higher internal coherence than LDA. As with IMDB, the use of word vectors improves coherence, both internally and externally, but again at the cost of worse perplexity.",
+      "Surprisingly, our model without a background term actually has the best external coherence on this dataset, but as described in the main paper, these tend to give high weight primarily to common words, and are more repetitive as a result."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows a visual representation of the association between years and terms like 'sept', 'hijackers', and 'attacks'. Text 0 discusses the dominance of these terms in the vertical direction, indicating their association with specific years.\",\n    \"Answer\": \"The year most associated with the terms 'sept', 'hijackers', and 'attacks' is 2001.\"\n}"
+  },
+  "1": {
+    "question": "Which node in the generative model represents the latent variable?",
+    "ground_truth": "The node labeled \u03b7 represents the latent variable.",
+    "selected_figures_names": [
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table3-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 6,
+    "rationale": "Image 3 shows the generative model with nodes labeled, which helps identify the latent variable. Text 6 provides details about the model's structure, including transformations involving latent variables.",
+    "answer": "The node labeled '\u03b8' in the generative model represents the latent variable.",
+    "text_chunks": [
+      "The background term in our model does not have much effect on perplexity, but plays an important role in producing coherent topics; as in SAGE, the background can account for common words, so they are mostly absent among the most heavily weighted words in the topics. For instance, words like film and movie in the IMDB corpus are relatively unimportant in the topics learned by our model, but would be much more heavily weighted without the background term, as they are in topics learned by LDA. Text Classification We next consider the utility of our model in the context of categorical labels, and consider them alternately as observed covariates and as labels generated conditional on the latent representation.",
+      "In order to alleviate this problem, we reconstruct \\bm{\\eta as a convex combination of two copies of the output of the generator network, one passed through a batchnorm layer, and one not. During training, we then gradually anneal the model from relying entirely on the component passed through the batchnorm layer, to relying entirely on the one that is not. This ensures that the the final weights and document representations will be properly interpretable.",
+      "This effectively solves the problem of mode collapse, but the batchnorm layer on \\bm{\\eta introduces an additional problem, not previously reported. At test time, the batchnorm layer will shift the input based on the learned population mean of the training data; this effectively encodes information about the distribution of words in this model that is not captured by the topic weights and background distribution. As such, although reconstruction error will be low, the document representation \\bm{\\theta, will not necessarily be a useful representation of the topical content of each document.",
+      "We therefore use the same experimental setup as \\citet{srivastava.2017 (learning rate, momentum, batch size, and number of epochs) and find the same general patterns as they reported (see Table and supplementary material): our model returns more coherent topics than LDA, but at the cost of worse perplexity. SAGE, by contrast, attains very high levels of sparsity, but at the cost of worse perplexity and coherence than LDA. As expected, the NVDM produces relatively low perplexity, but very poor coherence, due to its lack of constraints on \\bm{\\theta.",
+      "\\paragraph{Combined model with temporal metadata. Finally, we incorporate both the tone annotations and the year of publication of each article, treating the former as a label and the latter as a covariate. In this model, we also include an embedding matrix, \\mathbf{W_c, to project the one-hot {\\em year vectors down to a two-dimensional continuous space, with a learned deviation for each dimension.",
+      "Next we consider using tone as a covariate, and build a model using both tone and tone-topic interactions. Table shows a set of topics learned from the immigration data, along with the most highly-weighted words in the corresponding tone-topic interaction terms. As can be seen, these interaction terms tend to capture different frames (e.g., ``criminal'' vs.~``detainees'', and ``illegals'' vs. ``newcomers'', etc).",
+      "Experimental Details For all experiments we use a model with 300-dimensional embeddings of words, and we take f_e to be only the element-wise softplus nonlinearity (followed by the linear transformations for \\bm{\\mu and \\log \\bm{\\sigma^2). Similarly, f_y is a linear transformation of \\bm \\theta, followed by a softplus layer, followed by a linear transformation to the size of the output (the number of classes). During training, we set S (the number of samples of \\bm\\epsilon) to be 1; for estimating the ELBO at on test documents, we set S=20.",
+      "We omit the topics in the interest of space, but Figure shows the learned embedding for each year, along with the top terms of the corresponding deviations. As can be seen, the model learns that adjacent years tend to produce similar deviations, {\\it even though we have not explicitly encoded this information. The left-right dimension roughly tracks a temporal trend with positive deviations shifting from the years of Clinton and INS on the left, to Obama and ICE on the right."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 6,\n    \"Rationale\": \"Image 3 shows the generative model with nodes labeled, which helps identify the latent variable. Text 6 provides details about the model's structure, including transformations involving latent variables.\",\n    \"Answer\": \"The node labeled '\u03b8' in the generative model represents the latent variable.\"\n}"
+  },
+  "2": {
+    "question": "Which model achieves the best NPMI scores (both internal and external) in the unsupervised setting, and what trade-off does this model exhibit compared to other models?",
+    "ground_truth": "The Scholar + w.v. model achieves the best NPMI scores (both internal and external) in the unsupervised setting. However, this model also has the highest number of people parameters, indicating a trade-off between topic coherence and model complexity.",
+    "selected_figures_names": [
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table3-1.png",
+      "1705.09296v2-Figure2-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 5,
+    "rationale": "Image 3 provides NPMI scores for topics from the unsupervised SCHOLAR model, which is directly relevant to evaluating coherence. Text 5 discusses coherence and perplexity trade-offs among models, mentioning that their model returns more coherent topics than LDA but with worse perplexity.",
+    "answer": "The unsupervised SCHOLAR model achieves the best NPMI scores for coherence. However, it exhibits a trade-off of having worse perplexity compared to LDA.",
+    "text_chunks": [
+      "Surprisingly, our model without a background term actually has the best external coherence on this dataset, but as described in the main paper, these tend to give high weight primarily to common words, and are more repetitive as a result.",
+      "For our model, we only tune the number of epochs, evaluating on development data. Our models for this task did not use regularization or word vectors. Additional Experimental Results In this section we include additional experimental results in the unsupervised setting.",
+      "Unsupervised Evaluation Although the emphasis of this work is on incorporating observed labels and/or covariates, we briefly report on experiments in the unsupervised setting. Recall that, without metadata, \\scholar equates to ProdLDA, but with an explicit background term.",
+      "Finally, we demonstrate the ability to incorporate covariates and/or labels in an exploratory data analysis (\\S). The scores we report are generalization to held-out data, measured in terms of perplexity; coherence, measured in terms of non-negative point-wise mutual information (NPMI; \\citealp{chang.2009,newman.2010), and classification accuracy on test data. For coherence we evaluate NPMI using the top 10 words of each topic, both internally (using test data), and externally, using a decade of articles from the English Gigaword dataset \\citep{graff2003english.",
+      "Also, although the NVDM still has worse perplexity than LDA, the effects are not as dramatic as reported in . Regularization is also more beneficial for this data, with both SAGE and our regularized model obtaining better coherence than LDA. The topics from \\textsc{scholar for this dataset are also shown in Table .",
+      "We therefore use the same experimental setup as \\citet{srivastava.2017 (learning rate, momentum, batch size, and number of epochs) and find the same general patterns as they reported (see Table and supplementary material): our model returns more coherent topics than LDA, but at the cost of worse perplexity. SAGE, by contrast, attains very high levels of sparsity, but at the cost of worse perplexity and coherence than LDA. As expected, the NVDM produces relatively low perplexity, but very poor coherence, due to its lack of constraints on \\bm{\\theta.",
+      "Experiments and Results To evaluate and demonstrate the potential of this model, we present a series of experiments below. We first test \\scholar without observed metadata, and explore the effects of using regularization and/or word vector initialization, compared to LDA, SAGE, and NVDM (\\S). We then evaluate our model in terms of predictive performance, in comparison to SLDA and an l_2-regularized logistic regression baseline (\\S).",
+      "For the unsupervised results, we use the same set up as : Adam optimizer with \\beta_1=0.99, learning rate =0.002, batch size of 200, and training for 200 epochs. The setup was the same for all datasets, except we only trained for 150 epochs on Yahoo answers because it is much larger. For LDA, we updated the hyperparameters every 10 epochs."
+    ],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 5,\n    \"Rationale\": \"Image 3 provides NPMI scores for topics from the unsupervised SCHOLAR model, which is directly relevant to evaluating coherence. Text 5 discusses coherence and perplexity trade-offs among models, mentioning that their model returns more coherent topics than LDA but with worse perplexity.\",\n    \"Answer\": \"The unsupervised SCHOLAR model achieves the best NPMI scores for coherence. However, it exhibits a trade-off of having worse perplexity compared to LDA.\"\n}"
+  },
+  "3": {
+    "question": "Which topic has the highest internal coherence value?",
+    "ground_truth": "The topic with the highest internal coherence value is \"turks armenian armenia turkish roads escape soviet muslim mountain soul\".",
+    "selected_figures_names": [
+      "1705.09296v2-Table6-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Table5-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 1,
+    "rationale": "Image 0 provides a list of topics with their internal coherence values (NPMI), which directly answers the question. Text 1 explains how coherence is measured, which is relevant to understanding the values in the image.",
+    "answer": "The topic 'turks armenian armenia turkish roads escape soviet muslim mountain soul' has the highest internal coherence value of 0.77.",
+    "text_chunks": [
+      "Further experimentation revealed that the VAE framework involves a tradeoff among the scores; running for more epochs tends to result in better perplexity on held-out data, but at the cost of worse coherence. Adding regularization to encourage sparse topics has a similar effect as in SAGE, leading to worse perplexity and coherence, but it does create sparse topics. Interestingly, initializing the encoder with pretrained word2vec embeddings, and not updating them returned a model with the best internal coherence of any model we considered for IMDB and Yahoo answers, and the second-best for 20 newsgroups.",
+      "Finally, we demonstrate the ability to incorporate covariates and/or labels in an exploratory data analysis (\\S). The scores we report are generalization to held-out data, measured in terms of perplexity; coherence, measured in terms of non-negative point-wise mutual information (NPMI; \\citealp{chang.2009,newman.2010), and classification accuracy on test data. For coherence we evaluate NPMI using the top 10 words of each topic, both internally (using test data), and externally, using a decade of articles from the English Gigaword dataset \\citep{graff2003english.",
+      "Table shows the equivalent results for the Yahoo answers dataset, using 250 topics, and a 5,000-word vocabulary. These results closely match those for the IMDB dataset, with our model having higher perplexity but also higher internal coherence than LDA. As with IMDB, the use of word vectors improves coherence, both internally and externally, but again at the cost of worse perplexity.",
+      "Surprisingly, our model without a background term actually has the best external coherence on this dataset, but as described in the main paper, these tend to give high weight primarily to common words, and are more repetitive as a result.",
+      "Next we consider using tone as a covariate, and build a model using both tone and tone-topic interactions. Table shows a set of topics learned from the immigration data, along with the most highly-weighted words in the corresponding tone-topic interaction terms. As can be seen, these interaction terms tend to capture different frames (e.g., ``criminal'' vs.~``detainees'', and ``illegals'' vs. ``newcomers'', etc).",
+      "Figure shows a set of topics learned in this way, along with the predicted probability of an article being pro-immigration conditioned on the given topic. All topics are coherent, and the predicted probabilities have strong face validity, e.g., ``arrested charged charges agents operation'' is least associated with pro-immigration. \\paragraph{Tone as a covariate.",
+      "We therefore use the same experimental setup as \\citet{srivastava.2017 (learning rate, momentum, batch size, and number of epochs) and find the same general patterns as they reported (see Table and supplementary material): our model returns more coherent topics than LDA, but at the cost of worse perplexity. SAGE, by contrast, attains very high levels of sparsity, but at the cost of worse perplexity and coherence than LDA. As expected, the NVDM produces relatively low perplexity, but very poor coherence, due to its lack of constraints on \\bm{\\theta.",
+      "Meanwhile, the events of 9/11 dominate the vertical direction, with the words sept, hijackers, and attacks increasing in probability as we move up in the space. If we wanted to look at each year individually, we could drop the embedding of years, and learn a sparse set of topic-year interactions, similar to tone in Table . Additional Related Work The literature on topic models is vast; in addition to papers cited throughout, other efforts to incorporate metadata into topic models include Dirichlet-multinomial regression (DMR; \\citealp{mimno.2008), Labeled LDA , and MedLDA ."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 1,\n    \"Rationale\": \"Image 0 provides a list of topics with their internal coherence values (NPMI), which directly answers the question. Text 1 explains how coherence is measured, which is relevant to understanding the values in the image.\",\n    \"Answer\": \"The topic 'turks armenian armenia turkish roads escape soviet muslim mountain soul' has the highest internal coherence value of 0.77.\"\n}"
+  },
+  "4": {
+    "question": "Which model performed best on the IMDB dataset for classifying documents with categorical labels, and how much better did it perform compared to the SLDA model?",
+    "ground_truth": "Both the SCHOLAR (covariates) and Logistic Regression models achieved the highest accuracy of 0.87 on the IMDB dataset. This represents a 0.23 improvement over the SLDA model, which achieved an accuracy of 0.64.",
+    "selected_figures_names": [
+      "1705.09296v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09296v2-Table6-1.png",
+      "1705.09296v2-Table3-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table1-1.png",
+      "1705.09296v2-Table4-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 6,
+    "rationale": "Image 0 provides a table with accuracy results for different models on the IMDB dataset, which directly answers the question. Text 6 discusses the evaluation of models, including SLDA, which is relevant to understanding the context of the performance comparison.",
+    "answer": "The SCHOLAR model with covariates performed best on the IMDB dataset with an accuracy of 0.87. It performed 0.23 better than the SLDA model, which had an accuracy of 0.64.",
+    "text_chunks": [
+      "Table shows the equivalent results for the Yahoo answers dataset, using 250 topics, and a 5,000-word vocabulary. These results closely match those for the IMDB dataset, with our model having higher perplexity but also higher internal coherence than LDA. As with IMDB, the use of word vectors improves coherence, both internally and externally, but again at the cost of worse perplexity.",
+      "The background term in our model does not have much effect on perplexity, but plays an important role in producing coherent topics; as in SAGE, the background can account for common words, so they are mostly absent among the most heavily weighted words in the topics. For instance, words like film and movie in the IMDB corpus are relatively unimportant in the topics learned by our model, but would be much more heavily weighted without the background term, as they are in topics learned by LDA. Text Classification We next consider the utility of our model in the context of categorical labels, and consider them alternately as observed covariates and as labels generated conditional on the latent representation.",
+      "Also, although the NVDM still has worse perplexity than LDA, the effects are not as dramatic as reported in . Regularization is also more beneficial for this data, with both SAGE and our regularized model obtaining better coherence than LDA. The topics from \\textsc{scholar for this dataset are also shown in Table .",
+      "Rather, the high accuracies we obtain demonstrate that we are learning low-dimensional representations of documents that are relevant to the label of interest, outperforming SLDA, and have the same attractive properties as topic models. Further, any neural network that is successful for text classification could be incorporated into f_y and trained end-to-end along with topic discovery. Exploratory Study We demonstrate how our model might be used to explore an annotated corpus of articles about immigration, and adapt to different assumptions about the data.",
+      "It is challenging to fairly evaluate the relative computational efficiency of our approach compared to past work (due to the stochastic nature of our approach to inference, choices about hyperparameters such as tolerance, and because of differences in implementation). Nevertheless, in practice, the performance of our approach is highly appealing. For all experiments in this paper, our implementation was much faster than SLDA or SAGE (implemented in C and Matlab, respectively), and competitive with Mallet.",
+      "We take advantage of stochastic variational inference to develop a general algorithm for our framework such that variations do not require any model-specific algorithm derivations. Our model demonstrates the tradeoff between perplexity, coherence, and sparsity, and outperforms SLDA in predicting document labels. Furthermore, the flexibility of our model enables intriguing exploration of a text corpus on US immigration.",
+      "Experiments and Results To evaluate and demonstrate the potential of this model, we present a series of experiments below. We first test \\scholar without observed metadata, and explore the effects of using regularization and/or word vector initialization, compared to LDA, SAGE, and NVDM (\\S). We then evaluate our model in terms of predictive performance, in comparison to SLDA and an l_2-regularized logistic regression baseline (\\S).",
+      "We therefore use the same experimental setup as \\citet{srivastava.2017 (learning rate, momentum, batch size, and number of epochs) and find the same general patterns as they reported (see Table and supplementary material): our model returns more coherent topics than LDA, but at the cost of worse perplexity. SAGE, by contrast, attains very high levels of sparsity, but at the cost of worse perplexity and coherence than LDA. As expected, the NVDM produces relatively low perplexity, but very poor coherence, due to its lack of constraints on \\bm{\\theta."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 6,\n    \"Rationale\": \"Image 0 provides a table with accuracy results for different models on the IMDB dataset, which directly answers the question. Text 6 discusses the evaluation of models, including SLDA, which is relevant to understanding the context of the performance comparison.\",\n    \"Answer\": \"The SCHOLAR model with covariates performed best on the IMDB dataset with an accuracy of 0.87. It performed 0.23 better than the SLDA model, which had an accuracy of 0.64.\"\n}"
+  },
+  "5": {
+    "question": "Which topic is most likely to be associated with a pro-immigration stance?",
+    "ground_truth": "\"english language city spanish community\"",
+    "selected_figures_names": [
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Table3-1.png",
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 shows the probability of pro-immigration tone for each topic, which directly answers the question. Text 0 explains the relationship between topics and their pro-immigration probabilities, providing context.",
+    "answer": "The topic with 'visas visa applications students citizenship' is most likely to be associated with a pro-immigration stance.",
+    "text_chunks": [
+      "Figure shows a set of topics learned in this way, along with the predicted probability of an article being pro-immigration conditioned on the given topic. All topics are coherent, and the predicted probabilities have strong face validity, e.g., ``arrested charged charges agents operation'' is least associated with pro-immigration. \\paragraph{Tone as a covariate.",
+      "Next we consider using tone as a covariate, and build a model using both tone and tone-topic interactions. Table shows a set of topics learned from the immigration data, along with the most highly-weighted words in the corresponding tone-topic interaction terms. As can be seen, these interaction terms tend to capture different frames (e.g., ``criminal'' vs.~``detainees'', and ``illegals'' vs. ``newcomers'', etc).",
+      "Since our model employs variational methods, the reported perplexity is an upper bound based on the ELBO. As datasets we use the familiar 20 newsgroups, the IMDB corpus of 50,000 movie reviews , and the UIUC Yahoo answers dataset with 150,000 documents in 15 categories . For further exploration, we also make use of a corpus of approximately 4,000 time-stamped news articles about US immigration, each annotated with pro- or anti-immigration tone .",
+      "We only use a small number of topics in this part (K=8) for compact presentation. \\paragraph{Tone as a label. We first consider using the annotations as a label, and train a joint model to infer topics relevant to the tone of the article (pro- or anti-immigration).",
+      "Meanwhile, the events of 9/11 dominate the vertical direction, with the words sept, hijackers, and attacks increasing in probability as we move up in the space. If we wanted to look at each year individually, we could drop the embedding of years, and learn a sparse set of topic-year interactions, similar to tone in Table . Additional Related Work The literature on topic models is vast; in addition to papers cited throughout, other efforts to incorporate metadata into topic models include Dirichlet-multinomial regression (DMR; \\citealp{mimno.2008), Labeled LDA , and MedLDA .",
+      "We take advantage of stochastic variational inference to develop a general algorithm for our framework such that variations do not require any model-specific algorithm derivations. Our model demonstrates the tradeoff between perplexity, coherence, and sparsity, and outperforms SLDA in predicting document labels. Furthermore, the flexibility of our model enables intriguing exploration of a text corpus on US immigration.",
+      "Rather, the high accuracies we obtain demonstrate that we are learning low-dimensional representations of documents that are relevant to the label of interest, outperforming SLDA, and have the same attractive properties as topic models. Further, any neural network that is successful for text classification could be incorporated into f_y and trained end-to-end along with topic discovery. Exploratory Study We demonstrate how our model might be used to explore an annotated corpus of articles about immigration, and adapt to different assumptions about the data.",
+      "We omit the topics in the interest of space, but Figure shows the learned embedding for each year, along with the top terms of the corresponding deviations. As can be seen, the model learns that adjacent years tend to produce similar deviations, {\\it even though we have not explicitly encoded this information. The left-right dimension roughly tracks a temporal trend with positive deviations shifting from the years of Clinton and INS on the left, to Obama and ICE on the right."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 shows the probability of pro-immigration tone for each topic, which directly answers the question. Text 0 explains the relationship between topics and their pro-immigration probabilities, providing context.\",\n    \"Answer\": \"The topic with 'visas visa applications students citizenship' is most likely to be associated with a pro-immigration stance.\"\n}"
+  },
+  "6": {
+    "question": "How does the model capture different perspectives on immigration when considering tone as a covariate?",
+    "ground_truth": "The model captures different perspectives on immigration by highlighting contrasting words associated with the same topic, depending on whether the tone is anti-immigration or pro-immigration.",
+    "selected_figures_names": [
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Table4-1.png"
+    ],
+    "all_figures_names": [
+      "1705.09296v2-Table2-1.png",
+      "1705.09296v2-Figure1-1.png",
+      "1705.09296v2-Figure2-1.png",
+      "1705.09296v2-Table4-1.png",
+      "1705.09296v2-Table5-1.png",
+      "1705.09296v2-Figure3-1.png",
+      "1705.09296v2-Table3-1.png",
+      "1705.09296v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 2,
+    "chosen_text_idx": 0,
+    "rationale": "Image 2 shows topics related to immigration and their association with pro-immigration tone, which directly relates to how the model captures perspectives using tone as a covariate. Text 0 discusses tone-topic interactions, which is relevant to understanding how different frames are captured.",
+    "answer": "The model captures different perspectives on immigration by using tone as a covariate, allowing it to identify tone-topic interactions. This helps in distinguishing between different frames, such as 'criminal' vs. 'detainees' or 'illegals' vs. 'newcomers'.",
+    "text_chunks": [
+      "Next we consider using tone as a covariate, and build a model using both tone and tone-topic interactions. Table shows a set of topics learned from the immigration data, along with the most highly-weighted words in the corresponding tone-topic interaction terms. As can be seen, these interaction terms tend to capture different frames (e.g., ``criminal'' vs.~``detainees'', and ``illegals'' vs. ``newcomers'', etc).",
+      "Figure shows a set of topics learned in this way, along with the predicted probability of an article being pro-immigration conditioned on the given topic. All topics are coherent, and the predicted probabilities have strong face validity, e.g., ``arrested charged charges agents operation'' is least associated with pro-immigration. \\paragraph{Tone as a covariate.",
+      "We only use a small number of topics in this part (K=8) for compact presentation. \\paragraph{Tone as a label. We first consider using the annotations as a label, and train a joint model to infer topics relevant to the tone of the article (pro- or anti-immigration).",
+      "Since our model employs variational methods, the reported perplexity is an upper bound based on the ELBO. As datasets we use the familiar 20 newsgroups, the IMDB corpus of 50,000 movie reviews , and the UIUC Yahoo answers dataset with 150,000 documents in 15 categories . For further exploration, we also make use of a corpus of approximately 4,000 time-stamped news articles about US immigration, each annotated with pro- or anti-immigration tone .",
+      "\\paragraph{Combined model with temporal metadata. Finally, we incorporate both the tone annotations and the year of publication of each article, treating the former as a label and the latter as a covariate. In this model, we also include an embedding matrix, \\mathbf{W_c, to project the one-hot {\\em year vectors down to a two-dimensional continuous space, with a learned deviation for each dimension.",
+      "The background term in our model does not have much effect on perplexity, but plays an important role in producing coherent topics; as in SAGE, the background can account for common words, so they are mostly absent among the most heavily weighted words in the topics. For instance, words like film and movie in the IMDB corpus are relatively unimportant in the topics learned by our model, but would be much more heavily weighted without the background term, as they are in topics learned by LDA. Text Classification We next consider the utility of our model in the context of categorical labels, and consider them alternately as observed covariates and as labels generated conditional on the latent representation.",
+      "We take advantage of stochastic variational inference to develop a general algorithm for our framework such that variations do not require any model-specific algorithm derivations. Our model demonstrates the tradeoff between perplexity, coherence, and sparsity, and outperforms SLDA in predicting document labels. Furthermore, the flexibility of our model enables intriguing exploration of a text corpus on US immigration.",
+      "Rather, the high accuracies we obtain demonstrate that we are learning low-dimensional representations of documents that are relevant to the label of interest, outperforming SLDA, and have the same attractive properties as topic models. Further, any neural network that is successful for text classification could be incorporated into f_y and trained end-to-end along with topic discovery. Exploratory Study We demonstrate how our model might be used to explore an annotated corpus of articles about immigration, and adapt to different assumptions about the data."
+    ],
+    "raw_gpt": "{\n    \"Image\": 2,\n    \"Text\": 0,\n    \"Rationale\": \"Image 2 shows topics related to immigration and their association with pro-immigration tone, which directly relates to how the model captures perspectives using tone as a covariate. Text 0 discusses tone-topic interactions, which is relevant to understanding how different frames are captured.\",\n    \"Answer\": \"The model captures different perspectives on immigration by using tone as a covariate, allowing it to identify tone-topic interactions. This helps in distinguishing between different frames, such as 'criminal' vs. 'detainees' or 'illegals' vs. 'newcomers'.\"\n}"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "0": {
+    "question": "How does the performance of the SIM saliency map change as the number of fixations increases?",
+    "ground_truth": "The performance of the SIM saliency map increases as the number of fixations increases.",
+    "selected_figures_names": [
+      "1704.08615v2-Figure1-1.png",
+      "1704.08615v2-Figure5-1.png",
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Table2-1.png"
+    ],
+    "all_figures_names": [
+      "1704.08615v2-Figure1-1.png",
+      "1704.08615v2-Figure5-1.png",
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Table2-1.png",
+      "1704.08615v2-Figure2-1.png",
+      "1704.08615v2-Table3-1.png",
+      "1704.08615v2-Figure6-1.png",
+      "1704.08615v2-Figure7-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 and Text 0 provide a comprehensive overview of how different saliency maps perform under various metrics, including SIM. This context is crucial for understanding how performance might change with varying numbers of fixations.",
+    "answer": "The performance of the SIM saliency map is expected to vary depending on the number of fixations, as different saliency maps are optimized for different metrics. However, specific details on how SIM changes with the number of fixations are not directly provided in the available data.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 and Text 0 provide a comprehensive overview of how different saliency maps perform under various metrics, including SIM. This context is crucial for understanding how performance might change with varying numbers of fixations.\",\n    \"Answer\": \"The performance of the SIM saliency map is expected to vary depending on the number of fixations, as different saliency maps are optimized for different metrics. However, specific details on how SIM changes with the number of fixations are not directly provided in the available data.\"\n}"
+  },
+  "1": {
+    "question": "Which saliency map method achieved the highest score for the sAUC metric, and how does its performance compare to other methods based on this metric? ",
+    "ground_truth": "The saliency map method with the highest sAUC score is **SIM**. Its sAUC score appears to be significantly higher than all other methods listed in the table.",
+    "selected_figures_names": [
+      "1704.08615v2-Table3-1.png",
+      "1704.08615v2-Table2-1.png",
+      "1704.08615v2-Figure6-1.png",
+      "1704.08615v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1704.08615v2-Table3-1.png",
+      "1704.08615v2-Table2-1.png",
+      "1704.08615v2-Figure6-1.png",
+      "1704.08615v2-Figure3-1.png",
+      "1704.08615v2-Figure2-1.png",
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Figure1-1.png",
+      "1704.08615v2-Table1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 0,
+    "rationale": "Image 0 and Text 0 provide detailed evaluations of various saliency map methods across different metrics, including sAUC. This information is crucial to determine which method achieved the highest score for the sAUC metric.",
+    "answer": "The DeepGaze II method achieved the highest score for the sAUC metric with a score of 0.736911. It outperformed other methods such as SalGAN (0.705236) and OpenSALICON (0.623781) based on this metric.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 0,\n    \"Rationale\": \"Image 0 and Text 0 provide detailed evaluations of various saliency map methods across different metrics, including sAUC. This information is crucial to determine which method achieved the highest score for the sAUC metric.\",\n    \"Answer\": \"The DeepGaze II method achieved the highest score for the sAUC metric with a score of 0.736911. It outperformed other methods such as SalGAN (0.705236) and OpenSALICON (0.623781) based on this metric.\"\n}"
+  },
+  "2": {
+    "question": "What is the relationship between the ground truth fixation density and the saliency maps?",
+    "ground_truth": "The ground truth fixation density predicts different saliency maps depending on the intended metric.",
+    "selected_figures_names": [
+      "1704.08615v2-Table2-1.png",
+      "1704.08615v2-Figure1-1.png",
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Figure3-1.png"
+    ],
+    "all_figures_names": [
+      "1704.08615v2-Table2-1.png",
+      "1704.08615v2-Figure1-1.png",
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Figure3-1.png",
+      "1704.08615v2-Figure6-1.png",
+      "1704.08615v2-Table1-1.png",
+      "1704.08615v2-Figure7-1.png",
+      "1704.08615v2-Figure5-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 and Text 1 both explain how different saliency maps are derived from the same ground truth fixation density based on the intended metric. This directly addresses the relationship between the ground truth fixation density and the saliency maps.",
+    "answer": "The ground truth fixation density predicts different saliency maps depending on the intended metric. Although the maps differ due to the properties of the metrics, they all reflect the same underlying model.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 and Text 1 both explain how different saliency maps are derived from the same ground truth fixation density based on the intended metric. This directly addresses the relationship between the ground truth fixation density and the saliency maps.\",\n    \"Answer\": \"The ground truth fixation density predicts different saliency maps depending on the intended metric. Although the maps differ due to the properties of the metrics, they all reflect the same underlying model.\"\n}"
+  },
+  "3": {
+    "question": "What is the relationship between the number of fixations and the CC score?",
+    "ground_truth": "The CC score increases as the number of fixations increases.",
+    "selected_figures_names": [
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Figure7-1.png",
+      "1704.08615v2-Figure3-1.png",
+      "1704.08615v2-Figure6-1.png"
+    ],
+    "all_figures_names": [
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Figure7-1.png",
+      "1704.08615v2-Figure3-1.png",
+      "1704.08615v2-Figure6-1.png",
+      "1704.08615v2-Figure5-1.png",
+      "1704.08615v2-Figure1-1.png",
+      "1704.08615v2-Figure2-1.png",
+      "1704.08615v2-Table2-1.png"
+    ],
+    "chosen_image_idx": 3,
+    "chosen_text_idx": 3,
+    "rationale": "Image 3 and Text 3 provide detailed information about the relationship between the number of fixations and the CC score, showing how different numbers of fixations affect the CC scores in empirical and normalized saliency maps.",
+    "answer": "The CC score increases with the number of fixations. Both the mean empirical and mean normalized empirical saliency maps show higher CC scores as the number of fixations increases, indicating a positive relationship between the number of fixations and the CC score.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 3,\n    \"Text\": 3,\n    \"Rationale\": \"Image 3 and Text 3 provide detailed information about the relationship between the number of fixations and the CC score, showing how different numbers of fixations affect the CC scores in empirical and normalized saliency maps.\",\n    \"Answer\": \"The CC score increases with the number of fixations. Both the mean empirical and mean normalized empirical saliency maps show higher CC scores as the number of fixations increases, indicating a positive relationship between the number of fixations and the CC score.\"\n}"
+  },
+  "4": {
+    "question": "What is the relationship between the fixation density map and the ground truth fixations?",
+    "ground_truth": "The fixation density map predicts the probability of a person fixating on a particular location in the image. The ground truth fixations are the actual locations where people fixated on the image.",
+    "selected_figures_names": [
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Figure6-1.png",
+      "1704.08615v2-Table1-1.png",
+      "1704.08615v2-Table3-1.png"
+    ],
+    "all_figures_names": [
+      "1704.08615v2-Figure4-1.png",
+      "1704.08615v2-Figure6-1.png",
+      "1704.08615v2-Table1-1.png",
+      "1704.08615v2-Table3-1.png",
+      "1704.08615v2-Figure7-1.png",
+      "1704.08615v2-Figure5-1.png",
+      "1704.08615v2-Figure2-1.png",
+      "1704.08615v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 1,
+    "chosen_text_idx": 1,
+    "rationale": "Image 1 and Text 1 discuss the creation of empirical saliency maps from fixation density and their evaluation using CC scores. This directly relates to understanding the relationship between fixation density maps and ground truth fixations.",
+    "answer": "The fixation density map is used to sample sets of fixations, which are then used to create empirical saliency maps. These maps are compared to ground truth fixations to evaluate their accuracy, often using metrics like the CC score. The empirical saliency maps aim to approximate the optimal saliency map for the given fixations.",
+    "text_chunks": [],
+    "raw_gpt": "{\n    \"Image\": 1,\n    \"Text\": 1,\n    \"Rationale\": \"Image 1 and Text 1 discuss the creation of empirical saliency maps from fixation density and their evaluation using CC scores. This directly relates to understanding the relationship between fixation density maps and ground truth fixations.\",\n    \"Answer\": \"The fixation density map is used to sample sets of fixations, which are then used to create empirical saliency maps. These maps are compared to ground truth fixations to evaluate their accuracy, often using metrics like the CC score. The empirical saliency maps aim to approximate the optimal saliency map for the given fixations.\"\n}"
+  }
+}

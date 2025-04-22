@@ -1,0 +1,27 @@
+{
+  "0": {
+    "question": "What is the relationship between the true market state qt and the noisy version q\u0302t at time t?",
+    "ground_truth": "The noisy version q\u0302t at time t is equal to the true market state qt plus a sum of Laplace noise vectors obtained by following the arrows all the way back to 0.",
+    "selected_figures_names": [
+      "1703.00899v2-Figure1-1.png"
+    ],
+    "all_figures_names": [
+      "1703.00899v2-Figure1-1.png"
+    ],
+    "chosen_image_idx": 0,
+    "chosen_text_idx": 5,
+    "rationale": "Image 0 visually represents the relationship between the true market state and the noisy version by showing how noise is added to the true state. Text 5 explains that the market maker announces a published market state \\(\\hat{q^t\\), which is a randomized function of all trades and published market states so far, aligning with the concept of adding noise.",
+    "answer": "The true market state \\(q^t\\) is updated with each trade, but the market maker publishes a noisy version \\(\\hat{q^t\\), which is a randomized function of the trades and previous states. Noise is added to preserve privacy.",
+    "text_chunks": [
+      "Imagine that the market could first collect all T trades simultaneously, then sum them and publish some \\hat{q^T, a noisy version of the market state q^T = \\sum_{t=1^T dq^t. In this scenario, there is only one output \\hat{q^T instead of a whole list of outputs \\hat{q^1,\\dots.",
+      "Then set \\hat{q^t = \\sum_{s=1^t \\hat{dq^t. The benefit to this approach is that it can re-use the noisy z^t variables across time steps, rather than re-drawing new noise each time. The problem is that, while each z^t is small in magnitude, there are many of them; for example, the final \\hat{q^T contains T pieces of noise, which add up to a very inaccurate estimate of the true market state.",
+      "Note that r_j < 0, or ``short selling'' security j, is allowed. The market maintains a market state q^t \\in \\reals^d at time t=0,\\dots,T, with q^0 = 0. Each trader t=1,\\dots,T arrives sequentially and purchases a contract dq^t \\in \\reals^d, and the market state is updated to q^t = q^{t-1 + dq^t.",
+      "Furthermore, z^t is the last bundle purchased by the noise trader at time t and is the first sold at time t+1, so the difference in market state is exactly z^t plus that participant's trade. We now sum over all bundles z^t purchased by the noise trader, i.e. at time steps 1,\\dots,T'. Recall that the noise trader sells back every bundle z^t she purchases.",
+      "In a private market, the designer chooses an initial ``true'' market state q^0 (for convenience, we will assume q^0 = 0) and announces a ``published'' market state \\hat{q^0 = 0. When participant t=1,\\dots,T arrives and requests trade dq^t, the market maker updates the true market state",
+      "q^t = q^{t-1 + dq^t, but does not reveal the true state to anyone. Instead, the market maker announces the published market state \\hat{q^t, which is some randomized function of all trades and published market states so far. We assume that \\|dq^t\\| \\leq 1 according to some norm \\|\\cdot\\|, that is, each participant can buy or sell at most one ``total'' share.",
+      "Prior work To achieve differential privacy for trades of a bounded size (which will be assumed), the general approach is to add random noise to the ``true'' market state q and publish this noisy state \\hat{q. The privacy level thus determines how close \\hat{q is to q. The distance from \\nabla C(\\hat{q) to \\nabla C(q) is then controlled by the price sensitivity \\lambda. For a fixed noise and privacy level, a smaller \\lambda leads to small impact of noise on prices, meaning very good accuracy.",
+      "= \\sum_{s\\leq t dq^s. Each of these states is associated with a prediction \\hat{p^t in the set of possible prices (expectations of \\phi), while the state q^t is associated with the ``true'' underlying prediction p^t."
+    ],
+    "raw_gpt": "{\n    \"Image\": 0,\n    \"Text\": 5,\n    \"Rationale\": \"Image 0 visually represents the relationship between the true market state and the noisy version by showing how noise is added to the true state. Text 5 explains that the market maker announces a published market state \\\\(\\\\hat{q^t\\\\), which is a randomized function of all trades and published market states so far, aligning with the concept of adding noise.\",\n    \"Answer\": \"The true market state \\\\(q^t\\\\) is updated with each trade, but the market maker publishes a noisy version \\\\(\\\\hat{q^t\\\\), which is a randomized function of the trades and previous states. Noise is added to preserve privacy.\"\n}"
+  }
+}
